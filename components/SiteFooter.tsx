@@ -7,14 +7,13 @@ export function SiteFooter() {
   const { t } = useLanguage();
 
   return (
-    <footer className="border-t border-intellectual/10">
+    <footer className="border-t border-white/10">
       <LegalDisclaimer />
-      <div className="bg-intellectual-dark text-white">
-        <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-12">
-          <p className="text-sm leading-relaxed text-white/85">
-            {t.footerDisclaimer}
+      <div className="border-t border-white/10 bg-intellectual-dark text-slate-400">
+        <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 sm:py-8">
+          <p className="text-xs leading-relaxed text-slate-500 sm:text-sm">
+            {t.footerRights}
           </p>
-          <p className="mt-6 text-xs text-champagne-light/90">{t.footerRights}</p>
         </div>
       </div>
     </footer>

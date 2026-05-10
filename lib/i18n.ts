@@ -50,7 +50,6 @@ export type Copy = {
   linkCalendarDesc: string;
   adLabel: string;
   adPlaceholder: string;
-  footerDisclaimer: string;
   footerRights: string;
   extHint: string;
   a11yLanguageSelector: string;
@@ -125,8 +124,6 @@ export type Copy = {
   homeScoresCardCta: string;
   /** /scores — link to MOE SchoolFinder for official verification */
   scoresMoeSchoolFinderCta: string;
-  /** Footer disclaimer — mailto report incorrect data */
-  legalDisclaimerReportError: string;
 };
 
 export const copy: Record<Locale, Copy> = {
@@ -164,8 +161,6 @@ export const copy: Record<Locale, Copy> = {
     adLabel: "Sponsored space",
     adPlaceholder:
       "Reserved for a single, clearly labelled placement — aligned with a community resource.",
-    footerDisclaimer:
-      "Independent community resource; not an official government site. Information may change; always verify with the Ministry of Education (MOE).",
     footerRights: "© dsalink.sg · Built for parents navigating DSA in Singapore",
     extHint: "Opens externally",
     a11yLanguageSelector: "Choose language",
@@ -239,8 +234,6 @@ export const copy: Record<Locale, Copy> = {
       "View 5-year PSLE COP trends for 150+ secondary schools island-wide",
     homeScoresCardCta: "Open scoreboard",
     scoresMoeSchoolFinderCta: "Verify on MOE SchoolFinder (official)",
-    legalDisclaimerReportError:
-      "Spotted an error? Tell us (Report Error)",
   },
   zh: {
     metaTitle: "DSA Link 新加坡 | DSA 2026 倒计时与官方入口导航",
@@ -274,8 +267,6 @@ export const copy: Record<Locale, Copy> = {
     adLabel: "广告位预留",
     adPlaceholder:
       "非干扰区域预留；上线时将做清晰标注，符合社区站点定位。",
-    footerDisclaimer:
-      "本站为独立社区资源，非政府官方网站。政策与日期可能调整，请以新加坡教育部（MOE）公布为准。",
     footerRights: "© dsalink.sg · 助力家长从容应对新加坡 DSA",
     extHint: "外部链接",
     a11yLanguageSelector: "选择语言",
@@ -293,7 +284,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusOngoing: "火热进行中",
     openHouseStatusFinished: "已结束",
     navOpenHouses: "开放日",
-    navScores: "PSLE 录取分数",
+    navScores: "PSLE COP",
     openHousePreviewTitle: "预告：5 月校园开放日",
     openHousePreviewDesc: "日历中最近的场次速览；完整名单与官网链接请见内页。",
     openHouseViewFullCalendar: "查看完整日历 →",
@@ -345,7 +336,6 @@ export const copy: Record<Locale, Copy> = {
     homeScoresCardTitle: "查看全岛 150+ 中学 5 年 PSLE 分数趋势",
     homeScoresCardCta: "进入分数看板",
     scoresMoeSchoolFinderCta: "前往 MOE SchoolFinder 核实官方数据",
-    legalDisclaimerReportError: "发现错误？请告知我们 (Report Error)",
   },
   ms: {
     metaTitle: "DSA Link Singapura | Kiraan Detik DSA 2026 & Sumber Rasmi",
@@ -382,8 +372,6 @@ export const copy: Record<Locale, Copy> = {
     adLabel: "Ruang iklan",
     adPlaceholder:
       "Dikhaskan untuk satu penempatan yang dilabel dengan jelas — selaras dengan sumber komuniti.",
-    footerDisclaimer:
-      "Sumber komuniti bebas; bukan laman rasmi kerajaan. Maklumat mungkin berubah; sentiasa sahkan dengan Kementerian Pendidikan (MOE).",
     footerRights:
       "© dsalink.sg · Untuk ibu bapa yang menavigasi DSA di Singapura",
     extHint: "Pautan luar",
@@ -458,8 +446,6 @@ export const copy: Record<Locale, Copy> = {
       "Lihat trend COP PSLE 5 tahun untuk 150+ sekolah menengah",
     homeScoresCardCta: "Buka papan skor",
     scoresMoeSchoolFinderCta: "Sahkan di MOE SchoolFinder (rasmi)",
-    legalDisclaimerReportError:
-      "Jumpa ralat? Beritahu kami (Report Error)",
   },
   ta: {
     metaTitle:
@@ -498,8 +484,6 @@ export const copy: Record<Locale, Copy> = {
     adLabel: "விளம்பர இடம்",
     adPlaceholder:
       "ஒற்றை, தெளிவாக லேபிளிடப்பட்ட இடத்திற்கு ஒதுக்கப்பட்டது — சமூக வளத்துடன் இணைந்தது.",
-    footerDisclaimer:
-      "சுயாதீன சமூக வளம்; அரசு அதிகாரப்பூர்வ தளம் அல்ல. தகவல் மாறலாம்; கல்வி அமைச்சகம் (MOE) மூலம் எப்போதும் உறுதிப்படுத்தவும்.",
     footerRights:
       "© dsalink.sg · சிங்கப்பூரில் DSA ஐ நடத்தும் பெற்றோருக்காக",
     extHint: "வெளியே திறக்கிறது",
@@ -575,7 +559,5 @@ export const copy: Record<Locale, Copy> = {
       "தீவு முழுவதும் 150+ பள்ளிகளின் 5 ஆண்டு PSLE COP போக்குகளைக் காண்க",
     homeScoresCardCta: "மதிப்பெண் பலகை",
     scoresMoeSchoolFinderCta: "MOE SchoolFinder இல் அதிகாரப்பூர்வமாக சரிபார்க்க",
-    legalDisclaimerReportError:
-      "பிழை கண்டீர்களா? எங்களுக்கு தெரிவிக்கவும் (Report Error)",
   },
 };
