@@ -58,10 +58,15 @@ export type Copy = {
   sectionOpenHouseTitle: string;
   sectionOpenHouseDesc: string;
   openHouseOfficialLink: string;
+  /** Primary CTA on open-house list rows (official booking / registration). */
+  openHouseOfficialBooking: string;
   openHouseOnsite: string;
   openHouseOnline: string;
   openHouseTime: string;
   openHouseAddress: string;
+  openHouseStatusUpcoming: string;
+  openHouseStatusOngoing: string;
+  openHouseStatusFinished: string;
   navOpenHouses: string;
   openHousePreviewTitle: string;
   openHousePreviewDesc: string;
@@ -113,10 +118,14 @@ export const copy: Record<Locale, Copy> = {
     sectionOpenHouseDesc:
       "Curated from our May 2026 calendar. Times and on-site / online modes are indicative — always confirm details on each school’s official page.",
     openHouseOfficialLink: "Official open house / admissions",
+    openHouseOfficialBooking: "Official booking",
     openHouseOnsite: "On-site",
     openHouseOnline: "Online",
     openHouseTime: "Time",
     openHouseAddress: "Address",
+    openHouseStatusUpcoming: "Upcoming",
+    openHouseStatusOngoing: "In progress",
+    openHouseStatusFinished: "Ended",
     navOpenHouses: "Open houses",
     openHousePreviewTitle: "Coming up: May open houses",
     openHousePreviewDesc:
@@ -165,10 +174,14 @@ export const copy: Record<Locale, Copy> = {
     sectionOpenHouseDesc:
       "整理自本站 2026 年 5 月校历。时间、线下/线上形式仅供参考，请务必以各校官网为准。",
     openHouseOfficialLink: "官方开放日 / 招生页面",
+    openHouseOfficialBooking: "官方预约",
     openHouseOnsite: "线下",
     openHouseOnline: "线上",
     openHouseTime: "时间",
     openHouseAddress: "地址",
+    openHouseStatusUpcoming: "即将开放",
+    openHouseStatusOngoing: "火热进行中",
+    openHouseStatusFinished: "已结束",
     navOpenHouses: "开放日",
     openHousePreviewTitle: "预告：5 月校园开放日",
     openHousePreviewDesc: "日历中最近的场次速览；完整名单与官网链接请见内页。",
@@ -220,10 +233,14 @@ export const copy: Record<Locale, Copy> = {
     sectionOpenHouseDesc:
       "Disusun daripada kalendar Mei 2026. Masa dan mod di tapak / dalam talian adalah anggaran — sentiasa sahkan di laman rasmi setiap sekolah.",
     openHouseOfficialLink: "Hari terbuka / kemasukan rasmi",
+    openHouseOfficialBooking: "Tempahan rasmi",
     openHouseOnsite: "Di tapak",
     openHouseOnline: "Dalam talian",
     openHouseTime: "Masa",
     openHouseAddress: "Alamat",
+    openHouseStatusUpcoming: "Akan datang",
+    openHouseStatusOngoing: "Sedang berlangsung",
+    openHouseStatusFinished: "Tamat",
     navOpenHouses: "Hari terbuka",
     openHousePreviewTitle: "Akan datang: hari terbuka Mei",
     openHousePreviewDesc:
@@ -278,10 +295,14 @@ export const copy: Record<Locale, Copy> = {
     sectionOpenHouseDesc:
       "எங்கள் மே 2026 நாட்காட்டியிலிருந்து தேர்ந்தெடுக்கப்பட்டது. நேரங்கள் மற்றும் நேரடி / ஆன்லைன் முறைமைகள் குறிப்பிட்டவை — ஒவ்வொரு பள்ளியின் அதிகாரப்பூர்வ பக்கத்திலும் உறுதிப்படுத்தவும்.",
     openHouseOfficialLink: "அதிகாரப்பூர்வ திறந்த வீடு / சேர்க்கை",
+    openHouseOfficialBooking: "அதிகாரப்பூர்வ முன்பதிவு",
     openHouseOnsite: "நேரடி",
     openHouseOnline: "ஆன்லைன்",
     openHouseTime: "நேரம்",
     openHouseAddress: "முகவரி",
+    openHouseStatusUpcoming: "வரவுள்ள",
+    openHouseStatusOngoing: "நடைபெறுகிறது",
+    openHouseStatusFinished: "முடிந்தது",
     navOpenHouses: "திறந்த வீடுகள்",
     openHousePreviewTitle: "வரவிருக்கிறது: மே திறந்த வீடுகள்",
     openHousePreviewDesc:

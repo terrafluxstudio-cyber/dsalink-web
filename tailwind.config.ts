@@ -48,6 +48,21 @@ const config: Config = {
         soft: "0 4px 24px -4px rgba(12, 61, 92, 0.08), 0 8px 16px -8px rgba(12, 61, 92, 0.06)",
         gold: "0 1px 0 0 rgba(198, 162, 74, 0.35)",
       },
+      keyframes: {
+        "gold-breathe": {
+          "0%, 100%": {
+            boxShadow: "0 0 0 0 rgba(198, 162, 74, 0.32)",
+            borderColor: "rgba(198, 162, 74, 0.38)",
+          },
+          "50%": {
+            boxShadow: "0 0 26px 7px rgba(198, 162, 74, 0.22)",
+            borderColor: "rgba(198, 162, 74, 0.72)",
+          },
+        },
+      },
+      animation: {
+        "gold-breathe": "gold-breathe 2.75s ease-in-out infinite",
+      },
     },
   },
   plugins: [],

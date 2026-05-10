@@ -7,7 +7,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import type { Locale } from "@/lib/i18n";
 import {
   getPreviewOpenHouseEvents,
-  type OpenHouseEvent,
+  resolveOpenHouseStatus,
+  type SchoolOpenHouse,
 } from "@/lib/data";
 
 const localeDateOptions: Record<Locale, string> = {
@@ -25,12 +26,12 @@ function formatCompactDate(isoDate: string, locale: Locale): string {
   }).format(instant);
 }
 
-function pickName(ev: OpenHouseEvent, locale: Locale): string {
+function pickName(ev: SchoolOpenHouse, locale: Locale): string {
   if (locale === "zh") return ev.nameZh;
   return ev.nameEn;
 }
 
-function pickTime(ev: OpenHouseEvent, locale: Locale): string {
+function pickTime(ev: SchoolOpenHouse, locale: Locale): string {
   if (locale === "zh") return ev.timeZh;
   return ev.timeEn;
 }
@@ -64,34 +65,58 @@ export function OpenHousePreview() {
         </div>
 
         <ol className="mt-5 space-y-3 border-t border-intellectual/8 pt-4">
-          {events.map((ev, index) => (
-            <li key={ev.id}>
-              <div className="flex gap-3 text-sm">
-                <span
-                  className="w-7 shrink-0 pt-0.5 text-xs font-semibold tabular-nums text-champagne-dark"
-                  aria-hidden
-                >
-                  {index + 1}.
-                </span>
-                <div className="min-w-0 flex-1">
-                  <p className="font-medium text-intellectual">
-                    <span className="text-intellectual-muted">
-                      {formatCompactDate(ev.date, locale)}
-                    </span>
-                    <span className="mx-1.5 text-intellectual-muted/60" aria-hidden>
-                      ·
-                    </span>
-                    <span>{pickName(ev, locale)}</span>
-                  </p>
-                  <p className="mt-0.5 text-xs text-intellectual-muted">
-                    {pickTime(ev, locale)}
-                    <span className="mx-1.5 text-intellectual-muted/50">·</span>
-                    {ev.mode === "online" ? t.openHouseOnline : t.openHouseOnsite}
-                  </p>
+          {events.map((ev, index) => {
+            const status = resolveOpenHouseStatus(ev);
+            const statusText =
+              status === "Upcoming"
+                ? t.openHouseStatusUpcoming
+                : status === "Ongoing"
+                  ? t.openHouseStatusOngoing
+                  : t.openHouseStatusFinished;
+            return (
+              <li key={ev.id}>
+                <div className="flex gap-3 text-sm">
+                  <span
+                    className="w-7 shrink-0 pt-0.5 text-xs font-semibold tabular-nums text-champagne-dark"
+                    aria-hidden
+                  >
+                    {index + 1}.
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-medium text-intellectual">
+                      <span className="text-intellectual-muted">
+                        {formatCompactDate(ev.date, locale)}
+                      </span>
+                      <span
+                        className="mx-1.5 text-intellectual-muted/60"
+                        aria-hidden
+                      >
+                        ·
+                      </span>
+                      <span>{pickName(ev, locale)}</span>
+                    </p>
+                    <p className="mt-0.5 text-xs text-intellectual-muted">
+                      {pickTime(ev, locale)}
+                      <span className="mx-1.5 text-intellectual-muted/50">·</span>
+                      {ev.mode === "online"
+                        ? t.openHouseOnline
+                        : t.openHouseOnsite}
+                      <span className="mx-1.5 text-intellectual-muted/50">·</span>
+                      <span
+                        className={
+                          status === "Ongoing"
+                            ? "font-semibold text-champagne-dark"
+                            : ""
+                        }
+                      >
+                        {statusText}
+                      </span>
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </li>
-          ))}
+              </li>
+            );
+          })}
         </ol>
 
         <div className="mt-5">
