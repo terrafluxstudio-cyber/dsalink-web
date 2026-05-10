@@ -21,42 +21,72 @@ function latestPsleCop2025(row: SchoolCopHistoryEntry): string | null {
   return y.nonIp ?? y.ip ?? null;
 }
 
-/** Schema.org ItemList + EducationalOrganization for /scores (server-rendered). */
-export function buildScoresItemListJsonLd() {
+/**
+ * Schema.org @graph: Dataset (PSLE COP as variableMeasured) + ItemList (schools).
+ * JSON is built with JSON.stringify only (no manual concatenation) to avoid syntax errors.
+ */
+export function buildScoresPageJsonLd(): Record<string, unknown> {
   const base = getSiteUrl();
+  const scoresUrl = `${base}/scores`;
+  const datasetId = `${scoresUrl}#psle-cop-dataset`;
+  const listId = `${scoresUrl}#school-itemlist`;
+
   const itemListElement = SCHOOL_COP_HISTORY.map((row, index) => {
     const cop = latestPsleCop2025(row);
-    const url = `${base}/scores#school-${row.id}`;
+    const itemUrl = `${scoresUrl}#school-${row.id}`;
+    const description = cop
+      ? `${row.nameEn} is a Singapore secondary school. Indicative 2025 PSLE COP (AL-style bands): ${cop}. Five-year history (2021–2025) on this page; verify all figures with MOE SchoolFinder.`
+      : `${row.nameEn} is a Singapore secondary school. PSLE posting history (2021–2025) on this page; verify cut-offs with MOE SchoolFinder.`;
+
+    const variableMeasured = {
+      "@type": "PropertyValue",
+      name: "PSLE COP",
+      description:
+        "Indicative PSLE Cut-Off Point (posting score) in AL-style notation for Secondary 1 admission planning — not an official MOE publication.",
+      value: cop ?? "Refer to MOE SchoolFinder",
+    };
+
     return {
       "@type": "ListItem",
       position: index + 1,
       item: {
         "@type": "EducationalOrganization",
-        "@id": url,
+        "@id": itemUrl,
         name: row.nameEn,
-        url,
-        ...(cop
-          ? {
-              additionalProperty: [
-                {
-                  "@type": "PropertyValue",
-                  name: "PSLE COP 2025",
-                  value: cop,
-                },
-              ],
-            }
-          : {}),
+        url: itemUrl,
+        description,
+        variableMeasured,
       },
     };
   });
 
   return {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Singapore secondary schools — PSLE COP history",
-    description:
-      "Historical PSLE cut-off points (2021–2025) for Singapore secondary schools. Illustrative AL-style bands — verify on MOE SchoolFinder.",
-    numberOfItems: itemListElement.length,
-    itemListElement,
+    "@graph": [
+      {
+        "@type": "Dataset",
+        "@id": datasetId,
+        name: "DSALink — Singapore secondary school PSLE COP (2021–2025)",
+        description:
+          "Curated indicative PSLE posting cut-off trends for 150+ Singapore secondary schools, aligned with public MOE releases for parent planning. This site is not affiliated with MOE; always confirm on MOE SchoolFinder.",
+        url: scoresUrl,
+        variableMeasured: {
+          "@type": "PropertyValue",
+          name: "PSLE COP",
+          description:
+            "PSLE Cut-Off Point: indicative Achievement Level (AL) style posting bands used for Secondary 1 posting comparison.",
+        },
+      },
+      {
+        "@type": "ItemList",
+        "@id": listId,
+        name: "Singapore secondary schools — PSLE COP listing",
+        description:
+          "Schools with English name, in-page URL anchor, short description, and PSLE COP as variableMeasured (latest 2025 band where available).",
+        numberOfItems: itemListElement.length,
+        isPartOf: { "@id": datasetId },
+        itemListElement,
+      },
+    ],
   };
 }
