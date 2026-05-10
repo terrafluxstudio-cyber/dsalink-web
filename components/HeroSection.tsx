@@ -4,8 +4,9 @@ import { ArrowRight, ExternalLink, ShieldCheck } from "lucide-react";
 import { CountdownBoard } from "@/components/CountdownBoard";
 import { MOE_PRIMARY_CTA_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
+import type { ReactNode } from "react";
 
-export function HeroSection() {
+export function HeroSection({ children }: { children?: ReactNode }) {
   const { t } = useLanguage();
 
   return (
@@ -25,7 +26,9 @@ export function HeroSection() {
 
         <div className="mt-10 flex max-w-xl flex-col gap-4">
           <CountdownBoard />
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        </div>
+        {children}
+        <div className="mt-6 flex max-w-xl flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href={MOE_PRIMARY_CTA_URL}
               target="_blank"
@@ -43,7 +46,6 @@ export function HeroSection() {
               <ArrowRight className="h-4 w-4" aria-hidden />
             </a>
           </div>
-        </div>
       </div>
     </section>
   );

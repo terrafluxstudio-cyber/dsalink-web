@@ -1,8 +1,23 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_SC, Noto_Sans_Tamil, Plus_Jakarta_Sans } from "next/font/google";
 import { LanguageProvider } from "@/contexts/LanguageContext";
-import { copy } from "@/lib/i18n";
 import "./globals.css";
+
+const siteTitle =
+  "DSALink.sg | 2026 新加坡中学 DSA 申请一站式导航";
+
+const siteDescription =
+  "实时追踪 2026 年新加坡中学 DSA (Direct School Admission) 申请时间轴、截止日期及热门学校名单。为家长提供最清晰的 DSA 申请指南。";
+
+const siteKeywords = [
+  "DSA Singapore 2026",
+  "DSA secondary school list",
+  "MOE DSA deadline",
+  "新加坡中学直通车",
+  "DSA 申请时间表",
+  "DSALink.sg",
+  "dsalink.sg",
+] as const;
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -24,8 +39,6 @@ const notoSansTamil = Noto_Sans_Tamil({
   display: "swap",
 });
 
-const en = copy.en;
-
 export const viewport: Viewport = {
   themeColor: "#0c3d5c",
   width: "device-width",
@@ -35,34 +48,25 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://dsalink.sg"),
   title: {
-    default: en.metaTitle,
-    template: "%s · DSA Link",
+    default: siteTitle,
+    template: "%s · DSALink.sg",
   },
-  description: en.metaDescription,
-  keywords: [
-    "DSA Singapore",
-    "DSA Link",
-    "DSA 2026",
-    "Direct School Admission",
-    "MOE DSA",
-    "新加坡 DSA",
-    "DSA Melayu",
-    "DSA Tamil",
-    "சிங்கப்பூர் DSA",
-  ],
-  authors: [{ name: "DSA Link" }],
+  description: siteDescription,
+  keywords: [...siteKeywords],
+  authors: [{ name: "DSALink.sg", url: "https://dsalink.sg" }],
   openGraph: {
     type: "website",
-    locale: "en_SG",
+    locale: "zh_SG",
+    alternateLocale: ["en_SG", "ms_SG", "ta_SG"],
     url: "https://dsalink.sg",
-    siteName: "DSA Link",
-    title: en.metaTitle,
-    description: en.metaDescription,
+    siteName: "DSALink.sg",
+    title: siteTitle,
+    description: siteDescription,
   },
   twitter: {
     card: "summary_large_image",
-    title: en.metaTitle,
-    description: en.metaDescription,
+    title: siteTitle,
+    description: siteDescription,
   },
   robots: {
     index: true,

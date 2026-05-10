@@ -54,6 +54,14 @@ export type Copy = {
   footerRights: string;
   extHint: string;
   a11yLanguageSelector: string;
+  openHouseKicker: string;
+  sectionOpenHouseTitle: string;
+  sectionOpenHouseDesc: string;
+  openHouseOfficialLink: string;
+  openHouseOnsite: string;
+  openHouseOnline: string;
+  openHouseTime: string;
+  openHouseAddress: string;
 };
 
 export const copy: Record<Locale, Copy> = {
@@ -96,6 +104,15 @@ export const copy: Record<Locale, Copy> = {
     footerRights: "© dsalink.sg · Built for parents navigating DSA in Singapore",
     extHint: "Opens externally",
     a11yLanguageSelector: "Choose language",
+    openHouseKicker: "May 2026",
+    sectionOpenHouseTitle: "School open houses · DSA season highlights",
+    sectionOpenHouseDesc:
+      "Curated from our May 2026 calendar. Times and on-site / online modes are indicative — always confirm details on each school’s official page.",
+    openHouseOfficialLink: "Official open house / admissions",
+    openHouseOnsite: "On-site",
+    openHouseOnline: "Online",
+    openHouseTime: "Time",
+    openHouseAddress: "Address",
   },
   zh: {
     metaTitle: "DSA Link 新加坡 | DSA 2026 倒计时与官方入口导航",
@@ -134,6 +151,15 @@ export const copy: Record<Locale, Copy> = {
     footerRights: "© dsalink.sg · 助力家长从容应对新加坡 DSA",
     extHint: "外部链接",
     a11yLanguageSelector: "选择语言",
+    openHouseKicker: "2026年5月",
+    sectionOpenHouseTitle: "热门中学开放日 · DSA 季精选",
+    sectionOpenHouseDesc:
+      "整理自本站 2026 年 5 月校历。时间、线下/线上形式仅供参考，请务必以各校官网为准。",
+    openHouseOfficialLink: "官方开放日 / 招生页面",
+    openHouseOnsite: "线下",
+    openHouseOnline: "线上",
+    openHouseTime: "时间",
+    openHouseAddress: "地址",
   },
   ms: {
     metaTitle: "DSA Link Singapura | Kiraan Detik DSA 2026 & Sumber Rasmi",
@@ -176,6 +202,15 @@ export const copy: Record<Locale, Copy> = {
       "© dsalink.sg · Untuk ibu bapa yang menavigasi DSA di Singapura",
     extHint: "Pautan luar",
     a11yLanguageSelector: "Pilih bahasa",
+    openHouseKicker: "Mei 2026",
+    sectionOpenHouseTitle: "Hari terbuka sekolah · sorotan musim DSA",
+    sectionOpenHouseDesc:
+      "Disusun daripada kalendar Mei 2026. Masa dan mod di tapak / dalam talian adalah anggaran — sentiasa sahkan di laman rasmi setiap sekolah.",
+    openHouseOfficialLink: "Hari terbuka / kemasukan rasmi",
+    openHouseOnsite: "Di tapak",
+    openHouseOnline: "Dalam talian",
+    openHouseTime: "Masa",
+    openHouseAddress: "Alamat",
   },
   ta: {
     metaTitle:
@@ -220,5 +255,14 @@ export const copy: Record<Locale, Copy> = {
       "© dsalink.sg · சிங்கப்பூரில் DSA ஐ நடத்தும் பெற்றோருக்காக",
     extHint: "வெளியே திறக்கிறது",
     a11yLanguageSelector: "மொழியைத் தேர்ந்தெடுக்கவும்",
+    openHouseKicker: "மே 2026",
+    sectionOpenHouseTitle: "பள்ளி திறந்த வீடுகள் · DSA சீசன் சிறப்புகள்",
+    sectionOpenHouseDesc:
+      "எங்கள் மே 2026 நாட்காட்டியிலிருந்து தேர்ந்தெடுக்கப்பட்டது. நேரங்கள் மற்றும் நேரடி / ஆன்லைன் முறைமைகள் குறிப்பிட்டவை — ஒவ்வொரு பள்ளியின் அதிகாரப்பூர்வ பக்கத்திலும் உறுதிப்படுத்தவும்.",
+    openHouseOfficialLink: "அதிகாரப்பூர்வ திறந்த வீடு / சேர்க்கை",
+    openHouseOnsite: "நேரடி",
+    openHouseOnline: "ஆன்லைன்",
+    openHouseTime: "நேரம்",
+    openHouseAddress: "முகவரி",
   },
 };
