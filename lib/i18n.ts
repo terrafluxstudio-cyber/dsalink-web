@@ -123,6 +123,10 @@ export type Copy = {
   /** Home teaser card → /scores */
   homeScoresCardTitle: string;
   homeScoresCardCta: string;
+  /** /scores — link to MOE SchoolFinder for official verification */
+  scoresMoeSchoolFinderCta: string;
+  /** Footer disclaimer — mailto report incorrect data */
+  legalDisclaimerReportError: string;
 };
 
 export const copy: Record<Locale, Copy> = {
@@ -234,6 +238,9 @@ export const copy: Record<Locale, Copy> = {
     homeScoresCardTitle:
       "View 5-year PSLE COP trends for 150+ secondary schools island-wide",
     homeScoresCardCta: "Open scoreboard",
+    scoresMoeSchoolFinderCta: "Verify on MOE SchoolFinder (official)",
+    legalDisclaimerReportError:
+      "Spotted an error? Tell us (Report Error)",
   },
   zh: {
     metaTitle: "DSA Link 新加坡 | DSA 2026 倒计时与官方入口导航",
@@ -337,6 +344,8 @@ export const copy: Record<Locale, Copy> = {
     scoresFilterToolbarAria: "筛选：搜索、区域、类型",
     homeScoresCardTitle: "查看全岛 150+ 中学 5 年 PSLE 分数趋势",
     homeScoresCardCta: "进入分数看板",
+    scoresMoeSchoolFinderCta: "前往 MOE SchoolFinder 核实官方数据",
+    legalDisclaimerReportError: "发现错误？请告知我们 (Report Error)",
   },
   ms: {
     metaTitle: "DSA Link Singapura | Kiraan Detik DSA 2026 & Sumber Rasmi",
@@ -448,6 +457,9 @@ export const copy: Record<Locale, Copy> = {
     homeScoresCardTitle:
       "Lihat trend COP PSLE 5 tahun untuk 150+ sekolah menengah",
     homeScoresCardCta: "Buka papan skor",
+    scoresMoeSchoolFinderCta: "Sahkan di MOE SchoolFinder (rasmi)",
+    legalDisclaimerReportError:
+      "Jumpa ralat? Beritahu kami (Report Error)",
   },
   ta: {
     metaTitle:
@@ -562,5 +574,8 @@ export const copy: Record<Locale, Copy> = {
     homeScoresCardTitle:
       "தீவு முழுவதும் 150+ பள்ளிகளின் 5 ஆண்டு PSLE COP போக்குகளைக் காண்க",
     homeScoresCardCta: "மதிப்பெண் பலகை",
+    scoresMoeSchoolFinderCta: "MOE SchoolFinder இல் அதிகாரப்பூர்வமாக சரிபார்க்க",
+    legalDisclaimerReportError:
+      "பிழை கண்டீர்களா? எங்களுக்கு தெரிவிக்கவும் (Report Error)",
   },
 };
