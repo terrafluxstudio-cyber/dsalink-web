@@ -92,6 +92,28 @@ export type Copy = {
   openHouseListComplete: string;
   openHouseNoResults: string;
   openHouseResultsSummary: string;
+  scoreboardTitle: string;
+  scoreboardSubtitle: string;
+  scoreboardSearchPlaceholder: string;
+  scoreboardFilterRegion: string;
+  scoreboardFilterType: string;
+  scoreboardAll: string;
+  scoreboardCol2025: string;
+  scoreboardColYear: string;
+  scoreboardTrackNonIp: string;
+  scoreboardTrackIp: string;
+  scoreboardBadgeAffiliated: string;
+  scoreboardBadgeSap: string;
+  scoreboardTrendStable: string;
+  scoreboardTrendUp: string;
+  scoreboardTrendDown: string;
+  scoreboardExpandDetails: string;
+  scoreboardCollapseDetails: string;
+  scoreboardNoResults: string;
+  scoreboardShowing: string;
+  scoreboardTypeG3: string;
+  scoreboardTypeG2: string;
+  scoreboardTypeG1: string;
 };
 
 export const copy: Record<Locale, Copy> = {
@@ -172,6 +194,29 @@ export const copy: Record<Locale, Copy> = {
     openHouseNoResults:
       "No schools match. Try another search or clear filters.",
     openHouseResultsSummary: "{{shown}} of {{total}} schools",
+    scoreboardTitle: "PSLE COP at a glance (2021–2025)",
+    scoreboardSubtitle:
+      "Five-year AL-style cut-offs — filter by name, zone, and programme to plan DSA realistically.",
+    scoreboardSearchPlaceholder: "School name (EN / 中文)…",
+    scoreboardFilterRegion: "Zone",
+    scoreboardFilterType: "Type",
+    scoreboardAll: "All",
+    scoreboardCol2025: "2025 COP",
+    scoreboardColYear: "Year",
+    scoreboardTrackNonIp: "Non-IP / O-Level",
+    scoreboardTrackIp: "IP",
+    scoreboardBadgeAffiliated: "Affiliated",
+    scoreboardBadgeSap: "SAP",
+    scoreboardTrendStable: "Flat trend",
+    scoreboardTrendUp: "COP eased (↑ AL)",
+    scoreboardTrendDown: "COP tightened (↓ AL)",
+    scoreboardExpandDetails: "5-year detail",
+    scoreboardCollapseDetails: "Hide detail",
+    scoreboardNoResults: "No schools match your filters.",
+    scoreboardShowing: "{{shown}} / {{total}} schools",
+    scoreboardTypeG3: "G3",
+    scoreboardTypeG2: "G2",
+    scoreboardTypeG1: "G1",
   },
   zh: {
     metaTitle: "DSA Link 新加坡 | DSA 2026 倒计时与官方入口导航",
@@ -246,6 +291,28 @@ export const copy: Record<Locale, Copy> = {
     openHouseListComplete: "已显示全部",
     openHouseNoResults: "没有符合的学校，请调整搜索或筛选。",
     openHouseResultsSummary: "显示 {{shown}} / 共 {{total}} 所",
+    scoreboardTitle: "历年 PSLE COP 分数大数据",
+    scoreboardSubtitle: "参考 5 年趋势，精准制定 DSA 策略",
+    scoreboardSearchPlaceholder: "校名（中 / 英）…",
+    scoreboardFilterRegion: "区域",
+    scoreboardFilterType: "类型",
+    scoreboardAll: "全部",
+    scoreboardCol2025: "2025 截分",
+    scoreboardColYear: "年份",
+    scoreboardTrackNonIp: "非 IP（O 水准等）",
+    scoreboardTrackIp: "直通车 IP",
+    scoreboardBadgeAffiliated: "附属加分",
+    scoreboardBadgeSap: "特选 SAP",
+    scoreboardTrendStable: "走势平稳",
+    scoreboardTrendUp: "截分趋宽（AL 升高）",
+    scoreboardTrendDown: "截分趋紧（AL 降低）",
+    scoreboardExpandDetails: "展开五年明细",
+    scoreboardCollapseDetails: "收起明细",
+    scoreboardNoResults: "没有符合筛选的学校。",
+    scoreboardShowing: "{{shown}} / 共 {{total}} 所",
+    scoreboardTypeG3: "G3",
+    scoreboardTypeG2: "G2",
+    scoreboardTypeG1: "G1",
   },
   ms: {
     metaTitle: "DSA Link Singapura | Kiraan Detik DSA 2026 & Sumber Rasmi",
@@ -326,6 +393,29 @@ export const copy: Record<Locale, Copy> = {
     openHouseNoResults:
       "Tiada sekolah sepadan. Cuba carian atau penapis lain.",
     openHouseResultsSummary: "{{shown}} daripada {{total}} sekolah",
+    scoreboardTitle: "Data COP PSLE (2021–2025)",
+    scoreboardSubtitle:
+      "Trend lima tahun untuk merancang DSA dengan lebih tepat.",
+    scoreboardSearchPlaceholder: "Nama sekolah…",
+    scoreboardFilterRegion: "Zon",
+    scoreboardFilterType: "Jenis",
+    scoreboardAll: "Semua",
+    scoreboardCol2025: "COP 2025",
+    scoreboardColYear: "Tahun",
+    scoreboardTrackNonIp: "Bukan-IP",
+    scoreboardTrackIp: "IP",
+    scoreboardBadgeAffiliated: "Berafiliasi",
+    scoreboardBadgeSap: "SAP",
+    scoreboardTrendStable: "Stabil",
+    scoreboardTrendUp: "COP longgar",
+    scoreboardTrendDown: "COP ketat",
+    scoreboardExpandDetails: "Butiran 5 tahun",
+    scoreboardCollapseDetails: "Tutup",
+    scoreboardNoResults: "Tiada sekolah sepadan.",
+    scoreboardShowing: "{{shown}} / {{total}} sekolah",
+    scoreboardTypeG3: "G3",
+    scoreboardTypeG2: "G2",
+    scoreboardTypeG1: "G1",
   },
   ta: {
     metaTitle:
@@ -409,5 +499,28 @@ export const copy: Record<Locale, Copy> = {
     openHouseNoResults:
       "பொருந்தும் பள்ளிகள் இல்லை. தேடல் அல்லது வடிகட்டிகளை மாற்றவும்.",
     openHouseResultsSummary: "{{shown}} / {{total}} பள்ளிகள்",
+    scoreboardTitle: "PSLE COP வரலாற்று தரவு (2021–2025)",
+    scoreboardSubtitle:
+      "ஐந்து ஆண்டு போக்குகளுடன் DSA திட்டமிடுங்கள்.",
+    scoreboardSearchPlaceholder: "பள்ளிப் பெயர்…",
+    scoreboardFilterRegion: "மண்டலம்",
+    scoreboardFilterType: "வகை",
+    scoreboardAll: "அனைத்தும்",
+    scoreboardCol2025: "2025 COP",
+    scoreboardColYear: "ஆண்டு",
+    scoreboardTrackNonIp: "Non-IP",
+    scoreboardTrackIp: "IP",
+    scoreboardBadgeAffiliated: "இணைப்பு",
+    scoreboardBadgeSap: "SAP",
+    scoreboardTrendStable: "நிலையானது",
+    scoreboardTrendUp: "COP தளர்வு",
+    scoreboardTrendDown: "COP இறுக்கம்",
+    scoreboardExpandDetails: "5 ஆண்டு விவரம்",
+    scoreboardCollapseDetails: "மூடு",
+    scoreboardNoResults: "பொருந்தும் பள்ளிகள் இல்லை.",
+    scoreboardShowing: "{{shown}} / {{total}} பள்ளிகள்",
+    scoreboardTypeG3: "G3",
+    scoreboardTypeG2: "G2",
+    scoreboardTypeG1: "G1",
   },
 };

@@ -11,11 +11,23 @@ export type {
   SchoolOpenHouse,
 } from "./open-house-types";
 
+export type {
+  SchoolCopHistoryEntry,
+  SchoolCopProgramType,
+  SchoolCopRegion,
+  SchoolCopYearKey,
+  SchoolCopYearScores,
+} from "./school-cop-types";
+
 import type {
   OpenHouseStatus,
   SchoolOpenHouse,
 } from "./open-house-types";
+import { SCHOOL_COP_HISTORY_DATA } from "./school-cop-history-data";
 import { SCHOOL_OPEN_HOUSES } from "./school-open-houses";
+
+/** 150+ secondary schools with five-year AL-style COP rows (2021–2025). */
+export const SCHOOL_COP_HISTORY = SCHOOL_COP_HISTORY_DATA;
 
 export { SCHOOL_OPEN_HOUSES };
 
