@@ -24,10 +24,11 @@ export const metadata: Metadata = {
     canonical: "/open-houses",
   },
   openGraph: {
-    title: "Secondary open houses & DSA directory | DSALink.sg",
+    title: "Secondary open houses & DSA directory | DSALink",
     description: pageDescription,
     type: "website",
     url: "/open-houses",
+    siteName: "DSALink",
   },
 };
 

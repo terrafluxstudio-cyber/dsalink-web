@@ -1,29 +1,38 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-const title = "PSLE COP 历年数据看板 | DSALink.sg";
+const title = "PSLE COP 2026 - All 150+ Schools 5-Year History";
 const description =
-  "查询全岛 150+ 所中学 2021–2025 五年 PSLE 截分趋势（AL 制示意），按校名、区域、IP/SAP/G3 等筛选；展开对比 Non-IP 与 IP。辅助 DSA 与选校 — Historical PSLE COP trends for Singapore secondary schools.";
+  "Five-year PSLE cut-off trends (2021–2025) for 150+ Singapore secondary schools. Filter by zone and programme type; expand rows for Non-IP vs IP. Always verify on MOE SchoolFinder.";
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    absolute: title,
+  },
   description,
   keywords: [
-    "PSLE COP Singapore",
-    "secondary school cut-off AL",
-    "PSLE 录取分数线",
-    "中学 截分 历年",
-    "DSA 选校 分数",
-    "IP SAP posting score",
+    "PSLE COP 2026",
+    "Singapore secondary school COP history",
+    "PSLE cut-off points 2021-2025",
+    "AL posting score Singapore",
+    "MOE SchoolFinder COP",
+    "IP SAP secondary COP",
+    "DSA school selection scores",
   ],
   alternates: {
     canonical: "/scores",
   },
   openGraph: {
-    title: "PSLE COP dashboard · DSALink.sg",
+    title,
     description,
     type: "website",
     url: "/scores",
+    siteName: "DSALink",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
   },
 };
 

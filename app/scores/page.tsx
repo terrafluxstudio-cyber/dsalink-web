@@ -1,3 +1,4 @@
+import { ScoresItemListJsonLd } from "@/components/ScoresItemListJsonLd";
 import { ScoresPageBody } from "@/components/ScoresPageBody";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -6,6 +7,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 export default function ScoresPage() {
   return (
     <>
+      <ScoresItemListJsonLd />
       <SiteHeader />
       <main className="border-t border-intellectual/5 bg-hero-mesh">
         <ScoresPageBody />

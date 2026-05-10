@@ -1,21 +1,25 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_SC, Noto_Sans_Tamil, Plus_Jakarta_Sans } from "next/font/google";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { getSiteUrl } from "@/lib/seo";
 import "./globals.css";
 
 const siteTitle =
-  "DSALink.sg | 2026 新加坡中学 DSA 申请一站式导航";
+  "DSALink | 2026 Singapore Secondary School PSLE COP & Open Houses";
 
 const siteDescription =
-  "实时追踪 2026 年新加坡中学 DSA (Direct School Admission) 申请时间轴、截止日期及热门学校名单。为家长提供最清晰的 DSA 申请指南。";
+  "Access historical PSLE Cut-off Points (2021-2025) and 2026 Open House dates for over 150+ Singapore secondary schools.";
 
 const siteKeywords = [
+  "PSLE COP Singapore",
+  "Singapore secondary school cut-off",
+  "PSLE posting score",
+  "secondary school open house 2026",
+  "MOE SchoolFinder",
   "DSA Singapore 2026",
-  "DSA secondary school list",
-  "MOE DSA deadline",
-  "新加坡中学直通车",
-  "DSA 申请时间表",
-  "DSALink.sg",
+  "DSA secondary school",
+  "Singapore education",
+  "DSALink",
   "dsalink.sg",
 ] as const;
 
@@ -46,20 +50,20 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dsalink.sg"),
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default: siteTitle,
-    template: "%s · DSALink.sg",
+    template: "%s · DSALink",
   },
   description: siteDescription,
   keywords: [...siteKeywords],
-  authors: [{ name: "DSALink.sg", url: "https://dsalink.sg" }],
+  authors: [{ name: "DSALink", url: getSiteUrl() }],
   openGraph: {
     type: "website",
-    locale: "zh_SG",
-    alternateLocale: ["en_SG", "ms_SG", "ta_SG"],
-    url: "https://dsalink.sg",
-    siteName: "DSALink.sg",
+    locale: "en_SG",
+    alternateLocale: ["zh_SG", "ms_SG", "ta_SG"],
+    url: "/",
+    siteName: "DSALink",
     title: siteTitle,
     description: siteDescription,
   },
@@ -71,6 +75,10 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 

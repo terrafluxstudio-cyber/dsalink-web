@@ -190,7 +190,11 @@ const CopSchoolRow = memo(function CopSchoolRow({
   };
 
   return (
-    <li className="rounded-xl border border-intellectual/10 bg-white/80 shadow-sm ring-1 ring-champagne/15">
+    <li className="list-none">
+      <article
+        id={`school-${row.id}`}
+        className="rounded-xl border border-intellectual/10 bg-white/80 shadow-sm ring-1 ring-champagne/15"
+      >
       <div
         role="button"
         tabIndex={0}
@@ -315,6 +319,7 @@ const CopSchoolRow = memo(function CopSchoolRow({
           </p>
         </div>
       ) : null}
+      </article>
     </li>
   );
 });

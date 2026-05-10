@@ -250,8 +250,11 @@ export function OpenHousesDirectory() {
         {shown.map((ev) => {
           const status = resolveOpenHouseStatus(ev);
           return (
-            <li key={ev.id} className="py-2.5 sm:py-4">
-              <div className="flex gap-2 sm:gap-4">
+            <li key={ev.id} className="list-none py-2.5 sm:py-4">
+              <article
+                id={`open-house-${ev.id}`}
+                className="flex gap-2 sm:gap-4"
+              >
                 <div className="min-w-0 flex-1 space-y-1 sm:space-y-1.5">
                   <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
                     <h2 className="font-display text-sm font-semibold leading-snug text-intellectual sm:text-base">
@@ -326,7 +329,7 @@ export function OpenHousesDirectory() {
                     </span>
                   </a>
                 </div>
-              </div>
+              </article>
             </li>
           );
         })}
