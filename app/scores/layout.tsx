@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-const title = "历年 PSLE 录取分数线查询 | DSALink.sg";
+const title = "PSLE COP 历年数据看板 | DSALink.sg";
 const description =
   "查询全岛 150+ 所中学 2021–2025 五年 PSLE 截分趋势（AL 制示意），按校名、区域、IP/SAP/G3 等筛选；展开对比 Non-IP 与 IP。辅助 DSA 与选校 — Historical PSLE COP trends for Singapore secondary schools.";
 
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     canonical: "/scores",
   },
   openGraph: {
-    title: "PSLE posting scores & COP trends (2021–2025) | DSALink.sg",
+    title: "PSLE COP dashboard · DSALink.sg",
     description,
     type: "website",
     url: "/scores",

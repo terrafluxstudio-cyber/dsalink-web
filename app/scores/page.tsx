@@ -2,7 +2,7 @@ import { ScoresPageBody } from "@/components/ScoresPageBody";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
-/** PSLE COP directory; MOE SchoolFinder verification CTA is in the page header inside `ScoresPageBody`. */
+/** PSLE COP 历年数据看板（H1 文案见 i18n `scoresPageH1`）；MOE 核对入口在 `ScoresPageBody` 页头。 */
 export default function ScoresPage() {
   return (
     <>
