@@ -25,6 +25,7 @@ function getParts(target: Date, now: Date): CountdownParts {
 }
 
 export function useCountdown(deadlineIso: string = DSA_DEADLINE_ISO) {
+  // Same as: new Date("2026-05-31T23:59:59+08:00") — SGT (UTC+8), one fixed instant worldwide.
   const target = useMemo(() => new Date(deadlineIso), [deadlineIso]);
   const [parts, setParts] = useState<CountdownParts>(() =>
     getParts(target, new Date()),

@@ -1,4 +1,8 @@
-/** DSA application reference deadline per project spec (Singapore time). */
+/**
+ * DSA reference deadline (project spec). Must include an explicit offset so the
+ * instant is unambiguous everywhere (build servers, edge, browsers).
+ * `+08:00` = Singapore Standard Time (SGT), UTC+8 — not local server timezone.
+ */
 export const DSA_DEADLINE_ISO = "2026-05-31T23:59:59+08:00";
 
 /**
