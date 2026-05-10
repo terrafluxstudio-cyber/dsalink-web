@@ -18,8 +18,10 @@ const localeDateOptions: Record<Locale, string> = {
   ta: "ta-SG",
 };
 
-function formatCompactDate(isoDate: string, locale: Locale): string {
-  const instant = new Date(`${isoDate}T12:00:00+08:00`);
+function formatCompactDate(ev: SchoolOpenHouse, locale: Locale): string {
+  if (locale === "zh" && ev.dateDisplayZh) return ev.dateDisplayZh;
+  if (ev.dateDisplayEn) return ev.dateDisplayEn;
+  const instant = new Date(`${ev.date}T12:00:00+08:00`);
   return new Intl.DateTimeFormat(localeDateOptions[locale], {
     month: "short",
     day: "numeric",
@@ -85,7 +87,7 @@ export function OpenHousePreview() {
                   <div className="min-w-0 flex-1">
                     <p className="font-medium text-intellectual">
                       <span className="text-intellectual-muted">
-                        {formatCompactDate(ev.date, locale)}
+                        {formatCompactDate(ev, locale)}
                       </span>
                       <span
                         className="mx-1.5 text-intellectual-muted/60"

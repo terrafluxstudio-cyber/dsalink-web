@@ -1,0 +1,152 @@
+Complete Secondary School List | Property Review SG
+
+| Secondary School | Chinese Name | Nature | Sch Type | PSLE 2020 (Aff.)Integ. | PSLE 2020 (Aff.)Exp. | PSLE 2020 (Aff.)N(Acad) | PSLE 2020 (Aff.)N(Tech) | PSLE 2020 (Non-Aff.)Integ. | PSLE 2020 (Non-Aff.)Exp. | PSLE 2020 (Non-Aff.)N(Acad) | PSLE 2020 (Non-Aff.)N(Tech) | IntegratedProgramme | Address |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Admiralty Secondary School | 美雅中学 | Co-Ed | Gov Sch | 31 Woodlands Crescent, S737916 |
+| Ahmad Ibrahim Secondary School | 伊布拉欣中学 | Co-Ed | Gov Sch | 751 Yishun Avenue 7, S768928 |
+| Anderson Secondary School | 安德逊中学 | Co-Ed | Gov Sch/ Auto. | 10 Ang Mo Kio Street 53, S569206 |
+| Ang Mo Kio Secondary School | 茂乔中学 | Co-Ed | Gov Sch | 6 Ang Mo Kio Street 22, S569362 |
+| Anglican High School | 圣公会中学 | Co-Ed | Gov-Aided Sch/ Auto. | 600 Upper Changi Road, S487012 |
+| Anglo-Chinese School (Barker Road) | 英华学校（巴克路） | Boys | Gov-Aided Sch | 60 Barker Road, S309919 |
+| Anglo-Chinese School (Independent) (Secondary) | 英华中学（自主） | Co-Ed | Independent Sch | 121 Dover Road, S139650 |
+| Assumption English School | 圣升英校 | Co-Ed | Gov-Aided Sch | 622 Upper Bukit Timah Road, S678117 |
+| Assumption Pathway School | 圣升明径学校 | Co-Ed | Spec. Sch | 30 Cashew Road, S679697 |
+| Bartley Secondary School | 巴特礼中学 | Co-Ed | Gov Sch | 10 Jalan Bunga Rampai, S538403 |
+| Beatty Secondary School | 培德中学 | Co-Ed | Gov Sch | 1 Toa Payoh North, S318990 |
+| Bedok Green Secondary School | 育青中学 | Co-Ed | Gov Sch | 360 Bedok North Ave 3, S469722 |
+| Bedok South Secondary School | 尚义中学 | Co-Ed | Gov Sch | 1 Jalan Langgar Bedok, S468585 |
+| Bedok View Secondary School | 务德中学 | Co-Ed | Gov Sch | 6 Bedok South Avenue 3, S469293 |
+| Bendemeer Secondary School | 明智中学 | Co-Ed | Gov Sch | 1 St Wilfred Road, S327919 |
+| Boon Lay Secondary School | 文礼中学 | Co-Ed | Gov Sch | 11 Jurong West Street 65, S648354 |
+| Bowen Secondary School | 博文中学 | Co-Ed | Gov Sch | 2 Lorong Napiri, S547529 |
+| Broadrick Secondary School | 务立中学 | Co-Ed | Gov Sch | 61 Dakota Crescent, S399935 |
+| Bukit Batok Secondary School | 武吉巴督中学 | Co-Ed | Gov Sch | 50 Bukit Batok West Ave 8, S658962 |
+| Bukit Merah Secondary School | 红山中学 | Co-Ed | Gov Sch | 10 Lengkok Bahru, S159050 |
+| Bukit Panjang Govt. High School | 武吉班让政府中学 | Co-Ed | Gov Sch/ Auto. | 7 Choa Chu Kang Ave 4, S689809 |
+| Bukit View Secondary School | 百德中学 | Co-Ed | Gov Sch | 16 Bukit Batok Street 21, S659633 |
+| Canberra Secondary School | 康培中学 | Co-Ed | Gov Sch | 51 Sembawang Drive, S757699 |
+| Catholic High School (Secondary) | 公教中学 | Boys | Gov-Aided Sch/ Auto. | 9 Bishan Street 22, S579767 |
+| Cedar Girls' Secondary School | 四德女子中学 | Girls | Gov Sch / Auto. | 1 Cedar Avenue, S349692 |
+| Changkat Changi Secondary School | 尚育中学 | Co-Ed | Gov Sch | 23 Simei St 3, S529894 |
+| CHIJ Katong Convent | 加东修道院女校 | Girls | Gov-Aided Sch/ Auto. | 346 Marine Terrace, S449150 |
+| CHIJ Secondary (Toa Payoh) | 圣婴女子中学（大巴窑） | Girls | Gov-Aided Sch/ Auto. | 626 Lorong 1 Toa Payoh, S319764 |
+| CHIJ St. Joseph's Convent | 圣婴女子中学（圣若瑟） | Girls | Gov-Aided Sch | 62 Sengkang East Way, S548595 |
+| CHIJ St. Nicholas Girls' School (Secondary) | 圣尼各拉女校 | Girls | Gov-Aided Sch/ Auto. | 501 Ang Mo Kio Street 13, S569405 |
+| CHIJ St. Theresa's Convent | 圣婴德兰女校 | Girls | Gov-Aided Sch | 160 Lower Delta Road, S099138 |
+| Christ Church Secondary School | 基督堂中学 | Co-Ed | Gov-Aided Sch | 20 Woodlands Drive 17, S737924 |
+| Chua Chu Kang Secondary School | 蔡厝港中学 | Co-Ed | Gov Sch | 3 Teck Whye Crescent, S688845 |
+| Chung Cheng High School (Main) | 中正中学（总校） | Co-Ed | Gov-Aided Sch/ Auto. | 50 Goodman Road, S439012 |
+| Chung Cheng High School (Yishun) | 中正中学 (义顺） | Co-Ed | Gov-Aided Sch | 11 Yishun Street 61, S768547 |
+| Clementi Town Secondary School | 锦文中学 | Co-Ed | Gov Sch | 10 Clementi Ave 3, S129904 |
+| Commonwealth Secondary School | 立才中学 | Co-Ed | Gov Sch / Auto. | 698 West Coast Road, S608784 |
+| Compassvale Secondary School | 康柏中学 | Co-Ed | Gov Sch | 51 Compassvale Crescent, S545083 |
+| Crescent Girls' School | 克信女子中学 | Girls | Gov Sch / Auto. | 357 Tanglin Road, S247961 |
+| Crest Secondary School | 裕峰中学 | Co-Ed | Spec. Sch | 561 Jurong East Street 24, S609561 |
+| Damai Secondary School | 达迈中学 | Co-Ed | Gov Sch | 4800 Bedok Reservoir Road, S479229 |
+| Deyi Secondary School | 德义中学 | Co-Ed | Gov Sch | 1 Ang Mo Kio Street 42, S569277 |
+| Dunearn Secondary School | 德能中学 | Co-Ed | Gov Sch | 21 Bukit Batok West Avenue 2, S659204 |
+| Dunman High School (Secondary) | 德明政府中学 | Co-Ed | Gov Sch / Auto. | 10 Tanjong Rhu Road, S436895 |
+| Dunman Secondary School | 德明中学 | Co-Ed | Gov Sch / Auto. | 21 Tampines Street 45, S529093 |
+| East Spring Secondary School | 东源中学 | Co-Ed | Gov Sch | 30 Tampines Street 34, S529231 |
+| Edgefield Secondary School | 育德中学 | Co-Ed | Gov Sch | 36 Punggol Field, S828814 |
+| Evergreen Secondary School | 永青中学 | Co-Ed | Gov Sch | 11 Woodlands Street 83, S738489 |
+| Fairfield Methodist School (Secondary) | 花菲卫理中学 | Co-Ed | Gov-Aided Sch / Auto. | 102 Dover Road, S139649 |
+| Fuhua Secondary School | 辅华中学 | Co-Ed | Gov Sch | 5 Jurong West Street 41, S649410 |
+| Gan Eng Seng School | 颜永成学校 | Co-Ed | Gov Sch | 1 Henderson Road, S159561 |
+| Geylang Methodist School (Secondary) | 芽笼美以美中学 | Co-Ed | Gov-Aided Sch | 2 Geylang East Central, S389705 |
+| Greendale Secondary School | 绿苑中学 | Co-Ed | Gov Sch | 51 Edgedale Plains, S828866 |
+| Greenridge Secondary School | 群立中学 | Co-Ed | Gov Sch | 32 Bukit Panjang Ring Road, S679938 |
+| Guangyang Secondary School | 光洋中学 | Co-Ed | Gov Sch | 8 Bishan Street 12, S579807 |
+| Hai Sing Catholic School | 海星天主教 | Co-Ed | Gov-Aided Sch | 9 Pasir Ris Drive 6, S519421 |
+| Hillgrove Secondary School | 育林中学 | Co-Ed | Gov Sch | 10 Bukit Batok Street 52, S659250 |
+| Holy Innocents' High School | 圣婴中学 | Co-Ed | Gov-Aided Sch | 1191 Upper Serangoon Road, S534786 |
+| Hougang Secondary School | 后港中学 | Co-Ed | Gov Sch | 2 Hougang Street 93, S534256 |
+| Hua Yi Secondary School | 华义中学 | Co-Ed | Gov Sch | 60 Jurong West St 42, S649371 |
+| Hwa Chong Institution (Secondary) | 华侨中学 | Co-Ed | Independent Sch | 661 Bukit Timah Road, S269734 |
+| Junyuan Secondary School | 俊源中学 | Co-Ed | Gov Sch | 11 Tampines Street 84, S528933 |
+| Jurong Secondary School | 裕廊中学 | Co-Ed | Gov Sch | 31 Yuan Ching Road, S618652 |
+| Jurong West Secondary School | 裕廊西中学 | Co-Ed | Gov Sch | 61 Jurong West Street 65, S648348 |
+| Jurongville Secondary School | 裕廊景中学 | Co-Ed | Gov Sch | 202 Jurong East Avenue 1, S609790 |
+| Juying Secondary School | 聚英中学 | Co-Ed | Gov Sch | 33 Jurong West Street 91, S649038 |
+| Kent Ridge Secondary School | 岗丽中学 | Co-Ed | Gov Sch | 147 West Coast Road, S127368 |
+| Kranji Secondary School | 科兰芝中学 | Co-Ed | Gov Sch | 61 Choa Chu Kang Street 51, S689333 |
+| Kuo Chuan Presbyterian Secondary School | 国专长老会中学 | Co-Ed | Gov-Aided Sch | 10 Bishan Street 13, S579795 |
+| Loyang View Secondary School | 洛阳景中学 | Co-Ed | Gov Sch | 12 Pasir Ris Street 11, S519073 |
+| Manjusri Secondary School | 文殊中学 | Co-Ed | Gov-Aided Sch | 20 Ubi Avenue 1, S408940 |
+| Maris Stella High School (Secondary) | 海星中学 | Boys | Gov-Aided Sch/ Auto. | 25 Mount Vernon Road, S368051 |
+| Marsiling Secondary School | 马西岭中学 | Co-Ed | Gov Sch | 12 Marsiling Road, S739110 |
+| Mayflower Secondary School | 美华中学 | Co-Ed | Gov Sch | 2 Ang Mo Kio Street 21, S569384 |
+| Meridian Secondary School | 美廉中学 | Co-Ed | Gov Sch | 31 Pasir Ris Street 51, S518901 |
+| Methodist Girls' School (Secondary) | 美以美中学 | Girls | Independent Sch | 11 Blackmore Drive, S599986 |
+| Montfort Secondary School | 蒙福中学 | Boys | Gov-Aided Sch | 50 Hougang Avenue 8, S538785 |
+| Nan Chiau High School | 南侨中学 | Co-Ed | Gov-Aided Sch | 20 Anchorvale Link, S545079 |
+| Nan Hua High School | 南华中学 | Co-Ed | Gov Sch / Auto. | 41 Clementi Avenue 1, S129956 |
+| Nanyang Girls' High School | 南洋女子中学 | Girls | Independent Sch | 2 Linden Drive, S288683 |
+| National Junior College (Secondary) | 国家初级学院 | Co-Ed | Gov Sch | 37 Hillcrest Road, S288913 |
+| Naval Base Secondary School | 军港中学 | Co-Ed | Gov Sch | 901 Yishun Ring Road, S768689 |
+| New Town Secondary School | 光伟中学 | Co-Ed | Gov Sch | 1020 Dover Road, S139657 |
+| Ngee Ann Secondary School | 义安中学 | Co-Ed | Gov-Aided Sch/ Auto. | 1 Tampines Street 32, S529283 |
+| North Vista Secondary School | 德新中学 | Co-Ed | Gov Sch | 11 Rivervale Link, S545081 |
+| Northbrooks Secondary School | 思源中学 | Co-Ed | Gov Sch | 585 Yishun Ring Road, S768692 |
+| Northland Secondary School | 德景中学 | Co-Ed | Gov Sch | 3 Yishun Street 22, S768578 |
+| Northlight School | 北烁学校 | Co-Ed | Spec. Sch | 151 Towner Road, S327830 |
+| NUS High School of Mathematics and Science | 国大数理中学 | Co-Ed | Spec. Independent Sch | 20 Clementi Avenue 1, S129957 |
+| Orchid Park Secondary School | 兰景中学 | Co-Ed | Gov Sch | 10 Yishun Street 81, S768454 |
+| Outram Secondary School | 欧南中学 | Co-Ed | Gov Sch | 3 York Hill, S168622 |
+| Pasir Ris Crest Secondary School | 励志中学 | Co-Ed | Gov Sch | 11 Pasir Ris Street 41, S518934 |
+| Pasir Ris Secondary School | 思励中学 | Co-Ed | Gov Sch | 390 Tampines Street 21, S529400 |
+| Paya Lebar Methodist Girls' School (Secondary) | 巴耶利峇美以美女中 | Girls | Gov-Aided Sch/ Auto. | 296 Lor Ah Soo, S536742 |
+| Pei Hwa Secondary School | 培华中学 | Co-Ed | Gov Sch | 21 Fernvale Link, S797702 |
+| Peicai Secondary School | 培才中学 | Co-Ed | Gov Sch | 10 Serangoon Avenue 4, S556094 |
+| Peirce Secondary School | 培雅中学 | Co-Ed | Gov Sch | 10 Sin Ming Walk, S575566 |
+| Presbyterian High School | 长老会中学 | Co-Ed | Gov-Aided Sch | 5209 Ang Mo Kio Avenue 6, S569845 |
+| Punggol Secondary School | 培道中学 | Co-Ed | Gov Sch | 51 Edgefield Plains, S828870 |
+| Queenstown Secondary School | 女皇镇中学 | Co-Ed | Gov Sch | 1 Strathmore Road, S148800 |
+| Queensway Secondary School | 女皇道中学 | Co-Ed | Gov Sch | 2A Margaret Drive, S149295 |
+| Raffles Girls' School (Secondary) | 莱佛士女子中学 | Girls | Independent Sch | 2 Braddell Rise, S318871 |
+| Raffles Institution (Secondary) | 莱佛士书院 | Co-Ed | Independent Sch | 1 Raffles Institution Lane, S575954 |
+| Regent Secondary School | 励正中学 | Co-Ed | Gov Sch | 50 Choa Chu Kang North 5, S689621 |
+| River Valley High School (Secondary) | 立化中学 | Co-Ed | Gov Sch / Auto. | 6 Boon Lay Avenue, S649961 |
+| Riverside Secondary School | 立德中学 | Co-Ed | Gov Sch | 3 Woodlands Street 81, S738524 |
+| School of Science and Technology, Singapore | 新科技中学 | Co-Ed | Spec. Independent Sch | 1 Technology Drive, S138572 |
+| School of the Arts, Singapore | 新加坡艺术学院 | Co-Ed | Spec. Independent Sch | 1 Zubir Said Drive, S227968 |
+| Sembawang Secondary School | 胜宝旺中学 | Co-Ed | Gov Sch | 30 Sembawang Crescent, S757704 |
+| Seng Kang Secondary School | 成康中学 | Co-Ed | Gov Sch | 10 Compassvale Lane, S545090 |
+| Serangoon Garden Secondary School | 实勤中学 | Co-Ed | Gov Sch | 21 Serangoon North Avenue 1, S555889 |
+| Serangoon Secondary School | 实仁中学 | Co-Ed | Gov Sch | 11 Upper Serangoon View, S534237 |
+| Singapore Chinese Girls' School | 新加坡女子学校 | Girls | Independent Sch | 190 Dunearn Road, S309437 |
+| Singapore Sports School | 新加坡体育学校 | Co-Ed | Spec. Independent Sch | 1 Champions Way, S737913 |
+| Spectra Secondary School | 云锦中学 | Co-Ed | Spec. Sch | 1 Woodlands Drive 64, S737758 |
+| Springfield Secondary School | 泉原中学 | Co-Ed | Gov Sch | 30 Tampines Avenue 8, S529593 |
+| St. Andrew's Secondary School | 圣安德烈中学 | Boys | Gov-Aided Sch | 15 Francis Thomas Drive, S359342 |
+| St. Anthony's Canossian Secondary School | 圣安东尼女校（中学） | Girls | Gov-Aided Sch / Auto. | 1600 Bedok North Avenue 4, S469700 |
+| St. Gabriel's Secondary School | 圣加俾尔中学 | Boys | Gov-Aided Sch | 24 Serangoon Avenue 1, S556140 |
+| St. Hilda's Secondary School | 圣希尔达中学 | Co-Ed | Gov-Aided Sch | 2 Tampines Street 82, S528986 |
+| St. Joseph's Institution (Secondary) | 圣约瑟书院 | Co-Ed | Independent Sch | 38 Malcolm Road, S308274 |
+| St. Margaret's Secondary School | 圣玛格烈中学 | Girls | Gov-Aided Sch/ Auto. | 111 Farrer Road, S259240 |
+| St. Patrick's School | 圣伯特理中学 | Boys | Gov-Aided Sch | 490 East Coast Road, S429058 |
+| Swiss Cottage Secondary School | 瑞士村中学 | Co-Ed | Gov Sch | 3 Bukit Batok Street 34, S659322 |
+| Tampines Secondary School | 淡滨尼中学 | Co-Ed | Gov Sch | 252 Tampines St 12, S529427 |
+| Tanglin Secondary School | 东林中学 | Co-Ed | Gov Sch | 301 West Coast Road, S127391 |
+| Tanjong Katong Girls' School | 丹绒加东女校 | Girls | Gov Sch / Auto. | 20 Dunman Lane, S439272 |
+| Tanjong Katong Secondary School | 丹绒加东中学 | Co-Ed | Gov Sch / Auto. | 130 Haig Road, S438796 |
+| Temasek Junior College (Secondary) | 淡马锡初级学院 | Co-Ed | Gov Sch | 22 Bedok South Road, S469278 |
+| Temasek Secondary School | 淡马锡中学 | Co-Ed | Gov Sch / Auto. | 600 Upper East Coast Road, S465561 |
+| Unity Secondary School | 协和中学 | Co-Ed | Gov Sch | 20 Choa Chu Kang Street 62, S689143 |
+| Victoria School | 维多利亚学校 | Boys | Gov Sch / Auto. | 2 Siglap Link, S448880 |
+| West Spring Secondary School | 伟源中学 | Co-Ed | Gov Sch | 61 Senja Road, S677737 |
+| Westwood Secondary School | 维林中学 | Co-Ed | Gov Sch | 11 Jurong West Street 25, S648350 |
+| Whitley Secondary School | 惠厉中学 | Co-Ed | Gov Sch | 30 Bishan Street 24, S579747 |
+| Woodgrove Secondary School | 林景中学 | Co-Ed | Gov Sch | 3 Woodlands Avenue 6, S738990 |
+| Woodlands Ring Secondary School | 辅廉中学 | Co-Ed | Gov Sch | 10 Woodlands Ring Road, S738239 |
+| Woodlands Secondary School | 辅仁中学 | Co-Ed | Gov Sch | 11 Marsiling Road, S739111 |
+| Xinmin Secondary School | 新民中学 | Co-Ed | Gov Sch / Auto. | 11 Hougang Avenue 8, S538789 |
+| Yio Chu Kang Secondary School | 永康中学 | Co-Ed | Gov Sch | 3063 Ang Mo Kio Avenue 5, S569868 |
+| Yishun Secondary School | 义顺中学 | Co-Ed | Gov Sch | 4 Yishun Street 71, S768516 |
+| Yishun Town Secondary School | 毅道中学 | Co-Ed | Gov Sch / Auto. | 6 Yishun Street 21, S768610 |
+| Yuan Ching Secondary School | 耘青中学 | Co-Ed | Gov Sch | 103 Yuan Ching Road, S618654 |
+| Yuhua Secondary School | 裕华中学 | Co-Ed | Gov Sch | 35 Jurong West Street 41, S649406 |
+| Yusof Ishak Secondary School | 尤索夫依萨中学 | Co-Ed | Gov Sch | 8 Sumang Walk, S828676 |
+| Yuying Secondary School | 育英中学 | Co-Ed | Gov-Aided Sch | 47 Hougang Avenue 1, S538884 |
+| Zhenghua Secondary School | 正华中学 | Co-Ed | Gov Sch | 91 Senja Road, S677741 |
+| Zhonghua Secondary School | 中华中学 | Co-Ed | Gov Sch / Auto. | 13 Serangoon Avenue 3, S556123 |

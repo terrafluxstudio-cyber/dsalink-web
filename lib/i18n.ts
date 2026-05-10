@@ -71,6 +71,27 @@ export type Copy = {
   openHousePreviewTitle: string;
   openHousePreviewDesc: string;
   openHouseViewFullCalendar: string;
+  /** Open-houses page: show entire island list vs highlighted schools only. */
+  openHouseFilterAll: string;
+  openHouseFilterPopular: string;
+  openHouseBadgePopular: string;
+  /** Full directory page */
+  openHouseSearchPlaceholder: string;
+  openHouseSearchAria: string;
+  openHouseFiltersRegion: string;
+  openHouseFiltersProgram: string;
+  openHouseRegionNorth: string;
+  openHouseRegionSouth: string;
+  openHouseRegionEast: string;
+  openHouseRegionWest: string;
+  openHouseRegionCentral: string;
+  openHouseProgramIP: string;
+  openHouseProgramSAP: string;
+  openHouseProgramOLevel: string;
+  openHouseLoadMore: string;
+  openHouseListComplete: string;
+  openHouseNoResults: string;
+  openHouseResultsSummary: string;
 };
 
 export const copy: Record<Locale, Copy> = {
@@ -113,12 +134,12 @@ export const copy: Record<Locale, Copy> = {
     footerRights: "© dsalink.sg · Built for parents navigating DSA in Singapore",
     extHint: "Opens externally",
     a11yLanguageSelector: "Choose language",
-    openHouseKicker: "May 2026",
-    sectionOpenHouseTitle: "School open houses · DSA season highlights",
+    openHouseKicker: "May 2026 · Island-wide",
+    sectionOpenHouseTitle: "Secondary open houses · DSA & admissions",
     sectionOpenHouseDesc:
-      "Curated from our May 2026 calendar. Times and on-site / online modes are indicative — always confirm details on each school’s official page.",
+      "147 secondary schools (MOE directory, 2026) with bilingual names, region, school type, and official DSA / admissions links. Open-house times are May 2026 (TBC) unless the school has published a date — always confirm on each site.",
     openHouseOfficialLink: "Official open house / admissions",
-    openHouseOfficialBooking: "Official booking",
+    openHouseOfficialBooking: "DSA / admissions",
     openHouseOnsite: "On-site",
     openHouseOnline: "Online",
     openHouseTime: "Time",
@@ -131,6 +152,26 @@ export const copy: Record<Locale, Copy> = {
     openHousePreviewDesc:
       "A quick look at the next sessions on our calendar — full list and official links inside.",
     openHouseViewFullCalendar: "View full calendar →",
+    openHouseFilterAll: "All schools",
+    openHouseFilterPopular: "Popular picks",
+    openHouseBadgePopular: "Popular",
+    openHouseSearchPlaceholder: "Search by English or Chinese school name…",
+    openHouseSearchAria: "Search schools",
+    openHouseFiltersRegion: "Area",
+    openHouseFiltersProgram: "Programme",
+    openHouseRegionNorth: "North",
+    openHouseRegionSouth: "South",
+    openHouseRegionEast: "East",
+    openHouseRegionWest: "West",
+    openHouseRegionCentral: "Central",
+    openHouseProgramIP: "IP",
+    openHouseProgramSAP: "SAP",
+    openHouseProgramOLevel: "O-Level",
+    openHouseLoadMore: "Load more",
+    openHouseListComplete: "End of list",
+    openHouseNoResults:
+      "No schools match. Try another search or clear filters.",
+    openHouseResultsSummary: "{{shown}} of {{total}} schools",
   },
   zh: {
     metaTitle: "DSA Link 新加坡 | DSA 2026 倒计时与官方入口导航",
@@ -169,12 +210,12 @@ export const copy: Record<Locale, Copy> = {
     footerRights: "© dsalink.sg · 助力家长从容应对新加坡 DSA",
     extHint: "外部链接",
     a11yLanguageSelector: "选择语言",
-    openHouseKicker: "2026年5月",
-    sectionOpenHouseTitle: "热门中学开放日 · DSA 季精选",
+    openHouseKicker: "2026年5月 · 全岛",
+    sectionOpenHouseTitle: "中学开放日 · DSA 与招生",
     sectionOpenHouseDesc:
-      "整理自本站 2026 年 5 月校历。时间、线下/线上形式仅供参考，请务必以各校官网为准。",
+      "收录 MOE 名录中 147 所中学：中英文校名、区域、学校类型与官网 DSA/招生链接。开放日时间除已公布者外暂标为 2026 年 5 月（待定），请以各校页面为准。",
     openHouseOfficialLink: "官方开放日 / 招生页面",
-    openHouseOfficialBooking: "官方预约",
+    openHouseOfficialBooking: "DSA / 招生",
     openHouseOnsite: "线下",
     openHouseOnline: "线上",
     openHouseTime: "时间",
@@ -186,6 +227,25 @@ export const copy: Record<Locale, Copy> = {
     openHousePreviewTitle: "预告：5 月校园开放日",
     openHousePreviewDesc: "日历中最近的场次速览；完整名单与官网链接请见内页。",
     openHouseViewFullCalendar: "查看完整日历 →",
+    openHouseFilterAll: "全部学校",
+    openHouseFilterPopular: "热门推荐",
+    openHouseBadgePopular: "热门",
+    openHouseSearchPlaceholder: "输入英文或中文校名搜索…",
+    openHouseSearchAria: "搜索学校",
+    openHouseFiltersRegion: "区域",
+    openHouseFiltersProgram: "课程类型",
+    openHouseRegionNorth: "北部",
+    openHouseRegionSouth: "南部",
+    openHouseRegionEast: "东部",
+    openHouseRegionWest: "西部",
+    openHouseRegionCentral: "中部",
+    openHouseProgramIP: "直通车 IP",
+    openHouseProgramSAP: "特选 SAP",
+    openHouseProgramOLevel: "O 水准主流",
+    openHouseLoadMore: "加载更多",
+    openHouseListComplete: "已显示全部",
+    openHouseNoResults: "没有符合的学校，请调整搜索或筛选。",
+    openHouseResultsSummary: "显示 {{shown}} / 共 {{total}} 所",
   },
   ms: {
     metaTitle: "DSA Link Singapura | Kiraan Detik DSA 2026 & Sumber Rasmi",
@@ -246,6 +306,26 @@ export const copy: Record<Locale, Copy> = {
     openHousePreviewDesc:
       "Gambaran pantas sesi seterusnya pada kalendar kami — senarai penuh & pautan rasmi di halaman seterusnya.",
     openHouseViewFullCalendar: "Lihat kalendar penuh →",
+    openHouseFilterAll: "Semua sekolah",
+    openHouseFilterPopular: "Pilihan popular",
+    openHouseBadgePopular: "Popular",
+    openHouseSearchPlaceholder: "Cari nama sekolah (Inggeris atau Cina)…",
+    openHouseSearchAria: "Cari sekolah",
+    openHouseFiltersRegion: "Kawasan",
+    openHouseFiltersProgram: "Program",
+    openHouseRegionNorth: "Utara",
+    openHouseRegionSouth: "Selatan",
+    openHouseRegionEast: "Timur",
+    openHouseRegionWest: "Barat",
+    openHouseRegionCentral: "Pusat",
+    openHouseProgramIP: "IP",
+    openHouseProgramSAP: "SAP",
+    openHouseProgramOLevel: "O-Level",
+    openHouseLoadMore: "Muat lagi",
+    openHouseListComplete: "Senarai lengkap",
+    openHouseNoResults:
+      "Tiada sekolah sepadan. Cuba carian atau penapis lain.",
+    openHouseResultsSummary: "{{shown}} daripada {{total}} sekolah",
   },
   ta: {
     metaTitle:
@@ -308,5 +388,26 @@ export const copy: Record<Locale, Copy> = {
     openHousePreviewDesc:
       "எங்கள் நாட்காட்டியில் அடுத்த அமர்வுகளின் சுருக்கப் பார்வை — முழு பட்டியலும் அதிகாரப்பூர்வ இணைப்புகளும் அடுத்த பக்கத்தில்.",
     openHouseViewFullCalendar: "முழு நாட்காட்டியும் →",
+    openHouseFilterAll: "அனைத்துப் பள்ளிகள்",
+    openHouseFilterPopular: "பிரபலமான தேர்வுகள்",
+    openHouseBadgePopular: "பிரபலமான",
+    openHouseSearchPlaceholder:
+      "ஆங்கிலம் அல்லது சீனப் பள்ளிப் பெயரால் தேடுக…",
+    openHouseSearchAria: "பள்ளிகளைத் தேடு",
+    openHouseFiltersRegion: "பகுதி",
+    openHouseFiltersProgram: "நிரல்",
+    openHouseRegionNorth: "வடக்கு",
+    openHouseRegionSouth: "தெற்கு",
+    openHouseRegionEast: "கிழக்கு",
+    openHouseRegionWest: "மேற்கு",
+    openHouseRegionCentral: "மத்திய",
+    openHouseProgramIP: "IP",
+    openHouseProgramSAP: "SAP",
+    openHouseProgramOLevel: "O-Level",
+    openHouseLoadMore: "மேலும் ஏற்று",
+    openHouseListComplete: "பட்டியல் முடிந்தது",
+    openHouseNoResults:
+      "பொருந்தும் பள்ளிகள் இல்லை. தேடல் அல்லது வடிகட்டிகளை மாற்றவும்.",
+    openHouseResultsSummary: "{{shown}} / {{total}} பள்ளிகள்",
   },
 };
