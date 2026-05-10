@@ -319,7 +319,7 @@ const CopSchoolRow = memo(function CopSchoolRow({
   );
 });
 
-export function ScoreBoard() {
+export function ScoreBoard({ omitHeading = false }: { omitHeading?: boolean } = {}) {
   const { locale, t } = useLanguage();
   const [q, setQ] = useState("");
   const [region, setRegion] = useState<SchoolCopRegion | "all">("all");
@@ -355,25 +355,39 @@ export function ScoreBoard() {
 
   return (
     <section
-      className="mt-10 w-full max-w-5xl"
-      aria-labelledby="scoreboard-heading"
+      className={
+        omitHeading
+          ? "w-full max-w-5xl"
+          : "mt-10 w-full max-w-5xl"
+      }
+      aria-labelledby={omitHeading ? undefined : "scoreboard-heading"}
+      aria-label={omitHeading ? t.scoresFilterToolbarAria : undefined}
     >
       <div className="rounded-2xl border border-intellectual/10 bg-card-shine p-5 shadow-sm ring-1 ring-champagne/20 sm:p-6">
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <h2
-              id="scoreboard-heading"
-              className="font-display text-lg font-semibold tracking-tight text-intellectual sm:text-xl"
-            >
-              {t.scoreboardTitle}
-            </h2>
-            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-intellectual-muted">
-              {t.scoreboardSubtitle}
-            </p>
+        {omitHeading ? null : (
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2
+                id="scoreboard-heading"
+                className="font-display text-lg font-semibold tracking-tight text-intellectual sm:text-xl"
+              >
+                {t.scoreboardTitle}
+              </h2>
+              <p className="mt-1 max-w-2xl text-sm leading-relaxed text-intellectual-muted">
+                {t.scoreboardSubtitle}
+              </p>
+            </div>
           </div>
-        </div>
+        )}
 
-        <div className="mt-5 flex flex-col gap-3 lg:flex-row lg:flex-wrap lg:items-end">
+        <div
+          id={omitHeading ? "scores-filters" : undefined}
+          className={
+            omitHeading
+              ? "flex flex-col gap-3 lg:flex-row lg:flex-wrap lg:items-end"
+              : "mt-5 flex flex-col gap-3 lg:flex-row lg:flex-wrap lg:items-end"
+          }
+        >
           <label className="flex min-w-[12rem] flex-1 flex-col gap-1.5 text-xs font-semibold text-intellectual-muted">
             <span className="uppercase tracking-wide">
               {t.openHouseSearchAria}

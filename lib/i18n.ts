@@ -68,6 +68,8 @@ export type Copy = {
   openHouseStatusOngoing: string;
   openHouseStatusFinished: string;
   navOpenHouses: string;
+  /** /scores — posting COP directory */
+  navScores: string;
   openHousePreviewTitle: string;
   openHousePreviewDesc: string;
   openHouseViewFullCalendar: string;
@@ -114,6 +116,13 @@ export type Copy = {
   scoreboardTypeG3: string;
   scoreboardTypeG2: string;
   scoreboardTypeG1: string;
+  /** Dedicated /scores page */
+  scoresPageH1: string;
+  scoresPageLead: string;
+  scoresFilterToolbarAria: string;
+  /** Home teaser card → /scores */
+  homeScoresCardTitle: string;
+  homeScoresCardCta: string;
 };
 
 export const copy: Record<Locale, Copy> = {
@@ -170,6 +179,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusOngoing: "In progress",
     openHouseStatusFinished: "Ended",
     navOpenHouses: "Open houses",
+    navScores: "COP scores",
     openHousePreviewTitle: "Coming up: May open houses",
     openHousePreviewDesc:
       "A quick look at the next sessions on our calendar — full list and official links inside.",
@@ -217,6 +227,13 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTypeG3: "G3",
     scoreboardTypeG2: "G2",
     scoreboardTypeG1: "G1",
+    scoresPageH1: "PSLE posting scores (2021–2025)",
+    scoresPageLead:
+      "Filter 150+ secondary schools by name, zone, and programme. Expand a row for five-year Non-IP vs IP bands (AL-style).",
+    scoresFilterToolbarAria: "Filters: search, zone, programme type",
+    homeScoresCardTitle:
+      "View 5-year PSLE COP trends for 150+ secondary schools island-wide",
+    homeScoresCardCta: "Open scoreboard",
   },
   zh: {
     metaTitle: "DSA Link 新加坡 | DSA 2026 倒计时与官方入口导航",
@@ -269,6 +286,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusOngoing: "火热进行中",
     openHouseStatusFinished: "已结束",
     navOpenHouses: "开放日",
+    navScores: "录取分数",
     openHousePreviewTitle: "预告：5 月校园开放日",
     openHousePreviewDesc: "日历中最近的场次速览；完整名单与官网链接请见内页。",
     openHouseViewFullCalendar: "查看完整日历 →",
@@ -313,6 +331,12 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTypeG3: "G3",
     scoreboardTypeG2: "G2",
     scoreboardTypeG1: "G1",
+    scoresPageH1: "历年 PSLE 录取分数线查询",
+    scoresPageLead:
+      "参考 5 年趋势，按校名、区域与课程类型筛选；展开行可对比 Non-IP 与 IP 历年截分（AL 制示意）。",
+    scoresFilterToolbarAria: "筛选：搜索、区域、类型",
+    homeScoresCardTitle: "查看全岛 150+ 中学 5 年 PSLE 分数趋势",
+    homeScoresCardCta: "进入分数看板",
   },
   ms: {
     metaTitle: "DSA Link Singapura | Kiraan Detik DSA 2026 & Sumber Rasmi",
@@ -369,6 +393,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusOngoing: "Sedang berlangsung",
     openHouseStatusFinished: "Tamat",
     navOpenHouses: "Hari terbuka",
+    navScores: "Skor COP",
     openHousePreviewTitle: "Akan datang: hari terbuka Mei",
     openHousePreviewDesc:
       "Gambaran pantas sesi seterusnya pada kalendar kami — senarai penuh & pautan rasmi di halaman seterusnya.",
@@ -416,6 +441,13 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTypeG3: "G3",
     scoreboardTypeG2: "G2",
     scoreboardTypeG1: "G1",
+    scoresPageH1: "Skor PSLE (2021–2025)",
+    scoresPageLead:
+      "Tapis 150+ sekolah menengah mengikut nama, zon, dan jenis program. Kembangkan baris untuk band lima tahun.",
+    scoresFilterToolbarAria: "Penapis: carian, zon, jenis",
+    homeScoresCardTitle:
+      "Lihat trend COP PSLE 5 tahun untuk 150+ sekolah menengah",
+    homeScoresCardCta: "Buka papan skor",
   },
   ta: {
     metaTitle:
@@ -474,6 +506,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusOngoing: "நடைபெறுகிறது",
     openHouseStatusFinished: "முடிந்தது",
     navOpenHouses: "திறந்த வீடுகள்",
+    navScores: "சேர்க்கை மதிப்பெண்",
     openHousePreviewTitle: "வரவிருக்கிறது: மே திறந்த வீடுகள்",
     openHousePreviewDesc:
       "எங்கள் நாட்காட்டியில் அடுத்த அமர்வுகளின் சுருக்கப் பார்வை — முழு பட்டியலும் அதிகாரப்பூர்வ இணைப்புகளும் அடுத்த பக்கத்தில்.",
@@ -522,5 +555,12 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTypeG3: "G3",
     scoreboardTypeG2: "G2",
     scoreboardTypeG1: "G1",
+    scoresPageH1: "PSLE COP வரலாறு (2021–2025)",
+    scoresPageLead:
+      "150+ இடைநிலைப் பள்ளிகளைப் பெயர், மண்டலம், நிரல் வகையால் வடிகட்டவும். வரிசையை விரிவாக்கி ஐந்து ஆண்டு Non-IP மற்றும் IP ஐ ஒப்பிடவும்.",
+    scoresFilterToolbarAria: "வடிகட்டிகள்: தேடல், மண்டலம், வகை",
+    homeScoresCardTitle:
+      "தீவு முழுவதும் 150+ பள்ளிகளின் 5 ஆண்டு PSLE COP போக்குகளைக் காண்க",
+    homeScoresCardCta: "மதிப்பெண் பலகை",
   },
 };

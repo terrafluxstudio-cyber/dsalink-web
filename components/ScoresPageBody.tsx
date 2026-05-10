@@ -1,0 +1,24 @@
+"use client";
+
+import { ScoreBoard } from "@/components/ScoreBoard";
+import { useLanguage } from "@/contexts/LanguageContext";
+
+export function ScoresPageBody() {
+  const { t } = useLanguage();
+
+  return (
+    <div className="mx-auto max-w-5xl px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-10">
+      <header className="max-w-3xl border-b border-intellectual/10 pb-8">
+        <h1 className="font-display text-2xl font-semibold tracking-tight text-intellectual sm:text-3xl">
+          {t.scoresPageH1}
+        </h1>
+        <p className="mt-3 text-base leading-relaxed text-intellectual-muted sm:text-lg">
+          {t.scoresPageLead}
+        </p>
+      </header>
+      <div className="mt-8 sm:mt-10">
+        <ScoreBoard omitHeading />
+      </div>
+    </div>
+  );
+}
