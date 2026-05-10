@@ -35,8 +35,17 @@ function pickTime(ev: OpenHouseEvent, locale: Locale): string {
   return ev.timeEn;
 }
 
-export function OpenHouseList() {
+export type OpenHouseListVariant = "embedded" | "page";
+
+export function OpenHouseList({
+  variant = "embedded",
+}: {
+  variant?: OpenHouseListVariant;
+}) {
   const { locale, t } = useLanguage();
+  const HeadingTag = variant === "page" ? "h1" : "h2";
+  const DateHeadingTag = variant === "page" ? "h2" : "h3";
+  const CardHeadingTag = variant === "page" ? "h3" : "h4";
 
   const groups = useMemo(() => {
     const map = openHouseEventsByDate();
@@ -50,7 +59,7 @@ export function OpenHouseList() {
   return (
     <section
       id="open-houses"
-      className="mt-10 w-full scroll-mt-24"
+      className={`w-full scroll-mt-24 ${variant === "embedded" ? "mt-10" : "mt-0"}`}
       aria-labelledby="open-houses-heading"
     >
       <div className="max-w-5xl">
@@ -59,12 +68,16 @@ export function OpenHouseList() {
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark">
               {t.openHouseKicker}
             </p>
-            <h2
+            <HeadingTag
               id="open-houses-heading"
-              className="font-display text-xl font-semibold text-intellectual sm:text-2xl"
+              className={`font-display font-semibold text-intellectual ${
+                variant === "page"
+                  ? "text-2xl sm:text-3xl"
+                  : "text-xl sm:text-2xl"
+              }`}
             >
               {t.sectionOpenHouseTitle}
-            </h2>
+            </HeadingTag>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-intellectual-muted sm:text-base">
               {t.sectionOpenHouseDesc}
             </p>
@@ -79,7 +92,9 @@ export function OpenHouseList() {
                   className="h-4 w-4 shrink-0 text-champagne-dark"
                   aria-hidden
                 />
-                <h3 className="text-sm font-semibold sm:text-base">{heading}</h3>
+                <DateHeadingTag className="text-sm font-semibold sm:text-base">
+                  {heading}
+                </DateHeadingTag>
               </div>
               <ul className="grid gap-4 sm:grid-cols-2">
                 {events.map((ev) => (
@@ -91,9 +106,9 @@ export function OpenHouseList() {
                         </span>
                         <div className="min-w-0 flex-1">
                           <div className="flex flex-wrap items-center gap-2 gap-y-1">
-                            <h4 className="font-display text-base font-semibold leading-snug text-intellectual sm:text-lg">
+                            <CardHeadingTag className="font-display text-base font-semibold leading-snug text-intellectual sm:text-lg">
                               {ev.nameEn}
-                            </h4>
+                            </CardHeadingTag>
                             <span
                               className={
                                 ev.mode === "online"

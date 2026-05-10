@@ -1,6 +1,6 @@
 import { AdPlaceholder } from "@/components/AdPlaceholder";
 import { HeroSection } from "@/components/HeroSection";
-import { OpenHouseList } from "@/components/OpenHouseList";
+import { OpenHousePreview } from "@/components/OpenHousePreview";
 import { ResourceCards } from "@/components/ResourceCards";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -11,7 +11,7 @@ export default function HomePage() {
       <SiteHeader />
       <main>
         <HeroSection>
-          <OpenHouseList />
+          <OpenHousePreview />
         </HeroSection>
         <ResourceCards />
         <AdPlaceholder />

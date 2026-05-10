@@ -13,7 +13,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link
           href="/"
-          className="group flex items-center gap-2.5 text-intellectual transition-opacity hover:opacity-90"
+          className="group flex min-w-0 items-center gap-2.5 text-intellectual transition-opacity hover:opacity-90"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-intellectual text-white shadow-soft ring-1 ring-champagne/30">
             <GraduationCap className="h-5 w-5" aria-hidden />
@@ -27,7 +27,18 @@ export function SiteHeader() {
             </span>
           </span>
         </Link>
-        <LanguageToggle />
+        <nav
+          className="flex shrink-0 items-center gap-3 sm:gap-4"
+          aria-label="Primary"
+        >
+          <Link
+            href="/open-houses"
+            className="rounded-lg px-2 py-1.5 text-sm font-semibold text-intellectual underline decoration-champagne/50 decoration-2 underline-offset-4 transition hover:bg-champagne-subtle/40 hover:decoration-champagne sm:px-3"
+          >
+            {t.navOpenHouses}
+          </Link>
+          <LanguageToggle />
+        </nav>
       </div>
     </header>
   );

@@ -62,6 +62,10 @@ export type Copy = {
   openHouseOnline: string;
   openHouseTime: string;
   openHouseAddress: string;
+  navOpenHouses: string;
+  openHousePreviewTitle: string;
+  openHousePreviewDesc: string;
+  openHouseViewFullCalendar: string;
 };
 
 export const copy: Record<Locale, Copy> = {
@@ -113,6 +117,11 @@ export const copy: Record<Locale, Copy> = {
     openHouseOnline: "Online",
     openHouseTime: "Time",
     openHouseAddress: "Address",
+    navOpenHouses: "Open houses",
+    openHousePreviewTitle: "Coming up: May open houses",
+    openHousePreviewDesc:
+      "A quick look at the next sessions on our calendar — full list and official links inside.",
+    openHouseViewFullCalendar: "View full calendar →",
   },
   zh: {
     metaTitle: "DSA Link 新加坡 | DSA 2026 倒计时与官方入口导航",
@@ -160,6 +169,10 @@ export const copy: Record<Locale, Copy> = {
     openHouseOnline: "线上",
     openHouseTime: "时间",
     openHouseAddress: "地址",
+    navOpenHouses: "开放日",
+    openHousePreviewTitle: "预告：5 月校园开放日",
+    openHousePreviewDesc: "日历中最近的场次速览；完整名单与官网链接请见内页。",
+    openHouseViewFullCalendar: "查看完整日历 →",
   },
   ms: {
     metaTitle: "DSA Link Singapura | Kiraan Detik DSA 2026 & Sumber Rasmi",
@@ -211,6 +224,11 @@ export const copy: Record<Locale, Copy> = {
     openHouseOnline: "Dalam talian",
     openHouseTime: "Masa",
     openHouseAddress: "Alamat",
+    navOpenHouses: "Hari terbuka",
+    openHousePreviewTitle: "Akan datang: hari terbuka Mei",
+    openHousePreviewDesc:
+      "Gambaran pantas sesi seterusnya pada kalendar kami — senarai penuh & pautan rasmi di halaman seterusnya.",
+    openHouseViewFullCalendar: "Lihat kalendar penuh →",
   },
   ta: {
     metaTitle:
@@ -264,5 +282,10 @@ export const copy: Record<Locale, Copy> = {
     openHouseOnline: "ஆன்லைன்",
     openHouseTime: "நேரம்",
     openHouseAddress: "முகவரி",
+    navOpenHouses: "திறந்த வீடுகள்",
+    openHousePreviewTitle: "வரவிருக்கிறது: மே திறந்த வீடுகள்",
+    openHousePreviewDesc:
+      "எங்கள் நாட்காட்டியில் அடுத்த அமர்வுகளின் சுருக்கப் பார்வை — முழு பட்டியலும் அதிகாரப்பூர்வ இணைப்புகளும் அடுத்த பக்கத்தில்.",
+    openHouseViewFullCalendar: "முழு நாட்காட்டியும் →",
   },
 };

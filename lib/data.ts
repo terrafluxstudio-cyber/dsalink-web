@@ -147,6 +147,35 @@ export const OPEN_HOUSE_EVENTS: OpenHouseEvent[] = [
   },
 ];
 
+/** Calendar date in Asia/Singapore as `YYYY-MM-DD` (for comparisons with `OpenHouseEvent.date`). */
+export function toSingaporeDateKey(date: Date): string {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Singapore",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(date);
+}
+
+/**
+ * Next upcoming open houses (Singapore calendar), up to `limit`.
+ * If every event is in the past, returns the last `limit` entries (most recent dates).
+ */
+export function getPreviewOpenHouseEvents(
+  limit = 3,
+  reference: Date = new Date(),
+): OpenHouseEvent[] {
+  const sorted = [...OPEN_HOUSE_EVENTS].sort((a, b) => {
+    if (a.date !== b.date) return a.date.localeCompare(b.date);
+    return a.nameEn.localeCompare(b.nameEn);
+  });
+  const refKey = toSingaporeDateKey(reference);
+  const upcoming = sorted.filter((ev) => ev.date >= refKey);
+  if (upcoming.length >= limit) return upcoming.slice(0, limit);
+  if (upcoming.length > 0) return upcoming;
+  return sorted.slice(-Math.min(limit, sorted.length));
+}
+
 export function openHouseEventsByDate(): Map<string, OpenHouseEvent[]> {
   const sorted = [...OPEN_HOUSE_EVENTS].sort((a, b) => {
     if (a.date !== b.date) return a.date.localeCompare(b.date);

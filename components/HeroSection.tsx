@@ -29,23 +29,23 @@ export function HeroSection({ children }: { children?: ReactNode }) {
         </div>
         {children}
         <div className="mt-6 flex max-w-xl flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <a
-              href={MOE_PRIMARY_CTA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-intellectual px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-intellectual-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
-            >
-              {t.ctaPrimary}
-              <ExternalLink className="h-4 w-4 opacity-90" aria-hidden />
-            </a>
-            <a
-              href="#resources"
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-intellectual/15 bg-white px-5 py-3 text-sm font-semibold text-intellectual shadow-sm transition hover:border-champagne/50 hover:bg-champagne-subtle/50"
-            >
-              {t.ctaSecondary}
-              <ArrowRight className="h-4 w-4" aria-hidden />
-            </a>
-          </div>
+          <a
+            href={MOE_PRIMARY_CTA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-intellectual px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-intellectual-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
+          >
+            {t.ctaPrimary}
+            <ExternalLink className="h-4 w-4 opacity-90" aria-hidden />
+          </a>
+          <a
+            href="#resources"
+            className="inline-flex items-center justify-center gap-2 rounded-xl border border-intellectual/15 bg-white px-5 py-3 text-sm font-semibold text-intellectual shadow-sm transition hover:border-champagne/50 hover:bg-champagne-subtle/50"
+          >
+            {t.ctaSecondary}
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </a>
+        </div>
       </div>
     </section>
   );
