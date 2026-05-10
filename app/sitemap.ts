@@ -13,6 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: `${base}/dsa-guide`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.96,
+    },
+    {
       url: `${base}/scores`,
       lastModified: now,
       changeFrequency: "weekly",

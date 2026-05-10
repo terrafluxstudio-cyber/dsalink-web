@@ -1,6 +1,14 @@
-import { SCHOOL_COP_HISTORY, type SchoolCopHistoryEntry } from "@/lib/data";
+import {
+  SCHOOL_COP_HISTORY,
+  SCHOOL_OPEN_HOUSES,
+  type SchoolCopHistoryEntry,
+  type SchoolOpenHouse,
+} from "@/lib/data";
 
 const DEFAULT_SITE_URL = "https://dsalink.sg";
+
+/** Publisher contact for Organization / JSON-LD (matches report-error mailto). */
+export const SITE_CONTACT_EMAIL = "terrafluxstudio@gmail.com";
 
 /** Canonical origin for sitemap, JSON-LD, and metadataBase (no trailing slash). */
 export function getSiteUrl(): string {
@@ -14,6 +22,143 @@ export function getSiteUrl(): string {
   }
 }
 
+/** In-page / footer disclaimer anchor (see `LegalDisclaimer` id). */
+export function getDisclaimerLicenseUrl(): string {
+  return `${getSiteUrl()}/#site-disclaimer`;
+}
+
+/**
+ * Homepage: WebSite + Organization (single script tag, one @graph).
+ * Logo uses OG route as placeholder until a dedicated square asset ships.
+ */
+export function buildHomeStructuredData(): Record<string, unknown> {
+  const base = getSiteUrl();
+  const orgId = `${base}/#organization`;
+  const websiteId = `${base}/#website`;
+  const logoUrl = `${base}/opengraph-image`;
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": orgId,
+        name: "DSALink",
+        url: base,
+        logo: {
+          "@type": "ImageObject",
+          url: logoUrl,
+          width: 1200,
+          height: 630,
+          caption: "Placeholder — replace with square brand logo in production",
+        },
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "Data corrections and general inquiries",
+          email: SITE_CONTACT_EMAIL,
+          areaServed: "SG",
+          availableLanguage: ["en", "zh", "ms", "ta"],
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": websiteId,
+        name: "DSALink",
+        url: base,
+        publisher: { "@id": orgId },
+        inLanguage: "en-SG",
+      },
+    ],
+  };
+}
+
+function openHouseToEvent(
+  ev: SchoolOpenHouse,
+  index: number,
+  openHousesUrl: string,
+): Record<string, unknown> {
+  const eventId = `${openHousesUrl}#event-${index}`;
+  const name = `${ev.nameEn} Open House`;
+  const attendanceMode =
+    ev.mode === "online"
+      ? "https://schema.org/OnlineEventAttendanceMode"
+      : "https://schema.org/OfflineEventAttendanceMode";
+
+  const location =
+    ev.mode === "online"
+      ? {
+          "@type": "VirtualLocation",
+          url: ev.sourceUrl,
+          name: `${ev.nameEn} (online)`,
+        }
+      : {
+          "@type": "Place",
+          name: ev.nameEn,
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: ev.address,
+            addressCountry: "SG",
+          },
+        };
+
+  const description = [
+    ev.timeEn,
+    ev.mode === "online" ? "Delivery: online." : "Delivery: on-site at the school address.",
+    `${ev.region} · ${ev.schoolType}.`,
+    "Details may change — confirm on the school’s official DSA or admissions page.",
+  ].join(" ");
+
+  return {
+    "@type": "Event",
+    "@id": eventId,
+    name,
+    description,
+    startDate: ev.startsAt,
+    endDate: ev.endsAt,
+    eventAttendanceMode: attendanceMode,
+    eventStatus: "https://schema.org/EventScheduled",
+    location,
+    organizer: {
+      "@type": "EducationalOrganization",
+      name: ev.nameEn,
+      url: ev.sourceUrl,
+    },
+    url: ev.sourceUrl,
+    isAccessibleForFree: true,
+  };
+}
+
+/**
+ * Open-houses directory: ItemList pointing at Event nodes (one JSON-LD script).
+ */
+export function buildOpenHousesStructuredData(): Record<string, unknown> {
+  const base = getSiteUrl();
+  const openHousesUrl = `${base}/open-houses`;
+
+  const events = SCHOOL_OPEN_HOUSES.map((ev, index) =>
+    openHouseToEvent(ev, index, openHousesUrl),
+  );
+
+  const itemList = {
+    "@type": "ItemList",
+    "@id": `${openHousesUrl}#open-house-event-list`,
+    name: "Singapore secondary school open houses (May 2026 season)",
+    description:
+      "Scheduled open-house sessions compiled from MOE-listed schools; dates may be TBC — verify with each institution.",
+    numberOfItems: events.length,
+    itemListElement: SCHOOL_OPEN_HOUSES.map((_, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: { "@id": `${openHousesUrl}#event-${i}` },
+    })),
+  };
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [...events, itemList],
+  };
+}
+
 function latestPsleCop2025(row: SchoolCopHistoryEntry): string | null {
   const y = row.history["2025"];
   if (!y) return null;
@@ -22,14 +167,16 @@ function latestPsleCop2025(row: SchoolCopHistoryEntry): string | null {
 }
 
 /**
- * Schema.org @graph: Dataset (PSLE COP as variableMeasured) + ItemList (schools).
- * JSON is built with JSON.stringify only (no manual concatenation) to avoid syntax errors.
+ * Schema.org @graph for /scores: Dataset (with creator, license) + ItemList + FAQPage.
+ * JSON via JSON.stringify only to avoid syntax errors.
  */
-export function buildScoresPageJsonLd(): Record<string, unknown> {
+export function buildScoresStructuredData(): Record<string, unknown> {
   const base = getSiteUrl();
   const scoresUrl = `${base}/scores`;
   const datasetId = `${scoresUrl}#psle-cop-dataset`;
   const listId = `${scoresUrl}#school-itemlist`;
+  const faqId = `${scoresUrl}#faq`;
+  const licenseUrl = getDisclaimerLicenseUrl();
 
   const itemListElement = SCHOOL_COP_HISTORY.map((row, index) => {
     const cop = latestPsleCop2025(row);
@@ -60,6 +207,29 @@ export function buildScoresPageJsonLd(): Record<string, unknown> {
     };
   });
 
+  const faqPage = {
+    "@type": "FAQPage",
+    "@id": faqId,
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Where can I find the official MOE PSLE COP?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You can verify all data at the official MOE SchoolFinder website.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the trends for 2026 PSLE scores?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Our data provides 5-year historical trends to help parents estimate 2026 posting ranges.",
+        },
+      },
+    ],
+  };
+
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -70,6 +240,11 @@ export function buildScoresPageJsonLd(): Record<string, unknown> {
         description:
           "Curated indicative PSLE posting cut-off trends for 150+ Singapore secondary schools, aligned with public MOE releases for parent planning. This site is not affiliated with MOE; always confirm on MOE SchoolFinder.",
         url: scoresUrl,
+        license: licenseUrl,
+        creator: {
+          "@type": "Organization",
+          name: "Terraflux Studio",
+        },
         variableMeasured: {
           "@type": "PropertyValue",
           name: "PSLE COP",
@@ -87,6 +262,7 @@ export function buildScoresPageJsonLd(): Record<string, unknown> {
         isPartOf: { "@id": datasetId },
         itemListElement,
       },
+      faqPage,
     ],
   };
 }

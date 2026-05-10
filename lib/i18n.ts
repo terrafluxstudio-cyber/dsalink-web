@@ -66,6 +66,8 @@ export type Copy = {
   openHouseStatusUpcoming: string;
   openHouseStatusOngoing: string;
   openHouseStatusFinished: string;
+  /** /dsa-guide — DSA-Sec application timeline */
+  navDsaGuide: string;
   navOpenHouses: string;
   /** /scores — posting COP directory */
   navScores: string;
@@ -177,6 +179,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusUpcoming: "Upcoming",
     openHouseStatusOngoing: "In progress",
     openHouseStatusFinished: "Ended",
+    navDsaGuide: "DSA Guide",
     navOpenHouses: "Open houses",
     navScores: "PSLE COP",
     openHousePreviewTitle: "Coming up: May open houses",
@@ -283,6 +286,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusUpcoming: "即将开放",
     openHouseStatusOngoing: "火热进行中",
     openHouseStatusFinished: "已结束",
+    navDsaGuide: "DSA 指南",
     navOpenHouses: "开放日",
     navScores: "PSLE COP",
     openHousePreviewTitle: "预告：5 月校园开放日",
@@ -389,6 +393,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusUpcoming: "Akan datang",
     openHouseStatusOngoing: "Sedang berlangsung",
     openHouseStatusFinished: "Tamat",
+    navDsaGuide: "Panduan DSA",
     navOpenHouses: "Hari terbuka",
     navScores: "PSLE COP",
     openHousePreviewTitle: "Akan datang: hari terbuka Mei",
@@ -501,6 +506,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusUpcoming: "வரவுள்ள",
     openHouseStatusOngoing: "நடைபெறுகிறது",
     openHouseStatusFinished: "முடிந்தது",
+    navDsaGuide: "DSA வழிகாட்டி",
     navOpenHouses: "திறந்த வீடுகள்",
     navScores: "PSLE COP",
     openHousePreviewTitle: "வரவிருக்கிறது: மே திறந்த வீடுகள்",

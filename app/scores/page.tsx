@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { ScoresPageBody } from "@/components/ScoresPageBody";
+import { ScoresPageFaq } from "@/components/ScoresPageFaq";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { buildScoresPageJsonLd } from "@/lib/seo";
+import { buildScoresStructuredData } from "@/lib/seo";
 
 const SCORES_PAGE_TITLE =
   "PSLE COP 2026 | All 150+ Singapore Secondary Schools (5-Year History)";
 const SCORES_PAGE_DESCRIPTION =
-  "Official-based PSLE Cut-off Points from 2021 to 2025. Compare school trends and prepare for 2026 Secondary 1 posting.";
+  "Sortable five-year PSLE posting bands (2021–2025) for 150+ secondary schools: filter by name, zone, and programme, then validate every figure on MOE SchoolFinder before you shortlist.";
 
 const SCORES_KEYWORDS = [
   "PSLE COP",
@@ -16,6 +17,13 @@ const SCORES_KEYWORDS = [
   "Singapore Education",
   "DSA 2026",
 ] as const;
+
+const scoresOgImage = {
+  url: "/opengraph-image",
+  width: 1200,
+  height: 630,
+  alt: "DSALink — PSLE COP historical dashboard for Singapore schools",
+} as const;
 
 export function generateMetadata(): Metadata {
   return {
@@ -31,18 +39,20 @@ export function generateMetadata(): Metadata {
       type: "website",
       url: "/scores",
       siteName: "DSALink",
+      images: [scoresOgImage],
     },
     twitter: {
       card: "summary_large_image",
       title: SCORES_PAGE_TITLE,
       description: SCORES_PAGE_DESCRIPTION,
+      images: [scoresOgImage.url],
     },
   };
 }
 
 /** PSLE COP dashboard; structured data for Rich Results (Dataset + ItemList). */
 export default function ScoresPage() {
-  const jsonLd = buildScoresPageJsonLd();
+  const jsonLd = buildScoresStructuredData();
   const jsonString = JSON.stringify(jsonLd);
 
   return (
@@ -54,6 +64,7 @@ export default function ScoresPage() {
       <SiteHeader />
       <main className="border-t border-intellectual/5 bg-hero-mesh">
         <ScoresPageBody />
+        <ScoresPageFaq />
       </main>
       <SiteFooter />
     </>

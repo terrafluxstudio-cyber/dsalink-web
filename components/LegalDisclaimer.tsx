@@ -8,9 +8,15 @@ import { REPORT_ERROR_MAILTO } from "@/lib/report-error-mailto";
 const DISCLAIMER =
   "Disclaimer: The information provided on this site, including PSLE COP and Open House dates, is for informational purposes only. This website is not affiliated with the Ministry of Education (MOE) Singapore. Users should verify all details with the official MOE SchoolFinder or respective school websites. We assume no responsibility for any decisions made based on the data provided.";
 
-export function LegalDisclaimer() {
+type LegalDisclaimerProps = {
+  /** Optional line below the main disclaimer (e.g. schedule attribution). */
+  scheduleNote?: string;
+};
+
+export function LegalDisclaimer({ scheduleNote }: LegalDisclaimerProps) {
   return (
     <div
+      id="site-disclaimer"
       className="border-t border-white/10 bg-intellectual-dark"
       aria-label="Disclaimer"
     >
@@ -25,6 +31,14 @@ export function LegalDisclaimer() {
               Spotted an error? Tell us (Report Error)
             </a>
           </p>
+          {scheduleNote ? (
+            <p
+              lang="en"
+              className="border-t border-white/10 pt-3 text-[11px] leading-snug text-slate-500 sm:text-xs"
+            >
+              {scheduleNote}
+            </p>
+          ) : null}
           <p className="border-t border-white/10 pt-4 text-[11px] leading-snug text-slate-500 sm:text-xs">
             <span className="block tabular-nums">Last Updated: May 2026</span>
           </p>
