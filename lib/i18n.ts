@@ -1,4 +1,12 @@
+import dsaGuideEn from "@/locales/en.json";
+import dsaGuideMs from "@/locales/ms.json";
+import dsaGuideTa from "@/locales/ta.json";
+import dsaGuideZh from "@/locales/zh.json";
+
 export const locales = ["en", "zh", "ms", "ta"] as const;
+
+/** Keys imported from `locales/*.json` for /dsa-guide (flat dsaGuide* strings). */
+export type DsaGuideStrings = typeof dsaGuideEn;
 
 export type Locale = (typeof locales)[number];
 
@@ -126,7 +134,7 @@ export type Copy = {
   homeScoresCardCta: string;
   /** /scores — link to MOE SchoolFinder for official verification */
   scoresMoeSchoolFinderCta: string;
-};
+} & DsaGuideStrings;
 
 export const copy: Record<Locale, Copy> = {
   en: {
@@ -237,6 +245,7 @@ export const copy: Record<Locale, Copy> = {
       "View 5-year PSLE COP trends for 150+ secondary schools island-wide",
     homeScoresCardCta: "Open scoreboard",
     scoresMoeSchoolFinderCta: "Verify on MOE SchoolFinder (official)",
+    ...dsaGuideEn,
   },
   zh: {
     metaTitle: "DSA Link 新加坡 | DSA 2026 倒计时与官方入口导航",
@@ -340,6 +349,7 @@ export const copy: Record<Locale, Copy> = {
     homeScoresCardTitle: "查看全岛 150+ 中学 5 年 PSLE 分数趋势",
     homeScoresCardCta: "进入分数看板",
     scoresMoeSchoolFinderCta: "前往 MOE SchoolFinder 核实官方数据",
+    ...dsaGuideZh,
   },
   ms: {
     metaTitle: "DSA Link Singapura | Kiraan Detik DSA 2026 & Sumber Rasmi",
@@ -451,6 +461,7 @@ export const copy: Record<Locale, Copy> = {
       "Lihat trend COP PSLE 5 tahun untuk 150+ sekolah menengah",
     homeScoresCardCta: "Buka papan skor",
     scoresMoeSchoolFinderCta: "Sahkan di MOE SchoolFinder (rasmi)",
+    ...dsaGuideMs,
   },
   ta: {
     metaTitle:
@@ -565,5 +576,6 @@ export const copy: Record<Locale, Copy> = {
       "தீவு முழுவதும் 150+ பள்ளிகளின் 5 ஆண்டு PSLE COP போக்குகளைக் காண்க",
     homeScoresCardCta: "மதிப்பெண் பலகை",
     scoresMoeSchoolFinderCta: "MOE SchoolFinder இல் அதிகாரப்பூர்வமாக சரிபார்க்க",
+    ...dsaGuideTa,
   },
 };
