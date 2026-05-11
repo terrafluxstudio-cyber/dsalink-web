@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_SC, Noto_Sans_Tamil, Plus_Jakarta_Sans } from "next/font/google";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { getSiteUrl } from "@/lib/seo";
 import "./globals.css";
@@ -102,6 +103,7 @@ export default function RootLayout({
       className={`${plusJakarta.variable} ${notoSansSC.variable} ${notoSansTamil.variable}`}
     >
       <body className="font-sans">
+        <GoogleAnalytics />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

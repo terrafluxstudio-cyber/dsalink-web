@@ -1,7 +1,7 @@
 /**
+ * @deprecated Use `scripts/build-school-cop-al.mjs` (AL 2023–2025, indigo snapshot).
  * Generates lib/school-cop-history-data.ts from secondary-school-zh-en.txt
  * merged with region/schoolType hints from lib/school-open-houses.ts.
- * Run: node scripts/generate-school-cop-history.mjs
  */
 import fs from "node:fs";
 import path from "node:path";

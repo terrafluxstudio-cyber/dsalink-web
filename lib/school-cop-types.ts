@@ -1,26 +1,34 @@
 export type SchoolCopRegion = "North" | "South" | "East" | "West" | "Central";
 
-export type SchoolCopProgramType = "IP" | "SAP" | "G3" | "G2" | "G1";
+/** Posting years under full AL (Achievement Level) regime — no T-score era. */
+export type SchoolCopYearKey = "2023" | "2024" | "2025";
 
-/** One academic year's posting COP in AL notation (ranges or merit bands like 9M). */
-export type SchoolCopYearScores = {
-  /** O-Level / non-IP / mainstream posting COP */
-  nonIp?: string;
-  /** Integrated Programme posting COP when applicable */
+export type SchoolGender = "boys" | "girls" | "coed";
+
+/**
+ * One academic year’s COP slices: headline indicative, IP (if any), and posting-group bands.
+ * G3 ≈ Express posting group, G2 / G1 per MOE posting groups (N/A & N/T pathways).
+ */
+export type SchoolCopYearMatrix = {
+  /** Headline non-IP indicative COP cell (may include M/P/D merit bands) */
+  indicativeNonIp?: string;
+  /** Integrated Programme COP when the school offers IP */
   ip?: string;
+  g3NonAffiliated?: string;
+  g3Affiliated?: string;
+  g2?: string;
+  g1?: string;
 };
-
-export type SchoolCopYearKey = "2021" | "2022" | "2023" | "2024" | "2025";
 
 export type SchoolCopHistoryEntry = {
   id: string;
   nameEn: string;
   nameCn: string;
   region: SchoolCopRegion;
-  type: SchoolCopProgramType;
-  /** 特选 SAP（可与 type 冗余，便于筛选与徽标） */
+  gender: SchoolGender;
+  offersIp: boolean;
   isSap: boolean;
-  /** 附属学校 / 教会等同系加分档（展示用） */
-  affiliatedCOP: boolean;
-  history: Record<SchoolCopYearKey, SchoolCopYearScores>;
+  isAutonomous: boolean;
+  /** 仅 2023–2025；数据主要对齐 indigo.com.sg AL 表 */
+  byYear: Record<SchoolCopYearKey, SchoolCopYearMatrix>;
 };

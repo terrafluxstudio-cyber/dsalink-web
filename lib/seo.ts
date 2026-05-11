@@ -160,10 +160,13 @@ export function buildOpenHousesStructuredData(): Record<string, unknown> {
 }
 
 function latestPsleCop2025(row: SchoolCopHistoryEntry): string | null {
-  const y = row.history["2025"];
+  const y = row.byYear["2025"];
   if (!y) return null;
-  if (y.nonIp && y.ip) return `Non-IP ${y.nonIp}; IP ${y.ip}`;
-  return y.nonIp ?? y.ip ?? null;
+  const parts: string[] = [];
+  if (y.g3NonAffiliated) parts.push(`G3 ${y.g3NonAffiliated}`);
+  if (y.indicativeNonIp) parts.push(`Indicative ${y.indicativeNonIp}`);
+  if (y.ip) parts.push(`IP ${y.ip}`);
+  return parts.length ? parts.join("; ") : null;
 }
 
 /**
@@ -182,8 +185,8 @@ export function buildScoresStructuredData(): Record<string, unknown> {
     const cop = latestPsleCop2025(row);
     const itemUrl = `${scoresUrl}#school-${row.id}`;
     const description = cop
-      ? `${row.nameEn} is a Singapore secondary school. Indicative 2025 PSLE COP (AL-style bands): ${cop}. Five-year history (2021–2025) on this page; verify all figures with MOE SchoolFinder.`
-      : `${row.nameEn} is a Singapore secondary school. PSLE posting history (2021–2025) on this page; verify cut-offs with MOE SchoolFinder.`;
+      ? `${row.nameEn} is a Singapore secondary school. Indicative 2025 PSLE COP (AL-style bands): ${cop}. AL-era history (2023–2025) on this page; verify all figures with MOE SchoolFinder.`
+      : `${row.nameEn} is a Singapore secondary school. PSLE posting history (2023–2025) on this page; verify cut-offs with MOE SchoolFinder.`;
 
     const variableMeasured = {
       "@type": "PropertyValue",
@@ -236,7 +239,7 @@ export function buildScoresStructuredData(): Record<string, unknown> {
       {
         "@type": "Dataset",
         "@id": datasetId,
-        name: "DSALink — Singapore secondary school PSLE COP (2021–2025)",
+        name: "DSALink — Singapore secondary school PSLE COP (2023–2025)",
         description:
           "Curated indicative PSLE posting cut-off trends for 150+ Singapore secondary schools, aligned with public MOE releases for parent planning. This site is not affiliated with MOE; always confirm on MOE SchoolFinder.",
         url: scoresUrl,

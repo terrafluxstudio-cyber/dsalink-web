@@ -132,8 +132,21 @@ export type Copy = {
   /** Home teaser card → /scores */
   homeScoresCardTitle: string;
   homeScoresCardCta: string;
-  /** /scores — link to MOE SchoolFinder for official verification */
-  scoresMoeSchoolFinderCta: string;
+  scoreboardFilterSapOnly: string;
+  scoreboardFilterIpOnly: string;
+  scoreboardFilterBoysSchool: string;
+  scoreboardFilterGirlsSchool: string;
+  scoreboardSortLabel: string;
+  scoreboardSortScoreAsc: string;
+  scoreboardSortScoreDesc: string;
+  scoreboardSortName: string;
+  scoreboardBadgeAuto: string;
+  scoreboardBadgeIp: string;
+  scoreboardColG3NonAff: string;
+  scoreboardDetailMatrix: string;
+  scoreboardFootnoteIndigo: string;
+  scoreboardGenderBoys: string;
+  scoreboardGenderGirls: string;
 } & DsaGuideStrings;
 
 export const copy: Record<Locale, Copy> = {
@@ -214,9 +227,9 @@ export const copy: Record<Locale, Copy> = {
     openHouseNoResults:
       "No schools match. Try another search or clear filters.",
     openHouseResultsSummary: "{{shown}} of {{total}} schools",
-    scoreboardTitle: "PSLE COP at a glance (2021–2025)",
+    scoreboardTitle: "PSLE COP matrix (AL, 2023–2025)",
     scoreboardSubtitle:
-      "Five-year AL-style cut-offs — filter by name, zone, and programme to plan DSA realistically.",
+      "Default column: 2025 G3 non-affiliated band where published; IP schools show the IP track. Data aligned to indigo.com.sg AL tables — confirm on MOE.",
     scoreboardSearchPlaceholder: "School name (EN / 中文)…",
     scoreboardFilterRegion: "Zone",
     scoreboardFilterType: "Type",
@@ -227,10 +240,10 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTrackIp: "IP",
     scoreboardBadgeAffiliated: "Affiliated",
     scoreboardBadgeSap: "SAP",
-    scoreboardTrendStable: "Flat trend",
-    scoreboardTrendUp: "COP eased (↑ AL)",
-    scoreboardTrendDown: "COP tightened (↓ AL)",
-    scoreboardExpandDetails: "5-year detail",
+    scoreboardTrendStable: "Flat vs 2024",
+    scoreboardTrendUp: "Easier in 2025: higher AL than 2024",
+    scoreboardTrendDown: "Tighter in 2025: lower AL than 2024",
+    scoreboardExpandDetails: "History & streams",
     scoreboardCollapseDetails: "Hide detail",
     scoreboardNoResults: "No schools match your filters.",
     scoreboardShowing: "{{shown}} / {{total}} schools",
@@ -239,12 +252,27 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTypeG1: "G1",
     scoresPageH1: "PSLE COP historical dashboard",
     scoresPageLead:
-      "Filter 150+ secondary schools by name, zone, and programme. Expand a row for five-year Non-IP vs IP bands (AL-style).",
-    scoresFilterToolbarAria: "Filters: search, zone, programme type",
+      "Compare 2025 G3 (non-affiliated) posting bands, year-on-year deltas, and full 2023–2025 streams for MOE secondary schools in our table. Filter by SAP, IP, gender, and zone.",
+    scoresFilterToolbarAria: "Filters: search, zone, SAP, IP, gender, sort",
     homeScoresCardTitle:
       "View 5-year PSLE COP trends for 150+ secondary schools island-wide",
     homeScoresCardCta: "Open scoreboard",
-    scoresMoeSchoolFinderCta: "Verify on MOE SchoolFinder (official)",
+    scoreboardFilterSapOnly: "SAP only",
+    scoreboardFilterIpOnly: "IP only",
+    scoreboardFilterBoysSchool: "Boys’ schools",
+    scoreboardFilterGirlsSchool: "Girls’ schools",
+    scoreboardSortLabel: "Sort",
+    scoreboardSortScoreAsc: "AL low → high",
+    scoreboardSortScoreDesc: "AL high → low",
+    scoreboardSortName: "School name",
+    scoreboardBadgeAuto: "Autonomous",
+    scoreboardBadgeIp: "IP",
+    scoreboardColG3NonAff: "2025 · G3 non-aff.",
+    scoreboardDetailMatrix: "2023–2025 streams",
+    scoreboardFootnoteIndigo:
+      "AL posting bands sourced from indigo.com.sg COP tables (2023–2025). Always verify with MOE SchoolFinder.",
+    scoreboardGenderBoys: "Boys",
+    scoreboardGenderGirls: "Girls",
     ...dsaGuideEn,
   },
   zh: {
@@ -320,8 +348,9 @@ export const copy: Record<Locale, Copy> = {
     openHouseListComplete: "已显示全部",
     openHouseNoResults: "没有符合的学校，请调整搜索或筛选。",
     openHouseResultsSummary: "显示 {{shown}} / 共 {{total}} 所",
-    scoreboardTitle: "历年 PSLE COP 分数大数据",
-    scoreboardSubtitle: "参考 5 年趋势，精准制定 DSA 策略",
+    scoreboardTitle: "PSLE COP 矩阵（AL · 2023–2025）",
+    scoreboardSubtitle:
+      "默认列为 2025 年 G3 对外招生档；有 IP 则显示 IP 轨。数据对齐 indigo.com.sg AL 表，请以 MOE 为准。",
     scoreboardSearchPlaceholder: "校名（中 / 英）…",
     scoreboardFilterRegion: "区域",
     scoreboardFilterType: "类型",
@@ -335,7 +364,7 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTrendStable: "走势平稳",
     scoreboardTrendUp: "截分趋宽（AL 升高）",
     scoreboardTrendDown: "截分趋紧（AL 降低）",
-    scoreboardExpandDetails: "展开五年明细",
+    scoreboardExpandDetails: "展开走势与细分",
     scoreboardCollapseDetails: "收起明细",
     scoreboardNoResults: "没有符合筛选的学校。",
     scoreboardShowing: "{{shown}} / 共 {{total}} 所",
@@ -344,11 +373,26 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTypeG1: "G1",
     scoresPageH1: "PSLE COP 历年数据看板",
     scoresPageLead:
-      "参考 5 年趋势，按校名、区域与课程类型筛选；展开行可对比 Non-IP 与 IP 历年截分（AL 制示意）。",
-    scoresFilterToolbarAria: "筛选：搜索、区域、类型",
+      "对比 2025 G3 对外分档、相对 2024 的松紧变化，以及 2023–2025 全细分。可按特选、IP、单性别与区域筛选。",
+    scoresFilterToolbarAria: "筛选：搜索、区域、特选、IP、性别、排序",
     homeScoresCardTitle: "查看全岛 150+ 中学 5 年 PSLE 分数趋势",
     homeScoresCardCta: "进入分数看板",
-    scoresMoeSchoolFinderCta: "前往 MOE SchoolFinder 核实官方数据",
+    scoreboardFilterSapOnly: "仅特选 SAP",
+    scoreboardFilterIpOnly: "仅直通车 IP",
+    scoreboardFilterBoysSchool: "男校",
+    scoreboardFilterGirlsSchool: "女校",
+    scoreboardSortLabel: "排序",
+    scoreboardSortScoreAsc: "AL 从低到高",
+    scoreboardSortScoreDesc: "AL 从高到低",
+    scoreboardSortName: "校名",
+    scoreboardBadgeAuto: "自主",
+    scoreboardBadgeIp: "IP",
+    scoreboardColG3NonAff: "2025 · G3 对外",
+    scoreboardDetailMatrix: "2023–2025 细分",
+    scoreboardFootnoteIndigo:
+      "AL 分档参考 indigo.com.sg 汇总表（2023–2025），务必以 MOE SchoolFinder 为准。",
+    scoreboardGenderBoys: "男校",
+    scoreboardGenderGirls: "女校",
     ...dsaGuideZh,
   },
   ms: {
@@ -430,9 +474,9 @@ export const copy: Record<Locale, Copy> = {
     openHouseNoResults:
       "Tiada sekolah sepadan. Cuba carian atau penapis lain.",
     openHouseResultsSummary: "{{shown}} daripada {{total}} sekolah",
-    scoreboardTitle: "Data COP PSLE (2021–2025)",
+    scoreboardTitle: "Matriks COP PSLE (AL, 2023–2025)",
     scoreboardSubtitle:
-      "Trend lima tahun untuk merancang DSA dengan lebih tepat.",
+      "Lalai: jalur G3 bukan berafiliasi 2025; sekolah IP menunjukkan jalur IP. Rujuk indigo.com.sg — sahkan dengan MOE.",
     scoreboardSearchPlaceholder: "Nama sekolah…",
     scoreboardFilterRegion: "Zon",
     scoreboardFilterType: "Jenis",
@@ -446,7 +490,7 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTrendStable: "Stabil",
     scoreboardTrendUp: "COP longgar",
     scoreboardTrendDown: "COP ketat",
-    scoreboardExpandDetails: "Butiran 5 tahun",
+    scoreboardExpandDetails: "Sejarah & aliran",
     scoreboardCollapseDetails: "Tutup",
     scoreboardNoResults: "Tiada sekolah sepadan.",
     scoreboardShowing: "{{shown}} / {{total}} sekolah",
@@ -455,12 +499,27 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTypeG1: "G1",
     scoresPageH1: "Papan data PSLE COP (2021–2025)",
     scoresPageLead:
-      "Tapis 150+ sekolah menengah mengikut nama, zon, dan jenis program. Kembangkan baris untuk band lima tahun.",
-    scoresFilterToolbarAria: "Penapis: carian, zon, jenis",
+      "Bandingkan G3 2025, perubahan berbanding 2024, dan semua aliran 2023–2025. Tapis SAP, IP, jantina, zon.",
+    scoresFilterToolbarAria: "Penapis: carian, zon, SAP, IP, jantina, isihan",
     homeScoresCardTitle:
       "Lihat trend COP PSLE 5 tahun untuk 150+ sekolah menengah",
     homeScoresCardCta: "Buka papan skor",
-    scoresMoeSchoolFinderCta: "Sahkan di MOE SchoolFinder (rasmi)",
+    scoreboardFilterSapOnly: "SAP sahaja",
+    scoreboardFilterIpOnly: "IP sahaja",
+    scoreboardFilterBoysSchool: "Sekolah lelaki",
+    scoreboardFilterGirlsSchool: "Sekolah perempuan",
+    scoreboardSortLabel: "Isihan",
+    scoreboardSortScoreAsc: "AL rendah → tinggi",
+    scoreboardSortScoreDesc: "AL tinggi → rendah",
+    scoreboardSortName: "Nama sekolah",
+    scoreboardBadgeAuto: "Autonomi",
+    scoreboardBadgeIp: "IP",
+    scoreboardColG3NonAff: "2025 · G3 bukan afiliasi",
+    scoreboardDetailMatrix: "Aliran 2023–2025",
+    scoreboardFootnoteIndigo:
+      "Data AL dirujuk jadual indigo.com.sg (2023–2025); sahkan dengan MOE.",
+    scoreboardGenderBoys: "Lelaki",
+    scoreboardGenderGirls: "Perempuan",
     ...dsaGuideMs,
   },
   ta: {
@@ -545,9 +604,9 @@ export const copy: Record<Locale, Copy> = {
     openHouseNoResults:
       "பொருந்தும் பள்ளிகள் இல்லை. தேடல் அல்லது வடிகட்டிகளை மாற்றவும்.",
     openHouseResultsSummary: "{{shown}} / {{total}} பள்ளிகள்",
-    scoreboardTitle: "PSLE COP வரலாற்று தரவு (2021–2025)",
+    scoreboardTitle: "PSLE COP அணி (AL, 2023–2025)",
     scoreboardSubtitle:
-      "ஐந்து ஆண்டு போக்குகளுடன் DSA திட்டமிடுங்கள்.",
+      "இயல்புநிலை: 2025 G3 புற இணைப்பு; IP பள்ளிகள் IP பாதை. indigo.com.sg — MOE உறுதிப்படுத்தவும்.",
     scoreboardSearchPlaceholder: "பள்ளிப் பெயர்…",
     scoreboardFilterRegion: "மண்டலம்",
     scoreboardFilterType: "வகை",
@@ -561,7 +620,7 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTrendStable: "நிலையானது",
     scoreboardTrendUp: "COP தளர்வு",
     scoreboardTrendDown: "COP இறுக்கம்",
-    scoreboardExpandDetails: "5 ஆண்டு விவரம்",
+    scoreboardExpandDetails: "வரலாறு & ஓட்டங்கள்",
     scoreboardCollapseDetails: "மூடு",
     scoreboardNoResults: "பொருந்தும் பள்ளிகள் இல்லை.",
     scoreboardShowing: "{{shown}} / {{total}} பள்ளிகள்",
@@ -570,12 +629,27 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTypeG1: "G1",
     scoresPageH1: "PSLE COP வரலாற்று டாஷ்போர்டு",
     scoresPageLead:
-      "150+ இடைநிலைப் பள்ளிகளைப் பெயர், மண்டலம், நிரல் வகையால் வடிகட்டவும். வரிசையை விரிவாக்கி ஐந்து ஆண்டு Non-IP மற்றும் IP ஐ ஒப்பிடவும்.",
-    scoresFilterToolbarAria: "வடிகட்டிகள்: தேடல், மண்டலம், வகை",
+      "2025 G3, 2024 உடன் ஒப்பீடு, 2023–2025 அனைத்து ஓட்டங்கள். SAP, IP, ஒரு பாலினம், மண்டலம் வடிகட்டல்.",
+    scoresFilterToolbarAria: "வடிகட்டிகள்: தேடல், மண்டலம், SAP, IP, பாலினம், வரிசை",
     homeScoresCardTitle:
       "தீவு முழுவதும் 150+ பள்ளிகளின் 5 ஆண்டு PSLE COP போக்குகளைக் காண்க",
     homeScoresCardCta: "மதிப்பெண் பலகை",
-    scoresMoeSchoolFinderCta: "MOE SchoolFinder இல் அதிகாரப்பூர்வமாக சரிபார்க்க",
+    scoreboardFilterSapOnly: "SAP மட்டும்",
+    scoreboardFilterIpOnly: "IP மட்டும்",
+    scoreboardFilterBoysSchool: "ஆண்கள் பள்ளி",
+    scoreboardFilterGirlsSchool: "பெண்கள் பள்ளி",
+    scoreboardSortLabel: "வரிசை",
+    scoreboardSortScoreAsc: "AL குறைந்த → அதிக",
+    scoreboardSortScoreDesc: "AL அதிக → குறைந்த",
+    scoreboardSortName: "பள்ளிப் பெயர்",
+    scoreboardBadgeAuto: "தன்னாட்சி",
+    scoreboardBadgeIp: "IP",
+    scoreboardColG3NonAff: "2025 · G3 புற",
+    scoreboardDetailMatrix: "2023–2025 ஓட்டங்கள்",
+    scoreboardFootnoteIndigo:
+      "AL விவரங்கள் indigo.com.sg (2023–2025); MOE SchoolFinder உறுதிப்படுத்தவும்.",
+    scoreboardGenderBoys: "ஆண்கள்",
+    scoreboardGenderGirls: "பெண்கள்",
     ...dsaGuideTa,
   },
 };
