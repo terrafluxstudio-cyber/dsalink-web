@@ -2,7 +2,6 @@ import {
   SCHOOL_COP_HISTORY,
   SCHOOL_OPEN_HOUSES,
   type SchoolCopHistoryEntry,
-  type SchoolOpenHouse,
 } from "@/lib/data";
 
 const DEFAULT_SITE_URL = "https://dsalink.sg";
@@ -72,90 +71,56 @@ export function buildHomeStructuredData(): Record<string, unknown> {
   };
 }
 
-function openHouseToEvent(
-  ev: SchoolOpenHouse,
-  index: number,
-  openHousesUrl: string,
-): Record<string, unknown> {
-  const eventId = `${openHousesUrl}#event-${index}`;
-  const name = `${ev.nameEn} Open House`;
-  const attendanceMode =
-    ev.mode === "online"
-      ? "https://schema.org/OnlineEventAttendanceMode"
-      : "https://schema.org/OfflineEventAttendanceMode";
-
-  const location =
-    ev.mode === "online"
-      ? {
-          "@type": "VirtualLocation",
-          url: ev.sourceUrl,
-          name: `${ev.nameEn} (online)`,
-        }
-      : {
-          "@type": "Place",
-          name: ev.nameEn,
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: ev.address,
-            addressCountry: "SG",
-          },
-        };
-
-  const description = [
-    ev.timeEn,
-    ev.mode === "online" ? "Delivery: online." : "Delivery: on-site at the school address.",
-    `${ev.region} · ${ev.schoolType}.`,
-    "Details may change — confirm on the school’s official DSA or admissions page.",
-  ].join(" ");
-
-  return {
-    "@type": "Event",
-    "@id": eventId,
-    name,
-    description,
-    startDate: ev.startsAt,
-    endDate: ev.endsAt,
-    eventAttendanceMode: attendanceMode,
-    eventStatus: "https://schema.org/EventScheduled",
-    location,
-    organizer: {
-      "@type": "EducationalOrganization",
-      name: ev.nameEn,
-      url: ev.sourceUrl,
-    },
-    url: ev.sourceUrl,
-    isAccessibleForFree: true,
-  };
-}
-
 /**
- * Open-houses directory: ItemList pointing at Event nodes (one JSON-LD script).
+ * Open-houses directory: WebPage + ItemList of schools.
+ * Avoid Event schema because open-house details are informational and may be TBC;
+ * Google requires event-specific fields that this site should not imply.
  */
 export function buildOpenHousesStructuredData(): Record<string, unknown> {
   const base = getSiteUrl();
   const openHousesUrl = `${base}/open-houses`;
-
-  const events = SCHOOL_OPEN_HOUSES.map((ev, index) =>
-    openHouseToEvent(ev, index, openHousesUrl),
-  );
+  const pageId = `${openHousesUrl}#webpage`;
+  const listId = `${openHousesUrl}#open-house-school-list`;
 
   const itemList = {
     "@type": "ItemList",
-    "@id": `${openHousesUrl}#open-house-event-list`,
+    "@id": listId,
     name: "Singapore secondary school open houses (May 2026 season)",
     description:
-      "Scheduled open-house sessions compiled from MOE-listed schools; dates may be TBC — verify with each institution.",
-    numberOfItems: events.length,
-    itemListElement: SCHOOL_OPEN_HOUSES.map((_, i) => ({
+      "Directory of school open-house and admissions information compiled from public school resources; verify details with each institution.",
+    numberOfItems: SCHOOL_OPEN_HOUSES.length,
+    isPartOf: { "@id": pageId },
+    itemListElement: SCHOOL_OPEN_HOUSES.map((school, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      item: { "@id": `${openHousesUrl}#event-${i}` },
+      item: {
+        "@type": "EducationalOrganization",
+        "@id": `${openHousesUrl}#school-${i}`,
+        name: school.nameEn,
+        url: school.sourceUrl,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: school.address,
+          addressCountry: "SG",
+        },
+      },
     })),
   };
 
   return {
     "@context": "https://schema.org",
-    "@graph": [...events, itemList],
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": pageId,
+        name: "Singapore secondary school open houses",
+        url: openHousesUrl,
+        description:
+          "Singapore secondary school open-house and admissions links compiled for parent reference.",
+        mainEntity: { "@id": listId },
+      },
+      itemList,
+    ],
   };
 }
 
