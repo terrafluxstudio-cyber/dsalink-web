@@ -3,7 +3,7 @@
  * instant is unambiguous everywhere (build servers, edge, browsers).
  * `+08:00` = Singapore Standard Time (SGT), UTC+8 — not local server timezone.
  */
-export const DSA_DEADLINE_ISO = "2026-05-31T23:59:59+08:00";
+export const DSA_DEADLINE_ISO = "2026-06-02T16:30:00+08:00";
 
 /**
  * Primary hero / MOE CTA URL — official MOE site.
