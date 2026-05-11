@@ -355,9 +355,6 @@ const CopSchoolRow = memo(function CopSchoolRow({
                   </tbody>
                 </table>
               </div>
-              <p className="mt-3 text-xs leading-relaxed text-intellectual-muted">
-                {t.scoreboardFootnoteIndigo}
-              </p>
             </div>
           </div>
         </div>

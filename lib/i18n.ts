@@ -144,7 +144,6 @@ export type Copy = {
   scoreboardBadgeIp: string;
   scoreboardColG3NonAff: string;
   scoreboardDetailMatrix: string;
-  scoreboardFootnoteIndigo: string;
   scoreboardGenderBoys: string;
   scoreboardGenderGirls: string;
 } & DsaGuideStrings;
@@ -229,7 +228,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseResultsSummary: "{{shown}} of {{total}} schools",
     scoreboardTitle: "PSLE COP matrix (AL, 2023–2025)",
     scoreboardSubtitle:
-      "Default column: 2025 G3 non-affiliated band where published; IP schools show the IP track. Data aligned to indigo.com.sg AL tables — confirm on MOE.",
+      "Default column: 2025 G3 non-affiliated band where published; IP schools show the IP track. Indicative data from public sources; check each school's website for official information.",
     scoreboardSearchPlaceholder: "School name (EN / 中文)…",
     scoreboardFilterRegion: "Zone",
     scoreboardFilterType: "Type",
@@ -269,8 +268,6 @@ export const copy: Record<Locale, Copy> = {
     scoreboardBadgeIp: "IP",
     scoreboardColG3NonAff: "2025 · G3 non-aff.",
     scoreboardDetailMatrix: "2023–2025 streams",
-    scoreboardFootnoteIndigo:
-      "AL posting bands sourced from indigo.com.sg COP tables (2023–2025). Always verify with MOE SchoolFinder.",
     scoreboardGenderBoys: "Boys",
     scoreboardGenderGirls: "Girls",
     ...dsaGuideEn,
@@ -350,7 +347,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseResultsSummary: "显示 {{shown}} / 共 {{total}} 所",
     scoreboardTitle: "PSLE COP 矩阵（AL · 2023–2025）",
     scoreboardSubtitle:
-      "默认列为 2025 年 G3 对外招生档；有 IP 则显示 IP 轨。数据对齐 indigo.com.sg AL 表，请以 MOE 为准。",
+      "默认列为 2025 年 G3 对外招生档；有 IP 则显示 IP 轨。数据由公开资料汇总仅供参考，请以各校官网为准。",
     scoreboardSearchPlaceholder: "校名（中 / 英）…",
     scoreboardFilterRegion: "区域",
     scoreboardFilterType: "类型",
@@ -389,8 +386,6 @@ export const copy: Record<Locale, Copy> = {
     scoreboardBadgeIp: "IP",
     scoreboardColG3NonAff: "2025 · G3 对外",
     scoreboardDetailMatrix: "2023–2025 细分",
-    scoreboardFootnoteIndigo:
-      "AL 分档参考 indigo.com.sg 汇总表（2023–2025），务必以 MOE SchoolFinder 为准。",
     scoreboardGenderBoys: "男校",
     scoreboardGenderGirls: "女校",
     ...dsaGuideZh,
@@ -476,7 +471,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseResultsSummary: "{{shown}} daripada {{total}} sekolah",
     scoreboardTitle: "Matriks COP PSLE (AL, 2023–2025)",
     scoreboardSubtitle:
-      "Lalai: jalur G3 bukan berafiliasi 2025; sekolah IP menunjukkan jalur IP. Rujuk indigo.com.sg — sahkan dengan MOE.",
+      "Lalai: jalur G3 bukan berafiliasi 2025; sekolah IP menunjukkan jalur IP. Data anggaran daripada sumber awam; rujuk laman rasmi sekolah.",
     scoreboardSearchPlaceholder: "Nama sekolah…",
     scoreboardFilterRegion: "Zon",
     scoreboardFilterType: "Jenis",
@@ -516,8 +511,6 @@ export const copy: Record<Locale, Copy> = {
     scoreboardBadgeIp: "IP",
     scoreboardColG3NonAff: "2025 · G3 bukan afiliasi",
     scoreboardDetailMatrix: "Aliran 2023–2025",
-    scoreboardFootnoteIndigo:
-      "Data AL dirujuk jadual indigo.com.sg (2023–2025); sahkan dengan MOE.",
     scoreboardGenderBoys: "Lelaki",
     scoreboardGenderGirls: "Perempuan",
     ...dsaGuideMs,
@@ -606,7 +599,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseResultsSummary: "{{shown}} / {{total}} பள்ளிகள்",
     scoreboardTitle: "PSLE COP அணி (AL, 2023–2025)",
     scoreboardSubtitle:
-      "இயல்புநிலை: 2025 G3 புற இணைப்பு; IP பள்ளிகள் IP பாதை. indigo.com.sg — MOE உறுதிப்படுத்தவும்.",
+      "இயல்புநிலை: 2025 G3 புற இணைப்பு; IP பள்ளிகள் IP பாதை. பொதுவெளி மூலங்களிலிருந்து சுருக்கம்; அதிகாரப்பூர்வ தகவலுக்கு பள்ளி இணையதளத்தைப் பார்க்கவும்.",
     scoreboardSearchPlaceholder: "பள்ளிப் பெயர்…",
     scoreboardFilterRegion: "மண்டலம்",
     scoreboardFilterType: "வகை",
@@ -646,8 +639,6 @@ export const copy: Record<Locale, Copy> = {
     scoreboardBadgeIp: "IP",
     scoreboardColG3NonAff: "2025 · G3 புற",
     scoreboardDetailMatrix: "2023–2025 ஓட்டங்கள்",
-    scoreboardFootnoteIndigo:
-      "AL விவரங்கள் indigo.com.sg (2023–2025); MOE SchoolFinder உறுதிப்படுத்தவும்.",
     scoreboardGenderBoys: "ஆண்கள்",
     scoreboardGenderGirls: "பெண்கள்",
     ...dsaGuideTa,

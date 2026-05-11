@@ -21,6 +21,11 @@ export function ScoresPageBody() {
       <div className="mt-8 sm:mt-10">
         <ScoreBoard omitHeading />
       </div>
+      <p className="mt-10 text-center text-xs leading-relaxed text-gray-400 sm:text-right">
+        Disclaimer: Data is aggregated from public education resources for
+        reference only. For official school information, please refer to the
+        respective school websites.
+      </p>
     </div>
   );
 }

@@ -170,7 +170,7 @@ function latestPsleCop2025(row: SchoolCopHistoryEntry): string | null {
 }
 
 /**
- * Schema.org @graph for /scores: Dataset (with creator, license) + ItemList + FAQPage.
+ * Schema.org @graph for /scores: Dataset (with creator, license) + ItemList.
  * JSON via JSON.stringify only to avoid syntax errors.
  */
 export function buildScoresStructuredData(): Record<string, unknown> {
@@ -178,22 +178,21 @@ export function buildScoresStructuredData(): Record<string, unknown> {
   const scoresUrl = `${base}/scores`;
   const datasetId = `${scoresUrl}#psle-cop-dataset`;
   const listId = `${scoresUrl}#school-itemlist`;
-  const faqId = `${scoresUrl}#faq`;
   const licenseUrl = getDisclaimerLicenseUrl();
 
   const itemListElement = SCHOOL_COP_HISTORY.map((row, index) => {
     const cop = latestPsleCop2025(row);
     const itemUrl = `${scoresUrl}#school-${row.id}`;
     const description = cop
-      ? `${row.nameEn} is a Singapore secondary school. Indicative 2025 PSLE COP (AL-style bands): ${cop}. AL-era history (2023–2025) on this page; verify all figures with MOE SchoolFinder.`
-      : `${row.nameEn} is a Singapore secondary school. PSLE posting history (2023–2025) on this page; verify cut-offs with MOE SchoolFinder.`;
+      ? `${row.nameEn} is a Singapore secondary school. Indicative 2025 PSLE COP (AL-style bands): ${cop}. AL-era history (2023–2025) on this page for reference only; confirm details on the school's official website.`
+      : `${row.nameEn} is a Singapore secondary school. PSLE posting history (2023–2025) on this page for reference only; confirm details on the school's official website.`;
 
     const variableMeasured = {
       "@type": "PropertyValue",
       name: "PSLE COP",
       description:
-        "Indicative PSLE Cut-Off Point (posting score) in AL-style notation for Secondary 1 admission planning — not an official MOE publication.",
-      value: cop ?? "Refer to MOE SchoolFinder",
+        "Indicative PSLE Cut-Off Point (posting score) in AL-style notation for Secondary 1 admission planning — aggregated from public sources, not an official MOE publication.",
+      value: cop ?? "Not published on this record",
     };
 
     return {
@@ -210,29 +209,6 @@ export function buildScoresStructuredData(): Record<string, unknown> {
     };
   });
 
-  const faqPage = {
-    "@type": "FAQPage",
-    "@id": faqId,
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Where can I find the official MOE PSLE COP?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "You can verify all data at the official MOE SchoolFinder website.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What are the trends for 2026 PSLE scores?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Our data provides 5-year historical trends to help parents estimate 2026 posting ranges.",
-        },
-      },
-    ],
-  };
-
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -241,7 +217,7 @@ export function buildScoresStructuredData(): Record<string, unknown> {
         "@id": datasetId,
         name: "DSALink — Singapore secondary school PSLE COP (2023–2025)",
         description:
-          "Curated indicative PSLE posting cut-off trends for 150+ Singapore secondary schools, aligned with public MOE releases for parent planning. This site is not affiliated with MOE; always confirm on MOE SchoolFinder.",
+          "Indicative PSLE posting cut-off trends for Singapore secondary schools, aggregated from public education resources for reference only. Not affiliated with MOE; for official information refer to each school's website.",
         url: scoresUrl,
         license: licenseUrl,
         creator: {
@@ -265,7 +241,6 @@ export function buildScoresStructuredData(): Record<string, unknown> {
         isPartOf: { "@id": datasetId },
         itemListElement,
       },
-      faqPage,
     ],
   };
 }
