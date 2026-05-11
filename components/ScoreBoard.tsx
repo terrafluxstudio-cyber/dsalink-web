@@ -29,22 +29,6 @@ function interpolateTemplate(s: string, vars: Record<string, string | number>) {
   );
 }
 
-/** Representative AL midpoint for trend / delta (lower = harder to enter). */
-function copMid(raw?: string): number | null {
-  if (!raw?.trim()) return null;
-  const t = raw.trim().toUpperCase().replace(/\bDEC\b/g, "12");
-  const m = t.match(/^(\d+(?:\.\d+)?)\s*M$/);
-  if (m) return Number(m[1]);
-  const range = t.match(/^(\d+)\s*-\s*(\d+)$/);
-  if (range) return (Number(range[1]) + Number(range[2])) / 2;
-  const single = t.match(/^(\d+)$/);
-  if (single) return Number(single[1]);
-  const dm = t.match(/(\d+)\s*D\s*-\s*(\d+)\s*M/);
-  if (dm) return (Number(dm[1]) + Number(dm[2])) / 2;
-  const loose = t.match(/(\d+)/);
-  return loose ? Number(loose[1]) : null;
-}
-
 function alSortNumber(s: string): number {
   if (!s || s === "—") return 999;
   const m = s.match(/\d+/g);
@@ -65,102 +49,6 @@ function primaryDisplay(row: SchoolCopHistoryEntry): {
   return { label: "—", mode: "nonip" };
 }
 
-function labelForYear(row: SchoolCopHistoryEntry, year: SchoolCopYearKey) {
-  const y = row.byYear[year];
-  if (y.g3NonAffiliated) return y.g3NonAffiliated;
-  if (y.indicativeNonIp) return y.indicativeNonIp;
-  if (y.ip) return y.ip;
-  return "—";
-}
-
-function deltaVs2024(row: SchoolCopHistoryEntry, mode: DisplayMode): number | null {
-  const y4 = row.byYear["2024"];
-  const y5 = row.byYear["2025"];
-  let prev: string | undefined;
-  let cur: string | undefined;
-  if (mode === "ip") {
-    prev = y4.ip;
-    cur = y5.ip;
-  } else if (mode === "g3") {
-    prev = y4.g3NonAffiliated ?? y4.indicativeNonIp;
-    cur = y5.g3NonAffiliated ?? y5.indicativeNonIp;
-  } else {
-    prev = y4.indicativeNonIp ?? y4.g3NonAffiliated;
-    cur = y5.indicativeNonIp ?? y5.g3NonAffiliated;
-  }
-  const a = copMid(prev);
-  const b = copMid(cur);
-  if (a == null || b == null) return null;
-  return a - b;
-}
-
-function MiniSpark({ row }: { row: SchoolCopHistoryEntry }) {
-  const pts = YEARS.map((y) => copMid(labelForYear(row, y)));
-  const valid = pts.filter((v): v is number => v != null);
-  if (valid.length === 0) {
-    return (
-      <span className="inline-block h-5 w-12 shrink-0 rounded bg-intellectual/5" />
-    );
-  }
-  const min = Math.min(...valid);
-  const max = Math.max(...valid);
-  const w = 44;
-  const h = 18;
-  const pad = 2;
-  const denom = Math.max(pts.length - 1, 1);
-  const coords = pts.map((v, i) => {
-    if (v == null) return null;
-    const x = pad + (i / denom) * (w - pad * 2);
-    const span = Math.max(max - min, 1e-6);
-    const y = pad + ((max - v) / span) * (h - pad * 2);
-    return [x, y] as const;
-  });
-  const pathParts: string[] = [];
-  let started = false;
-  for (const c of coords) {
-    if (!c) {
-      started = false;
-      continue;
-    }
-    const [x, y] = c;
-    pathParts.push(started ? `L ${x} ${y}` : `M ${x} ${y}`);
-    started = true;
-  }
-  const d = pathParts.join(" ");
-  return (
-    <svg
-      width={w}
-      height={h}
-      viewBox={`0 0 ${w} ${h}`}
-      className="shrink-0 text-champagne-dark"
-      aria-hidden
-    >
-      <path
-        d={d}
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={1.35}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        opacity={0.9}
-      />
-    </svg>
-  );
-}
-
-function formatDelta(d: number): string {
-  if (d === 0) return "→";
-  if (d > 0) return "↑";
-  return "↓";
-}
-
-/** d>0: 2025 AL mid lower than 2024 (tighter / harder) — rose; d<0: easier — teal. */
-function deltaDisplayClass(d: number): string {
-  if (d === 0) return "text-intellectual-muted";
-  if (d > 0) return "text-rose-600";
-  return "text-teal-600";
-}
-
 type RowProps = {
   row: SchoolCopHistoryEntry;
   locale: Locale;
@@ -176,9 +64,8 @@ const CopSchoolRow = memo(function CopSchoolRow({
 }: RowProps) {
   const { t } = useLanguage();
   const disp = primaryDisplay(row);
-  const dlt = deltaVs2024(row, disp.mode);
-  const name = locale === "zh" ? row.nameCn : row.nameEn;
-  const subName = locale === "zh" ? row.nameEn : row.nameCn;
+  const primaryName = locale === "zh" ? row.nameCn : row.nameEn;
+  const secondaryName = locale === "zh" ? row.nameEn : null;
 
   const onKey = (e: KeyboardEvent) => {
     if (e.key === "Enter" || e.key === " ") {
@@ -199,21 +86,18 @@ const CopSchoolRow = memo(function CopSchoolRow({
           aria-expanded={expanded}
           onClick={() => onToggle(row.id)}
           onKeyDown={onKey}
-          className="flex w-full cursor-pointer flex-col gap-3 p-4 text-left transition hover:bg-champagne-subtle/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne sm:flex-row sm:items-center sm:gap-4"
+          className="flex w-full cursor-pointer flex-col gap-2 p-3 text-left transition hover:bg-champagne-subtle/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne sm:flex-row sm:items-center sm:gap-3 sm:p-3.5"
         >
-          <div className="flex min-w-0 flex-1 items-start gap-3">
-            <div className="flex shrink-0 flex-col items-center gap-0.5">
-              <MiniSpark row={row} />
-              <span className="text-[9px] font-semibold tabular-nums text-intellectual-muted/90">
-                23–25
-              </span>
-            </div>
-            <div className="min-w-0 flex-1">
-              <p className="font-medium text-intellectual">{name}</p>
+          <div className="min-w-0 flex-1">
+            <p className="font-medium leading-snug text-intellectual">
+              {primaryName}
+            </p>
+            {secondaryName ? (
               <p className="mt-0.5 truncate text-xs text-intellectual-muted">
-                {subName}
+                {secondaryName}
               </p>
-              <div className="mt-2 flex flex-wrap gap-1.5">
+            ) : null}
+            <div className="mt-1.5 flex flex-wrap gap-1.5">
                 <span className="rounded-md bg-intellectual/5 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-intellectual-muted">
                   {row.region}
                 </span>
@@ -239,43 +123,17 @@ const CopSchoolRow = memo(function CopSchoolRow({
                     {t.scoreboardBadgeAuto}
                   </span>
                 ) : null}
-              </div>
             </div>
           </div>
 
-          <div className="flex shrink-0 flex-col items-stretch gap-2 sm:items-end">
-            <div className="rounded-lg border border-champagne/35 bg-gradient-to-br from-white to-champagne-subtle/40 px-3 py-2 text-right shadow-gold sm:min-w-[10.5rem]">
+          <div className="flex shrink-0 flex-col items-stretch gap-1 sm:items-end">
+            <div className="rounded-lg border border-champagne/35 bg-gradient-to-br from-white to-champagne-subtle/40 px-3 py-1.5 text-right shadow-gold sm:min-w-[9.5rem]">
               <p className="text-[10px] font-semibold uppercase tracking-wide text-intellectual-muted">
                 {t.scoreboardColG3NonAff}
               </p>
-              <p className="mt-0.5 font-display text-lg font-semibold tabular-nums text-intellectual">
+              <p className="mt-0.5 font-display text-lg font-semibold tabular-nums leading-tight text-intellectual">
                 {disp.mode === "ip" ? `IP ${disp.label}` : disp.label}
               </p>
-              {dlt != null ? (
-                <p
-                  className={`mt-1 text-xs font-semibold tabular-nums ${deltaDisplayClass(dlt)}`}
-                  title={
-                    dlt > 0
-                      ? t.scoreboardTrendDown
-                      : dlt < 0
-                        ? t.scoreboardTrendUp
-                        : t.scoreboardTrendStable
-                  }
-                >
-                  {formatDelta(dlt)}{" "}
-                  <span className="font-normal text-intellectual-muted">
-                    vs 2024
-                  </span>
-                </p>
-              ) : null}
-            </div>
-            <div className="hidden text-[10px] text-intellectual-muted md:block">
-              {YEARS.filter((y) => y !== "2025").map((y) => (
-                <span key={y} className="ml-2 inline tabular-nums first:ml-0">
-                  <span className="font-semibold text-intellectual/70">{y}</span>{" "}
-                  {labelForYear(row, y)}
-                </span>
-              ))}
             </div>
             <span className="flex items-center justify-end gap-1 text-xs font-semibold text-champagne-dark">
               {expanded ? (
@@ -299,8 +157,8 @@ const CopSchoolRow = memo(function CopSchoolRow({
           }`}
         >
           <div className="overflow-hidden">
-            <div className="border-t border-intellectual/8 bg-intellectual/[0.02] px-4 py-4">
-              <p className="mb-3 text-xs font-semibold text-intellectual">
+            <div className="border-t border-intellectual/8 bg-intellectual/[0.02] px-3 py-3 sm:px-4 sm:py-3.5">
+              <p className="mb-2 text-xs font-semibold text-intellectual">
                 {t.scoreboardDetailMatrix}
               </p>
               <div className="overflow-x-auto rounded-lg border border-intellectual/10 bg-white/90">
@@ -568,7 +426,7 @@ export function ScoreBoard({ omitHeading = false }: { omitHeading?: boolean } = 
             {t.scoreboardNoResults}
           </p>
         ) : (
-          <ul className="mt-5 space-y-3">
+          <ul className="mt-4 space-y-2">
             {sorted.map((row) => (
               <CopSchoolRow
                 key={row.id}
