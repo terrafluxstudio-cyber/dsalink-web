@@ -29,6 +29,6 @@ export type SchoolCopHistoryEntry = {
   offersIp: boolean;
   isSap: boolean;
   isAutonomous: boolean;
-  /** 仅 2023–2025；数据主要对齐 indigo.com.sg AL 表 */
+  /** Year-keyed COP matrices (2023–2025, AL era only). */
   byYear: Record<SchoolCopYearKey, SchoolCopYearMatrix>;
 };

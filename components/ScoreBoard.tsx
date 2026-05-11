@@ -581,6 +581,11 @@ export function ScoreBoard({ omitHeading = false }: { omitHeading?: boolean } = 
           </ul>
         )}
       </div>
+      <p className="text-[10px] text-gray-400 text-center mt-8 mb-4">
+        Disclaimer: Data is aggregated from public education resources for
+        reference only. For official school information, please refer to the
+        respective school websites.
+      </p>
     </section>
   );
 }
