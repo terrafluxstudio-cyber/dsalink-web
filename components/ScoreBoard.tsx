@@ -148,10 +148,10 @@ function MiniSpark({ row }: { row: SchoolCopHistoryEntry }) {
   );
 }
 
-function formatDelta(d: number, locale: Locale): string {
-  if (d === 0) return "→0";
-  if (d > 0) return locale === "zh" ? `↑${d}` : `↑${d}`;
-  return locale === "zh" ? `↓${-d}` : `↓${-d}`;
+function formatDelta(d: number): string {
+  if (d === 0) return "→";
+  if (d > 0) return "↑";
+  return "↓";
 }
 
 /** d>0: 2025 AL mid lower than 2024 (tighter / harder) — rose; d<0: easier — teal. */
@@ -262,7 +262,7 @@ const CopSchoolRow = memo(function CopSchoolRow({
                         : t.scoreboardTrendStable
                   }
                 >
-                  {formatDelta(dlt, locale)}{" "}
+                  {formatDelta(dlt)}{" "}
                   <span className="font-normal text-intellectual-muted">
                     vs 2024
                   </span>
