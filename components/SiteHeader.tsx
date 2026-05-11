@@ -41,6 +41,13 @@ export function SiteHeader() {
             {t.navDsaGuide}
           </Link>
           <Link
+            href="/dsa-finder"
+            className="whitespace-nowrap rounded-lg px-1.5 py-1.5 text-[14px] font-semibold leading-none text-intellectual underline decoration-champagne/50 decoration-2 underline-offset-4 transition hover:bg-champagne-subtle/40 hover:decoration-champagne sm:px-3 sm:text-sm sm:leading-normal"
+          >
+            <span className="sm:hidden">DSA</span>
+            <span className="hidden sm:inline">DSA Talents</span>
+          </Link>
+          <Link
             href="/open-houses"
             className="whitespace-nowrap rounded-lg px-1.5 py-1.5 text-[14px] font-semibold leading-none text-intellectual underline decoration-champagne/50 decoration-2 underline-offset-4 transition hover:bg-champagne-subtle/40 hover:decoration-champagne sm:px-3 sm:text-sm sm:leading-normal"
           >

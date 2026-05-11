@@ -19,6 +19,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.96,
     },
     {
+      url: `${base}/dsa`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.98,
+    },
+    {
+      url: `${base}/dsa-finder`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.98,
+    },
+    {
       url: `${base}/scores`,
       lastModified: now,
       changeFrequency: "weekly",
