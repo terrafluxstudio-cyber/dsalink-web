@@ -6,7 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import type { Copy, Locale } from "@/lib/i18n";
 import {
   resolveOpenHouseStatus,
-  SCHOOL_OPEN_HOUSES,
+  upcomingOpenHouses,
   type OpenHouseRegion,
   type OpenHouseStatus,
   type SchoolOpenHouse,
@@ -110,8 +110,10 @@ export function OpenHousesDirectory() {
   const [programs, setPrograms] = useState<Set<ProgramKey>>(() => new Set());
   const [visible, setVisible] = useState(INITIAL_VISIBLE);
 
+  const upcoming = useMemo(() => upcomingOpenHouses(), []);
+
   const filteredSorted = useMemo(() => {
-    return SCHOOL_OPEN_HOUSES.filter(
+    return upcoming.filter(
       (ev) =>
         matchesSearch(ev, search) &&
         matchesRegion(ev, regions) &&
@@ -120,7 +122,7 @@ export function OpenHousesDirectory() {
       if (a.isPopular !== b.isPopular) return a.isPopular ? -1 : 1;
       return a.nameEn.localeCompare(b.nameEn, "en");
     });
-  }, [search, regions, programs]);
+  }, [search, regions, programs, upcoming]);
 
   useEffect(() => {
     setVisible(INITIAL_VISIBLE);
@@ -241,7 +243,9 @@ export function OpenHousesDirectory() {
       </div>
 
       <p className="mt-3 text-[11px] text-intellectual-muted sm:mt-4 sm:text-sm">
-        {filteredSorted.length === 0
+        {upcoming.length === 0
+          ? t.openHouseStayTuned
+          : filteredSorted.length === 0
           ? t.openHouseNoResults
           : formatResultsSummary(t, shown.length, filteredSorted.length)}
       </p>

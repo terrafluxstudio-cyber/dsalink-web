@@ -56,8 +56,6 @@ export type Copy = {
   linkPortalDesc: string;
   linkCalendarTitle: string;
   linkCalendarDesc: string;
-  adLabel: string;
-  adPlaceholder: string;
   footerRights: string;
   extHint: string;
   a11yLanguageSelector: string;
@@ -102,6 +100,7 @@ export type Copy = {
   openHouseLoadMore: string;
   openHouseListComplete: string;
   openHouseNoResults: string;
+  openHouseStayTuned: string;
   openHouseResultsSummary: string;
   scoreboardTitle: string;
   scoreboardSubtitle: string;
@@ -180,9 +179,6 @@ export const copy: Record<Locale, Copy> = {
     linkPortalDesc: "When the window opens, submit via the official e‑service.",
     linkCalendarTitle: "Key dates",
     linkCalendarDesc: "Cross‑check timelines alongside MOE announcements.",
-    adLabel: "Sponsored space",
-    adPlaceholder:
-      "Reserved for a single, clearly labelled placement — aligned with a community resource.",
     footerRights: "© dsalink.sg · Built for parents navigating DSA in Singapore",
     extHint: "Opens externally",
     a11yLanguageSelector: "Choose language",
@@ -225,6 +221,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseListComplete: "End of list",
     openHouseNoResults:
       "No schools match. Try another search or clear filters.",
+    openHouseStayTuned: "Check back later for upcoming open houses",
     openHouseResultsSummary: "{{shown}} of {{total}} schools",
     scoreboardTitle: "PSLE COP matrix (AL, 2023–2025)",
     scoreboardSubtitle:
@@ -254,7 +251,7 @@ export const copy: Record<Locale, Copy> = {
       "Compare 2025 G3 (non-affiliated) posting bands, year-on-year deltas, and full 2023–2025 streams for MOE secondary schools in our table. Filter by SAP, IP, gender, and zone.",
     scoresFilterToolbarAria: "Filters: search, zone, SAP, IP, gender, sort",
     homeScoresCardTitle:
-      "View 5-year PSLE COP trends for 150+ secondary schools island-wide",
+      "View 3-year PSLE COP trends for 146 secondary schools island-wide",
     homeScoresCardCta: "Open scoreboard",
     scoreboardFilterSapOnly: "SAP only",
     scoreboardFilterIpOnly: "IP only",
@@ -301,9 +298,6 @@ export const copy: Record<Locale, Copy> = {
     linkPortalDesc: "开放期间请通过官方电子服务提交申请。",
     linkCalendarTitle: "关键时间节点",
     linkCalendarDesc: "结合 MOE 公告核对时间表。",
-    adLabel: "广告位预留",
-    adPlaceholder:
-      "非干扰区域预留；上线时将做清晰标注，符合社区站点定位。",
     footerRights: "© dsalink.sg · 助力家长从容应对新加坡 DSA",
     extHint: "外部链接",
     a11yLanguageSelector: "选择语言",
@@ -344,6 +338,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseLoadMore: "加载更多",
     openHouseListComplete: "已显示全部",
     openHouseNoResults: "没有符合的学校，请调整搜索或筛选。",
+    openHouseStayTuned: "Check back later for upcoming open houses",
     openHouseResultsSummary: "显示 {{shown}} / 共 {{total}} 所",
     scoreboardTitle: "PSLE COP 矩阵（AL · 2023–2025）",
     scoreboardSubtitle:
@@ -372,7 +367,7 @@ export const copy: Record<Locale, Copy> = {
     scoresPageLead:
       "对比 2025 G3 对外分档、相对 2024 的松紧变化，以及 2023–2025 全细分。可按特选、IP、单性别与区域筛选。",
     scoresFilterToolbarAria: "筛选：搜索、区域、特选、IP、性别、排序",
-    homeScoresCardTitle: "查看全岛 150+ 中学 5 年 PSLE 分数趋势",
+    homeScoresCardTitle: "查看全岛 146 所中学 3 年 PSLE 分数趋势",
     homeScoresCardCta: "进入分数看板",
     scoreboardFilterSapOnly: "仅特选 SAP",
     scoreboardFilterIpOnly: "仅直通车 IP",
@@ -422,9 +417,6 @@ export const copy: Record<Locale, Copy> = {
       "Apabila tempoh permohonan dibuka, hantar melalui e-perkhidmatan rasmi.",
     linkCalendarTitle: "Tarikh penting",
     linkCalendarDesc: "Sahkan garis masa dengan pengumuman MOE.",
-    adLabel: "Ruang iklan",
-    adPlaceholder:
-      "Dikhaskan untuk satu penempatan yang dilabel dengan jelas — selaras dengan sumber komuniti.",
     footerRights:
       "© dsalink.sg · Untuk ibu bapa yang menavigasi DSA di Singapura",
     extHint: "Pautan luar",
@@ -468,6 +460,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseListComplete: "Senarai lengkap",
     openHouseNoResults:
       "Tiada sekolah sepadan. Cuba carian atau penapis lain.",
+    openHouseStayTuned: "Check back later for upcoming open houses",
     openHouseResultsSummary: "{{shown}} daripada {{total}} sekolah",
     scoreboardTitle: "Matriks COP PSLE (AL, 2023–2025)",
     scoreboardSubtitle:
@@ -497,7 +490,7 @@ export const copy: Record<Locale, Copy> = {
       "Bandingkan G3 2025, perubahan berbanding 2024, dan semua aliran 2023–2025. Tapis SAP, IP, jantina, zon.",
     scoresFilterToolbarAria: "Penapis: carian, zon, SAP, IP, jantina, isihan",
     homeScoresCardTitle:
-      "Lihat trend COP PSLE 5 tahun untuk 150+ sekolah menengah",
+      "Lihat trend COP PSLE 3 tahun untuk 146 sekolah menengah",
     homeScoresCardCta: "Buka papan skor",
     scoreboardFilterSapOnly: "SAP sahaja",
     scoreboardFilterIpOnly: "IP sahaja",
@@ -549,9 +542,6 @@ export const copy: Record<Locale, Copy> = {
       "சாளரம் திறக்கும்போது, அதிகாரப்பூர்வ மின்-சேவை மூலம் சமர்ப்பிக்கவும்.",
     linkCalendarTitle: "முக்கிய தேதிகள்",
     linkCalendarDesc: "MOE அறிவிப்புகளுடன் காலவரிசையை ஒப்பிடுக.",
-    adLabel: "விளம்பர இடம்",
-    adPlaceholder:
-      "ஒற்றை, தெளிவாக லேபிளிடப்பட்ட இடத்திற்கு ஒதுக்கப்பட்டது — சமூக வளத்துடன் இணைந்தது.",
     footerRights:
       "© dsalink.sg · சிங்கப்பூரில் DSA ஐ நடத்தும் பெற்றோருக்காக",
     extHint: "வெளியே திறக்கிறது",
@@ -596,6 +586,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseListComplete: "பட்டியல் முடிந்தது",
     openHouseNoResults:
       "பொருந்தும் பள்ளிகள் இல்லை. தேடல் அல்லது வடிகட்டிகளை மாற்றவும்.",
+    openHouseStayTuned: "Check back later for upcoming open houses",
     openHouseResultsSummary: "{{shown}} / {{total}} பள்ளிகள்",
     scoreboardTitle: "PSLE COP அணி (AL, 2023–2025)",
     scoreboardSubtitle:
@@ -625,7 +616,7 @@ export const copy: Record<Locale, Copy> = {
       "2025 G3, 2024 உடன் ஒப்பீடு, 2023–2025 அனைத்து ஓட்டங்கள். SAP, IP, ஒரு பாலினம், மண்டலம் வடிகட்டல்.",
     scoresFilterToolbarAria: "வடிகட்டிகள்: தேடல், மண்டலம், SAP, IP, பாலினம், வரிசை",
     homeScoresCardTitle:
-      "தீவு முழுவதும் 150+ பள்ளிகளின் 5 ஆண்டு PSLE COP போக்குகளைக் காண்க",
+      "தீவு முழுவதும் 146 பள்ளிகளின் 3 ஆண்டு PSLE COP போக்குகளைக் காண்க",
     homeScoresCardCta: "மதிப்பெண் பலகை",
     scoreboardFilterSapOnly: "SAP மட்டும்",
     scoreboardFilterIpOnly: "IP மட்டும்",

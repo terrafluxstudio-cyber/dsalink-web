@@ -65,23 +65,30 @@ export function toSingaporeDateKey(date: Date): string {
   }).format(date);
 }
 
-/**
- * Next sessions that are not finished yet, up to `limit`.
- * If every session has ended, returns the last `limit` rows (most recent).
- */
+/** Next sessions whose Singapore calendar date is today or later, up to `limit`. */
 export function getPreviewOpenHouseEvents(
   limit = 3,
   reference: Date = new Date(),
 ): SchoolOpenHouse[] {
-  const sorted = [...SCHOOL_OPEN_HOUSES].sort((a, b) =>
+  return upcomingOpenHouses(reference).slice(0, limit);
+}
+
+export function isOpenHouseDateCurrentOrFuture(
+  ev: Pick<SchoolOpenHouse, "date">,
+  reference: Date = new Date(),
+): boolean {
+  return ev.date >= toSingaporeDateKey(reference);
+}
+
+/** Rows whose Singapore calendar date is today or later. */
+export function upcomingOpenHouses(
+  reference: Date = new Date(),
+): SchoolOpenHouse[] {
+  return SCHOOL_OPEN_HOUSES.filter((ev) =>
+    isOpenHouseDateCurrentOrFuture(ev, reference),
+  ).sort((a, b) =>
     a.startsAt.localeCompare(b.startsAt),
   );
-  const active = sorted.filter(
-    (ev) => resolveOpenHouseStatus(ev, reference) !== "Finished",
-  );
-  if (active.length >= limit) return active.slice(0, limit);
-  if (active.length > 0) return active;
-  return sorted.slice(-Math.min(limit, sorted.length));
 }
 
 /** Group arbitrary open-house rows by calendar `date` (Singapore grouping key). */
@@ -103,6 +110,12 @@ export function openHouseEventsByDateFrom(
 
 export function openHouseEventsByDate(): Map<string, SchoolOpenHouse[]> {
   return openHouseEventsByDateFrom(SCHOOL_OPEN_HOUSES);
+}
+
+export function upcomingOpenHouseEventsByDate(
+  reference: Date = new Date(),
+): Map<string, SchoolOpenHouse[]> {
+  return openHouseEventsByDateFrom(upcomingOpenHouses(reference));
 }
 
 /** All rows flagged as popular (名校). */

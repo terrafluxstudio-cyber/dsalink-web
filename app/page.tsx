@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { AdPlaceholder } from "@/components/AdPlaceholder";
 import { HeroSection } from "@/components/HeroSection";
 import { OpenHousePreview } from "@/components/OpenHousePreview";
 import { ScoresEntryCard } from "@/components/ScoresEntryCard";
@@ -60,7 +59,6 @@ export default function HomePage() {
           <ScoresEntryCard />
         </HeroSection>
         <ResourceCards />
-        <AdPlaceholder />
       </main>
       <SiteFooter />
     </>

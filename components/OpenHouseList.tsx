@@ -11,7 +11,10 @@ import {
 import { useMemo } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Locale } from "@/lib/i18n";
-import { openHouseEventsByDate, type SchoolOpenHouse } from "@/lib/data";
+import {
+  upcomingOpenHouseEventsByDate,
+  type SchoolOpenHouse,
+} from "@/lib/data";
 
 const localeDateOptions: Record<Locale, string> = {
   en: "en-SG",
@@ -48,7 +51,7 @@ export function OpenHouseList({
   const CardHeadingTag = variant === "page" ? "h3" : "h4";
 
   const groups = useMemo(() => {
-    const map = openHouseEventsByDate();
+    const map = upcomingOpenHouseEventsByDate();
     return Array.from(map.entries()).map(([date, events]) => ({
       date,
       events,
@@ -84,6 +87,11 @@ export function OpenHouseList({
           </div>
         </div>
 
+        {groups.length === 0 ? (
+          <div className="mt-8 rounded-2xl border border-intellectual/10 bg-card-shine p-6 text-sm font-medium text-intellectual-muted shadow-sm ring-1 ring-champagne/15 sm:text-base">
+            {t.openHouseStayTuned}
+          </div>
+        ) : (
         <div className="mt-8 space-y-12">
           {groups.map(({ date, events, heading }) => (
             <div key={date}>
@@ -173,6 +181,7 @@ export function OpenHouseList({
             </div>
           ))}
         </div>
+        )}
       </div>
     </section>
   );

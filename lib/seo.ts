@@ -1,6 +1,6 @@
 import {
   SCHOOL_COP_HISTORY,
-  SCHOOL_OPEN_HOUSES,
+  upcomingOpenHouses,
   type SchoolCopHistoryEntry,
 } from "@/lib/data";
 
@@ -81,6 +81,7 @@ export function buildOpenHousesStructuredData(): Record<string, unknown> {
   const openHousesUrl = `${base}/open-houses`;
   const pageId = `${openHousesUrl}#webpage`;
   const listId = `${openHousesUrl}#open-house-school-list`;
+  const schools = upcomingOpenHouses();
 
   const itemList = {
     "@type": "ItemList",
@@ -88,9 +89,9 @@ export function buildOpenHousesStructuredData(): Record<string, unknown> {
     name: "Singapore secondary school open houses (May 2026 season)",
     description:
       "Directory of school open-house and admissions information compiled from public school resources; verify details with each institution.",
-    numberOfItems: SCHOOL_OPEN_HOUSES.length,
+    numberOfItems: schools.length,
     isPartOf: { "@id": pageId },
-    itemListElement: SCHOOL_OPEN_HOUSES.map((school, i) => ({
+    itemListElement: schools.map((school, i) => ({
       "@type": "ListItem",
       position: i + 1,
       item: {

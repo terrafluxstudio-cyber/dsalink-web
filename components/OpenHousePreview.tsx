@@ -43,6 +43,8 @@ export function OpenHousePreview() {
 
   const events = useMemo(() => getPreviewOpenHouseEvents(3), []);
 
+  if (events.length === 0) return null;
+
   return (
     <section
       className="mt-10 w-full max-w-xl"
