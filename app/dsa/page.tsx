@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { DsaSearchCenter } from "@/components/DsaSearchCenter";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { buildDsaFinderStructuredData } from "@/lib/dsa-seo";
 
 const DSA_PAGE_TITLE =
-  "DSA 2026 Official Talent Areas & 147 School List - dsalink.sg";
+  "DSA 2026 Talent Areas: 1315 Categories Across 147 Schools";
 const DSA_PAGE_DESCRIPTION =
-  "Search official MOE SchoolFinder DSA-Sec 2026 talent areas across 147 Singapore secondary schools by school, category, and talent.";
+  "Find schools for Concert Band, Robotics, and 1300+ DSA talents. Integrated with 2025 PSLE COP data.";
 
 const ogImage = {
   url: "/opengraph-image",
@@ -28,13 +29,13 @@ export function generateMetadata(): Metadata {
       "dsalink.sg",
     ],
     alternates: {
-      canonical: "/dsa",
+      canonical: "/dsa-finder",
     },
     openGraph: {
       title: DSA_PAGE_TITLE,
       description: DSA_PAGE_DESCRIPTION,
       type: "website",
-      url: "/dsa",
+      url: "/dsa-finder",
       siteName: "DSALink",
       images: [ogImage],
     },
@@ -48,8 +49,16 @@ export function generateMetadata(): Metadata {
 }
 
 export default function DsaPage() {
+  const jsonLd = buildDsaFinderStructuredData();
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />
       <SiteHeader />
       <main className="border-t border-intellectual/5 bg-hero-mesh">
         <DsaSearchCenter />

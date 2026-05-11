@@ -1,6 +1,6 @@
 "use client";
 
-import { HelpCircle, Search, Sparkles } from "lucide-react";
+import { ChevronDown, HelpCircle, Search, Sparkles } from "lucide-react";
 import type { ReactNode } from "react";
 import { useDeferredValue, useMemo, useRef, useState } from "react";
 import dsaMasterRaw from "@/data/dsa_master_list.json";
@@ -42,8 +42,15 @@ type TalentGroup = {
   searchText: string;
 };
 
+type TalentCategoryGroup = {
+  category: Category;
+  groups: TalentGroup[];
+  schoolMatches: number;
+};
+
 const CATEGORIES: Category[] = ["Sports", "Arts", "STEM", "Leadership", "Languages"];
 const SCHOOLS = dsaMasterRaw as DsaSchool[];
+const DEFAULT_VISIBLE_TALENT_SCHOOLS = 8;
 
 const CATEGORY_STYLES: Record<Category, string> = {
   Sports: "border-emerald-200 bg-emerald-50 text-emerald-800 hover:border-emerald-300",
@@ -128,11 +135,28 @@ function categoryCounts(schools: DsaSchool[]): Record<Category, number> {
   return counts;
 }
 
+function groupTalentsByCategory(groups: TalentGroup[]): TalentCategoryGroup[] {
+  return CATEGORIES.map((cat) => {
+    const categoryGroups = groups.filter((group) => group.category === cat);
+    return {
+      category: cat,
+      groups: categoryGroups,
+      schoolMatches: categoryGroups.reduce((total, group) => total + group.schools.length, 0),
+    };
+  }).filter((group) => group.groups.length > 0);
+}
+
+function talentGroupKey(group: TalentGroup): string {
+  return `${group.category}::${normalize(group.area)}`;
+}
+
 export function DsaSearchCenter() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<Category | "All">("All");
   const [mode, setMode] = useState<ViewMode>("school");
   const [selectedTalent, setSelectedTalent] = useState<string | null>(null);
+  const [expandedCategories, setExpandedCategories] = useState<Set<Category>>(() => new Set());
+  const [expandedSchoolLists, setExpandedSchoolLists] = useState<Set<string>>(() => new Set());
   const deferredQuery = useDeferredValue(query);
   const resultsRef = useRef<HTMLDivElement | null>(null);
 
@@ -182,6 +206,7 @@ export function DsaSearchCenter() {
     setMode("talent");
     setSelectedTalent(talent.area);
     setCategory(talent.category);
+    setExpandedCategories((current) => new Set(current).add(talent.category));
     window.requestAnimationFrame(() => {
       resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
@@ -190,6 +215,30 @@ export function DsaSearchCenter() {
   function clearTalent() {
     setSelectedTalent(null);
     setMode("talent");
+  }
+
+  function toggleCategory(categoryToToggle: Category) {
+    setExpandedCategories((current) => {
+      const next = new Set(current);
+      if (next.has(categoryToToggle)) {
+        next.delete(categoryToToggle);
+      } else {
+        next.add(categoryToToggle);
+      }
+      return next;
+    });
+  }
+
+  function toggleSchoolList(key: string) {
+    setExpandedSchoolLists((current) => {
+      const next = new Set(current);
+      if (next.has(key)) {
+        next.delete(key);
+      } else {
+        next.add(key);
+      }
+      return next;
+    });
   }
 
   return (
@@ -280,6 +329,11 @@ export function DsaSearchCenter() {
             groups={filteredTalentGroups}
             selectedTalent={selectedTalent}
             onTalentClear={clearTalent}
+            expandedCategories={expandedCategories}
+            expandedSchoolLists={expandedSchoolLists}
+            onCategoryToggle={toggleCategory}
+            onSchoolListToggle={toggleSchoolList}
+            shouldAutoExpand={Boolean(deferredQuery.trim()) || Boolean(selectedTalent)}
           />
         )}
       </div>
@@ -445,16 +499,30 @@ function TalentResults({
   groups,
   selectedTalent,
   onTalentClear,
+  expandedCategories,
+  expandedSchoolLists,
+  onCategoryToggle,
+  onSchoolListToggle,
+  shouldAutoExpand,
 }: {
   groups: TalentGroup[];
   selectedTalent: string | null;
   onTalentClear: () => void;
+  expandedCategories: Set<Category>;
+  expandedSchoolLists: Set<string>;
+  onCategoryToggle: (category: Category) => void;
+  onSchoolListToggle: (key: string) => void;
+  shouldAutoExpand: boolean;
 }) {
+  const categoryGroups = groupTalentsByCategory(groups);
+
   return (
     <div className="mt-6">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm font-semibold text-intellectual">
-          {selectedTalent ? `Comparing: ${selectedTalent}` : `Showing ${groups.length} talent groups`}
+          {selectedTalent
+            ? `Comparing: ${selectedTalent}`
+            : `Showing ${categoryGroups.length} categories and ${groups.length} talent groups`}
         </p>
         {selectedTalent ? (
           <button
@@ -466,42 +534,140 @@ function TalentResults({
           </button>
         ) : null}
       </div>
-      <div className="space-y-4">
-        {groups.map((group) => (
-          <article
-            key={`${group.category}-${group.area}`}
-            className="rounded-2xl border border-intellectual/10 bg-white p-4 shadow-soft sm:p-5"
-          >
-            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-intellectual/8 pb-3">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark">
-                  {group.category}
-                </p>
-                <h2 className="mt-1 flex items-center gap-2 font-display text-xl font-semibold text-intellectual">
-                  <Sparkles className="h-4 w-4 text-champagne" aria-hidden />
-                  {group.area}
-                </h2>
-              </div>
-              <span className="rounded-full bg-intellectual px-3 py-1 text-xs font-semibold text-white">
-                {group.schools.length} schools
-              </span>
-            </div>
-            <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-              {group.schools.map((school) => (
-                <div
-                  key={`${group.area}-${school.id}`}
-                  className="rounded-xl border border-intellectual/8 bg-slate-50/80 px-3 py-2"
-                >
-                  <p className="text-sm font-semibold text-intellectual">{school.schoolName}</p>
-                  <p className="mt-0.5 text-xs text-intellectual-muted">{school.psleLabel}</p>
-                </div>
+      <div className="space-y-3">
+        {categoryGroups.map((categoryGroup) => {
+          const open = shouldAutoExpand || expandedCategories.has(categoryGroup.category);
+          return (
+            <TalentCategoryAccordion
+              key={categoryGroup.category}
+              categoryGroup={categoryGroup}
+              open={open}
+              expandedSchoolLists={expandedSchoolLists}
+              onCategoryToggle={onCategoryToggle}
+              onSchoolListToggle={onSchoolListToggle}
+            />
+          );
+        })}
+      </div>
+      {categoryGroups.length === 0 ? <EmptyState /> : null}
+    </div>
+  );
+}
+
+function TalentCategoryAccordion({
+  categoryGroup,
+  open,
+  expandedSchoolLists,
+  onCategoryToggle,
+  onSchoolListToggle,
+}: {
+  categoryGroup: TalentCategoryGroup;
+  open: boolean;
+  expandedSchoolLists: Set<string>;
+  onCategoryToggle: (category: Category) => void;
+  onSchoolListToggle: (key: string) => void;
+}) {
+  return (
+    <section className="overflow-hidden rounded-2xl border border-intellectual/10 bg-white shadow-soft transition hover:border-champagne/30">
+      <button
+        type="button"
+        onClick={() => onCategoryToggle(categoryGroup.category)}
+        className="flex w-full flex-wrap items-center justify-between gap-3 px-4 py-4 text-left sm:px-5"
+        aria-expanded={open}
+      >
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark">
+            DSA category
+          </p>
+          <h2 className="mt-1 flex items-center gap-2 font-display text-2xl font-semibold text-intellectual">
+            <Sparkles className="h-4 w-4 text-champagne" aria-hidden />
+            {categoryGroup.category}
+          </h2>
+        </div>
+        <div className="flex items-center gap-3">
+          <span className="rounded-full bg-intellectual/5 px-3 py-1 text-xs font-semibold text-intellectual-muted">
+            {categoryGroup.groups.length} talents · {categoryGroup.schoolMatches} school matches
+          </span>
+          <ChevronDown
+            className={`h-5 w-5 text-intellectual-muted transition-transform duration-300 ${
+              open ? "rotate-180" : ""
+            }`}
+            aria-hidden
+          />
+        </div>
+      </button>
+      {open ? (
+        <div className="grid grid-rows-[1fr] opacity-100 transition-[grid-template-rows,opacity] duration-300 ease-out">
+          <div className="overflow-hidden">
+            <div className="space-y-3 border-t border-intellectual/8 bg-slate-50/70 p-3 sm:p-4">
+              {categoryGroup.groups.map((group) => (
+                <TalentGroupAccordion
+                  key={talentGroupKey(group)}
+                  group={group}
+                  expanded={expandedSchoolLists.has(talentGroupKey(group))}
+                  onSchoolListToggle={onSchoolListToggle}
+                />
               ))}
             </div>
-          </article>
+          </div>
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
+function TalentGroupAccordion({
+  group,
+  expanded,
+  onSchoolListToggle,
+}: {
+  group: TalentGroup;
+  expanded: boolean;
+  onSchoolListToggle: (key: string) => void;
+}) {
+  const groupKey = talentGroupKey(group);
+  const shouldLimit = group.schools.length > 10;
+  const visibleSchools = shouldLimit && !expanded
+    ? group.schools.slice(0, DEFAULT_VISIBLE_TALENT_SCHOOLS)
+    : group.schools;
+
+  return (
+    <article className="rounded-2xl border border-intellectual/10 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-champagne/40">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-intellectual/8 pb-3">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark">
+            {group.category}
+          </p>
+          <h3 className="mt-1 font-display text-xl font-semibold text-intellectual">
+            {group.area}
+          </h3>
+        </div>
+        <span className="rounded-full bg-intellectual px-3 py-1 text-xs font-semibold text-white">
+          {group.schools.length} schools
+        </span>
+      </div>
+      <div className="mt-3 grid gap-2 transition-all duration-300 sm:grid-cols-2 lg:grid-cols-3">
+        {visibleSchools.map((school) => (
+          <div
+            key={`${group.area}-${school.id}`}
+            className="rounded-xl border border-intellectual/8 bg-slate-50/80 px-3 py-2 transition-all duration-300 hover:border-champagne/30 hover:bg-white hover:shadow-sm"
+          >
+            <p className="text-sm font-semibold text-intellectual">{school.schoolName}</p>
+            <p className="mt-0.5 text-xs text-intellectual-muted">{school.psleLabel}</p>
+          </div>
         ))}
       </div>
-      {groups.length === 0 ? <EmptyState /> : null}
-    </div>
+      {shouldLimit ? (
+        <button
+          type="button"
+          onClick={() => onSchoolListToggle(groupKey)}
+          className="mt-3 rounded-xl border border-champagne/40 bg-champagne-subtle px-3 py-2 text-xs font-semibold text-intellectual transition hover:border-champagne hover:bg-champagne/15"
+          aria-expanded={expanded}
+        >
+          {expanded ? "Show fewer schools" : `Show all ${group.schools.length} schools`}
+        </button>
+      ) : null}
+    </article>
   );
 }
 
