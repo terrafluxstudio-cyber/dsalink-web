@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown, HelpCircle, Search, Sparkles } from "lucide-react";
+import { ChevronDown, HelpCircle, Info, Search, Sparkles } from "lucide-react";
 import type { ReactNode } from "react";
 import { useDeferredValue, useMemo, useRef, useState } from "react";
 import {
@@ -286,51 +286,56 @@ export function DsaSearchCenter() {
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-champagne-dark">
           Official MOE SchoolFinder DSA data · 2026
         </p>
-        <div className="mt-3 grid gap-5 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-          <div>
-            <h1 className="font-display text-3xl font-semibold tracking-tight text-intellectual sm:text-5xl">
-              DSA 2026 talent search center
-            </h1>
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-intellectual-muted sm:text-base">
-              Search 147 secondary schools and 1,315 official DSA talent entries. Start by school,
-              then tap any talent tag to compare every school offering that route.
-            </p>
-          </div>
-          <div className="grid grid-cols-3 gap-2 rounded-2xl border border-champagne/20 bg-champagne-subtle/50 p-3 text-center">
+        <div className="mt-3">
+          <h1 className="font-display text-3xl font-semibold tracking-tight text-intellectual sm:text-5xl">
+            DSA 2026 talent search center
+          </h1>
+          <p className="mt-3 max-w-2xl text-sm leading-7 text-intellectual-muted sm:text-base">
+            Search 147 secondary schools and 1,315 official DSA talent entries. Start by school,
+            then tap any talent tag to compare every school offering that route.
+          </p>
+        </div>
+
+        <div className="mt-6 space-y-6">
+          <div className="flex flex-col gap-3 rounded-3xl border border-slate-200 bg-slate-50 p-4 text-center sm:flex-row sm:items-stretch sm:justify-between sm:p-5">
             <Stat label="Schools" value="147" />
             <Stat label="Talent entries" value="1,315" />
             <Stat label="Categories" value="5" />
           </div>
-        </div>
 
-        <label className="relative mt-6 block">
-          <span className="sr-only">Search schools or DSA talent areas</span>
-          <Search
-            className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-champagne-dark"
-            aria-hidden
-          />
-          <input
-            type="search"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder='Search "Raffles", "Wushu", "Robotics", "Chinese Orchestra"...'
-            autoComplete="off"
-            className="w-full rounded-2xl border-2 border-intellectual/10 bg-white py-4 pl-12 pr-4 text-base font-semibold text-intellectual shadow-sm outline-none ring-champagne/30 transition placeholder:text-intellectual-muted/60 focus:border-champagne/60 focus:ring-2 sm:text-lg"
-          />
-        </label>
-        <p className="mt-3 text-[11px] leading-relaxed text-intellectual-muted sm:text-xs">
-          Note: Data synced with official MOE sources as of May 2026. While we strive for
-          100% accuracy, please always cross-reference with the{" "}
-          <a
-            href="https://www.dsa-is.moe.gov.sg/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-intellectual underline decoration-champagne/60 decoration-2 underline-offset-2 transition hover:text-champagne-dark"
-          >
-            MOE DSA Portal
-          </a>{" "}
-          for final application details.
-        </p>
+          <div className="flex gap-3 rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-sm leading-6 text-slate-600">
+            <Info className="mt-0.5 h-5 w-5 shrink-0 text-blue-500" aria-hidden />
+            <p>
+              Note: Data synced with official MOE sources as of May 2026. While we strive for
+              100% accuracy, please always cross-reference with the{" "}
+              <a
+                href="https://www.dsa-is.moe.gov.sg/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-slate-800 underline decoration-blue-300 decoration-2 underline-offset-2 transition hover:text-blue-700"
+              >
+                MOE DSA Portal
+              </a>{" "}
+              for final application details.
+            </p>
+          </div>
+
+          <label className="relative block">
+            <span className="sr-only">Search schools or DSA talent areas</span>
+            <Search
+              className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-champagne-dark"
+              aria-hidden
+            />
+            <input
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder='Search "Raffles", "Wushu", "Robotics", "Chinese Orchestra"...'
+              autoComplete="off"
+              className="w-full rounded-2xl border-2 border-intellectual/10 bg-white py-4 pl-12 pr-4 text-base font-semibold text-intellectual shadow-sm outline-none ring-champagne/30 transition placeholder:text-intellectual-muted/60 focus:border-champagne/60 focus:ring-2 sm:text-lg"
+            />
+          </label>
+        </div>
       </header>
 
       <div className="sticky top-[65px] z-30 mt-5 rounded-2xl border border-intellectual/10 bg-white/90 p-3 shadow-soft backdrop-blur">
@@ -384,8 +389,8 @@ export function DsaSearchCenter() {
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div>
-      <p className="font-display text-xl font-semibold text-intellectual sm:text-2xl">{value}</p>
+    <div className="flex-1 rounded-2xl bg-white/70 px-4 py-3 ring-1 ring-slate-200/70">
+      <p className="font-display text-2xl font-bold text-intellectual sm:text-3xl">{value}</p>
       <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-intellectual-muted">
         {label}
       </p>
