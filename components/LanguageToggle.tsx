@@ -4,16 +4,16 @@ import { ChevronDown } from "lucide-react";
 import { isLocale, localeLabels, locales } from "@/lib/i18n";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-export function LanguageToggle() {
+export function LanguageToggle({ id = "language-select" }: { id?: string }) {
   const { locale, setLocale, t } = useLanguage();
 
   return (
     <div className="relative min-w-[10.5rem] sm:min-w-[12rem]">
-      <label className="sr-only" htmlFor="language-select">
+      <label className="sr-only" htmlFor={id}>
         {t.a11yLanguageSelector}
       </label>
       <select
-        id="language-select"
+        id={id}
         value={locale}
         onChange={(e) => {
           const v = e.target.value;

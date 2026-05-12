@@ -74,9 +74,12 @@ export type Copy = {
   openHouseStatusFinished: string;
   /** /dsa-guide — DSA-Sec application timeline */
   navDsaGuide: string;
+  navDsaFinder: string;
   navOpenHouses: string;
   /** /scores — posting COP directory */
   navScores: string;
+  navMenu: string;
+  navClose: string;
   openHousePreviewTitle: string;
   openHousePreviewDesc: string;
   openHouseViewFullCalendar: string;
@@ -196,8 +199,11 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusOngoing: "In progress",
     openHouseStatusFinished: "Ended",
     navDsaGuide: "DSA Guide",
+    navDsaFinder: "DSA Finder",
     navOpenHouses: "Open houses",
     navScores: "PSLE COP",
+    navMenu: "Menu",
+    navClose: "Close menu",
     openHousePreviewTitle: "Coming up: May open houses",
     openHousePreviewDesc:
       "A quick look at the next sessions on our calendar — full list and official links inside.",
@@ -315,8 +321,11 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusOngoing: "火热进行中",
     openHouseStatusFinished: "已结束",
     navDsaGuide: "DSA 指南",
+    navDsaFinder: "DSA 搜索",
     navOpenHouses: "开放日",
     navScores: "PSLE COP",
+    navMenu: "菜单",
+    navClose: "关闭菜单",
     openHousePreviewTitle: "预告：5 月校园开放日",
     openHousePreviewDesc: "日历中最近的场次速览；完整名单与官网链接请见内页。",
     openHouseViewFullCalendar: "查看完整日历 →",
@@ -435,8 +444,11 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusOngoing: "Sedang berlangsung",
     openHouseStatusFinished: "Tamat",
     navDsaGuide: "Panduan DSA",
+    navDsaFinder: "Pencari DSA",
     navOpenHouses: "Hari terbuka",
     navScores: "PSLE COP",
+    navMenu: "Menu",
+    navClose: "Tutup menu",
     openHousePreviewTitle: "Akan datang: hari terbuka Mei",
     openHousePreviewDesc:
       "Gambaran pantas sesi seterusnya pada kalendar kami — senarai penuh & pautan rasmi di halaman seterusnya.",
@@ -560,8 +572,11 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusOngoing: "நடைபெறுகிறது",
     openHouseStatusFinished: "முடிந்தது",
     navDsaGuide: "DSA வழிகாட்டி",
+    navDsaFinder: "DSA தேடல்",
     navOpenHouses: "திறந்த வீடுகள்",
     navScores: "PSLE COP",
+    navMenu: "மெனு",
+    navClose: "மெனுவை மூடு",
     openHousePreviewTitle: "வரவிருக்கிறது: மே திறந்த வீடுகள்",
     openHousePreviewDesc:
       "எங்கள் நாட்காட்டியில் அடுத்த அமர்வுகளின் சுருக்கப் பார்வை — முழு பட்டியலும் அதிகாரப்பூர்வ இணைப்புகளும் அடுத்த பக்கத்தில்.",
