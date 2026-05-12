@@ -588,17 +588,17 @@ function TalentTag({
     <button
       type="button"
       onClick={() => onClick(talent)}
-      className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs font-semibold transition ${CATEGORY_STYLES[talent.category]}`}
+      className={`inline-flex max-w-full items-center gap-1 rounded-full border px-2.5 py-1 text-left text-xs font-semibold leading-snug transition ${CATEGORY_STYLES[talent.category]}`}
       title={
         vague
           ? "This school uses a broad official label. Please check the school website for details."
           : `Compare schools offering ${talent.area}`
       }
     >
-      {label}
+      <span className="min-w-0 whitespace-normal break-words">{label}</span>
       {vague ? (
         <HelpCircle
-          className="h-3 w-3 opacity-70"
+          className="h-3 w-3 shrink-0 opacity-70"
           aria-label="This school may have broader programme details; check official site."
         />
       ) : null}
@@ -760,7 +760,7 @@ function TalentGroupAccordion({
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark">
             {getDsaCategoryLabel(group.category, locale)}
           </p>
-          <h3 className="mt-1 font-display text-xl font-semibold text-intellectual">
+          <h3 className="mt-1 break-words font-display text-xl font-semibold text-intellectual">
             {groupLabel}
           </h3>
         </div>
