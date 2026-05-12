@@ -1,12 +1,12 @@
 "use client";
 
-import { Clock, ExternalLink, MapPin, Search } from "lucide-react";
+import { Calendar, Clock, ExternalLink, MapPin, Search } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Copy, Locale } from "@/lib/i18n";
 import {
   resolveOpenHouseStatus,
-  upcomingOpenHouses,
+  SCHOOL_OPEN_HOUSES,
   type OpenHouseRegion,
   type OpenHouseStatus,
   type SchoolOpenHouse,
@@ -24,6 +24,8 @@ type ProgramKey = "IP" | "SAP" | "OLEVEL";
 
 const INITIAL_VISIBLE = 16;
 const LOAD_MORE_STEP = 36;
+const TBC_RANK = 1;
+const PAST_RANK = 2;
 
 function regionLabel(region: OpenHouseRegion, t: Copy): string {
   switch (region) {
@@ -103,6 +105,54 @@ function formatResultsSummary(t: Copy, shown: number, total: number): string {
     .replace("{{total}}", String(total));
 }
 
+function isTbcOpenHouse(ev: SchoolOpenHouse): boolean {
+  return Boolean(
+    ev.dateDisplayEn?.toLowerCase().includes("tbc") ||
+      ev.dateDisplayZh?.includes("待定") ||
+      ev.timeEn.toLowerCase().includes("tbc") ||
+      ev.timeZh.includes("待定"),
+  );
+}
+
+function sortOpenHousesByDate(
+  rows: SchoolOpenHouse[],
+  reference: Date = new Date(),
+): SchoolOpenHouse[] {
+  const now = reference.getTime();
+
+  return [...rows].sort((a, b) => {
+    const aTbc = isTbcOpenHouse(a);
+    const bTbc = isTbcOpenHouse(b);
+    const aStart = Date.parse(a.startsAt);
+    const bStart = Date.parse(b.startsAt);
+    const aEnd = Date.parse(a.endsAt);
+    const bEnd = Date.parse(b.endsAt);
+    const aPast = !aTbc && aEnd < now;
+    const bPast = !bTbc && bEnd < now;
+    const aRank = aPast ? PAST_RANK : aTbc ? TBC_RANK : 0;
+    const bRank = bPast ? PAST_RANK : bTbc ? TBC_RANK : 0;
+
+    if (aRank !== bRank) return aRank - bRank;
+    if (aRank === 0 && aStart !== bStart) return aStart - bStart;
+    if (aRank === PAST_RANK && aStart !== bStart) return bStart - aStart;
+    if (a.isPopular !== b.isPopular) return a.isPopular ? -1 : 1;
+    return a.nameEn.localeCompare(b.nameEn, "en");
+  });
+}
+
+function formatDateBadge(ev: SchoolOpenHouse, locale: Locale): string {
+  if (isTbcOpenHouse(ev)) {
+    if (locale === "zh") return ev.dateDisplayZh ?? "2026年5月（待定）";
+    return ev.dateDisplayEn ?? "May 2026 (TBC)";
+  }
+
+  const instant = new Date(`${ev.date}T12:00:00+08:00`);
+  return new Intl.DateTimeFormat(locale === "zh" ? "zh-Hans-SG" : "en-SG", {
+    day: "numeric",
+    month: "short",
+  }).format(instant);
+}
+
 export function OpenHousesDirectory() {
   const { locale, t } = useLanguage();
   const [search, setSearch] = useState("");
@@ -110,19 +160,18 @@ export function OpenHousesDirectory() {
   const [programs, setPrograms] = useState<Set<ProgramKey>>(() => new Set());
   const [visible, setVisible] = useState(INITIAL_VISIBLE);
 
-  const upcoming = useMemo(() => upcomingOpenHouses(), []);
+  const openHouses = useMemo(() => sortOpenHousesByDate(SCHOOL_OPEN_HOUSES), []);
 
   const filteredSorted = useMemo(() => {
-    return upcoming.filter(
-      (ev) =>
-        matchesSearch(ev, search) &&
-        matchesRegion(ev, regions) &&
-        matchesProgram(ev, programs),
-    ).sort((a, b) => {
-      if (a.isPopular !== b.isPopular) return a.isPopular ? -1 : 1;
-      return a.nameEn.localeCompare(b.nameEn, "en");
-    });
-  }, [search, regions, programs, upcoming]);
+    return sortOpenHousesByDate(
+      openHouses.filter(
+        (ev) =>
+          matchesSearch(ev, search) &&
+          matchesRegion(ev, regions) &&
+          matchesProgram(ev, programs),
+      ),
+    );
+  }, [search, regions, programs, openHouses]);
 
   useEffect(() => {
     setVisible(INITIAL_VISIBLE);
@@ -243,16 +292,24 @@ export function OpenHousesDirectory() {
       </div>
 
       <p className="mt-3 text-[11px] text-intellectual-muted sm:mt-4 sm:text-sm">
-        {upcoming.length === 0
+        {openHouses.length === 0
           ? t.openHouseStayTuned
           : filteredSorted.length === 0
-          ? t.openHouseNoResults
-          : formatResultsSummary(t, shown.length, filteredSorted.length)}
+            ? t.openHouseNoResults
+            : formatResultsSummary(t, shown.length, filteredSorted.length)}
       </p>
+
+      {filteredSorted.length > 0 ? (
+        <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-champagne/30 bg-champagne-subtle/45 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-champagne-dark sm:mt-4 sm:text-xs">
+          <Calendar className="h-3.5 w-3.5" aria-hidden />
+          Sorted by Date
+        </div>
+      ) : null}
 
       <ul className="mt-2 divide-y divide-intellectual/8 border-t border-intellectual/8 sm:mt-3">
         {shown.map((ev) => {
           const status = resolveOpenHouseStatus(ev);
+          const dateBadge = formatDateBadge(ev, locale);
           return (
             <li key={ev.id} className="list-none py-2.5 sm:py-4">
               <article
@@ -260,7 +317,11 @@ export function OpenHousesDirectory() {
                 className="flex gap-2 sm:gap-4"
               >
                 <div className="min-w-0 flex-1 space-y-1 sm:space-y-1.5">
-                  <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
+                  <div className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
+                    <span className="inline-flex items-center gap-1 rounded-xl border border-champagne/35 bg-champagne-subtle/55 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-champagne-dark shadow-sm sm:text-xs">
+                      <Calendar className="h-3 w-3" aria-hidden />
+                      {dateBadge}
+                    </span>
                     <h2 className="font-display text-sm font-semibold leading-snug text-intellectual sm:text-base">
                       {ev.nameEn}
                     </h2>
