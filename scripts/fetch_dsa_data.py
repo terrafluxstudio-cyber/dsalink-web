@@ -736,7 +736,13 @@ def build_master_rows(
                 "id": existing.get("id") or f"S{index:03d}",
                 "schoolName": school.school_name,
                 "slug": school.slug,
-                "psleCop": existing.get("psleCop") or {"boys": None, "girls": None},
+                "psleCop": existing.get("psleCop")
+                or {
+                    "pg1": None,
+                    "pg2": None,
+                    "pg3": None,
+                    "affiliated": {"pg1": None, "pg2": None, "pg3": None},
+                },
                 "openHouse": default_open_house(existing, source_url, school.website),
                 "dsaTalents": talents,
             }

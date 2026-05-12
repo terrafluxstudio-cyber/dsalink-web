@@ -4,8 +4,14 @@
     "schoolName": "Admiralty Secondary School",
     "slug": "admiralty-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-29",
+      "pg2": "21-25",
+      "pg3": "16-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -69,8 +75,14 @@
     "schoolName": "Ahmad Ibrahim Secondary School",
     "slug": "ahmad-ibrahim-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-24",
+      "pg3": "11-18",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -114,8 +126,14 @@
     "schoolName": "Anderson Secondary School",
     "slug": "anderson-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-23",
+      "pg3": "7-11",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -169,8 +187,14 @@
     "schoolName": "Ang Mo Kio Secondary School",
     "slug": "ang-mo-kio-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-24",
+      "pg3": "12-16",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -234,8 +258,14 @@
     "schoolName": "Anglican High School",
     "slug": "anglican-high-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4-12",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -319,8 +349,14 @@
     "schoolName": "Anglo-Chinese School (Barker Road)",
     "slug": "anglo-chinese-school-barker-road",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-26",
+      "pg2": "21",
+      "pg3": "6-9",
+      "affiliated": {
+        "pg1": "25-28",
+        "pg2": "21-25",
+        "pg3": "8-21"
+      }
     },
     "openHouse": {
       "date": null,
@@ -419,8 +455,14 @@
     "schoolName": "Anglo-Chinese School (Independent) (Secondary)",
     "slug": "anglo-chinese-school-independent-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4-7 (IP) / 6-8",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": "7-13"
+      }
     },
     "openHouse": {
       "date": null,
@@ -554,8 +596,14 @@
     "schoolName": "Assumption English School",
     "slug": "assumption-english-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-29",
+      "pg2": "22-25",
+      "pg3": "10-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -604,8 +652,14 @@
     "schoolName": "Assumption Pathway School",
     "slug": "assumption-pathway-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": null,
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -618,8 +672,14 @@
     "schoolName": "Bartley Secondary School",
     "slug": "bartley-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-30*",
+      "pg2": "22-25",
+      "pg3": "16-21",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -653,8 +713,14 @@
     "schoolName": "Beatty Secondary School",
     "slug": "beatty-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-25",
+      "pg3": "12-18",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -733,8 +799,14 @@
     "schoolName": "Bedok Green Secondary School",
     "slug": "bedok-green-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-30*",
+      "pg2": "21-25",
+      "pg3": "12-20",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -773,8 +845,14 @@
     "schoolName": "Bedok South Secondary School",
     "slug": "bedok-south-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-30*",
+      "pg2": "21-25",
+      "pg3": "13-18",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -823,8 +901,14 @@
     "schoolName": "Bedok View Secondary School",
     "slug": "bedok-view-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-28",
+      "pg2": "21-24",
+      "pg3": "12-16",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -888,8 +972,14 @@
     "schoolName": "Bendemeer Secondary School",
     "slug": "bendemeer-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "22-25",
+      "pg3": "11-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -928,8 +1018,14 @@
     "schoolName": "Boon Lay Secondary School",
     "slug": "boon-lay-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-30*",
+      "pg2": "22-25",
+      "pg3": "7-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -1008,8 +1104,14 @@
     "schoolName": "Bowen Secondary School",
     "slug": "bowen-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-24",
+      "pg3": "12-16",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -1048,8 +1150,14 @@
     "schoolName": "Broadrick Secondary School",
     "slug": "broadrick-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-30*",
+      "pg2": "21-25",
+      "pg3": "5-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -1083,8 +1191,14 @@
     "schoolName": "Bukit Batok Secondary School",
     "slug": "bukit-batok-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-26",
+      "pg2": "21-23",
+      "pg3": "8-15",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -1153,8 +1267,14 @@
     "schoolName": "Bukit Merah Secondary School",
     "slug": "bukit-merah-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "22-25",
+      "pg3": "8-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -1188,8 +1308,14 @@
     "schoolName": "Bukit Panjang Govt. High School",
     "slug": "bukit-panjang-govt-high-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-26",
+      "pg2": "21-22",
+      "pg3": "7-11",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -1238,8 +1364,14 @@
     "schoolName": "Bukit View Secondary School",
     "slug": "bukit-view-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-29",
+      "pg2": "21-24",
+      "pg3": "13-20",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -1318,8 +1450,14 @@
     "schoolName": "CHIJ Katong Convent",
     "slug": "chij-katong-convent",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-30*",
+      "pg2": "21-24",
+      "pg3": "11-14",
+      "affiliated": {
+        "pg1": "25-28",
+        "pg2": "21-25",
+        "pg3": "12-20"
+      }
     },
     "openHouse": {
       "date": null,
@@ -1398,8 +1536,14 @@
     "schoolName": "CHIJ Secondary (Toa Payoh)",
     "slug": "chij-secondary-toa-payoh",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-22",
+      "pg3": "6-10",
+      "affiliated": {
+        "pg1": "26-29",
+        "pg2": "21-25",
+        "pg3": "8-20"
+      }
     },
     "openHouse": {
       "date": null,
@@ -1463,8 +1607,14 @@
     "schoolName": "CHIJ St. Joseph's Convent",
     "slug": "chij-st-josephs-convent",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-23",
+      "pg3": "8-14",
+      "affiliated": {
+        "pg1": "25-28",
+        "pg2": "21-25",
+        "pg3": "11-20"
+      }
     },
     "openHouse": {
       "date": null,
@@ -1513,8 +1663,14 @@
     "schoolName": "CHIJ St. Nicholas Girls' School (Secondary)",
     "slug": "chij-st-nicholas-girls-school-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4(D)-7(M) (IP) / 6(M)-8(M)",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": "7(M)-14"
+      }
     },
     "openHouse": {
       "date": null,
@@ -1573,8 +1729,14 @@
     "schoolName": "CHIJ St. Theresa's Convent",
     "slug": "chij-st-theresas-convent",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-30*",
+      "pg2": "21-24",
+      "pg3": "11-13",
+      "affiliated": {
+        "pg1": "26-28",
+        "pg2": "21-25",
+        "pg3": "9-20"
+      }
     },
     "openHouse": {
       "date": null,
@@ -1623,8 +1785,14 @@
     "schoolName": "Canberra Secondary School",
     "slug": "canberra-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-29",
+      "pg2": "21-25",
+      "pg3": "17-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -1658,8 +1826,14 @@
     "schoolName": "Catholic High School (Secondary)",
     "slug": "catholic-high-school-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "6(D)-8(M) / 4(D)-7(M) (IP)",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": "7-12"
+      }
     },
     "openHouse": {
       "date": null,
@@ -1768,8 +1942,14 @@
     "schoolName": "Cedar Girls' Secondary School",
     "slug": "cedar-girls-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4-9 (IP) / 6-9",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -1823,8 +2003,14 @@
     "schoolName": "Changkat Changi Secondary School",
     "slug": "changkat-changi-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-30*",
+      "pg2": "21-25",
+      "pg3": "11-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -1883,8 +2069,14 @@
     "schoolName": "Christ Church Secondary School",
     "slug": "christ-church-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-29",
+      "pg2": "21-23",
+      "pg3": "12-17",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -1913,8 +2105,14 @@
     "schoolName": "Chua Chu Kang Secondary School",
     "slug": "chua-chu-kang-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-24",
+      "pg3": "14-20",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -1948,8 +2146,14 @@
     "schoolName": "Chung Cheng High School (Main)",
     "slug": "chung-cheng-high-school-main",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "5(D)-10(M)",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2008,8 +2212,14 @@
     "schoolName": "Chung Cheng High School (Yishun)",
     "slug": "chung-cheng-high-school-yishun",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-22",
+      "pg3": "6-11",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2068,8 +2278,14 @@
     "schoolName": "Clementi Town Secondary School",
     "slug": "clementi-town-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-23",
+      "pg3": "8-13",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2143,8 +2359,14 @@
     "schoolName": "Commonwealth Secondary School",
     "slug": "commonwealth-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-23",
+      "pg3": "8-13",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2223,8 +2445,14 @@
     "schoolName": "Compassvale Secondary School",
     "slug": "compassvale-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-24",
+      "pg3": "14-18",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2273,8 +2501,14 @@
     "schoolName": "Crescent Girls' School",
     "slug": "crescent-girls-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": "21-23",
+      "pg3": "7-13",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2348,8 +2582,14 @@
     "schoolName": "Crest Secondary School",
     "slug": "crest-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": null,
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2368,8 +2608,14 @@
     "schoolName": "Damai Secondary School",
     "slug": "damai-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-30*",
+      "pg2": "21-25",
+      "pg3": "10-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2413,8 +2659,14 @@
     "schoolName": "Deyi Secondary School",
     "slug": "deyi-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-30*",
+      "pg2": "21-24",
+      "pg3": "9-16",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2503,8 +2755,14 @@
     "schoolName": "Dunearn Secondary School",
     "slug": "dunearn-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-29",
+      "pg2": "22-25",
+      "pg3": "11-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2523,8 +2781,14 @@
     "schoolName": "Dunman High School (Secondary)",
     "slug": "dunman-high-school-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4(D)-8(M) (IP)",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2628,8 +2892,14 @@
     "schoolName": "Dunman Secondary School",
     "slug": "dunman-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-23",
+      "pg3": "6-14",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2688,8 +2958,14 @@
     "schoolName": "East Spring Secondary School",
     "slug": "east-spring-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-29",
+      "pg2": "21-25",
+      "pg3": "16-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2708,8 +2984,14 @@
     "schoolName": "Edgefield Secondary School",
     "slug": "edgefield-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-23",
+      "pg3": "5-14",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2763,8 +3045,14 @@
     "schoolName": "Evergreen Secondary School",
     "slug": "evergreen-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-26",
+      "pg2": "21-23",
+      "pg3": "10-15",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2833,8 +3121,14 @@
     "schoolName": "Fairfield Methodist School (Secondary)",
     "slug": "fairfield-methodist-school-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21",
+      "pg3": "6-11",
+      "affiliated": {
+        "pg1": "25-28",
+        "pg2": "21-25",
+        "pg3": "6-20"
+      }
     },
     "openHouse": {
       "date": null,
@@ -2883,8 +3177,14 @@
     "schoolName": "Fuhua Secondary School",
     "slug": "fuhua-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-23",
+      "pg3": "8-13",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -2948,8 +3248,14 @@
     "schoolName": "Gan Eng Seng School",
     "slug": "gan-eng-seng-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-24",
+      "pg3": "9-15",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3008,8 +3314,14 @@
     "schoolName": "Geylang Methodist School (Secondary)",
     "slug": "geylang-methodist-school-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-30*",
+      "pg2": "21-24",
+      "pg3": "11-14",
+      "affiliated": {
+        "pg1": "25-28",
+        "pg2": "22-25",
+        "pg3": "11-21"
+      }
     },
     "openHouse": {
       "date": null,
@@ -3043,8 +3355,14 @@
     "schoolName": "Greendale Secondary School",
     "slug": "greendale-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-23",
+      "pg3": "11-16",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3073,8 +3391,14 @@
     "schoolName": "Greenridge Secondary School",
     "slug": "greenridge-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-28",
+      "pg2": "21-25",
+      "pg3": "11-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3108,8 +3432,14 @@
     "schoolName": "Guangyang Secondary School",
     "slug": "guangyang-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-30*",
+      "pg2": "21-25",
+      "pg3": "9-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3148,8 +3478,14 @@
     "schoolName": "Hai Sing Catholic School",
     "slug": "hai-sing-catholic-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-23",
+      "pg3": "11-15",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3208,8 +3544,14 @@
     "schoolName": "Hillgrove Secondary School",
     "slug": "hillgrove-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-24",
+      "pg3": "13-18",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3278,8 +3620,14 @@
     "schoolName": "Holy Innocents' High School",
     "slug": "holy-innocents-high-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-24",
+      "pg3": "11-14",
+      "affiliated": {
+        "pg1": "26-28",
+        "pg2": "23-25",
+        "pg3": "13-22"
+      }
     },
     "openHouse": {
       "date": null,
@@ -3338,8 +3686,14 @@
     "schoolName": "Hougang Secondary School",
     "slug": "hougang-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-24",
+      "pg3": "14-20",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3408,8 +3762,14 @@
     "schoolName": "Hua Yi Secondary School",
     "slug": "hua-yi-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-23",
+      "pg3": "8-14",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3498,8 +3858,14 @@
     "schoolName": "Hwa Chong Institution (Secondary)",
     "slug": "hwa-chong-institution-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4(D)-6(M) (IP)",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3623,8 +3989,14 @@
     "schoolName": "Junyuan Secondary School",
     "slug": "junyuan-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-25",
+      "pg3": "14-21",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3658,8 +4030,14 @@
     "schoolName": "Jurong Secondary School",
     "slug": "jurong-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-24",
+      "pg3": "12-16",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3703,8 +4081,14 @@
     "schoolName": "Jurong West Secondary School",
     "slug": "jurong-west-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-24",
+      "pg3": "11-16",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3763,8 +4147,14 @@
     "schoolName": "Jurongville Secondary School",
     "slug": "jurongville-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-25",
+      "pg3": "14-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3838,8 +4228,14 @@
     "schoolName": "Juying Secondary School",
     "slug": "juying-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-30*",
+      "pg2": "21-25",
+      "pg3": "17-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3893,8 +4289,14 @@
     "schoolName": "Kent Ridge Secondary School",
     "slug": "kent-ridge-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-30*",
+      "pg2": "21-24",
+      "pg3": "13-18",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3923,8 +4325,14 @@
     "schoolName": "Kranji Secondary School",
     "slug": "kranji-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-24",
+      "pg3": "10-14",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -3988,8 +4396,14 @@
     "schoolName": "Kuo Chuan Presbyterian Secondary School",
     "slug": "kuo-chuan-presbyterian-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-30*",
+      "pg2": "21-23",
+      "pg3": null,
+      "affiliated": {
+        "pg1": "26-28",
+        "pg2": "21-25",
+        "pg3": "8-20"
+      }
     },
     "openHouse": {
       "date": null,
@@ -4053,8 +4467,14 @@
     "schoolName": "Loyang View Secondary School",
     "slug": "loyang-view-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-30*",
+      "pg2": "22-25",
+      "pg3": "16-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -4098,8 +4518,14 @@
     "schoolName": "Manjusri Secondary School",
     "slug": "manjusri-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-30*",
+      "pg2": "21-25",
+      "pg3": "15-21",
+      "affiliated": {
+        "pg1": "25-28",
+        "pg2": "22-25",
+        "pg3": "15-22"
+      }
     },
     "openHouse": {
       "date": null,
@@ -4148,8 +4574,14 @@
     "schoolName": "Maris Stella High School (Secondary)",
     "slug": "maris-stella-high-school-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "7(M)-12",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": "4(M)-16"
+      }
     },
     "openHouse": {
       "date": null,
@@ -4253,8 +4685,14 @@
     "schoolName": "Marsiling Secondary School",
     "slug": "marsiling-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-25",
+      "pg3": "14-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -4318,8 +4756,14 @@
     "schoolName": "Mayflower Secondary School",
     "slug": "mayflower-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-24",
+      "pg3": "13-17",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -4403,8 +4847,14 @@
     "schoolName": "Meridian Secondary School",
     "slug": "meridian-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-25",
+      "pg3": "13-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -4443,8 +4893,14 @@
     "schoolName": "Methodist Girls' School (Secondary)",
     "slug": "methodist-girls-school-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4-6 (IP) / 6-8",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": "7-17"
+      }
     },
     "openHouse": {
       "date": null,
@@ -4518,8 +4974,14 @@
     "schoolName": "Montfort Secondary School",
     "slug": "montfort-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "27-29",
+      "pg2": "23-25",
+      "pg3": "14-22",
+      "affiliated": {
+        "pg1": "26-28",
+        "pg2": "22-24",
+        "pg3": "11-22"
+      }
     },
     "openHouse": {
       "date": null,
@@ -4563,8 +5025,14 @@
     "schoolName": "NUS High School of Mathematics and Science",
     "slug": "nus-high-school-of-mathematics-and-science",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": null,
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -4588,8 +5056,14 @@
     "schoolName": "Nan Chiau High School",
     "slug": "nan-chiau-high-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4(M)-11(M)",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -4643,8 +5117,14 @@
     "schoolName": "Nan Hua High School",
     "slug": "nan-hua-high-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "5(M)-10(M)",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -4743,8 +5223,14 @@
     "schoolName": "Nanyang Girls' High School",
     "slug": "nanyang-girls-high-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4(D)-6(M) (IP)",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": "4(D)-8(M) (IP)"
+      }
     },
     "openHouse": {
       "date": null,
@@ -4848,8 +5334,14 @@
     "schoolName": "National Junior College (Secondary)",
     "slug": "national-junior-college-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "5-8 (IP)",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -4953,8 +5445,14 @@
     "schoolName": "Naval Base Secondary School",
     "slug": "naval-base-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-24",
+      "pg3": "13-19",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5003,8 +5501,14 @@
     "schoolName": "New Town Secondary School",
     "slug": "new-town-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-30*",
+      "pg2": "21-25",
+      "pg3": "14-20",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5048,8 +5552,14 @@
     "schoolName": "Ngee Ann Secondary School",
     "slug": "ngee-ann-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-26",
+      "pg2": "21",
+      "pg3": "6-12",
+      "affiliated": {
+        "pg1": "25-28",
+        "pg2": "21-25",
+        "pg3": "12-16"
+      }
     },
     "openHouse": {
       "date": null,
@@ -5093,8 +5603,14 @@
     "schoolName": "North Vista Secondary School",
     "slug": "north-vista-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-24",
+      "pg3": "11-18",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5158,8 +5674,14 @@
     "schoolName": "Northbrooks Secondary School",
     "slug": "northbrooks-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "22-25",
+      "pg3": "15-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5218,8 +5740,14 @@
     "schoolName": "Northland Secondary School",
     "slug": "northland-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "22-25",
+      "pg3": "15-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5258,8 +5786,14 @@
     "schoolName": "Northlight School",
     "slug": "northlight-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": null,
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5272,8 +5806,14 @@
     "schoolName": "Orchid Park Secondary School",
     "slug": "orchid-park-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-24",
+      "pg3": "10-19",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5342,8 +5882,14 @@
     "schoolName": "Outram Secondary School",
     "slug": "outram-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-26",
+      "pg2": "21-23",
+      "pg3": "9-17",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5402,8 +5948,14 @@
     "schoolName": "Pasir Ris Crest Secondary School",
     "slug": "pasir-ris-crest-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-30*",
+      "pg2": "21-24",
+      "pg3": "10-18",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5477,8 +6029,14 @@
     "schoolName": "Pasir Ris Secondary School",
     "slug": "pasir-ris-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-23",
+      "pg3": "11-17",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5532,8 +6090,14 @@
     "schoolName": "Paya Lebar Methodist Girls' School (Secondary)",
     "slug": "paya-lebar-methodist-girls-school-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-30*",
+      "pg2": "21-23",
+      "pg3": "7-10",
+      "affiliated": {
+        "pg1": "26-27",
+        "pg2": "21-25",
+        "pg3": "7-20"
+      }
     },
     "openHouse": {
       "date": null,
@@ -5597,8 +6161,14 @@
     "schoolName": "Pei Hwa Secondary School",
     "slug": "pei-hwa-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-23",
+      "pg3": "7-14",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5642,8 +6212,14 @@
     "schoolName": "Peicai Secondary School",
     "slug": "peicai-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-30*",
+      "pg2": "21-25",
+      "pg3": "14-20",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5707,8 +6283,14 @@
     "schoolName": "Peirce Secondary School",
     "slug": "peirce-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-30*",
+      "pg2": "21-25",
+      "pg3": "14-20",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5742,8 +6324,14 @@
     "schoolName": "Presbyterian High School",
     "slug": "presbyterian-high-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-24",
+      "pg3": "8-13",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5797,8 +6385,14 @@
     "schoolName": "Punggol Secondary School",
     "slug": "punggol-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-24",
+      "pg3": "13-19",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5827,8 +6421,14 @@
     "schoolName": "Queenstown Secondary School",
     "slug": "queenstown-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-30*",
+      "pg2": "22-25",
+      "pg3": "15-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5882,8 +6482,14 @@
     "schoolName": "Queensway Secondary School",
     "slug": "queensway-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-25",
+      "pg3": "13-17",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -5942,8 +6548,14 @@
     "schoolName": "Raffles Girls' School (Secondary)",
     "slug": "raffles-girls-school-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4-6 (IP)",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -6047,8 +6659,14 @@
     "schoolName": "Raffles Institution (Secondary)",
     "slug": "raffles-institution-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4-6 (IP)",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -6187,8 +6805,14 @@
     "schoolName": "Regent Secondary School",
     "slug": "regent-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-30*",
+      "pg2": "23-25",
+      "pg3": "17-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -6237,8 +6861,14 @@
     "schoolName": "River Valley High School (Secondary)",
     "slug": "river-valley-high-school-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4(M)-9(M) (IP)",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -6332,8 +6962,14 @@
     "schoolName": "Riverside Secondary School",
     "slug": "riverside-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-23",
+      "pg3": "8-14",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -6382,8 +7018,14 @@
     "schoolName": "School of Science and Technology, Singapore",
     "slug": "school-of-science-and-technology-singapore",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": null,
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -6402,8 +7044,14 @@
     "schoolName": "School of the Arts, Singapore",
     "slug": "school-of-the-arts-singapore",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": null,
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -6602,8 +7250,14 @@
     "schoolName": "Sembawang Secondary School",
     "slug": "sembawang-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-29",
+      "pg2": "21-25",
+      "pg3": "18-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -6622,8 +7276,14 @@
     "schoolName": "Seng Kang Secondary School",
     "slug": "seng-kang-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-24",
+      "pg3": "14-19",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -6667,8 +7327,14 @@
     "schoolName": "Serangoon Garden Secondary School",
     "slug": "serangoon-garden-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-30",
+      "pg2": "21-25",
+      "pg3": "12-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -6722,8 +7388,14 @@
     "schoolName": "Serangoon Secondary School",
     "slug": "serangoon-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-28",
+      "pg2": "21-25",
+      "pg3": "16-20",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -6747,8 +7419,14 @@
     "schoolName": "Singapore Chinese Girls' School",
     "slug": "singapore-chinese-girls-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4-7 (IP) / 6-8",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": "7-17"
+      }
     },
     "openHouse": {
       "date": null,
@@ -6837,8 +7515,14 @@
     "schoolName": "Singapore Sports School",
     "slug": "singapore-sports-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": null,
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -6851,8 +7535,14 @@
     "schoolName": "Spectra Secondary School",
     "slug": "spectra-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": null,
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -6865,8 +7555,14 @@
     "schoolName": "Springfield Secondary School",
     "slug": "springfield-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "27-30*",
+      "pg2": "22-25",
+      "pg3": "10-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -6900,8 +7596,14 @@
     "schoolName": "St Andrew's School (Secondary)",
     "slug": "st-andrews-school-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21",
+      "pg3": "8-9",
+      "affiliated": {
+        "pg1": "25-30",
+        "pg2": "21-25",
+        "pg3": "9-22"
+      }
     },
     "openHouse": {
       "date": null,
@@ -6955,8 +7657,14 @@
     "schoolName": "St. Anthony's Canossian Secondary School",
     "slug": "st-anthonys-canossian-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-30*",
+      "pg2": "21-24",
+      "pg3": "12-15",
+      "affiliated": {
+        "pg1": "26-29",
+        "pg2": "22-25",
+        "pg3": "14-22"
+      }
     },
     "openHouse": {
       "date": null,
@@ -7035,8 +7743,14 @@
     "schoolName": "St. Gabriel's Secondary School",
     "slug": "st-gabriels-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-24",
+      "pg3": "10-15",
+      "affiliated": {
+        "pg1": "26-28",
+        "pg2": "23-25",
+        "pg3": "11-22"
+      }
     },
     "openHouse": {
       "date": null,
@@ -7130,8 +7844,14 @@
     "schoolName": "St. Hilda's Secondary School",
     "slug": "st-hildas-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-23",
+      "pg3": "12-14",
+      "affiliated": {
+        "pg1": "26-28",
+        "pg2": "22-25",
+        "pg3": "12-22"
+      }
     },
     "openHouse": {
       "date": null,
@@ -7170,8 +7890,14 @@
     "schoolName": "St. Joseph's Institution (Secondary)",
     "slug": "st-josephs-institution-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4-7 (IP) / 4-8",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": "7-12"
+      }
     },
     "openHouse": {
       "date": null,
@@ -7285,8 +8011,14 @@
     "schoolName": "St. Margaret's School (Secondary)",
     "slug": "st-margarets-school-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-26",
+      "pg2": "21-23",
+      "pg3": "8-11",
+      "affiliated": {
+        "pg1": "25-28",
+        "pg2": "21-25",
+        "pg3": "10-20"
+      }
     },
     "openHouse": {
       "date": null,
@@ -7380,8 +8112,14 @@
     "schoolName": "St. Patrick's School",
     "slug": "st-patricks-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-22",
+      "pg3": "11",
+      "affiliated": {
+        "pg1": "25-28",
+        "pg2": "21-25",
+        "pg3": "13-20"
+      }
     },
     "openHouse": {
       "date": null,
@@ -7480,8 +8218,14 @@
     "schoolName": "Swiss Cottage Secondary School",
     "slug": "swiss-cottage-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-26",
+      "pg2": "21-22",
+      "pg3": "8-11",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -7550,8 +8294,14 @@
     "schoolName": "Tampines Secondary School",
     "slug": "tampines-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-24",
+      "pg3": "13-19",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -7610,8 +8360,14 @@
     "schoolName": "Tanjong Katong Girls' School",
     "slug": "tanjong-katong-girls-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": "21-23",
+      "pg3": "7-13",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -7675,8 +8431,14 @@
     "schoolName": "Tanjong Katong Secondary School",
     "slug": "tanjong-katong-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": "21-23",
+      "pg3": "7-13",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -7715,8 +8477,14 @@
     "schoolName": "Temasek Junior College (Secondary)",
     "slug": "temasek-junior-college-secondary",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "4-8 (IP)",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -7785,8 +8553,14 @@
     "schoolName": "Temasek Secondary School",
     "slug": "temasek-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-26",
+      "pg2": "21-22",
+      "pg3": "8-11",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -7825,8 +8599,14 @@
     "schoolName": "Unity Secondary School",
     "slug": "unity-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-24",
+      "pg3": "12-18",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -7855,8 +8635,14 @@
     "schoolName": "Victoria School",
     "slug": "victoria-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": null,
+      "pg2": null,
+      "pg3": "5-8 (IP) / 6-9",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -7950,8 +8736,14 @@
     "schoolName": "West Spring Secondary School",
     "slug": "west-spring-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-24",
+      "pg3": "11-17",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -7985,8 +8777,14 @@
     "schoolName": "Westwood Secondary School",
     "slug": "westwood-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-25",
+      "pg3": "12-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -8065,8 +8863,14 @@
     "schoolName": "Whitley Secondary School",
     "slug": "whitley-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "26-30*",
+      "pg2": "22-25",
+      "pg3": "15-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -8090,8 +8894,14 @@
     "schoolName": "Woodgrove Secondary School",
     "slug": "woodgrove-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-24",
+      "pg3": "14-19",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -8115,8 +8925,14 @@
     "schoolName": "Woodlands Ring Secondary School",
     "slug": "woodlands-ring-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-29",
+      "pg2": "21-25",
+      "pg3": "17-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -8175,8 +8991,14 @@
     "schoolName": "Woodlands Secondary School",
     "slug": "woodlands-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-25",
+      "pg3": "15-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -8220,8 +9042,14 @@
     "schoolName": "Xinmin Secondary School",
     "slug": "xinmin-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-23",
+      "pg3": "8-13",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -8305,8 +9133,14 @@
     "schoolName": "Yio Chu Kang Secondary School",
     "slug": "yio-chu-kang-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-30*",
+      "pg2": "23-25",
+      "pg3": "15-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -8395,8 +9229,14 @@
     "schoolName": "Yishun Secondary School",
     "slug": "yishun-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-24",
+      "pg3": "12-20",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -8460,8 +9300,14 @@
     "schoolName": "Yishun Town Secondary School",
     "slug": "yishun-town-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-22",
+      "pg3": "5-13",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -8515,8 +9361,14 @@
     "schoolName": "Yuan Ching Secondary School",
     "slug": "yuan-ching-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-24",
+      "pg3": "12-18",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -8540,8 +9392,14 @@
     "schoolName": "Yuhua Secondary School",
     "slug": "yuhua-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-28",
+      "pg2": "21-25",
+      "pg3": "15-20",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -8575,8 +9433,14 @@
     "schoolName": "Yusof Ishak Secondary School",
     "slug": "yusof-ishak-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-22",
+      "pg3": "7-15",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -8640,8 +9504,14 @@
     "schoolName": "Yuying Secondary School",
     "slug": "yuying-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-29",
+      "pg2": "22-25",
+      "pg3": "11-22",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -8675,8 +9545,14 @@
     "schoolName": "Zhenghua Secondary School",
     "slug": "zhenghua-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-24",
+      "pg3": "14-20",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,
@@ -8715,8 +9591,14 @@
     "schoolName": "Zhonghua Secondary School",
     "slug": "zhonghua-secondary-school",
     "psleCop": {
-      "boys": null,
-      "girls": null
+      "pg1": "25-27",
+      "pg2": "21-23",
+      "pg3": "8-12",
+      "affiliated": {
+        "pg1": null,
+        "pg2": null,
+        "pg3": null
+      }
     },
     "openHouse": {
       "date": null,

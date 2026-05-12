@@ -27,8 +27,14 @@ type DsaSchool = {
   schoolName: string;
   slug: string;
   psleCop: {
-    boys: number | null;
-    girls: number | null;
+    pg1: string | null;
+    pg2: string | null;
+    pg3: string | null;
+    affiliated: {
+      pg1: string | null;
+      pg2: string | null;
+      pg3: string | null;
+    };
   };
   openHouse: {
     date: string | null;
@@ -100,15 +106,32 @@ const COP_BY_NAME = new Map(
 );
 
 function getCopLabel(school: DsaSchool): string {
+  const psleParts = [
+    school.psleCop.pg3 ? `PG3: ${school.psleCop.pg3}` : null,
+    school.psleCop.pg2 ? `PG2: ${school.psleCop.pg2}` : null,
+    school.psleCop.pg1 ? `PG1: ${school.psleCop.pg1}` : null,
+  ].filter(Boolean);
+  const affiliatedParts = [
+    school.psleCop.affiliated.pg3 ? `PG3 ${school.psleCop.affiliated.pg3}` : null,
+    school.psleCop.affiliated.pg2 ? `PG2 ${school.psleCop.affiliated.pg2}` : null,
+    school.psleCop.affiliated.pg1 ? `PG1 ${school.psleCop.affiliated.pg1}` : null,
+  ].filter(Boolean);
+
+  if (psleParts.length > 0) {
+    return affiliatedParts.length > 0
+      ? `${psleParts.join(" | ")} | Affiliated: ${affiliatedParts.join(", ")}`
+      : psleParts.join(" | ");
+  }
+
   const history = COP_BY_SLUG.get(school.slug) ?? COP_BY_NAME.get(copLookupKey(school.schoolName));
   const latest = history?.byYear["2025"];
-  const value = latest?.ip ?? latest?.indicativeNonIp ?? latest?.g3NonAffiliated;
-  if (value) return `2025 PSLE COP: AL ${value}`;
+  const fallbackParts = [
+    latest?.g3NonAffiliated ? `PG3: ${latest.g3NonAffiliated}` : null,
+    latest?.g2 ? `PG2: ${latest.g2}` : null,
+    latest?.g1 ? `PG1: ${latest.g1}` : null,
+  ].filter(Boolean);
+  if (fallbackParts.length > 0) return fallbackParts.join(" | ");
 
-  const scores = [school.psleCop.boys, school.psleCop.girls].filter(
-    (v): v is number => typeof v === "number",
-  );
-  if (scores.length > 0) return `PSLE estimate: AL ${Math.min(...scores)}`;
   return "PSLE estimate: check school profile";
 }
 

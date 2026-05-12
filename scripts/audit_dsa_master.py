@@ -481,14 +481,21 @@ def audit(args: argparse.Namespace) -> tuple[list[str], list[str]]:
             psle_issues.append(msg)
             warnings.append(msg)
         else:
-            for key in ("boys", "girls"):
-                value = psle.get(key)
-                if value is None:
-                    continue
-                if not isinstance(value, (int, float)) or not (4 <= value <= 30):
-                    msg = f"[MISMATCH] {name}: psleCop.{key}={value!r} outside 4-30"
-                    psle_issues.append(msg)
-                    warnings.append(msg)
+            affiliated = psle.get("affiliated")
+            if not isinstance(affiliated, dict):
+                msg = f"[MISMATCH] {name}: psleCop.affiliated must be an object"
+                psle_issues.append(msg)
+                warnings.append(msg)
+                affiliated = {}
+            for key in ("pg1", "pg2", "pg3"):
+                for container_name, container in (("psleCop", psle), ("psleCop.affiliated", affiliated)):
+                    value = container.get(key)
+                    if value is None:
+                        continue
+                    if not isinstance(value, str) or not re.search(r"\d", value):
+                        msg = f"[MISMATCH] {name}: {container_name}.{key}={value!r} is not a COP range"
+                        psle_issues.append(msg)
+                        warnings.append(msg)
 
         link = None
         open_house = row.get("openHouse")
