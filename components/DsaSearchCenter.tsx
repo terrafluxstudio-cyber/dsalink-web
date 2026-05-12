@@ -8,7 +8,9 @@ import {
   getDsaCategorySearchTerms,
   getDsaTalentLabel,
   getDsaTalentSearchTerms,
+  getDsaUiLabel,
   type DsaCategory as Category,
+  type DsaUiKey,
 } from "@/constants/dsa_translations";
 import {
   UI_TRANSLATIONS,
@@ -219,6 +221,8 @@ function talentGroupKey(group: TalentGroup): string {
 
 export function DsaSearchCenter() {
   const { locale } = useLanguage();
+  const ui = UI_TRANSLATIONS[locale];
+  const t = (key: DsaUiKey) => getDsaUiLabel(key, locale);
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<Category | "All">("All");
   const [mode, setMode] = useState<ViewMode>("school");
@@ -320,60 +324,62 @@ export function DsaSearchCenter() {
 
   return (
     <section className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-12">
-      <header className="rounded-[2rem] border border-intellectual/10 bg-white/85 p-5 shadow-soft backdrop-blur sm:p-8">
+      <header className="rounded-[2rem] border border-intellectual/10 bg-white/85 p-5 text-center shadow-soft backdrop-blur sm:p-8">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-champagne-dark">
           Official MOE SchoolFinder DSA data · 2026
         </p>
-        <div className="mt-3">
-          <h1 className="font-display text-3xl font-semibold tracking-tight text-intellectual sm:text-5xl">
-            DSA 2026 talent search center
+        <div className="mt-2">
+          <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-tight text-intellectual sm:text-6xl">
+            {t("ui_hero_title")}
           </h1>
-          <p className="mt-3 max-w-2xl text-sm leading-7 text-intellectual-muted sm:text-base">
-            Search 147 secondary schools and 1,315 official DSA talent entries. Start by school,
-            then tap any talent tag to compare every school offering that route.
+          <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-intellectual-muted sm:text-base">
+            {t("ui_hero_subtitle")}
           </p>
         </div>
 
         <div className="mt-4 space-y-3">
-          <div className="flex flex-wrap items-center justify-around gap-y-2 rounded-2xl border border-slate-200 bg-slate-50/90 px-3 py-2 text-center shadow-sm sm:flex-nowrap sm:px-4">
-            <Stat label={UI_TRANSLATIONS[locale].schools} value="147" />
-            <VerticalDivider className="hidden sm:block" />
-            <Stat label={UI_TRANSLATIONS[locale].talentEntries} value="1,315" />
-            <VerticalDivider className="hidden sm:block" />
-            <Stat label={UI_TRANSLATIONS[locale].categories} value="5" />
-          </div>
-
-          <div className="flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-2 text-xs leading-5 text-slate-600 sm:px-4">
-            <Info className="h-4 w-4 shrink-0 text-blue-500" aria-hidden />
-            <p className="min-w-0">
-              {UI_TRANSLATIONS[locale].dsaDataNotePrefix}{" "}
-              <a
-                href="https://www.dsa-is.moe.gov.sg/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-slate-800 underline decoration-blue-300 decoration-2 underline-offset-2 transition hover:text-blue-700"
-              >
-                {UI_TRANSLATIONS[locale].dsaDataNotePortal}
-              </a>{" "}
-              {UI_TRANSLATIONS[locale].dsaDataNoteSuffix}
-            </p>
-          </div>
-
-          <label className="relative block">
-            <span className="sr-only">Search schools or DSA talent areas</span>
+          <label className="relative mx-auto block max-w-2xl">
+            <span className="sr-only">{t("ui_search_placeholder")}</span>
             <Search
-              className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-champagne-dark"
+              className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-blue-600"
               aria-hidden
             />
             <input
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder='Search "Raffles", "Wushu", "Robotics", "Chinese Orchestra"...'
+              placeholder={t("ui_search_placeholder")}
               autoComplete="off"
-              className="w-full rounded-2xl border-2 border-intellectual/10 bg-white py-4 pl-12 pr-4 text-base font-semibold text-intellectual shadow-sm outline-none ring-champagne/30 transition placeholder:text-intellectual-muted/60 focus:border-champagne/60 focus:ring-2 sm:text-lg"
+              className="w-full rounded-2xl border-2 border-blue-500/20 bg-white py-4 pl-12 pr-4 text-base font-semibold text-intellectual shadow-xl outline-none transition placeholder:text-intellectual-muted/60 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 sm:text-lg"
             />
           </label>
+          <p className="-mt-1 text-xs font-medium text-slate-500">
+            {t("ui_search_hint")}
+          </p>
+
+          <div className="mx-auto flex max-w-2xl flex-wrap items-center justify-around gap-y-2 rounded-2xl border border-slate-200 bg-slate-50/80 px-3 py-2 text-center text-slate-500 shadow-sm sm:flex-nowrap sm:px-4">
+            <Stat label={t("ui_stat_schools")} value="147" />
+            <VerticalDivider className="hidden sm:block" />
+            <Stat label={t("ui_stat_talents")} value="1,315" />
+            <VerticalDivider className="hidden sm:block" />
+            <Stat label={t("ui_stat_categories")} value="5" />
+          </div>
+
+          <div className="flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-2 text-xs leading-5 text-slate-600 sm:px-4">
+            <Info className="h-4 w-4 shrink-0 text-blue-500" aria-hidden />
+            <p className="min-w-0">
+              {ui.dsaDataNotePrefix}{" "}
+              <a
+                href="https://www.dsa-is.moe.gov.sg/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-slate-800 underline decoration-blue-300 decoration-2 underline-offset-2 transition hover:text-blue-700"
+              >
+                {ui.dsaDataNotePortal}
+              </a>{" "}
+              {ui.dsaDataNoteSuffix}
+            </p>
+          </div>
         </div>
       </header>
 
@@ -431,8 +437,8 @@ export function DsaSearchCenter() {
 function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="min-w-[5.5rem] flex-1 px-1 py-1">
-      <p className="font-display text-xl font-bold leading-none text-intellectual sm:text-2xl">{value}</p>
-      <p className="mt-1 text-[9px] font-semibold uppercase tracking-wider text-intellectual-muted sm:text-[10px]">
+      <p className="font-display text-lg font-bold leading-none text-intellectual/80 sm:text-xl">{value}</p>
+      <p className="mt-1 text-[9px] font-semibold uppercase tracking-wider text-slate-500 sm:text-[10px]">
         {label}
       </p>
     </div>

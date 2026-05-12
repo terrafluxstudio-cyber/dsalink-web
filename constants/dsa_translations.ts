@@ -2,6 +2,14 @@ import type { Locale } from "@/lib/i18n";
 
 export type DsaCategory = "Sports" | "Arts" | "STEM" | "Leadership" | "Languages";
 export type DsaTranslation = Partial<Record<Locale, string>> & { en: string };
+export type DsaUiKey =
+  | "ui_hero_title"
+  | "ui_hero_subtitle"
+  | "ui_search_placeholder"
+  | "ui_stat_schools"
+  | "ui_stat_talents"
+  | "ui_stat_categories"
+  | "ui_search_hint";
 
 export const DSA_CATEGORY_TRANSLATIONS: Record<DsaCategory, DsaTranslation> = {
   Sports: {
@@ -27,6 +35,51 @@ export const DSA_CATEGORY_TRANSLATIONS: Record<DsaCategory, DsaTranslation> = {
   Languages: {
     en: "Languages",
     zh: "语言",
+  },
+};
+
+export const DSA_UI_TRANSLATIONS: Record<DsaUiKey, DsaTranslation> = {
+  ui_hero_title: {
+    en: "DSA 2026 Talent Search Center",
+    zh: "2026 DSA 特才寻校中心",
+    ms: "Pusat Carian Bakat DSA 2026",
+    ta: "DSA 2026 திறமை தேடல் மையம்",
+  },
+  ui_hero_subtitle: {
+    en: "Search 147 secondary schools and 1,315 official DSA talent entries. Start by school, or tap any talent tag to compare.",
+    zh: "搜索 147 所中学和 1,315 个官方 DSA 项目。先从学校开始，或点击任何特长标签进行横向对比。",
+    ms: "Cari 147 sekolah menengah dan 1,315 penyertaan bakat rasmi. Mula dengan sekolah, atau ketik teg bakat untuk bandingkan.",
+    ta: "147 மேல்நிலைப் பள்ளிகள் மற்றும் 1,315 அதிகாரப்பூர்வ DSA திறமைப் பதிவுகளைத் தேடுங்கள்.",
+  },
+  ui_search_placeholder: {
+    en: 'Search schools, talents, or keywords (e.g. Wushu, Robotics)...',
+    zh: "搜索学校、项目或关键词 (如: Wushu, Robotics)...",
+    ms: "Cari sekolah, bakat atau kata kunci (cth: Wushu, Robotik)...",
+    ta: "பள்ளி அல்லது திறமையைத் தேடுக (எ.கா: வுஷூ, ரோபோட்டிக்ஸ்)...",
+  },
+  ui_stat_schools: {
+    en: "Schools",
+    zh: "所中学",
+    ms: "Sekolah",
+    ta: "பள்ளிகள்",
+  },
+  ui_stat_talents: {
+    en: "Talent entries",
+    zh: "个特才项目",
+    ms: "Bakat DSA",
+    ta: "DSA திட்டங்கள்",
+  },
+  ui_stat_categories: {
+    en: "Categories",
+    zh: "大类别",
+    ms: "Kategori",
+    ta: "வகைகள்",
+  },
+  ui_search_hint: {
+    en: "Tap the tags below to filter by category",
+    zh: "点击下方标签可按类别筛选",
+    ms: "Ketik tag di bawah untuk menapis mengikut kategori",
+    ta: "வகை வாரியாக வடிகட்ட கீழே உள்ள குறிச்சொற்களைத் தட்டவும்",
   },
 };
 
@@ -1039,6 +1092,10 @@ export const DSA_TALENT_TRANSLATIONS: Record<string, DsaTranslation> = {
 
 export function getDsaCategoryLabel(category: DsaCategory, locale: Locale): string {
   return DSA_CATEGORY_TRANSLATIONS[category]?.[locale] ?? category;
+}
+
+export function getDsaUiLabel(key: DsaUiKey, locale: Locale): string {
+  return DSA_UI_TRANSLATIONS[key]?.[locale] ?? DSA_UI_TRANSLATIONS[key].en;
 }
 
 export function getDsaTalentLabel(area: string, locale: Locale): string {
