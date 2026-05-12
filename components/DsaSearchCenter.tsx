@@ -3,10 +3,17 @@
 import { ChevronDown, HelpCircle, Search, Sparkles } from "lucide-react";
 import type { ReactNode } from "react";
 import { useDeferredValue, useMemo, useRef, useState } from "react";
+import {
+  getDsaCategoryLabel,
+  getDsaCategorySearchTerms,
+  getDsaTalentLabel,
+  getDsaTalentSearchTerms,
+  type DsaCategory as Category,
+} from "@/constants/dsa_translations";
+import { useLanguage } from "@/contexts/LanguageContext";
 import dsaMasterRaw from "@/data/dsa_master_list.json";
 import { SCHOOL_COP_HISTORY_DATA } from "@/lib/school-cop-history-data";
 
-type Category = "Sports" | "Arts" | "STEM" | "Leadership" | "Languages";
 type ViewMode = "school" | "talent";
 
 type DsaTalent = {
@@ -64,11 +71,12 @@ const VAGUE_TALENT_AREAS = new Set(["academic", "stem"]);
 
 function normalize(value: string): string {
   return value
+    .normalize("NFKC")
     .toLowerCase()
     .replace(/&/g, " and ")
     .replace(/\(secondary\)/g, "")
     .replace(/secondary school/g, "")
-    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
     .trim();
 }
 
@@ -109,13 +117,17 @@ function buildTalentGroups(schools: IndexedSchool[]): TalentGroup[] {
   for (const school of schools) {
     for (const talent of school.dsaTalents) {
       const key = `${talent.category}::${talent.area.toLowerCase()}`;
+      const searchTerms = [
+        ...getDsaTalentSearchTerms(talent.area),
+        ...getDsaCategorySearchTerms(talent.category),
+      ];
       const existing =
         map.get(key) ??
         ({
           area: talent.area,
           category: talent.category,
           schools: [],
-          searchText: normalize(`${talent.area} ${talent.category}`),
+          searchText: normalize(searchTerms.join(" ")),
         } satisfies TalentGroup);
       existing.schools.push(school);
       map.set(key, existing);
@@ -151,6 +163,7 @@ function talentGroupKey(group: TalentGroup): string {
 }
 
 export function DsaSearchCenter() {
+  const { locale } = useLanguage();
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<Category | "All">("All");
   const [mode, setMode] = useState<ViewMode>("school");
@@ -167,7 +180,10 @@ export function DsaSearchCenter() {
         psleLabel: getCopLabel(school),
         searchText: normalize(
           `${school.schoolName} ${school.slug} ${school.dsaTalents
-            .map((t) => `${t.area} ${t.category}`)
+            .flatMap((t) => [
+              ...getDsaTalentSearchTerms(t.area),
+              ...getDsaCategorySearchTerms(t.category),
+            ])
             .join(" ")}`,
         ),
       })),
@@ -310,7 +326,7 @@ export function DsaSearchCenter() {
             </FilterButton>
             {CATEGORIES.map((cat) => (
               <FilterButton key={cat} active={category === cat} onClick={() => setCategory(cat)}>
-                {cat} <span className="opacity-60">{counts[cat]}</span>
+                {getDsaCategoryLabel(cat, locale)} <span className="opacity-60">{counts[cat]}</span>
               </FilterButton>
             ))}
           </div>
@@ -323,6 +339,7 @@ export function DsaSearchCenter() {
             schools={filteredSchools}
             total={indexedSchools.length}
             onTalentClick={openTalent}
+            locale={locale}
           />
         ) : (
           <TalentResults
@@ -334,6 +351,7 @@ export function DsaSearchCenter() {
             onCategoryToggle={toggleCategory}
             onSchoolListToggle={toggleSchoolList}
             shouldAutoExpand={Boolean(deferredQuery.trim()) || Boolean(selectedTalent)}
+            locale={locale}
           />
         )}
       </div>
@@ -402,10 +420,12 @@ function SchoolResults({
   schools,
   total,
   onTalentClick,
+  locale,
 }: {
   schools: IndexedSchool[];
   total: number;
   onTalentClick: (talent: DsaTalent) => void;
+  locale: Parameters<typeof getDsaTalentLabel>[1];
 }) {
   return (
     <div className="mt-6">
@@ -419,7 +439,7 @@ function SchoolResults({
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         {schools.map((school) => (
-          <SchoolCard key={school.id} school={school} onTalentClick={onTalentClick} />
+          <SchoolCard key={school.id} school={school} onTalentClick={onTalentClick} locale={locale} />
         ))}
       </div>
       {schools.length === 0 ? <EmptyState /> : null}
@@ -430,9 +450,11 @@ function SchoolResults({
 function SchoolCard({
   school,
   onTalentClick,
+  locale,
 }: {
   school: IndexedSchool;
   onTalentClick: (talent: DsaTalent) => void;
+  locale: Parameters<typeof getDsaTalentLabel>[1];
 }) {
   return (
     <article className="rounded-2xl border border-intellectual/10 bg-white p-4 shadow-soft transition hover:-translate-y-0.5 hover:border-champagne/40 sm:p-5">
@@ -452,7 +474,12 @@ function SchoolCard({
       {school.dsaTalents.length > 0 ? (
         <div className="mt-4 flex flex-wrap gap-1.5">
           {school.dsaTalents.map((talent) => (
-            <TalentTag key={`${school.id}-${talent.category}-${talent.area}`} talent={talent} onClick={onTalentClick} />
+            <TalentTag
+              key={`${school.id}-${talent.category}-${talent.area}`}
+              talent={talent}
+              onClick={onTalentClick}
+              locale={locale}
+            />
           ))}
         </div>
       ) : (
@@ -467,11 +494,14 @@ function SchoolCard({
 function TalentTag({
   talent,
   onClick,
+  locale,
 }: {
   talent: DsaTalent;
   onClick: (talent: DsaTalent) => void;
+  locale: Parameters<typeof getDsaTalentLabel>[1];
 }) {
   const vague = isVagueTalentArea(talent.area);
+  const label = getDsaTalentLabel(talent.area, locale);
 
   return (
     <button
@@ -484,7 +514,7 @@ function TalentTag({
           : `Compare schools offering ${talent.area}`
       }
     >
-      {talent.area}
+      {label}
       {vague ? (
         <HelpCircle
           className="h-3 w-3 opacity-70"
@@ -504,6 +534,7 @@ function TalentResults({
   onCategoryToggle,
   onSchoolListToggle,
   shouldAutoExpand,
+  locale,
 }: {
   groups: TalentGroup[];
   selectedTalent: string | null;
@@ -513,6 +544,7 @@ function TalentResults({
   onCategoryToggle: (category: Category) => void;
   onSchoolListToggle: (key: string) => void;
   shouldAutoExpand: boolean;
+  locale: Parameters<typeof getDsaTalentLabel>[1];
 }) {
   const categoryGroups = groupTalentsByCategory(groups);
 
@@ -521,7 +553,7 @@ function TalentResults({
       <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm font-semibold text-intellectual">
           {selectedTalent
-            ? `Comparing: ${selectedTalent}`
+            ? `Comparing: ${getDsaTalentLabel(selectedTalent, locale)}`
             : `Showing ${categoryGroups.length} categories and ${groups.length} talent groups`}
         </p>
         {selectedTalent ? (
@@ -545,6 +577,7 @@ function TalentResults({
               expandedSchoolLists={expandedSchoolLists}
               onCategoryToggle={onCategoryToggle}
               onSchoolListToggle={onSchoolListToggle}
+              locale={locale}
             />
           );
         })}
@@ -560,13 +593,17 @@ function TalentCategoryAccordion({
   expandedSchoolLists,
   onCategoryToggle,
   onSchoolListToggle,
+  locale,
 }: {
   categoryGroup: TalentCategoryGroup;
   open: boolean;
   expandedSchoolLists: Set<string>;
   onCategoryToggle: (category: Category) => void;
   onSchoolListToggle: (key: string) => void;
+  locale: Parameters<typeof getDsaTalentLabel>[1];
 }) {
+  const categoryLabel = getDsaCategoryLabel(categoryGroup.category, locale);
+
   return (
     <section className="overflow-hidden rounded-2xl border border-intellectual/10 bg-white shadow-soft transition hover:border-champagne/30">
       <button
@@ -581,7 +618,7 @@ function TalentCategoryAccordion({
           </p>
           <h2 className="mt-1 flex items-center gap-2 font-display text-2xl font-semibold text-intellectual">
             <Sparkles className="h-4 w-4 text-champagne" aria-hidden />
-            {categoryGroup.category}
+            {categoryLabel}
           </h2>
         </div>
         <div className="flex items-center gap-3">
@@ -606,6 +643,7 @@ function TalentCategoryAccordion({
                   group={group}
                   expanded={expandedSchoolLists.has(talentGroupKey(group))}
                   onSchoolListToggle={onSchoolListToggle}
+                  locale={locale}
                 />
               ))}
             </div>
@@ -620,26 +658,29 @@ function TalentGroupAccordion({
   group,
   expanded,
   onSchoolListToggle,
+  locale,
 }: {
   group: TalentGroup;
   expanded: boolean;
   onSchoolListToggle: (key: string) => void;
+  locale: Parameters<typeof getDsaTalentLabel>[1];
 }) {
   const groupKey = talentGroupKey(group);
   const shouldLimit = group.schools.length > 10;
   const visibleSchools = shouldLimit && !expanded
     ? group.schools.slice(0, DEFAULT_VISIBLE_TALENT_SCHOOLS)
     : group.schools;
+  const groupLabel = getDsaTalentLabel(group.area, locale);
 
   return (
     <article className="rounded-2xl border border-intellectual/10 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-champagne/40">
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-intellectual/8 pb-3">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark">
-            {group.category}
+            {getDsaCategoryLabel(group.category, locale)}
           </p>
           <h3 className="mt-1 font-display text-xl font-semibold text-intellectual">
-            {group.area}
+            {groupLabel}
           </h3>
         </div>
         <span className="rounded-full bg-intellectual px-3 py-1 text-xs font-semibold text-white">
