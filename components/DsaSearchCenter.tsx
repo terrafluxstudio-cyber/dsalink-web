@@ -10,6 +10,10 @@ import {
   getDsaTalentSearchTerms,
   type DsaCategory as Category,
 } from "@/constants/dsa_translations";
+import {
+  UI_TRANSLATIONS,
+} from "@/constants/ui_translations";
+import { SchoolDisplayName } from "@/components/SchoolDisplayName";
 import { useLanguage } from "@/contexts/LanguageContext";
 import dsaMasterRaw from "@/data/dsa_master_list.json";
 import { SCHOOL_COP_HISTORY_DATA } from "@/lib/school-cop-history-data";
@@ -330,27 +334,28 @@ export function DsaSearchCenter() {
           </p>
         </div>
 
-        <div className="mt-6 space-y-6">
-          <div className="flex flex-col gap-3 rounded-3xl border border-slate-200 bg-slate-50 p-4 text-center sm:flex-row sm:items-stretch sm:justify-between sm:p-5">
-            <Stat label="Schools" value="147" />
-            <Stat label="Talent entries" value="1,315" />
-            <Stat label="Categories" value="5" />
+        <div className="mt-4 space-y-3">
+          <div className="flex flex-wrap items-center justify-around gap-y-2 rounded-2xl border border-slate-200 bg-slate-50/90 px-3 py-2 text-center shadow-sm sm:flex-nowrap sm:px-4">
+            <Stat label={UI_TRANSLATIONS[locale].schools} value="147" />
+            <VerticalDivider className="hidden sm:block" />
+            <Stat label={UI_TRANSLATIONS[locale].talentEntries} value="1,315" />
+            <VerticalDivider className="hidden sm:block" />
+            <Stat label={UI_TRANSLATIONS[locale].categories} value="5" />
           </div>
 
-          <div className="flex gap-3 rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-sm leading-6 text-slate-600">
-            <Info className="mt-0.5 h-5 w-5 shrink-0 text-blue-500" aria-hidden />
-            <p>
-              Note: Data synced with official MOE sources as of May 2026. While we strive for
-              100% accuracy, please always cross-reference with the{" "}
+          <div className="flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-2 text-xs leading-5 text-slate-600 sm:px-4">
+            <Info className="h-4 w-4 shrink-0 text-blue-500" aria-hidden />
+            <p className="min-w-0">
+              {UI_TRANSLATIONS[locale].dsaDataNotePrefix}{" "}
               <a
                 href="https://www.dsa-is.moe.gov.sg/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-slate-800 underline decoration-blue-300 decoration-2 underline-offset-2 transition hover:text-blue-700"
               >
-                MOE DSA Portal
+                {UI_TRANSLATIONS[locale].dsaDataNotePortal}
               </a>{" "}
-              for final application details.
+              {UI_TRANSLATIONS[locale].dsaDataNoteSuffix}
             </p>
           </div>
 
@@ -425,13 +430,17 @@ export function DsaSearchCenter() {
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex-1 rounded-2xl bg-white/70 px-4 py-3 ring-1 ring-slate-200/70">
-      <p className="font-display text-2xl font-bold text-intellectual sm:text-3xl">{value}</p>
-      <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-intellectual-muted">
+    <div className="min-w-[5.5rem] flex-1 px-1 py-1">
+      <p className="font-display text-xl font-bold leading-none text-intellectual sm:text-2xl">{value}</p>
+      <p className="mt-1 text-[9px] font-semibold uppercase tracking-wider text-intellectual-muted sm:text-[10px]">
         {label}
       </p>
     </div>
   );
+}
+
+function VerticalDivider({ className = "" }: { className?: string }) {
+  return <span className={`h-8 w-px shrink-0 bg-slate-200 ${className}`} aria-hidden />;
 }
 
 function ModeButton({
@@ -541,8 +550,8 @@ function SchoolCard({
     <article className="rounded-2xl border border-intellectual/10 bg-white p-4 shadow-soft transition hover:-translate-y-0.5 hover:border-champagne/40 sm:p-5">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <h2 className="font-display text-lg font-semibold leading-tight text-intellectual">
-            {school.schoolName}
+          <h2 className="break-words font-display text-lg font-semibold leading-tight text-intellectual">
+            <SchoolDisplayName locale={locale} nameEn={school.schoolName} />
           </h2>
           <p className="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-champagne-dark">
             {school.psleLabel}
@@ -774,7 +783,9 @@ function TalentGroupAccordion({
             key={`${group.area}-${school.id}`}
             className="rounded-xl border border-intellectual/8 bg-slate-50/80 px-3 py-2 transition-all duration-300 hover:border-champagne/30 hover:bg-white hover:shadow-sm"
           >
-            <p className="text-sm font-semibold text-intellectual">{school.schoolName}</p>
+            <p className="break-words text-sm font-semibold text-intellectual">
+              <SchoolDisplayName locale={locale} nameEn={school.schoolName} />
+            </p>
             <p className="mt-0.5 text-xs text-intellectual-muted">{school.psleLabel}</p>
           </div>
         ))}

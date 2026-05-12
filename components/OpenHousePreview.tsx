@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight, CalendarDays } from "lucide-react";
 import { useMemo } from "react";
+import { SchoolDisplayName } from "@/components/SchoolDisplayName";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Locale } from "@/lib/i18n";
 import {
@@ -26,11 +27,6 @@ function formatCompactDate(ev: SchoolOpenHouse, locale: Locale): string {
     month: "short",
     day: "numeric",
   }).format(instant);
-}
-
-function pickName(ev: SchoolOpenHouse, locale: Locale): string {
-  if (locale === "zh") return ev.nameZh;
-  return ev.nameEn;
 }
 
 function pickTime(ev: SchoolOpenHouse, locale: Locale): string {
@@ -97,7 +93,13 @@ export function OpenHousePreview() {
                       >
                         ·
                       </span>
-                      <span>{pickName(ev, locale)}</span>
+                      <span className="break-words">
+                        <SchoolDisplayName
+                          locale={locale}
+                          nameEn={ev.nameEn}
+                          nameZh={ev.nameZh}
+                        />
+                      </span>
                     </p>
                     <p className="mt-0.5 text-xs text-intellectual-muted">
                       {pickTime(ev, locale)}

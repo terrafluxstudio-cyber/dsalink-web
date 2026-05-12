@@ -1,6 +1,7 @@
 "use client";
 
 import { ScoreBoard } from "@/components/ScoreBoard";
+import { ScoresPageFaq } from "@/components/ScoresPageFaq";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function ScoresPageBody() {
@@ -21,6 +22,7 @@ export function ScoresPageBody() {
       <div className="mt-8 sm:mt-10">
         <ScoreBoard omitHeading />
       </div>
+      <ScoresPageFaq />
     </div>
   );
 }

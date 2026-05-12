@@ -9,6 +9,7 @@ import {
   type KeyboardEvent,
   type ReactNode,
 } from "react";
+import { SchoolDisplayName } from "@/components/SchoolDisplayName";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Locale } from "@/lib/i18n";
 import type {
@@ -64,9 +65,6 @@ const CopSchoolRow = memo(function CopSchoolRow({
 }: RowProps) {
   const { t } = useLanguage();
   const disp = primaryDisplay(row);
-  const primaryName = locale === "zh" ? row.nameCn : row.nameEn;
-  const secondaryName = locale === "zh" ? row.nameEn : null;
-
   const onKey = (e: KeyboardEvent) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
@@ -89,14 +87,13 @@ const CopSchoolRow = memo(function CopSchoolRow({
           className="flex w-full cursor-pointer flex-col gap-2 p-3 text-left transition hover:bg-champagne-subtle/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne sm:flex-row sm:items-center sm:gap-3 sm:p-3.5"
         >
           <div className="min-w-0 flex-1">
-            <p className="font-medium leading-snug text-intellectual">
-              {primaryName}
+            <p className="break-words font-medium leading-snug text-intellectual">
+              <SchoolDisplayName
+                locale={locale}
+                nameEn={row.nameEn}
+                nameZh={row.nameCn}
+              />
             </p>
-            {secondaryName ? (
-              <p className="mt-0.5 truncate text-xs text-intellectual-muted">
-                {secondaryName}
-              </p>
-            ) : null}
             <div className="mt-1.5 flex flex-wrap gap-1.5">
                 <span className="rounded-md bg-intellectual/5 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-intellectual-muted">
                   {row.region}

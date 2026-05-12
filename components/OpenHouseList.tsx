@@ -9,6 +9,7 @@ import {
   Monitor,
 } from "lucide-react";
 import { useMemo } from "react";
+import { SchoolDisplayName } from "@/components/SchoolDisplayName";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Locale } from "@/lib/i18n";
 import {
@@ -114,8 +115,12 @@ export function OpenHouseList({
                         </span>
                         <div className="min-w-0 flex-1">
                           <div className="flex flex-wrap items-center gap-2 gap-y-1">
-                            <CardHeadingTag className="font-display text-base font-semibold leading-snug text-intellectual sm:text-lg">
-                              {ev.nameEn}
+                            <CardHeadingTag className="break-words font-display text-base font-semibold leading-snug text-intellectual sm:text-lg">
+                              <SchoolDisplayName
+                                locale={locale}
+                                nameEn={ev.nameEn}
+                                nameZh={ev.nameZh}
+                              />
                             </CardHeadingTag>
                             <span
                               className={
@@ -132,9 +137,6 @@ export function OpenHouseList({
                                 : t.openHouseOnsite}
                             </span>
                           </div>
-                          <p className="mt-1 text-sm font-medium text-intellectual-muted">
-                            {ev.nameZh}
-                          </p>
                         </div>
                       </div>
 

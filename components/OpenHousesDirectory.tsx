@@ -2,6 +2,7 @@
 
 import { Calendar, Clock, ExternalLink, MapPin, Search } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import { SchoolDisplayName } from "@/components/SchoolDisplayName";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Copy, Locale } from "@/lib/i18n";
 import {
@@ -322,8 +323,12 @@ export function OpenHousesDirectory() {
                       <Calendar className="h-3 w-3" aria-hidden />
                       {dateBadge}
                     </span>
-                    <h2 className="font-display text-sm font-semibold leading-snug text-intellectual sm:text-base">
-                      {ev.nameEn}
+                    <h2 className="break-words font-display text-sm font-semibold leading-snug text-intellectual sm:text-base">
+                      <SchoolDisplayName
+                        locale={locale}
+                        nameEn={ev.nameEn}
+                        nameZh={ev.nameZh}
+                      />
                     </h2>
                     {ev.isPopular ? (
                       <span className="rounded-full border border-champagne/55 bg-champagne-subtle/80 px-1.5 py-px text-[9px] font-semibold text-champagne-dark sm:text-[10px]">
@@ -331,9 +336,6 @@ export function OpenHousesDirectory() {
                       </span>
                     ) : null}
                   </div>
-                  <p className="line-clamp-1 text-[11px] font-medium text-intellectual-muted sm:text-sm">
-                    {ev.nameZh}
-                  </p>
                   <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[10px] text-intellectual-muted sm:text-xs">
                     <span className="rounded bg-white/80 px-1 py-px ring-1 ring-intellectual/10">
                       {regionLabel(ev.region, t)}
