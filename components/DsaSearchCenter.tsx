@@ -2,7 +2,7 @@
 
 import { ChevronDown, HelpCircle, Info, Search, Sparkles } from "lucide-react";
 import type { ReactNode } from "react";
-import { useDeferredValue, useMemo, useRef, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import {
   getDsaCategoryLabel,
   getDsaCategorySearchTerms,
@@ -64,6 +64,7 @@ type TalentCategoryGroup = {
 const CATEGORIES: Category[] = ["Sports", "Arts", "STEM", "Leadership", "Languages"];
 const SCHOOLS = dsaMasterRaw as DsaSchool[];
 const DEFAULT_VISIBLE_TALENT_SCHOOLS = 8;
+const DEFAULT_VISIBLE_SCHOOLS = 20;
 
 const CATEGORY_STYLES: Record<Category, string> = {
   Sports: "border-emerald-200 bg-emerald-50 text-emerald-800 hover:border-emerald-300",
@@ -135,6 +136,33 @@ function getCopLabel(school: DsaSchool): string {
   return "PSLE estimate: check school profile";
 }
 
+function minScoreFromRange(value: string | null | undefined): number | null {
+  if (!value) return null;
+  const matches = value.match(/\d+/g);
+  if (!matches?.length) return null;
+  return Math.min(...matches.map(Number));
+}
+
+function schoolSortScore(school: DsaSchool): number {
+  const candidates = [
+    minScoreFromRange(school.psleCop.pg3),
+    minScoreFromRange(school.psleCop.pg2),
+    minScoreFromRange(school.psleCop.pg1),
+    minScoreFromRange(school.psleCop.affiliated.pg3),
+    minScoreFromRange(school.psleCop.affiliated.pg2),
+    minScoreFromRange(school.psleCop.affiliated.pg1),
+  ].filter((score): score is number => typeof score === "number");
+  return candidates.length > 0 ? Math.min(...candidates) : Number.POSITIVE_INFINITY;
+}
+
+function sortSchoolsByCop(schools: IndexedSchool[]): IndexedSchool[] {
+  return [...schools].sort((a, b) => {
+    const scoreDiff = schoolSortScore(a) - schoolSortScore(b);
+    if (scoreDiff !== 0) return scoreDiff;
+    return a.schoolName.localeCompare(b.schoolName, "en");
+  });
+}
+
 function buildTalentGroups(schools: IndexedSchool[]): TalentGroup[] {
   const map = new Map<string, TalentGroup>();
   for (const school of schools) {
@@ -193,6 +221,7 @@ export function DsaSearchCenter() {
   const [selectedTalent, setSelectedTalent] = useState<string | null>(null);
   const [expandedCategories, setExpandedCategories] = useState<Set<Category>>(() => new Set());
   const [expandedSchoolLists, setExpandedSchoolLists] = useState<Set<string>>(() => new Set());
+  const [showAllSchools, setShowAllSchools] = useState(false);
   const deferredQuery = useDeferredValue(query);
   const resultsRef = useRef<HTMLDivElement | null>(null);
 
@@ -217,11 +246,12 @@ export function DsaSearchCenter() {
   const counts = useMemo(() => categoryCounts(SCHOOLS), []);
 
   const filteredSchools = useMemo(() => {
-    return indexedSchools.filter((school) => {
+    const matches = indexedSchools.filter((school) => {
       const categoryMatch =
         category === "All" || school.dsaTalents.some((talent) => talent.category === category);
       return categoryMatch && matchesQuery(school.searchText, deferredQuery);
     });
+    return sortSchoolsByCop(matches);
   }, [category, deferredQuery, indexedSchools]);
 
   const selectedTalentGroup = useMemo(() => {
@@ -255,6 +285,10 @@ export function DsaSearchCenter() {
     setSelectedTalent(null);
     setMode("talent");
   }
+
+  useEffect(() => {
+    setShowAllSchools(false);
+  }, [category, deferredQuery, mode]);
 
   function toggleCategory(categoryToToggle: Category) {
     setExpandedCategories((current) => {
@@ -368,6 +402,8 @@ export function DsaSearchCenter() {
             total={indexedSchools.length}
             onTalentClick={openTalent}
             locale={locale}
+            showAll={showAllSchools}
+            onShowAll={() => setShowAllSchools(true)}
           />
         ) : (
           <TalentResults
@@ -449,27 +485,44 @@ function SchoolResults({
   total,
   onTalentClick,
   locale,
+  showAll,
+  onShowAll,
 }: {
   schools: IndexedSchool[];
   total: number;
   onTalentClick: (talent: DsaTalent) => void;
   locale: Parameters<typeof getDsaTalentLabel>[1];
+  showAll: boolean;
+  onShowAll: () => void;
 }) {
+  const visibleSchools = showAll ? schools : schools.slice(0, DEFAULT_VISIBLE_SCHOOLS);
+  const remainingCount = Math.max(schools.length - visibleSchools.length, 0);
+
   return (
     <div className="mt-6">
       <div className="mb-3 flex items-center justify-between gap-3">
         <p className="text-sm font-semibold text-intellectual">
-          Showing {schools.length} of {total} schools
+          Showing {visibleSchools.length} of {schools.length} schools
+          {schools.length !== total ? ` (${total} total)` : ""}
         </p>
         <p className="hidden text-xs text-intellectual-muted sm:block">
           Tap a talent tag to compare schools by that talent.
         </p>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
-        {schools.map((school) => (
+        {visibleSchools.map((school) => (
           <SchoolCard key={school.id} school={school} onTalentClick={onTalentClick} locale={locale} />
         ))}
       </div>
+      {remainingCount > 0 ? (
+        <button
+          type="button"
+          onClick={onShowAll}
+          className="mt-5 w-full rounded-2xl border border-intellectual/10 bg-white px-4 py-3 text-sm font-semibold text-intellectual-muted transition hover:border-champagne/50 hover:bg-champagne-subtle/30 hover:text-intellectual"
+        >
+          Show all {remainingCount} schools
+        </button>
+      ) : null}
       {schools.length === 0 ? <EmptyState /> : null}
     </div>
   );
