@@ -150,6 +150,33 @@ export type Copy = {
   scoreboardDetailMatrix: string;
   scoreboardGenderBoys: string;
   scoreboardGenderGirls: string;
+  seoSchemeOverline: string;
+  seoSchemeH2: string;
+  seoSchemePara: string;
+  seoRulesOverline: string;
+  seoRulesH2: string;
+  seoRulesIntro: string;
+  seoRule1Title: string;
+  seoRule1Body: string;
+  seoRule2Title: string;
+  seoRule2Body: string;
+  seoRule3Title: string;
+  seoRule3Body: string;
+  seoAdvOverline: string;
+  seoAdvH2: string;
+  seoAdvLead: string;
+  seoStat1Num: string;
+  seoStat1Label: string;
+  seoStat1Sub: string;
+  seoStat2Num: string;
+  seoStat2Label: string;
+  seoStat2Sub: string;
+  seoStat3Num: string;
+  seoStat3Label: string;
+  seoStat3Sub: string;
+  seoAboutOverline: string;
+  seoAboutH2: string;
+  seoAboutPara: string;
 } & DsaGuideStrings;
 
 export const copy: Record<Locale, Copy> = {
@@ -277,6 +304,33 @@ export const copy: Record<Locale, Copy> = {
     scoreboardDetailMatrix: "2023–2025 streams",
     scoreboardGenderBoys: "Boys",
     scoreboardGenderGirls: "Girls",
+    seoSchemeOverline: "Singapore Education Scheme",
+    seoSchemeH2: "What is the Singapore DSA-Sec Scheme?",
+    seoSchemePara: "The Direct School Admission (DSA-Sec) scheme allows Primary 6 students to secure a place in their preferred secondary schools based on talents and achievements beyond the PSLE results. This pathway recognizes excellence in diverse areas such as Sports, Performing Arts, STEM, Leadership, and Languages. The 2026 DSA application window typically opens in May. Securing a DSA offer provides students with peace of mind and a guaranteed spot before the PSLE national examinations in November.",
+    seoRulesOverline: "MOE Binding Regulations",
+    seoRulesH2: "Essential DSA Commitment Rules",
+    seoRulesIntro: "Before proceeding with your application, please be aware of these binding MOE regulations:",
+    seoRule1Title: "The Commitment Rule",
+    seoRule1Body: "Once a student accepts a DSA offer and the offer is confirmed, they are legally committed to that school. They will not be allowed to participate in the S1 Posting Exercise to choose other schools.",
+    seoRule2Title: "Application Limits",
+    seoRule2Body: "Students may apply to multiple schools. However, once an offer is accepted during the official Acceptance Stage, all other pending applications will be automatically voided.",
+    seoRule3Title: "Assessment Requirements",
+    seoRule3Body: "Each school maintains unique selection criteria. This often involves trials, auditions, portfolios, or interviews. We recommend checking individual school pages on DSALink for specific 2026 requirements.",
+    seoAdvOverline: "Platform Coverage",
+    seoAdvH2: "The DSALink Advantage",
+    seoAdvLead: "DSALink is the most comprehensive data aggregator for the Singapore secondary school landscape, designed to help families navigate the complex admission process with precision.",
+    seoStat1Num: "147",
+    seoStat1Label: "Schools Indexed",
+    seoStat1Sub: "Real-time updates",
+    seoStat2Num: "1,315",
+    seoStat2Label: "Talent Areas",
+    seoStat2Sub: "Categorized for filtering",
+    seoStat3Num: "3 Years",
+    seoStat3Label: "PSLE COP Data",
+    seoStat3Sub: "2023–2025 trends",
+    seoAboutOverline: "Data Source & Attribution",
+    seoAboutH2: "About DSALink",
+    seoAboutPara: "DSALink is an independent data platform developed and maintained by Terraflux Studio. All data is aggregated from the Ministry of Education (MOE) SchoolFinder and individual official school portals. This platform is not affiliated with the Ministry of Education, Singapore.",
     ...dsaGuideEn,
   },
   zh: {
@@ -398,6 +452,33 @@ export const copy: Record<Locale, Copy> = {
     scoreboardDetailMatrix: "2023–2025 细分",
     scoreboardGenderBoys: "男校",
     scoreboardGenderGirls: "女校",
+    seoSchemeOverline: "新加坡教育计划",
+    seoSchemeH2: "什么是新加坡直属中学收生计划（DSA-Sec）？",
+    seoSchemePara: "直属中学收生计划（DSA-Sec）允许小六学生凭借 PSLE 成绩以外的特殊才能，提前锁定心仪中学名额。入选领域涵盖体育、表演艺术、STEM、领袖才能及语言等多个方向。2026 年申请窗口通常于 5 月开放。成功获得 DSA 录取通知，意味着孩子在 11 月全国 PSLE 会考前已拥有有保障的学位，让家庭备考期间更从容。",
+    seoRulesOverline: "MOE 约束性规定",
+    seoRulesH2: "DSA 申请重要规则",
+    seoRulesIntro: "在提交申请前，请务必了解以下具有约束力的教育部规定：",
+    seoRule1Title: "承诺规则",
+    seoRule1Body: "一旦学生接受并确认 DSA 录取通知，即正式承诺入读该校，不得再参与 S1 志愿填报（S1 Posting Exercise）自行选择其他学校。",
+    seoRule2Title: "申请上限",
+    seoRule2Body: "学生可同时向多所学校提交 DSA 申请。但一旦在正式录取阶段接受某校 offer，其余所有待处理申请将自动作废。",
+    seoRule3Title: "才能评估各校不同",
+    seoRule3Body: "各校评估标准各不相同，通常包括试训、试镜、作品集或面试环节。建议参阅 DSALink 各校专页，了解 2026 年具体要求。",
+    seoAdvOverline: "平台数据覆盖",
+    seoAdvH2: "DSALink 的优势",
+    seoAdvLead: "DSALink 是新加坡中学信息最全面的数据聚合平台，专为帮助家庭精准应对复杂的升学流程而设计。",
+    seoStat1Num: "147",
+    seoStat1Label: "已收录学校",
+    seoStat1Sub: "实时更新",
+    seoStat2Num: "1,315",
+    seoStat2Label: "才能领域",
+    seoStat2Sub: "分类筛选",
+    seoStat3Num: "3 年",
+    seoStat3Label: "PSLE COP 数据",
+    seoStat3Sub: "2023–2025 趋势",
+    seoAboutOverline: "数据来源与声明",
+    seoAboutH2: "关于 DSALink",
+    seoAboutPara: "DSALink 由 Terraflux Studio 独立开发维护，数据来源于新加坡教育部官方 SchoolFinder 平台及各校官网。本平台与新加坡教育部（MOE）无任何隶属关系。",
     ...dsaGuideZh,
   },
   ms: {
@@ -526,6 +607,33 @@ export const copy: Record<Locale, Copy> = {
     scoreboardDetailMatrix: "Aliran 2023–2025",
     scoreboardGenderBoys: "Lelaki",
     scoreboardGenderGirls: "Perempuan",
+    seoSchemeOverline: "Skim Pendidikan Singapura",
+    seoSchemeH2: "Apakah Skim DSA-Sec Singapura?",
+    seoSchemePara: "Skim Penempatan Langsung ke Sekolah Menengah (DSA-Sec) membolehkan pelajar Darjah 6 mendapatkan tempat di sekolah menengah pilihan mereka berdasarkan bakat dan pencapaian di luar keputusan PSLE. Laluan ini mengiktiraf kecemerlangan dalam pelbagai bidang seperti Sukan, Seni Persembahan, STEM, Kepimpinan, dan Bahasa. Tingkap permohonan DSA 2026 biasanya dibuka pada bulan Mei. Mendapatkan tawaran DSA memberi ketenangan fikiran dan tempat terjamin sebelum peperiksaan kebangsaan PSLE pada bulan November.",
+    seoRulesOverline: "Peraturan Mengikat MOE",
+    seoRulesH2: "Peraturan Komitmen DSA Penting",
+    seoRulesIntro: "Sebelum meneruskan permohonan anda, sila ambil maklum peraturan mengikat MOE ini:",
+    seoRule1Title: "Peraturan Komitmen",
+    seoRule1Body: "Setelah pelajar menerima tawaran DSA dan tawaran disahkan, mereka terikat secara undang-undang dengan sekolah tersebut. Mereka tidak dibenarkan menyertai Latihan Penempatan S1 untuk memilih sekolah lain.",
+    seoRule2Title: "Had Permohonan",
+    seoRule2Body: "Pelajar boleh memohon ke beberapa sekolah. Walau bagaimanapun, setelah tawaran diterima semasa Peringkat Penerimaan rasmi, semua permohonan lain yang belum selesai akan dibatalkan secara automatik.",
+    seoRule3Title: "Keperluan Penilaian",
+    seoRule3Body: "Setiap sekolah mempunyai kriteria pemilihan yang unik. Ini sering melibatkan ujian, audisi, portfolio, atau temuduga. Kami mengesyorkan memeriksa halaman sekolah individu di DSALink untuk keperluan 2026 yang spesifik.",
+    seoAdvOverline: "Liputan Platform",
+    seoAdvH2: "Kelebihan DSALink",
+    seoAdvLead: "DSALink ialah pengagregat data paling komprehensif untuk landskap sekolah menengah Singapura, direka untuk membantu keluarga mengemudi proses kemasukan yang kompleks dengan tepat.",
+    seoStat1Num: "147",
+    seoStat1Label: "Sekolah Diindeks",
+    seoStat1Sub: "Kemas kini masa nyata",
+    seoStat2Num: "1,315",
+    seoStat2Label: "Bidang Bakat",
+    seoStat2Sub: "Dikategorikan untuk penapisan",
+    seoStat3Num: "3 Tahun",
+    seoStat3Label: "Data PSLE COP",
+    seoStat3Sub: "Trend 2023–2025",
+    seoAboutOverline: "Sumber Data & Pengiktirafan",
+    seoAboutH2: "Tentang DSALink",
+    seoAboutPara: "DSALink ialah platform data bebas yang dibangunkan dan diselenggara oleh Terraflux Studio. Semua data diagregasi daripada SchoolFinder Kementerian Pendidikan (MOE) dan portal rasmi sekolah individu. Platform ini tidak berafiliasi dengan Kementerian Pendidikan Singapura.",
     ...dsaGuideMs,
   },
   ta: {
@@ -657,6 +765,33 @@ export const copy: Record<Locale, Copy> = {
     scoreboardDetailMatrix: "2023–2025 ஓட்டங்கள்",
     scoreboardGenderBoys: "ஆண்கள்",
     scoreboardGenderGirls: "பெண்கள்",
+    seoSchemeOverline: "சிங்கப்பூர் கல்வித் திட்டம்",
+    seoSchemeH2: "சிங்கப்பூர் DSA-Sec திட்டம் என்றால் என்ன?",
+    seoSchemePara: "நேரடி பள்ளி சேர்க்கை (DSA-Sec) திட்டம், ஆறாம் வகுப்பு மாணவர்களுக்கு PSLE முடிவுகளுக்கு அப்பால் திறமை மற்றும் சாதனைகளின் அடிப்படையில் விரும்பிய இடைநிலைப் பள்ளிகளில் இடம் பெற அனுமதிக்கிறது. இந்த வழிமுறை விளையாட்டு, கலை, STEM, தலைமை மற்றும் மொழிகள் போன்ற பல்வேறு துறைகளில் சிறப்பை அங்கீகரிக்கிறது. 2026 DSA விண்ணப்ப காலம் பொதுவாக மே மாதத்தில் திறக்கப்படும். DSA சலுகை பெறுவது நவம்பர் மாதம் PSLE தேசிய தேர்வுகளுக்கு முன் உத்தரவாதமான இடத்தை வழங்குகிறது.",
+    seoRulesOverline: "MOE கட்டாய விதிமுறைகள்",
+    seoRulesH2: "முக்கிய DSA அர்ப்பணிப்பு விதிகள்",
+    seoRulesIntro: "விண்ணப்பிக்கும் முன் இந்த கட்டாய MOE விதிமுறைகளை அறிந்துகொள்ளுங்கள்:",
+    seoRule1Title: "அர்ப்பணிப்பு விதி",
+    seoRule1Body: "மாணவர் DSA சலுகையை ஏற்று உறுதிப்படுத்தப்பட்டால், அவர்கள் சட்டப்பூர்வமாக அந்தப் பள்ளியில் படிக்க கடமைப்படுகிறார்கள். மற்ற பள்ளிகளைத் தேர்ந்தெடுக்க S1 நியமன நடவடிக்கையில் பங்கேற்க அனுமதிக்கப்படமாட்டார்கள்.",
+    seoRule2Title: "விண்ணப்ப வரம்புகள்",
+    seoRule2Body: "மாணவர்கள் பல பள்ளிகளுக்கு விண்ணப்பிக்கலாம். ஆனால் அதிகாரப்பூர்வ ஏற்பு நிலையில் ஒரு சலுகை ஏற்றுக்கொள்ளப்பட்டால், மற்ற அனைத்து நிலுவை விண்ணப்பங்களும் தானாக இரத்து செய்யப்படும்.",
+    seoRule3Title: "மதிப்பீட்டு தேவைகள்",
+    seoRule3Body: "ஒவ்வொரு பள்ளியும் தனித்துவமான தேர்வு அளவுகோல்களை வைத்திருக்கின்றன. இது பெரும்பாலும் சோதனைகள், தேர்வுகள், இலக்கு அட்டவணைகள் அல்லது நேர்காணல்களை உள்ளடக்கியது. 2026 தேவைகளுக்கு DSALink இல் தனிப்பட்ட பள்ளி பக்கங்களைப் பார்க்க பரிந்துரைக்கிறோம்.",
+    seoAdvOverline: "தளத்தின் அளவீடு",
+    seoAdvH2: "DSALink இன் சிறப்பம்சங்கள்",
+    seoAdvLead: "DSALink சிங்கப்பூர் இடைநிலைப் பள்ளி நிலப்பரப்பிற்கான மிகவும் விரிவான தரவு தொகுப்பாளராகும், இது குடும்பங்கள் சிக்கலான சேர்க்கை செயல்முறையை துல்லியமாக வழிநடத்த உதவுகிறது.",
+    seoStat1Num: "147",
+    seoStat1Label: "பள்ளிகள் குறியீட்டிடப்பட்டுள்ளன",
+    seoStat1Sub: "நிகழ்நேர புதுப்பிப்புகள்",
+    seoStat2Num: "1,315",
+    seoStat2Label: "திறமைத் துறைகள்",
+    seoStat2Sub: "வடிகட்டுவதற்கு வகைப்படுத்தப்பட்டுள்ளன",
+    seoStat3Num: "3 ஆண்டுகள்",
+    seoStat3Label: "PSLE COP தரவு",
+    seoStat3Sub: "2023–2025 போக்குகள்",
+    seoAboutOverline: "தரவு மூலம் & பங்களிப்பு",
+    seoAboutH2: "DSALink பற்றி",
+    seoAboutPara: "DSALink என்பது Terraflux Studio ஆல் உருவாக்கப்பட்டு பராமரிக்கப்படும் சுதந்திரமான தரவு தளமாகும். அனைத்து தரவும் கல்வி அமைச்சகத்தின் (MOE) SchoolFinder மற்றும் தனிப்பட்ட பள்ளி இணையதளங்களிலிருந்து தொகுக்கப்படுகின்றன. இந்த தளம் சிங்கப்பூர் கல்வி அமைச்சகத்துடன் தொடர்புடையது அல்ல.",
     ...dsaGuideTa,
   },
 };
