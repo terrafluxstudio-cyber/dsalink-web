@@ -1,0 +1,63 @@
+# DSALink UI & i18n Rules
+
+## 1. Hero 区域搜索框位置（Search Box Placement in Hero）
+
+在所有 Hero 区域内，搜索框（search input）必须出现在统计数据（statistics bar / CountdownBoard）**上方**。
+
+**规则：**
+- `HeroSection.tsx`：`{children}` slot（用于传入搜索框）必须渲染在 `<CountdownBoard />` 之前，不能在其之后。
+- `DsaSearchCenter.tsx`：search `<input>` 区块（label + input + hint）必须在统计栏 `<div>` (ui_stat_schools / ui_stat_talents / ui_stat_categories) 之前，顺序不可颠倒。
+- 如果新增任何包含搜索框与统计数据的 Hero/Header 组件，同样遵守"搜索先于统计"的布局顺序。
+
+**当前参考位置：**
+- `components/HeroSection.tsx` lines 27–30：`CountdownBoard` 在 `{children}` 之前 — 如果 children 含搜索框，需将 children 移至 CountdownBoard 前。
+- `components/DsaSearchCenter.tsx` lines 341–366：search input → stats bar（已符合规则，维持此顺序）。
+
+---
+
+## 2. 搜索框阴影（Search Input Shadow）
+
+所有搜索框（`type="search"` 或承担搜索功能的 `<input>`）必须带有明显阴影，以提升视觉层次感。
+
+**规则：**
+- 搜索 input 必须包含 `shadow-xl`（或更强的阴影 token），不可使用 `shadow-sm` / `shadow` 等弱阴影。
+- 聚焦态（focus）需保留或加强阴影，不能移除。
+- 搜索框外层容器（如 `<label>` 或 wrapper `<div>`）如果加了 `shadow`，内层 input 仍需自带 `shadow-xl`。
+
+**当前参考：**
+- `components/DsaSearchCenter.tsx` line 353：`className="... shadow-xl ..."` — 维持此标准。
+
+---
+
+## 3. 四语翻译一致性（Four-Language Translation Parity）
+
+项目支持四种语言：**英文 (en)**、**马来文 (ms)**、**泰米尔文 (ta)**、**中文 (zh)**，对应 `locales/` 目录下的四个 JSON 文件。
+
+**规则：**
+- 任何新增或修改的 i18n key，必须**同时**在 `en.json`、`ms.json`、`ta.json`、`zh.json` 中添加或更新，不可只改其中一或两个文件。
+- key 的命名使用 snake_case，如 `ui_search_placeholder`、`heroBadge`。
+- 禁止使用硬编码英文字符串替代翻译 key（`t("...")`调用），除非该字符串是专有名词或数字。
+- 每次修改翻译时，检查四个文件的 key 数量是否保持一致（目前各文件均为 55 行 / 同等 key 数量）。
+- `dsa_translations.ts`（`constants/` 目录）中维护的 DSA 类别与 Talent 标签翻译，同样需要保持四语覆盖。
+
+**验证方式：**
+```bash
+# 快速检查四个文件 key 数量是否一致
+wc -l locales/*.json
+# 检查某个 key 是否在全部四个文件中存在
+grep -l "your_new_key" locales/*.json | wc -l  # 应为 4
+```
+
+---
+
+## 快速参考文件路径
+
+| 文件 | 用途 |
+|------|------|
+| `components/HeroSection.tsx` | 首页 Hero 布局（CountdownBoard + children） |
+| `components/DsaSearchCenter.tsx` | DSA 搜索页 Hero + 搜索框 + 统计栏 |
+| `locales/en.json` | 英文翻译 |
+| `locales/ms.json` | 马来文翻译 |
+| `locales/ta.json` | 泰米尔文翻译 |
+| `locales/zh.json` | 中文翻译 |
+| `constants/dsa_translations.ts` | DSA 类别/Talent 多语言标签 |
