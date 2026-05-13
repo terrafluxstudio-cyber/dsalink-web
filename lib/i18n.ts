@@ -160,7 +160,7 @@ export const copy: Record<Locale, Copy> = {
     navBrand: "DSA Link",
     navTagline: "Singapore · DSA 2026",
     heroBadge: "Independent resource for families",
-    heroTitle: "Direct School Admission, simplified.",
+    heroTitle: "Secondary Open Houses · DSA & Admissions PSLE COP Historical Dashboard",
     heroSubtitle:
       "One calm starting point for official MOE information, key dates, and secondary DSA pages — built for clarity and speed on mobile.",
     countdownLabel: "Time until DSA 2026 application closes",
