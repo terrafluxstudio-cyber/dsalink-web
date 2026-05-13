@@ -82,5 +82,19 @@
 
   "dsa_about_overline": "数据来源与声明",
   "dsa_about_title": "关于 DSALink",
-  "dsa_about_body": "DSALink 由 Terraflux Studio 独立开发维护，数据来源于新加坡教育部官方 SchoolFinder 平台及各校官网。本平台与新加坡教育部（MOE）无任何隶属关系。"
+  "dsa_about_body": "DSALink 由 Terraflux Studio 独立开发维护，数据来源于新加坡教育部官方 SchoolFinder 平台及各校官网。本平台与新加坡教育部（MOE）无任何隶属关系。",
+
+  "fieldGuide_kicker": "2026 开放日 · 专家指南",
+  "fieldGuide_title": "2026 中学开放日：专家实战手册",
+  "fieldGuide_subtitle": "三个内行策略，让每次参观学校都超越宣传册。",
+  "fieldGuide_insider_label": "内行建议",
+  "fieldGuide_card1_title": "校园文化审查",
+  "fieldGuide_card1_body": "不要只看建筑和设施。留意导览学生——他们是真心为自己的学校感到骄傲，还是在背稿？去食堂走一走，观察学生之间的互动方式。真实的校园文化总是在这些不经意的小细节中流露出来。",
+  "fieldGuide_card1_tip": "提前 10 分钟到达，观察学生在正式活动开始前进入校园的状态。那份自信与同学之间的情谊，比任何导览都更能说明问题。",
+  "fieldGuide_card2_title": "DSA 展台提问策略",
+  "fieldGuide_card2_body": "大多数家长只问泛泛的问题。不妨深入挖掘，了解学校真正的招生重点——他们在这一届 DSA 周期中究竟在寻找什么样的学生。",
+  "fieldGuide_card2_tip": "尝试这样问：'应用学习课程（ALP）是面向所有学生，还是只针对特定班级？' 以及 '学校今年 DSA 具体在招募哪些角色或位置？'",
+  "fieldGuide_card3_title": "承诺的现实",
+  "fieldGuide_card3_body": "DSA 录取一旦确认，具有法律约束力——孩子将无法参与 S1 志愿填报。申请前，请与孩子坦诚沟通：他们对这个 CCA 的热情，是否真的与学校的项目要求相匹配？四到六年的校园生活，远比学校的名气更重要。",
+  "fieldGuide_card3_tip": "问孩子这个问题：'这是你的选择，还是我的？' DSA 效果最好的情况，是学生真正主导了这个决定。一旦承诺，反悔的代价极高。"
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { OpenHousePreview, ScoresEntryCard, ResourceCards } from "@/components/HomeDynamic";
 import { HeroSection } from "@/components/HeroSection";
+import { OpenHouseFieldGuide } from "@/components/OpenHouseFieldGuide";
 import { SeoTextBlock } from "@/components/SeoTextBlock";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -58,6 +59,7 @@ export default function HomePage() {
           <ScoresEntryCard />
         </HeroSection>
         <ResourceCards />
+        <OpenHouseFieldGuide />
         <SeoTextBlock />
       </main>
       <SiteFooter />

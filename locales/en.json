@@ -82,5 +82,19 @@
 
   "dsa_about_overline": "Data Source & Attribution",
   "dsa_about_title": "About DSALink",
-  "dsa_about_body": "DSALink is an independent data platform developed and maintained by Terraflux Studio. All data is aggregated from the Ministry of Education (MOE) SchoolFinder and individual official school portals. This platform is not affiliated with the Ministry of Education, Singapore."
+  "dsa_about_body": "DSALink is an independent data platform developed and maintained by Terraflux Studio. All data is aggregated from the Ministry of Education (MOE) SchoolFinder and individual official school portals. This platform is not affiliated with the Ministry of Education, Singapore.",
+
+  "fieldGuide_kicker": "Open House 2026 · Expert Guide",
+  "fieldGuide_title": "2026 Secondary School Open House: The Expert Field Guide",
+  "fieldGuide_subtitle": "Three insider strategies to get more from every school visit — beyond the brochures.",
+  "fieldGuide_insider_label": "Insider",
+  "fieldGuide_card1_title": "The Culture Audit",
+  "fieldGuide_card1_body": "Don't just assess the buildings and facilities. Observe the student guides during the tour — are they genuinely proud of their school, or reciting a script? Walk through the canteen and watch how students interact. Authentic school culture reveals itself in small, unscripted moments.",
+  "fieldGuide_card1_tip": "Arrive 10 minutes early and watch students coming in before the programme starts. Confidence and genuine camaraderie at that moment is a stronger cultural signal than any guided tour.",
+  "fieldGuide_card2_title": "DSA Booth Tactics",
+  "fieldGuide_card2_body": "Most families ask generic questions at the DSA booth. Go deeper to reveal the school's real selection priorities — what they are actively looking for in this specific cycle.",
+  "fieldGuide_card2_tip": "Ask: 'Is the Applied Learning Programme open to all students, or only selected classes?' and 'What specific roles or positions is the school recruiting for in this DSA cycle?'",
+  "fieldGuide_card3_title": "The Commitment Reality",
+  "fieldGuide_card3_body": "A DSA offer, once accepted, is legally binding — your child cannot take part in the S1 Posting Exercise. Before applying, have an honest conversation: does their passion for this CCA genuinely match the school's programme? Four to six years matters more than name prestige.",
+  "fieldGuide_card3_tip": "Ask your child: 'Is this your choice, or mine?' DSA works best when the student has genuine ownership of the decision. Regret is very difficult to reverse once committed."
 }
