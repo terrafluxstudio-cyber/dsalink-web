@@ -14,6 +14,7 @@ export function SiteHeader() {
     { href: "/dsa-guide", label: t.navDsaGuide },
     { href: "/dsa-finder", label: t.navDsaFinder },
     { href: "/open-houses", label: t.navOpenHouses },
+    { href: "/open-house-guide", label: t.navOpenHouseGuide },
     { href: "/psle-cop", label: t.navScores },
   ] as const;
 

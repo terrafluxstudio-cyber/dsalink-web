@@ -77,6 +77,8 @@ export type Copy = {
   navDsaGuide: string;
   navDsaFinder: string;
   navOpenHouses: string;
+  /** /open-house-guide — master guide for secondary school open houses */
+  navOpenHouseGuide: string;
   /** /scores — posting COP directory */
   navScores: string;
   navMenu: string;
@@ -200,6 +202,7 @@ export const copy: Record<Locale, Copy> = {
     navDsaGuide: "DSA Guide",
     navDsaFinder: "DSA Finder",
     navOpenHouses: "Open houses",
+    navOpenHouseGuide: "Open House Guide",
     navScores: "PSLE COP",
     navMenu: "Menu",
     navClose: "Close menu",
@@ -320,6 +323,7 @@ export const copy: Record<Locale, Copy> = {
     navDsaGuide: "DSA 指南",
     navDsaFinder: "DSA 搜索",
     navOpenHouses: "开放日",
+    navOpenHouseGuide: "开放日指南",
     navScores: "PSLE COP",
     navMenu: "菜单",
     navClose: "关闭菜单",
@@ -441,6 +445,7 @@ export const copy: Record<Locale, Copy> = {
     navDsaGuide: "Panduan DSA",
     navDsaFinder: "Pencari DSA",
     navOpenHouses: "Hari terbuka",
+    navOpenHouseGuide: "Panduan Hari Terbuka",
     navScores: "PSLE COP",
     navMenu: "Menu",
     navClose: "Tutup menu",
@@ -567,6 +572,7 @@ export const copy: Record<Locale, Copy> = {
     navDsaGuide: "DSA வழிகாட்டி",
     navDsaFinder: "DSA தேடல்",
     navOpenHouses: "திறந்த வீடுகள்",
+    navOpenHouseGuide: "திறந்த வீடு வழிகாட்டி",
     navScores: "PSLE COP",
     navMenu: "மெனு",
     navClose: "மெனுவை மூடு",
