@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ConsultationBanner } from "@/components/ConsultationBanner";
 import { OpenHousePreview, ScoresEntryCard, ResourceCards } from "@/components/HomeDynamic";
 import { HeroSection } from "@/components/HeroSection";
 import { SeoTextBlock } from "@/components/SeoTextBlock";
@@ -59,7 +58,6 @@ export default function HomePage() {
           <ScoresEntryCard />
         </HeroSection>
         <ResourceCards />
-        <ConsultationBanner />
         <SeoTextBlock />
       </main>
       <SiteFooter />
