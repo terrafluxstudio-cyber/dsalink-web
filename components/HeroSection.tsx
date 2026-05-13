@@ -20,7 +20,7 @@ export function HeroSection({ children }: { children?: ReactNode }) {
             {t.heroBadge}
           </div>
           <h1 className="max-w-[min(100%,42rem)] text-balance font-display text-[1.7rem] font-black leading-[1.12] tracking-tight sm:text-4xl sm:leading-[1.1] lg:text-5xl lg:leading-tight">
-            <span className="bg-gradient-to-b from-slate-900 via-slate-800 to-blue-800 bg-clip-text text-transparent">
+            <span className="normal-case text-slate-900">
               {t.heroTitle}
             </span>
           </h1>

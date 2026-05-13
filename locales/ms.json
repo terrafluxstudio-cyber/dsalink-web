@@ -51,5 +51,36 @@
   "dsaGuideFactPsleMid": "daripada standard PSLE. Skor PSLE anak anda masih mesti memenuhi minimum untuk",
   "dsaGuideFactPsleStrong2": "kumpulan penempatan",
   "dsaGuideFactPsleAfter": "sekolah (dan peraturan kelayakan kursus) yang ditetapkan MOE.",
-  "dsaGuideFooterScheduleNote": "Maklumat berdasarkan jadual MOE 2026."
+  "dsaGuideFooterScheduleNote": "Maklumat berdasarkan jadual MOE 2026.",
+
+  "dsa_scheme_overline": "Skim Pendidikan Singapura",
+  "dsa_what_is_title": "Apakah Skim DSA-Sec Singapura?",
+  "dsa_what_is_body": "Skim Penempatan Langsung ke Sekolah Menengah (DSA-Sec) membolehkan pelajar Darjah 6 mendapatkan tempat di sekolah menengah pilihan mereka berdasarkan bakat dan pencapaian di luar keputusan PSLE. Laluan ini mengiktiraf kecemerlangan dalam pelbagai bidang seperti Sukan, Seni Persembahan, STEM, Kepimpinan, dan Bahasa. Tingkap permohonan DSA 2026 biasanya dibuka pada bulan Mei. Mendapatkan tawaran DSA memberi ketenangan fikiran dan tempat terjamin sebelum peperiksaan kebangsaan PSLE pada bulan November.",
+
+  "dsa_rules_overline": "Peraturan Mengikat MOE",
+  "dsa_rules_title": "Peraturan Komitmen DSA Penting",
+  "dsa_rules_intro": "Sebelum meneruskan permohonan anda, sila ambil maklum peraturan mengikat MOE ini:",
+  "dsa_commitment_title": "Peraturan Komitmen",
+  "dsa_commitment_body": "Setelah pelajar menerima tawaran DSA dan tawaran disahkan, mereka terikat secara undang-undang dengan sekolah tersebut. Mereka tidak dibenarkan menyertai Latihan Penempatan S1 untuk memilih sekolah lain.",
+  "dsa_limits_title": "Had Permohonan",
+  "dsa_limits_body": "Pelajar boleh memohon ke beberapa sekolah. Walau bagaimanapun, setelah tawaran diterima semasa Peringkat Penerimaan rasmi, semua permohonan lain yang belum selesai akan dibatalkan secara automatik.",
+  "dsa_assessment_title": "Keperluan Penilaian",
+  "dsa_assessment_body": "Setiap sekolah mempunyai kriteria pemilihan yang unik. Ini sering melibatkan ujian, audisi, portfolio, atau temuduga. Kami mengesyorkan memeriksa halaman sekolah individu di DSALink untuk keperluan 2026 yang spesifik.",
+
+  "dsa_advantage_overline": "Liputan Platform",
+  "dsa_advantage_title": "Kelebihan DSALink",
+  "dsa_advantage_lead": "DSALink ialah pengagregat data paling komprehensif untuk landskap sekolah menengah Singapura, direka untuk membantu keluarga mengemudi proses kemasukan yang kompleks dengan tepat.",
+  "dsa_stat1_num": "147",
+  "dsa_stat1_label": "Sekolah Diindeks",
+  "dsa_stat1_sub": "Kemas kini masa nyata",
+  "dsa_stat2_num": "1,315",
+  "dsa_stat2_label": "Bidang Bakat",
+  "dsa_stat2_sub": "Dikategorikan untuk penapisan",
+  "dsa_stat3_num": "3 Tahun",
+  "dsa_stat3_label": "Data PSLE COP",
+  "dsa_stat3_sub": "Trend 2023–2025",
+
+  "dsa_about_overline": "Sumber Data & Pengiktirafan",
+  "dsa_about_title": "Tentang DSALink",
+  "dsa_about_body": "DSALink ialah platform data bebas yang dibangunkan dan diselenggara oleh Terraflux Studio. Semua data diagregasi daripada SchoolFinder Kementerian Pendidikan (MOE) dan portal rasmi sekolah individu. Platform ini tidak berafiliasi dengan Kementerian Pendidikan Singapura."
 }

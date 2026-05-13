@@ -51,5 +51,36 @@
   "dsaGuideFactPsleMid": "PSLE 达标要求。孩子的小六会考成绩仍须满足该校所属",
   "dsaGuideFactPsleStrong2": "Posting Group（派位组别）",
   "dsaGuideFactPsleAfter": "的最低标准及 MOE 公布的课程资格规则，录取方有效。",
-  "dsaGuideFooterScheduleNote": "以上内容依据 MOE 2026 年 DSA-Sec 日程整理。"
+  "dsaGuideFooterScheduleNote": "以上内容依据 MOE 2026 年 DSA-Sec 日程整理。",
+
+  "dsa_scheme_overline": "新加坡教育计划",
+  "dsa_what_is_title": "什么是新加坡直属中学收生计划（DSA-Sec）？",
+  "dsa_what_is_body": "直属中学收生计划（DSA-Sec）允许小六学生凭借 PSLE 成绩以外的特殊才能，提前锁定心仪中学名额。入选领域涵盖体育、表演艺术、STEM、领袖才能及语言等多个方向。2026 年申请窗口通常于 5 月开放。成功获得 DSA 录取通知，意味着孩子在 11 月全国 PSLE 会考前已拥有有保障的学位，让家庭备考期间更从容。",
+
+  "dsa_rules_overline": "MOE 约束性规定",
+  "dsa_rules_title": "DSA 申请重要规则",
+  "dsa_rules_intro": "在提交申请前，请务必了解以下具有约束力的教育部规定：",
+  "dsa_commitment_title": "承诺规则",
+  "dsa_commitment_body": "一旦学生接受并确认 DSA 录取通知，即正式承诺入读该校，不得再参与 S1 志愿填报（S1 Posting Exercise）自行选择其他学校。",
+  "dsa_limits_title": "申请上限",
+  "dsa_limits_body": "学生可同时向多所学校提交 DSA 申请。但一旦在正式录取阶段接受某校 offer，其余所有待处理申请将自动作废。",
+  "dsa_assessment_title": "才能评估各校不同",
+  "dsa_assessment_body": "各校评估标准各不相同，通常包括试训、试镜、作品集或面试环节。建议参阅 DSALink 各校专页，了解 2026 年具体要求。",
+
+  "dsa_advantage_overline": "平台数据覆盖",
+  "dsa_advantage_title": "DSALink 的优势",
+  "dsa_advantage_lead": "DSALink 是新加坡中学信息最全面的数据聚合平台，专为帮助家庭精准应对复杂的升学流程而设计。",
+  "dsa_stat1_num": "147",
+  "dsa_stat1_label": "已收录学校",
+  "dsa_stat1_sub": "实时更新",
+  "dsa_stat2_num": "1,315",
+  "dsa_stat2_label": "才能领域",
+  "dsa_stat2_sub": "分类筛选",
+  "dsa_stat3_num": "3 年",
+  "dsa_stat3_label": "PSLE COP 数据",
+  "dsa_stat3_sub": "2023–2025 趋势",
+
+  "dsa_about_overline": "数据来源与声明",
+  "dsa_about_title": "关于 DSALink",
+  "dsa_about_body": "DSALink 由 Terraflux Studio 独立开发维护，数据来源于新加坡教育部官方 SchoolFinder 平台及各校官网。本平台与新加坡教育部（MOE）无任何隶属关系。"
 }

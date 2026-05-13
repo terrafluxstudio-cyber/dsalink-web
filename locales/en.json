@@ -51,5 +51,36 @@
   "dsaGuideFactPsleMid": "of PSLE standards. Your child’s PSLE score must still meet the minimum requirement for the school’s",
   "dsaGuideFactPsleStrong2": "posting group",
   "dsaGuideFactPsleAfter": "(and any course eligibility rules) set by MOE for the offer to stand.",
-  "dsaGuideFooterScheduleNote": "Information based on MOE 2026 schedule."
+  "dsaGuideFooterScheduleNote": "Information based on MOE 2026 schedule.",
+
+  "dsa_scheme_overline": "Singapore Education Scheme",
+  "dsa_what_is_title": "What is the Singapore DSA-Sec Scheme?",
+  "dsa_what_is_body": "The Direct School Admission (DSA-Sec) scheme allows Primary 6 students to secure a place in their preferred secondary schools based on talents and achievements beyond the PSLE results. This pathway recognizes excellence in diverse areas such as Sports, Performing Arts, STEM, Leadership, and Languages. The 2026 DSA application window typically opens in May. Securing a DSA offer provides students with peace of mind and a guaranteed spot before the PSLE national examinations in November.",
+
+  "dsa_rules_overline": "MOE Binding Regulations",
+  "dsa_rules_title": "Essential DSA Commitment Rules",
+  "dsa_rules_intro": "Before proceeding with your application, please be aware of these binding MOE regulations:",
+  "dsa_commitment_title": "The Commitment Rule",
+  "dsa_commitment_body": "Once a student accepts a DSA offer and the offer is confirmed, they are legally committed to that school. They will not be allowed to participate in the S1 Posting Exercise to choose other schools.",
+  "dsa_limits_title": "Application Limits",
+  "dsa_limits_body": "Students may apply to multiple schools. However, once an offer is accepted during the official Acceptance Stage, all other pending applications will be automatically voided.",
+  "dsa_assessment_title": "Assessment Requirements",
+  "dsa_assessment_body": "Each school maintains unique selection criteria. This often involves trials, auditions, portfolios, or interviews. We recommend checking individual school pages on DSALink for specific 2026 requirements.",
+
+  "dsa_advantage_overline": "Platform Coverage",
+  "dsa_advantage_title": "The DSALink Advantage",
+  "dsa_advantage_lead": "DSALink is the most comprehensive data aggregator for the Singapore secondary school landscape, designed to help families navigate the complex admission process with precision.",
+  "dsa_stat1_num": "147",
+  "dsa_stat1_label": "Schools Indexed",
+  "dsa_stat1_sub": "Real-time updates",
+  "dsa_stat2_num": "1,315",
+  "dsa_stat2_label": "Talent Areas",
+  "dsa_stat2_sub": "Categorized for filtering",
+  "dsa_stat3_num": "3 Years",
+  "dsa_stat3_label": "PSLE COP Data",
+  "dsa_stat3_sub": "2023–2025 trends",
+
+  "dsa_about_overline": "Data Source & Attribution",
+  "dsa_about_title": "About DSALink",
+  "dsa_about_body": "DSALink is an independent data platform developed and maintained by Terraflux Studio. All data is aggregated from the Ministry of Education (MOE) SchoolFinder and individual official school portals. This platform is not affiliated with the Ministry of Education, Singapore."
 }
