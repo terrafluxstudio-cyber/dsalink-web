@@ -202,7 +202,7 @@ export const copy: Record<Locale, Copy> = {
     navDsaGuide: "DSA Guide",
     navDsaFinder: "DSA Finder",
     navOpenHouses: "Open houses",
-    navOpenHouseGuide: "Open Houses Guide",
+    navOpenHouseGuide: "Open House Guide",
     navScores: "PSLE COP",
     navMenu: "Menu",
     navClose: "Close menu",

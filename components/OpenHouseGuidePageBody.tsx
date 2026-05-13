@@ -115,9 +115,30 @@ type FeaturedSchool = {
   dateZh: string;
   confirmed: boolean;
   url: string;
+  thisWeekend?: boolean;
 };
 
 const FEATURED_SCHOOLS: FeaturedSchool[] = [
+  {
+    nameEn: "NUS High School of Mathematics and Science",
+    nameZh: "国大数理中学",
+    badge: "IP · Independent",
+    dateEn: "Sat 16 May 2026",
+    dateZh: "2026年5月16日（周六）",
+    confirmed: true,
+    url: "https://www.nushigh.edu.sg/",
+    thisWeekend: true,
+  },
+  {
+    nameEn: "St. Andrew's School (Secondary)",
+    nameZh: "圣安德烈中学",
+    badge: "Government-aided",
+    dateEn: "Sat 16 May 2026",
+    dateZh: "2026年5月16日（周六）",
+    confirmed: false,
+    url: "https://standrewssec.moe.edu.sg/",
+    thisWeekend: true,
+  },
   {
     nameEn: "Hwa Chong Institution",
     nameZh: "华侨中学",
@@ -143,7 +164,7 @@ const FEATURED_SCHOOLS: FeaturedSchool[] = [
     dateEn: "Sat 23 May 2026 · 08:00–12:00",
     dateZh: "2026年5月23日（周六）· 08:00–12:00",
     confirmed: true,
-    url: "https://www.victoria.moe.edu.sg/prospective-students/openhouse-2026/",
+    url: "https://www.victoria.moe.edu.sg/",
   },
   {
     nameEn: "Nan Hua High School",
@@ -185,7 +206,7 @@ export function OpenHouseGuidePageBody() {
           <section aria-labelledby="prep-heading">
             <h2
               id="prep-heading"
-              className="font-display text-lg font-semibold text-intellectual sm:text-xl"
+              className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
             >
               {t.ohGuide_prep_heading}
             </h2>
@@ -219,7 +240,7 @@ export function OpenHouseGuidePageBody() {
           >
             <h2
               id="types-heading"
-              className="font-display text-lg font-semibold text-intellectual sm:text-xl"
+              className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
             >
               {t.ohGuide_types_heading}
             </h2>
@@ -253,7 +274,7 @@ export function OpenHouseGuidePageBody() {
           >
             <h2
               id="checklists-heading"
-              className="font-display text-lg font-semibold text-intellectual sm:text-xl"
+              className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
             >
               {t.ohGuide_checklists_heading}
             </h2>
@@ -295,7 +316,7 @@ export function OpenHouseGuidePageBody() {
           >
             <h2
               id="questions-heading"
-              className="font-display text-lg font-semibold text-intellectual sm:text-xl"
+              className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
             >
               {t.ohGuide_questions_heading}
             </h2>
@@ -355,21 +376,28 @@ export function OpenHouseGuidePageBody() {
               {t.ohGuide_featured_lead}
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {FEATURED_SCHOOLS.map(({ nameEn, nameZh, badge, dateEn, dateZh, confirmed, url }) => (
+              {FEATURED_SCHOOLS.map(({ nameEn, nameZh, badge, dateEn, dateZh, confirmed, url, thisWeekend }) => (
                 <div
                   key={nameEn}
-                  className="flex flex-col rounded-2xl border border-intellectual/12 bg-white/95 p-5 shadow-soft ring-1 ring-champagne/15 sm:p-6"
+                  className={`flex flex-col rounded-2xl border p-5 shadow-soft sm:p-6 ${thisWeekend ? "border-champagne/50 bg-gradient-to-br from-white to-champagne-subtle/40 ring-1 ring-champagne/20" : "border-intellectual/12 bg-white/95 ring-1 ring-champagne/15"}`}
                 >
-                  <span className="inline-block self-start rounded-full border border-slate-200 bg-slate-50 px-2.5 py-0.5 text-[10px] font-semibold normal-case tracking-wide text-slate-600">
-                    {badge}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="inline-block rounded-full border border-slate-200 bg-slate-50 px-2.5 py-0.5 text-[10px] font-semibold normal-case tracking-wide text-slate-600">
+                      {badge}
+                    </span>
+                    {thisWeekend && (
+                      <span className="inline-block rounded-full border border-champagne/50 bg-champagne-subtle/70 px-2.5 py-0.5 text-[10px] font-bold normal-case tracking-wide text-champagne-dark">
+                        This Weekend
+                      </span>
+                    )}
+                  </div>
                   <h3 className="mt-3 font-display text-base font-semibold normal-case text-intellectual">
                     {locale === "zh" ? nameZh : nameEn}
                   </h3>
-                  <p className="mt-0.5 text-xs text-slate-500 normal-case">
+                  <p className="mt-0.5 text-xs normal-case text-slate-500">
                     {locale === "zh" ? nameEn : nameZh}
                   </p>
-                  <p className={`mt-3 text-sm font-medium normal-case ${confirmed ? "text-intellectual" : "text-slate-500"}`}>
+                  <p className={`mt-3 text-sm font-medium normal-case ${thisWeekend ? "text-champagne-dark" : confirmed ? "text-intellectual" : "text-slate-500"}`}>
                     {locale === "zh" ? dateZh : dateEn}
                   </p>
                   <div className="mt-auto pt-5">
@@ -395,7 +423,7 @@ export function OpenHouseGuidePageBody() {
           >
             <h2
               id="flags-heading"
-              className="font-display text-lg font-semibold text-intellectual sm:text-xl"
+              className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
             >
               {t.ohGuide_flags_heading}
             </h2>
@@ -455,7 +483,7 @@ export function OpenHouseGuidePageBody() {
           >
             <h2
               id="after-heading"
-              className="font-display text-lg font-semibold text-intellectual sm:text-xl"
+              className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
             >
               {t.ohGuide_after_heading}
             </h2>
