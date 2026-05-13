@@ -3,6 +3,7 @@
 import {
   AlertCircle,
   CheckCircle,
+  ExternalLink,
   Eye,
   ListChecks,
   XCircle,
@@ -106,8 +107,66 @@ const AFTER_STEPS: Array<{ titleKey: TKey; bodyKey: TKey }> = [
   { titleKey: "ohGuide_after3_title", bodyKey: "ohGuide_after3_body" },
 ];
 
+type FeaturedSchool = {
+  nameEn: string;
+  nameZh: string;
+  badge: string;
+  dateEn: string;
+  dateZh: string;
+  confirmed: boolean;
+  url: string;
+};
+
+const FEATURED_SCHOOLS: FeaturedSchool[] = [
+  {
+    nameEn: "Hwa Chong Institution",
+    nameZh: "华侨中学",
+    badge: "IP · Independent",
+    dateEn: "Sat 23 May 2026 · 08:00–13:00",
+    dateZh: "2026年5月23日（周六）· 08:00–13:00",
+    confirmed: true,
+    url: "https://www.hci.edu.sg/",
+  },
+  {
+    nameEn: "Raffles Girls' School",
+    nameZh: "莱佛士女子中学",
+    badge: "IP · Independent",
+    dateEn: "Sat 23 May 2026 · 08:30–13:30",
+    dateZh: "2026年5月23日（周六）· 08:30–13:30",
+    confirmed: true,
+    url: "https://openhouse.rgs.edu.sg/",
+  },
+  {
+    nameEn: "Victoria School",
+    nameZh: "维多利亚学校",
+    badge: "IP · Autonomous",
+    dateEn: "Sat 23 May 2026 · 08:00–12:00",
+    dateZh: "2026年5月23日（周六）· 08:00–12:00",
+    confirmed: true,
+    url: "https://www.victoria.moe.edu.sg/prospective-students/openhouse-2026/",
+  },
+  {
+    nameEn: "Nan Hua High School",
+    nameZh: "南华中学",
+    badge: "SAP · Government-aided",
+    dateEn: "May 2026 (TBC)",
+    dateZh: "2026年5月（待定）",
+    confirmed: false,
+    url: "https://www.nanhuahigh.moe.edu.sg/",
+  },
+  {
+    nameEn: "Crescent Girls' School",
+    nameZh: "克信女子中学",
+    badge: "Government",
+    dateEn: "May 2026 (TBC)",
+    dateZh: "2026年5月（待定）",
+    confirmed: false,
+    url: "https://www.crescent.edu.sg/about-cgs/admission/",
+  },
+];
+
 export function OpenHouseGuidePageBody() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <>
@@ -281,7 +340,55 @@ export function OpenHouseGuidePageBody() {
             </div>
           </section>
 
-          {/* ── Section 5: Green / Red Flags ── */}
+          {/* ── Section 5: Featured Schools ── */}
+          <section
+            aria-labelledby="featured-heading"
+            className="mt-20 border-t border-intellectual/[0.06] pt-14 sm:mt-24 sm:pt-16"
+          >
+            <h2
+              id="featured-heading"
+              className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
+            >
+              {t.ohGuide_featured_heading}
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-intellectual-muted sm:text-base">
+              {t.ohGuide_featured_lead}
+            </p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {FEATURED_SCHOOLS.map(({ nameEn, nameZh, badge, dateEn, dateZh, confirmed, url }) => (
+                <div
+                  key={nameEn}
+                  className="flex flex-col rounded-2xl border border-intellectual/12 bg-white/95 p-5 shadow-soft ring-1 ring-champagne/15 sm:p-6"
+                >
+                  <span className="inline-block self-start rounded-full border border-slate-200 bg-slate-50 px-2.5 py-0.5 text-[10px] font-semibold normal-case tracking-wide text-slate-600">
+                    {badge}
+                  </span>
+                  <h3 className="mt-3 font-display text-base font-semibold normal-case text-intellectual">
+                    {locale === "zh" ? nameZh : nameEn}
+                  </h3>
+                  <p className="mt-0.5 text-xs text-slate-500 normal-case">
+                    {locale === "zh" ? nameEn : nameZh}
+                  </p>
+                  <p className={`mt-3 text-sm font-medium normal-case ${confirmed ? "text-intellectual" : "text-slate-500"}`}>
+                    {locale === "zh" ? dateZh : dateEn}
+                  </p>
+                  <div className="mt-auto pt-5">
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold normal-case text-white transition hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                    >
+                      {confirmed ? t.ohGuide_btnViewDetails : t.ohGuide_btnVisitAdmissions}
+                      <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* ── Section 6: Green / Red Flags ── */}
           <section
             aria-labelledby="flags-heading"
             className="mt-20 border-t border-intellectual/[0.06] pt-14 sm:mt-24 sm:pt-16"
@@ -341,7 +448,7 @@ export function OpenHouseGuidePageBody() {
             </div>
           </section>
 
-          {/* ── Section 6: After the Visit ── */}
+          {/* ── Section 7: After the Visit ── */}
           <section
             aria-labelledby="after-heading"
             className="mt-20 border-t border-intellectual/[0.06] pt-14 sm:mt-24 sm:pt-16"
