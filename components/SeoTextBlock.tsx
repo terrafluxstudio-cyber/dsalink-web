@@ -16,7 +16,7 @@ export function SeoTextBlock() {
         before the PSLE national examinations in November.
       </p>
 
-      <h2 className="mt-8 text-base font-semibold text-intellectual">
+      <h2 className="mt-16 scroll-mt-8 border-t border-intellectual/10 pt-12 text-base font-semibold text-intellectual sm:mt-24 sm:pt-16">
         Essential DSA Commitment Rules
       </h2>
       <p className="mt-3">

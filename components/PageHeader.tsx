@@ -16,21 +16,22 @@ export function PageHeader({
   headingId,
 }: PageHeaderProps) {
   return (
-    <header className="border-b border-intellectual/10 bg-white/60 backdrop-blur-sm">
-      <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
+    <header className="border-b border-intellectual/[0.06] bg-white/70 backdrop-blur-sm">
+      <div className="mx-auto max-w-5xl px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14">
         <PageBreadcrumb crumbs={[{ label: crumbLabel }]} />
         <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-champagne-dark sm:text-xs">
           {kicker}
         </p>
         <h1
           id={headingId}
-          className="mt-3 font-display font-bold leading-tight tracking-tight text-intellectual"
-          style={{ fontSize: "var(--page-title-size)" }}
+          className="mt-3 max-w-[min(100%,44rem)] text-balance font-display text-[1.7rem] font-black leading-[1.12] tracking-tight sm:text-4xl sm:leading-[1.1] lg:text-[2.75rem] lg:leading-tight"
         >
-          {title}
+          <span className="bg-gradient-to-b from-slate-900 via-slate-800 to-blue-800 bg-clip-text text-transparent">
+            {title}
+          </span>
         </h1>
         {subtitle && (
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-intellectual-muted sm:text-lg">
+          <p className="mt-5 max-w-3xl text-base leading-relaxed text-intellectual-muted sm:mt-6 sm:text-lg">
             {subtitle}
           </p>
         )}

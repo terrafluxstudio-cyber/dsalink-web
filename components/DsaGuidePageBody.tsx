@@ -119,7 +119,7 @@ export function DsaGuidePageBody() {
           subtitle={t.dsaGuideHeroSubtitle}
         />
 
-        <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
+        <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
           <section aria-labelledby="timeline-heading">
             <h2
               id="timeline-heading"
@@ -167,7 +167,7 @@ export function DsaGuidePageBody() {
           </section>
 
           <section
-            className="mt-14 border-t border-intellectual/10 pt-12 sm:mt-16 sm:pt-16"
+            className="mt-20 border-t border-intellectual/[0.06] pt-14 sm:mt-24 sm:pt-16"
             aria-labelledby="facts-heading"
           >
             <h2
