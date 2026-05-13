@@ -18,8 +18,11 @@ export function HeroSection({ children }: { children?: ReactNode }) {
             <ShieldCheck className="h-4 w-4 shrink-0 text-slate-700" aria-hidden />
             <span className="normal-case">{t.heroBadge}</span>
           </div>
-          <h1 className="max-w-[min(100%,46rem)] text-balance font-display text-[1.65rem] font-extrabold leading-[1.18] tracking-tight text-slate-900 sm:text-[2.125rem] sm:leading-[1.12] lg:text-4xl lg:leading-tight">
-            <span className="normal-case">{t.heroTitle}</span>
+          <h1
+            style={{ textTransform: "none" }}
+            className="max-w-[min(100%,46rem)] text-balance font-display text-[1.65rem] font-extrabold leading-[1.18] tracking-tight text-slate-900 sm:text-[2.125rem] sm:leading-[1.12] lg:text-4xl lg:leading-tight"
+          >
+            {t.heroTitle}
           </h1>
           <p className="mt-4 max-w-2xl text-base font-normal leading-relaxed text-slate-600 sm:text-lg">
             {t.heroSubtitle}
@@ -39,7 +42,7 @@ export function HeroSection({ children }: { children?: ReactNode }) {
             href={MOE_PRIMARY_CTA_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
           >
             {t.ctaPrimary}
             <ExternalLink className="h-4 w-4 opacity-90" aria-hidden />
@@ -49,7 +52,7 @@ export function HeroSection({ children }: { children?: ReactNode }) {
             className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
           >
             {t.ctaSecondary}
-            <ArrowRight className="h-4 w-4 text-indigo-600" aria-hidden />
+            <ArrowRight className="h-4 w-4 text-slate-700" aria-hidden />
           </a>
         </div>
       </div>

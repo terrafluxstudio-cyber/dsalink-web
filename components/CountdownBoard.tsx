@@ -36,7 +36,7 @@ export function CountdownBoard() {
         aria-label={t.countdownLabel}
       >
         <div className="mb-4 flex items-center gap-2 text-slate-900">
-          <Clock className="h-5 w-5 shrink-0 text-indigo-600" aria-hidden />
+          <Clock className="h-5 w-5 shrink-0 text-slate-700" aria-hidden />
           <p className="text-sm font-medium leading-snug text-slate-900 sm:text-base">
             {t.countdownLabel}
           </p>
@@ -62,7 +62,7 @@ export function CountdownBoard() {
   return (
     <div className="w-full max-w-xl rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
       <div className="mb-4 flex items-center gap-2 text-slate-900">
-        <Clock className="h-5 w-5 shrink-0 text-indigo-600" aria-hidden />
+        <Clock className="h-5 w-5 shrink-0 text-slate-700" aria-hidden />
         <p className="text-sm font-medium leading-snug text-slate-900 sm:text-base">
           {t.countdownLabel}
         </p>

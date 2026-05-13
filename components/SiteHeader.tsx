@@ -24,7 +24,7 @@ export function SiteHeader() {
           href="/"
           className="group flex min-w-0 shrink-0 items-center gap-2 text-slate-900 transition-opacity hover:opacity-90 sm:gap-2.5"
         >
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-sm sm:h-9 sm:w-9">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white shadow-sm sm:h-9 sm:w-9">
             <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden />
           </span>
           <span className="flex flex-col leading-tight">
@@ -47,7 +47,7 @@ export function SiteHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className="whitespace-nowrap rounded-lg px-3 py-1.5 text-sm font-semibold text-slate-700 underline decoration-slate-300 decoration-2 underline-offset-4 transition hover:bg-slate-50 hover:text-slate-900 hover:decoration-indigo-400"
+              className="whitespace-nowrap rounded-lg px-3 py-1.5 text-sm font-semibold text-slate-700 underline decoration-slate-300 decoration-2 underline-offset-4 transition hover:bg-slate-50 hover:text-slate-900 hover:decoration-slate-400"
             >
               {link.label}
             </Link>

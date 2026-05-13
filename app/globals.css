@@ -17,3 +17,14 @@ body {
 ::selection {
   @apply bg-slate-200 text-slate-900;
 }
+
+h1,
+h2,
+h3 {
+  text-transform: none !important;
+}
+
+.card {
+  border-color: #e2e8f0 !important;
+  background-color: #ffffff !important;
+}

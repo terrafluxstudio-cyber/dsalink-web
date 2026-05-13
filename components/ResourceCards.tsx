@@ -66,13 +66,13 @@ export function ResourceCards() {
                 className="group flex h-full flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-slate-300 hover:shadow-md sm:p-6"
               >
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-indigo-600 transition group-hover:border-slate-300 group-hover:bg-white">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-700 transition group-hover:border-slate-300 group-hover:bg-white">
                     <Icon className="h-5 w-5" aria-hidden />
                   </span>
                   <div className="min-w-0 flex-1">
                     <h3 className="font-display text-lg font-semibold text-slate-900">{title}</h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{description}</p>
-                    <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold tracking-wide text-indigo-600">
+                    <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold tracking-wide text-slate-700">
                       {t.extHint}
                       <span aria-hidden className="translate-x-0 transition group-hover:translate-x-0.5">
                         →

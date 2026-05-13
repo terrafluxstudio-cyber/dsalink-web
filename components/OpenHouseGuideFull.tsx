@@ -55,7 +55,8 @@ export function OpenHouseGuideFull() {
         </p>
         <h1
           id="field-guide-heading"
-          className="mt-2 normal-case text-xl font-bold tracking-tight text-slate-900 sm:text-2xl"
+          style={{ textTransform: "none" }}
+          className="mt-2 text-xl font-bold tracking-tight text-slate-900 sm:text-2xl"
         >
           {t.fieldGuide_title}
         </h1>

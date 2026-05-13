@@ -19,7 +19,7 @@ export function LanguageToggle({ id = "language-select" }: { id?: string }) {
           const v = e.target.value;
           if (isLocale(v)) setLocale(v);
         }}
-        className="block w-full cursor-pointer appearance-none rounded-xl border border-slate-200 bg-white py-2.5 pl-3 pr-10 text-sm font-medium text-slate-700 shadow-sm outline-none transition hover:border-slate-300 focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-indigo-500/25"
+        className="block w-full cursor-pointer appearance-none rounded-xl border border-slate-200 bg-white py-2.5 pl-3 pr-10 text-sm font-medium text-slate-700 shadow-sm outline-none transition hover:border-slate-300 focus-visible:border-slate-400 focus-visible:ring-2 focus-visible:ring-slate-400/25"
         aria-label={t.a11yLanguageSelector}
       >
         {locales.map((code) => (

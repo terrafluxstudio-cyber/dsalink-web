@@ -48,7 +48,7 @@ export function OpenHousePreview() {
     >
       <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
         <div className="flex items-start gap-3">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-indigo-600">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-700">
             <CalendarDays className="h-5 w-5" aria-hidden />
           </span>
           <div className="min-w-0 flex-1">
@@ -75,7 +75,7 @@ export function OpenHousePreview() {
               <li key={ev.id}>
                 <div className="flex gap-3 text-sm">
                   <span
-                    className="w-7 shrink-0 pt-0.5 text-xs font-semibold tabular-nums text-indigo-600"
+                    className="w-7 shrink-0 pt-0.5 text-xs font-semibold tabular-nums text-slate-700"
                     aria-hidden
                   >
                     {index + 1}.
@@ -99,7 +99,7 @@ export function OpenHousePreview() {
                       <span className="mx-1.5 text-slate-400">·</span>
                       {ev.mode === "online" ? t.openHouseOnline : t.openHouseOnsite}
                       <span className="mx-1.5 text-slate-400">·</span>
-                      <span className={status === "Ongoing" ? "font-semibold text-indigo-600" : ""}>
+                      <span className={status === "Ongoing" ? "font-semibold text-slate-700" : ""}>
                         {statusText}
                       </span>
                     </p>
@@ -113,10 +113,10 @@ export function OpenHousePreview() {
         <div className="mt-5">
           <Link
             href="/open-houses"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-slate-300 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:w-auto sm:min-w-[220px]"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-slate-300 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 sm:w-auto sm:min-w-[220px]"
           >
             {t.openHouseViewFullCalendar}
-            <ArrowRight className="h-4 w-4 text-indigo-600" aria-hidden />
+            <ArrowRight className="h-4 w-4 text-slate-700" aria-hidden />
           </Link>
         </div>
       </div>
