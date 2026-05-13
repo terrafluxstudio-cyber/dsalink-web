@@ -206,7 +206,7 @@ export function OpenHouseGuidePageBody() {
           <section aria-labelledby="prep-heading">
             <h2
               id="prep-heading"
-              className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
+              style={{ textTransform: "none" }} className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
             >
               {t.ohGuide_prep_heading}
             </h2>
@@ -222,7 +222,7 @@ export function OpenHouseGuidePageBody() {
                   <span className="font-mono text-[11px] font-bold tracking-[0.12em] text-champagne-dark">
                     {num}
                   </span>
-                  <h3 className="mt-2 font-display text-base font-semibold text-intellectual">
+                  <h3 style={{ textTransform: "none" }} className="mt-2 font-display text-base font-semibold text-intellectual">
                     {t[titleKey]}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-intellectual-muted">
@@ -240,7 +240,7 @@ export function OpenHouseGuidePageBody() {
           >
             <h2
               id="types-heading"
-              className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
+              style={{ textTransform: "none" }} className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
             >
               {t.ohGuide_types_heading}
             </h2>
@@ -256,7 +256,7 @@ export function OpenHouseGuidePageBody() {
                   <span className="inline-block rounded-full border border-champagne/40 bg-champagne-subtle/70 px-2.5 py-0.5 text-[10px] font-semibold tracking-wider text-champagne-dark">
                     {t[badgeKey]}
                   </span>
-                  <h3 className="mt-3 font-display text-base font-semibold text-intellectual">
+                  <h3 style={{ textTransform: "none" }} className="mt-3 font-display text-base font-semibold text-intellectual">
                     {t[titleKey]}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-intellectual-muted">
@@ -274,7 +274,7 @@ export function OpenHouseGuidePageBody() {
           >
             <h2
               id="checklists-heading"
-              className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
+              style={{ textTransform: "none" }} className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
             >
               {t.ohGuide_checklists_heading}
             </h2>
@@ -290,7 +290,7 @@ export function OpenHouseGuidePageBody() {
                   <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-champagne/30 bg-champagne-subtle/70">
                     <Icon className="h-5 w-5 text-champagne-dark" aria-hidden />
                   </div>
-                  <h3 className="font-display text-base font-semibold text-intellectual">
+                  <h3 style={{ textTransform: "none" }} className="font-display text-base font-semibold text-intellectual">
                     {t[titleKey]}
                   </h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-intellectual-muted">
@@ -316,7 +316,7 @@ export function OpenHouseGuidePageBody() {
           >
             <h2
               id="questions-heading"
-              className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
+              style={{ textTransform: "none" }} className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
             >
               {t.ohGuide_questions_heading}
             </h2>
@@ -368,7 +368,7 @@ export function OpenHouseGuidePageBody() {
           >
             <h2
               id="featured-heading"
-              className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
+              style={{ textTransform: "none" }} className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
             >
               {t.ohGuide_featured_heading}
             </h2>
@@ -391,7 +391,7 @@ export function OpenHouseGuidePageBody() {
                       </span>
                     )}
                   </div>
-                  <h3 className="mt-3 font-display text-base font-semibold normal-case text-intellectual">
+                  <h3 style={{ textTransform: "none" }} className="mt-3 font-display text-base font-semibold normal-case text-intellectual">
                     {locale === "zh" ? nameZh : nameEn}
                   </h3>
                   <p className="mt-0.5 text-xs normal-case text-slate-500">
@@ -423,7 +423,7 @@ export function OpenHouseGuidePageBody() {
           >
             <h2
               id="flags-heading"
-              className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
+              style={{ textTransform: "none" }} className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
             >
               {t.ohGuide_flags_heading}
             </h2>
@@ -434,7 +434,7 @@ export function OpenHouseGuidePageBody() {
               <div className="rounded-2xl border border-green-200/80 bg-green-50/40 p-5 shadow-sm ring-1 ring-green-100/80 sm:p-6">
                 <div className="mb-4 flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-green-600" aria-hidden />
-                  <h3 className="font-display text-base font-semibold text-slate-800">
+                  <h3 style={{ textTransform: "none" }} className="font-display text-base font-semibold text-slate-800">
                     {t.ohGuide_greenFlags_title}
                   </h3>
                 </div>
@@ -455,7 +455,7 @@ export function OpenHouseGuidePageBody() {
               <div className="rounded-2xl border border-rose-200/80 bg-rose-50/40 p-5 shadow-sm ring-1 ring-rose-100/80 sm:p-6">
                 <div className="mb-4 flex items-center gap-2">
                   <XCircle className="h-5 w-5 text-rose-600" aria-hidden />
-                  <h3 className="font-display text-base font-semibold text-slate-800">
+                  <h3 style={{ textTransform: "none" }} className="font-display text-base font-semibold text-slate-800">
                     {t.ohGuide_redFlags_title}
                   </h3>
                 </div>
@@ -483,7 +483,7 @@ export function OpenHouseGuidePageBody() {
           >
             <h2
               id="after-heading"
-              className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
+              style={{ textTransform: "none" }} className="font-display text-lg font-semibold normal-case text-intellectual sm:text-xl"
             >
               {t.ohGuide_after_heading}
             </h2>
@@ -509,7 +509,7 @@ export function OpenHouseGuidePageBody() {
                         </span>
                       </div>
                       <div className="w-full min-w-0 rounded-2xl border border-intellectual/12 bg-white/95 p-5 shadow-soft ring-1 ring-champagne/15 sm:p-6">
-                        <h3 className="font-display text-base font-semibold text-intellectual">
+                        <h3 style={{ textTransform: "none" }} className="font-display text-base font-semibold text-intellectual">
                           {t[titleKey]}
                         </h3>
                         <p className="mt-3 text-sm leading-relaxed text-intellectual-muted sm:text-base">
