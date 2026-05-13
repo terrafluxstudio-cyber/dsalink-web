@@ -59,10 +59,8 @@ export default function OpenHousesPage() {
         }}
       />
       <SiteHeader />
-      <main className="border-t border-intellectual/5 bg-white">
-        <div className="mx-auto max-w-5xl px-3 pb-12 pt-6 sm:px-6 sm:pb-20 sm:pt-10">
-          <OpenHousesDirectory />
-        </div>
+      <main className="border-t border-intellectual/5 bg-hero-mesh">
+        <OpenHousesDirectory />
       </main>
       <SiteFooter />
     </>

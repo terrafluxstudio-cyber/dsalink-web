@@ -2,6 +2,7 @@
 
 import { Calendar, Clock, ExternalLink, MapPin, Search } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { SchoolDisplayName } from "@/components/SchoolDisplayName";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Copy, Locale } from "@/lib/i18n";
@@ -205,21 +206,15 @@ export function OpenHousesDirectory() {
       className="w-full scroll-mt-24"
       aria-labelledby="open-houses-heading"
     >
-      <header className="border-b border-intellectual/10 pb-4 sm:pb-5">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-champagne-dark sm:text-xs">
-          {t.openHouseKicker}
-        </p>
-        <h1
-          id="open-houses-heading"
-          className="font-display text-xl font-semibold text-intellectual sm:text-3xl"
-        >
-          {t.sectionOpenHouseTitle}
-        </h1>
-        <p className="mt-1.5 max-w-2xl text-xs leading-relaxed text-intellectual-muted sm:mt-2 sm:text-base">
-          {t.sectionOpenHouseDesc}
-        </p>
-      </header>
+      <PageHeader
+        headingId="open-houses-heading"
+        crumbLabel="Open Houses"
+        kicker={t.openHouseKicker}
+        title={t.sectionOpenHouseTitle}
+        subtitle={t.sectionOpenHouseDesc}
+      />
 
+      <div className="mx-auto max-w-5xl px-4 pb-12 sm:px-6 sm:pb-20">
       <div className="mt-4 space-y-3 sm:mt-6 sm:space-y-4">
         <label className="relative block">
           <span className="sr-only">{t.openHouseSearchAria}</span>
@@ -419,6 +414,7 @@ export function OpenHousesDirectory() {
           {t.openHouseListComplete}
         </p>
       ) : null}
+      </div>
     </section>
   );
 }

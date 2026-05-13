@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronDown, HelpCircle, Info, Search, Sparkles } from "lucide-react";
+import { PageHeader } from "@/components/PageHeader";
 import type { ReactNode } from "react";
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -18,6 +19,7 @@ import {
 import { SchoolDisplayName } from "@/components/SchoolDisplayName";
 import { useLanguage } from "@/contexts/LanguageContext";
 import dsaMasterRaw from "@/data/dsa_master_list.json";
+import mockRaw from "@/data/dsa_mock_schools.json";
 import { SCHOOL_COP_HISTORY_DATA } from "@/lib/school-cop-history-data";
 
 type ViewMode = "school" | "talent";
@@ -68,7 +70,8 @@ type TalentCategoryGroup = {
 };
 
 const CATEGORIES: Category[] = ["Sports", "Arts", "STEM", "Leadership", "Languages"];
-const SCHOOLS = dsaMasterRaw as DsaSchool[];
+const USE_MOCK = process.env.NEXT_PUBLIC_DSA_MOCK === "true";
+const SCHOOLS = (USE_MOCK ? mockRaw : dsaMasterRaw) as DsaSchool[];
 const DEFAULT_VISIBLE_TALENT_SCHOOLS = 8;
 const DEFAULT_VISIBLE_SCHOOLS = 20;
 
@@ -219,11 +222,11 @@ function talentGroupKey(group: TalentGroup): string {
   return `${group.category}::${normalize(group.area)}`;
 }
 
-export function DsaSearchCenter() {
+export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }) {
   const { locale } = useLanguage();
   const ui = UI_TRANSLATIONS[locale];
   const t = (key: DsaUiKey) => getDsaUiLabel(key, locale);
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState<Category | "All">("All");
   const [mode, setMode] = useState<ViewMode>("school");
   const [selectedTalent, setSelectedTalent] = useState<string | null>(null);
@@ -323,21 +326,15 @@ export function DsaSearchCenter() {
   }
 
   return (
-    <section className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-12">
-      <header className="rounded-[2rem] border border-intellectual/10 bg-white/85 p-5 text-center shadow-soft backdrop-blur sm:p-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-champagne-dark">
-          Official MOE SchoolFinder DSA data · 2026
-        </p>
-        <div className="mt-2">
-          <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-tight text-intellectual sm:text-6xl">
-            {t("ui_hero_title")}
-          </h1>
-          <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-intellectual-muted sm:text-base">
-            {t("ui_hero_subtitle")}
-          </p>
-        </div>
-
-        <div className="mt-4 space-y-3">
+    <>
+      <PageHeader
+        crumbLabel="DSA Talent Search"
+        kicker="Official MOE SchoolFinder DSA data · 2026"
+        title={t("ui_hero_title")}
+        subtitle={t("ui_hero_subtitle")}
+      />
+      <div className="mx-auto max-w-5xl px-4 pb-16 pt-6 sm:px-6 sm:pb-20">
+        <div className="space-y-3">
           <label className="relative mx-auto block max-w-2xl">
             <span className="sr-only">{t("ui_search_placeholder")}</span>
             <Search
@@ -381,7 +378,6 @@ export function DsaSearchCenter() {
             </p>
           </div>
         </div>
-      </header>
 
       <div className="sticky top-[65px] z-30 mt-5 rounded-2xl border border-intellectual/10 bg-white/90 p-3 shadow-soft backdrop-blur">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
@@ -430,7 +426,8 @@ export function DsaSearchCenter() {
           />
         )}
       </div>
-    </section>
+      </div>
+    </>
   );
 }
 

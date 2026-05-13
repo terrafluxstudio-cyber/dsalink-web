@@ -48,8 +48,13 @@ export function generateMetadata(): Metadata {
   };
 }
 
-export default function DsaPage() {
+export default async function DsaPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string }>;
+}) {
   const jsonLd = buildDsaFinderStructuredData();
+  const { q } = await searchParams;
 
   return (
     <>
@@ -61,7 +66,7 @@ export default function DsaPage() {
       />
       <SiteHeader />
       <main className="border-t border-intellectual/5 bg-hero-mesh">
-        <DsaSearchCenter />
+        <DsaSearchCenter initialQuery={q ?? ""} />
       </main>
       <SiteFooter />
     </>

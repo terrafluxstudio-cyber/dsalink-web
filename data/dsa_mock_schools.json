@@ -1,0 +1,93 @@
+[
+  {
+    "id": "MOCK001",
+    "schoolName": "Riverside Secondary School",
+    "slug": "riverside-secondary-school",
+    "psleCop": {
+      "pg1": "25-28", "pg2": "22-25", "pg3": "19-22",
+      "affiliated": { "pg1": null, "pg2": null, "pg3": null }
+    },
+    "openHouse": { "date": "2026-05-17", "link": "#" },
+    "dsaTalents": [
+      { "category": "Sports", "area": "Badminton", "description": "Mock DSA talent." },
+      { "category": "Sports", "area": "Basketball", "description": "Mock DSA talent." },
+      { "category": "Arts", "area": "Concert Band", "description": "Mock DSA talent." }
+    ]
+  },
+  {
+    "id": "MOCK002",
+    "schoolName": "Horizon Secondary School",
+    "slug": "horizon-secondary-school",
+    "psleCop": {
+      "pg1": "22-25", "pg2": "20-22", "pg3": "17-20",
+      "affiliated": { "pg1": null, "pg2": null, "pg3": null }
+    },
+    "openHouse": { "date": "2026-05-24", "link": "#" },
+    "dsaTalents": [
+      { "category": "STEM", "area": "Robotics", "description": "Mock DSA talent." },
+      { "category": "STEM", "area": "Infocomm Technology", "description": "Mock DSA talent." },
+      { "category": "Leadership", "area": "Community Youth Leadership", "description": "Mock DSA talent." }
+    ]
+  },
+  {
+    "id": "MOCK003",
+    "schoolName": "Pinnacle Secondary School",
+    "slug": "pinnacle-secondary-school",
+    "psleCop": {
+      "pg1": "28-30", "pg2": "26-28", "pg3": "23-26",
+      "affiliated": { "pg1": "26-28", "pg2": "24-26", "pg3": null }
+    },
+    "openHouse": { "date": "2026-06-07", "link": "#" },
+    "dsaTalents": [
+      { "category": "Arts", "area": "Dance", "description": "Mock DSA talent." },
+      { "category": "Arts", "area": "Visual Arts", "description": "Mock DSA talent." },
+      { "category": "Languages", "area": "Chinese Language", "description": "Mock DSA talent." }
+    ]
+  },
+  {
+    "id": "MOCK004",
+    "schoolName": "Eastgate Secondary School",
+    "slug": "eastgate-secondary-school",
+    "psleCop": {
+      "pg1": "20-23", "pg2": "18-20", "pg3": "15-18",
+      "affiliated": { "pg1": null, "pg2": null, "pg3": null }
+    },
+    "openHouse": { "date": "2026-05-31", "link": "#" },
+    "dsaTalents": [
+      { "category": "Sports", "area": "Swimming", "description": "Mock DSA talent." },
+      { "category": "Sports", "area": "Track and Field", "description": "Mock DSA talent." },
+      { "category": "STEM", "area": "Science, Technology, Engineering and Mathematics", "description": "Mock DSA talent." }
+    ]
+  },
+  {
+    "id": "MOCK005",
+    "schoolName": "Northvale Secondary School",
+    "slug": "northvale-secondary-school",
+    "psleCop": {
+      "pg1": "24-27", "pg2": "21-24", "pg3": "18-21",
+      "affiliated": { "pg1": null, "pg2": null, "pg3": null }
+    },
+    "openHouse": { "date": "2026-05-10", "link": "#" },
+    "dsaTalents": [
+      { "category": "Leadership", "area": "National Civil Defence Cadet Corps (NCDCC)", "description": "Mock DSA talent." },
+      { "category": "Arts", "area": "Choir", "description": "Mock DSA talent." },
+      { "category": "Languages", "area": "Malay Language", "description": "Mock DSA talent." }
+    ]
+  },
+  {
+    "id": "MOCK006",
+    "schoolName": "Westbrook Secondary School",
+    "slug": "westbrook-secondary-school",
+    "psleCop": {
+      "pg1": "19-22", "pg2": "16-19", "pg3": null,
+      "affiliated": { "pg1": null, "pg2": null, "pg3": null }
+    },
+    "openHouse": { "date": null, "link": "#" },
+    "dsaTalents": [
+      { "category": "Sports", "area": "Football", "description": "Mock DSA talent." },
+      { "category": "STEM", "area": "Robotics", "description": "Mock DSA talent." },
+      { "category": "Arts", "area": "Concert Band", "description": "Mock DSA talent." },
+      { "category": "Leadership", "area": "Community Youth Leadership", "description": "Mock DSA talent." }
+    ]
+  }
+]

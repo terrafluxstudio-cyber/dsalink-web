@@ -39,16 +39,18 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 const notoSansSC = Noto_Sans_SC({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600"],
   variable: "--font-noto",
   display: "swap",
+  preload: false,
 });
 
 const notoSansTamil = Noto_Sans_Tamil({
   subsets: ["latin", "tamil"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600"],
   variable: "--font-noto-tamil",
   display: "swap",
+  preload: false,
 });
 
 export const viewport: Viewport = {
@@ -102,6 +104,11 @@ export default function RootLayout({
       lang="en-SG"
       className={`${plusJakarta.variable} ${notoSansSC.variable} ${notoSansTamil.variable}`}
     >
+      <head>
+        {/* Warm up GA4 connection early even though script loads lazily */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      </head>
       <body className="font-sans">
         <GoogleAnalytics />
         <LanguageProvider>{children}</LanguageProvider>

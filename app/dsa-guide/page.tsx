@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DsaGuidePageBody } from "@/components/DsaGuidePageBody";
+import { buildDsaGuideStructuredData } from "@/lib/seo";
 
 const PAGE_TITLE =
   "2026 Singapore DSA-Sec Timeline | Step-by-Step Parent Guide | DSALink";
@@ -44,5 +45,14 @@ export function generateMetadata(): Metadata {
 }
 
 export default function DsaGuidePage() {
-  return <DsaGuidePageBody />;
+  const jsonLd = buildDsaGuideStructuredData();
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <DsaGuidePageBody />
+    </>
+  );
 }

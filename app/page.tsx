@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+import { ConsultationBanner } from "@/components/ConsultationBanner";
 import { HeroSection } from "@/components/HeroSection";
-import { OpenHousePreview } from "@/components/OpenHousePreview";
-import { ScoresEntryCard } from "@/components/ScoresEntryCard";
-import { ResourceCards } from "@/components/ResourceCards";
+import { SeoTextBlock } from "@/components/SeoTextBlock";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { buildHomeStructuredData } from "@/lib/seo";
+
+const OpenHousePreview = dynamic(
+  () => import("@/components/OpenHousePreview").then((m) => ({ default: m.OpenHousePreview })),
+  { ssr: false },
+);
+const ScoresEntryCard = dynamic(
+  () => import("@/components/ScoresEntryCard").then((m) => ({ default: m.ScoresEntryCard })),
+  { ssr: false },
+);
+const ResourceCards = dynamic(
+  () => import("@/components/ResourceCards").then((m) => ({ default: m.ResourceCards })),
+  { ssr: false },
+);
 
 const HOME_PAGE_TITLE =
   "DSALink | DSA 2026 Hub — PSLE COP Tools & Secondary Open House Finder";
@@ -59,6 +72,8 @@ export default function HomePage() {
           <ScoresEntryCard />
         </HeroSection>
         <ResourceCards />
+        <ConsultationBanner />
+        <SeoTextBlock />
       </main>
       <SiteFooter />
     </>

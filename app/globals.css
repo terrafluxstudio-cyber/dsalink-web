@@ -4,6 +4,7 @@
 
 :root {
   color-scheme: light;
+  --page-title-size: 2rem; /* 32px — 修改此处统一调整全站 PageHeader 标题大小 */
 }
 
 html {

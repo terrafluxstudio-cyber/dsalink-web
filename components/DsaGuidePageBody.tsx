@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { PageHeader } from "@/components/PageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -111,19 +112,12 @@ export function DsaGuidePageBody() {
     <>
       <SiteHeader />
       <main className="border-t border-intellectual/5 bg-hero-mesh">
-        <header className="border-b border-intellectual/10 bg-white/60 backdrop-blur-sm">
-          <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-champagne-dark sm:text-xs">
-              {t.dsaGuideKicker}
-            </p>
-            <h1 className="mt-3 font-display text-2xl font-semibold tracking-tight text-intellectual sm:text-4xl sm:leading-tight">
-              {t.dsaGuideHeroTitle}
-            </h1>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-intellectual-muted sm:text-lg">
-              {t.dsaGuideHeroSubtitle}
-            </p>
-          </div>
-        </header>
+        <PageHeader
+          crumbLabel="DSA-Sec Guide"
+          kicker={t.dsaGuideKicker}
+          title={t.dsaGuideHeroTitle}
+          subtitle={t.dsaGuideHeroSubtitle}
+        />
 
         <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
           <section aria-labelledby="timeline-heading">

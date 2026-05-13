@@ -59,6 +59,7 @@ export type Copy = {
   footerRights: string;
   extHint: string;
   a11yLanguageSelector: string;
+  heroSearchPlaceholder: string;
   openHouseKicker: string;
   sectionOpenHouseTitle: string;
   sectionOpenHouseDesc: string;
@@ -128,6 +129,7 @@ export type Copy = {
   scoreboardTypeG2: string;
   scoreboardTypeG1: string;
   /** Dedicated /scores page */
+  scoresPageKicker: string;
   scoresPageH1: string;
   scoresPageLead: string;
   scoresFilterToolbarAria: string;
@@ -185,6 +187,7 @@ export const copy: Record<Locale, Copy> = {
     footerRights: "© dsalink.sg · Built for parents navigating DSA in Singapore",
     extHint: "Opens externally",
     a11yLanguageSelector: "Choose language",
+    heroSearchPlaceholder: "Search schools or talents (e.g. Robotics, Dance)…",
     openHouseKicker: "May 2026 · Island-wide",
     sectionOpenHouseTitle: "Secondary open houses · DSA & admissions",
     sectionOpenHouseDesc:
@@ -252,6 +255,7 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTypeG3: "G3",
     scoreboardTypeG2: "G2",
     scoreboardTypeG1: "G1",
+    scoresPageKicker: "PSLE · 2023–2025 · 147 Schools",
     scoresPageH1: "PSLE COP historical dashboard",
     scoresPageLead:
       "Compare 2025 G3 (non-affiliated) posting bands, year-on-year deltas, and full 2023–2025 streams for MOE secondary schools in our table. Filter by SAP, IP, gender, and zone.",
@@ -307,6 +311,7 @@ export const copy: Record<Locale, Copy> = {
     footerRights: "© dsalink.sg · 助力家长从容应对新加坡 DSA",
     extHint: "外部链接",
     a11yLanguageSelector: "选择语言",
+    heroSearchPlaceholder: "搜索学校或特长（如：机器人、舞蹈）…",
     openHouseKicker: "2026年5月 · 全岛",
     sectionOpenHouseTitle: "中学开放日 · DSA 与招生",
     sectionOpenHouseDesc:
@@ -372,6 +377,7 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTypeG3: "G3",
     scoreboardTypeG2: "G2",
     scoreboardTypeG1: "G1",
+    scoresPageKicker: "PSLE · 2023–2025 · 147 所中学",
     scoresPageH1: "PSLE COP 历年数据看板",
     scoresPageLead:
       "对比 2025 G3 对外分档、相对 2024 的松紧变化，以及 2023–2025 全细分。可按特选、IP、单性别与区域筛选。",
@@ -430,6 +436,7 @@ export const copy: Record<Locale, Copy> = {
       "© dsalink.sg · Untuk ibu bapa yang menavigasi DSA di Singapura",
     extHint: "Pautan luar",
     a11yLanguageSelector: "Pilih bahasa",
+    heroSearchPlaceholder: "Cari sekolah atau bakat (cth: Robotik, Tarian)…",
     openHouseKicker: "Mei 2026",
     sectionOpenHouseTitle: "Hari terbuka sekolah · sorotan musim DSA",
     sectionOpenHouseDesc:
@@ -497,6 +504,7 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTypeG3: "G3",
     scoreboardTypeG2: "G2",
     scoreboardTypeG1: "G1",
+    scoresPageKicker: "PSLE · 2023–2025 · 147 Sekolah",
     scoresPageH1: "Papan data PSLE COP (2021–2025)",
     scoresPageLead:
       "Bandingkan G3 2025, perubahan berbanding 2024, dan semua aliran 2023–2025. Tapis SAP, IP, jantina, zon.",
@@ -558,6 +566,7 @@ export const copy: Record<Locale, Copy> = {
       "© dsalink.sg · சிங்கப்பூரில் DSA ஐ நடத்தும் பெற்றோருக்காக",
     extHint: "வெளியே திறக்கிறது",
     a11yLanguageSelector: "மொழியைத் தேர்ந்தெடுக்கவும்",
+    heroSearchPlaceholder: "பள்ளி அல்லது திறமை தேடுக (எ.கா: ரோபோட்டிக்ஸ்)…",
     openHouseKicker: "மே 2026",
     sectionOpenHouseTitle: "பள்ளி திறந்த வீடுகள் · DSA சீசன் சிறப்புகள்",
     sectionOpenHouseDesc:
@@ -626,6 +635,7 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTypeG3: "G3",
     scoreboardTypeG2: "G2",
     scoreboardTypeG1: "G1",
+    scoresPageKicker: "PSLE · 2023–2025 · 147 பள்ளிகள்",
     scoresPageH1: "PSLE COP வரலாற்று டாஷ்போர்டு",
     scoresPageLead:
       "2025 G3, 2024 உடன் ஒப்பீடு, 2023–2025 அனைத்து ஓட்டங்கள். SAP, IP, ஒரு பாலினம், மண்டலம் வடிகட்டல்.",

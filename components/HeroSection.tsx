@@ -2,6 +2,7 @@
 
 import { ArrowRight, ExternalLink, ShieldCheck } from "lucide-react";
 import { CountdownBoard } from "@/components/CountdownBoard";
+import { HeroSearchBox } from "@/components/HeroSearchBox";
 import { MOE_PRIMARY_CTA_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { ReactNode } from "react";
@@ -24,7 +25,11 @@ export function HeroSection({ children }: { children?: ReactNode }) {
           {t.heroSubtitle}
         </p>
 
-        <div className="mt-10 flex max-w-xl flex-col gap-4">
+        <div className="mt-8">
+          <HeroSearchBox />
+        </div>
+
+        <div className="mt-6 flex max-w-xl flex-col gap-4">
           <CountdownBoard />
         </div>
         {children}
