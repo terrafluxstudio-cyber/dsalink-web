@@ -48,7 +48,7 @@ export function SiteHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className="whitespace-nowrap rounded-lg px-3 py-1.5 text-sm font-semibold text-slate-700 underline decoration-slate-300 decoration-2 underline-offset-4 transition hover:bg-slate-50 hover:text-slate-900 hover:decoration-slate-400"
+              className="whitespace-nowrap rounded-lg px-3 py-1.5 text-sm font-semibold normal-case text-slate-700 underline decoration-slate-300 decoration-2 underline-offset-4 transition hover:bg-slate-50 hover:text-slate-900 hover:decoration-slate-400"
             >
               {link.label}
             </Link>
@@ -82,7 +82,7 @@ export function SiteHeader() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-800 transition hover:bg-slate-50"
+                    className="rounded-lg px-3 py-2 text-sm font-semibold normal-case text-slate-800 transition hover:bg-slate-50"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}

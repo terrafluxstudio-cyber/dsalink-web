@@ -79,7 +79,7 @@ const CATEGORY_STYLES: Record<Category, string> = {
   Sports: "border-emerald-200 bg-emerald-50 text-emerald-800 hover:border-emerald-300",
   Arts: "border-fuchsia-200 bg-fuchsia-50 text-fuchsia-800 hover:border-fuchsia-300",
   STEM: "border-sky-200 bg-sky-50 text-sky-800 hover:border-sky-300",
-  Leadership: "border-amber-200 bg-amber-50 text-amber-800 hover:border-amber-300",
+  Leadership: "border-slate-200 bg-slate-100 text-slate-700 hover:border-slate-300",
   Languages: "border-violet-200 bg-violet-50 text-violet-800 hover:border-violet-300",
 };
 
