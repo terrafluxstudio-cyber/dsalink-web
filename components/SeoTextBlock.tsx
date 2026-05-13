@@ -14,7 +14,7 @@ export function SeoTextBlock() {
 
         {/* What is DSA-Sec */}
         <div className="rounded-xl border border-slate-200 bg-white px-7 py-8 shadow-sm sm:px-9">
-          <p className="mb-3 text-[10px] font-semibold tracking-[0.15em] text-indigo-600 normal-case">
+          <p className="mb-3 text-[10px] font-semibold tracking-[0.15em] text-slate-700 normal-case">
             {t.dsa_scheme_overline}
           </p>
           <h2 className="text-base font-semibold text-slate-900">
@@ -27,7 +27,7 @@ export function SeoTextBlock() {
 
         {/* Commitment Rules */}
         <div className="rounded-xl border border-slate-200 bg-white px-7 py-8 shadow-sm sm:px-9">
-          <p className="mb-3 text-[10px] font-semibold tracking-[0.15em] text-indigo-600 normal-case">
+          <p className="mb-3 text-[10px] font-semibold tracking-[0.15em] text-slate-700 normal-case">
             {t.dsa_rules_overline}
           </p>
           <h2 className="text-base font-semibold text-slate-900">
@@ -37,7 +37,7 @@ export function SeoTextBlock() {
             {t.dsa_rules_intro}
           </p>
           <div className="mt-4 flex flex-col gap-3">
-            <div className="rounded-lg border-l-2 border-indigo-400 bg-slate-50 px-5 py-4">
+            <div className="rounded-lg border-l-2 border-slate-300 bg-slate-50 px-5 py-4">
               <p className="text-[13px] font-semibold text-slate-900">
                 {t.dsa_commitment_title}
               </p>
@@ -45,7 +45,7 @@ export function SeoTextBlock() {
                 {t.dsa_commitment_body}
               </p>
             </div>
-            <div className="rounded-lg border-l-2 border-indigo-400 bg-slate-50 px-5 py-4">
+            <div className="rounded-lg border-l-2 border-slate-300 bg-slate-50 px-5 py-4">
               <p className="text-[13px] font-semibold text-slate-900">
                 {t.dsa_limits_title}
               </p>
@@ -53,7 +53,7 @@ export function SeoTextBlock() {
                 {t.dsa_limits_body}
               </p>
             </div>
-            <div className="rounded-lg border-l-2 border-indigo-400 bg-slate-50 px-5 py-4">
+            <div className="rounded-lg border-l-2 border-slate-300 bg-slate-50 px-5 py-4">
               <p className="text-[13px] font-semibold text-slate-900">
                 {t.dsa_assessment_title}
               </p>
@@ -66,7 +66,7 @@ export function SeoTextBlock() {
 
         {/* DSALink Advantage — stat grid */}
         <div className="rounded-xl border border-slate-200 bg-white px-7 py-8 shadow-sm sm:px-9">
-          <p className="mb-3 text-[10px] font-semibold tracking-[0.15em] text-indigo-600 normal-case">
+          <p className="mb-3 text-[10px] font-semibold tracking-[0.15em] text-slate-700 normal-case">
             {t.dsa_advantage_overline}
           </p>
           <h2 className="text-base font-semibold text-slate-900">
@@ -108,7 +108,7 @@ export function SeoTextBlock() {
 
         {/* About */}
         <div className="rounded-xl border border-slate-200 bg-white px-7 py-7 shadow-sm sm:px-9">
-          <p className="mb-3 text-[10px] font-semibold tracking-[0.15em] text-indigo-600 normal-case">
+          <p className="mb-3 text-[10px] font-semibold tracking-[0.15em] text-slate-700 normal-case">
             {t.dsa_about_overline}
           </p>
           <h2 className="text-base font-semibold text-slate-900">

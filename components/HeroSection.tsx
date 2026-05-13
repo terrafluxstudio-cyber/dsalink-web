@@ -15,7 +15,7 @@ export function HeroSection({ children }: { children?: ReactNode }) {
       <div className="relative mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-6 sm:pb-24 sm:pt-14">
         <div className="mb-10 sm:mb-14">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 shadow-sm sm:text-sm">
-            <ShieldCheck className="h-4 w-4 shrink-0 text-indigo-600" aria-hidden />
+            <ShieldCheck className="h-4 w-4 shrink-0 text-slate-700" aria-hidden />
             <span className="normal-case">{t.heroBadge}</span>
           </div>
           <h1 className="max-w-[min(100%,46rem)] text-balance font-display text-[1.65rem] font-extrabold leading-[1.18] tracking-tight text-slate-900 sm:text-[2.125rem] sm:leading-[1.12] lg:text-4xl lg:leading-tight">
