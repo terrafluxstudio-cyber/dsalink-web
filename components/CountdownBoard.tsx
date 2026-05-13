@@ -31,13 +31,13 @@ export function CountdownBoard() {
   if (!isMounted) {
     return (
       <div
-        className="w-full max-w-xl rounded-2xl border border-intellectual/10 bg-white/90 p-5 shadow-soft ring-1 ring-champagne/20 sm:p-6"
+        className="w-full max-w-xl rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6"
         aria-busy="true"
         aria-label={t.countdownLabel}
       >
-        <div className="mb-4 flex items-center gap-2 text-intellectual">
-          <Clock className="h-5 w-5 shrink-0 text-champagne-dark" aria-hidden />
-          <p className="text-sm font-medium leading-snug text-intellectual sm:text-base">
+        <div className="mb-4 flex items-center gap-2 text-slate-900">
+          <Clock className="h-5 w-5 shrink-0 text-indigo-600" aria-hidden />
+          <p className="text-sm font-medium leading-snug text-slate-900 sm:text-base">
             {t.countdownLabel}
           </p>
         </div>
@@ -45,14 +45,14 @@ export function CountdownBoard() {
           {Array.from({ length: 4 }).map((_, i) => (
             <div
               key={i}
-              className="rounded-xl border border-intellectual/8 bg-gradient-to-b from-white to-champagne-subtle/40 px-3 py-8 shadow-gold sm:py-10"
+              className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-8 shadow-sm sm:py-10"
             >
-              <div className="mx-auto h-8 w-12 animate-pulse rounded bg-intellectual/10 sm:h-9 sm:w-14" />
-              <div className="mx-auto mt-3 h-3 w-14 animate-pulse rounded bg-intellectual/10 sm:w-16" />
+              <div className="mx-auto h-8 w-12 animate-pulse rounded bg-slate-200 sm:h-9 sm:w-14" />
+              <div className="mx-auto mt-3 h-3 w-14 animate-pulse rounded bg-slate-200 sm:w-16" />
             </div>
           ))}
         </div>
-        <p className="mt-4 text-center text-[11px] leading-relaxed text-intellectual-muted/90 sm:text-xs">
+        <p className="mt-4 text-center text-[11px] leading-relaxed text-slate-600 sm:text-xs">
           {t.countdownDeadlineLine}
         </p>
       </div>
@@ -60,33 +60,33 @@ export function CountdownBoard() {
   }
 
   return (
-    <div className="w-full max-w-xl rounded-2xl border border-intellectual/10 bg-white/90 p-5 shadow-soft ring-1 ring-champagne/20 sm:p-6">
-      <div className="mb-4 flex items-center gap-2 text-intellectual">
-        <Clock className="h-5 w-5 shrink-0 text-champagne-dark" aria-hidden />
-        <p className="text-sm font-medium leading-snug text-intellectual sm:text-base">
+    <div className="w-full max-w-xl rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+      <div className="mb-4 flex items-center gap-2 text-slate-900">
+        <Clock className="h-5 w-5 shrink-0 text-indigo-600" aria-hidden />
+        <p className="text-sm font-medium leading-snug text-slate-900 sm:text-base">
           {t.countdownLabel}
         </p>
       </div>
       {totalMs <= 0 ? (
-        <p className="text-sm text-intellectual-muted">{t.countdownComplete}</p>
+        <p className="text-sm text-slate-600">{t.countdownComplete}</p>
       ) : (
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
           {items.map((item) => (
             <div
               key={item.label}
-              className="rounded-xl border border-intellectual/8 bg-gradient-to-b from-white to-champagne-subtle/40 px-3 py-3 text-center shadow-gold sm:py-4"
+              className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 text-center shadow-sm sm:py-4"
             >
-              <div className="font-display text-2xl font-semibold tabular-nums text-intellectual sm:text-3xl">
+              <div className="font-display text-2xl font-semibold tabular-nums text-slate-900 sm:text-3xl">
                 {item.value}
               </div>
-              <div className="mt-1 text-[11px] font-medium leading-tight text-intellectual-muted sm:text-xs">
+              <div className="mt-1 text-[11px] font-medium leading-tight text-slate-600 sm:text-xs">
                 {item.label}
               </div>
             </div>
           ))}
         </div>
       )}
-      <p className="mt-4 text-center text-[11px] leading-relaxed text-intellectual-muted/90 sm:text-xs">
+      <p className="mt-4 text-center text-[11px] leading-relaxed text-slate-600 sm:text-xs">
         {t.countdownDeadlineLine}
       </p>
     </div>

@@ -11,9 +11,9 @@ html {
 }
 
 body {
-  @apply min-h-screen bg-slate-50 text-intellectual antialiased;
+  @apply min-h-screen bg-slate-50 text-slate-900 antialiased;
 }
 
 ::selection {
-  @apply bg-champagne/25 text-intellectual-dark;
+  @apply bg-indigo-100 text-slate-900;
 }

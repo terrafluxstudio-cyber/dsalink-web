@@ -18,23 +18,23 @@ export function SiteHeader() {
   ] as const;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-intellectual/5 bg-white/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-3 py-3 sm:gap-4 sm:px-6">
         <Link
           href="/"
-          className="group flex min-w-0 shrink-0 items-center gap-2 text-intellectual transition-opacity hover:opacity-90 sm:gap-2.5"
+          className="group flex min-w-0 shrink-0 items-center gap-2 text-slate-900 transition-opacity hover:opacity-90 sm:gap-2.5"
         >
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-intellectual text-white shadow-soft ring-1 ring-champagne/30 sm:h-9 sm:w-9">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-sm sm:h-9 sm:w-9">
             <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden />
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="font-display text-sm font-semibold tracking-tight sm:text-lg">
+            <span className="font-display text-sm font-semibold tracking-tight text-slate-900 normal-case sm:text-lg">
               {t.navBrand}
             </span>
-            <span className="text-[10px] font-medium uppercase tracking-wider text-champagne-dark sm:hidden">
+            <span className="text-[10px] font-medium tracking-wide text-slate-500 normal-case sm:hidden">
               DSA 2026
             </span>
-            <span className="hidden text-xs font-medium uppercase tracking-wider text-champagne-dark sm:inline">
+            <span className="hidden text-xs font-medium tracking-wide text-slate-500 normal-case sm:inline">
               {t.navTagline}
             </span>
           </span>
@@ -47,7 +47,7 @@ export function SiteHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className="whitespace-nowrap rounded-lg px-3 py-1.5 text-sm font-semibold text-intellectual underline decoration-champagne/50 decoration-2 underline-offset-4 transition hover:bg-champagne-subtle/40 hover:decoration-champagne"
+              className="whitespace-nowrap rounded-lg px-3 py-1.5 text-sm font-semibold text-slate-700 underline decoration-slate-300 decoration-2 underline-offset-4 transition hover:bg-slate-50 hover:text-slate-900 hover:decoration-indigo-400"
             >
               {link.label}
             </Link>
@@ -57,7 +57,7 @@ export function SiteHeader() {
         <button
           type="button"
           onClick={() => setMobileMenuOpen((open) => !open)}
-          className="inline-flex items-center gap-2 rounded-xl border border-intellectual/10 bg-white px-3 py-2 text-sm font-semibold text-intellectual shadow-sm transition hover:border-champagne/50 md:hidden"
+          className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-slate-300 md:hidden"
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-nav-drawer"
         >
@@ -66,13 +66,13 @@ export function SiteHeader() {
           ) : (
             <Menu className="h-4 w-4" aria-hidden />
           )}
-          <span>{mobileMenuOpen ? t.navClose : t.navMenu}</span>
+          <span className="normal-case">{mobileMenuOpen ? t.navClose : t.navMenu}</span>
         </button>
       </div>
       {mobileMenuOpen ? (
         <div
           id="mobile-nav-drawer"
-          className="grid grid-rows-[1fr] border-t border-intellectual/5 bg-white/95 opacity-100 shadow-soft transition-[grid-template-rows,opacity] duration-300 ease-out md:hidden"
+          className="grid grid-rows-[1fr] border-t border-slate-200 bg-white/95 opacity-100 shadow-sm transition-[grid-template-rows,opacity] duration-300 ease-out md:hidden"
         >
           <div className="overflow-hidden">
             <nav className="mx-auto max-w-5xl px-3 py-4" aria-label="Mobile primary">
@@ -81,17 +81,15 @@ export function SiteHeader() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="rounded-2xl border border-intellectual/8 bg-champagne-subtle/30 px-4 py-3 text-sm font-semibold text-intellectual transition hover:border-champagne/50 hover:bg-champagne-subtle"
+                    className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-800 transition hover:bg-slate-50"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}
                   </Link>
                 ))}
-              </div>
-              <div className="mt-4 rounded-2xl border border-intellectual/8 bg-white p-3">
-                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-intellectual-muted">
-                  {t.a11yLanguageSelector}
-                </p>
-                <LanguageToggle id="language-select-mobile" />
+                <div className="pt-2">
+                  <LanguageToggle id="language-select-mobile" />
+                </div>
               </div>
             </nav>
           </div>

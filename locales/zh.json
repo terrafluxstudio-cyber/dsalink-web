@@ -1,4 +1,10 @@
 {
+  "heroTitle": "中学开放日 · 直接收生（DSA）与招生 · PSLE 等级（AL）录取参考历年看板",
+  "heroSubtitle": "整合 MOE 官方入口、关键日期、开放日清单与近三年 PSLE 录取分档参考；界面为移动端快速查阅而优化。",
+  "heroBadge": "面向家庭的独立导航站",
+  "homeMetaTitle": "DSALink | DSA 2026 枢纽 — PSLE COP 工具与中学开放日检索",
+  "homeMetaDescription": "在同一站点规划中学一年级与 DSA：申请截止倒计时、MOE 权威入口、PSLE 等级（AL）历年数据看板，以及 2026 年 5 月中英双语开放日名录。",
+
   "dsaGuideKicker": "MOE 2026 · 直接收生计划（中学 DSA-Sec）",
   "dsaGuideHeroTitle": "2026 新加坡中学 DSA 申请流程时间轴",
   "dsaGuideHeroSubtitle": "从准备到最终学位分配，全流程分步说明。",
@@ -84,17 +90,17 @@
   "dsa_about_title": "关于 DSALink",
   "dsa_about_body": "DSALink 由 Terraflux Studio 独立开发维护，数据来源于新加坡教育部官方 SchoolFinder 平台及各校官网。本平台与新加坡教育部（MOE）无任何隶属关系。",
 
-  "fieldGuide_kicker": "2026 开放日 · 专家指南",
-  "fieldGuide_title": "2026 中学开放日：专家实战手册",
-  "fieldGuide_subtitle": "三个内行策略，让每次参观学校都超越宣传册。",
-  "fieldGuide_insider_label": "内行建议",
-  "fieldGuide_card1_title": "校园文化审查",
-  "fieldGuide_card1_body": "不要只看建筑和设施。留意导览学生——他们是真心为自己的学校感到骄傲，还是在背稿？去食堂走一走，观察学生之间的互动方式。真实的校园文化总是在这些不经意的小细节中流露出来。",
-  "fieldGuide_card1_tip": "提前 10 分钟到达，观察学生在正式活动开始前进入校园的状态。那份自信与同学之间的情谊，比任何导览都更能说明问题。",
-  "fieldGuide_card2_title": "DSA 展台提问策略",
-  "fieldGuide_card2_body": "大多数家长只问泛泛的问题。不妨深入挖掘，了解学校真正的招生重点——他们在这一届 DSA 周期中究竟在寻找什么样的学生。",
-  "fieldGuide_card2_tip": "尝试这样问：'应用学习课程（ALP）是面向所有学生，还是只针对特定班级？' 以及 '学校今年 DSA 具体在招募哪些角色或位置？'",
-  "fieldGuide_card3_title": "承诺的现实",
-  "fieldGuide_card3_body": "DSA 录取一旦确认，具有法律约束力——孩子将无法参与 S1 志愿填报。申请前，请与孩子坦诚沟通：他们对这个 CCA 的热情，是否真的与学校的项目要求相匹配？四到六年的校园生活，远比学校的名气更重要。",
-  "fieldGuide_card3_tip": "问孩子这个问题：'这是你的选择，还是我的？' DSA 效果最好的情况，是学生真正主导了这个决定。一旦承诺，反悔的代价极高。"
+  "fieldGuide_kicker": "2026 开放日 · 总览指南",
+  "fieldGuide_title": "2026 校园开放日总览指南",
+  "fieldGuide_subtitle": "三条可执行的观察清单：校园文化、特色课程（ALP/LLP）与 DSA 展台沟通策略。",
+  "fieldGuide_insider_label": "提示",
+  "fieldGuide_card1_title": "校园文化审视（Culture Audit）",
+  "fieldGuide_card1_body": "不只比较硬件：留意学生精神面貌与日常互动。当问题稍微偏离脚本时，导览员如何描述同学与老师，往往更能反映真实的校园氛围。",
+  "fieldGuide_card1_tip": "在入校口或食堂附近停留几分钟，未经排练的细节通常比宣讲稿更有信息量。",
+  "fieldGuide_card2_title": "ALP / LLP 核查",
+  "fieldGuide_card2_body": "了解应用学习课程（ALP）与终身学习计划（LLP）如何落地：哪些学生可以加入、分班与支持机制是否覆盖不同特质的孩子。",
+  "fieldGuide_card2_tip": "可追问：路径是否对新生同样开放？学校如何衡量成果，而不只看竞赛名次——包容度体现在具体制度里。",
+  "fieldGuide_card3_title": "DSA 展台策略",
+  "fieldGuide_card3_body": "把展台当作简短“作品集路演”：用证据串联成就与学校项目，最后提出一个与孩子情况高度相关、可跟进的具体问题。",
+  "fieldGuide_card3_tip": "准备一页摘要与两件最强佐证；直接询问今年评审最看重的材料类型。"
 }

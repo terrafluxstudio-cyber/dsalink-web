@@ -46,16 +46,13 @@ export function ResourceCards() {
   ] as const;
 
   return (
-    <section
-      id="resources"
-      className="border-t border-intellectual/5 bg-white py-14 sm:py-16"
-    >
+    <section id="resources" className="border-t border-slate-200 bg-slate-50 py-14 sm:py-16">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <div className="max-w-2xl">
-          <h2 className="font-display text-2xl font-semibold text-intellectual sm:text-3xl">
+          <h2 className="font-display text-2xl font-semibold text-slate-900 sm:text-3xl">
             {t.sectionLinksTitle}
           </h2>
-          <p className="mt-3 text-sm leading-relaxed text-intellectual-muted sm:text-base">
+          <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
             {t.sectionLinksDesc}
           </p>
         </div>
@@ -66,20 +63,16 @@ export function ResourceCards() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex h-full flex-col rounded-2xl border border-intellectual/8 bg-card-shine p-5 shadow-sm transition hover:border-champagne/40 hover:shadow-soft sm:p-6"
+                className="group flex h-full flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-slate-300 hover:shadow-md sm:p-6"
               >
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-intellectual/5 text-intellectual ring-1 ring-champagne/25 transition group-hover:bg-intellectual/10">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-indigo-600 transition group-hover:border-slate-300 group-hover:bg-white">
                     <Icon className="h-5 w-5" aria-hidden />
                   </span>
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-display text-lg font-semibold text-intellectual">
-                      {title}
-                    </h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-intellectual-muted">
-                      {description}
-                    </p>
-                    <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold tracking-wide text-champagne-dark">
+                    <h3 className="font-display text-lg font-semibold text-slate-900">{title}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{description}</p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold tracking-wide text-indigo-600">
                       {t.extHint}
                       <span aria-hidden className="translate-x-0 transition group-hover:translate-x-0.5">
                         →

@@ -159,10 +159,6 @@ export const copy: Record<Locale, Copy> = {
       "Navigate Singapore Direct School Admission (DSA) with trusted official links, a 2026 application countdown, and clear guides for parents — DSA Link (dsalink.sg).",
     navBrand: "DSA Link",
     navTagline: "Singapore · DSA 2026",
-    heroBadge: "Independent resource for families",
-    heroTitle: "Secondary Open Houses · DSA & Admissions PSLE COP Historical Dashboard",
-    heroSubtitle:
-      "One calm starting point for official MOE information, key dates, and secondary DSA pages — built for clarity and speed on mobile.",
     countdownLabel: "Time until DSA 2026 application closes",
     countdownComplete:
       "Countdown complete — please verify the latest deadline on MOE.",
@@ -285,10 +281,6 @@ export const copy: Record<Locale, Copy> = {
       "为家长整理新加坡直接收生计划（DSA）官方入口、2026 申请截止倒计时与实用指引 — DSA Link（dsalink.sg）。",
     navBrand: "DSA Link",
     navTagline: "新加坡 · DSA 2026",
-    heroBadge: "面向家庭的独立导航站",
-    heroTitle: "让 DSA 信息更好找、更好懂。",
-    heroSubtitle:
-      "从 MOE 权威页面、关键日期到各中学 DSA 入口，移动端优先，界面简洁，帮助您快速定位官方来源。",
     countdownLabel: "距离 DSA 2026 申请截止（参考大日期）",
     countdownComplete: "倒计时已结束 — 请以 MOE 最新公布为准。",
     countdownDays: "天",
@@ -406,10 +398,6 @@ export const copy: Record<Locale, Copy> = {
       "Navigasi Penempatan Langsung ke Sekolah Menengah (DSA) Singapura dengan pautan rasmi yang dipercayai, kiraan detik permohonan 2026, dan panduan jelas untuk ibu bapa — DSA Link (dsalink.sg).",
     navBrand: "DSA Link",
     navTagline: "Singapura · DSA 2026",
-    heroBadge: "Sumber bebas untuk keluarga",
-    heroTitle: "Penempatan Langsung ke Sekolah Menengah, dipermudahkan.",
-    heroSubtitle:
-      "Satu titik permulaan yang tenang untuk maklumat rasmi MOE, tarikh penting, dan halaman DSA sekolah menengah — direka untuk kejelasan dan kelajuan pada telefon pintar.",
     countdownLabel: "Masa sehingga permohonan DSA 2026 ditutup",
     countdownComplete:
       "Kiraan detik tamat — sila sahkan tarikh akhir terkini di laman MOE.",
@@ -535,10 +523,6 @@ export const copy: Record<Locale, Copy> = {
       "நம்பகமான அதிகாரப்பூர்வ இணைப்புகள், 2026 விண்ணப்ப முடிவுக்கான எண்ணிக்கை, தெளிவான பெற்றோர் வழிகாட்டிகளுடன் சிங்கப்பூர் நேரடி பள்ளி சேர்க்கை (DSA) — DSA Link (dsalink.sg).",
     navBrand: "DSA Link",
     navTagline: "சிங்கப்பூர் · DSA 2026",
-    heroBadge: "குடும்பங்களுக்கான சுயாதீன வளம்",
-    heroTitle: "நேரடி பள்ளி சேர்க்கை, எளிதாக்கப்பட்டது.",
-    heroSubtitle:
-      "அதிகாரப்பூர்வ MOE தகவல், முக்கிய தேதிகள் மற்றும் இடைநிலைப் பள்ளி DSA பக்கங்களுக்கு ஒரு அமைதியான தொடக்கப் புள்ளி — மொபைலில் தெளிவு மற்றும் வேகத்திற்காக உருவாக்கப்பட்டது.",
     countdownLabel: "DSA 2026 விண்ணப்பம் மூடப்படும் வரையிலான நேரம்",
     countdownComplete:
       "கவுண்ட்டவுன் முடிந்தது — சமீபத்திய காலக்கெடுவை MOE இல் சரிபார்க்கவும்.",

@@ -42,7 +42,7 @@ export function OpenHouseFieldGuide() {
     >
       {/* Section header */}
       <div className="mb-10 border-b border-slate-200 pb-8">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-indigo-600">
+        <p className="text-[10px] font-semibold tracking-[0.15em] text-indigo-600 normal-case">
           {t.fieldGuide_kicker}
         </p>
         <h2
@@ -80,7 +80,7 @@ export function OpenHouseFieldGuide() {
 
             {/* Insider tip */}
             <div className="mt-5 rounded-lg bg-indigo-50 px-4 py-3">
-              <span className="mb-1.5 inline-block text-[10px] font-bold uppercase tracking-wider text-indigo-500">
+              <span className="mb-1.5 inline-block text-[10px] font-bold tracking-wider text-indigo-600 normal-case">
                 {t.fieldGuide_insider_label}
               </span>
               <p className="text-xs leading-relaxed text-indigo-800">

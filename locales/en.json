@@ -1,4 +1,10 @@
 {
+  "heroTitle": "Secondary Open Houses · DSA & Admissions PSLE COP Historical Dashboard",
+  "heroSubtitle": "Official MOE entry points, key DSA dates, open-house listings, and three years of PSLE COP reference — optimized for fast, calm browsing on mobile.",
+  "heroBadge": "Independent resource for families",
+  "homeMetaTitle": "DSALink | DSA 2026 Hub — PSLE COP Tools & Secondary Open House Finder",
+  "homeMetaDescription": "Plan Secondary 1 and DSA from one Singapore hub: live application countdown, curated MOE entry points, a five-year PSLE COP explorer, and a May 2026 open-house directory with bilingual school names.",
+
   "dsaGuideKicker": "MOE 2026 · Direct School Admission (Secondary)",
   "dsaGuideHeroTitle": "2026 Singapore DSA-Sec Application Timeline",
   "dsaGuideHeroSubtitle": "A complete step-by-step guide from preparation to final allocation.",
@@ -84,17 +90,17 @@
   "dsa_about_title": "About DSALink",
   "dsa_about_body": "DSALink is an independent data platform developed and maintained by Terraflux Studio. All data is aggregated from the Ministry of Education (MOE) SchoolFinder and individual official school portals. This platform is not affiliated with the Ministry of Education, Singapore.",
 
-  "fieldGuide_kicker": "Open House 2026 · Expert Guide",
-  "fieldGuide_title": "2026 Secondary School Open House: The Expert Field Guide",
-  "fieldGuide_subtitle": "Three insider strategies to get more from every school visit — beyond the brochures.",
-  "fieldGuide_insider_label": "Insider",
-  "fieldGuide_card1_title": "The Culture Audit",
-  "fieldGuide_card1_body": "Don't just assess the buildings and facilities. Observe the student guides during the tour — are they genuinely proud of their school, or reciting a script? Walk through the canteen and watch how students interact. Authentic school culture reveals itself in small, unscripted moments.",
-  "fieldGuide_card1_tip": "Arrive 10 minutes early and watch students coming in before the programme starts. Confidence and genuine camaraderie at that moment is a stronger cultural signal than any guided tour.",
-  "fieldGuide_card2_title": "DSA Booth Tactics",
-  "fieldGuide_card2_body": "Most families ask generic questions at the DSA booth. Go deeper to reveal the school's real selection priorities — what they are actively looking for in this specific cycle.",
-  "fieldGuide_card2_tip": "Ask: 'Is the Applied Learning Programme open to all students, or only selected classes?' and 'What specific roles or positions is the school recruiting for in this DSA cycle?'",
-  "fieldGuide_card3_title": "The Commitment Reality",
-  "fieldGuide_card3_body": "A DSA offer, once accepted, is legally binding — your child cannot take part in the S1 Posting Exercise. Before applying, have an honest conversation: does their passion for this CCA genuinely match the school's programme? Four to six years matters more than name prestige.",
-  "fieldGuide_card3_tip": "Ask your child: 'Is this your choice, or mine?' DSA works best when the student has genuine ownership of the decision. Regret is very difficult to reverse once committed."
+  "fieldGuide_kicker": "2026 Open House · Master Guide",
+  "fieldGuide_title": "2026 Open House Master Guide",
+  "fieldGuide_subtitle": "Three focused checklists to get signal from every school visit — culture, programmes, and your DSA conversation.",
+  "fieldGuide_insider_label": "Tip",
+  "fieldGuide_card1_title": "Culture Audit",
+  "fieldGuide_card1_body": "Look beyond buildings: notice student morale and everyday interactions. Listen for how guides describe peers and teachers when questions go off-script — that reveals the real school vibe.",
+  "fieldGuide_card1_tip": "Spend a few minutes near arrival areas or the canteen; unchoreographed moments tell you more than a polished deck.",
+  "fieldGuide_card2_title": "The ALP / LLP Check",
+  "fieldGuide_card2_body": "Ask how Applied Learning (ALP) and Lifelong Learning (LLP) programmes work in practice — who can join, how cohorts are formed, and how support extends to different learner profiles.",
+  "fieldGuide_card2_tip": "Ask whether pathways are equally accessible to new students, and how the school measures outcomes beyond competitions — inclusivity shows up in specifics.",
+  "fieldGuide_card3_title": "DSA Booth Strategy",
+  "fieldGuide_card3_body": "Treat the booth as a short portfolio pitch: summarize evidence, connect achievements to the school’s programme, and end with one precise follow-up that fits your child.",
+  "fieldGuide_card3_tip": "Bring a one-page summary and your two strongest artifacts; ask what evidence selectors actually weight this cycle."
 }

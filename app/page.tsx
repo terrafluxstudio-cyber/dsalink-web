@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import homeEn from "@/locales/en.json";
 import { OpenHousePreview, ScoresEntryCard, ResourceCards } from "@/components/HomeDynamic";
 import { HeroSection } from "@/components/HeroSection";
 import { OpenHouseFieldGuide } from "@/components/OpenHouseFieldGuide";
@@ -6,11 +7,6 @@ import { SeoTextBlock } from "@/components/SeoTextBlock";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { buildHomeStructuredData } from "@/lib/seo";
-
-const HOME_PAGE_TITLE =
-  "DSALink | DSA 2026 Hub — PSLE COP Tools & Secondary Open House Finder";
-const HOME_PAGE_DESCRIPTION =
-  "Plan Secondary 1 and DSA from one Singapore hub: live application countdown, curated MOE entry points, a five-year PSLE COP explorer, and a May 2026 open-house directory with bilingual school names.";
 
 const ogImage = {
   url: "/opengraph-image",
@@ -21,21 +17,21 @@ const ogImage = {
 
 export function generateMetadata(): Metadata {
   return {
-    title: { absolute: HOME_PAGE_TITLE },
-    description: HOME_PAGE_DESCRIPTION,
+    title: { absolute: homeEn.homeMetaTitle },
+    description: homeEn.homeMetaDescription,
     alternates: {
       canonical: "/",
     },
     openGraph: {
-      title: HOME_PAGE_TITLE,
-      description: HOME_PAGE_DESCRIPTION,
+      title: homeEn.homeMetaTitle,
+      description: homeEn.homeMetaDescription,
       url: "/",
       images: [ogImage],
     },
     twitter: {
       card: "summary_large_image",
-      title: HOME_PAGE_TITLE,
-      description: HOME_PAGE_DESCRIPTION,
+      title: homeEn.homeMetaTitle,
+      description: homeEn.homeMetaDescription,
       images: [ogImage.url],
     },
   };
