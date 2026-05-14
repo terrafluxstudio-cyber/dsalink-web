@@ -1,0 +1,876 @@
+[
+  {
+    "id": "raffles-girls-school",
+    "nameEn": "Raffles Girls' School (Secondary)",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/raffles-girls-school-secondary",
+    "schoolTypes": ["Independent", "Girls"],
+    "academicTracks": ["IP"],
+    "psleCop2025": {
+      "g3NonAffiliated": null,
+      "ip": "AL 4–6",
+      "sapAffiliated": null,
+      "note": "IP affiliated posting band"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": ["Integrated Programme", "School-based Gifted Education", "Music Elective Programme", "Regional Studies Programme"],
+    "address": "2 Braddell Rise, Singapore 318871",
+    "officialWebsite": "http://www.rgs.edu.sg"
+  },
+  {
+    "id": "raffles-institution",
+    "nameEn": "Raffles Institution",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/raffles-institution-secondary",
+    "schoolTypes": ["Independent", "Boys"],
+    "academicTracks": ["IP"],
+    "psleCop2025": {
+      "g3NonAffiliated": null,
+      "ip": "AL 4–6",
+      "sapAffiliated": null,
+      "note": "IP affiliated posting band"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": ["Integrated Programme", "School-based Gifted Education", "Elective Programme in Malay Language for Secondary School (EMAS)", "Music Elective Programme", "Regional Studies Programme"],
+    "address": "1 Raffles Institution Lane, Singapore 575954",
+    "officialWebsite": "http://www.ri.edu.sg"
+  },
+  {
+    "id": "regent-secondary-school",
+    "nameEn": "Regent Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/regent-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "17–22",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 26–30, PG2: 23–25, PG3: 17–22"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "GREEN (Growing Responsible Ecology and Environment) Advocates",
+    "llpTitle": "Community Youth Leadership",
+    "otherProgrammes": [],
+    "address": "50 Choa Chu Kang North 5, Singapore 689621",
+    "officialWebsite": "http://regentsec.moe.edu.sg"
+  },
+  {
+    "id": "river-valley-high-school",
+    "nameEn": "River Valley High School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/river-valley-high-school-secondary",
+    "schoolTypes": ["Government", "Autonomous", "Co-educational", "SAP"],
+    "academicTracks": ["IP", "O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "AL 4(M)–9(M)",
+      "ip": null,
+      "sapAffiliated": "AL 4(M)–9(M)",
+      "note": "SAP school; IP and O-Level tracks"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": ["Integrated Programme", "Special Assistance Plan (SAP)"],
+    "address": "6 Boon Lay Avenue, Singapore 649961",
+    "officialWebsite": "https://rivervalleyhigh.moe.edu.sg/"
+  },
+  {
+    "id": "riverside-secondary-school",
+    "nameEn": "Riverside Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/riverside-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "8–14",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–27, PG2: 21–23, PG3: 8–14"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "Global Citizenship Education through Critical Social Inquiry",
+    "llpTitle": "Music & Performing Arts",
+    "otherProgrammes": ["Language Elective Programme (Tamil)"],
+    "address": "3 Woodlands Street 81, Singapore 738524",
+    "officialWebsite": "http://www.riversidesec.moe.edu.sg"
+  },
+  {
+    "id": "school-of-science-and-technology-singapore",
+    "nameEn": "School of Science and Technology, Singapore",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/school-of-science-and-technology-singapore",
+    "schoolTypes": ["Specialised Independent School", "Co-educational"],
+    "academicTracks": [],
+    "psleCop2025": {
+      "g3NonAffiliated": null,
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "Does not participate in S1 posting process; admits via DSA-Sec"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": ["STEAM (Science, Technology, Engineering, Aesthetics and Mathematics)"],
+    "address": "1 Technology Drive, Singapore 138572",
+    "officialWebsite": "http://www.sst.edu.sg"
+  },
+  {
+    "id": "school-of-the-arts-singapore",
+    "nameEn": "School of the Arts, Singapore",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/school-of-the-arts-singapore",
+    "schoolTypes": ["Specialised Independent School", "Co-educational"],
+    "academicTracks": ["IP"],
+    "psleCop2025": {
+      "g3NonAffiliated": null,
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "Does not participate in S1 posting process; admits via DSA-Sec"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": ["Integrated Programme"],
+    "address": "1 Zubir Said Drive, Singapore 227968",
+    "officialWebsite": "http://www.sota.edu.sg/"
+  },
+  {
+    "id": "sembawang-secondary-school",
+    "nameEn": "Sembawang Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/sembawang-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "18–22",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–29, PG2: 21–25, PG3: 18–22"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": "Community Youth Leadership",
+    "otherProgrammes": [],
+    "address": "30 Sembawang Crescent, Singapore 757704",
+    "officialWebsite": "http://www.sembawangsec.moe.edu.sg"
+  },
+  {
+    "id": "seng-kang-secondary-school",
+    "nameEn": "Seng Kang Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/seng-kang-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "14–19",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–27, PG2: 21–24, PG3: 14–19"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "STEM - Health and Food Science",
+    "llpTitle": "Sports & Outdoor Education — TREK for Life",
+    "otherProgrammes": [],
+    "address": "10 Compassvale Lane, Singapore 545090",
+    "officialWebsite": "http://www.sengkangsec.moe.edu.sg"
+  },
+  {
+    "id": "serangoon-garden-secondary-school",
+    "nameEn": "Serangoon Garden Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/serangoon-garden-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "12–22",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 26–30, PG2: 21–25, PG3: 12–22"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "Researching Society through Media Literacy",
+    "llpTitle": "Nurturing Confident and Compassionate Leaders",
+    "otherProgrammes": [],
+    "address": "21 Serangoon North Avenue 1, Singapore 555889",
+    "officialWebsite": "https://www.sgs.moe.edu.sg"
+  },
+  {
+    "id": "serangoon-secondary-school",
+    "nameEn": "Serangoon Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/serangoon-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "16–20",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 26–28, PG2: 21–25, PG3: 16–20"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "STEM - Future of Transportation",
+    "llpTitle": "Community Youth Leadership",
+    "otherProgrammes": [],
+    "address": "11 Upper Serangoon View, Singapore 534237",
+    "officialWebsite": "http://www.serangoonsec.moe.edu.sg"
+  },
+  {
+    "id": "singapore-chinese-girls-school",
+    "nameEn": "Singapore Chinese Girls' School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/singapore-chinese-girls-school",
+    "schoolTypes": ["Independent", "Girls"],
+    "academicTracks": ["O-Level", "IP"],
+    "psleCop2025": {
+      "g3NonAffiliated": "AL 7–17",
+      "ip": "AL 4–7",
+      "sapAffiliated": null,
+      "note": "IP: AL 4–7; O-Level PG3: AL 7–17, PG2: AL 6–8"
+    },
+    "affiliatedPrimarySchools": ["Singapore Chinese Girls' Primary School"],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": ["Bicultural Studies Programme"],
+    "address": "190 Dunearn Road, Singapore 309437",
+    "officialWebsite": "http://www.scgs.moe.edu.sg"
+  },
+  {
+    "id": "singapore-sports-school",
+    "nameEn": "Singapore Sports School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/singapore-sports-school",
+    "schoolTypes": ["Specialised Independent School", "Co-educational"],
+    "academicTracks": [],
+    "psleCop2025": {
+      "g3NonAffiliated": null,
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "Does not participate in DSA-Sec or S1 posting; school-based admission"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": [],
+    "address": "1 Champions Way, Singapore 737913",
+    "officialWebsite": "http://www.sportsschool.edu.sg"
+  },
+  {
+    "id": "spectra-secondary-school",
+    "nameEn": "Spectra Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/spectra-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": [],
+    "psleCop2025": {
+      "g3NonAffiliated": null,
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "Admits students eligible for Posting Group 1"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": [],
+    "address": "1 Woodlands Drive 64, Singapore 737758",
+    "officialWebsite": "https://www.spectra.edu.sg"
+  },
+  {
+    "id": "springfield-secondary-school",
+    "nameEn": "Springfield Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/springfield-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "10–22",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 27–30*, PG2: 22–25, PG3: 10–22"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "STEM - Health and Food Science",
+    "llpTitle": "Community Youth Leadership — GEARing Springfielders for Success",
+    "otherProgrammes": [],
+    "address": "30 Tampines Avenue 8, Singapore 529593",
+    "officialWebsite": "http://www.springfieldsec.moe.edu.sg"
+  },
+  {
+    "id": "st-andrews-school",
+    "nameEn": "St. Andrew's School (Secondary)",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/st-andrews-school-secondary",
+    "schoolTypes": ["Government-aided", "Boys"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "8–9",
+      "ip": null,
+      "sapAffiliated": "9–22",
+      "note": "Non-affiliated PG3: 8–9, PG2: 21–21, PG1: 25–27; Affiliated PG3: 9–22, PG2: 21–25, PG1: 25–30"
+    },
+    "affiliatedPrimarySchools": ["St Andrew's Junior School"],
+    "alpTitle": null,
+    "llpTitle": "Community Youth Leadership — Serve and Lead Together (SALT)",
+    "otherProgrammes": ["Enhanced Art Programme"],
+    "address": "15 Francis Thomas Drive, Singapore 359342",
+    "officialWebsite": "http://www.standrewssec.moe.edu.sg"
+  },
+  {
+    "id": "st-anthonys-canossian-secondary-school",
+    "nameEn": "St Anthony's Canossian Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/st-anthonys-canossian-secondary-school",
+    "schoolTypes": ["Government-aided", "Autonomous", "Girls"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "14–22",
+      "ip": null,
+      "sapAffiliated": "12–15",
+      "note": "Non-affiliated PG3: 14–22, PG2: 22–25, PG1: 26–29; Affiliated PG3: 12–15, PG2: 21–24, PG1: 25–30*"
+    },
+    "affiliatedPrimarySchools": ["St Anthony's Canossian Primary School", "Canossa Catholic Primary School"],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": [],
+    "address": "1600 Bedok North Avenue 4, Singapore 469700",
+    "officialWebsite": "https://stanthonyscanossiansec.moe.edu.sg"
+  },
+  {
+    "id": "st-gabriels-secondary-school",
+    "nameEn": "St Gabriel's Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/st-gabriels-secondary-school",
+    "schoolTypes": ["Government-aided", "Boys"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "10–15",
+      "ip": null,
+      "sapAffiliated": "11–22",
+      "note": "Non-affiliated PG3: 10–15, PG2: 21–24, PG1: 25–28; Affiliated PG3: 11–22, PG2: 23–25, PG1: 26–28"
+    },
+    "affiliatedPrimarySchools": ["St Gabriel's Primary School"],
+    "alpTitle": "STEM - Future of Transportation — Flight & Aerospace",
+    "llpTitle": "Community Youth Leadership",
+    "otherProgrammes": [],
+    "address": "24 Serangoon Avenue 1, Singapore 556140",
+    "officialWebsite": "http://www.stgabrielssec.moe.edu.sg"
+  },
+  {
+    "id": "st-hildas-secondary-school",
+    "nameEn": "St Hilda's Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/st-hildas-secondary-school",
+    "schoolTypes": ["Government-aided", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "12–14",
+      "ip": null,
+      "sapAffiliated": "12–22",
+      "note": "Non-affiliated PG3: 12–14, PG2: 21–23, PG1: 25–27; Affiliated PG3: 12–22, PG2: 22–25, PG1: 26–28"
+    },
+    "affiliatedPrimarySchools": ["St Hilda's Primary School"],
+    "alpTitle": "The Hildan Approach to Teaching Thinking through English Language Learning",
+    "llpTitle": "Develop a Whole Person through Sports and Outdoor Education",
+    "otherProgrammes": [],
+    "address": "2 Tampines Street 82, Singapore 528986",
+    "officialWebsite": "http://www.sthildassec.moe.edu.sg"
+  },
+  {
+    "id": "st-josephs-institution",
+    "nameEn": "St Joseph's Institution",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/st-josephs-institution-secondary",
+    "schoolTypes": ["Independent", "Boys"],
+    "academicTracks": ["O-Level", "IP"],
+    "psleCop2025": {
+      "g3NonAffiliated": "AL 7–12",
+      "ip": "AL 4–7",
+      "sapAffiliated": null,
+      "note": "IP: AL 4–7; O-Level PG3: AL 7–12, PG2: AL 4–8"
+    },
+    "affiliatedPrimarySchools": ["St Anthony's Primary School"],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": [],
+    "address": "38 Malcolm Road, Singapore 308274",
+    "officialWebsite": "http://www.sji.edu.sg"
+  },
+  {
+    "id": "st-margarets-school",
+    "nameEn": "St Margaret's School (Secondary)",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/st-margarets-school-secondary",
+    "schoolTypes": ["Government-aided", "Autonomous", "Girls"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "8–11",
+      "ip": null,
+      "sapAffiliated": "10–20",
+      "note": "Non-affiliated PG3: 8–11, PG2: 21–23, PG1: 25–26; Affiliated PG3: 10–20, PG2: 21–25, PG1: 25–28"
+    },
+    "affiliatedPrimarySchools": ["St Margaret's School (Primary)"],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": ["Enhanced Music Programme"],
+    "address": "111 Farrer Road, Singapore 259240",
+    "officialWebsite": "http://www.stmargaretssec.moe.edu.sg"
+  },
+  {
+    "id": "st-patricks-school",
+    "nameEn": "St Patrick's School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/st-patricks-school",
+    "schoolTypes": ["Government-aided", "Boys"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "11–11",
+      "ip": null,
+      "sapAffiliated": "13–20",
+      "note": "Non-affiliated PG3: 11–11, PG2: 21–22, PG1: 25–27; Affiliated PG3: 13–20, PG2: 21–25, PG1: 25–28"
+    },
+    "affiliatedPrimarySchools": ["St Anthony's Primary School"],
+    "alpTitle": "STEM - Emerging Technologies",
+    "llpTitle": "Music & Music Technology",
+    "otherProgrammes": [],
+    "address": "490 East Coast Road, Singapore 429058",
+    "officialWebsite": "http://www.stpatricks.moe.edu.sg"
+  },
+  {
+    "id": "swiss-cottage-secondary-school",
+    "nameEn": "Swiss Cottage Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/swiss-cottage-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "8–11",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–26, PG2: 21–22, PG3: 8–11"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "Applied Sciences for Sustainable Development",
+    "llpTitle": "Community Youth Leadership — Thoughtful Leadership Programme",
+    "otherProgrammes": [],
+    "address": "3 Bukit Batok Street 34, Singapore 659322",
+    "officialWebsite": "http://www.swisscottagesec.moe.edu.sg"
+  },
+  {
+    "id": "tampines-secondary-school",
+    "nameEn": "Tampines Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/tampines-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "13–19",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–27, PG2: 21–24, PG3: 13–19"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "STEM - Sustainability — Creative Engineering: Inter-disciplinary Authentic Problem Solving",
+    "llpTitle": "Music & Performing Arts — Creative Expressions: Character development through visual and performing arts",
+    "otherProgrammes": [],
+    "address": "252 Tampines Street 12, Singapore 529427",
+    "officialWebsite": "https://www.tampinessec.moe.edu.sg"
+  },
+  {
+    "id": "tanjong-katong-girls-school",
+    "nameEn": "Tanjong Katong Girls' School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/tanjong-katong-girls-school",
+    "schoolTypes": ["Government", "Autonomous", "Girls"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": null,
+      "ip": null,
+      "sapAffiliated": "AL 7–13",
+      "note": "Affiliated PG3: AL 7–13; Non-affiliated PG2: 21–23"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": ["Music Elective Programme"],
+    "address": "20 Dunman Lane, Singapore 439272",
+    "officialWebsite": "http://www.tkgs.moe.edu.sg"
+  },
+  {
+    "id": "tanjong-katong-secondary-school",
+    "nameEn": "Tanjong Katong Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/tanjong-katong-secondary-school",
+    "schoolTypes": ["Government", "Autonomous", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "AL 7–13",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG3: AL 7–13, PG2: 21–23"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": ["Elective Programme in Malay Language for Secondary School (EMAS)", "Language Elective Programme (Malay)"],
+    "address": "130 Haig Road, Singapore 438796",
+    "officialWebsite": "http://www.tanjongkatongsec.moe.edu.sg"
+  },
+  {
+    "id": "temasek-junior-college",
+    "nameEn": "Temasek Junior College",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/temasek-junior-college",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["A-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": null,
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "Junior College — 2026 JAE L1R5 net aggregate: Arts 6–7, Science 2–7"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": ["Music Elective Programme", "Language Elective Programme (Chinese)", "Engineering and Tech Programme and Scholarship", "Humanities Scholarship and Programme"],
+    "address": "2 Tampines Avenue 9, Singapore 529564",
+    "officialWebsite": "http://www.temasekjc.moe.edu.sg"
+  },
+  {
+    "id": "temasek-secondary-school",
+    "nameEn": "Temasek Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/temasek-secondary-school",
+    "schoolTypes": ["Government", "Autonomous", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "8–11",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–26, PG2: 21–22, PG3: 8–11"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": [],
+    "address": "600 Upper East Coast Road, Singapore 465561",
+    "officialWebsite": "https://temaseksec.moe.edu.sg"
+  },
+  {
+    "id": "unity-secondary-school",
+    "nameEn": "Unity Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/unity-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "12–18",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–28, PG2: 21–24, PG3: 12–18"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "Sustainability Education @ USS: The Future of Food",
+    "llpTitle": "Sports & Outdoor Education — Lead through Outdoor and Sporting Adventures",
+    "otherProgrammes": [],
+    "address": "20 Choa Chu Kang Street 62, Singapore 689143",
+    "officialWebsite": "http://www.unitysec.moe.edu.sg"
+  },
+  {
+    "id": "victoria-school",
+    "nameEn": "Victoria School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/victoria-school",
+    "schoolTypes": ["Government", "Autonomous", "Boys"],
+    "academicTracks": ["O-Level", "IP"],
+    "psleCop2025": {
+      "g3NonAffiliated": "AL 6–9",
+      "ip": "AL 5–8",
+      "sapAffiliated": null,
+      "note": "IP: AL 5–8; O-Level PG3: AL 6–9"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": ["Art Elective Programme", "Regional Studies Programme", "Malay Language (Special Programme)"],
+    "address": "2 Siglap Link, Singapore 448880",
+    "officialWebsite": "http://www.victoria.moe.edu.sg"
+  },
+  {
+    "id": "west-spring-secondary-school",
+    "nameEn": "West Spring Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/west-spring-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "11–17",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–27, PG2: 21–24, PG3: 11–17"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "Advocating for Sustainability (ActS)",
+    "llpTitle": "Community Youth Leadership",
+    "otherProgrammes": [],
+    "address": "61 Senja Road, Singapore 677737",
+    "officialWebsite": "http://www.westspringsec.moe.edu.sg"
+  },
+  {
+    "id": "westwood-secondary-school",
+    "nameEn": "Westwood Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/westwood-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "12–22",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–28, PG2: 21–25, PG3: 12–22"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "Innovation & Social Entrepreneurship",
+    "llpTitle": "Music & Performing Arts — Arts for Life!",
+    "otherProgrammes": [],
+    "address": "11 Jurong West Street 25, Singapore 648350",
+    "officialWebsite": "https://www.westwoodsec.moe.edu.sg"
+  },
+  {
+    "id": "whitley-secondary-school",
+    "nameEn": "Whitley Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/whitley-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "15–22",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 26–30*, PG2: 22–25, PG3: 15–22"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "Speech Communication Arts",
+    "llpTitle": "Community Youth Leadership — Active Citizenship for Social Change (ACSC)",
+    "otherProgrammes": [],
+    "address": "30 Bishan Street 24, Singapore 579747",
+    "officialWebsite": "http://www.whitleysec.moe.edu.sg"
+  },
+  {
+    "id": "woodgrove-secondary-school",
+    "nameEn": "Woodgrove Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/woodgrove-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "14–19",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–28, PG2: 21–24, PG3: 14–19"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "STEM for Sustainable Living in the Community",
+    "llpTitle": "Community Youth Leadership — Learners and Leaders for Life",
+    "otherProgrammes": [],
+    "address": "3 Woodlands Avenue 6, Singapore 738990",
+    "officialWebsite": "https://www.woodgrovesec.moe.edu.sg"
+  },
+  {
+    "id": "woodlands-ring-secondary-school",
+    "nameEn": "Woodlands Ring Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/woodlands-ring-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "17–22",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–29, PG2: 21–25, PG3: 17–22"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "STEM - Future of Transportation — The Robotics Education & Enterprise (TREE)",
+    "llpTitle": "Community Youth Leadership — Student Leadership Development through Involvement in the Community",
+    "otherProgrammes": [],
+    "address": "21 Woodlands Avenue 1, Singapore 739062",
+    "officialWebsite": "http://www.woodlandsringsec.moe.edu.sg"
+  },
+  {
+    "id": "woodlands-secondary-school",
+    "nameEn": "Woodlands Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/woodlands-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "15–22",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–28, PG2: 21–25, PG3: 15–22"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "STEM - Health and Food Science — Real Food, Real Science",
+    "llpTitle": "Community Youth Leadership — Paying it Forward: WDL's Glocal Leadership Programme",
+    "otherProgrammes": [],
+    "address": "11 Marsiling Road, Singapore 739111",
+    "officialWebsite": "http://www.woodlandssec.moe.edu.sg"
+  },
+  {
+    "id": "xinmin-secondary-school",
+    "nameEn": "Xinmin Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/xinmin-secondary-school",
+    "schoolTypes": ["Government", "Autonomous", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "8–13",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–28, PG2: 21–23, PG3: 8–13"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": [],
+    "address": "11 Hougang Avenue 8, Singapore 538789",
+    "officialWebsite": "https://www.xinminsec.moe.edu.sg/"
+  },
+  {
+    "id": "yio-chu-kang-secondary-school",
+    "nameEn": "Yio Chu Kang Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/yio-chu-kang-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "15–22",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–30, PG2: 23–25, PG3: 15–22"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "STEM - Technological Sustainability",
+    "llpTitle": "Music & Performing Arts — Character Development through the Arts, Media and Design",
+    "otherProgrammes": [],
+    "address": "3063 Ang Mo Kio Avenue 5, Singapore 569868",
+    "officialWebsite": "http://www.yiochukangsec.moe.edu.sg"
+  },
+  {
+    "id": "yishun-secondary-school",
+    "nameEn": "Yishun Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/yishun-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "12–20",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–27, PG2: 21–24, PG3: 12–20"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "ALP in Sonic Arts (Music, Media & Technology)",
+    "llpTitle": "Community Youth Leadership — Leading with Empathy, Serving with Compassion through the Arts",
+    "otherProgrammes": [],
+    "address": "4 Yishun Street 71, Singapore 768516",
+    "officialWebsite": "http://www.yishunsec.moe.edu.sg"
+  },
+  {
+    "id": "yishun-town-secondary-school",
+    "nameEn": "Yishun Town Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/yishun-town-secondary-school",
+    "schoolTypes": ["Government", "Autonomous", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "5–13",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–27, PG2: 21–22, PG3: 5–13"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": ["Language Elective Programme (Tamil)"],
+    "address": "6 Yishun Street 21, Singapore 768610",
+    "officialWebsite": "http://www.yishuntownsec.moe.edu.sg"
+  },
+  {
+    "id": "yuan-ching-secondary-school",
+    "nameEn": "Yuan Ching Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/yuan-ching-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "12–18",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–28, PG2: 21–24, PG3: 12–18"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "STEM - Future of Transportation",
+    "llpTitle": "Community Youth Leadership — Rise, Lead, Lift",
+    "otherProgrammes": [],
+    "address": "103 Yuan Ching Road, Singapore 618654",
+    "officialWebsite": "https://yuanchingsec.moe.edu.sg/"
+  },
+  {
+    "id": "yuhua-secondary-school",
+    "nameEn": "Yuhua Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/yuhua-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "15–20",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–28, PG2: 21–25, PG3: 15–20"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "Yuhua Changemakers",
+    "llpTitle": "Music & Performing Arts — M.E.L.O.D.Y. (Music Empowered Learners, Our Dynamic Yuhuans)",
+    "otherProgrammes": ["Enhanced Music Programme"],
+    "address": "35 Jurong West Street 41, Singapore 649406",
+    "officialWebsite": "http://www.yuhuasec.moe.edu.sg"
+  },
+  {
+    "id": "yusof-ishak-secondary-school",
+    "nameEn": "Yusof Ishak Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/yusof-ishak-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "7–15",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–27, PG2: 21–22, PG3: 7–15"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "STEM for the Strategic Development of a Sustainable and Smart City (S4TEM@YI)",
+    "llpTitle": "Community Youth Leadership — Nurturing Honourable Leaders for Tomorrow (YI LEAD+)",
+    "otherProgrammes": [],
+    "address": "8 Sumang Walk, Singapore 828676",
+    "officialWebsite": "http://www.yusofishaksec.moe.edu.sg"
+  },
+  {
+    "id": "yuying-secondary-school",
+    "nameEn": "Yuying Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/yuying-secondary-school",
+    "schoolTypes": ["Government-aided", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "11–22",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–29, PG2: 22–25, PG3: 11–22"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "Business & Entrepreneurship — Fostering Innovation through Design Thinking",
+    "llpTitle": "Community Youth Leadership — YUYING C.A.R.E.S — Collaborate, Act, Reflect, Empathise, Serve",
+    "otherProgrammes": [],
+    "address": "47 Hougang Avenue 1, Singapore 538884",
+    "officialWebsite": "http://www.yuyingsec.moe.edu.sg"
+  },
+  {
+    "id": "zhenghua-secondary-school",
+    "nameEn": "Zhenghua Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/zhenghua-secondary-school",
+    "schoolTypes": ["Government", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "14–20",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–27, PG2: 21–24, PG3: 14–20"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": "STEM - Future of Transportation",
+    "llpTitle": "Sports & Outdoor Education — Outdoor Education for Character & Leadership Development",
+    "otherProgrammes": [],
+    "address": "62 Bukit Panjang Ring Road, Singapore 679962",
+    "officialWebsite": "http://www.zhenghuasec.moe.edu.sg"
+  },
+  {
+    "id": "zhonghua-secondary-school",
+    "nameEn": "Zhonghua Secondary School",
+    "moeUrl": "https://www.moe.gov.sg/schoolfinder/schooldetail/zhonghua-secondary-school",
+    "schoolTypes": ["Government", "Autonomous", "Co-educational"],
+    "academicTracks": ["O-Level"],
+    "psleCop2025": {
+      "g3NonAffiliated": "8–12",
+      "ip": null,
+      "sapAffiliated": null,
+      "note": "PG1: 25–27, PG2: 21–23, PG3: 8–12"
+    },
+    "affiliatedPrimarySchools": [],
+    "alpTitle": null,
+    "llpTitle": null,
+    "otherProgrammes": ["Art Elective Programme", "Malay Language (Special Programme)"],
+    "address": "13 Serangoon Avenue 3, Singapore 556123",
+    "officialWebsite": "https://www.zhonghuasec.moe.edu.sg"
+  }
+]

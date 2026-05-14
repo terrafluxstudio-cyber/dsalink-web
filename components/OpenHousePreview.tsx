@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, CalendarDays } from "lucide-react";
 import { useMemo } from "react";
 import { SchoolDisplayName } from "@/components/SchoolDisplayName";
+import { SchoolLogo } from "@/components/SchoolLogo";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Locale } from "@/lib/i18n";
 import {
@@ -46,23 +47,23 @@ export function OpenHousePreview() {
       className="mt-10 w-full max-w-xl"
       aria-labelledby="open-house-preview-heading"
     >
-      <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+      <div className="rounded-xl border border-surface-warm bg-white p-4 shadow-card sm:p-5">
         <div className="flex items-start gap-3">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-700">
-            <CalendarDays className="h-5 w-5" aria-hidden />
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-surface-warm bg-surface text-intellectual">
+            <CalendarDays className="h-4 w-4" aria-hidden />
           </span>
           <div className="min-w-0 flex-1">
             <h2
               id="open-house-preview-heading"
-              className="font-display text-base font-semibold text-slate-900 sm:text-lg"
+              className="font-display text-[0.9375rem] font-semibold text-slate-900"
             >
               {t.openHousePreviewTitle}
             </h2>
-            <p className="mt-1 text-sm leading-relaxed text-slate-600">{t.openHousePreviewDesc}</p>
+            <p className="mt-0.5 text-[0.8125rem] leading-relaxed text-slate-500">{t.openHousePreviewDesc}</p>
           </div>
         </div>
 
-        <ol className="mt-5 space-y-3 border-t border-slate-200 pt-4">
+        <ol className="mt-4 space-y-2.5 border-t border-surface-warm pt-3.5">
           {events.map((ev, index) => {
             const status = resolveOpenHouseStatus(ev);
             const statusText =
@@ -73,13 +74,8 @@ export function OpenHousePreview() {
                   : t.openHouseStatusFinished;
             return (
               <li key={ev.id}>
-                <div className="flex gap-3 text-sm">
-                  <span
-                    className="w-7 shrink-0 pt-0.5 text-xs font-semibold tabular-nums text-slate-700"
-                    aria-hidden
-                  >
-                    {index + 1}.
-                  </span>
+                <div className="flex gap-2.5 text-sm">
+                  <SchoolLogo schoolId={ev.id} nameEn={ev.nameEn} size={28} />
                   <div className="min-w-0 flex-1">
                     <p className="font-medium text-slate-900">
                       <span className="text-slate-600">{formatCompactDate(ev, locale)}</span>
@@ -113,7 +109,7 @@ export function OpenHousePreview() {
         <div className="mt-5">
           <Link
             href="/open-houses"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-slate-300 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 sm:w-auto sm:min-w-[220px]"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-surface-warm bg-surface px-4 py-2 text-[0.8125rem] font-semibold text-intellectual transition hover:border-surface-subtle hover:bg-surface-subtle focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-intellectual sm:w-auto sm:min-w-[200px]"
           >
             {t.openHouseViewFullCalendar}
             <ArrowRight className="h-4 w-4 text-slate-700" aria-hidden />

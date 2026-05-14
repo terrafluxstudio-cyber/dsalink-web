@@ -2,9 +2,10 @@ import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = getSiteUrl();
+  const base = getSiteUrl(); // https://dsalink.sg — no trailing slash
   const now = new Date();
 
+  // Only list canonical URLs. Redirecting aliases (/dsa, /scores) are excluded.
   return [
     {
       url: base,
@@ -13,28 +14,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${base}/dsa-guide`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.96,
-    },
-    {
-      url: `${base}/dsa`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.98,
-    },
-    {
       url: `${base}/dsa-finder`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.98,
     },
     {
-      url: `${base}/scores`,
+      url: `${base}/dsa-guide`,
       lastModified: now,
       changeFrequency: "weekly",
-      priority: 0.95,
+      priority: 0.96,
+    },
+    {
+      url: `${base}/dsa-interview`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.93,
+    },
+    {
+      url: `${base}/schools`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.92,
+    },
+    {
+      url: `${base}/open-houses`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
       url: `${base}/psle-cop`,
@@ -43,10 +50,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
-      url: `${base}/open-houses`,
+      url: `${base}/faq`,
       lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
+      changeFrequency: "monthly",
+      priority: 0.94,
     },
   ];
 }

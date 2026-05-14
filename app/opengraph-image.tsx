@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 
 export const alt =
-  "DSALink — Singapore secondary school PSLE COP and open houses";
+  "DSALink — DSA 2026 Singapore strategy guide, secondary school directory, and open houses";
 
 export const size = {
   width: 1200,
@@ -46,19 +46,35 @@ export default function OpenGraphImage() {
             lineHeight: 1.25,
           }}
         >
-          Singapore PSLE COP · Secondary open houses · 2026
+          Beyond PSLE · DSA 2026 Strategy Guide
         </div>
         <div
           style={{
-            marginTop: 36,
-            fontSize: 20,
-            opacity: 0.88,
+            marginTop: 16,
+            fontSize: 22,
+            opacity: 0.9,
             maxWidth: 820,
             lineHeight: 1.45,
           }}
         >
-          Placeholder share preview — upload a final 1200×630 PNG in{" "}
-          <span style={{ opacity: 0.95 }}>public/</span> when ready.
+          The middle-stream pathway to a better-fit secondary school — before PSLE results are released.
+        </div>
+        <div
+          style={{
+            marginTop: 32,
+            display: "flex",
+            gap: 24,
+            fontSize: 16,
+            opacity: 0.75,
+          }}
+        >
+          <span>147 Singapore secondary schools</span>
+          <span>·</span>
+          <span>Interview prep</span>
+          <span>·</span>
+          <span>PSLE COP data</span>
+          <span>·</span>
+          <span>Open house calendar</span>
         </div>
       </div>
     ),

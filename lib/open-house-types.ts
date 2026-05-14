@@ -41,4 +41,6 @@ export type SchoolOpenHouse = {
   /** Optional calendar heading override when the open-house date is not finalised. */
   dateDisplayEn?: string;
   dateDisplayZh?: string;
+  /** True when sourceUrl is only the school homepage — no dedicated open house / DSA page found. */
+  isHomepageOnly?: boolean;
 };

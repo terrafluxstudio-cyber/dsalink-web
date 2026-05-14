@@ -28,65 +28,47 @@ export function CountdownBoard() {
           { label: t.countdownSeconds, value: pad2(seconds) },
         ];
 
-  if (!isMounted) {
-    return (
-      <div
-        className="w-full max-w-xl rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6"
-        aria-busy="true"
-        aria-label={t.countdownLabel}
-      >
-        <div className="mb-4 flex items-center gap-2 text-slate-900">
-          <Clock className="h-5 w-5 shrink-0 text-slate-700" aria-hidden />
-          <p className="text-sm font-medium leading-snug text-slate-900 sm:text-base">
-            {t.countdownLabel}
-          </p>
-        </div>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-          {Array.from({ length: 4 }).map((_, i) => (
-            <div
-              key={i}
-              className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-8 shadow-sm sm:py-10"
-            >
-              <div className="mx-auto h-8 w-12 animate-pulse rounded bg-slate-200 sm:h-9 sm:w-14" />
-              <div className="mx-auto mt-3 h-3 w-14 animate-pulse rounded bg-slate-200 sm:w-16" />
-            </div>
-          ))}
-        </div>
-        <p className="mt-4 text-center text-[11px] leading-relaxed text-slate-600 sm:text-xs">
-          {t.countdownDeadlineLine}
-        </p>
-      </div>
-    );
-  }
+  const skeletonCell = (
+    <div className="rounded-xl border border-surface-warm bg-white px-3 py-4 text-center shadow-card">
+      <div className="mx-auto h-7 w-10 animate-pulse rounded bg-surface-subtle sm:h-8 sm:w-12" />
+      <div className="mx-auto mt-2 h-2.5 w-10 animate-pulse rounded bg-surface-subtle" />
+    </div>
+  );
 
   return (
-    <div className="w-full max-w-xl rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
-      <div className="mb-4 flex items-center gap-2 text-slate-900">
-        <Clock className="h-5 w-5 shrink-0 text-slate-700" aria-hidden />
-        <p className="text-sm font-medium leading-snug text-slate-900 sm:text-base">
+    <div className="w-full max-w-xl rounded-xl border border-surface-warm bg-white p-4 shadow-card sm:p-5">
+      <div className="mb-3 flex items-center gap-2">
+        <Clock className="h-3.5 w-3.5 shrink-0 text-intellectual" aria-hidden />
+        <p className="text-[0.8125rem] font-medium text-slate-700">
           {t.countdownLabel}
         </p>
       </div>
-      {totalMs <= 0 ? (
-        <p className="text-sm text-slate-600">{t.countdownComplete}</p>
+
+      {!isMounted ? (
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-2.5" aria-busy="true" aria-label={t.countdownLabel}>
+          {Array.from({ length: 4 }).map((_, i) => <div key={i}>{skeletonCell}</div>)}
+        </div>
+      ) : totalMs <= 0 ? (
+        <p className="text-sm text-slate-500">{t.countdownComplete}</p>
       ) : (
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-2.5">
           {items.map((item) => (
             <div
               key={item.label}
-              className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 text-center shadow-sm sm:py-4"
+              className="rounded-xl border border-surface-warm bg-surface px-3 py-3 text-center"
             >
-              <div className="font-display text-2xl font-semibold tabular-nums text-slate-900 sm:text-3xl">
+              <div className="font-display text-2xl font-bold tabular-nums text-slate-900 sm:text-[1.75rem]">
                 {item.value}
               </div>
-              <div className="mt-1 text-[11px] font-medium leading-tight text-slate-600 sm:text-xs">
+              <div className="mt-0.5 text-[10px] font-medium uppercase tracking-wider text-slate-400 sm:text-[11px]">
                 {item.label}
               </div>
             </div>
           ))}
         </div>
       )}
-      <p className="mt-4 text-center text-[11px] leading-relaxed text-slate-600 sm:text-xs">
+
+      <p className="mt-3 text-center text-[11px] leading-relaxed text-slate-400">
         {t.countdownDeadlineLine}
       </p>
     </div>

@@ -18,6 +18,7 @@ import type {
   SchoolCopYearKey,
 } from "@/lib/data";
 import { SCHOOL_COP_HISTORY } from "@/lib/data";
+import { SchoolLogo } from "@/components/SchoolLogo";
 
 const YEARS: SchoolCopYearKey[] = ["2023", "2024", "2025"];
 
@@ -86,7 +87,9 @@ const CopSchoolRow = memo(function CopSchoolRow({
           onKeyDown={onKey}
           className="flex w-full cursor-pointer flex-col gap-2 p-3 text-left transition hover:bg-champagne-subtle/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne sm:flex-row sm:items-center sm:gap-3 sm:p-3.5"
         >
-          <div className="min-w-0 flex-1">
+          <div className="flex min-w-0 flex-1 items-start gap-2.5">
+            <SchoolLogo schoolId={row.id} nameEn={row.nameEn} size={32} />
+            <div className="min-w-0">
             <p className="break-words font-medium leading-snug text-intellectual">
               <SchoolDisplayName
                 locale={locale}
@@ -120,6 +123,7 @@ const CopSchoolRow = memo(function CopSchoolRow({
                     {t.scoreboardBadgeAuto}
                   </span>
                 ) : null}
+            </div>
             </div>
           </div>
 

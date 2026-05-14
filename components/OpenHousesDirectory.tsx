@@ -13,6 +13,7 @@ import {
   type OpenHouseStatus,
   type SchoolOpenHouse,
 } from "@/lib/data";
+import { SchoolLogo } from "@/components/SchoolLogo";
 
 const REGIONS: OpenHouseRegion[] = [
   "North",
@@ -28,6 +29,35 @@ const INITIAL_VISIBLE = 16;
 const LOAD_MORE_STEP = 36;
 const TBC_RANK = 1;
 const PAST_RANK = 2;
+
+/** Returns an i18n key for the urgency tag, or null if no urgency applies.
+ *  Uses SGT (UTC+8) calendar-day comparison so "Today/Tomorrow" always
+ *  matches the Singapore date, not a rolling 24/48-hour window. */
+function getUrgencyTagKey(ev: SchoolOpenHouse): keyof Copy | null {
+  const now = Date.now();
+  const start = Date.parse(ev.startsAt);
+  const end = Date.parse(ev.endsAt);
+  if (end <= now) return null; // past
+  if (start <= now) return "openHouseStatusOngoing";
+
+  // Shift to SGT (UTC+8) for calendar-day arithmetic
+  const SGT = 8 * 60 * 60 * 1000;
+  const todaySGT = new Date(now + SGT);
+  const startSGT = new Date(start + SGT);
+
+  // Truncate to midnight UTC (= midnight SGT after the shift above)
+  const todayMidnight = Date.UTC(todaySGT.getUTCFullYear(), todaySGT.getUTCMonth(), todaySGT.getUTCDate());
+  const startMidnight = Date.UTC(startSGT.getUTCFullYear(), startSGT.getUTCMonth(), startSGT.getUTCDate());
+  const diffDays = Math.round((startMidnight - todayMidnight) / 86_400_000);
+
+  if (diffDays === 0) return "openHouseUrgencyToday";
+  if (diffDays === 1) return "openHouseUrgencyTomorrow";
+  const dow = startSGT.getUTCDay(); // 0=Sun, 6=Sat
+  if (diffDays <= 7 && dow === 6) return "openHouseUrgencyThisSat";
+  if (diffDays <= 7 && dow === 0) return "openHouseUrgencyThisSun";
+  if (diffDays <= 7) return "openHouseUrgencyThisWeek";
+  return null;
+}
 
 function regionLabel(region: OpenHouseRegion, t: Copy): string {
   switch (region) {
@@ -298,7 +328,7 @@ export function OpenHousesDirectory() {
       {filteredSorted.length > 0 ? (
         <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-champagne/30 bg-champagne-subtle/45 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-champagne-dark sm:mt-4 sm:text-xs">
           <Calendar className="h-3.5 w-3.5" aria-hidden />
-          Sorted by Date
+          {t.openHouseSortedByDate}
         </div>
       ) : null}
 
@@ -306,6 +336,7 @@ export function OpenHousesDirectory() {
         {shown.map((ev) => {
           const status = resolveOpenHouseStatus(ev);
           const dateBadge = formatDateBadge(ev, locale);
+          const urgencyKey = getUrgencyTagKey(ev);
           return (
             <li key={ev.id} className="list-none py-2.5 sm:py-4">
               <article
@@ -318,6 +349,12 @@ export function OpenHousesDirectory() {
                       <Calendar className="h-3 w-3" aria-hidden />
                       {dateBadge}
                     </span>
+                    {urgencyKey && (
+                      <span className="inline-flex items-center rounded-full bg-red-500 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white sm:text-[10px]">
+                        {t[urgencyKey]}
+                      </span>
+                    )}
+                    <SchoolLogo schoolId={ev.id} nameEn={ev.nameEn} size={28} />
                     <h2 className="break-words font-display text-sm font-semibold leading-snug text-intellectual sm:text-base">
                       <SchoolDisplayName
                         locale={locale}
@@ -377,19 +414,24 @@ export function OpenHousesDirectory() {
                   </p>
                 </div>
                 <div className="flex shrink-0 flex-col justify-center">
-                  <a
-                    href={ev.sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={t.openHouseOfficialBooking}
-                    aria-label={t.openHouseOfficialBooking}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-intellectual text-white shadow-sm transition hover:bg-intellectual-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne sm:h-auto sm:w-auto sm:gap-2 sm:px-4 sm:py-2.5"
-                  >
-                    <ExternalLink className="h-4 w-4 sm:h-4 sm:w-4" aria-hidden />
-                    <span className="hidden max-w-[6.5rem] text-center text-xs font-semibold leading-tight sm:inline">
-                      {t.openHouseOfficialBooking}
-                    </span>
-                  </a>
+                  {(() => {
+                    const label = ev.isHomepageOnly ? t.openHouseSchoolLink : t.openHouseOfficialBooking;
+                    return (
+                      <a
+                        href={ev.sourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={label}
+                        aria-label={label}
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-intellectual text-white shadow-sm transition hover:bg-intellectual-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne sm:h-auto sm:w-auto sm:gap-2 sm:px-4 sm:py-2.5"
+                      >
+                        <ExternalLink className="h-4 w-4 sm:h-4 sm:w-4" aria-hidden />
+                        <span className="hidden max-w-[6.5rem] text-center text-xs font-semibold leading-tight sm:inline">
+                          {label}
+                        </span>
+                      </a>
+                    );
+                  })()}
                 </div>
               </article>
             </li>

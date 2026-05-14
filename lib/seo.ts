@@ -3,6 +3,7 @@ import {
   upcomingOpenHouses,
   type SchoolCopHistoryEntry,
 } from "@/lib/data";
+import { SCHOOL_DIRECTORY } from "@/lib/school-directory-data";
 
 const DEFAULT_SITE_URL = "https://dsalink.sg";
 
@@ -277,6 +278,157 @@ export function buildScoresStructuredData(): Record<string, unknown> {
         numberOfItems: itemListElement.length,
         isPartOf: { "@id": datasetId },
         itemListElement,
+      },
+    ],
+  };
+}
+
+/**
+ * /schools — School Directory: WebPage (CollectionPage) + ItemList of 147 schools
+ * as EducationalOrganization. Compact form to keep JSON-LD size reasonable.
+ */
+export function buildSchoolDirectoryStructuredData(): Record<string, unknown> {
+  const base = getSiteUrl();
+  const pageUrl = `${base}/schools`;
+  const pageId = `${pageUrl}#webpage`;
+  const listId = `${pageUrl}#school-list`;
+
+  const itemListElement = SCHOOL_DIRECTORY.map((s, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": ["EducationalOrganization", "School"],
+      "@id": `${pageUrl}#school-${i}`,
+      name: s.nameEn,
+      ...(s.nameZh ? { alternateName: s.nameZh } : {}),
+      url: s.officialWebsite,
+      sameAs: [s.moeUrl, s.dsaUrl].filter(Boolean),
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: s.address,
+        addressCountry: "SG",
+        addressLocality: "Singapore",
+      },
+    },
+  }));
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": pageId,
+        name: "Singapore Secondary School Directory 2026",
+        url: pageUrl,
+        description:
+          "All 147 MOE secondary schools in Singapore with PSLE COP 2025 posting bands, Applied Learning Programme, Lifelong Learning Programme, and direct links to DSA pages.",
+        inLanguage: "en-SG",
+        publisher: { "@id": `${base}/#organization` },
+        isPartOf: { "@id": `${base}/#website` },
+        mainEntity: { "@id": listId },
+      },
+      {
+        "@type": "ItemList",
+        "@id": listId,
+        name: "Singapore secondary schools — DSA directory 2026",
+        numberOfItems: itemListElement.length,
+        itemListElement,
+      },
+    ],
+  };
+}
+
+/**
+ * /faq — FAQPage schema targeting high-volume "DSA Singapore" People Also Ask queries.
+ */
+export function buildFaqStructuredData(): Record<string, unknown> {
+  const base = getSiteUrl();
+  const faqUrl = `${base}/faq`;
+
+  const faqs = [
+    {
+      q: "What is DSA-Sec (Direct School Admission) in Singapore?",
+      a: "DSA-Sec is the Direct School Admission exercise for Secondary One entry in Singapore. It allows Primary 6 students to gain admission to a secondary school based on their talents and achievements in areas such as sports, performing arts, science, technology, and language — before the release of PSLE results. MOE runs the exercise annually, with applications typically open from May to June.",
+    },
+    {
+      q: "Who is eligible for DSA-Sec 2026?",
+      a: "All Primary 6 students in Singapore — including those in MOE mainstream schools, Integrated Programme (IP) schools, and Special Assistance Plan (SAP) schools — are eligible to apply for DSA-Sec 2026. International students studying in Singapore may also apply, subject to each school's criteria.",
+    },
+    {
+      q: "When is the DSA-Sec 2026 application period?",
+      a: "The DSA-Sec 2026 application window runs from 6 May 2026 to 2 June 2026 at 16:30 SGT. Applications are submitted through the official MOE DSA-Sec Portal. Selection exercises (interviews, trials, auditions) are conducted by schools between June and September 2026.",
+    },
+    {
+      q: "How many schools can my child apply to under DSA-Sec?",
+      a: "There is no fixed cap on the number of schools a student may apply to for DSA-Sec. Each student may hold only one DSA confirmed offer at any time. A student can apply to multiple schools across different talent domains.",
+    },
+    {
+      q: "What is the Commitment Rule in DSA-Sec?",
+      a: "Students who accept a DSA-Sec offer are bound by the Commitment Rule. They must honour the offer and will be posted to that school through DSA — they cannot participate in the S1 Posting Exercise and cannot transfer based on PSLE results. Carefully research schools before accepting any offer.",
+    },
+    {
+      q: "What are the talent areas accepted for DSA-Sec?",
+      a: "Common DSA talent areas include: Sports (30+ disciplines), Performing Arts (music, dance, drama), Visual Arts, Science & Technology (robotics, coding, biomedical science), Humanities (debate, journalism), Language (bilingualism, literary arts), and Leadership. Each school publishes its own list of DSA talent domains.",
+    },
+    {
+      q: "What is PSLE COP and how does it relate to DSA?",
+      a: "PSLE COP (Cut-Off Point) is the posting score of the last student admitted to a secondary school through the S1 Posting Exercise. DSA students are posted to their confirmed school regardless of PSLE results, so COP does not directly affect DSA students — but it gives parents a sense of a school's academic profile. DSALink publishes 2023–2025 PSLE COP data for all 147 schools.",
+    },
+    {
+      q: "Can my child still take PSLE after accepting a DSA-Sec offer?",
+      a: "Yes. Students who have accepted a DSA-Sec offer must still sit the PSLE. Regardless of their PSLE score, they will be posted to their confirmed DSA school and will not participate in the S1 Posting Exercise.",
+    },
+    {
+      q: "What is the Integrated Programme (IP) in Singapore secondary schools?",
+      a: "The Integrated Programme (IP) allows students to bypass the O-Level examination and proceed directly to A-Levels, IB, or the NUS High Diploma after six years. IP schools include Raffles Institution, Hwa Chong Institution, NUS High School, SOTA, and others. Many IP schools admit students via DSA.",
+    },
+    {
+      q: "What is a SAP (Special Assistance Plan) school in Singapore?",
+      a: "SAP schools support bilingual education in English and Mandarin, with a focus on Chinese culture and language. Examples include Hwa Chong Institution, Nanyang Girls' High School, Catholic High School, and Dunman High School. SAP schools use Higher Chinese Language (HCL) grades in their PSLE COP notation.",
+    },
+    {
+      q: "What is an Applied Learning Programme (ALP) in Singapore schools?",
+      a: "Applied Learning Programmes (ALPs) are MOE-approved school-based programmes that connect academic learning to real-world contexts — for example, STEM, journalism, environmental sustainability, or the arts. Each secondary school has one ALP. ALP details are listed on MOE SchoolFinder and in the DSALink school directory.",
+    },
+    {
+      q: "What is a Lifelong Learning Programme (LLP) in Singapore schools?",
+      a: "Lifelong Learning Programmes (LLPs) focus on sports, outdoor education, performing arts, or community youth leadership to develop values and character. Each secondary school has one LLP. LLP details are listed on MOE SchoolFinder and in the DSALink school directory.",
+    },
+    {
+      q: "How can I prepare my child for DSA-Sec selection exercises?",
+      a: "Preparation depends on the talent area. For sports: consistent training and competition records. For performing arts: graded examination certifications (ABRSM, Trinity) and performance experience. For science and technology: competition results (SSEF, Olympiad) and project portfolios. For all areas: attend open houses (May 2026) to understand each school's criteria, and start building a portfolio in Primary 4–5.",
+    },
+    {
+      q: "Where can I find secondary school open house dates for May 2026?",
+      a: "DSALink's open house calendar at dsalink.sg/open-houses lists May 2026 sessions for all 147 MOE secondary schools — including dates, on-site vs. online mode, and direct links to each school's official DSA or admissions page.",
+    },
+  ];
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${faqUrl}#webpage`,
+        name: "DSA-Sec 2026 FAQ — Singapore Secondary School Admission Questions Answered",
+        url: faqUrl,
+        description:
+          "Answers to the most common questions about Singapore's DSA-Sec 2026: eligibility, application dates, commitment rules, talent areas, PSLE COP, IP, SAP, ALP and LLP.",
+        inLanguage: "en-SG",
+        publisher: { "@id": `${base}/#organization` },
+        isPartOf: { "@id": `${base}/#website` },
+        mainEntity: { "@id": `${faqUrl}#faqpage` },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${faqUrl}#faqpage`,
+        name: "DSA-Sec 2026 Frequently Asked Questions",
+        url: faqUrl,
+        mainEntity: faqs.map(({ q, a }) => ({
+          "@type": "Question",
+          name: q,
+          acceptedAnswer: { "@type": "Answer", text: a },
+        })),
       },
     ],
   };

@@ -19,7 +19,7 @@ export function LanguageToggle({ id = "language-select" }: { id?: string }) {
           const v = e.target.value;
           if (isLocale(v)) setLocale(v);
         }}
-        className="block w-full cursor-pointer appearance-none rounded-xl border border-slate-200 bg-white py-2.5 pl-3 pr-10 text-sm font-medium text-slate-700 shadow-sm outline-none transition hover:border-slate-300 focus-visible:border-slate-400 focus-visible:ring-2 focus-visible:ring-slate-400/25"
+        className="block w-full cursor-pointer appearance-none rounded-lg border border-white/20 bg-white/[0.12] py-2 pl-3 pr-8 text-[0.8125rem] font-medium text-white/85 outline-none transition hover:border-white/30 hover:bg-white/[0.18] focus-visible:border-white/35 focus-visible:ring-1 focus-visible:ring-white/15"
         aria-label={t.a11yLanguageSelector}
       >
         {locales.map((code) => (
@@ -29,7 +29,7 @@ export function LanguageToggle({ id = "language-select" }: { id?: string }) {
         ))}
       </select>
       <ChevronDown
-        className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500"
+        className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40"
         aria-hidden
       />
     </div>

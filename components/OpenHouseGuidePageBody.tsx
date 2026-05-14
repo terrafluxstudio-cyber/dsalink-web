@@ -297,7 +297,7 @@ export function OpenHouseGuidePageBody() {
                     {t[bodyKey]}
                   </p>
                   <div className="mt-4 rounded-lg border border-champagne/25 bg-champagne-subtle/40 px-4 py-3">
-                    <span className="mb-1 inline-block text-[10px] font-bold uppercase tracking-wider text-champagne-dark">
+                    <span className="mb-1 inline-block text-[10px] font-bold normal-case tracking-wide text-champagne-dark">
                       {t.fieldGuide_insider_label}
                     </span>
                     <p className="text-xs leading-relaxed text-intellectual-muted">
@@ -325,7 +325,7 @@ export function OpenHouseGuidePageBody() {
             </p>
             <div className="mt-8 grid gap-5 sm:grid-cols-2">
               <div className="rounded-2xl border border-intellectual/12 bg-white/95 p-5 shadow-soft ring-1 ring-champagne/15 sm:p-6">
-                <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-champagne-dark">
+                <p className="text-[10px] font-bold normal-case tracking-wide text-champagne-dark">
                   {t.ohGuide_q_cat1_label}
                 </p>
                 <ol className="mt-4 space-y-3.5">
@@ -342,7 +342,7 @@ export function OpenHouseGuidePageBody() {
                 </ol>
               </div>
               <div className="rounded-2xl border border-champagne/35 bg-gradient-to-br from-white to-champagne-subtle/50 p-5 shadow-sm ring-1 ring-intellectual/8 sm:p-6">
-                <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-champagne-dark">
+                <p className="text-[10px] font-bold normal-case tracking-wide text-champagne-dark">
                   {t.ohGuide_q_cat2_label}
                 </p>
                 <ol className="mt-4 space-y-3.5">
@@ -382,7 +382,7 @@ export function OpenHouseGuidePageBody() {
                   className={`flex flex-col rounded-2xl border p-5 shadow-soft sm:p-6 ${thisWeekend ? "border-champagne/50 bg-gradient-to-br from-white to-champagne-subtle/40 ring-1 ring-champagne/20" : "border-intellectual/12 bg-white/95 ring-1 ring-champagne/15"}`}
                 >
                   <div className="flex items-center gap-2">
-                    <span className="inline-block rounded-full border border-slate-200 bg-slate-50 px-2.5 py-0.5 text-[10px] font-semibold normal-case tracking-wide text-slate-600">
+                    <span className="inline-block rounded-full border border-slate-200 bg-slate-50 px-2.5 py-0.5 text-[10px] font-semibold normal-case tracking-wide text-slate-900">
                       {badge}
                     </span>
                     {thisWeekend && (
@@ -434,7 +434,7 @@ export function OpenHouseGuidePageBody() {
               <div className="rounded-2xl border border-green-200/80 bg-green-50/40 p-5 shadow-sm ring-1 ring-green-100/80 sm:p-6">
                 <div className="mb-4 flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-green-600" aria-hidden />
-                  <h3 style={{ textTransform: "none" }} className="font-display text-base font-semibold text-slate-800">
+                  <h3 style={{ textTransform: "none" }} className="font-display text-base font-semibold text-slate-900">
                     {t.ohGuide_greenFlags_title}
                   </h3>
                 </div>
@@ -455,7 +455,7 @@ export function OpenHouseGuidePageBody() {
               <div className="rounded-2xl border border-rose-200/80 bg-rose-50/40 p-5 shadow-sm ring-1 ring-rose-100/80 sm:p-6">
                 <div className="mb-4 flex items-center gap-2">
                   <XCircle className="h-5 w-5 text-rose-600" aria-hidden />
-                  <h3 style={{ textTransform: "none" }} className="font-display text-base font-semibold text-slate-800">
+                  <h3 style={{ textTransform: "none" }} className="font-display text-base font-semibold text-slate-900">
                     {t.ohGuide_redFlags_title}
                   </h3>
                 </div>

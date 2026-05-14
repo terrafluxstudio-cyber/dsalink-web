@@ -3,5 +3,32 @@
     "allow": [
       "Bash(npx tsc --noEmit)"
     ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "You are a pre-save validator for a Singapore education web project. Examine the file being written or edited and check for these three violations:\n1. CASING: Does the content contain any Tailwind 'uppercase' class on headings, labels, or UI text elements? If yes, block with decision=deny and explain which line.\n2. SCHOOL DATA: If the file path contains 'OpenHouseGuidePageBody', verify both 'NUS High School' and 'St. Andrew' appear in the FEATURED_SCHOOLS array with thisWeekend: true. If either is missing or lacks thisWeekend: true, block.\n3. CALENDAR: If any open house date strings are added or modified, verify they fall on weekends or valid 2026 Singapore public holidays.\nIf no violations found, allow. Input: $ARGUMENTS",
+            "statusMessage": "Checking casing, school list & calendar...",
+            "timeout": 30
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "if": "Bash(git commit *)",
+            "command": "CMD=$(jq -r '.tool_input.command'); echo \"$CMD\" | grep -qE 'git (commit|push)' || exit 0; VIOLATIONS=$(git diff --cached --name-only 2>/dev/null | grep -E '\\.(tsx|ts|jsx|js)$' | xargs grep -l '\\buppercase\\b' 2>/dev/null); if [ -n \"$VIOLATIONS\" ]; then echo \"{\\\"continue\\\": false, \\\"stopReason\\\": \\\"Pre-commit blocked: 'uppercase' Tailwind class found in staged files — replace with normal-case.\\\"}\"; exit 0; fi; BODY=\"components/OpenHouseGuidePageBody.tsx\"; if [ -f \"$BODY\" ]; then if ! grep -q 'NUS High' \"$BODY\" || ! grep -q 'St\\. Andrew' \"$BODY\"; then echo \"{\\\"continue\\\": false, \\\"stopReason\\\": \\\"Pre-commit blocked: NUS High School or St. Andrews missing from OpenHouseGuidePageBody.tsx.\\\"}\"; exit 0; fi; fi; exit 0",
+            "statusMessage": "Running pre-commit checks...",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
   }
 }

@@ -11,11 +11,11 @@ export function PageBreadcrumb({ crumbs }: { crumbs: Crumb[] }) {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="mb-5 flex items-center gap-1.5 text-xs text-intellectual-muted/65"
+      className="mb-5 flex items-center gap-1.5 text-xs text-white/35"
     >
       <Link
         href="/"
-        className="flex items-center gap-1 rounded-sm transition hover:text-intellectual"
+        className="flex items-center gap-1 rounded-sm transition hover:text-white/70"
       >
         <Home className="h-3.5 w-3.5" aria-hidden />
         <span>Home</span>
@@ -26,12 +26,12 @@ export function PageBreadcrumb({ crumbs }: { crumbs: Crumb[] }) {
           {crumb.href ? (
             <Link
               href={crumb.href}
-              className="rounded-sm transition hover:text-intellectual"
+              className="rounded-sm transition hover:text-white/70"
             >
               {crumb.label}
             </Link>
           ) : (
-            <span className="font-semibold text-intellectual">{crumb.label}</span>
+            <span className="font-medium text-white/60">{crumb.label}</span>
           )}
         </span>
       ))}

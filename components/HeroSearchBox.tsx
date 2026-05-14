@@ -22,7 +22,7 @@ export function HeroSearchBox() {
       <label className="relative block">
         <span className="sr-only">{placeholder}</span>
         <Search
-          className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-700"
+          className="pointer-events-none absolute left-4 top-1/2 h-4.5 w-4.5 -translate-y-1/2 text-slate-400"
           aria-hidden
         />
         <input
@@ -31,7 +31,7 @@ export function HeroSearchBox() {
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder}
           autoComplete="off"
-          className="w-full rounded-xl border border-slate-200 bg-white py-4 pl-12 pr-4 text-base font-semibold text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-slate-400 focus:ring-2 focus:ring-slate-400/30 sm:text-lg"
+          className="w-full rounded-xl border border-[#e3ded5] bg-white py-3.5 pl-11 pr-4 text-[0.9375rem] font-medium text-slate-900 shadow-card outline-none transition placeholder:font-normal placeholder:text-slate-400 focus:border-intellectual/40 focus:ring-2 focus:ring-intellectual/10"
         />
       </label>
     </form>

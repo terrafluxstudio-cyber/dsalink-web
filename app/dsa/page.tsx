@@ -65,7 +65,7 @@ export default async function DsaPage({
         }}
       />
       <SiteHeader />
-      <main className="border-t border-intellectual/5 bg-hero-mesh">
+      <main className="bg-surface">
         <DsaSearchCenter initialQuery={q ?? ""} />
       </main>
       <SiteFooter />

@@ -16,22 +16,21 @@ export function PageHeader({
   headingId,
 }: PageHeaderProps) {
   return (
-    <header className="border-b border-intellectual/[0.06] bg-white/70 backdrop-blur-sm">
-      <div className="mx-auto max-w-5xl px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14">
+    <header className="border-b border-white/[0.08] bg-intellectual">
+      <div className="mx-auto max-w-5xl px-4 pb-10 pt-7 sm:px-6 sm:pb-12 sm:pt-9">
         <PageBreadcrumb crumbs={[{ label: crumbLabel }]} />
-        <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-champagne-dark sm:text-xs">
+        <div className="mb-3 h-px w-10 rounded-full bg-champagne opacity-70" />
+        <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-champagne sm:text-[11px]">
           {kicker}
         </p>
         <h1
           id={headingId}
-          className="mt-3 max-w-[min(100%,44rem)] text-balance font-display text-[1.7rem] font-black leading-[1.12] tracking-tight sm:text-4xl sm:leading-[1.1] lg:text-[2.75rem] lg:leading-tight"
+          className="mt-2 max-w-[min(100%,44rem)] text-balance font-display text-[1.875rem] font-extrabold leading-[1.1] tracking-tight text-white sm:text-[2.5rem] sm:leading-[1.06]"
         >
-          <span className="bg-gradient-to-b from-slate-900 via-slate-800 to-blue-800 bg-clip-text text-transparent">
-            {title}
-          </span>
+          {title}
         </h1>
         {subtitle && (
-          <p className="mt-5 max-w-3xl text-base leading-relaxed text-intellectual-muted sm:mt-6 sm:text-lg">
+          <p className="mt-3 max-w-3xl text-[0.9375rem] leading-relaxed text-white/60 sm:text-base">
             {subtitle}
           </p>
         )}

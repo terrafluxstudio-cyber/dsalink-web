@@ -59,7 +59,7 @@ export default function OpenHousesPage() {
         }}
       />
       <SiteHeader />
-      <main className="border-t border-intellectual/5 bg-hero-mesh">
+      <main className="bg-surface">
         <OpenHousesDirectory />
       </main>
       <SiteFooter />

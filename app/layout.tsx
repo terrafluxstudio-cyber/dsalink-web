@@ -6,29 +6,29 @@ import { getSiteUrl } from "@/lib/seo";
 import "./globals.css";
 
 const siteTitle =
-  "DSALink | Singapore Secondary School PSLE COP & Open Houses 2026";
+  "DSALink | DSA 2026 Singapore — Strategy Guide, School Directory & Open Houses";
 
 const defaultOgImage = {
   url: "/opengraph-image",
   width: 1200,
   height: 630,
-  alt: "DSALink — Singapore PSLE COP, open houses, and DSA resources",
+  alt: "DSALink — DSA 2026 Singapore strategy guide, PSLE COP, and open houses",
 } as const;
 
 const siteDescription =
-  "Independent Singapore education companion for DSA timelines, PSLE COP insights, and secondary open-house season — cross-check everything on MOE.";
+  "Singapore's DSA 2026 strategy hub — middle-stream school selection, interview prep tips, 147-school directory with PSLE COP, and live May open house calendar for P6 families.";
 
 const siteKeywords = [
-  "PSLE COP Singapore",
-  "Singapore secondary school cut-off",
-  "PSLE posting score",
-  "secondary school open house 2026",
-  "MOE SchoolFinder",
   "DSA Singapore 2026",
-  "DSA secondary school",
-  "Singapore education",
+  "DSA interview tips Singapore",
+  "DSA secondary school strategy",
+  "AL 20 25 school selection Singapore",
+  "middle-stream DSA strategy Singapore",
+  "PSLE COP Singapore 2025",
+  "secondary school open house 2026",
+  "DSA talent areas Singapore",
   "DSALink",
-  "dsalink.sg",
+  "Singapore P6 secondary school admission",
 ] as const;
 
 const plusJakarta = Plus_Jakarta_Sans({

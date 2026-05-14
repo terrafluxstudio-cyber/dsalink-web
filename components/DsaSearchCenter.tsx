@@ -17,6 +17,7 @@ import {
   UI_TRANSLATIONS,
 } from "@/constants/ui_translations";
 import { SchoolDisplayName } from "@/components/SchoolDisplayName";
+import { SchoolLogo } from "@/components/SchoolLogo";
 import { useLanguage } from "@/contexts/LanguageContext";
 import dsaMasterRaw from "@/data/dsa_master_list.json";
 import mockRaw from "@/data/dsa_mock_schools.json";
@@ -53,7 +54,7 @@ type DsaSchool = {
 
 type IndexedSchool = DsaSchool & {
   searchText: string;
-  psleLabel: string;
+  psleLabel: string | null;
 };
 
 type TalentGroup = {
@@ -71,7 +72,10 @@ type TalentCategoryGroup = {
 
 const CATEGORIES: Category[] = ["Sports", "Arts", "STEM", "Leadership", "Languages"];
 const USE_MOCK = process.env.NEXT_PUBLIC_DSA_MOCK === "true";
-const SCHOOLS = (USE_MOCK ? mockRaw : dsaMasterRaw) as DsaSchool[];
+// Exclude specialised schools that use non-DSA admission pathways and have no MOE-listed talent areas
+const SCHOOLS = ((USE_MOCK ? mockRaw : dsaMasterRaw) as DsaSchool[]).filter(
+  (s) => s.dsaTalents.length > 0,
+);
 const DEFAULT_VISIBLE_TALENT_SCHOOLS = 8;
 const DEFAULT_VISIBLE_SCHOOLS = 20;
 
@@ -115,7 +119,7 @@ const COP_BY_NAME = new Map(
   SCHOOL_COP_HISTORY_DATA.map((row) => [copLookupKey(row.nameEn), row]),
 );
 
-function getCopLabel(school: DsaSchool): string {
+function getCopLabel(school: DsaSchool): string | null {
   const psleParts = [
     school.psleCop.pg3 ? `PG3: ${school.psleCop.pg3}` : null,
     school.psleCop.pg2 ? `PG2: ${school.psleCop.pg2}` : null,
@@ -142,7 +146,7 @@ function getCopLabel(school: DsaSchool): string {
   ].filter(Boolean);
   if (fallbackParts.length > 0) return fallbackParts.join(" | ");
 
-  return "PSLE estimate: check school profile";
+  return null;
 }
 
 function minScoreFromRange(value: string | null | undefined): number | null {
@@ -223,7 +227,7 @@ function talentGroupKey(group: TalentGroup): string {
 }
 
 export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }) {
-  const { locale } = useLanguage();
+  const { locale, t: copy } = useLanguage();
   const ui = UI_TRANSLATIONS[locale];
   const t = (key: DsaUiKey) => getDsaUiLabel(key, locale);
   const [query, setQuery] = useState(initialQuery);
@@ -328,8 +332,8 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
   return (
     <>
       <PageHeader
-        crumbLabel="DSA Talent Search"
-        kicker="Official MOE SchoolFinder DSA data · 2026"
+        crumbLabel={copy.dsaFinderCrumb}
+        kicker={copy.dsaFinderKicker}
         title={t("ui_hero_title")}
         subtitle={t("ui_hero_subtitle")}
       />
@@ -383,15 +387,15 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
           <div className="inline-flex rounded-xl bg-slate-100 p-1">
             <ModeButton active={mode === "school"} onClick={() => setMode("school")}>
-              By School
+              {copy.dsaFinderBySchool}
             </ModeButton>
             <ModeButton active={mode === "talent"} onClick={clearTalent}>
-              By Talent
+              {copy.dsaFinderByTalent}
             </ModeButton>
           </div>
           <div className="flex flex-wrap gap-1.5">
             <FilterButton active={category === "All"} onClick={() => setCategory("All")}>
-              All
+              {copy.scoreboardAll}
             </FilterButton>
             {CATEGORIES.map((cat) => (
               <FilterButton key={cat} active={category === cat} onClick={() => setCategory(cat)}>
@@ -507,6 +511,7 @@ function SchoolResults({
   showAll: boolean;
   onShowAll: () => void;
 }) {
+  const { t: copy } = useLanguage();
   const visibleSchools = showAll ? schools : schools.slice(0, DEFAULT_VISIBLE_SCHOOLS);
   const remainingCount = Math.max(schools.length - visibleSchools.length, 0);
 
@@ -518,7 +523,7 @@ function SchoolResults({
           {schools.length !== total ? ` (${total} total)` : ""}
         </p>
         <p className="hidden text-xs text-intellectual-muted sm:block">
-          Tap a talent tag to compare schools by that talent.
+          {copy.dsaFinderModeTip}
         </p>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
@@ -532,7 +537,7 @@ function SchoolResults({
           onClick={onShowAll}
           className="mt-5 w-full rounded-2xl border border-intellectual/10 bg-white px-4 py-3 text-sm font-semibold text-intellectual-muted transition hover:border-champagne/50 hover:bg-champagne-subtle/30 hover:text-intellectual"
         >
-          Show all {remainingCount} schools
+          {copy.dsaFinderShowAll.replace("{{n}}", String(remainingCount))}
         </button>
       ) : null}
       {schools.length === 0 ? <EmptyState /> : null}
@@ -549,16 +554,20 @@ function SchoolCard({
   onTalentClick: (talent: DsaTalent) => void;
   locale: Parameters<typeof getDsaTalentLabel>[1];
 }) {
+  const { t: copy } = useLanguage();
   return (
     <article className="rounded-2xl border border-intellectual/10 bg-white p-4 shadow-soft transition hover:-translate-y-0.5 hover:border-champagne/40 sm:p-5">
       <div className="flex items-start justify-between gap-3">
-        <div>
-          <h2 className="break-words font-display text-lg font-semibold leading-tight text-intellectual">
-            <SchoolDisplayName locale={locale} nameEn={school.schoolName} />
-          </h2>
-          <p className="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-champagne-dark">
-            {school.psleLabel}
-          </p>
+        <div className="flex min-w-0 items-start gap-2.5">
+          <SchoolLogo schoolId={school.slug} nameEn={school.schoolName} size={36} />
+          <div className="min-w-0">
+            <h2 className="break-words font-display text-lg font-semibold leading-tight text-intellectual">
+              <SchoolDisplayName locale={locale} nameEn={school.schoolName} />
+            </h2>
+            <p className="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-champagne-dark">
+              {school.psleLabel ?? copy.dsaFinderPsleEstimate}
+            </p>
+          </div>
         </div>
         <span className="shrink-0 rounded-full bg-intellectual/5 px-2.5 py-1 text-xs font-semibold text-intellectual-muted">
           {school.dsaTalents.length} tags
@@ -758,6 +767,7 @@ function TalentGroupAccordion({
   onSchoolListToggle: (key: string) => void;
   locale: Parameters<typeof getDsaTalentLabel>[1];
 }) {
+  const { t: copy } = useLanguage();
   const groupKey = talentGroupKey(group);
   const shouldLimit = group.schools.length > 10;
   const visibleSchools = shouldLimit && !expanded
@@ -784,12 +794,15 @@ function TalentGroupAccordion({
         {visibleSchools.map((school) => (
           <div
             key={`${group.area}-${school.id}`}
-            className="rounded-xl border border-intellectual/8 bg-slate-50/80 px-3 py-2 transition-all duration-300 hover:border-champagne/30 hover:bg-white hover:shadow-sm"
+            className="flex items-start gap-2 rounded-xl border border-intellectual/8 bg-slate-50/80 px-3 py-2 transition-all duration-300 hover:border-champagne/30 hover:bg-white hover:shadow-sm"
           >
-            <p className="break-words text-sm font-semibold text-intellectual">
-              <SchoolDisplayName locale={locale} nameEn={school.schoolName} />
-            </p>
-            <p className="mt-0.5 text-xs text-intellectual-muted">{school.psleLabel}</p>
+            <SchoolLogo schoolId={school.slug} nameEn={school.schoolName} size={24} />
+            <div className="min-w-0">
+              <p className="break-words text-sm font-semibold text-intellectual">
+                <SchoolDisplayName locale={locale} nameEn={school.schoolName} />
+              </p>
+              <p className="mt-0.5 text-xs text-intellectual-muted">{school.psleLabel ?? copy.dsaFinderPsleEstimate}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -800,7 +813,7 @@ function TalentGroupAccordion({
           className="mt-3 rounded-xl border border-champagne/40 bg-champagne-subtle px-3 py-2 text-xs font-semibold text-intellectual transition hover:border-champagne hover:bg-champagne/15"
           aria-expanded={expanded}
         >
-          {expanded ? "Show fewer schools" : `Show all ${group.schools.length} schools`}
+          {expanded ? copy.dsaFinderShowFewer : copy.dsaFinderShowAll.replace("{{n}}", String(group.schools.length))}
         </button>
       ) : null}
     </article>
@@ -808,9 +821,10 @@ function TalentGroupAccordion({
 }
 
 function EmptyState() {
+  const { t: copy } = useLanguage();
   return (
     <div className="rounded-2xl border border-dashed border-intellectual/15 bg-white p-8 text-center text-intellectual-muted">
-      No matches yet. Try a school name, CCA, or broader category.
+      {copy.dsaFinderNoMatches}
     </div>
   );
 }

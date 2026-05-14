@@ -21,7 +21,7 @@ const scoresOgImage = {
   url: "/opengraph-image",
   width: 1200,
   height: 630,
-  alt: "DSALink — PSLE COP historical dashboard for Singapore schools",
+  alt: "DSALink — PSLE COP Historical Dashboard for Singapore schools",
 } as const;
 
 export function generateMetadata(): Metadata {
@@ -30,13 +30,13 @@ export function generateMetadata(): Metadata {
     description: SCORES_PAGE_DESCRIPTION,
     keywords: [...SCORES_KEYWORDS],
     alternates: {
-      canonical: "/scores",
+      canonical: "/psle-cop",
     },
     openGraph: {
       title: SCORES_PAGE_TITLE,
       description: SCORES_PAGE_DESCRIPTION,
       type: "website",
-      url: "/scores",
+      url: "/psle-cop",
       siteName: "DSALink",
       images: [scoresOgImage],
     },
@@ -61,7 +61,7 @@ export default function ScoresPage() {
         dangerouslySetInnerHTML={{ __html: jsonString }}
       />
       <SiteHeader />
-      <main className="border-t border-intellectual/5 bg-hero-mesh">
+      <main className="bg-surface">
         <ScoresPageBody />
       </main>
       <SiteFooter />
