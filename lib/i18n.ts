@@ -1078,3 +1078,17 @@ export const copy: Record<Locale, Copy> = {
     ...dsaGuideTa,
   },
 };
+
+/** Raw `locales/*.json` bundle for a locale (home, DSA guide, field guide copy). */
+export function getGuideLocaleStrings(locale: Locale): DsaGuideStrings {
+  switch (locale) {
+    case "en":
+      return dsaGuideEn;
+    case "zh":
+      return dsaGuideZh;
+    case "ms":
+      return dsaGuideMs;
+    case "ta":
+      return dsaGuideTa;
+  }
+}

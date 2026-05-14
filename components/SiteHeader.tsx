@@ -45,7 +45,7 @@ export function SiteHeader() {
         {/* Desktop nav */}
         <nav
           className="hidden min-w-0 shrink-0 flex-nowrap items-center justify-end gap-0.5 md:flex"
-          aria-label="Primary"
+          aria-label={t.a11yNavPrimary}
         >
           {navLinks.map((link) => (
             <Link
@@ -86,7 +86,7 @@ export function SiteHeader() {
           id="mobile-nav-drawer"
           className="border-t border-white/10 bg-intellectual shadow-lg md:hidden"
         >
-          <nav className="mx-auto max-w-5xl px-4 py-3" aria-label="Mobile primary">
+          <nav className="mx-auto max-w-5xl px-4 py-3" aria-label={t.a11yNavMobilePrimary}>
             <div className="grid gap-0.5">
               {navLinks.map((link) => (
                 <Link

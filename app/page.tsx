@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import homeEn from "@/locales/en.json";
+import { cookies } from "next/headers";
+import { DSALINK_LOCALE_KEY } from "@/lib/constants";
+import { getGuideLocaleStrings, isLocale, type Locale } from "@/lib/i18n";
 import { OpenHousePreview, ScoresEntryCard, ResourceCards } from "@/components/HomeDynamic";
 import { DsaStrategySection } from "@/components/DsaStrategySection";
 import { HeroSection } from "@/components/HeroSection";
@@ -9,17 +11,22 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { buildHomeStructuredData } from "@/lib/seo";
 
-const ogImage = {
-  url: "/opengraph-image",
-  width: 1200,
-  height: 630,
-  alt: "DSALink — DSA 2026 Singapore strategy guide, PSLE COP, and open houses",
-} as const;
+export async function generateMetadata(): Promise<Metadata> {
+  const jar = await cookies();
+  const raw = jar.get(DSALINK_LOCALE_KEY)?.value;
+  const locale: Locale = raw && isLocale(raw) ? raw : "en";
+  const home = getGuideLocaleStrings(locale);
 
-export function generateMetadata(): Metadata {
+  const ogImage = {
+    url: "/opengraph-image",
+    width: 1200,
+    height: 630,
+    alt: home.homeOgImageAlt,
+  } as const;
+
   return {
-    title: { absolute: homeEn.homeMetaTitle },
-    description: homeEn.homeMetaDescription,
+    title: { absolute: home.homeMetaTitle },
+    description: home.homeMetaDescription,
     keywords: [
       "DSA Singapore 2026",
       "DSA interview tips Singapore",
@@ -35,8 +42,8 @@ export function generateMetadata(): Metadata {
       canonical: "/",
     },
     openGraph: {
-      title: homeEn.homeMetaTitle,
-      description: homeEn.homeMetaDescription,
+      title: home.homeMetaTitle,
+      description: home.homeMetaDescription,
       url: "/",
       siteName: "DSALink",
       type: "website",
@@ -44,8 +51,8 @@ export function generateMetadata(): Metadata {
     },
     twitter: {
       card: "summary_large_image",
-      title: homeEn.homeMetaTitle,
-      description: homeEn.homeMetaDescription,
+      title: home.homeMetaTitle,
+      description: home.homeMetaDescription,
       images: [ogImage.url],
     },
   };

@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react";
 import { ExternalLink, GraduationCap, Search } from "lucide-react";
+import { GlossaryTooltip } from "@/components/GlossaryTooltip";
+import { GLOSSARY, type GlossaryTerm } from "@/src/data/glossary";
 import { SchoolLogo } from "@/components/SchoolLogo";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SCHOOL_DIRECTORY, type SchoolDirectoryEntry } from "@/lib/school-directory-data";
@@ -18,6 +20,38 @@ function primaryCop(entry: SchoolDirectoryEntry): string | null {
     return snip.length > 60 ? snip.slice(0, 57) + "…" : snip;
   }
   return null;
+}
+
+function isGlossaryTerm(label: string): label is GlossaryTerm {
+  return Object.prototype.hasOwnProperty.call(GLOSSARY, label);
+}
+
+function CopDisplay({ cop }: { cop: string }) {
+  if (cop.startsWith("IP: ")) {
+    return (
+      <>
+        <GlossaryTooltip term="IP">IP</GlossaryTooltip>
+        {cop.slice(3)}
+      </>
+    );
+  }
+  if (cop.startsWith("SAP: ")) {
+    return (
+      <>
+        <GlossaryTooltip term="SAP">SAP</GlossaryTooltip>
+        {cop.slice(5)}
+      </>
+    );
+  }
+  const alMatch = cop.match(/^AL (.+)$/);
+  if (alMatch) {
+    return (
+      <>
+        <GlossaryTooltip term="AL">AL</GlossaryTooltip> {alMatch[1]}
+      </>
+    );
+  }
+  return <>{cop}</>;
 }
 
 function hasSAP(entry: SchoolDirectoryEntry) {
@@ -63,6 +97,42 @@ function matches(entry: SchoolDirectoryEntry, f: FilterState): boolean {
     else if (f.track === "specialised" && !entry.schoolTypes.some((t) => t.toLowerCase().includes("specialised"))) return false;
   }
   return true;
+}
+
+const GLOSS_STRIP_TERMS: readonly GlossaryTerm[] = [
+  "MOE",
+  "LEP",
+  "CCA",
+  "HCL",
+  "G1/G2/G3",
+  "SBGE",
+  "MEP",
+  "AEP",
+  "BSP",
+  "JIP",
+  "DSA-Sec",
+  "S1 posting",
+  "posting group",
+  "non-affiliated",
+  "talent area",
+  "selection exercise",
+  "Confirmed Offer",
+  "Waiting List",
+  "Critical Social Inquiry",
+];
+
+function SchoolsGlossaryStrip() {
+  return (
+    <div className="mt-4 rounded-lg border border-[#e9e4dc] bg-white/80 px-3 py-2.5 text-[0.7rem] leading-relaxed text-slate-600">
+      <span className="mr-1 font-medium text-slate-700">MOE / DSA terms:</span>
+      {GLOSS_STRIP_TERMS.map((term, i) => (
+        <span key={term} className="inline">
+          {i > 0 && <span className="text-slate-300"> · </span>}
+          <GlossaryTooltip term={term}>{term}</GlossaryTooltip>
+        </span>
+      ))}
+    </div>
+  );
 }
 
 /* ── badge component ─────────────────────────────────────────────── */
@@ -197,8 +267,24 @@ function SchoolCard({ entry }: { entry: SchoolDirectoryEntry }) {
           {entry.schoolTypes.some((t) => t === "Autonomous") && (
             <Badge variant="teal">Autonomous</Badge>
           )}
-          {hasSAP(entry) && <Badge variant="gold">{t.schoolsBadgeSap}</Badge>}
-          {hasIP(entry) && <Badge variant="purple">{t.schoolsBadgeIp}</Badge>}
+          {hasSAP(entry) && (
+            <Badge variant="gold">
+              {isGlossaryTerm(t.schoolsBadgeSap) ? (
+                <GlossaryTooltip term={t.schoolsBadgeSap}>{t.schoolsBadgeSap}</GlossaryTooltip>
+              ) : (
+                t.schoolsBadgeSap
+              )}
+            </Badge>
+          )}
+          {hasIP(entry) && (
+            <Badge variant="purple">
+              {isGlossaryTerm(t.schoolsBadgeIp) ? (
+                <GlossaryTooltip term={t.schoolsBadgeIp}>{t.schoolsBadgeIp}</GlossaryTooltip>
+              ) : (
+                t.schoolsBadgeIp
+              )}
+            </Badge>
+          )}
           {isBoys(entry) && <Badge variant="blue">{t.scoreboardGenderBoys}</Badge>}
           {isGirls(entry) && <Badge variant="pink">{t.scoreboardGenderGirls}</Badge>}
           {entry.region && (
@@ -224,14 +310,17 @@ function SchoolCard({ entry }: { entry: SchoolDirectoryEntry }) {
         {/* COP */}
         {cop && (
           <div>
-            <p className="mb-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-400">
-              {t.schoolsCop}
+            <p className="mb-0.5 text-[10px] font-semibold tracking-[0.12em] text-slate-400">
+              <GlossaryTooltip term="COP">{t.schoolsCop}</GlossaryTooltip>
             </p>
-            <p className="text-[0.875rem] font-semibold text-intellectual">{cop}</p>
+            <p className="text-[0.875rem] font-semibold text-intellectual">
+              <CopDisplay cop={cop} />
+            </p>
             {/* Show affiliated band if different from primary */}
             {entry.psle2025.g3Affiliated && entry.psle2025.g3 && (
               <p className="text-[0.75rem] text-slate-500">
-                Affiliated: AL {entry.psle2025.g3Affiliated}
+                <GlossaryTooltip term="affiliated school">Affiliated</GlossaryTooltip>:{" "}
+                <GlossaryTooltip term="AL">AL</GlossaryTooltip> {entry.psle2025.g3Affiliated}
               </p>
             )}
           </div>
@@ -240,8 +329,8 @@ function SchoolCard({ entry }: { entry: SchoolDirectoryEntry }) {
         {/* ALP */}
         {entry.alp && (
           <div>
-            <p className="mb-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-400">
-              {t.schoolsAlp}
+            <p className="mb-0.5 text-[10px] font-semibold tracking-[0.12em] text-slate-400">
+              <GlossaryTooltip term="ALP">{t.schoolsAlp}</GlossaryTooltip>
             </p>
             <p className="text-[0.8125rem] leading-snug text-slate-700">{entry.alp}</p>
           </div>
@@ -250,8 +339,8 @@ function SchoolCard({ entry }: { entry: SchoolDirectoryEntry }) {
         {/* LLP */}
         {entry.llp && (
           <div>
-            <p className="mb-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-400">
-              {t.schoolsLlp}
+            <p className="mb-0.5 text-[10px] font-semibold tracking-[0.12em] text-slate-400">
+              <GlossaryTooltip term="LLP">{t.schoolsLlp}</GlossaryTooltip>
             </p>
             <p className="text-[0.8125rem] leading-snug text-slate-700">{entry.llp}</p>
           </div>
@@ -260,8 +349,8 @@ function SchoolCard({ entry }: { entry: SchoolDirectoryEntry }) {
         {/* Affiliated primaries */}
         {entry.affiliatedPrimarySchools.length > 0 && (
           <div>
-            <p className="mb-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-400">
-              {t.schoolsAffPri}
+            <p className="mb-0.5 text-[10px] font-semibold tracking-[0.12em] text-slate-400">
+              <GlossaryTooltip term="affiliated school">{t.schoolsAffPri}</GlossaryTooltip>
             </p>
             <p className="text-[0.8125rem] text-slate-600">
               {entry.affiliatedPrimarySchools.join(" · ")}
@@ -272,12 +361,14 @@ function SchoolCard({ entry }: { entry: SchoolDirectoryEntry }) {
         {/* Other programmes */}
         {entry.otherProgrammes.length > 0 && (
           <div>
-            <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-400">
+            <p className="mb-1 text-[10px] font-semibold tracking-[0.12em] text-slate-400">
               {t.schoolsOtherProg}
             </p>
             <div className="flex flex-wrap gap-1">
               {entry.otherProgrammes.map((p) => (
-                <Badge key={p} variant="slate">{p}</Badge>
+                <Badge key={p} variant="slate">
+                  {isGlossaryTerm(p) ? <GlossaryTooltip term={p}>{p}</GlossaryTooltip> : p}
+                </Badge>
               ))}
             </div>
           </div>
@@ -329,6 +420,8 @@ export function SchoolsDirectory() {
         total={SCHOOL_DIRECTORY.length}
         shown={filtered.length}
       />
+
+      <SchoolsGlossaryStrip />
 
       {filtered.length === 0 ? (
         <div className="mt-16 text-center text-slate-500">{t.schoolsNoResults}</div>

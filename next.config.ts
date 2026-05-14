@@ -1,6 +1,12 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import type { NextConfig } from "next";
 
+/** Keeps file tracing on this app when another lockfile exists higher in the tree (see Next.js warning). */
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
+
 const nextConfig: NextConfig = {
+  outputFileTracingRoot: projectRoot,
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,

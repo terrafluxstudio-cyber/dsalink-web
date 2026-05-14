@@ -8,7 +8,7 @@ export function SeoTextBlock() {
   return (
     <section
       className="bg-surface-mesh"
-      aria-label="About DSALink and DSA-Sec resources"
+      aria-label={t.homeSeoSectionAriaLabel}
     >
       <div className="mx-auto max-w-4xl px-4 pb-20 pt-12 sm:px-6">
         <div className="flex flex-col gap-4">

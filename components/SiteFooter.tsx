@@ -10,7 +10,7 @@ type SiteFooterProps = {
 };
 
 export function SiteFooter({ scheduleNote }: SiteFooterProps) {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <footer className="border-t border-white/[0.08] bg-intellectual-dark">
@@ -36,8 +36,8 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
 
           {/* Column 2: Resources */}
           <div>
-            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.15em] text-white/30">
-              Resources
+            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-white/30">
+              {t.footerNavResourcesHeading}
             </p>
             <ul className="space-y-2.5">
               <li>
@@ -65,8 +65,8 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
 
           {/* Column 3: Data */}
           <div>
-            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.15em] text-white/30">
-              Data
+            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-white/30">
+              {t.footerNavDataHeading}
             </p>
             <ul className="space-y-2.5">
               <li>
@@ -91,7 +91,16 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
 
         {/* Bottom: legal disclaimer */}
         <div className="py-5">
-          <LegalDisclaimer scheduleNote={scheduleNote} rightsLine={t.footerRights} />
+          <LegalDisclaimer
+            locale={locale}
+            scheduleNote={scheduleNote}
+            rightsLine={t.footerRights}
+            disclaimerBody={t.legalDisclaimerBody}
+            logoAttribution={t.legalDisclaimerLogoAttribution}
+            lastUpdated={t.legalDisclaimerLastUpdated}
+            reportErrorLabel={t.legalDisclaimerReportError}
+            ariaLabel={t.legalDisclaimerAriaLabel}
+          />
         </div>
 
       </div>

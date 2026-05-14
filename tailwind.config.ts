@@ -78,9 +78,14 @@ const config: Config = {
             borderColor: "rgba(198,162,74,0.72)",
           },
         },
+        "glossary-pop": {
+          "0%": { opacity: "0", transform: "scale(0.96) translateY(4px)" },
+          "100%": { opacity: "1", transform: "scale(1) translateY(0)" },
+        },
       },
       animation: {
         "gold-breathe": "gold-breathe 2.75s ease-in-out infinite",
+        "glossary-pop": "glossary-pop 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards",
       },
     },
   },

@@ -39,16 +39,29 @@ export function HeroSection({ children }: { children?: ReactNode }) {
             {/* Key stats strip */}
             <div className="mt-5 grid grid-cols-3 overflow-hidden rounded-xl border border-surface-warm bg-white/80 backdrop-blur-sm">
               <div className="px-4 py-3 text-center">
-                <p className="font-display text-[1.375rem] font-extrabold tracking-tight text-intellectual">147</p>
-                <p className="mt-0.5 text-[11px] text-slate-500 normal-case">Secondary schools</p>
+                <p className="font-display text-[1.375rem] font-extrabold tracking-tight text-intellectual">
+                  {t.homeHeroStat1Value}
+                </p>
+                <p className="mt-0.5 text-[11px] text-slate-500 normal-case">{t.homeHeroStat1Label}</p>
               </div>
               <div className="border-x border-surface-warm px-4 py-3 text-center">
-                <p className="font-display text-[1.375rem] font-extrabold tracking-tight text-intellectual">1,300<span className="text-base">+</span></p>
-                <p className="mt-0.5 text-[11px] text-slate-500 normal-case">DSA talent areas</p>
+                <p className="font-display text-[1.375rem] font-extrabold tracking-tight text-intellectual">
+                  {t.homeHeroStat2Value.endsWith("+") ? (
+                    <>
+                      {t.homeHeroStat2Value.slice(0, -1)}
+                      <span className="text-base">+</span>
+                    </>
+                  ) : (
+                    t.homeHeroStat2Value
+                  )}
+                </p>
+                <p className="mt-0.5 text-[11px] text-slate-500 normal-case">{t.homeHeroStat2Label}</p>
               </div>
               <div className="px-4 py-3 text-center">
-                <p className="font-display text-[1.375rem] font-extrabold tracking-tight text-champagne-dark">Free</p>
-                <p className="mt-0.5 text-[11px] text-slate-500 normal-case">Always, for P6 families</p>
+                <p className="font-display text-[1.375rem] font-extrabold tracking-tight text-champagne-dark">
+                  {t.homeHeroStat3Value}
+                </p>
+                <p className="mt-0.5 text-[11px] text-slate-500 normal-case">{t.homeHeroStat3Label}</p>
               </div>
             </div>
 

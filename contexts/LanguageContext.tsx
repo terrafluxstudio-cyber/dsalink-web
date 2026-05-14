@@ -16,8 +16,22 @@ import {
   type Copy,
   type Locale,
 } from "@/lib/i18n";
+import { DSALINK_LOCALE_KEY } from "@/lib/constants";
 
-const STORAGE_KEY = "dsalink-locale";
+function readCookieLocale(): Locale | null {
+  if (typeof document === "undefined") return null;
+  const match = document.cookie.match(
+    new RegExp(`(?:^|; )${DSALINK_LOCALE_KEY}=([^;]*)`),
+  );
+  const raw = match?.[1];
+  if (!raw) return null;
+  try {
+    const decoded = decodeURIComponent(raw);
+    return isLocale(decoded) ? decoded : null;
+  } catch {
+    return null;
+  }
+}
 
 type LanguageContextValue = {
   locale: Locale;
@@ -29,8 +43,10 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 function readStoredLocale(): Locale | null {
   if (typeof window === "undefined") return null;
-  const raw = window.localStorage.getItem(STORAGE_KEY);
-  if (raw && isLocale(raw)) return raw;
+  const fromStorage = window.localStorage.getItem(DSALINK_LOCALE_KEY);
+  if (fromStorage && isLocale(fromStorage)) return fromStorage;
+  const fromCookie = readCookieLocale();
+  if (fromCookie) return fromCookie;
   if (typeof navigator !== "undefined") {
     const languages = [
       navigator.language,
@@ -56,7 +72,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const setLocale = useCallback((next: Locale) => {
     setLocaleState(next);
     try {
-      window.localStorage.setItem(STORAGE_KEY, next);
+      window.localStorage.setItem(DSALINK_LOCALE_KEY, next);
+      document.cookie = `${DSALINK_LOCALE_KEY}=${encodeURIComponent(next)}; Path=/; Max-Age=31536000; SameSite=Lax`;
     } catch {
       /* ignore quota / private mode */
     }

@@ -1,10 +1,11 @@
+import type { ReactNode } from "react";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 
 interface PageHeaderProps {
   crumbLabel: string;
   kicker: string;
   title: string;
-  subtitle?: string;
+  subtitle?: ReactNode;
   headingId?: string;
 }
 
@@ -20,9 +21,9 @@ export function PageHeader({
       <div className="mx-auto max-w-5xl px-4 pb-10 pt-7 sm:px-6 sm:pb-12 sm:pt-9">
         <PageBreadcrumb crumbs={[{ label: crumbLabel }]} />
         <div className="mb-3 h-px w-10 rounded-full bg-champagne opacity-70" />
-        <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-champagne sm:text-[11px]">
+        <div className="mb-3 text-[10px] font-bold tracking-[0.18em] text-champagne sm:text-[11px]">
           {kicker}
-        </p>
+        </div>
         <h1
           id={headingId}
           className="mt-2 max-w-[min(100%,44rem)] text-balance font-display text-[1.875rem] font-extrabold leading-[1.1] tracking-tight text-white sm:text-[2.5rem] sm:leading-[1.06]"

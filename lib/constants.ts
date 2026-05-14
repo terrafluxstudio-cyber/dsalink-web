@@ -5,6 +5,9 @@
  */
 export const DSA_DEADLINE_ISO = "2026-06-02T16:30:00+08:00";
 
+/** Cookie + localStorage key for UI language (see `LanguageProvider`). */
+export const DSALINK_LOCALE_KEY = "dsalink-locale";
+
 /**
  * Primary hero / MOE CTA URL — official MOE site.
  * Override at build/runtime with `NEXT_PUBLIC_MOE_PRIMARY_CTA_URL`.
