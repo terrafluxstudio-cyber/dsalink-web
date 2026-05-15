@@ -1,6 +1,7 @@
 /**
- * Concise MOE-aligned glosses for school / DSA / posting terminology.
- * Keys are lookup identifiers for {@link GlossaryTooltip}.
+ * Concise MOE-aligned glosses for school / DSA / posting terminology (English fallback).
+ * Keys are lookup identifiers for {@link GlossaryTooltip}; definitions in other locales
+ * resolve from `locales/*.json` keys listed in {@link GLOSSARY_I18N_KEY}.
  */
 export const GLOSSARY = {
   ALP: "Applied Learning Programme — a school-based programme that connects academic knowledge and skills to real-world professional and industry contexts.",
@@ -47,9 +48,54 @@ export const GLOSSARY = {
     "Shorthand for Critical Social Inquiry and Media Literacy — develops critical perspectives on society and media within the English Language curriculum.",
   AL: "Achievement Level (AL) — the PSLE score band (AL 1–8 per subject) used to derive an overall PSLE score for posting purposes.",
   PSLE: "Primary School Leaving Examination — the national examination at the end of primary education used for Secondary 1 posting.",
+  "Elective Programme in Malay Language for Secondary School (EMAS)":
+    "Elective Programme in Malay Language for Secondary School (EMAS) — an MOE programme for secondary students with strong aptitude in Malay Language to study the language at a higher level.",
+  "Language Elective Programme (Malay)":
+    "Language Elective Programme (Malay) — the MOE Language Elective Programme track in Malay for students with strong aptitude, taken alongside the regular Malay Language course.",
+  "Elective Programme in Malay Language (EMAS)":
+    "Elective Programme in Malay Language (EMAS) — the EMAS elective track (secondary) for students with strong aptitude in Malay Language; naming may appear with or without “for Secondary School”.",
 } as const;
 
 export type GlossaryTerm = keyof typeof GLOSSARY;
+
+/** i18n key in `locales/*.json` for the localized tooltip definition (all locales). */
+export const GLOSSARY_I18N_KEY: Record<GlossaryTerm, string> = {
+  ALP: "glossaryDefAlp",
+  LLP: "glossaryDefLlp",
+  SAP: "glossaryDefSap",
+  LEP: "glossaryDefLep",
+  DSA: "glossaryDefDsa",
+  "DSA-Sec": "glossaryDefDsaSec",
+  IP: "glossaryDefIp",
+  "O-Level": "glossaryDefOLevel",
+  SP: "glossaryDefSp",
+  COP: "glossaryDefCop",
+  MOE: "glossaryDefMoe",
+  CCA: "glossaryDefCca",
+  HCL: "glossaryDefHcl",
+  "G1/G2/G3": "glossaryDefG1g2g3",
+  SBGE: "glossaryDefSbge",
+  MEP: "glossaryDefMep",
+  AEP: "glossaryDefAep",
+  BSP: "glossaryDefBsp",
+  JIP: "glossaryDefJip",
+  "S1 posting": "glossaryDefS1Posting",
+  "posting group": "glossaryDefPostingGroup",
+  "affiliated school": "glossaryDefAffiliatedSchool",
+  "non-affiliated": "glossaryDefNonAffiliated",
+  "talent area": "glossaryDefTalentArea",
+  "selection exercise": "glossaryDefSelectionExercise",
+  "Confirmed Offer": "glossaryDefConfirmedOffer",
+  "Waiting List": "glossaryDefWaitingList",
+  "Critical Social Inquiry and Media Literacy": "glossaryDefCriticalSocialInquiryAndMediaLiteracy",
+  "Critical Social Inquiry": "glossaryDefCriticalSocialInquiry",
+  AL: "glossaryDefAl",
+  PSLE: "glossaryDefPsle",
+  "Elective Programme in Malay Language for Secondary School (EMAS)":
+    "glossaryDefElectiveProgrammeInMalayLanguageForSecondarySchoolEmas",
+  "Language Elective Programme (Malay)": "glossaryDefLanguageElectiveProgrammeMalay",
+  "Elective Programme in Malay Language (EMAS)": "glossaryDefElectiveProgrammeInMalayLanguageEmas",
+};
 
 export function getGlossaryDefinition(term: GlossaryTerm): string {
   return GLOSSARY[term];

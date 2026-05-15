@@ -9,7 +9,21 @@ import {
   type KeyboardEvent,
   type PointerEvent,
 } from "react";
-import { getGlossaryDefinition, type GlossaryTerm } from "@/src/data/glossary";
+import { useLanguage } from "@/contexts/LanguageContext";
+import type { Copy } from "@/lib/i18n";
+import {
+  GLOSSARY_I18N_KEY,
+  getGlossaryDefinition,
+  type GlossaryTerm,
+} from "@/src/data/glossary";
+
+function resolveGlossaryDefinition(t: Copy, term: GlossaryTerm): string {
+  const k = GLOSSARY_I18N_KEY[term] as keyof Copy;
+  const localized = t[k];
+  return typeof localized === "string" && localized.trim().length > 0
+    ? localized
+    : getGlossaryDefinition(term);
+}
 
 function useCoarsePointer(): boolean {
   const [coarse, setCoarse] = useState(false);
@@ -35,6 +49,7 @@ export type GlossaryTooltipProps = {
 };
 
 export function GlossaryTooltip({ term, children }: GlossaryTooltipProps) {
+  const { t } = useLanguage();
   const [open, setOpen] = useState(false);
   const coarse = useCoarsePointer();
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -53,7 +68,7 @@ export function GlossaryTooltip({ term, children }: GlossaryTooltipProps) {
 
   useEffect(() => () => cancelClose(), [cancelClose]);
 
-  const definition = getGlossaryDefinition(term);
+  const definition = resolveGlossaryDefinition(t, term);
   const label = children ?? term;
 
   const onPointerEnterTrigger = (_e: PointerEvent) => {

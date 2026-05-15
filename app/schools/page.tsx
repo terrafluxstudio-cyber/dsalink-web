@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { GlossaryTooltip } from "@/components/GlossaryTooltip";
 import { SchoolsDirectory } from "@/components/SchoolsDirectory";
-import { PageHeader } from "@/components/PageHeader";
+import { SchoolsPageHeader } from "@/components/SchoolsPageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { buildSchoolDirectoryStructuredData } from "@/lib/seo";
@@ -38,28 +37,7 @@ export default function SchoolsPage() {
       />
       <SiteHeader />
       <main>
-        <PageHeader
-          crumbLabel="School Directory"
-          kicker="2026 · 147 Secondary Schools"
-          title="School Directory"
-          subtitle={
-            <>
-              All 147 <GlossaryTooltip term="MOE">MOE</GlossaryTooltip> secondary schools —{" "}
-              <GlossaryTooltip term="PSLE">PSLE</GlossaryTooltip>{" "}
-              <GlossaryTooltip term="COP">COP</GlossaryTooltip> 2025 posting bands,{" "}
-              <GlossaryTooltip term="ALP">Applied Learning Programme</GlossaryTooltip>,{" "}
-              <GlossaryTooltip term="LLP">Lifelong Learning Programme</GlossaryTooltip>, and direct links
-              to each school&apos;s <GlossaryTooltip term="DSA">DSA</GlossaryTooltip> page and official
-              website. Schools without the <GlossaryTooltip term="IP">IP</GlossaryTooltip> typically offer{" "}
-              <GlossaryTooltip term="O-Level">O-Level</GlossaryTooltip> or{" "}
-              <GlossaryTooltip term="SP">SP</GlossaryTooltip> programmes. Programmes such as{" "}
-              <GlossaryTooltip term="Critical Social Inquiry and Media Literacy">
-                Critical Social Inquiry and Media Literacy
-              </GlossaryTooltip>{" "}
-              are offered in the English Language curriculum at some schools.
-            </>
-          }
-        />
+        <SchoolsPageHeader />
         <div className="bg-surface">
           <SchoolsDirectory />
         </div>

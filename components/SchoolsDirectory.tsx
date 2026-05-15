@@ -122,9 +122,10 @@ const GLOSS_STRIP_TERMS: readonly GlossaryTerm[] = [
 ];
 
 function SchoolsGlossaryStrip() {
+  const { t } = useLanguage();
   return (
     <div className="mt-4 rounded-lg border border-[#e9e4dc] bg-white/80 px-3 py-2.5 text-[0.7rem] leading-relaxed text-slate-600">
-      <span className="mr-1 font-medium text-slate-700">MOE / DSA terms:</span>
+      <span className="mr-1 font-medium text-slate-700">{t.schoolsGlossaryStripLabel}</span>
       {GLOSS_STRIP_TERMS.map((term, i) => (
         <span key={term} className="inline">
           {i > 0 && <span className="text-slate-300"> · </span>}
@@ -237,7 +238,7 @@ function FilterBar({ filters, onChange, total, shown }: {
             onClick={() => onChange(INIT)}
             className="rounded-lg border border-[#e3ded5] bg-white px-3 py-2 text-[0.8125rem] font-medium text-slate-500 transition hover:border-slate-300 hover:text-slate-700"
           >
-            ✕ Reset
+            {t.schoolsFilterReset}
           </button>
         )}
 
@@ -262,10 +263,10 @@ function SchoolCard({ entry }: { entry: SchoolDirectoryEntry }) {
         {/* Badges row */}
         <div className="mb-2 flex flex-wrap gap-1">
           {entry.schoolTypes.includes("Independent") && (
-            <Badge variant="gold">Independent</Badge>
+            <Badge variant="gold">{t.schoolsBadgeIndependent}</Badge>
           )}
-          {entry.schoolTypes.some((t) => t === "Autonomous") && (
-            <Badge variant="teal">Autonomous</Badge>
+          {entry.schoolTypes.some((st) => st === "Autonomous") && (
+            <Badge variant="teal">{t.schoolsBadgeAutonomous}</Badge>
           )}
           {hasSAP(entry) && (
             <Badge variant="gold">
@@ -319,7 +320,8 @@ function SchoolCard({ entry }: { entry: SchoolDirectoryEntry }) {
             {/* Show affiliated band if different from primary */}
             {entry.psle2025.g3Affiliated && entry.psle2025.g3 && (
               <p className="text-[0.75rem] text-slate-500">
-                <GlossaryTooltip term="affiliated school">Affiliated</GlossaryTooltip>:{" "}
+                <GlossaryTooltip term="affiliated school">{t.scoreboardBadgeAffiliated}</GlossaryTooltip>
+                {": "}
                 <GlossaryTooltip term="AL">AL</GlossaryTooltip> {entry.psle2025.g3Affiliated}
               </p>
             )}
