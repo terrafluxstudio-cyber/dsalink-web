@@ -1,0 +1,162 @@
+# CURSOR TASK: ParentJourneyStrip 视觉升级 — 连接式时间轴
+
+## 任务描述
+将 `ParentJourneyStrip.tsx` 的四个独立卡片改为带连接线的可视化时间轴。桌面端显示横向连接节点+卡片，移动端退化为竖向列表。整体更紧凑，视觉流动感更强。
+
+## 涉及文件
+- `components/ParentJourneyStrip.tsx`
+
+---
+
+## 完整替换内容
+
+用以下完整组件代码替换 `ParentJourneyStrip.tsx` 的全部内容：
+
+```tsx
+import Link from "next/link";
+import { ExternalLink } from "lucide-react";
+
+const JOURNEY_STEPS = [
+  {
+    number: "1",
+    title: "Understand DSA",
+    description: "What it is and if it fits your child",
+    href: "/faq",
+    external: false,
+  },
+  {
+    number: "2",
+    title: "Find schools",
+    description: "1,300+ talent areas · 147 schools",
+    href: "/dsa-finder",
+    external: false,
+  },
+  {
+    number: "3",
+    title: "Visit open houses",
+    description: "Know what to ask before you go",
+    href: "/open-house-guide",
+    external: false,
+  },
+  {
+    number: "4",
+    title: "Apply by 2 Jun",
+    description: "Free · via MOE portal",
+    href: "https://www.moe.gov.sg/secondary/dsa",
+    external: true,
+  },
+];
+
+export function ParentJourneyStrip() {
+  return (
+    <section className="border-t border-surface-warm bg-surface-subtle py-6 sm:py-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <p className="mb-5 text-[10px] font-bold tracking-[0.16em] text-slate-400 uppercase">
+          Your DSA Journey
+        </p>
+
+        {/* ── Desktop: horizontal connected timeline ── */}
+        <div className="hidden sm:block">
+          <div className="relative">
+            {/* Connector line */}
+            <div className="absolute left-[calc(12.5%)] right-[calc(12.5%)] top-[22px] h-0.5 bg-gradient-to-r from-intellectual via-intellectual/50 to-champagne" />
+
+            <div className="grid grid-cols-4 gap-3">
+              {JOURNEY_STEPS.map((step, index) => (
+                <div key={step.number} className="flex flex-col items-center">
+                  {/* Node circle */}
+                  <div
+                    className={`relative z-10 mb-3 flex h-11 w-11 items-center justify-center rounded-full border-2 text-sm font-bold shadow-sm ${
+                      step.external
+                        ? "border-champagne bg-champagne text-intellectual"
+                        : "border-intellectual bg-intellectual text-white"
+                    }`}
+                  >
+                    {step.number}
+                  </div>
+
+                  {/* Card */}
+                  <Link
+                    href={step.href}
+                    target={step.external ? "_blank" : undefined}
+                    rel={step.external ? "noopener noreferrer" : undefined}
+                    className={`w-full rounded-xl border p-3 text-center shadow-card transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-hover ${
+                      step.external
+                        ? "border-champagne/40 bg-champagne-subtle"
+                        : "border-[#e3ded5] bg-white"
+                    }`}
+                  >
+                    <span className="flex items-center justify-center gap-1 font-display text-[0.875rem] font-semibold text-slate-900">
+                      {step.title}
+                      {step.external && (
+                        <ExternalLink className="h-3 w-3 text-champagne-dark" aria-hidden />
+                      )}
+                    </span>
+                    <span className="mt-0.5 block text-[0.75rem] leading-snug text-slate-500">
+                      {step.description}
+                    </span>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ── Mobile: vertical timeline ── */}
+        <div className="sm:hidden space-y-3">
+          {JOURNEY_STEPS.map((step, index) => (
+            <div key={step.number} className="flex gap-3">
+              {/* Left: number + vertical line */}
+              <div className="flex flex-col items-center">
+                <div
+                  className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 text-xs font-bold ${
+                    step.external
+                      ? "border-champagne bg-champagne text-intellectual"
+                      : "border-intellectual bg-intellectual text-white"
+                  }`}
+                >
+                  {step.number}
+                </div>
+                {index < JOURNEY_STEPS.length - 1 && (
+                  <div className="mt-1 w-0.5 flex-1 bg-gradient-to-b from-intellectual/40 to-transparent" />
+                )}
+              </div>
+
+              {/* Right: card */}
+              <Link
+                href={step.href}
+                target={step.external ? "_blank" : undefined}
+                rel={step.external ? "noopener noreferrer" : undefined}
+                className={`mb-1 flex-1 rounded-xl border p-3 shadow-card transition-all duration-200 hover:shadow-card-hover ${
+                  step.external
+                    ? "border-champagne/40 bg-champagne-subtle"
+                    : "border-[#e3ded5] bg-white"
+                }`}
+              >
+                <span className="flex items-center gap-1 font-display text-[0.875rem] font-semibold text-slate-900">
+                  {step.title}
+                  {step.external && (
+                    <ExternalLink className="h-3 w-3 text-champagne-dark" aria-hidden />
+                  )}
+                </span>
+                <span className="mt-0.5 block text-[0.75rem] leading-snug text-slate-500">
+                  {step.description}
+                </span>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+```
+
+---
+
+## 验证步骤
+- [ ] `npx tsc --noEmit` 无报错
+- [ ] 本地 `npm run dev`，首页 Journey 区块桌面端显示横向时间轴，有连接线穿过4个节点圆圈
+- [ ] 移动端（375px）显示竖向时间轴，节点与卡片左右对齐
+- [ ] 第4步（Apply by 2 Jun）节点和卡片为金色，带外链图标
+- [ ] 整体高度比改前缩短，更紧凑

@@ -1,5 +1,6 @@
 "use client";
 
+import type { RefObject } from "react";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import {
@@ -13,6 +14,7 @@ import {
   Trophy,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useInView } from "@/hooks/useInView";
 import type { Copy } from "@/lib/i18n";
 
 /* ── Persona card shape ──────────────────────────────────────────── */
@@ -78,7 +80,7 @@ const PERSONA_KEYS: PersonaKeys[] = [
     goalKey: "dsaStrategyPersona2Goal",
     tipKey: "dsaStrategyPersona2Tip",
     ctaKey: "dsaStrategyPersona2Cta",
-    href: "/schools",
+    href: "/dsa-finder",
   },
   {
     titleKey: "dsaStrategyPersona3Title",
@@ -87,7 +89,7 @@ const PERSONA_KEYS: PersonaKeys[] = [
     goalKey: "dsaStrategyPersona3Goal",
     tipKey: "dsaStrategyPersona3Tip",
     ctaKey: "dsaStrategyPersona3Cta",
-    href: "/schools",
+    href: "/dsa-guide",
   },
   {
     titleKey: "dsaStrategyPersona4Title",
@@ -96,7 +98,7 @@ const PERSONA_KEYS: PersonaKeys[] = [
     goalKey: "dsaStrategyPersona4Goal",
     tipKey: "dsaStrategyPersona4Tip",
     ctaKey: "dsaStrategyPersona4Cta",
-    href: "/faq",
+    href: "/dsa-finder",
   },
 ];
 
@@ -104,13 +106,14 @@ const PERSONA_KEYS: PersonaKeys[] = [
 
 export function DsaStrategySection() {
   const { t } = useLanguage();
+  const { ref: personaRef, inView: personaInView } = useInView();
 
   return (
-    <section className="border-t border-surface-warm bg-white py-12 sm:py-16">
+    <section className="border-t border-surface-warm bg-white py-8 sm:py-12">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
 
         {/* ── Section header ──────────────────────────────────────── */}
-        <div className="mb-10 max-w-2xl">
+        <div className="mb-6 max-w-2xl">
           <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.15em] text-intellectual">
             {t.dsaStrategySectionKicker}
           </p>
@@ -123,7 +126,7 @@ export function DsaStrategySection() {
         </div>
 
         {/* ── The core insight callout ─────────────────────────── */}
-        <div className="mb-10 rounded-2xl border border-intellectual/15 bg-intellectual/5 p-6 sm:p-8">
+        <div className="mb-6 rounded-2xl border border-intellectual/20 bg-intellectual/8 p-5 sm:p-6">
           <div className="flex gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-intellectual text-white">
               <Lightbulb className="h-5 w-5" aria-hidden />
@@ -143,11 +146,11 @@ export function DsaStrategySection() {
         </div>
 
         {/* ── How DSA compares to PSLE posting (2+1 asymmetric) ─── */}
-        <div className="mb-10">
+        <div className="mb-6">
           {/* Top row: two equal cards */}
           <div className="grid gap-4 sm:grid-cols-2">
             {/* PSLE Posting — muted slate */}
-            <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <div className="mb-3 flex items-center gap-2.5">
                 <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-200 text-slate-600">
                   <TrendingDown className="h-4 w-4" aria-hidden />
@@ -163,7 +166,7 @@ export function DsaStrategySection() {
             </div>
 
             {/* DSA Pathway — champagne gold */}
-            <div className="rounded-xl border border-champagne/30 bg-champagne-subtle p-5">
+            <div className="rounded-xl border border-champagne/30 bg-champagne-subtle p-4">
               <div className="mb-3 flex items-center gap-2.5">
                 <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-champagne/20 text-champagne-dark">
                   <GitFork className="h-4 w-4" aria-hidden />
@@ -180,7 +183,7 @@ export function DsaStrategySection() {
           </div>
 
           {/* Bottom row: full-width navy banner */}
-          <div className="mt-4 rounded-xl border border-intellectual/20 bg-intellectual p-5 sm:flex sm:items-center sm:gap-5">
+          <div className="mt-3 rounded-xl border border-intellectual/20 bg-intellectual p-4 sm:flex sm:items-center sm:gap-5">
             <span className="mb-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/15 text-white sm:mb-0">
               <Layers className="h-5 w-5" aria-hidden />
             </span>
@@ -197,45 +200,64 @@ export function DsaStrategySection() {
         </div>
 
         {/* ── Persona cards ─────────────────────────────────────── */}
-        <div className="mb-6">
-          <h3 className="mb-1 font-display text-[1.0625rem] font-semibold text-slate-900">
-            {t.dsaStrategyWhichParent}
-          </h3>
-          <p className="text-[0.875rem] text-slate-500">
-            {t.dsaStrategyWhichDesc}
-          </p>
+        <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h3 className="mb-1 font-display text-[1.0625rem] font-semibold text-slate-900">
+              {t.dsaStrategyWhichParent}
+            </h3>
+            <p className="text-[0.875rem] text-slate-500">
+              {t.dsaStrategyWhichDesc}
+            </p>
+          </div>
+          <Link
+            href="/dsa-finder"
+            className="mt-2 shrink-0 text-[0.8125rem] font-semibold text-intellectual transition hover:text-intellectual-light sm:mt-0"
+          >
+            Not sure? Try the School Finder →
+          </Link>
         </div>
 
-        <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {PERSONA_KEYS.map((keys, i) => {
-            const { Icon, iconBg, accent, tagAccent } = PERSONA_STYLES[i];
+        <div
+          ref={personaRef as RefObject<HTMLDivElement>}
+          className="mb-6 grid gap-4 sm:grid-cols-2"
+        >
+          {PERSONA_KEYS.map((keys, index) => {
+            const { Icon, iconBg, accent, tagAccent } = PERSONA_STYLES[index];
             return (
               <div
                 key={keys.titleKey}
-                className={`flex flex-col rounded-xl border p-5 shadow-card ${accent}`}
+                className={`flex flex-col rounded-xl border p-4 shadow-card transition-all duration-200 hover:shadow-card-hover hover:-translate-y-0.5 ${accent} ${
+                  personaInView
+                    ? `animate-fade-up ${
+                        index === 1 ? 'animate-fade-up-delay-1' :
+                        index === 2 ? 'animate-fade-up-delay-2' :
+                        index === 3 ? 'animate-fade-up-delay-3' : ''
+                      }`
+                    : 'opacity-0'
+                }`}
               >
                 <div className={`mb-3 flex h-9 w-9 items-center justify-center rounded-lg ${iconBg}`}>
                   <Icon className="h-[18px] w-[18px]" aria-hidden />
                 </div>
-                <span className={`mb-2 self-start rounded-full px-2.5 py-0.5 text-[10px] font-semibold ${tagAccent}`}>
+                <span className={`mb-2 self-start rounded-full px-2.5 py-1 text-[11px] font-semibold ${tagAccent}`}>
                   {t[keys.tagKey]}
                 </span>
-                <h4 className="mb-2 font-display text-[0.9375rem] font-semibold text-slate-900">
+                <h4 className="mb-3 font-display text-base font-semibold text-slate-900">
                   {t[keys.titleKey]}
                 </h4>
-                <p className="mb-2 text-[0.8125rem] leading-snug text-slate-600">{t[keys.whoKey]}</p>
+                <p className="mb-3 text-sm leading-relaxed text-slate-600">{t[keys.whoKey]}</p>
                 <div className="mt-auto space-y-2">
-                  <p className="rounded-lg bg-white/70 px-3 py-2 text-[0.8125rem] text-slate-700">
+                  <p className="rounded-lg bg-white/70 px-3 py-2 text-sm leading-relaxed text-slate-700">
                     <span className="font-semibold text-slate-900">{t.dsaStrategyGoalLabel}</span>{" "}
                     {t[keys.goalKey]}
                   </p>
-                  <p className="rounded-lg bg-white/70 px-3 py-2 text-[0.8125rem] text-slate-600">
+                  <p className="rounded-lg bg-white/70 px-3 py-2 text-sm leading-relaxed text-slate-600">
                     <span className="font-semibold text-slate-900">{t.dsaStrategyTipLabel}</span>{" "}
                     {t[keys.tipKey]}
                   </p>
                   <Link
                     href={keys.href}
-                    className="mt-1 block rounded-lg border border-intellectual/20 bg-white px-4 py-2 text-center text-[0.8125rem] font-semibold text-intellectual transition hover:bg-intellectual hover:text-white"
+                    className="mt-2 block rounded-lg border border-intellectual/20 bg-white px-4 py-2.5 text-center text-sm font-semibold text-intellectual transition hover:bg-intellectual hover:text-white"
                   >
                     {t[keys.ctaKey]}
                   </Link>

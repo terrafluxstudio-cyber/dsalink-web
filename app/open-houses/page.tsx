@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { OpenHousesDirectory } from "@/components/OpenHousesDirectory";
+import { OpenHouseTracker } from "@/components/OpenHouseTracker";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { buildOpenHousesStructuredData } from "@/lib/seo";
@@ -58,6 +59,7 @@ export default function OpenHousesPage() {
           __html: JSON.stringify(openHousesJsonLd),
         }}
       />
+      <OpenHouseTracker />
       <SiteHeader />
       <main className="bg-surface">
         <OpenHousesDirectory />

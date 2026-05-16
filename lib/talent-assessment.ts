@@ -13,6 +13,9 @@ export interface TalentAssessmentInput {
   category: TalentCategory;
   specificArea: string;
 
+  /** Tracks which participation option was selected (sports/arts only). */
+  participationSource?: "school_cca" | "external" | "both" | "personal_interest";
+
   hasExternalCoaching?: boolean;
   trainingFrequency?: "once" | "twice" | "thrice_plus";
   knownIslandRanking?: "top10" | "top50" | "upper_middle" | "middle";

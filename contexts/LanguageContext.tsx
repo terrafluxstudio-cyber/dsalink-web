@@ -78,10 +78,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       /* ignore quota / private mode */
     }
     document.documentElement.lang = localeHtmlLang[next];
+    document.body.setAttribute('data-locale', next);
   }, []);
 
   useEffect(() => {
     document.documentElement.lang = localeHtmlLang[locale];
+    document.body.setAttribute('data-locale', locale);
   }, [locale]);
 
   const value = useMemo<LanguageContextValue>(

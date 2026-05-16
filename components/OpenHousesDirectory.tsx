@@ -243,6 +243,34 @@ export function OpenHousesDirectory() {
         title={t.sectionOpenHouseTitle}
         subtitle={t.sectionOpenHouseDesc}
       />
+      <div className="border-b border-intellectual/20 bg-intellectual px-4 py-4 sm:px-6">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-2">
+          <div className="flex items-baseline gap-1.5">
+            <span className="font-display text-[1.625rem] font-extrabold leading-none text-champagne">147</span>
+            <span className="text-[0.8125rem] text-white/70">
+              {locale === "zh" ? "所中学" : "secondary schools"}
+            </span>
+          </div>
+          <div className="hidden h-4 w-px bg-white/20 sm:block" />
+          <div className="flex items-baseline gap-1.5">
+            <span className="font-display text-[1.625rem] font-extrabold leading-none text-champagne">
+              {locale === "zh" ? "2026年5月" : "May 2026"}
+            </span>
+            <span className="text-[0.8125rem] text-white/70">
+              {locale === "zh" ? "· 全岛开放日" : "· island-wide open houses"}
+            </span>
+          </div>
+          <div className="hidden h-4 w-px bg-white/20 sm:block" />
+          <div className="flex items-baseline gap-1.5">
+            <span className="text-[0.8125rem] text-white/70">
+              {locale === "zh" ? "DSA & 招生直链" : "DSA & admissions links"}
+            </span>
+          </div>
+          <div className="ml-auto flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1">
+            <span className="text-[0.6875rem] font-semibold tracking-wide text-white/80">MOE Directory · 2026</span>
+          </div>
+        </div>
+      </div>
 
       <div className="mx-auto max-w-5xl px-4 pb-12 sm:px-6 sm:pb-20">
       <div className="mt-4 space-y-3 sm:mt-6 sm:space-y-4">

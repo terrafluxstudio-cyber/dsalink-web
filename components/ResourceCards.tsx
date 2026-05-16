@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpen, CalendarDays, Globe, School } from "lucide-react";
+import { BookOpen, Globe, School } from "lucide-react";
 import { EXTERNAL, MOE_PRIMARY_CTA_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -8,17 +8,15 @@ const icons = {
   moe: BookOpen,
   schools: School,
   portal: Globe,
-  calendar: CalendarDays,
 } as const;
 
 export function ResourceCards() {
   const { t } = useLanguage();
 
   const cards = [
-    { key: "moe",      title: t.linkMoeTitle,      description: t.linkMoeDesc,      href: MOE_PRIMARY_CTA_URL,    Icon: icons.moe },
-    { key: "schools",  title: t.linkSchoolsTitle,  description: t.linkSchoolsDesc,  href: EXTERNAL.schoolFinder,  Icon: icons.schools },
-    { key: "portal",   title: t.linkPortalTitle,   description: t.linkPortalDesc,   href: MOE_PRIMARY_CTA_URL,    Icon: icons.portal },
-    { key: "calendar", title: t.linkCalendarTitle, description: t.linkCalendarDesc, href: EXTERNAL.calendar,      Icon: icons.calendar },
+    { key: "moe",     title: t.linkMoeTitle,     description: t.linkMoeDesc,     href: MOE_PRIMARY_CTA_URL,   Icon: icons.moe },
+    { key: "schools", title: t.linkSchoolsTitle, description: t.linkSchoolsDesc, href: EXTERNAL.schoolFinder, Icon: icons.schools },
+    { key: "portal",  title: t.linkPortalTitle,  description: t.linkPortalDesc,  href: EXTERNAL.dsaPortal,    Icon: icons.portal },
   ] as const;
 
   return (
@@ -33,7 +31,7 @@ export function ResourceCards() {
           </p>
         </div>
 
-        <ul className="grid gap-3 sm:grid-cols-2">
+        <ul className="grid gap-3 sm:grid-cols-3">
           {cards.map(({ key, title, description, href, Icon }) => (
             <li key={key}>
               <a

@@ -19,6 +19,5 @@ export const MOE_PRIMARY_CTA_URL =
 export const EXTERNAL = {
   moeDsa: MOE_PRIMARY_CTA_URL,
   schoolFinder: "https://www.moe.gov.sg/schoolfinder",
-  dsaPortal: MOE_PRIMARY_CTA_URL,
-  calendar: "https://www.moe.gov.sg/news?category=Press%20Releases",
+  dsaPortal: "https://go.gov.sg/dsa-sec-portal",
 } as const;

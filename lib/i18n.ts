@@ -5,8 +5,35 @@ import dsaGuideZh from "@/locales/zh.json";
 
 export const locales = ["en", "zh", "ms", "ta"] as const;
 
+type ProgrammeGlossaryI18nKey =
+  | "glossaryDefSchoolBasedGiftedEducation"
+  | "glossaryDefMusicElectiveProgramme"
+  | "glossaryDefArtElectiveProgramme"
+  | "glossaryDefBiculturalStudiesProgramme"
+  | "glossaryDefIntegratedProgramme"
+  | "glossaryDefRegionalStudiesProgramme"
+  | "glossaryDefChineseLanguageSpecialProgramme"
+  | "glossaryDefMalayLanguageSpecialProgramme"
+  | "glossaryDefMalayLanguageSpecialProgrammeAlt"
+  | "glossaryDefLanguageElectiveProgrammeChinese"
+  | "glossaryDefLanguageElectiveProgrammeTamil"
+  | "glossaryDefHumanitiesScholarshipProgramme"
+  | "glossaryDefEngineeringTechProgramme"
+  | "glossaryDefSteam"
+  | "glossaryDefEnhancedArtProgramme"
+  | "glossaryDefEnhancedArtProgrammeElective"
+  | "glossaryDefEnhancedMusicProgramme"
+  | "glossaryDefSunriseProgramme"
+  | "glossaryDefIotApplications"
+  | "glossaryDefMobileWebApplications"
+  | "glossaryDefMechanicalDesignAutomation"
+  | "glossaryDefCulinaryRestaurantOperations"
+  | "glossaryDefRetailEcommerce"
+  | "glossaryDefSpecialAssistancePlanSap"
+  | "glossaryDefVocationalSubjects";
+
 /** Keys imported from `locales/*.json` for /dsa-guide (flat dsaGuide* strings). */
-export type DsaGuideStrings = typeof dsaGuideEn;
+export type DsaGuideStrings = Omit<typeof dsaGuideEn, ProgrammeGlossaryI18nKey>;
 
 export type Locale = (typeof locales)[number];
 
@@ -54,8 +81,6 @@ export type Copy = {
   linkSchoolsDesc: string;
   linkPortalTitle: string;
   linkPortalDesc: string;
-  linkCalendarTitle: string;
-  linkCalendarDesc: string;
   footerRights: string;
   extHint: string;
   a11yLanguageSelector: string;
@@ -247,6 +272,49 @@ export type Copy = {
   dsaStrategyCtaBody: string;
   dsaStrategyCtaBrowse: string;
   dsaStrategyCtaInterview: string;
+  glossaryDefSchoolBasedGiftedEducation?: string;
+  glossaryDefMusicElectiveProgramme?: string;
+  glossaryDefArtElectiveProgramme?: string;
+  glossaryDefBiculturalStudiesProgramme?: string;
+  glossaryDefIntegratedProgramme?: string;
+  glossaryDefRegionalStudiesProgramme?: string;
+  glossaryDefChineseLanguageSpecialProgramme?: string;
+  glossaryDefMalayLanguageSpecialProgramme?: string;
+  glossaryDefMalayLanguageSpecialProgrammeAlt?: string;
+  glossaryDefLanguageElectiveProgrammeChinese?: string;
+  glossaryDefLanguageElectiveProgrammeTamil?: string;
+  glossaryDefHumanitiesScholarshipProgramme?: string;
+  glossaryDefEngineeringTechProgramme?: string;
+  glossaryDefSteam?: string;
+  glossaryDefEnhancedArtProgramme?: string;
+  glossaryDefEnhancedArtProgrammeElective?: string;
+  glossaryDefEnhancedMusicProgramme?: string;
+  glossaryDefSunriseProgramme?: string;
+  glossaryDefIotApplications?: string;
+  glossaryDefMobileWebApplications?: string;
+  glossaryDefMechanicalDesignAutomation?: string;
+  glossaryDefCulinaryRestaurantOperations?: string;
+  glossaryDefRetailEcommerce?: string;
+  glossaryDefSpecialAssistancePlanSap?: string;
+  glossaryDefVocationalSubjects?: string;
+  subscribeKicker: string;
+  subscribeTitle: string;
+  subscribeDesc: string;
+  subscribeMaterial1: string;
+  subscribeMaterial2: string;
+  subscribeMaterial3: string;
+  subscribeMaterial4: string;
+  subscribeFormLabel: string;
+  subscribeBtn: string;
+  subscribeBtnLoading: string;
+  subscribeSuccessTitle: string;
+  subscribeSuccessDesc: string;
+  subscribeDisclaimer: string;
+  dsaExpPageCrumb: string;
+  dsaExpPageKicker: string;
+  dsaExpPageTitle: string;
+  dsaExpPageSubtitle: string;
+  dsaExpLangNotice: string;
 } & DsaGuideStrings;
 
 export const copy: Record<Locale, Copy> = {
@@ -275,8 +343,6 @@ export const copy: Record<Locale, Copy> = {
     linkSchoolsDesc: "Locate schools and their published DSA information.",
     linkPortalTitle: "Application portal",
     linkPortalDesc: "When the window opens, submit via the official e‑service.",
-    linkCalendarTitle: "Key dates",
-    linkCalendarDesc: "Cross‑check timelines alongside MOE announcements.",
     footerRights: "© dsalink.sg · Built for parents navigating DSA in Singapore",
     extHint: "Opens externally",
     a11yLanguageSelector: "Choose language",
@@ -421,7 +487,7 @@ export const copy: Record<Locale, Copy> = {
     dsaStrategySectionLead: "Most families assume DSA is reserved for national athletes and child prodigies. The truth is more interesting: DSA competition intensity varies enormously by school and talent domain. A student who is academically average (AL†20–25) but genuinely skilled in dance, music, or robotics can secure a place in a school that would otherwise require a much higher PSLE score.",
     dsaStrategyInsightTitle: "The Matching-Game Insight",
     dsaStrategyInsightBody: "Think of DSA as a matching game, not a talent contest. A student applying for DSA-Dance at a well-ranked mainstream school is not competing against the student who wins nationals — that student is applying to RI or SOTA. The realistic pool at a mid-tier school is smaller and more accessible. Find the right school-domain combination where your child’s genuine talent meets the school’s genuine need.",
-    dsaStrategyInsightFootnote: "This is the 逆袭策略 — the underdog pathway — that savvy Singapore families use every year.",
+    dsaStrategyInsightFootnote: "This is the underdog pathway — used by savvy Singapore families every year.",
     dsaStrategyPslePath: "PSLE Posting",
     dsaStrategyPsleBody: "Your score determines your school. Higher AL score → more school choices. Limited by a single exam taken under pressure.",
     dsaStrategyPsleBadge: "One shot",
@@ -435,34 +501,53 @@ export const copy: Record<Locale, Copy> = {
     dsaStrategyWhichDesc: "Find your child’s profile to see the best DSA approach for their situation.",
     dsaStrategyGoalLabel: "Goal:",
     dsaStrategyTipLabel: "Tip:",
-    dsaStrategyPersona1Title: "The Academic Specialist",
-    dsaStrategyPersona1Tag: "AL 8–16 · IP-track families",
-    dsaStrategyPersona1Who: "Your child has strong academic results AND a verifiable talent — music grades, robotics medals, debate trophies. DSA lets you lock in the right IP school before PSLE pressure peaks.",
-    dsaStrategyPersona1Goal: "Secure an IP school that matches both their grades and their passion domain.",
-    dsaStrategyPersona1Tip: "Apply early to 2–3 IP schools through DSA. Use PSLE as confirmation, not as the deciding exam.",
-    dsaStrategyPersona1Cta: "View IP schools →",
-    dsaStrategyPersona2Title: "The Arts & Sports Leader",
-    dsaStrategyPersona2Tag: "AL 18–28 · Mid-stream families",
-    dsaStrategyPersona2Who: "Your child is academically average but genuinely skilled — a consistent dancer, competitive swimmer, or trained musician. Their PSLE score alone may not reach their dream school. DSA bypasses that ceiling.",
-    dsaStrategyPersona2Goal: "Get into a better-matched school via talent, not just exam score.",
-    dsaStrategyPersona2Tip: "The key insight: competition for DSA-Dance at a well-ranked mainstream school is often less intense than academic competition. Genuine, documented talent in a niche domain opens doors that PSLE scores alone cannot.",
-    dsaStrategyPersona2Cta: "Find mid-tier schools →",
-    dsaStrategyPersona3Title: "The Creative Geek",
-    dsaStrategyPersona3Tag: "AL 12–22 · STEM & niche domains",
-    dsaStrategyPersona3Who: "Your child built an app, won a robotics competition, or placed in the Singapore Science & Engineering Fair. They don’t fit the ‘sports star’ mould but they have deep, provable talent in technology or science.",
-    dsaStrategyPersona3Goal: "Find schools with strong ALP programmes in STEM, coding, or biomedical science that actively recruit through DSA.",
-    dsaStrategyPersona3Tip: "SSEF, NOI, and SMO participation are highly recognised by competitive schools. Build the portfolio in P4–5, not in P6.",
-    dsaStrategyPersona3Cta: "Browse schools by ALP →",
-    dsaStrategyPersona4Title: "Just Discovered DSA",
-    dsaStrategyPersona4Tag: "New to DSA",
-    dsaStrategyPersona4Who: "You heard about DSA recently — maybe from another parent or online. Not sure if it applies to your child. Any primary school, any CCA.",
-    dsaStrategyPersona4Goal: "Understand what DSA is, whether your child qualifies, and what to do before the 2 June deadline.",
-    dsaStrategyPersona4Tip: "Start with the FAQ — 14 questions answered in plain English, 10 minutes. Then use the DSA Finder to search your child's talent area.",
-    dsaStrategyPersona4Cta: "Read the DSA FAQ →",
+    dsaStrategyPersona1Title: "My child's been in CCA for years — I just never looked into DSA",
+    dsaStrategyPersona1Tag: "First time exploring",
+    dsaStrategyPersona1Who: "You've heard of DSA but assumed it was for Gifted Programme kids or top-tier schools. Your child has been in the same CCA for 2+ years. That's already more than most families start with.",
+    dsaStrategyPersona1Goal: "Understand whether your child qualifies, and what 'evidence of talent' actually looks like in a real application.",
+    dsaStrategyPersona1Tip: "DSA is open to every primary school in Singapore. What schools look for is consistent participation over time — not medals from elite programmes.",
+    dsaStrategyPersona1Cta: "Start with the FAQ →",
+    dsaStrategyPersona2Title: "Average grades, but genuinely strong in one area",
+    dsaStrategyPersona2Tag: "Talent over grades",
+    dsaStrategyPersona2Who: "PSLE predicted: AL 20–26. But your child has been training consistently — swimming, wushu, Chinese dance, or a niche STEM domain — with results to show. Their talent is real. DSA is specifically designed to recognise it.",
+    dsaStrategyPersona2Goal: "Find secondary schools where their talent, not their exam score, is what gets them in.",
+    dsaStrategyPersona2Tip: "Schools that would be out of reach via the normal PSLE pathway are genuinely accessible through DSA. The competition is measured on different terms.",
+    dsaStrategyPersona2Cta: "Search talent areas →",
+    dsaStrategyPersona3Title: "I want to secure the right school before PSLE results day",
+    dsaStrategyPersona3Tag: "Locking in early",
+    dsaStrategyPersona3Who: "Your child is academically on track and has a documented talent. You've seen how stressful November results day is. A Confirmed DSA Offer, in hand before PSLE, changes what that day means.",
+    dsaStrategyPersona3Goal: "Use DSA strategically — secure a school that fits both their academic track and their talent — before the PSLE scramble begins.",
+    dsaStrategyPersona3Tip: "With a Confirmed Offer, your PSLE target shifts from 'competing for rank' to 'meeting minimum entry requirements.' That's a completely different exam to prepare for.",
+    dsaStrategyPersona3Cta: "Read the DSA Guide →",
+    dsaStrategyPersona4Title: "Applications close 2 June — where do I start?",
+    dsaStrategyPersona4Tag: "Deadline: 2 Jun 2026",
+    dsaStrategyPersona4Who: "You found out about DSA this week. You have less than three weeks. Your child has been doing a CCA for at least a year. That's enough to start.",
+    dsaStrategyPersona4Goal: "Identify 1–3 schools to apply to, gather the minimum evidence portfolio, and submit before 4:30pm on 2 June.",
+    dsaStrategyPersona4Tip: "The application itself takes under an hour via the MOE portal. The real work is deciding which schools to apply to. Use DSA Finder now — it searches by talent area.",
+    dsaStrategyPersona4Cta: "Use DSA Finder →",
     dsaStrategyCtaTitle: "Ready to find the right school-domain match?",
     dsaStrategyCtaBody: "Browse all 147 MOE secondary schools filtered by talent domain, ALP, LLP, and PSLE COP band.",
     dsaStrategyCtaBrowse: "Browse school directory →",
     dsaStrategyCtaInterview: "Interview prep guide →",
+    subscribeKicker: "FREE RESOURCE PACK · P6 FAMILIES",
+    subscribeTitle: "Everything you need to prepare — in one free pack",
+    subscribeDesc: "Used by hundreds of Singapore families preparing for DSA. No upsells, no agent, just the materials.",
+    subscribeMaterial1: "DSA school comparison worksheet (147 schools)",
+    subscribeMaterial2: "Interview question bank by talent area",
+    subscribeMaterial3: "Open house field guide — what to ask & observe",
+    subscribeMaterial4: "2026 application timeline & deadline checklist",
+    subscribeFormLabel: "Get the free pack",
+    subscribeBtn: "Send me the pack →",
+    subscribeBtnLoading: "Sending…",
+    subscribeSuccessTitle: "Pack on its way.",
+    subscribeSuccessDesc: "Check your inbox — we'll send the materials within 24 hours.",
+    subscribeDisclaimer: "Free. No spam. Unsubscribe anytime.",
+    dsaExpPageCrumb: "DSA Experience Guide",
+    dsaExpPageKicker: "Parent playbook",
+    dsaExpPageTitle: "DSA Experience Guide",
+    dsaExpPageSubtitle:
+      "What actually works in Singapore DSA — school selectivity, talent bars, timelines, and mistakes to avoid. Synthesised from parent forums, MOE rules, and real case patterns.",
+    dsaExpLangNotice: "",
     ...dsaGuideEn,
   },
   zh: {
@@ -488,8 +573,6 @@ export const copy: Record<Locale, Copy> = {
     linkSchoolsDesc: "查找学校及其公布的 DSA 信息。",
     linkPortalTitle: "报名系统入口",
     linkPortalDesc: "开放期间请通过官方电子服务提交申请。",
-    linkCalendarTitle: "关键时间节点",
-    linkCalendarDesc: "结合 MOE 公告核对时间表。",
     footerRights: "© dsalink.sg · 助力家长从容应对新加坡 DSA",
     extHint: "外部链接",
     a11yLanguageSelector: "选择语言",
@@ -645,34 +728,54 @@ export const copy: Record<Locale, Copy> = {
     dsaStrategyWhichDesc: "找到最符合孩子情况的画像，了解适合他们的 DSA 策略。",
     dsaStrategyGoalLabel: "目标：",
     dsaStrategyTipLabel: "建议：",
-    dsaStrategyPersona1Title: "学术型特长生家长",
-    dsaStrategyPersona1Tag: "AL 8–16 · IP 直通车家庭",
-    dsaStrategyPersona1Who: "孩子学业成绩优异，同时有可证明的特长——音乐考级、机器人奖项、辩论奖杯。通过 DSA，可在 PSLE 压力攀升之前锁定心仪的 IP 直通车学校。",
-    dsaStrategyPersona1Goal: "找到一所同时符合学业成绩与特长方向的 IP 学校，提前锁定。",
-    dsaStrategyPersona1Tip: "提前通过 DSA 申请 2–3 所 IP 学校。把 PSLE 当作最终印证，而非决定命运的考试。",
-    dsaStrategyPersona1Cta: "查看 IP 学校 →",
-    dsaStrategyPersona2Title: "艺体特长生家长",
-    dsaStrategyPersona2Tag: "AL 18–28 · 中流水平家庭",
-    dsaStrategyPersona2Who: "孩子学业成绩中等，但在某一领域真正有料——稳定出赛的舞者、竞技游泳选手，或经过系统训练的乐手。单凭 PSLE 分数，可能与梦校无缘；而 DSA 恰恰能突破这道分数天花板。",
-    dsaStrategyPersona2Goal: "靠特长而非单纯的考试成绩，进入更适合自己的学校。",
-    dsaStrategyPersona2Tip: "关键洞察：在一所口碑不错的主流学校，DSA 舞蹈竞争往往比学术竞争温和得多。在细分领域拥有真实、可记录的特长，能打开单靠 PSLE 成绩永远无法叩开的门。",
-    dsaStrategyPersona2Cta: "探索中游学校 →",
-    dsaStrategyPersona3Title: "科创极客家长",
-    dsaStrategyPersona3Tag: "AL 12–22 · STEM 与细分领域",
-    dsaStrategyPersona3Who: "孩子独立开发过应用程序，赢得机器人比赛，或在新加坡科学与工程展（SSEF）中获奖。他们不是运动明星类型，但在科技或理工领域拥有深厚、可验证的实力。",
-    dsaStrategyPersona3Goal: "找到 STEM、编程或生物医学领域 ALP 课程扎实、且通过 DSA 主动招生的学校。",
-    dsaStrategyPersona3Tip: "SSEF、NOI 和 SMO 的参赛经历在竞争激烈的学校中极受认可。作品集要在小四、小五就开始积累，而不是等到小六才临阵磨枪。",
-    dsaStrategyPersona3Cta: "按 ALP 方向浏览学校 →",
-    dsaStrategyPersona4Title: "刚了解 DSA",
-    dsaStrategyPersona4Tag: "DSA 新手",
-    dsaStrategyPersona4Who: "最近才听说 DSA——可能从其他家长或网上看到的。还不确定孩子是否适合申请。不管就读哪所小学，先了解基本情况再做决定。",
-    dsaStrategyPersona4Goal: "搞清楚 DSA 是什么、孩子是否符合申请条件，以及在 6 月 2 日截止前应该做什么。",
-    dsaStrategyPersona4Tip: "先读常见问答——14 个问题用简单语言回答，10 分钟读完。然后用 DSA 搜索器查孩子的才能领域。",
-    dsaStrategyPersona4Cta: "先读 DSA 常见问答 →",
+    dsaStrategyPersona1Title: "孩子 CCA 参加了好几年——我从没认真了解过 DSA",
+    dsaStrategyPersona1Tag: "第一次了解",
+    dsaStrategyPersona1Who: "你听说过 DSA，但一直以为那是给\"天才班\"孩子或顶级小学才适合的。你的孩子已经在同一个 CCA 坚持了 2 年以上——这已经比大多数家庭的起点要好。",
+    dsaStrategyPersona1Goal: "搞清楚孩子是否符合条件，以及在真实申请中\"才能证明\"到底是什么样的。",
+    dsaStrategyPersona1Tip: "DSA 面向新加坡所有小学。学校看的是稳定、持续的参与记录——不是精英培训机构的奖杯。",
+    dsaStrategyPersona1Cta: "先读 DSA 常见问答 →",
+    dsaStrategyPersona2Title: "成绩中等，但在某个领域确实有料",
+    dsaStrategyPersona2Tag: "才能高于成绩",
+    dsaStrategyPersona2Who: "PSLE 预测 AL 20–26。但孩子一直在认真训练——游泳、武术、华族舞蹈，或某个 STEM 细分领域——而且有成绩可以证明。孩子的才能是真实的。DSA 恰恰是为了识别这样的才能而设计的。",
+    dsaStrategyPersona2Goal: "找到以才能而非考试分数录取的中学，让孩子进入原本靠 PSLE 进不了的学校。",
+    dsaStrategyPersona2Tip: "通过 DSA 才能通道，那些\"分数够不着\"的学校是真实可以申请的。竞争维度不同——不是考试排名，而是才能匹配。",
+    dsaStrategyPersona2Cta: "搜索才能领域 →",
+    dsaStrategyPersona3Title: "想在 PSLE 放榜前先锁定一所合适的学校",
+    dsaStrategyPersona3Tag: "提前锁定",
+    dsaStrategyPersona3Who: "孩子学业进展稳定，同时有才能记录。你见过 11 月放榜日的压力有多大。手握一份 DSA Confirmed Offer，放榜那天的意义就完全不一样了。",
+    dsaStrategyPersona3Goal: "战略性地使用 DSA——在 PSLE 放榜前，锁定一所同时符合学业方向和才能兴趣的学校。",
+    dsaStrategyPersona3Tip: "有了 Confirmed Offer，PSLE 的目标就从\"竞争名次\"变成了\"达到最低入学要求\"——这是完全不同的备考心态。",
+    dsaStrategyPersona3Cta: "阅读 DSA 完整指南 →",
+    dsaStrategyPersona4Title: "截止日期是 6 月 2 日——我从哪里开始？",
+    dsaStrategyPersona4Tag: "截止：2026年6月2日",
+    dsaStrategyPersona4Who: "你这周才听说 DSA，距离截止日期不到三周。孩子至少参加了一年 CCA——这已经够了。",
+    dsaStrategyPersona4Goal: "确定 1–3 所要申请的学校，准备最基本的才能证明材料，在 6 月 2 日下午 4:30 前提交。",
+    dsaStrategyPersona4Tip: "申请本身通过 MOE 门户不到一小时就能完成。真正要做的事是决定申请哪几所学校——现在就用 DSA 搜索器，按才能领域查。",
+    dsaStrategyPersona4Cta: "现在使用 DSA 搜索器 →",
     dsaStrategyCtaTitle: "准备好为孩子找到最合适的学校与特长搭配了吗？",
     dsaStrategyCtaBody: "浏览全部 147 所 MOE 中学，可按特长领域、ALP、LLP 和 PSLE COP 分段筛选。",
     dsaStrategyCtaBrowse: "浏览学校目录 →",
     dsaStrategyCtaInterview: "面试备考指南 →",
+    subscribeKicker: "免费资料包 · 小六家庭专属",
+    subscribeTitle: "备考所需的一切，全部免费打包送上",
+    subscribeDesc: "已有数百个新加坡家庭用于 DSA 备考。无附加销售，无中介，只有干货。",
+    subscribeMaterial1: "DSA 学校对比表（147 所中学）",
+    subscribeMaterial2: "按才能领域分类的面试题库",
+    subscribeMaterial3: "开放日现场指引——该问什么、该观察什么",
+    subscribeMaterial4: "2026 年申请时间轴与截止日期清单",
+    subscribeFormLabel: "领取免费资料包",
+    subscribeBtn: "发给我 →",
+    subscribeBtnLoading: "发送中…",
+    subscribeSuccessTitle: "资料包已在路上。",
+    subscribeSuccessDesc: "请查收邮件——我们将在 24 小时内发送材料。",
+    subscribeDisclaimer: "免费。无垃圾邮件。随时退订。",
+    dsaExpPageCrumb: "DSA 经验指南",
+    dsaExpPageKicker: "家长实战手册",
+    dsaExpPageTitle: "DSA 经验指南",
+    dsaExpPageSubtitle:
+      "新加坡 DSA 真正有效的方法——学校选拔性、才能门槛、时间轴与常见错误。综合家长社区、MOE 规定与真实案例整理。",
+    dsaExpLangNotice:
+      "本指南目前仅提供英文正文。标题与导航已翻译；完整中文版即将上线。",
     ...dsaGuideZh,
   },
   ms: {
@@ -701,19 +804,17 @@ export const copy: Record<Locale, Copy> = {
     linkPortalTitle: "Portal permohonan",
     linkPortalDesc:
       "Apabila tempoh permohonan dibuka, hantar melalui e-perkhidmatan rasmi.",
-    linkCalendarTitle: "Tarikh penting",
-    linkCalendarDesc: "Sahkan garis masa dengan pengumuman MOE.",
     footerRights:
       "© dsalink.sg · Untuk ibu bapa yang menavigasi DSA di Singapura",
     extHint: "Pautan luar",
     a11yLanguageSelector: "Pilih bahasa",
     heroSearchPlaceholder: "Cari sekolah atau bakat (cth: Robotik, Tarian)…",
-    openHouseKicker: "Mei 2026",
-    sectionOpenHouseTitle: "Hari terbuka sekolah · sorotan musim DSA",
+    openHouseKicker: "Mei 2026 · Seluruh Pulau",
+    sectionOpenHouseTitle: "Hari Terbuka Sekolah Menengah · DSA & Kemasukan",
     sectionOpenHouseDesc:
-      "Disusun daripada kalendar Mei 2026. Masa dan mod di tapak / dalam talian adalah anggaran — sentiasa sahkan di laman rasmi setiap sekolah.",
+      "147 sekolah menengah (direktori MOE, 2026) dengan nama dwibahasa, kawasan, jenis sekolah, dan pautan rasmi DSA / kemasukan. Masa hari terbuka adalah Mei 2026 (TBC) melainkan sekolah telah menerbitkan tarikh — sentiasa sahkan di laman rasmi setiap sekolah.",
     openHouseOfficialLink: "Hari terbuka / kemasukan rasmi",
-    openHouseOfficialBooking: "Tempahan rasmi",
+    openHouseOfficialBooking: "DSA / kemasukan",
     openHouseSchoolLink: "Laman web sekolah",
     openHouseOnsite: "Di tapak",
     openHouseOnline: "Dalam talian",
@@ -779,7 +880,7 @@ export const copy: Record<Locale, Copy> = {
     scoreboardTypeG2: "G2",
     scoreboardTypeG1: "G1",
     scoresPageKicker: "PSLE · 2023–2025 · 147 Sekolah",
-    scoresPageH1: "Papan data PSLE COP (2021–2025)",
+    scoresPageH1: "Papan Sejarah PSLE COP (2023–2025)",
     scoresPageLead:
       "Bandingkan G3 2025, perubahan berbanding 2024, dan semua aliran 2023–2025. Tapis SAP, IP, jantina, zon.",
     scoresFilterToolbarAria: "Penapis: carian, zon, SAP, IP, jantina, isihan",
@@ -846,7 +947,7 @@ export const copy: Record<Locale, Copy> = {
     dsaStrategySectionKicker: "Strategi DSA Arus Tengah · 2026",
     dsaStrategySectionH2: "Rahsia Tersembunyi: DSA Bukan Hanya untuk Pelajar Cemerlang",
     dsaStrategySectionLead: "Kebanyakan keluarga beranggapan DSA hanya untuk atlet negara atau pelajar prodigy. Hakikatnya lebih menarik: intensiti persaingan DSA berbeza-beza mengikut sekolah dan domain bakat. Pelajar yang sederhana dari segi akademik (AL 20–25) tetapi benar-benar mahir dalam tarian, muzik, atau robotik boleh mendapat tempat di sekolah yang biasanya memerlukan skor PSLE yang jauh lebih tinggi.",
-    dsaStrategyInsightTitle: "Pandangan Permainan Padanan",
+    dsaStrategyInsightTitle: "Logik Padanan Sekolah",
     dsaStrategyInsightBody: "Anggap DSA sebagai permainan padanan, bukan pertandingan bakat. Pelajar yang memohon DSA-Tari di sekolah arus perdana yang baik tidak bersaing dengan pemenang peringkat kebangsaan — pelajar itu memohon ke RI atau SOTA. Kolam persaingan sebenar di sekolah pertengahan adalah lebih kecil dan lebih mudah dicapai. Cari kombinasi sekolah-domain yang tepat di mana bakat tulen anak anda memenuhi keperluan sebenar sekolah tersebut.",
     dsaStrategyInsightFootnote: "Inilah strategi underdog yang digunakan oleh keluarga Singapura yang bijak setiap tahun.",
     dsaStrategyPslePath: "Penempatan PSLE",
@@ -862,34 +963,54 @@ export const copy: Record<Locale, Copy> = {
     dsaStrategyWhichDesc: "Cari profil anak anda untuk melihat pendekatan DSA terbaik bagi situasi mereka.",
     dsaStrategyGoalLabel: "Matlamat:",
     dsaStrategyTipLabel: "Petua:",
-    dsaStrategyPersona1Title: "Pakar Akademik",
-    dsaStrategyPersona1Tag: "AL 8–16 · Keluarga laluan IP",
-    dsaStrategyPersona1Who: "Anak anda mempunyai keputusan akademik yang kukuh DAN bakat yang boleh dibuktikan — gred muzik, medal robotik, trofi debat. DSA membolehkan anda memastikan sekolah IP yang tepat sebelum tekanan PSLE mencapai puncak.",
-    dsaStrategyPersona1Goal: "Pastikan sekolah IP yang sesuai dengan gred dan domain minat mereka.",
-    dsaStrategyPersona1Tip: "Mohon awal ke 2–3 sekolah IP melalui DSA. Gunakan PSLE sebagai pengesahan, bukan peperiksaan penentu.",
-    dsaStrategyPersona1Cta: "Lihat sekolah IP →",
-    dsaStrategyPersona2Title: "Pemimpin Seni & Sukan",
-    dsaStrategyPersona2Tag: "AL 18–28 · Keluarga arus tengah",
-    dsaStrategyPersona2Who: "Anak anda sederhana dari segi akademik tetapi benar-benar berbakat — penari yang konsisten, perenang berdaya saing, atau ahli muzik terlatih. Skor PSLE mereka sahaja mungkin tidak mencapai sekolah impian. DSA melepasi batasan tersebut.",
-    dsaStrategyPersona2Goal: "Masuk ke sekolah yang lebih sesuai melalui bakat, bukan sekadar skor peperiksaan.",
-    dsaStrategyPersona2Tip: "Pandangan utama: persaingan DSA-Tari di sekolah arus perdana yang baik sering kurang sengit berbanding persaingan akademik. Bakat tulen yang berdokumen dalam domain niche membuka pintu yang skor PSLE sahaja tidak mampu.",
-    dsaStrategyPersona2Cta: "Cari sekolah pertengahan →",
-    dsaStrategyPersona3Title: "Si Geek Kreatif",
-    dsaStrategyPersona3Tag: "AL 12–22 · Domain STEM & niche",
-    dsaStrategyPersona3Who: "Anak anda membina aplikasi, memenangi pertandingan robotik, atau mendapat tempat dalam Singapore Science & Engineering Fair. Mereka tidak sesuai dengan acuan 'bintang sukan' tetapi mempunyai bakat mendalam yang boleh dibuktikan dalam teknologi atau sains.",
-    dsaStrategyPersona3Goal: "Cari sekolah dengan program ALP yang kukuh dalam STEM, pengkodan, atau sains bioperubatan yang aktif merekrut melalui DSA.",
-    dsaStrategyPersona3Tip: "Penyertaan SSEF, NOI, dan SMO sangat diiktiraf oleh sekolah kompetitif. Bina portfolio pada P4–5, bukan P6.",
-    dsaStrategyPersona3Cta: "Layari sekolah mengikut ALP →",
-    dsaStrategyPersona4Title: "Baru Tahu DSA",
-    dsaStrategyPersona4Tag: "Baharu kepada DSA",
-    dsaStrategyPersona4Who: "Anda baru mendengar tentang DSA — mungkin daripada ibu bapa lain atau dalam talian. Tidak pasti sama ada ia berkaitan dengan anak anda.",
-    dsaStrategyPersona4Goal: "Fahami apa itu DSA, sama ada anak anda layak, dan apa yang perlu dilakukan sebelum tarikh akhir 2 Jun.",
-    dsaStrategyPersona4Tip: "Mulakan dengan Soalan Lazim — 14 soalan dijawab dalam bahasa mudah, ambil masa 10 minit.",
-    dsaStrategyPersona4Cta: "Baca Soalan Lazim DSA →",
+    dsaStrategyPersona1Title: "Anak saya sudah bertahun-tahun dalam CCA — cuma saya belum pernah benar-benar teliti DSA",
+    dsaStrategyPersona1Tag: "Kali pertama meneroka",
+    dsaStrategyPersona1Who: "Anda pernah dengar tentang DSA, tetapi menyangka ia hanya untuk murid Gifted Programme atau sekolah elit. Anak anda sudah berada dalam CCA yang sama selama 2+ tahun. Itu sudah lebih baik daripada titik mula kebanyakan keluarga.",
+    dsaStrategyPersona1Goal: "Fahami sama ada anak anda layak, dan bagaimana rupa \"bukti bakat\" dalam permohonan sebenar.",
+    dsaStrategyPersona1Tip: "DSA terbuka kepada setiap sekolah rendah di Singapura. Sekolah mencari penyertaan yang konsisten dari masa ke masa — bukan medal daripada program elit.",
+    dsaStrategyPersona1Cta: "Mulakan dengan Soalan Lazim →",
+    dsaStrategyPersona2Title: "Gred sederhana, tetapi benar-benar kuat dalam satu bidang",
+    dsaStrategyPersona2Tag: "Bakat mengatasi gred",
+    dsaStrategyPersona2Who: "Jangkaan PSLE: AL 20–26. Tetapi anak anda berlatih secara konsisten — renang, wushu, tarian Cina, atau domain STEM khusus — dengan pencapaian untuk dibuktikan. Bakat mereka nyata. DSA direka khas untuk mengiktiraf bakat seperti itu.",
+    dsaStrategyPersona2Goal: "Cari sekolah menengah yang menerima mereka kerana bakat, bukan skor peperiksaan.",
+    dsaStrategyPersona2Tip: "Sekolah yang sukar dicapai melalui laluan PSLE biasa memang boleh dicapai melalui DSA. Persaingan diukur dengan cara yang berbeza.",
+    dsaStrategyPersona2Cta: "Cari bidang bakat →",
+    dsaStrategyPersona3Title: "Saya mahu kunci sekolah yang sesuai sebelum hari keputusan PSLE",
+    dsaStrategyPersona3Tag: "Kunci lebih awal",
+    dsaStrategyPersona3Who: "Anak anda berprestasi baik secara akademik dan mempunyai bakat yang didokumentasikan. Anda sudah lihat betapa tertekannya hari keputusan November. Tawaran DSA yang Disahkan, di tangan sebelum PSLE, mengubah makna hari itu.",
+    dsaStrategyPersona3Goal: "Gunakan DSA secara strategik — kunci sekolah yang sesuai dengan laluan akademik dan bakat mereka — sebelum perebutan PSLE bermula.",
+    dsaStrategyPersona3Tip: "Dengan Tawaran Disahkan, sasaran PSLE berubah daripada \"bersaing untuk ranking\" kepada \"memenuhi syarat minimum kemasukan.\" Itu persediaan peperiksaan yang sama sekali berbeza.",
+    dsaStrategyPersona3Cta: "Baca Panduan DSA →",
+    dsaStrategyPersona4Title: "Permohonan tutup 2 Jun — mula dari mana?",
+    dsaStrategyPersona4Tag: "Tarikh akhir: 2 Jun 2026",
+    dsaStrategyPersona4Who: "Anda baru mengetahui tentang DSA minggu ini. Anda ada kurang daripada tiga minggu. Anak anda sudah menyertai CCA sekurang-kurangnya setahun. Itu cukup untuk bermula.",
+    dsaStrategyPersona4Goal: "Kenal pasti 1–3 sekolah untuk dimohon, kumpulkan portfolio bukti minimum, dan hantar sebelum 4:30 petang pada 2 Jun.",
+    dsaStrategyPersona4Tip: "Permohonan itu sendiri mengambil masa kurang daripada sejam melalui portal MOE. Kerja sebenar ialah memutuskan sekolah mana yang hendak dimohon. Gunakan Pencari DSA sekarang — ia mencari mengikut bidang bakat.",
+    dsaStrategyPersona4Cta: "Gunakan Pencari DSA →",
     dsaStrategyCtaTitle: "Bersedia untuk mencari padanan sekolah-domain yang tepat?",
     dsaStrategyCtaBody: "Layari semua 147 sekolah menengah MOE ditapis mengikut domain bakat, ALP, LLP, dan band COP PSLE.",
     dsaStrategyCtaBrowse: "Layari direktori sekolah →",
     dsaStrategyCtaInterview: "Panduan persediaan temuduga →",
+    subscribeKicker: "PAKEJ SUMBER PERCUMA · KELUARGA DARJAH 6",
+    subscribeTitle: "Semua yang anda perlukan untuk bersedia — dalam satu pakej percuma",
+    subscribeDesc: "Digunakan oleh ratusan keluarga Singapura yang bersedia untuk DSA. Tiada jualan tambahan, tiada ejen, hanya bahan.",
+    subscribeMaterial1: "Lembaran perbandingan sekolah DSA (147 sekolah)",
+    subscribeMaterial2: "Bank soalan temuduga mengikut bidang bakat",
+    subscribeMaterial3: "Panduan lawatan rumah terbuka — apa yang perlu ditanya & diperhatikan",
+    subscribeMaterial4: "Senarai semak garis masa permohonan & tarikh akhir 2026",
+    subscribeFormLabel: "Dapatkan pakej percuma",
+    subscribeBtn: "Hantar kepada saya →",
+    subscribeBtnLoading: "Menghantar…",
+    subscribeSuccessTitle: "Pakej sedang dalam perjalanan.",
+    subscribeSuccessDesc: "Semak peti masuk anda — kami akan menghantar bahan dalam masa 24 jam.",
+    subscribeDisclaimer: "Percuma. Tiada spam. Berhenti langgan bila-bila masa.",
+    dsaExpPageCrumb: "Panduan Pengalaman DSA",
+    dsaExpPageKicker: "Buku panduan ibu bapa",
+    dsaExpPageTitle: "Panduan Pengalaman DSA",
+    dsaExpPageSubtitle:
+      "Apa yang benar-benar berkesan dalam DSA Singapura — selektiviti sekolah, aras bakat, garis masa dan kesilapan yang perlu dielakkan.",
+    dsaExpLangNotice:
+      "Panduan ini kini hanya tersedia dalam bahasa Inggeris. Versi Bahasa Malaysia akan datang tidak lama lagi.",
     ...dsaGuideMs,
   },
   ta: {
@@ -920,19 +1041,17 @@ export const copy: Record<Locale, Copy> = {
     linkPortalTitle: "விண்ணப்ப வாயில்",
     linkPortalDesc:
       "சாளரம் திறக்கும்போது, அதிகாரப்பூர்வ மின்-சேவை மூலம் சமர்ப்பிக்கவும்.",
-    linkCalendarTitle: "முக்கிய தேதிகள்",
-    linkCalendarDesc: "MOE அறிவிப்புகளுடன் காலவரிசையை ஒப்பிடுக.",
     footerRights:
       "© dsalink.sg · சிங்கப்பூரில் DSA ஐ நடத்தும் பெற்றோருக்காக",
     extHint: "வெளியே திறக்கிறது",
     a11yLanguageSelector: "மொழியைத் தேர்ந்தெடுக்கவும்",
     heroSearchPlaceholder: "பள்ளி அல்லது திறமை தேடுக (எ.கா: ரோபோட்டிக்ஸ்)…",
-    openHouseKicker: "மே 2026",
-    sectionOpenHouseTitle: "பள்ளி திறந்த வீடுகள் · DSA சீசன் சிறப்புகள்",
+    openHouseKicker: "மே 2026 · தீவு முழுவதும்",
+    sectionOpenHouseTitle: "இடைநிலைப் பள்ளி திறந்த நாட்கள் · DSA & சேர்க்கை",
     sectionOpenHouseDesc:
-      "எங்கள் மே 2026 நாட்காட்டியிலிருந்து தேர்ந்தெடுக்கப்பட்டது. நேரங்கள் மற்றும் நேரடி / ஆன்லைன் முறைமைகள் குறிப்பிட்டவை — ஒவ்வொரு பள்ளியின் அதிகாரப்பூர்வ பக்கத்திலும் உறுதிப்படுத்தவும்.",
+      "147 இடைநிலைப் பள்ளிகள் (MOE அட்டவணை, 2026) இரு மொழிப் பெயர்கள், பகுதி, பள்ளி வகை மற்றும் அதிகாரப்பூர்வ DSA / சேர்க்கை இணைப்புகளுடன். திறந்த வீடு நேரங்கள் மே 2026 (TBC) — ஒவ்வொரு பள்ளியின் அதிகாரப்பூர்வ பக்கத்திலும் உறுதிப்படுத்தவும்.",
     openHouseOfficialLink: "அதிகாரப்பூர்வ திறந்த வீடு / சேர்க்கை",
-    openHouseOfficialBooking: "அதிகாரப்பூர்வ முன்பதிவு",
+    openHouseOfficialBooking: "DSA / சேர்க்கை",
     openHouseSchoolLink: "பள்ளி இணையதளம்",
     openHouseOnsite: "நேரடி",
     openHouseOnline: "ஆன்லைன்",
@@ -1051,8 +1170,8 @@ export const copy: Record<Locale, Copy> = {
     openHouseSortedByDate: "தேதி வாரியாக வரிசை",
     openHouseUrgencyToday: "இன்று",
     openHouseUrgencyTomorrow: "நாளை",
-    openHouseUrgencyThisSat: "இந்த சனி",
-    openHouseUrgencyThisSun: "இந்த ஞாயி",
+    openHouseUrgencyThisSat: "இந்த சனிக்கிழமை",
+    openHouseUrgencyThisSun: "இந்த ஞாயிற்றுக்கிழமை",
     openHouseUrgencyThisWeek: "இந்த வாரம்",
     dsaFinderCrumb: "DSA திறமை தேடல்",
     dsaFinderKicker: "MOE SchoolFinder அதிகாரப்பூர்வ DSA தரவு · 2026",
@@ -1075,41 +1194,61 @@ export const copy: Record<Locale, Copy> = {
     dsaStrategyDsaPath: "DSA பாதை",
     dsaStrategyDsaBody: "ஆவணப்படுத்தப்பட்ட திறமை PSLE-க்கு முன்பே பள்ளியை தீர்மானிக்கிறது. DSA சலுகை ஏற்றுக்கொண்டவுடன் கல்வி மதிப்பெண் பொருத்தமற்றதாகிவிடும்.",
     dsaStrategyDsaBadge: "மாற்று வழி",
-    dsaStrategySmartTitle: "சாணக்கிய உத்தி",
+    dsaStrategySmartTitle: "புத்திசாலி உத்தி",
     dsaStrategySmartBody: "போட்டி குறைவான துறைகளில் DSA மூலம் விண்ணப்பிக்கவும். PSLE செயல்திறனை பாதுகாப்பு வலையாக வைத்திருங்கள். இரண்டையும் தற்செயலுக்கு விட்டுவிடாதீர்கள்.",
     dsaStrategySmartBadge: "இரண்டும் சிறந்தது",
     dsaStrategyWhichParent: "நீங்கள் எந்த வகை பெற்றோர்?",
     dsaStrategyWhichDesc: "உங்கள் குழந்தையின் சுயவிவரத்தை கண்டறிந்து, அவர்களுக்கு ஏற்ற சிறந்த DSA அணுகுமுறையை பாருங்கள்.",
     dsaStrategyGoalLabel: "இலக்கு:",
     dsaStrategyTipLabel: "குறிப்பு:",
-    dsaStrategyPersona1Title: "கல்வியியல் நிபுணர்",
-    dsaStrategyPersona1Tag: "AL 8–16 · IP பாதை குடும்பங்கள்",
-    dsaStrategyPersona1Who: "உங்கள் குழந்தைக்கு வலுவான கல்வி முடிவுகளும் நிரூபிக்கக்கூடிய திறமையும் உள்ளன — இசை தரங்கள், ரோபோட்டிக்ஸ் பதக்கங்கள், விவாத கோப்பைகள். PSLE அழுத்தம் உச்சத்தை எட்டுவதற்கு முன்பே DSA மூலம் சரியான IP பள்ளியை உறுதிப்படுத்தலாம்.",
-    dsaStrategyPersona1Goal: "தங்கள் தரங்களுக்கும் ஆர்வமுள்ள துறைக்கும் பொருத்தமான IP பள்ளியை உறுதிப்படுத்துங்கள்.",
-    dsaStrategyPersona1Tip: "DSA மூலம் 2–3 IP பள்ளிகளில் முன்கூட்டியே விண்ணப்பிக்கவும். PSLE-ஐ உறுதிப்படுத்தலாக பயன்படுத்துங்கள், தீர்க்கும் தேர்வாக அல்ல.",
-    dsaStrategyPersona1Cta: "IP பள்ளிகளை காண்க →",
-    dsaStrategyPersona2Title: "கலை & விளையாட்டு தலைவர்",
-    dsaStrategyPersona2Tag: "AL 18–28 · நடுத்தர நீரோட்ட குடும்பங்கள்",
-    dsaStrategyPersona2Who: "உங்கள் குழந்தை கல்வியில் சராசரியானவர் ஆனால் உண்மையான திறமையுடையவர் — தொடர்ந்து நடனமாடுபவர், போட்டி நீச்சல் வீரர், அல்லது பயிற்சி பெற்ற இசைக்கலைஞர். PSLE மட்டும் கொண்டு கனவு பள்ளியை அடைய முடியாமல் போகலாம். DSA அந்த வரம்பை தாண்டுகிறது.",
-    dsaStrategyPersona2Goal: "திறமை மூலம் சிறந்த பொருத்தமான பள்ளியில் சேருங்கள், தேர்வு மதிப்பெண்ணால் மட்டுமல்ல.",
-    dsaStrategyPersona2Tip: "முக்கிய நுண்ணறிவு: நன்கு தரப்படுத்தப்பட்ட முக்கிய பள்ளியில் DSA-நடனத்திற்கான போட்டி பெரும்பாலும் கல்வி போட்டியை விட குறைவானது. சிறப்பு துறையில் உண்மையான, ஆவணப்படுத்தப்பட்ட திறமை PSLE மட்டுமே திறக்க முடியாத கதவுகளை திறக்கிறது.",
-    dsaStrategyPersona2Cta: "நடுத்தரப் பள்ளிகளை கண்டறி →",
-    dsaStrategyPersona3Title: "படைப்பாற்றல் நிபுணர்",
-    dsaStrategyPersona3Tag: "AL 12–22 · STEM & சிறப்பு துறைகள்",
-    dsaStrategyPersona3Who: "உங்கள் குழந்தை ஒரு செயலியை உருவாக்கினார், ரோபோட்டிக்ஸ் போட்டியில் வெற்றி பெற்றார், அல்லது Singapore Science & Engineering Fair-ல் இடம் பெற்றார். அவர்கள் 'விளையாட்டு நட்சத்திரம்' வார்ப்பில் பொருந்தவில்லை ஆனால் தொழில்நுட்பம் அல்லது அறிவியலில் ஆழமான, நிரூபிக்கக்கூடிய திறமை உள்ளது.",
-    dsaStrategyPersona3Goal: "STEM, கோடிங் அல்லது உயிரி மருத்துவ அறிவியலில் வலுவான ALP திட்டங்களுடன் DSA மூலம் சேர்க்கை நடத்தும் பள்ளிகளை கண்டறியுங்கள்.",
-    dsaStrategyPersona3Tip: "SSEF, NOI மற்றும் SMO பங்கேற்பு போட்டி பள்ளிகளால் மிகவும் அங்கீகரிக்கப்படுகிறது. P4–5-ல் போர்ட்ஃபோலியோ உருவாக்குங்கள், P6-ல் அல்ல.",
-    dsaStrategyPersona3Cta: "ALP வாரியாக பள்ளிகளை உலாவு →",
-    dsaStrategyPersona4Title: "DSA பற்றி புதிதாக அறிந்தவர்",
-    dsaStrategyPersona4Tag: "DSA புதியவர்",
-    dsaStrategyPersona4Who: "நீங்கள் சமீபத்தில் DSA பற்றி கேட்டீர்கள் — மற்ற பெற்றோரிடமிருந்து அல்லது ஆன்லைனில். உங்கள் குழந்தைக்கு இது பொருந்துமா என்று தெரியவில்லை.",
-    dsaStrategyPersona4Goal: "DSA என்னவென்று புரிந்துகொள்ளுங்கள், உங்கள் குழந்தை தகுதியுடையவரா என்று பாருங்கள், மற்றும் ஜூன் 2 தேதிக்கு முன் என்ன செய்ய வேண்டும்.",
-    dsaStrategyPersona4Tip: "முதலில் அடிக்கடி கேட்கப்படும் கேள்விகளை படியுங்கள் — 14 கேள்விகள் எளிய மொழியில் விடையளிக்கப்பட்டுள்ளன, 10 நிமிடங்கள்.",
-    dsaStrategyPersona4Cta: "DSA கேள்வி-பதில்களை படியுங்கள் →",
+    dsaStrategyPersona1Title: "என் குழந்தை பல ஆண்டுகளாக CCA-வில் இருக்கிறார் — நான் தான் DSA-வை சரியாக பார்க்கவில்லை",
+    dsaStrategyPersona1Tag: "முதல் முறையாக ஆராய்கிறீர்கள்",
+    dsaStrategyPersona1Who: "DSA பற்றி நீங்கள் கேட்டிருக்கலாம், ஆனால் அது Gifted Programme குழந்தைகள் அல்லது உயர்நிலை பள்ளிகளுக்கே என்று நினைத்திருக்கலாம். உங்கள் குழந்தை அதே CCA-வில் 2+ ஆண்டுகளாக தொடர்ந்து இருக்கிறார். பல குடும்பங்கள் தொடங்கும் நிலையைக் காட்டிலும் இது ஏற்கனவே நல்ல தொடக்கம்.",
+    dsaStrategyPersona1Goal: "உங்கள் குழந்தை தகுதியுடையவரா, உண்மையான விண்ணப்பத்தில் \"திறமைக்கான ஆதாரம்\" எப்படி இருக்க வேண்டும் என்பதைக் புரிந்துகொள்ளுங்கள்.",
+    dsaStrategyPersona1Tip: "DSA சிங்கப்பூரில் உள்ள ஒவ்வொரு தொடக்கப் பள்ளி மாணவர்களுக்கும் திறந்திருக்கும். பள்ளிகள் பார்ப்பது காலப்போக்கில் தொடர்ச்சியான பங்கேற்பு — உயர்நிலை திட்டங்களின் பதக்கங்கள் அல்ல.",
+    dsaStrategyPersona1Cta: "FAQ-யில் தொடங்குங்கள் →",
+    dsaStrategyPersona2Title: "சராசரி மதிப்பெண்கள், ஆனால் ஒரு துறையில் உண்மையாக வலிமை",
+    dsaStrategyPersona2Tag: "மதிப்பெண்களை விட திறமை",
+    dsaStrategyPersona2Who: "PSLE கணிப்பு: AL 20–26. ஆனால் உங்கள் குழந்தை தொடர்ந்து பயிற்சி செய்து வருகிறார் — நீச்சல், வுஷூ, சீன நடனம், அல்லது ஒரு சிறப்பு STEM துறை — அதை நிரூபிக்கும் முடிவுகளுடன். அவர்களின் திறமை உண்மையானது. DSA இதுபோன்ற திறமையை அங்கீகரிக்கவே வடிவமைக்கப்பட்டுள்ளது.",
+    dsaStrategyPersona2Goal: "தேர்வு மதிப்பெண் அல்ல, அவர்களின் திறமைதான் சேர்க்கைக்கு காரணமாக இருக்கும் இடைநிலைப் பள்ளிகளை கண்டறியுங்கள்.",
+    dsaStrategyPersona2Tip: "சாதாரண PSLE பாதையில் எட்ட முடியாத பள்ளிகளும் DSA மூலம் உண்மையாக அணுகக்கூடியவை. போட்டி வேறு அளவுகோலில் மதிப்பிடப்படுகிறது.",
+    dsaStrategyPersona2Cta: "திறமை துறைகளை தேடுங்கள் →",
+    dsaStrategyPersona3Title: "PSLE முடிவு நாளுக்கு முன் சரியான பள்ளியை உறுதிப்படுத்த விரும்புகிறேன்",
+    dsaStrategyPersona3Tag: "முன்கூட்டியே உறுதி",
+    dsaStrategyPersona3Who: "உங்கள் குழந்தை கல்வியில் சரியான பாதையில் செல்கிறார் மற்றும் ஆவணப்படுத்தப்பட்ட திறமை உள்ளது. நவம்பர் முடிவு நாள் எவ்வளவு அழுத்தமானது என்பதை நீங்கள் பார்த்திருக்கிறீர்கள். PSLE-க்கு முன்பே கையில் இருக்கும் Confirmed DSA Offer அந்த நாளின் அர்த்தத்தை மாற்றிவிடும்.",
+    dsaStrategyPersona3Goal: "DSA-வை உத்தியாக பயன்படுத்துங்கள் — PSLE அவசரம் தொடங்குவதற்கு முன், அவர்களின் கல்வி பாதைக்கும் திறமைக்கும் பொருந்தும் பள்ளியை உறுதிப்படுத்துங்கள்.",
+    dsaStrategyPersona3Tip: "Confirmed Offer இருந்தால், PSLE இலக்கு \"தரவரிசைக்காக போட்டியிடுதல்\" என்பதிலிருந்து \"குறைந்தபட்ச சேர்க்கை தேவையை பூர்த்தி செய்தல்\" என மாறும். அது முற்றிலும் வேறுபட்ட தேர்வு தயாரிப்பு.",
+    dsaStrategyPersona3Cta: "DSA வழிகாட்டியைப் படிக்கவும் →",
+    dsaStrategyPersona4Title: "விண்ணப்பங்கள் ஜூன் 2 அன்று முடிகின்றன — எங்கே தொடங்குவது?",
+    dsaStrategyPersona4Tag: "கடைசி நாள்: 2 Jun 2026",
+    dsaStrategyPersona4Who: "இந்த வாரம் தான் நீங்கள் DSA பற்றி அறிந்தீர்கள். மூன்று வாரங்களுக்கும் குறைவான நேரம் உள்ளது. உங்கள் குழந்தை குறைந்தது ஒரு வருடமாக CCA செய்து வருகிறார். தொடங்குவதற்கு அது போதுமானது.",
+    dsaStrategyPersona4Goal: "விண்ணப்பிக்க 1–3 பள்ளிகளை அடையாளம் காணுங்கள், குறைந்தபட்ச ஆதாரப் போர்ட்ஃபோலியோவை சேகரியுங்கள், ஜூன் 2 மாலை 4:30 மணிக்கு முன் சமர்ப்பியுங்கள்.",
+    dsaStrategyPersona4Tip: "MOE வாயிலாக விண்ணப்பம் செய்வதற்கு ஒரு மணிநேரத்திற்கும் குறைவாகவே ஆகும். உண்மையான வேலை எந்த பள்ளிகளுக்கு விண்ணப்பிப்பது என்பதை தீர்மானிப்பதே. இப்போது DSA தேடலை பயன்படுத்துங்கள் — அது திறமை துறையின்படி தேடும்.",
+    dsaStrategyPersona4Cta: "DSA தேடலை பயன்படுத்துங்கள் →",
     dsaStrategyCtaTitle: "சரியான பள்ளி-துறை பொருத்தத்தை கண்டுபிடிக்க தயாரா?",
     dsaStrategyCtaBody: "திறமை துறை, ALP, LLP மற்றும் PSLE COP வரிசை வாரியாக வடிகட்டப்பட்ட 147 MOE இடைநிலைப் பள்ளிகளை உலாவுங்கள்.",
     dsaStrategyCtaBrowse: "பள்ளி அட்டவணையை உலாவு →",
     dsaStrategyCtaInterview: "நேர்காணல் தயாரிப்பு வழிகாட்டி →",
+    subscribeKicker: "இலவச வள தொகுப்பு · P6 குடும்பங்கள்",
+    subscribeTitle: "தயாரிப்புக்கு தேவையான அனைத்தும் — ஒரு இலவச தொகுப்பில்",
+    subscribeDesc: "நூற்றுக்கணக்கான சிங்கப்பூர் குடும்பங்கள் DSA தயாரிப்புக்கு பயன்படுத்துகின்றன.",
+    subscribeMaterial1: "DSA பள்ளி ஒப்பீட்டு பட்டியல் (147 பள்ளிகள்)",
+    subscribeMaterial2: "திறன் பகுதி வாரியாக நேர்காணல் கேள்வி தொகுப்பு",
+    subscribeMaterial3: "திறந்த இல்ல வழிகாட்டி — என்ன கேட்கவேண்டும் & கவனிக்கவேண்டும்",
+    subscribeMaterial4: "2026 விண்ணப்ப கால அட்டவணை & காலக்கெடு சரிபார்ப்பு பட்டியல்",
+    subscribeFormLabel: "இலவச தொகுப்பைப் பெறுங்கள்",
+    subscribeBtn: "எனக்கு அனுப்புங்கள் →",
+    subscribeBtnLoading: "அனுப்புகிறோம்…",
+    subscribeSuccessTitle: "தொகுப்பு வழியில் உள்ளது.",
+    subscribeSuccessDesc: "உங்கள் inbox-ஐ சரிபாருங்கள் — 24 மணி நேரத்தில் அனுப்புவோம்.",
+    subscribeDisclaimer: "இலவசம். spam இல்லை. எப்போதும் குழுவிலகலாம்.",
+    dsaExpPageCrumb: "DSA அனுபவ வழிகாட்டி",
+    dsaExpPageKicker: "பெற்றோர் செயல்நூல்",
+    dsaExpPageTitle: "DSA அனுபவ வழிகாட்டி",
+    dsaExpPageSubtitle:
+      "சிங்கப்பூர் DSA-வில் உண்மையில் செயல்படுவது — பள்ளி தேர்வு, திறன் வரம்புகள், கால அட்டவணை மற்றும் தவிர்க்க வேண்டிய தவறுகள்.",
+    dsaExpLangNotice:
+      "இந்த வழிகாட்டி தற்போது ஆங்கிலத்தில் மட்டுமே கிடைக்கிறது. தமிழ் பதிப்பு விரைவில் வரும்.",
     ...dsaGuideTa,
   },
 };

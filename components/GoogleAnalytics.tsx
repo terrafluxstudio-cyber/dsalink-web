@@ -22,18 +22,14 @@ export function GoogleAnalytics() {
 
   return (
     <>
+      {/* Define gtag immediately so trackEvent() works before the external script loads */}
+      <Script id="dsalink-ga4-init" strategy="beforeInteractive">
+        {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+      </Script>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
         strategy="lazyOnload"
       />
-      <Script id="dsalink-ga4" strategy="lazyOnload">
-        {`
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${GA_ID}');
-`}
-      </Script>
     </>
   );
 }

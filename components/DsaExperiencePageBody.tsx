@@ -7,29 +7,32 @@ import {
   DSA_EXPERIENCE_TIMELINE,
   DSA_EXPERIENCE_TOC,
 } from "@/content/dsa-experience";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { PageHeader } from "@/components/PageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
-const HERO = {
-  crumb: "DSA Experience Guide",
-  kicker: "Parent playbook",
-  title: "DSA Experience Guide",
-  subtitle:
-    "What actually works in Singapore DSA — school selectivity, talent bars, timelines, and mistakes to avoid. Synthesised from parent forums, MOE rules, and real case patterns.",
-} as const;
-
 export function DsaExperiencePageBody() {
+  const { t, locale } = useLanguage();
+
   return (
     <>
       <SiteHeader />
       <main>
         <PageHeader
-          crumbLabel={HERO.crumb}
-          kicker={HERO.kicker}
-          title={HERO.title}
-          subtitle={HERO.subtitle}
+          crumbLabel={t.dsaExpPageCrumb}
+          kicker={t.dsaExpPageKicker}
+          title={t.dsaExpPageTitle}
+          subtitle={t.dsaExpPageSubtitle}
         />
+
+        {locale !== "en" && t.dsaExpLangNotice && (
+          <div className="border-b border-amber-200 bg-amber-50 px-4 py-3">
+            <p className="mx-auto max-w-6xl text-center text-sm text-amber-800">
+              {t.dsaExpLangNotice}
+            </p>
+          </div>
+        )}
 
         <div className="bg-surface">
           <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">

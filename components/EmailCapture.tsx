@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 export interface EmailCaptureProps {
   onSubmit: (email: string) => void;
@@ -16,6 +17,7 @@ export function EmailCapture({ onSubmit, onSkip }: EmailCaptureProps) {
     const trimmed = email.trim();
     if (!trimmed) return;
     onSubmit(trimmed);
+    trackEvent("email_captured");
     setSubmitted(true);
   };
 

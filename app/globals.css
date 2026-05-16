@@ -34,3 +34,37 @@ h1 { letter-spacing: -0.025em; }
 h2 { letter-spacing: -0.02em; }
 body { line-height: 1.6; }
 :focus:not(:focus-visible) { outline: none; }
+
+/* ── Language-aware typography ── */
+:lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  letter-spacing: 0 !important;
+  line-height: 1.4 !important;
+}
+:lang(zh) p, :lang(zh) li {
+  line-height: 1.75;
+  word-break: keep-all;
+}
+:lang(ta) h1, :lang(ta) h2, :lang(ta) h3 {
+  letter-spacing: 0 !important;
+  line-height: 1.55 !important;
+}
+:lang(ta) p, :lang(ta) li {
+  line-height: 1.9;
+  overflow-wrap: break-word;
+}
+:lang(ms) p, :lang(ms) h2, :lang(ms) h3 {
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+}
+
+/* ── Scroll fade-up animation ── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.animate-fade-up-delay-1 { animation-delay: 80ms; }
+.animate-fade-up-delay-2 { animation-delay: 160ms; }
+.animate-fade-up-delay-3 { animation-delay: 240ms; }

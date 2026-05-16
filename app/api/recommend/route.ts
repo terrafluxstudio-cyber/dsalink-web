@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { saveRecommendRecord } from "@/lib/db";
+import { addContactToBrevo } from "@/lib/brevo";
 import { nanoid } from "nanoid";
 
 export async function POST(req: NextRequest) {
@@ -14,8 +15,16 @@ export async function POST(req: NextRequest) {
     region: body.region,
     town: body.town,
     ...(body.email ? { email: body.email } : {}),
+    ...(body.utm_source ? { utm_source: body.utm_source } : {}),
+    ...(body.utm_medium ? { utm_medium: body.utm_medium } : {}),
+    ...(body.utm_campaign ? { utm_campaign: body.utm_campaign } : {}),
   };
 
   await saveRecommendRecord(record);
+
+  if (record.email) {
+    await addContactToBrevo(record.email);
+  }
+
   return NextResponse.json({ ok: true });
 }

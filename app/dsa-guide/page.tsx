@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DsaGuidePageBody } from "@/components/DsaGuidePageBody";
+import { GuideScrollTracker } from "@/components/GuideScrollTracker";
 import { buildDsaGuideStructuredData } from "@/lib/seo";
 
 const PAGE_TITLE =
@@ -52,6 +53,7 @@ export default function DsaGuidePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <GuideScrollTracker />
       <DsaGuidePageBody />
     </>
   );

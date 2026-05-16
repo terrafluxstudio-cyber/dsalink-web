@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 
@@ -6,25 +5,28 @@ const JOURNEY_STEPS = [
   {
     number: "1",
     title: "Understand DSA",
-    description: "What it is and if it's right for your child",
+    description: "What it is and if it fits your child",
     href: "/faq",
+    external: false,
   },
   {
     number: "2",
     title: "Find schools",
-    description: "Search 1,300+ talent areas across 147 schools",
+    description: "1,300+ talent areas · 147 schools",
     href: "/dsa-finder",
+    external: false,
   },
   {
     number: "3",
     title: "Visit open houses",
     description: "Know what to ask before you go",
     href: "/open-house-guide",
+    external: false,
   },
   {
     number: "4",
-    title: "Apply",
-    description: "Submit by 2 Jun 2026 via MOE portal",
+    title: "Apply by 2 Jun",
+    description: "Free · via MOE portal",
     href: "https://www.moe.gov.sg/secondary/dsa",
     external: true,
   },
@@ -32,51 +34,107 @@ const JOURNEY_STEPS = [
 
 export function ParentJourneyStrip() {
   return (
-    <section className="bg-surface-subtle py-8 sm:py-10">
+    <section className="border-t border-surface-warm bg-surface-subtle py-6 sm:py-8">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <p className="mb-4 text-[10px] font-bold tracking-[0.16em] text-slate-400">
-          YOUR DSA JOURNEY
+        <p className="mb-5 text-[10px] font-bold tracking-[0.16em] text-slate-400">
+          Your DSA Journey
         </p>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] sm:items-stretch">
+
+        {/* Desktop: horizontal connected timeline */}
+        <div className="hidden sm:block">
+          <div className="relative">
+            {/* Connector line */}
+            <div className="absolute left-[calc(12.5%)] right-[calc(12.5%)] top-[22px] h-0.5 bg-gradient-to-r from-intellectual via-intellectual/50 to-champagne" />
+
+            <div className="grid grid-cols-4 gap-3">
+              {JOURNEY_STEPS.map((step) => (
+                <div key={step.number} className="flex flex-col items-center">
+                  {/* Node circle */}
+                  <div
+                    className={`relative z-10 mb-3 flex h-11 w-11 items-center justify-center rounded-full border-2 text-sm font-bold shadow-sm ${
+                      step.external
+                        ? "border-champagne bg-champagne text-intellectual"
+                        : "border-intellectual bg-intellectual text-white"
+                    }`}
+                  >
+                    {step.number}
+                  </div>
+
+                  {/* Card */}
+                  <Link
+                    href={step.href}
+                    target={step.external ? "_blank" : undefined}
+                    rel={step.external ? "noopener noreferrer" : undefined}
+                    className={`w-full rounded-xl border p-3 text-center shadow-card transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-hover ${
+                      step.external
+                        ? "border-champagne/40 bg-champagne-subtle"
+                        : "border-[#e3ded5] bg-white"
+                    }`}
+                  >
+                    <span className="flex items-center justify-center gap-1 font-display text-[0.875rem] font-semibold text-slate-900">
+                      {step.title}
+                      {step.external && (
+                        <ExternalLink
+                          className="h-3 w-3 text-champagne-dark"
+                          aria-hidden
+                        />
+                      )}
+                    </span>
+                    <span className="mt-0.5 block text-[0.75rem] leading-snug text-slate-500">
+                      {step.description}
+                    </span>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile: vertical timeline */}
+        <div className="space-y-3 sm:hidden">
           {JOURNEY_STEPS.map((step, index) => (
-            <Fragment key={step.number}>
+            <div key={step.number} className="flex gap-3">
+              {/* Left: number + vertical line */}
+              <div className="flex flex-col items-center">
+                <div
+                  className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 text-xs font-bold ${
+                    step.external
+                      ? "border-champagne bg-champagne text-intellectual"
+                      : "border-intellectual bg-intellectual text-white"
+                  }`}
+                >
+                  {step.number}
+                </div>
+                {index < JOURNEY_STEPS.length - 1 && (
+                  <div className="mt-1 w-0.5 flex-1 bg-gradient-to-b from-intellectual/40 to-transparent" />
+                )}
+              </div>
+
+              {/* Right: card */}
               <Link
                 href={step.href}
                 target={step.external ? "_blank" : undefined}
                 rel={step.external ? "noopener noreferrer" : undefined}
-                aria-label={
+                className={`mb-1 flex-1 rounded-xl border p-3 shadow-card transition-all duration-200 hover:shadow-card-hover ${
                   step.external
-                    ? `${step.title}: ${step.description}, external website`
-                    : undefined
-                }
-                className={`group rounded-xl border p-4 shadow-card transition hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-intellectual ${
-                  step.external
-                    ? "border-champagne/30 bg-champagne-subtle"
+                    ? "border-champagne/40 bg-champagne-subtle"
                     : "border-[#e3ded5] bg-white"
                 }`}
               >
-                <span className="mb-3 flex h-7 w-7 items-center justify-center rounded-full bg-intellectual text-[0.8125rem] font-bold text-white">
-                  {step.number}
-                </span>
-                <span className="flex items-center gap-1.5 font-display text-[0.9375rem] font-semibold text-slate-900">
+                <span className="flex items-center gap-1 font-display text-[0.875rem] font-semibold text-slate-900">
                   {step.title}
-                  {step.external ? (
+                  {step.external && (
                     <ExternalLink
-                      className="h-3.5 w-3.5 text-champagne-dark"
+                      className="h-3 w-3 text-champagne-dark"
                       aria-hidden
                     />
-                  ) : null}
+                  )}
                 </span>
-                <span className="mt-1 block text-[0.8125rem] leading-snug text-slate-500">
+                <span className="mt-0.5 block text-[0.75rem] leading-snug text-slate-500">
                   {step.description}
                 </span>
               </Link>
-              {index < JOURNEY_STEPS.length - 1 ? (
-                <div className="hidden items-center text-xl text-slate-300 sm:flex">
-                  →
-                </div>
-              ) : null}
-            </Fragment>
+            </div>
           ))}
         </div>
       </div>

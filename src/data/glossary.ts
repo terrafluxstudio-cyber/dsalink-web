@@ -54,6 +54,56 @@ export const GLOSSARY = {
     "Language Elective Programme (Malay) — the MOE Language Elective Programme track in Malay for students with strong aptitude, taken alongside the regular Malay Language course.",
   "Elective Programme in Malay Language (EMAS)":
     "Elective Programme in Malay Language (EMAS) — the EMAS elective track (secondary) for students with strong aptitude in Malay Language; naming may appear with or without “for Secondary School”.",
+  "School-based Gifted Education":
+    "School-level enrichment and acceleration for high-ability learners, aligned to MOE gifted education policy. Schools offer advanced coursework, independent study, and specialist mentorship within the regular school setting.",
+  "Music Elective Programme":
+    "An MOE programme for secondary students with strong musical aptitude to study music performance, theory, and history at a deeper level alongside the standard curriculum. Offered at selected schools.",
+  "Art Elective Programme":
+    "An MOE programme for secondary students with strong visual arts aptitude to study art theory, history, and studio practice at a deeper level alongside the standard curriculum. Offered at selected schools.",
+  "Bicultural Studies Programme":
+    "Typically offered in SAP schools, a programme linking Chinese language and culture with contemporary global issues, developing bilingual and bicultural competencies through specialist coursework.",
+  "Integrated Programme":
+    "A six-year through-train secondary programme leading to GCE A-Level or equivalent without sitting GCE O-Level. Students progress from Secondary 1 to pre-university level within the same school or school cluster.",
+  "Regional Studies Programme":
+    "An MOE humanities programme offered at selected schools that develops specialist knowledge of the history, geography, and cultures of Southeast Asia and East Asia. Includes study trips and expert mentorship.",
+  "Chinese Language Special Programme":
+    "Offered in selected secondary schools (typically SAP schools), this programme deepens Chinese language proficiency through classical texts, literature, and cultural study beyond the standard curriculum.",
+  "Malay Language Special Programme":
+    "A programme at selected secondary schools to deepen Malay Language proficiency through enhanced literary, cultural, and linguistic study for students with strong aptitude.",
+  "Malay Language (Special Programme)":
+    "A programme at selected secondary schools to deepen Malay Language proficiency through enhanced literary, cultural, and linguistic study for students with strong aptitude.",
+  "Language Elective Programme (Chinese)":
+    "The MOE Language Elective Programme track for Chinese Language — an elective for students with strong aptitude to study Chinese at a higher depth, including classical and contemporary literature.",
+  "Language Elective Programme (Tamil)":
+    "The MOE Language Elective Programme track for Tamil Language — an elective for students with strong aptitude to study Tamil at a higher depth.",
+  "Humanities Scholarship and Programme":
+    "A scholarship-linked programme for students with exceptional aptitude in humanities (history, geography, literature), offering specialist teaching, mentorship, and enrichment. Offered at selected schools including RGS and NYGH.",
+  "Engineering and Tech Programme and Scholarship":
+    "A scholarship and programme for students with strong interest in engineering and technology, combining academic study with design challenges, industry exposure, and practitioner mentorship.",
+  "STEAM (Science, Technology, Engineering, Aesthetics and Mathematics)":
+    "A cross-disciplinary programme integrating arts and design thinking with STEM subjects, developing creative problem-solving and innovation mindset alongside technical competencies.",
+  "Enhanced Art Programme":
+    "A school-based visual arts programme offering deeper study beyond the standard curriculum for students with strong artistic aptitude, including advanced studio work, art history, and exhibition participation.",
+  "Enhanced Art Programme (Elective)":
+    "An elective version of the school's enhanced visual arts offering, allowing students to opt in for deeper study based on interest and aptitude.",
+  "Enhanced Music Programme":
+    "A school-based music programme offering deeper engagement in performance, composition, and music theory for students with strong musical aptitude, beyond the standard curriculum.",
+  "SUNRISE programme":
+    "A structured alternative education programme offering applied learning and vocational skills development for students who benefit from non-traditional academic pathways and hands-on learning approaches.",
+  "Internet of Things Applications":
+    "An applied learning module covering IoT concepts, sensor networks, and connected device programming. Students design and build physical computing projects, developing skills in electronics and data-driven systems.",
+  "Mobile Web Applications":
+    "An applied learning module focused on designing and developing mobile and web applications, combining programming with UI/UX principles to create functional digital products.",
+  "Mechanical Design & Automation":
+    "An applied learning module covering mechanical engineering principles, computer-aided design (CAD), and automation systems, developing practical engineering and problem-solving skills.",
+  "Culinary & Restaurant Operations":
+    "A vocational or applied subject module covering professional food preparation, kitchen management, and restaurant service operations, providing industry-relevant skills for the hospitality sector.",
+  "Retail & E-commerce":
+    "A vocational or applied subject module covering retail management, digital commerce platforms, customer service, and business operations for the retail industry.",
+  "Special Assistance Plan (SAP)":
+    "The full designation of SAP — schools that offer both English Language and Chinese Language at a higher level to develop bilingual and bicultural students.",
+  "Vocational subjects: air-conditioning maintenance, electrical systems, food preparation, hospitality services":
+    "Vocational subject modules at alternative education schools (e.g. NorthLight, Spectra, Assumption Pathway), covering trade skills in building services, electrical work, food preparation, and hospitality for students on non-standard secondary pathways.",
 } as const;
 
 export type GlossaryTerm = keyof typeof GLOSSARY;
@@ -95,6 +145,31 @@ export const GLOSSARY_I18N_KEY: Record<GlossaryTerm, string> = {
     "glossaryDefElectiveProgrammeInMalayLanguageForSecondarySchoolEmas",
   "Language Elective Programme (Malay)": "glossaryDefLanguageElectiveProgrammeMalay",
   "Elective Programme in Malay Language (EMAS)": "glossaryDefElectiveProgrammeInMalayLanguageEmas",
+  "School-based Gifted Education": "glossaryDefSchoolBasedGiftedEducation",
+  "Music Elective Programme": "glossaryDefMusicElectiveProgramme",
+  "Art Elective Programme": "glossaryDefArtElectiveProgramme",
+  "Bicultural Studies Programme": "glossaryDefBiculturalStudiesProgramme",
+  "Integrated Programme": "glossaryDefIntegratedProgramme",
+  "Regional Studies Programme": "glossaryDefRegionalStudiesProgramme",
+  "Chinese Language Special Programme": "glossaryDefChineseLanguageSpecialProgramme",
+  "Malay Language Special Programme": "glossaryDefMalayLanguageSpecialProgramme",
+  "Malay Language (Special Programme)": "glossaryDefMalayLanguageSpecialProgrammeAlt",
+  "Language Elective Programme (Chinese)": "glossaryDefLanguageElectiveProgrammeChinese",
+  "Language Elective Programme (Tamil)": "glossaryDefLanguageElectiveProgrammeTamil",
+  "Humanities Scholarship and Programme": "glossaryDefHumanitiesScholarshipProgramme",
+  "Engineering and Tech Programme and Scholarship": "glossaryDefEngineeringTechProgramme",
+  "STEAM (Science, Technology, Engineering, Aesthetics and Mathematics)": "glossaryDefSteam",
+  "Enhanced Art Programme": "glossaryDefEnhancedArtProgramme",
+  "Enhanced Art Programme (Elective)": "glossaryDefEnhancedArtProgrammeElective",
+  "Enhanced Music Programme": "glossaryDefEnhancedMusicProgramme",
+  "SUNRISE programme": "glossaryDefSunriseProgramme",
+  "Internet of Things Applications": "glossaryDefIotApplications",
+  "Mobile Web Applications": "glossaryDefMobileWebApplications",
+  "Mechanical Design & Automation": "glossaryDefMechanicalDesignAutomation",
+  "Culinary & Restaurant Operations": "glossaryDefCulinaryRestaurantOperations",
+  "Retail & E-commerce": "glossaryDefRetailEcommerce",
+  "Special Assistance Plan (SAP)": "glossaryDefSpecialAssistancePlanSap",
+  "Vocational subjects: air-conditioning maintenance, electrical systems, food preparation, hospitality services": "glossaryDefVocationalSubjects",
 };
 
 export function getGlossaryDefinition(term: GlossaryTerm): string {

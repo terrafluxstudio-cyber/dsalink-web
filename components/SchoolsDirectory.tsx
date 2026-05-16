@@ -406,7 +406,7 @@ function SchoolCard({ entry }: { entry: SchoolDirectoryEntry }) {
 /* ── main export ─────────────────────────────────────────────────── */
 
 export function SchoolsDirectory() {
-  const { t } = useLanguage();
+  const { locale, t } = useLanguage();
   const [filters, setFilters] = useState<FilterState>(INIT);
 
   const filtered = useMemo(
@@ -416,6 +416,34 @@ export function SchoolsDirectory() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-10">
+      <div className="border-b border-intellectual/20 bg-intellectual px-4 py-4 sm:px-6">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-2">
+          <div className="flex items-baseline gap-1.5">
+            <span className="font-display text-[1.625rem] font-extrabold leading-none text-champagne">147</span>
+            <span className="text-[0.8125rem] text-white/70">
+              {locale === "zh" ? "所中学" : "secondary schools"}
+            </span>
+          </div>
+          <div className="hidden h-4 w-px bg-white/20 sm:block" />
+          <div className="flex items-baseline gap-1.5">
+            <span className="font-display text-[1.625rem] font-extrabold leading-none text-champagne">2025</span>
+            <span className="text-[0.8125rem] text-white/70">
+              {locale === "zh" ? "年 PSLE COP 数据" : "PSLE COP data"}
+            </span>
+          </div>
+          <div className="hidden h-4 w-px bg-white/20 sm:block" />
+          <div className="flex items-baseline gap-1.5">
+            <span className="font-display text-[1.625rem] font-extrabold leading-none text-champagne">1,300+</span>
+            <span className="text-[0.8125rem] text-white/70">
+              {locale === "zh" ? "个 DSA 才艺方向" : "DSA talent areas"}
+            </span>
+          </div>
+          <div className="ml-auto flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1">
+            <span className="text-[0.6875rem] font-semibold tracking-wide text-white/80">MOE Data · 2026</span>
+          </div>
+        </div>
+      </div>
+
       <FilterBar
         filters={filters}
         onChange={setFilters}

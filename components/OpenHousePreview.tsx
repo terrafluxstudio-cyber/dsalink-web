@@ -38,7 +38,11 @@ function pickTime(ev: SchoolOpenHouse, locale: Locale): string {
 export function OpenHousePreview() {
   const { locale, t } = useLanguage();
 
-  const events = useMemo(() => getPreviewOpenHouseEvents(3), []);
+  const events = useMemo(() => {
+    return getPreviewOpenHouseEvents(6)
+      .filter((ev) => resolveOpenHouseStatus(ev) !== "Finished")
+      .slice(0, 3);
+  }, []);
 
   if (events.length === 0) return null;
 

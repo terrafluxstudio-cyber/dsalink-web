@@ -46,8 +46,8 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href="/dsa-interview" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
-                  {t.navDsaInterview}
+                <Link href="/dsa-finder" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
+                  {t.navDsaFinder}
                 </Link>
               </li>
               <li>
@@ -56,8 +56,8 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href="/dsa-finder" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
-                  {t.navDsaFinder}
+                <Link href="/dsa-interview" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
+                  {t.navDsaInterview}
                 </Link>
               </li>
             </ul>
@@ -70,6 +70,11 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
             </p>
             <ul className="space-y-2.5">
               <li>
+                <Link href="/open-houses" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
+                  {t.navOpenHouses}
+                </Link>
+              </li>
+              <li>
                 <Link href="/schools" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
                   {t.navSchools}
                 </Link>
@@ -77,11 +82,6 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
               <li>
                 <Link href="/psle-cop" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
                   {t.navScores}
-                </Link>
-              </li>
-              <li>
-                <Link href="/open-houses" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
-                  {t.navOpenHouses}
                 </Link>
               </li>
             </ul>
@@ -96,11 +96,13 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
             scheduleNote={scheduleNote}
             rightsLine={t.footerRights}
             disclaimerBody={t.legalDisclaimerBody}
-            logoAttribution={t.legalDisclaimerLogoAttribution}
             lastUpdated={t.legalDisclaimerLastUpdated}
             reportErrorLabel={t.legalDisclaimerReportError}
             ariaLabel={t.legalDisclaimerAriaLabel}
           />
+          <p className="mt-1 text-[11px] text-slate-400">
+            DSALink covers DSA-Sec (P6 → Secondary 1) only. DSA-JC is a separate process not covered here.
+          </p>
         </div>
 
       </div>

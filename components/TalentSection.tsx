@@ -216,6 +216,7 @@ function YesNoGroup({
 }
 
 function inferParticipation(value: Partial<TalentAssessmentInput>): ParticipationSource | null {
+  if (value.participationSource) return value.participationSource;
   if (value.hasExternalCoaching === false) return "school_cca";
   if (value.hasExternalCoaching === true) return "both";
   return null;
@@ -262,18 +263,19 @@ export function TalentSection({
     setParticipation(source);
     if (source === "personal_interest") {
       setKnowsRanking(undefined);
-      patch(clearSportsArtsFields());
+      patch({ ...clearSportsArtsFields(), participationSource: "personal_interest" });
       return;
     }
     if (source === "school_cca") {
-      patch({ hasExternalCoaching: false });
+      patch({ hasExternalCoaching: false, participationSource: "school_cca" });
       return;
     }
     if (source === "external") {
-      patch({ hasExternalCoaching: true });
+      patch({ hasExternalCoaching: true, participationSource: "external" });
       return;
     }
-    patch({ hasExternalCoaching: undefined });
+    // "both"
+    patch({ hasExternalCoaching: undefined, participationSource: "both" });
   };
 
   const showExternalYesNo =
