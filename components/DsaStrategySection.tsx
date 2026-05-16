@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import {
+  BookOpen,
   FlaskConical,
   GitFork,
   GraduationCap,
@@ -52,6 +53,12 @@ const PERSONA_STYLES: PersonaStyle[] = [
     accent: "border-teal-200 bg-teal-50",
     tagAccent: "bg-teal-100 text-teal-700",
   },
+  {
+    Icon: BookOpen,
+    iconBg: "bg-green-100 text-green-700",
+    accent: "border-green-200 bg-green-50",
+    tagAccent: "bg-green-100 text-green-700",
+  },
 ];
 
 const PERSONA_KEYS: PersonaKeys[] = [
@@ -81,6 +88,15 @@ const PERSONA_KEYS: PersonaKeys[] = [
     tipKey: "dsaStrategyPersona3Tip",
     ctaKey: "dsaStrategyPersona3Cta",
     href: "/schools",
+  },
+  {
+    titleKey: "dsaStrategyPersona4Title",
+    tagKey: "dsaStrategyPersona4Tag",
+    whoKey: "dsaStrategyPersona4Who",
+    goalKey: "dsaStrategyPersona4Goal",
+    tipKey: "dsaStrategyPersona4Tip",
+    ctaKey: "dsaStrategyPersona4Cta",
+    href: "/faq",
   },
 ];
 
@@ -190,7 +206,7 @@ export function DsaStrategySection() {
           </p>
         </div>
 
-        <div className="mb-10 grid gap-4 sm:grid-cols-3">
+        <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {PERSONA_KEYS.map((keys, i) => {
             const { Icon, iconBg, accent, tagAccent } = PERSONA_STYLES[i];
             return (

@@ -13,6 +13,7 @@ export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
+    { href: "/faq", label: t.navFaq },
     { href: "/dsa-guide", label: t.navDsaGuide },
     { href: "/dsa-finder", label: t.navDsaFinder },
     { href: "/open-houses", label: t.navOpenHouses },

@@ -1,0 +1,705 @@
+{
+  "metadata": {
+    "source": "data.gov.sg",
+    "fetched_at": "2026-05-15",
+    "total_primary_schools_counted": 179
+  },
+  "cca_pool": [
+    {
+      "genericName": "Art And Crafts",
+      "category": "Clubs And Societies",
+      "schoolCount": 175,
+      "competitionLevel": "popular"
+    },
+    {
+      "genericName": "Choir",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 148,
+      "competitionLevel": "popular"
+    },
+    {
+      "genericName": "Modern Dance",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 129,
+      "competitionLevel": "popular"
+    },
+    {
+      "genericName": "Scouts",
+      "category": "Uniformed Groups",
+      "schoolCount": 127,
+      "competitionLevel": "popular"
+    },
+    {
+      "genericName": "Basketball",
+      "category": "Physical Sports",
+      "schoolCount": 119,
+      "competitionLevel": "popular"
+    },
+    {
+      "genericName": "Football",
+      "category": "Physical Sports",
+      "schoolCount": 115,
+      "competitionLevel": "popular"
+    },
+    {
+      "genericName": "Badminton",
+      "category": "Physical Sports",
+      "schoolCount": 106,
+      "competitionLevel": "popular"
+    },
+    {
+      "genericName": "Environmental Science",
+      "category": "Clubs And Societies",
+      "schoolCount": 95,
+      "competitionLevel": "moderate"
+    },
+    {
+      "genericName": "Chinese Dance",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 87,
+      "competitionLevel": "moderate"
+    },
+    {
+      "genericName": "Infocomm Technology (media Production)",
+      "category": "Clubs And Societies",
+      "schoolCount": 79,
+      "competitionLevel": "moderate"
+    },
+    {
+      "genericName": "Wushu",
+      "category": "Physical Sports",
+      "schoolCount": 78,
+      "competitionLevel": "moderate"
+    },
+    {
+      "genericName": "Floorball",
+      "category": "Physical Sports",
+      "schoolCount": 70,
+      "competitionLevel": "moderate"
+    },
+    {
+      "genericName": "Girl Guides (brownies)",
+      "category": "Uniformed Groups",
+      "schoolCount": 66,
+      "competitionLevel": "moderate"
+    },
+    {
+      "genericName": "Netball",
+      "category": "Physical Sports",
+      "schoolCount": 63,
+      "competitionLevel": "moderate"
+    },
+    {
+      "genericName": "Robotics",
+      "category": "Clubs And Societies",
+      "schoolCount": 61,
+      "competitionLevel": "moderate"
+    },
+    {
+      "genericName": "Infocomm Technology (computing)",
+      "category": "Clubs And Societies",
+      "schoolCount": 59,
+      "competitionLevel": "moderate"
+    },
+    {
+      "genericName": "Malay Dance",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 59,
+      "competitionLevel": "moderate"
+    },
+    {
+      "genericName": "Student Leadership (prefect)",
+      "category": "Others",
+      "schoolCount": 58,
+      "competitionLevel": "moderate"
+    },
+    {
+      "genericName": "Track And Field",
+      "category": "Physical Sports",
+      "schoolCount": 51,
+      "competitionLevel": "moderate"
+    },
+    {
+      "genericName": "Guzheng Ensemble",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 48,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "English Drama",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 45,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Table Tennis",
+      "category": "Physical Sports",
+      "schoolCount": 44,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Physical Science",
+      "category": "Clubs And Societies",
+      "schoolCount": 42,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Modular Cca (sports)",
+      "category": "Physical Sports",
+      "schoolCount": 40,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Volleyball",
+      "category": "Physical Sports",
+      "schoolCount": 40,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Boys' Brigade",
+      "category": "Uniformed Groups",
+      "schoolCount": 39,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Girls' Brigade",
+      "category": "Uniformed Groups",
+      "schoolCount": 37,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "International Chess",
+      "category": "Clubs And Societies",
+      "schoolCount": 34,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Indian Dance",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 33,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Brass Band",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 30,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Red Cross Youth",
+      "category": "Uniformed Groups",
+      "schoolCount": 29,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "English Language, Drama And Debating",
+      "category": "Clubs And Societies",
+      "schoolCount": 25,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Guitar Ensemble",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 25,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Chinese Orchestra",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 25,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Rugby",
+      "category": "Physical Sports",
+      "schoolCount": 23,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Concert Band",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 23,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "String Ensemble",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 22,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Taekwondo",
+      "category": "Physical Sports",
+      "schoolCount": 21,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Angklung/kulintang Ensemble",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 20,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Percussion Ensemble",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 19,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Speech And Drama",
+      "category": "Clubs And Societies",
+      "schoolCount": 18,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Rope Skipping",
+      "category": "Physical Sports",
+      "schoolCount": 17,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Student Leadership (peer Support)",
+      "category": "Others",
+      "schoolCount": 17,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Bowling",
+      "category": "Physical Sports",
+      "schoolCount": 17,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Artistic Gymnastics",
+      "category": "Physical Sports",
+      "schoolCount": 16,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Design And Innovation",
+      "category": "Clubs And Societies",
+      "schoolCount": 15,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Handbell Ensemble",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 15,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Hockey",
+      "category": "Physical Sports",
+      "schoolCount": 14,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Tennis",
+      "category": "Physical Sports",
+      "schoolCount": 14,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Softball",
+      "category": "Physical Sports",
+      "schoolCount": 13,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Swimming",
+      "category": "Physical Sports",
+      "schoolCount": 13,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Outdoor Adventure",
+      "category": "Physical Sports",
+      "schoolCount": 13,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Digital Media",
+      "category": "Clubs And Societies",
+      "schoolCount": 13,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Chinese Culture And Language",
+      "category": "Clubs And Societies",
+      "schoolCount": 12,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Strategy Games",
+      "category": "Clubs And Societies",
+      "schoolCount": 12,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Media Resource Library",
+      "category": "Clubs And Societies",
+      "schoolCount": 12,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Health And Fitness",
+      "category": "Physical Sports",
+      "schoolCount": 12,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Tchoukball",
+      "category": "Physical Sports",
+      "schoolCount": 11,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Cultural Dance",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 10,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Debating And Public Speaking",
+      "category": "Clubs And Societies",
+      "schoolCount": 10,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "English Culture And Language",
+      "category": "Clubs And Societies",
+      "schoolCount": 10,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Mathematics",
+      "category": "Clubs And Societies",
+      "schoolCount": 10,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Student Leadership (house)",
+      "category": "Others",
+      "schoolCount": 10,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Rhythmic Gymnastics",
+      "category": "Physical Sports",
+      "schoolCount": 9,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Sailing",
+      "category": "Physical Sports",
+      "schoolCount": 8,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Chinese Calligraphy And Brush Painting",
+      "category": "Clubs And Societies",
+      "schoolCount": 8,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Community Service",
+      "category": "Clubs And Societies",
+      "schoolCount": 8,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Modular Cca (vpa)",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 8,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Faith-based Cca",
+      "category": "Clubs And Societies",
+      "schoolCount": 7,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Singapore National Youth Orchestra",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 7,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Photography",
+      "category": "Clubs And Societies",
+      "schoolCount": 6,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Chinese Drums",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 6,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Chinese Weiqi",
+      "category": "Clubs And Societies",
+      "schoolCount": 6,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Sepaktakraw",
+      "category": "Physical Sports",
+      "schoolCount": 5,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Student Initiated Activities (clubs & Societies)",
+      "category": "Others",
+      "schoolCount": 5,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Rockwall Climbing",
+      "category": "Physical Sports",
+      "schoolCount": 5,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Entrepreneurship",
+      "category": "Clubs And Societies",
+      "schoolCount": 5,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Tap Dance",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 4,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Audio Visual Aid",
+      "category": "Clubs And Societies",
+      "schoolCount": 4,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Ceramics",
+      "category": "Clubs And Societies",
+      "schoolCount": 4,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Home Economics",
+      "category": "Clubs And Societies",
+      "schoolCount": 4,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Chinese Chess",
+      "category": "Clubs And Societies",
+      "schoolCount": 4,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Student Leadership (council)",
+      "category": "Others",
+      "schoolCount": 4,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Lion And Dragon Dance",
+      "category": "Clubs And Societies",
+      "schoolCount": 3,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Golf",
+      "category": "Physical Sports",
+      "schoolCount": 3,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Artistic Swimming",
+      "category": "Physical Sports",
+      "schoolCount": 3,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Singapore National Youth Chinese Orchestra",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 3,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Publication",
+      "category": "Clubs And Societies",
+      "schoolCount": 3,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Harmonica Ensemble",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 3,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Modular Cca (c&s)",
+      "category": "Clubs And Societies",
+      "schoolCount": 3,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Journalism",
+      "category": "Clubs And Societies",
+      "schoolCount": 3,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Student Initiated Activities (physical Sports And Outdoors)",
+      "category": "Others",
+      "schoolCount": 3,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Student Initiated Activities (visual & Performing Arts)",
+      "category": "Others",
+      "schoolCount": 3,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Ukulele Ensemble",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 2,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Chinese Instrumental Ensemble",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 2,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Gamelan Ensemble",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 2,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Ballet",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 2,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Pop And Jazz",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 2,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Malay Culture And Language",
+      "category": "Clubs And Societies",
+      "schoolCount": 2,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Students' Council",
+      "category": "Clubs And Societies",
+      "schoolCount": 2,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Comics And Illustration",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 2,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Cheerleading",
+      "category": "Clubs And Societies",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Project Cabin",
+      "category": "Clubs And Societies",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Water Polo",
+      "category": "Physical Sports",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Fencing",
+      "category": "Physical Sports",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "National Education",
+      "category": "Clubs And Societies",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Western Orchestra",
+      "category": "Visual And Performing Arts",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Frisbee",
+      "category": "Physical Sports",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Dikir Barat",
+      "category": "Clubs And Societies",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Shooting",
+      "category": "Physical Sports",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Handball",
+      "category": "Physical Sports",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Silat",
+      "category": "Physical Sports",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Karate",
+      "category": "Physical Sports",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Biological Science",
+      "category": "Clubs And Societies",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Chinese Language, Drama And Debating",
+      "category": "Clubs And Societies",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    },
+    {
+      "genericName": "Broadcasting",
+      "category": "Clubs And Societies",
+      "schoolCount": 1,
+      "competitionLevel": "niche"
+    }
+  ]
+}

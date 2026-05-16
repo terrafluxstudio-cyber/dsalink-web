@@ -75,6 +75,7 @@ export type Copy = {
   openHouseStatusOngoing: string;
   openHouseStatusFinished: string;
   /** /dsa-guide — DSA-Sec application timeline */
+  navFaq: string;
   navDsaGuide: string;
   navDsaFinder: string;
   navOpenHouses: string;
@@ -236,6 +237,12 @@ export type Copy = {
   dsaStrategyPersona3Goal: string;
   dsaStrategyPersona3Tip: string;
   dsaStrategyPersona3Cta: string;
+  dsaStrategyPersona4Title: string;
+  dsaStrategyPersona4Tag: string;
+  dsaStrategyPersona4Who: string;
+  dsaStrategyPersona4Goal: string;
+  dsaStrategyPersona4Tip: string;
+  dsaStrategyPersona4Cta: string;
   dsaStrategyCtaTitle: string;
   dsaStrategyCtaBody: string;
   dsaStrategyCtaBrowse: string;
@@ -257,8 +264,8 @@ export const copy: Record<Locale, Copy> = {
     countdownMinutes: "Minutes",
     countdownSeconds: "Seconds",
     countdownDeadlineLine: "Closing: 2 Jun 2026 · 16:30 SGT",
-    ctaPrimary: "MOE DSA overview",
-    ctaSecondary: "Browse school portals",
+    ctaPrimary: "Find schools for your child's talent",
+    ctaSecondary: "Read the DSA Guide",
     sectionLinksTitle: "Official links & guides",
     sectionLinksDesc:
       "All destinations open in a new tab. Always confirm details on the official MOE website.",
@@ -288,6 +295,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusUpcoming: "Upcoming",
     openHouseStatusOngoing: "In progress",
     openHouseStatusFinished: "Ended",
+    navFaq: "FAQ",
     navDsaGuide: "DSA Guide",
     navDsaFinder: "DSA Finder",
     navOpenHouses: "Open houses",
@@ -445,6 +453,12 @@ export const copy: Record<Locale, Copy> = {
     dsaStrategyPersona3Goal: "Find schools with strong ALP programmes in STEM, coding, or biomedical science that actively recruit through DSA.",
     dsaStrategyPersona3Tip: "SSEF, NOI, and SMO participation are highly recognised by competitive schools. Build the portfolio in P4–5, not in P6.",
     dsaStrategyPersona3Cta: "Browse schools by ALP →",
+    dsaStrategyPersona4Title: "Just Discovered DSA",
+    dsaStrategyPersona4Tag: "New to DSA",
+    dsaStrategyPersona4Who: "You heard about DSA recently — maybe from another parent or online. Not sure if it applies to your child. Any primary school, any CCA.",
+    dsaStrategyPersona4Goal: "Understand what DSA is, whether your child qualifies, and what to do before the 2 June deadline.",
+    dsaStrategyPersona4Tip: "Start with the FAQ — 14 questions answered in plain English, 10 minutes. Then use the DSA Finder to search your child's talent area.",
+    dsaStrategyPersona4Cta: "Read the DSA FAQ →",
     dsaStrategyCtaTitle: "Ready to find the right school-domain match?",
     dsaStrategyCtaBody: "Browse all 147 MOE secondary schools filtered by talent domain, ALP, LLP, and PSLE COP band.",
     dsaStrategyCtaBrowse: "Browse school directory →",
@@ -464,8 +478,8 @@ export const copy: Record<Locale, Copy> = {
     countdownMinutes: "分钟",
     countdownSeconds: "秒",
     countdownDeadlineLine: "Closing: 2 Jun 2026 · 16:30 SGT",
-    ctaPrimary: "前往 MOE DSA 专页",
-    ctaSecondary: "查看中学入口列表",
+    ctaPrimary: "找找孩子才能匹配的学校",
+    ctaSecondary: "了解 DSA 申请流程",
     sectionLinksTitle: "官方链接与升学指南",
     sectionLinksDesc: "以下链接均在新标签页打开，请务必以 MOE 官网信息为准。",
     linkMoeTitle: "教育部 · DSA（中学）",
@@ -494,6 +508,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusUpcoming: "即将开放",
     openHouseStatusOngoing: "火热进行中",
     openHouseStatusFinished: "已结束",
+    navFaq: "常见问答",
     navDsaGuide: "DSA 指南",
     navDsaFinder: "DSA 搜索",
     navOpenHouses: "开放日",
@@ -648,6 +663,12 @@ export const copy: Record<Locale, Copy> = {
     dsaStrategyPersona3Goal: "找到 STEM、编程或生物医学领域 ALP 课程扎实、且通过 DSA 主动招生的学校。",
     dsaStrategyPersona3Tip: "SSEF、NOI 和 SMO 的参赛经历在竞争激烈的学校中极受认可。作品集要在小四、小五就开始积累，而不是等到小六才临阵磨枪。",
     dsaStrategyPersona3Cta: "按 ALP 方向浏览学校 →",
+    dsaStrategyPersona4Title: "刚了解 DSA",
+    dsaStrategyPersona4Tag: "DSA 新手",
+    dsaStrategyPersona4Who: "最近才听说 DSA——可能从其他家长或网上看到的。还不确定孩子是否适合申请。不管就读哪所小学，先了解基本情况再做决定。",
+    dsaStrategyPersona4Goal: "搞清楚 DSA 是什么、孩子是否符合申请条件，以及在 6 月 2 日截止前应该做什么。",
+    dsaStrategyPersona4Tip: "先读常见问答——14 个问题用简单语言回答，10 分钟读完。然后用 DSA 搜索器查孩子的才能领域。",
+    dsaStrategyPersona4Cta: "先读 DSA 常见问答 →",
     dsaStrategyCtaTitle: "准备好为孩子找到最合适的学校与特长搭配了吗？",
     dsaStrategyCtaBody: "浏览全部 147 所 MOE 中学，可按特长领域、ALP、LLP 和 PSLE COP 分段筛选。",
     dsaStrategyCtaBrowse: "浏览学校目录 →",
@@ -668,8 +689,8 @@ export const copy: Record<Locale, Copy> = {
     countdownMinutes: "Minit",
     countdownSeconds: "Saat",
     countdownDeadlineLine: "Closing: 2 Jun 2026 · 16:30 SGT",
-    ctaPrimary: "Ringkasan DSA MOE",
-    ctaSecondary: "Layari portal sekolah",
+    ctaPrimary: "Cari sekolah untuk bakat anak anda",
+    ctaSecondary: "Baca Panduan DSA",
     sectionLinksTitle: "Pautan rasmi & panduan",
     sectionLinksDesc:
       "Semua destinasi dibuka dalam tab baharu. Sentiasa sahkan butiran di laman rasmi MOE.",
@@ -701,6 +722,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusUpcoming: "Akan datang",
     openHouseStatusOngoing: "Sedang berlangsung",
     openHouseStatusFinished: "Tamat",
+    navFaq: "Soalan Lazim",
     navDsaGuide: "Panduan DSA",
     navDsaFinder: "Pencari DSA",
     navOpenHouses: "Hari terbuka",
@@ -858,6 +880,12 @@ export const copy: Record<Locale, Copy> = {
     dsaStrategyPersona3Goal: "Cari sekolah dengan program ALP yang kukuh dalam STEM, pengkodan, atau sains bioperubatan yang aktif merekrut melalui DSA.",
     dsaStrategyPersona3Tip: "Penyertaan SSEF, NOI, dan SMO sangat diiktiraf oleh sekolah kompetitif. Bina portfolio pada P4–5, bukan P6.",
     dsaStrategyPersona3Cta: "Layari sekolah mengikut ALP →",
+    dsaStrategyPersona4Title: "Baru Tahu DSA",
+    dsaStrategyPersona4Tag: "Baharu kepada DSA",
+    dsaStrategyPersona4Who: "Anda baru mendengar tentang DSA — mungkin daripada ibu bapa lain atau dalam talian. Tidak pasti sama ada ia berkaitan dengan anak anda.",
+    dsaStrategyPersona4Goal: "Fahami apa itu DSA, sama ada anak anda layak, dan apa yang perlu dilakukan sebelum tarikh akhir 2 Jun.",
+    dsaStrategyPersona4Tip: "Mulakan dengan Soalan Lazim — 14 soalan dijawab dalam bahasa mudah, ambil masa 10 minit.",
+    dsaStrategyPersona4Cta: "Baca Soalan Lazim DSA →",
     dsaStrategyCtaTitle: "Bersedia untuk mencari padanan sekolah-domain yang tepat?",
     dsaStrategyCtaBody: "Layari semua 147 sekolah menengah MOE ditapis mengikut domain bakat, ALP, LLP, dan band COP PSLE.",
     dsaStrategyCtaBrowse: "Layari direktori sekolah →",
@@ -879,8 +907,8 @@ export const copy: Record<Locale, Copy> = {
     countdownMinutes: "நிமிடங்கள்",
     countdownSeconds: "வினாடிகள்",
     countdownDeadlineLine: "Closing: 2 Jun 2026 · 16:30 SGT",
-    ctaPrimary: "MOE DSA கண்ணோட்டம்",
-    ctaSecondary: "பள்ளி வழிகளை உலாவு",
+    ctaPrimary: "உங்கள் குழந்தையின் திறமைக்கான பள்ளிகளை கண்டறியவும்",
+    ctaSecondary: "DSA வழிகாட்டியைப் படிக்கவும்",
     sectionLinksTitle: "அதிகாரப்பூர்வ இணைப்புகள் & வழிகாட்டிகள்",
     sectionLinksDesc:
       "அனைத்தும் புதிய தாவலில் திறக்கப்படும். அதிகாரப்பூர்வ MOE வலைத்தளத்தில் விவரங்களை உறுதிப்படுத்தவும்.",
@@ -913,6 +941,7 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusUpcoming: "வரவுள்ள",
     openHouseStatusOngoing: "நடைபெறுகிறது",
     openHouseStatusFinished: "முடிந்தது",
+    navFaq: "அடிக்கடி கேட்கப்படும் கேள்விகள்",
     navDsaGuide: "DSA வழிகாட்டி",
     navDsaFinder: "DSA தேடல்",
     navOpenHouses: "திறந்த வீடுகள்",
@@ -1071,6 +1100,12 @@ export const copy: Record<Locale, Copy> = {
     dsaStrategyPersona3Goal: "STEM, கோடிங் அல்லது உயிரி மருத்துவ அறிவியலில் வலுவான ALP திட்டங்களுடன் DSA மூலம் சேர்க்கை நடத்தும் பள்ளிகளை கண்டறியுங்கள்.",
     dsaStrategyPersona3Tip: "SSEF, NOI மற்றும் SMO பங்கேற்பு போட்டி பள்ளிகளால் மிகவும் அங்கீகரிக்கப்படுகிறது. P4–5-ல் போர்ட்ஃபோலியோ உருவாக்குங்கள், P6-ல் அல்ல.",
     dsaStrategyPersona3Cta: "ALP வாரியாக பள்ளிகளை உலாவு →",
+    dsaStrategyPersona4Title: "DSA பற்றி புதிதாக அறிந்தவர்",
+    dsaStrategyPersona4Tag: "DSA புதியவர்",
+    dsaStrategyPersona4Who: "நீங்கள் சமீபத்தில் DSA பற்றி கேட்டீர்கள் — மற்ற பெற்றோரிடமிருந்து அல்லது ஆன்லைனில். உங்கள் குழந்தைக்கு இது பொருந்துமா என்று தெரியவில்லை.",
+    dsaStrategyPersona4Goal: "DSA என்னவென்று புரிந்துகொள்ளுங்கள், உங்கள் குழந்தை தகுதியுடையவரா என்று பாருங்கள், மற்றும் ஜூன் 2 தேதிக்கு முன் என்ன செய்ய வேண்டும்.",
+    dsaStrategyPersona4Tip: "முதலில் அடிக்கடி கேட்கப்படும் கேள்விகளை படியுங்கள் — 14 கேள்விகள் எளிய மொழியில் விடையளிக்கப்பட்டுள்ளன, 10 நிமிடங்கள்.",
+    dsaStrategyPersona4Cta: "DSA கேள்வி-பதில்களை படியுங்கள் →",
     dsaStrategyCtaTitle: "சரியான பள்ளி-துறை பொருத்தத்தை கண்டுபிடிக்க தயாரா?",
     dsaStrategyCtaBody: "திறமை துறை, ALP, LLP மற்றும் PSLE COP வரிசை வாரியாக வடிகட்டப்பட்ட 147 MOE இடைநிலைப் பள்ளிகளை உலாவுங்கள்.",
     dsaStrategyCtaBrowse: "பள்ளி அட்டவணையை உலாவு →",

@@ -172,26 +172,47 @@ export default function FaqPage() {
               ))}
             </div>
 
-            {/* Related links */}
-            <div className="mt-12 rounded-xl border border-champagne/30 bg-champagne-subtle p-6">
-              <h2 className="mb-1 font-display text-base font-semibold text-slate-900">
-                Explore DSALink
-              </h2>
-              <p className="mb-4 text-[0.875rem] text-slate-600">
-                Use our tools to research schools and plan your DSA strategy.
+            {/* Next step: staged journey */}
+            <div className="mt-12">
+              <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400">
+                What do you want to do next?
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="grid gap-3 sm:grid-cols-3">
+                <Link
+                  href="/dsa-finder"
+                  className="flex flex-col rounded-xl border border-[#e3ded5] bg-white p-4 shadow-card transition hover:border-intellectual/30 hover:shadow-card-hover"
+                >
+                  <span className="mb-1 text-[10px] font-bold uppercase tracking-wide text-champagne-dark">Step 1</span>
+                  <span className="font-display text-[0.9375rem] font-semibold text-slate-900">Find matching schools</span>
+                  <span className="mt-1 text-[0.8125rem] leading-relaxed text-slate-500">Search 1,300+ talent areas across 147 schools</span>
+                </Link>
+                <Link
+                  href="/open-house-guide"
+                  className="flex flex-col rounded-xl border border-[#e3ded5] bg-white p-4 shadow-card transition hover:border-intellectual/30 hover:shadow-card-hover"
+                >
+                  <span className="mb-1 text-[10px] font-bold uppercase tracking-wide text-champagne-dark">Step 2</span>
+                  <span className="font-display text-[0.9375rem] font-semibold text-slate-900">Visit open houses</span>
+                  <span className="mt-1 text-[0.8125rem] leading-relaxed text-slate-500">What to ask before you go — open houses this weekend</span>
+                </Link>
+                <Link
+                  href="/dsa-interview"
+                  className="flex flex-col rounded-xl border border-[#e3ded5] bg-white p-4 shadow-card transition hover:border-intellectual/30 hover:shadow-card-hover"
+                >
+                  <span className="mb-1 text-[10px] font-bold uppercase tracking-wide text-champagne-dark">Step 3</span>
+                  <span className="font-display text-[0.9375rem] font-semibold text-slate-900">Prepare for selection</span>
+                  <span className="mt-1 text-[0.8125rem] leading-relaxed text-slate-500">Trials, auditions, and interviews — what schools look for</span>
+                </Link>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2">
                 {[
+                  { href: "/dsa-guide", label: "Full DSA timeline →" },
+                  { href: "/psle-cop", label: "PSLE cutoff scores →" },
                   { href: "/open-houses", label: "Open house calendar →" },
-                  { href: "/schools", label: "School directory →" },
-                  { href: "/psle-cop", label: "PSLE COP 2025 →" },
-                  { href: "/dsa-guide", label: "DSA timeline guide →" },
-                  { href: "/dsa-finder", label: "DSA school finder →" },
                 ].map(({ href, label }) => (
                   <Link
                     key={href}
                     href={href}
-                    className="rounded-lg border border-intellectual/20 bg-white px-4 py-2 text-[0.8125rem] font-semibold text-intellectual transition hover:border-intellectual/40 hover:bg-intellectual hover:text-white"
+                    className="rounded-lg border border-intellectual/15 bg-white px-3.5 py-1.5 text-[0.8125rem] text-slate-600 transition hover:border-intellectual/30 hover:text-intellectual"
                   >
                     {label}
                   </Link>

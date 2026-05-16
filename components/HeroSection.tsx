@@ -1,10 +1,10 @@
 "use client";
 
-import { ArrowRight, ExternalLink, ShieldCheck } from "lucide-react";
-import { CountdownBoard } from "@/components/CountdownBoard";
+import { ArrowRight, ShieldCheck } from "lucide-react";
+import Link from "next/link";
 import { HeroIllustration } from "@/components/HeroIllustration";
 import { HeroSearchBox } from "@/components/HeroSearchBox";
-import { MOE_PRIMARY_CTA_URL } from "@/lib/constants";
+import { HomeCtaBlock } from "@/components/HomeCtaBlock";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { ReactNode } from "react";
 
@@ -70,29 +70,40 @@ export function HeroSection({ children }: { children?: ReactNode }) {
               <HeroSearchBox />
             </div>
 
-            {/* Countdown */}
-            <div className="mt-4">
-              <CountdownBoard />
+            {/* Deadline banner (replaces full CountdownBoard) */}
+            <div className="mt-4 inline-flex items-center gap-2 rounded-lg border border-amber-200 bg-amber-50 px-3.5 py-2 text-sm text-amber-800">
+              <span className="shrink-0 text-base leading-none" aria-hidden>⚠️</span>
+              <span>
+                Applications close <strong>2 Jun 2026 · 4:30pm SGT</strong> — verify at{" "}
+                <a
+                  href="https://www.moe.gov.sg/secondary/dsa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 hover:text-amber-900"
+                >
+                  moe.gov.sg
+                </a>
+              </span>
             </div>
+
+            <HomeCtaBlock />
 
             {/* CTAs */}
             <div className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
-              <a
-                href={MOE_PRIMARY_CTA_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/dsa-finder"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-intellectual px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition hover:bg-intellectual-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-intellectual"
               >
                 {t.ctaPrimary}
-                <ExternalLink className="h-3.5 w-3.5 opacity-80" aria-hidden />
-              </a>
-              <a
-                href="#resources"
+                <ArrowRight className="h-3.5 w-3.5 opacity-80" aria-hidden />
+              </Link>
+              <Link
+                href="/dsa-guide"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-surface-warm bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-surface-subtle hover:bg-surface"
               >
                 {t.ctaSecondary}
                 <ArrowRight className="h-3.5 w-3.5" aria-hidden />
-              </a>
+              </Link>
             </div>
           </div>
 

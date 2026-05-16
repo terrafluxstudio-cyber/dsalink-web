@@ -8,6 +8,7 @@ import {
   ListChecks,
   XCircle,
 } from "lucide-react";
+import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -361,6 +362,43 @@ export function OpenHouseGuidePageBody() {
             </div>
           </section>
 
+          {/* ── Intake Insight: The vacancy question ── */}
+          <div className="mt-14 rounded-2xl border border-amber-200/70 bg-amber-50/50 p-6 ring-1 ring-amber-100/80 sm:mt-16 sm:p-8">
+            <p className="text-[10px] font-bold normal-case tracking-widest text-amber-700">
+              {locale === "zh" ? "开放日必问" : "BOOTH STRATEGY"}
+            </p>
+            <h3 style={{ textTransform: "none" }} className="mt-2 font-display text-base font-semibold text-slate-900 sm:text-lg">
+              {locale === "zh"
+                ? "没人告诉你的那个问题"
+                : "The question nobody asks — but should"}
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-slate-700 sm:text-base">
+              {locale === "zh"
+                ? "DSA 录取不是统一排名后按分配——每所学校每年自行决定各才能领域录取几名学生。同一所学校可能在某个 CCA 录取 5 人，但另一个才能领域只录取 1 到 2 人。招生摊位的老师知道这个数字，但通常不会主动说。要在摊位直接问："
+                : "DSA selection is not a single ranked list — each school decides independently how many students to accept per talent area each year. The same school may take 5 students in one CCA but only 1 or 2 in another talent area. Booth staff know this number but rarely volunteer it. Ask directly at the booth:"}
+            </p>
+            <blockquote className="mt-4 rounded-xl border-l-4 border-amber-400 bg-white/80 px-5 py-3.5 text-sm font-semibold italic text-slate-800 sm:text-base">
+              {locale === "zh"
+                ? "「2026年，贵校这个才能领域计划录取几位学生？」"
+                : "“For this specific talent area, how many students are you planning to take in 2026?”"}
+            </blockquote>
+            <p className="mt-4 text-sm leading-relaxed text-slate-600">
+              {locale === "zh"
+                ? "这个答案帮你判断这所学校对孩子来说是保底、冲刺还是梦想校——与才能无关，纯粹看名额。"
+                : "The answer tells you whether this school is a Safe, Reach, or Dream choice for your child — independent of talent level, purely based on available spots."}
+            </p>
+            <div className="mt-5 rounded-xl border border-amber-200/60 bg-white/70 px-4 py-3.5">
+              <p className="text-[10px] font-bold normal-case tracking-widest text-amber-700">
+                {locale === "zh" ? "另外注意" : "ALSO NOTE"}
+              </p>
+              <p className="mt-1.5 text-sm leading-relaxed text-slate-700">
+                {locale === "zh"
+                  ? "开放日不是正式选拔，但学校工作人员可能会留意孩子的表现和与人互动的方式。这不是威胁，而是机会——让孩子展示真实的热情，而不是刻意表演。"
+                  : "The open house is not a formal selection event, but teachers and CCA staff sometimes take informal note of how students engage. Treat it as an opportunity — let your child show genuine interest naturally, not a coached performance."}
+              </p>
+            </div>
+          </div>
+
           {/* ── Section 5: Featured Schools ── */}
           <section
             aria-labelledby="featured-heading"
@@ -522,6 +560,33 @@ export function OpenHouseGuidePageBody() {
               </ol>
             </div>
           </section>
+
+          {/* ── Next Step CTA ── */}
+          <div className="mt-20 border-t border-intellectual/[0.06] pt-14 sm:mt-24 sm:pt-16">
+            <div className="flex flex-col items-start gap-4 rounded-2xl border border-intellectual/12 bg-gradient-to-br from-white to-champagne-subtle/30 p-6 shadow-soft ring-1 ring-champagne/15 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+              <div>
+                <p className="text-[10px] font-bold normal-case tracking-widest text-champagne-dark">
+                  {locale === "zh" ? "下一步" : "NEXT STEP"}
+                </p>
+                <h3 style={{ textTransform: "none" }} className="mt-1.5 font-display text-base font-semibold text-intellectual sm:text-lg">
+                  {locale === "zh"
+                    ? "学校短名单确认了？下一步：准备 DSA 选拔。"
+                    : "Shortlist confirmed? Now prepare your child for selection."}
+                </h3>
+                <p className="mt-2 max-w-xl text-sm leading-relaxed text-intellectual-muted">
+                  {locale === "zh"
+                    ? "开放日是你评估学校的机会。DSA 选拔是学校评估你孩子的机会。准备不同，结果不同。"
+                    : "The open house is where you evaluate the school. DSA selection is where the school evaluates your child. Being prepared makes the difference."}
+                </p>
+              </div>
+              <Link
+                href="/dsa-interview"
+                className="inline-flex shrink-0 items-center gap-2 rounded-xl border border-champagne/40 bg-champagne-subtle/60 px-5 py-2.5 text-sm font-semibold normal-case text-champagne-dark transition hover:bg-champagne-subtle hover:border-champagne/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne-dark"
+              >
+                {locale === "zh" ? "查看选拔准备指南 →" : "Read the Selection Guide →"}
+              </Link>
+            </div>
+          </div>
 
         </div>
       </main>

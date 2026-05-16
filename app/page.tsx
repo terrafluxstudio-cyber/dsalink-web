@@ -3,9 +3,11 @@ import { cookies } from "next/headers";
 import { DSALINK_LOCALE_KEY } from "@/lib/constants";
 import { getGuideLocaleStrings, isLocale, type Locale } from "@/lib/i18n";
 import { OpenHousePreview, ScoresEntryCard, ResourceCards } from "@/components/HomeDynamic";
+import { DsaExplainerSection } from "@/components/DsaExplainerSection";
 import { DsaStrategySection } from "@/components/DsaStrategySection";
 import { HeroSection } from "@/components/HeroSection";
 import { OpenHouseFieldGuide } from "@/components/OpenHouseFieldGuide";
+import { ParentJourneyStrip } from "@/components/ParentJourneyStrip";
 import { SeoTextBlock } from "@/components/SeoTextBlock";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -75,6 +77,8 @@ export default function HomePage() {
           <OpenHousePreview />
           <ScoresEntryCard />
         </HeroSection>
+        <ParentJourneyStrip />
+        <DsaExplainerSection />
         <DsaStrategySection />
         <OpenHouseFieldGuide />
         <SeoTextBlock />
