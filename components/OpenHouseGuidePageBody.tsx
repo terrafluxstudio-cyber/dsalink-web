@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import {
   AlertCircle,
   CheckCircle,
@@ -15,6 +16,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useLanguage } from "@/contexts/LanguageContext";
+import type { FeaturedSchool } from "@/lib/featured-schools";
 import type { Copy } from "@/lib/i18n";
 
 type TKey = keyof Copy;
@@ -145,56 +147,23 @@ const LOGISTICS_TIPS: TKey[] = [
   "ohGuide_logistics4",
 ];
 
-type FeaturedSchool = {
-  nameEn: string;
-  nameZh: string;
-  badge: string;
-  dateEn: string;
-  dateZh: string;
-  confirmed: boolean;
-  dateISO: string;
-  url: string;
-};
-
-const FEATURED_SCHOOLS: FeaturedSchool[] = [
-  {
-    nameEn: "Hwa Chong Institution",
-    nameZh: "华侨中学",
-    badge: "IP · Independent",
-    dateEn: "Sat 23 May 2026 · 08:00–13:00",
-    dateZh: "2026年5月23日（周六）· 08:00–13:00",
-    confirmed: true,
-    dateISO: "2026-05-23",
-    url: "https://www.hci.edu.sg/",
-  },
-  {
-    nameEn: "Raffles Girls' School",
-    nameZh: "莱佛士女子中学",
-    badge: "IP · Independent",
-    dateEn: "Sat 23 May 2026 · 08:30–13:30",
-    dateZh: "2026年5月23日（周六）· 08:30–13:30",
-    confirmed: true,
-    dateISO: "2026-05-23",
-    url: "https://openhouse.rgs.edu.sg/",
-  },
-  {
-    nameEn: "Victoria School",
-    nameZh: "维多利亚学校",
-    badge: "IP · Autonomous",
-    dateEn: "Sat 23 May 2026 · 08:00–12:00",
-    dateZh: "2026年5月23日（周六）· 08:00–12:00",
-    confirmed: true,
-    dateISO: "2026-05-23",
-    url: "https://www.victoria.moe.edu.sg/",
-  },
-];
-
 export function OpenHouseGuidePageBody() {
   const { t, locale } = useLanguage();
-  const today = new Date().toISOString().slice(0, 10);
-  const upcomingSchools = FEATURED_SCHOOLS.filter(
-    (school) => school.confirmed && school.dateISO >= today
-  );
+  const [featuredSchools, setFeaturedSchools] = useState<FeaturedSchool[]>([]);
+
+  useEffect(() => {
+    fetch("/api/open-house/featured")
+      .then((response) => response.json())
+      .then((data: FeaturedSchool[]) => {
+        const today = new Date().toISOString().slice(0, 10);
+        setFeaturedSchools(
+          data.filter((school) => school.confirmed && school.dateISO >= today)
+        );
+      })
+      .catch(() => {});
+  }, []);
+
+  const upcomingSchools = featuredSchools;
 
   return (
     <>
