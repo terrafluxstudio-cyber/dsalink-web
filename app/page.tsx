@@ -6,11 +6,10 @@ import { OpenHousePreview, ScoresEntryCard, ResourceCards } from "@/components/H
 import { DeadlineCard } from "@/components/DeadlineCard";
 import { DsaExplainerSection } from "@/components/DsaExplainerSection";
 import { DsaStrategySection } from "@/components/DsaStrategySection";
-import { FeaturedGuideStrip } from "@/components/FeaturedGuideStrip";
+import { FeaturedGuidesSection } from "@/components/FeaturedGuidesSection";
 import { HeroSection } from "@/components/HeroSection";
 import { HomepageSubscribeBanner } from "@/components/HomepageSubscribeBanner";
 import { DsaExperienceCallout } from "@/components/DsaExperienceCallout";
-import { OpenHouseFieldGuide } from "@/components/OpenHouseFieldGuide";
 import { ParentJourneyStrip } from "@/components/ParentJourneyStrip";
 import { SeoTextBlock } from "@/components/SeoTextBlock";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -84,9 +83,8 @@ export default function HomePage() {
           <ScoresEntryCard />
         </HeroSection>
         <ParentJourneyStrip />
-        <FeaturedGuideStrip />
+        <FeaturedGuidesSection />
         <StatsStrip />
-        <OpenHouseFieldGuide />
         <DsaExplainerSection />
         <DsaStrategySection />
         <DsaExperienceCallout />

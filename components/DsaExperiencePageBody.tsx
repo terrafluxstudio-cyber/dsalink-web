@@ -483,6 +483,11 @@ export function DsaExperiencePageBody() {
                 {!emailSkipped && !emailSubmitted && (
                   <div className="mb-6">
                     <EmailCapture
+                      heading="Save this guide to your inbox"
+                      description="We'll send you this Playbook plus deadline reminders and open house alerts as DSA season progresses."
+                      submitLabel="Send me the guide"
+                      successTitle="Guide sent!"
+                      successDescription="Check your inbox. We'll follow up with deadline reminders and open house alerts throughout DSA season."
                       onSubmit={async (email) => {
                         await fetch("/api/subscribe", {
                           method: "POST",

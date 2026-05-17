@@ -681,6 +681,11 @@ export function OpenHouseGuidePageBody() {
           {!emailSkipped && !emailSubmitted && (
             <div className="mb-6 mt-8">
               <EmailCapture
+                heading="Get open house reminders"
+                description="We'll alert you when new open house dates are confirmed, and send a visit checklist before each school's open day."
+                submitLabel="Send me alerts"
+                successTitle="You're on the list"
+                successDescription="We'll alert you when new open house dates are confirmed. Check your inbox for the school visit checklist."
                 onSubmit={async (email) => {
                   await fetch("/api/subscribe", {
                     method: "POST",
