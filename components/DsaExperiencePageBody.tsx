@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import {
   getDsaExperienceChecklist,
@@ -13,6 +14,7 @@ import {
 import { AlertCircle, BookMarked, GraduationCap, Lightbulb, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { CaseStudyCard } from "@/components/CaseStudyCard";
+import { EmailCapture } from "@/components/EmailCapture";
 import { PageHeader } from "@/components/PageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -72,6 +74,8 @@ export function DsaExperiencePageBody() {
   const timeline = getDsaExperienceTimeline(locale);
   const checklist = getDsaExperienceChecklist(locale);
   const toc = getDsaExperienceToc(locale);
+  const [emailSkipped, setEmailSkipped] = useState(false);
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
   return (
     <>
@@ -453,6 +457,44 @@ export function DsaExperiencePageBody() {
                     </section>
                   );
                 })}
+
+                {/* WhatsApp share strip */}
+                <div className="mb-6 flex flex-wrap items-center gap-3 rounded-xl border border-champagne/30 bg-champagne/8 px-4 py-3">
+                  <span className="text-sm text-slate-600">
+                    {locale === "zh"
+                      ? "觉得有用？转发给还不知道 DSA 的家长朋友"
+                      : "Found this helpful? Share with a parent who hasn't heard of DSA"}
+                  </span>
+                  <a
+                    href={`https://wa.me/?text=${encodeURIComponent(
+                      locale === "zh"
+                        ? "推荐这个 DSA 申请指南，免费又全面：https://dsalink.sg/dsa-experience"
+                        : "This free DSA guide is really comprehensive: https://dsalink.sg/dsa-experience"
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-auto shrink-0 rounded-lg bg-[#25D366] px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-[#1ebe5d]"
+                  >
+                    {locale === "zh" ? "WhatsApp 分享" : "Share on WhatsApp"}
+                  </a>
+                </div>
+
+                {/* Email capture */}
+                {!emailSkipped && !emailSubmitted && (
+                  <div className="mb-6">
+                    <EmailCapture
+                      onSubmit={async (email) => {
+                        await fetch("/api/subscribe", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({ email, source: "playbook" }),
+                        });
+                        setEmailSubmitted(true);
+                      }}
+                      onSkip={() => setEmailSkipped(true)}
+                    />
+                  </div>
+                )}
 
                 <div className="mt-14 rounded-2xl border border-intellectual/15 bg-gradient-to-br from-intellectual to-intellectual-dark p-6 text-white shadow-soft sm:p-8">
                   <p className="font-display text-lg font-semibold sm:text-xl">

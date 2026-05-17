@@ -116,13 +116,13 @@ export function CaseStudyCard({
       </p>
 
       <div
-        className={`mb-3 inline-block rounded-lg px-3 py-1.5 text-xs font-semibold ${styles.badge}`}
+        className={`mb-3 inline-block max-w-full break-words rounded-lg px-3 py-1.5 text-xs font-semibold ${styles.badge}`}
       >
         {outcome}
       </div>
 
       {lesson ? (
-        <p className="border-t border-slate-200/80 pt-3 text-[11px] italic leading-snug text-slate-500">
+        <p className="break-words border-t border-slate-200/80 pt-3 text-[11px] italic leading-snug text-slate-500 [overflow-wrap:anywhere]">
           <span className={`font-semibold not-italic ${styles.lessonLabel}`}>
             Lesson:{" "}
           </span>

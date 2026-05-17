@@ -12,6 +12,7 @@ import {
   XCircle,
 } from "lucide-react";
 import Link from "next/link";
+import { EmailCapture } from "@/components/EmailCapture";
 import { PageHeader } from "@/components/PageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -150,6 +151,8 @@ const LOGISTICS_TIPS: TKey[] = [
 export function OpenHouseGuidePageBody() {
   const { t, locale } = useLanguage();
   const [featuredSchools, setFeaturedSchools] = useState<FeaturedSchool[]>([]);
+  const [emailSkipped, setEmailSkipped] = useState(false);
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
   useEffect(() => {
     fetch("/api/open-house/featured")
@@ -673,6 +676,23 @@ export function OpenHouseGuidePageBody() {
               </ol>
             </div>
           </section>
+
+          {/* Email capture */}
+          {!emailSkipped && !emailSubmitted && (
+            <div className="mb-6 mt-8">
+              <EmailCapture
+                onSubmit={async (email) => {
+                  await fetch("/api/subscribe", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email, source: "open-house-guide" }),
+                  });
+                  setEmailSubmitted(true);
+                }}
+                onSkip={() => setEmailSkipped(true)}
+              />
+            </div>
+          )}
 
           {/* ── Next Step CTA ── */}
           <div className="mt-8 border-t border-intellectual/[0.06] pt-6 sm:mt-10 sm:pt-8">
