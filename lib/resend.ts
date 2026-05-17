@@ -102,7 +102,7 @@ Unsubscribe: reply to this email with "unsubscribe".`,
   );
 }
 
-export async function sendDeadlineEmail(to: string): Promise<boolean> {
+export async function sendDeadlineReminderEmail(to: string): Promise<boolean> {
   return sendEmail(
     to,
     "DSA closes June 2 - 3 questions to answer before then",
@@ -113,22 +113,101 @@ The DSA-Sec application window closes June 2, 4:30pm.
 Before then, three questions worth answering:
 
 1. Have you identified your child's talent area?
-DSA covers 21 talent domains - from sports and performing arts to robotics, languages, and leadership. If you haven't matched your child to specific schools yet:
+DSA covers 21 talent domains - from sports and performing arts to robotics, languages, and leadership.
 https://dsalink.sg/dsa-finder
 
 2. Do you know which 3 schools to apply to?
-You get exactly 3 choices. Most families either under-apply (only 1-2 schools) or waste a pick on a school that's a poor fit. A simple rule: one reach, one match, one safe.
+You get exactly 3 choices. A simple rule: one reach, one match, one safe.
 
 3. Does your child know what happens after a DSA offer?
-Accepting a Confirmed Offer is binding - your child cannot participate in the PSLE posting exercise. Make sure this is a deliberate choice, not a surprise.
+Accepting a Confirmed Offer is binding - your child cannot participate in the PSLE posting exercise.
 
-Everything you need is at dsalink.sg. Free, no sign-up required, no upsells.
-
-You've got this.
+Everything you need is at dsalink.sg.
 
 The DSALink Team
 
-Accepting a DSA Confirmed Offer is binding under MOE regulations. Not affiliated with MOE.
+Not affiliated with MOE. All information based on official MOE guidelines.
+Unsubscribe: reply to this email with "unsubscribe".`,
+  );
+}
+
+export async function sendPostApplicationEmail(to: string): Promise<boolean> {
+  return sendEmail(
+    to,
+    "You've applied for DSA. Here's what happens next.",
+    `Hi there,
+
+The DSA application window has closed.
+
+If your child applied, here's what to expect over the coming weeks:
+
+- Schools will reach out directly to invite shortlisted students for trials, auditions, or interviews
+- This typically happens between July and September
+- You don't need to do anything now - just wait for the school's contact
+
+If your child wasn't ready this year, the experience of going through the process is valuable. DSA 2027 applications open in May next year.
+
+In the meantime, we're building a detailed interview preparation guide at:
+https://dsalink.sg/dsa-interview
+
+The DSALink Team
+
+Not affiliated with MOE. All information based on official MOE guidelines.
+Unsubscribe: reply to this email with "unsubscribe".`,
+  );
+}
+
+export async function sendInterviewPrepEmail(to: string): Promise<boolean> {
+  return sendEmail(
+    to,
+    "DSA interviews are starting. Here's how to prepare.",
+    `Hi there,
+
+Schools are now reaching out to shortlisted DSA applicants for trials and interviews.
+
+A few things that matter at this stage:
+
+1. Know your child's talent story
+Interviewers want to understand the journey, not just the results. Help your child articulate: when did they start, what drives them, what's a challenge they overcame?
+
+2. Do your homework on the school
+Know the school's DSA programme specifically - not just the school in general. What makes their programme different? Why is it the right fit?
+
+3. Manage expectations on both sides
+A DSA interview is a two-way assessment. It's okay for your child to ask questions too.
+
+Our full interview preparation guide:
+https://dsalink.sg/dsa-interview
+
+The DSALink Team
+
+Not affiliated with MOE. All information based on official MOE guidelines.
+Unsubscribe: reply to this email with "unsubscribe".`,
+  );
+}
+
+export async function sendResultsEmail(to: string): Promise<boolean> {
+  return sendEmail(
+    to,
+    "DSA results are coming. Here's how to think about the decision.",
+    `Hi there,
+
+DSA results are being released this month.
+
+If your child receives a Confirmed Offer:
+- Accepting is binding - they will not go through the S1 Posting exercise
+- The offer is conditional on meeting the minimum PSLE score (AL <= 22 for Express/IP schools)
+- Think carefully: is this the right school and programme for the next 4-6 years?
+
+If your child receives a Wait List or no offer:
+- They will go through normal PSLE posting in October
+- This is not a reflection of your child's ability - DSA selection is highly competitive and programme-specific
+
+Whatever the outcome, you navigated this process. That takes effort.
+
+The DSALink Team
+
+Not affiliated with MOE. All information based on official MOE guidelines.
 Unsubscribe: reply to this email with "unsubscribe".`,
   );
 }

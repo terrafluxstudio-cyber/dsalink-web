@@ -7,8 +7,9 @@ import {
   getDsaExperienceTimeline,
   getDsaExperienceToc,
   type DsaExperienceCallout,
+  type DsaExperienceQuestionSet,
 } from "@/content/dsa-experience";
-import { AlertCircle, Lightbulb } from "lucide-react";
+import { AlertCircle, GraduationCap, Lightbulb, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { PageHeader } from "@/components/PageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -169,7 +170,7 @@ export function DsaExperiencePageBody() {
                         </div>
                       ) : null}
 
-                      {section.orderedList ? (
+                      {section.orderedList && !section.tierChart ? (
                         <ol className="list-decimal space-y-3 pl-5 marker:font-semibold marker:text-intellectual">
                           {section.orderedList.map((item) => (
                             <li key={item.slice(0, 48)}>{item}</li>
@@ -185,7 +186,118 @@ export function DsaExperiencePageBody() {
                         </ul>
                       ) : null}
 
-                      {section.id === "section-8" ? (
+                      {section.comparison ? (
+                        <div className="overflow-x-auto rounded-xl border border-[#e3ded5] bg-white shadow-card">
+                          <div className="grid min-w-[30rem] grid-cols-2 divide-x divide-[#e3ded5]">
+                            <div className="border-t-4 border-slate-300 bg-surface-warm p-3 text-center text-sm font-semibold text-slate-700">
+                              {section.comparison.weakLabel}
+                            </div>
+                            <div className="border-t-4 border-champagne bg-intellectual p-3 text-center text-sm font-semibold text-white">
+                              {section.comparison.strongLabel}
+                            </div>
+                          </div>
+                          {section.comparison.rows.map((row) => (
+                            <div
+                              key={`${row.weak}-${row.strong}`}
+                              className="grid min-w-[30rem] grid-cols-2 divide-x divide-[#e3ded5] border-t border-[#e3ded5]"
+                            >
+                              <div className="bg-surface-warm/60 p-3 text-sm leading-snug text-slate-600">
+                                {row.weak}
+                              </div>
+                              <div className="bg-champagne-subtle/60 p-3 text-sm leading-snug text-slate-700">
+                                {row.strong}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      ) : null}
+
+                      {section.tierChart ? (
+                        <div className="space-y-1.5">
+                          {section.tierChart.map((item, i) => {
+                            const widths = [
+                              "max-w-[44%]",
+                              "max-w-[58%]",
+                              "max-w-[72%]",
+                              "max-w-[86%]",
+                              "max-w-full",
+                            ];
+                            const styles = [
+                              "bg-intellectual text-white",
+                              "bg-intellectual/80 text-white",
+                              "bg-intellectual/60 text-white",
+                              "bg-slate-200 text-slate-700",
+                              "bg-slate-100 text-slate-500",
+                            ];
+                            const labelStyles = [
+                              "text-white",
+                              "text-white",
+                              "text-white",
+                              "text-slate-700",
+                              "text-slate-500",
+                            ];
+                            const exampleStyles = [
+                              "text-white/65",
+                              "text-white/65",
+                              "text-white/65",
+                              "text-slate-500",
+                              "text-slate-400",
+                            ];
+
+                            return (
+                              <div
+                                key={item.label}
+                                className={`mx-auto rounded-lg px-4 py-2.5 text-center transition-all ${widths[i]} ${styles[i]}`}
+                              >
+                                <p className={`text-sm font-semibold ${labelStyles[i]}`}>
+                                  {item.label}
+                                </p>
+                                <p className={`mt-0.5 text-xs leading-snug ${exampleStyles[i]}`}>
+                                  {item.examples}
+                                </p>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      ) : null}
+
+                      {section.questionSets ? (
+                        <div className="grid gap-4 sm:grid-cols-2">
+                          {section.questionSets.map((set: DsaExperienceQuestionSet) => (
+                            <div
+                              key={set.label}
+                              className="rounded-xl border border-[#e3ded5] bg-white p-4 shadow-card"
+                            >
+                              <p className="mb-3 flex items-center gap-2 text-sm font-semibold text-slate-800">
+                                {set.icon === "teacher" ? (
+                                  <GraduationCap
+                                    className="h-4 w-4 shrink-0 text-intellectual"
+                                    aria-hidden
+                                  />
+                                ) : (
+                                  <Users
+                                    className="h-4 w-4 shrink-0 text-champagne-dark"
+                                    aria-hidden
+                                  />
+                                )}
+                                {set.label}
+                              </p>
+                              <ol className="list-decimal space-y-2 pl-4">
+                                {set.questions.map((q) => (
+                                  <li
+                                    key={q}
+                                    className="text-sm leading-snug text-slate-600"
+                                  >
+                                    {q}
+                                  </li>
+                                ))}
+                              </ol>
+                            </div>
+                          ))}
+                        </div>
+                      ) : null}
+
+                      {section.id === "section-10" ? (
                         <ul className="mt-2 space-y-3 rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
                           {checklist.map((item) => (
                             <li key={item} className="flex gap-3">
