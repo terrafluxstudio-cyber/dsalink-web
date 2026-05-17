@@ -7,13 +7,64 @@ import {
   getDsaExperienceTimeline,
   getDsaExperienceToc,
   type DsaExperienceCallout,
+  type DsaExperienceCaseStudy,
   type DsaExperienceQuestionSet,
 } from "@/content/dsa-experience";
-import { AlertCircle, GraduationCap, Lightbulb, Users } from "lucide-react";
+import { AlertCircle, BookMarked, GraduationCap, Lightbulb, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { CaseStudyCard } from "@/components/CaseStudyCard";
 import { PageHeader } from "@/components/PageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+
+type DsaExperienceStat = {
+  value: string;
+  label: string;
+};
+
+type DsaExperienceExample = {
+  label?: string;
+  body: string;
+};
+
+type DsaExperienceSection = ReturnType<typeof getDsaExperienceSections>[number];
+
+function isDsaExperienceStat(value: unknown): value is DsaExperienceStat {
+  if (!value || typeof value !== "object") {
+    return false;
+  }
+
+  const stat = value as Record<string, unknown>;
+  return typeof stat.value === "string" && typeof stat.label === "string";
+}
+
+function getSectionStats(section: DsaExperienceSection): DsaExperienceStat[] | undefined {
+  if (!("stats" in section) || !Array.isArray(section.stats)) {
+    return undefined;
+  }
+
+  return section.stats.every(isDsaExperienceStat) ? section.stats : undefined;
+}
+
+function isDsaExperienceExample(value: unknown): value is DsaExperienceExample {
+  if (!value || typeof value !== "object") {
+    return false;
+  }
+
+  const example = value as Record<string, unknown>;
+  return (
+    typeof example.body === "string" &&
+    (example.label === undefined || typeof example.label === "string")
+  );
+}
+
+function getSectionExamples(section: DsaExperienceSection): DsaExperienceExample[] | undefined {
+  if (!("examples" in section) || !Array.isArray(section.examples)) {
+    return undefined;
+  }
+
+  return section.examples.every(isDsaExperienceExample) ? section.examples : undefined;
+}
 
 export function DsaExperiencePageBody() {
   const { t, locale } = useLanguage();
@@ -63,203 +114,288 @@ export function DsaExperiencePageBody() {
               </nav>
 
               <article className="mx-auto w-full max-w-3xl min-w-0">
-                {sections.map((section, index) => (
-                  <section
-                    key={section.id}
-                    id={section.id}
-                    className={
-                      index > 0
-                        ? "scroll-mt-24 border-t border-slate-200/80 pt-10 mt-10"
-                        : "scroll-mt-24"
-                    }
-                    aria-labelledby={`${section.id}-heading`}
-                  >
-                    <h2
-                      id={`${section.id}-heading`}
-                      className="text-xl font-semibold text-slate-900"
-                      style={{ textTransform: "none" }}
+                {sections.map((section, index) => {
+                  const stats = getSectionStats(section);
+                  const examples = getSectionExamples(section);
+
+                  return (
+                    <section
+                      key={section.id}
+                      id={section.id}
+                      className={
+                        index > 0
+                          ? "scroll-mt-24 border-t border-slate-200/80 pt-10 mt-10"
+                          : "scroll-mt-24"
+                      }
+                      aria-labelledby={`${section.id}-heading`}
                     >
-                      {section.title}
-                    </h2>
+                      <h2
+                        id={`${section.id}-heading`}
+                        className="break-words text-xl font-semibold text-slate-900 [overflow-wrap:anywhere]"
+                      >
+                        {section.title}
+                      </h2>
 
-                    <div className="mt-5 space-y-4 text-[0.9375rem] leading-relaxed text-slate-600 sm:text-base">
-                      {section.paragraphs.map((p) => (
-                        <p key={p.slice(0, 48)}>{p}</p>
-                      ))}
+                      <div className="mt-5 space-y-4 text-[0.9375rem] leading-relaxed text-slate-600 sm:text-base">
+                        {section.paragraphs.map((p) => (
+                          <p key={p.slice(0, 48)}>{p}</p>
+                        ))}
 
-                      {section.callouts?.map((callout: DsaExperienceCallout, i: number) => (
-                        <div
-                          key={i}
-                          className={`flex gap-3 rounded-r-xl border-l-4 p-4 ${
-                            callout.type === "warning"
-                              ? "border-red-400 bg-red-50"
-                              : "border-champagne bg-champagne-subtle"
-                          }`}
-                        >
-                          <div className="mt-0.5 shrink-0">
-                            {callout.type === "warning" ? (
-                              <AlertCircle
-                                className="h-4 w-4 text-red-500"
-                                aria-hidden
-                              />
-                            ) : (
-                              <Lightbulb
-                                className="h-4 w-4 text-champagne-dark"
-                                aria-hidden
-                              />
-                            )}
-                          </div>
-                          <div>
-                            <p
-                              className={`text-sm font-semibold ${
-                                callout.type === "warning"
-                                  ? "text-red-700"
-                                  : "text-intellectual"
-                              }`}
-                            >
-                              {callout.heading}
-                            </p>
-                            <p
-                              className={`mt-1 text-sm leading-relaxed ${
-                                callout.type === "warning"
-                                  ? "text-red-900/75"
-                                  : "text-slate-600"
-                              }`}
-                            >
-                              {callout.body}
-                            </p>
-                          </div>
-                        </div>
-                      ))}
-
-                      {section.id === "section-6" ? (
-                        <div className="overflow-x-auto rounded-xl border border-[#e3ded5] bg-white shadow-card">
-                          <table className="w-full min-w-[28rem] text-left text-sm">
-                            <thead>
-                              <tr className="border-b border-slate-200 bg-slate-50/80">
-                                <th
-                                  scope="col"
-                                  className="px-4 py-3 font-semibold text-slate-900"
-                                >
-                                  Date
-                                </th>
-                                <th
-                                  scope="col"
-                                  className="px-4 py-3 font-semibold text-slate-900"
-                                >
-                                  Milestone
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {timeline.map((row) => (
-                                <tr
-                                  key={row.date}
-                                  className="border-b border-slate-100 last:border-0"
-                                >
-                                  <td className="whitespace-nowrap px-4 py-3 font-medium text-intellectual">
-                                    {row.date}
-                                  </td>
-                                  <td className="px-4 py-3 text-slate-600">
-                                    {row.milestone}
-                                  </td>
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                        </div>
-                      ) : null}
-
-                      {section.orderedList && !section.tierChart ? (
-                        <ol className="list-decimal space-y-3 pl-5 marker:font-semibold marker:text-intellectual">
-                          {section.orderedList.map((item) => (
-                            <li key={item.slice(0, 48)}>{item}</li>
-                          ))}
-                        </ol>
-                      ) : null}
-
-                      {section.bullets ? (
-                        <ul className="list-disc space-y-2 pl-5 marker:text-champagne-dark">
-                          {section.bullets.map((item) => (
-                            <li key={item.slice(0, 48)}>{item}</li>
-                          ))}
-                        </ul>
-                      ) : null}
-
-                      {section.comparison ? (
-                        <div className="overflow-x-auto rounded-xl border border-[#e3ded5] bg-white shadow-card">
-                          <div className="grid min-w-[30rem] grid-cols-2 divide-x divide-[#e3ded5]">
-                            <div className="border-t-4 border-slate-300 bg-surface-warm p-3 text-center text-sm font-semibold text-slate-700">
-                              {section.comparison.weakLabel}
-                            </div>
-                            <div className="border-t-4 border-champagne bg-intellectual p-3 text-center text-sm font-semibold text-white">
-                              {section.comparison.strongLabel}
-                            </div>
-                          </div>
-                          {section.comparison.rows.map((row) => (
-                            <div
-                              key={`${row.weak}-${row.strong}`}
-                              className="grid min-w-[30rem] grid-cols-2 divide-x divide-[#e3ded5] border-t border-[#e3ded5]"
-                            >
-                              <div className="bg-surface-warm/60 p-3 text-sm leading-snug text-slate-600">
-                                {row.weak}
-                              </div>
-                              <div className="bg-champagne-subtle/60 p-3 text-sm leading-snug text-slate-700">
-                                {row.strong}
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      ) : null}
-
-                      {section.tierChart ? (
-                        <div className="space-y-1.5">
-                          {section.tierChart.map((item, i) => {
-                            const widths = [
-                              "max-w-[44%]",
-                              "max-w-[58%]",
-                              "max-w-[72%]",
-                              "max-w-[86%]",
-                              "max-w-full",
-                            ];
-                            const styles = [
-                              "bg-intellectual text-white",
-                              "bg-intellectual/80 text-white",
-                              "bg-intellectual/60 text-white",
-                              "bg-slate-200 text-slate-700",
-                              "bg-slate-100 text-slate-500",
-                            ];
-                            const labelStyles = [
-                              "text-white",
-                              "text-white",
-                              "text-white",
-                              "text-slate-700",
-                              "text-slate-500",
-                            ];
-                            const exampleStyles = [
-                              "text-white/65",
-                              "text-white/65",
-                              "text-white/65",
-                              "text-slate-500",
-                              "text-slate-400",
-                            ];
-
-                            return (
+                        {stats ? (
+                          <div
+                            className={`grid gap-4 rounded-xl border border-[#e3ded5] bg-white p-4 shadow-card ${
+                              stats.length === 1
+                                ? "max-w-[14rem] grid-cols-1"
+                                : stats.length === 2
+                                  ? "grid-cols-2"
+                                  : "grid-cols-3"
+                            }`}
+                          >
+                            {stats.map((stat) => (
                               <div
-                                key={item.label}
-                                className={`mx-auto rounded-lg px-4 py-2.5 text-center transition-all ${widths[i]} ${styles[i]}`}
+                                key={`${stat.value}-${stat.label}`}
+                                className="flex flex-col items-center py-2 text-center"
                               >
-                                <p className={`text-sm font-semibold ${labelStyles[i]}`}>
-                                  {item.label}
-                                </p>
-                                <p className={`mt-0.5 text-xs leading-snug ${exampleStyles[i]}`}>
-                                  {item.examples}
-                                </p>
+                                <span className="font-display text-3xl font-extrabold tabular-nums text-intellectual">
+                                  {stat.value}
+                                </span>
+                                <span className="mt-1 text-xs leading-snug text-slate-500">
+                                  {stat.label}
+                                </span>
                               </div>
-                            );
-                          })}
-                        </div>
-                      ) : null}
+                            ))}
+                          </div>
+                        ) : null}
+
+                        {section.callouts?.map((callout: DsaExperienceCallout, i: number) => (
+                          <div
+                            key={i}
+                            className={`flex gap-3 rounded-r-xl border-l-4 p-4 ${
+                              callout.type === "warning"
+                                ? "border-red-400 bg-red-50"
+                                : "border-champagne bg-champagne-subtle"
+                            }`}
+                          >
+                            <div className="mt-0.5 shrink-0">
+                              {callout.type === "warning" ? (
+                                <AlertCircle
+                                  className="h-4 w-4 text-red-500"
+                                  aria-hidden
+                                />
+                              ) : (
+                                <Lightbulb
+                                  className="h-4 w-4 text-champagne-dark"
+                                  aria-hidden
+                                />
+                              )}
+                            </div>
+                            <div>
+                              <p
+                                className={`text-sm font-semibold ${
+                                  callout.type === "warning"
+                                    ? "text-red-700"
+                                    : "text-intellectual"
+                                }`}
+                              >
+                                {callout.heading}
+                              </p>
+                              <p
+                                className={`mt-1 text-sm leading-relaxed ${
+                                  callout.type === "warning"
+                                    ? "text-red-900/75"
+                                    : "text-slate-600"
+                                }`}
+                              >
+                                {callout.body}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+
+                        {section.id === "section-6" ? (
+                          <>
+                            <div className="hidden overflow-x-auto md:block">
+                              <div className="relative flex min-w-max gap-0">
+                                {timeline.map((row, i) => (
+                                  <div
+                                    key={row.date}
+                                    className="relative flex min-w-[9rem] flex-1 flex-col items-center px-2"
+                                  >
+                                    {i < timeline.length - 1 && (
+                                      <div className="absolute left-1/2 top-[1.375rem] z-0 h-0.5 w-full bg-slate-200" />
+                                    )}
+                                    <div
+                                      className={`relative z-10 mb-3 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 text-xs font-bold ${
+                                        i === 0
+                                          ? "border-champagne bg-champagne text-intellectual"
+                                          : "border-intellectual bg-intellectual text-white"
+                                      }`}
+                                    >
+                                      {i + 1}
+                                    </div>
+                                    <p className="mb-1 text-center text-[0.6875rem] font-semibold tabular-nums text-intellectual">
+                                      {row.date}
+                                    </p>
+                                    <p className="text-center text-xs leading-snug text-slate-600">
+                                      {row.milestone}
+                                    </p>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+
+                            <div className="space-y-0 md:hidden">
+                              {timeline.map((row, i) => (
+                                <div key={row.date} className="flex gap-4">
+                                  <div className="flex flex-col items-center">
+                                    <div
+                                      className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 text-xs font-bold ${
+                                        i === 0
+                                          ? "border-champagne bg-champagne text-intellectual"
+                                          : "border-intellectual bg-intellectual text-white"
+                                      }`}
+                                    >
+                                      {i + 1}
+                                    </div>
+                                    {i < timeline.length - 1 && (
+                                      <div className="my-1 w-0.5 flex-1 bg-slate-200" />
+                                    )}
+                                  </div>
+                                  <div className="min-w-0 pb-6 pt-0.5">
+                                    <p className="text-xs font-semibold tabular-nums text-intellectual">
+                                      {row.date}
+                                    </p>
+                                    <p className="mt-0.5 text-[0.9375rem] leading-relaxed text-slate-600">
+                                      {row.milestone}
+                                    </p>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </>
+                        ) : null}
+
+                        {section.orderedList && !section.tierChart ? (
+                          <ol className="list-decimal space-y-3 pl-5 marker:font-semibold marker:text-intellectual">
+                            {section.orderedList.map((item) => (
+                              <li key={item.slice(0, 48)}>{item}</li>
+                            ))}
+                          </ol>
+                        ) : null}
+
+                        {section.bullets ? (
+                          <ul className="list-disc space-y-2 pl-5 marker:text-champagne-dark">
+                            {section.bullets.map((item) => (
+                              <li key={item.slice(0, 48)}>{item}</li>
+                            ))}
+                          </ul>
+                        ) : null}
+
+                        {examples?.map((ex, i) => (
+                          <div
+                            key={`${ex.label ?? "example"}-${i}`}
+                            className="rounded-xl border border-champagne/30 bg-surface-warm px-5 py-4"
+                          >
+                            <p className="mb-2 flex items-center gap-2 text-xs font-semibold tracking-wide text-champagne-dark">
+                              <BookMarked className="h-3.5 w-3.5 shrink-0" aria-hidden />
+                              {ex.label ?? "Real-world example"}
+                            </p>
+                            <p className="text-[0.9375rem] italic leading-relaxed text-slate-700">
+                              {ex.body}
+                            </p>
+                          </div>
+                        ))}
+
+                        {section.caseStudies ? (
+                          <div className="grid min-w-0 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                            {section.caseStudies.map((caseStudy: DsaExperienceCaseStudy, i) => (
+                              <CaseStudyCard
+                                key={`${caseStudy.talentArea}-${i}`}
+                                talentArea={caseStudy.talentArea}
+                                icon={caseStudy.icon}
+                                illustration={caseStudy.illustration}
+                                scenario={caseStudy.scenario}
+                                outcome={caseStudy.outcome}
+                                lesson={caseStudy.lesson}
+                              />
+                            ))}
+                          </div>
+                        ) : null}
+
+                        {section.comparison ? (
+                          <div className="overflow-x-auto rounded-xl border border-[#e3ded5] bg-white shadow-card">
+                            <div className="grid min-w-[30rem] grid-cols-2 divide-x divide-[#e3ded5]">
+                              <div className="border-t-4 border-slate-300 bg-surface-warm p-3 text-center text-sm font-semibold text-slate-700">
+                                {section.comparison.weakLabel}
+                              </div>
+                              <div className="border-t-4 border-champagne bg-intellectual p-3 text-center text-sm font-semibold text-white">
+                                {section.comparison.strongLabel}
+                              </div>
+                            </div>
+                            {section.comparison.rows.map((row) => (
+                              <div
+                                key={`${row.weak}-${row.strong}`}
+                                className="grid min-w-[30rem] grid-cols-2 divide-x divide-[#e3ded5] border-t border-[#e3ded5]"
+                              >
+                                <div className="bg-surface-warm/60 p-3 text-sm leading-snug text-slate-600">
+                                  {row.weak}
+                                </div>
+                                <div className="bg-champagne-subtle/60 p-3 text-sm leading-snug text-slate-700">
+                                  {row.strong}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        ) : null}
+
+                        {section.tierChart ? (
+                          <div className="space-y-1.5">
+                            {section.tierChart.map((item, i) => {
+                              const widths = [
+                                "max-w-[44%]",
+                                "max-w-[58%]",
+                                "max-w-[72%]",
+                                "max-w-[86%]",
+                                "max-w-full",
+                              ];
+                              const styles = [
+                                "bg-intellectual text-white",
+                                "bg-intellectual/80 text-white",
+                                "bg-intellectual/60 text-white",
+                                "bg-slate-200 text-slate-700",
+                                "bg-slate-100 text-slate-500",
+                              ];
+                              const labelStyles = [
+                                "text-white",
+                                "text-white",
+                                "text-white",
+                                "text-slate-700",
+                                "text-slate-500",
+                              ];
+                              const exampleStyles = [
+                                "text-white/65",
+                                "text-white/65",
+                                "text-white/65",
+                                "text-slate-500",
+                                "text-slate-400",
+                              ];
+
+                              return (
+                                <div
+                                  key={item.label}
+                                  className={`mx-auto rounded-lg px-4 py-2.5 text-center transition-all ${widths[i]} ${styles[i]}`}
+                                >
+                                  <p className={`text-sm font-semibold ${labelStyles[i]}`}>
+                                    {item.label}
+                                  </p>
+                                  <p className={`mt-0.5 text-xs leading-snug ${exampleStyles[i]}`}>
+                                    {item.examples}
+                                  </p>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        ) : null}
 
                       {section.questionSets ? (
                         <div className="grid gap-4 sm:grid-cols-2">
@@ -313,9 +449,10 @@ export function DsaExperiencePageBody() {
                           ))}
                         </ul>
                       ) : null}
-                    </div>
-                  </section>
-                ))}
+                      </div>
+                    </section>
+                  );
+                })}
 
                 <div className="mt-14 rounded-2xl border border-intellectual/15 bg-gradient-to-br from-intellectual to-intellectual-dark p-6 text-white shadow-soft sm:p-8">
                   <p className="font-display text-lg font-semibold sm:text-xl">

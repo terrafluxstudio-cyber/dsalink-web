@@ -1,3 +1,5 @@
+import type { IllustrationKey } from "@/components/CaseStudyIllustration";
+
 export type DsaExperienceCallout = {
   type: "warning" | "insight";
   heading: string;
@@ -26,6 +28,25 @@ export type DsaExperienceQuestionSet = {
   questions: string[];
 };
 
+export type DsaExperienceCaseStudy = {
+  talentArea: string;
+  icon: "fencing" | "dance" | "robotics" | "music" | "leadership" | "risk";
+  illustration?: IllustrationKey;
+  scenario: string;
+  outcome: string;
+  lesson?: string;
+};
+
+export type DsaExperienceExample = {
+  label?: string;
+  body: string;
+};
+
+export type DsaExperienceStat = {
+  value: string;
+  label: string;
+};
+
 export type DsaExperienceSection = {
   id: string;
   title: string;
@@ -36,6 +57,9 @@ export type DsaExperienceSection = {
   tierChart?: DsaExperienceTierItem[];
   comparison?: DsaExperienceComparison;
   questionSets?: DsaExperienceQuestionSet[];
+  examples?: DsaExperienceExample[];
+  stats?: DsaExperienceStat[];
+  caseStudies?: DsaExperienceCaseStudy[];
 };
 
 // ─────────────────────────────────────────────
@@ -48,17 +72,151 @@ const SECTIONS_EN: DsaExperienceSection[] = [
     paragraphs: [
       "Direct School Admission (DSA) lets Primary 6 students apply to secondary schools based on talent—sports, arts, leadership, languages, or STEM—before PSLE results are released. It is a separate pathway from the national Secondary 1 posting exercise.",
       "Each student may submit up to three school choices on the MOE DSA-Sec portal. Schools run their own selection exercises (trials, auditions, interviews, portfolio reviews) and may issue conditional offers.",
-      "A confirmed DSA offer guarantees placement at that school only if the student meets the school's minimum posting group. For Integrated Programme (IP) and Express schools, that generally means a PSLE Achievement Level (AL) score of 22 or better (AL ≤ 22).",
+      "A confirmed DSA offer guarantees placement at that school only if the student meets the school's minimum posting group. For Express-stream schools, this generally means a PSLE Achievement Level (AL) score of 22 or better (AL ≤ 22). For Integrated Programme (IP) schools, the effective bar is considerably lower — the most selective IP schools have Cut-Off Points (COPs) in the AL 4–10 range, meaning a student who secures a DSA offer but scores AL 15 at PSLE will not be able to take up that IP offer, even though they would qualify for an Express school.",
       "If your child's PSLE AL is 23 or higher, they cannot enter IP or Express streams—even with a DSA offer. Stream placement is determined by PSLE score, not by the offer letter alone.",
       "Once a student accepts a DSA offer, they are committed to that school and CCA pathway and cannot participate in the S1 posting exercise for other schools.",
       "Before confirming any DSA offer, consider risk in both directions. If your child's PSLE score falls short of the school's minimum posting group, a conditional offer may be withdrawn — and the S1 Posting Exercise is no longer available, because they exited it upon confirmation. Equally, if your child outperforms their PSLE projections significantly — scoring well enough to qualify for a higher-tier school under normal posting — the DSA commitment remains binding. There is no provision for transferring to a school your child's actual results would have qualified them for. Assessing your child's realistic PSLE range in both directions — not just the middle estimate — before confirming is one of the most consequential decisions in the DSA process.",
       "For the 2026 cycle, the DSA application window runs from 6 May to 2 June 2026. Plan research and open-house visits before the portal opens.",
+    ],
+    stats: [
+      { value: "3", label: "max school choices per student" },
+      { value: "AL ≤ 22", label: "minimum PSLE for Express schools" },
+      { value: "6 May", label: "2026 application portal opens" },
     ],
     callouts: [
       {
         type: "warning",
         heading: "Before you confirm: think through both directions",
         body: "If PSLE falls short of the school's minimum posting group, a conditional offer may be withdrawn — and the S1 Posting Exercise is closed, because you exited it on confirmation. If PSLE significantly exceeds projections, the DSA commitment still holds — there is no mechanism to transfer to a higher-tier school your child's results would otherwise have reached.",
+      },
+    ],
+  },
+  {
+    id: "case-studies",
+    title: "Twelve Families. Twelve Different DSA Pathways.",
+    paragraphs: [
+      "DSA works differently depending on the talent, the school, and the year. These twelve illustrative scenarios are composite examples — drawn from documented DSA mechanisms, publicly verified outcomes, and patterns that consistently appear across parent communities. They are designed to show range, not to represent any specific family. Names, scores, and details are illustrative.",
+    ],
+    caseStudies: [
+      {
+        talentArea: "Fencing (Niche Sport)",
+        icon: "fencing",
+        illustration: "fencing",
+        scenario:
+          "A student had been fencing competitively since Primary 4, training three times a week with a national club. By P6, she held a top-30 national ranking in her age group. Her PSLE projection sat around AL 16 — good, but not top-tier. DSA gave her access to an IP school whose historical COP was around AL 12. She applied, completed two trial rounds, and received a Confirmed Offer four months before PSLE results were released.",
+        outcome: "Confirmed offer — ~4 AL better than PSLE posting pathway",
+        lesson:
+          "In niche sports, a verified national ranking in a small competitive pool carries more weight than a strong result in a large one. Check the school's NSG record in your child's specific sport before applying.",
+      },
+      {
+        talentArea: "Chinese Dance",
+        icon: "dance",
+        illustration: "dance",
+        scenario:
+          "A student started Chinese Dance at a community centre in Primary 2, joined his school's Chinese Dance CCA in Primary 4, and performed at two national youth festivals by Primary 6. He was not the most technically gifted dancer in Singapore — but five years of documented, continuous involvement, plus a leadership role as assistant instructor in Primary 6, built a portfolio that three schools responded to. He received a Confirmed Offer from a school with a historical COP well below his projected PSLE range.",
+        outcome: "Confirmed offer — arts DSA reached a school 4 AL bands above PSLE path",
+        lesson:
+          "Sustained involvement over years matters more than peak performance in one audition. A CCA leadership role is a legitimate credential, not padding.",
+      },
+      {
+        talentArea: "Robotics & Engineering",
+        icon: "robotics",
+        illustration: "robotics",
+        scenario:
+          "From Primary 4, a student spent weekends on robotics — school club, holiday workshops, and one national competition where he finished without an award. What distinguished his application was the portfolio: he had documented every design iteration, every failure, and what he learned from each. Two STEM-focused schools shortlisted him; one — a school that admits primarily through DSA for its engineering programme — gave him a Confirmed Offer. His PSLE score alone would not have qualified him.",
+        outcome: "Confirmed offer to a specialised tech school — PSLE score alone wouldn't qualify",
+        lesson:
+          "For STEM DSA, a documented learning journey — including failures and revisions — often speaks louder than a single competition medal.",
+      },
+      {
+        talentArea: "Choir & Vocal Music",
+        icon: "music",
+        illustration: "music",
+        scenario:
+          "A student sang in her school choir from Primary 2 with no private vocal lessons and no ABRSM grades — just six years in the school ensemble, three concert performances, and an audition she prepared for herself. She applied to SOTA Music and was placed on the waitlist. In October, after a higher-ranked student chose a different school, her waitlist position converted to a Confirmed Offer. She is now completing SOTA's six-year integrated arts programme.",
+        outcome: "Waitlist converted to Confirmed Offer — no formal private training required",
+        lesson:
+          "A waitlist from a highly selective school is not a rejection. Roughly half of waitlisted students ultimately receive a confirmed place when higher-ranked applicants decline.",
+      },
+      {
+        talentArea: "Leadership",
+        icon: "leadership",
+        illustration: "leadership",
+        scenario:
+          "A student was not an athlete and didn't play an instrument. What he had was six years of consistent school community involvement — class monitor from Primary 2, Prefect in Primary 5 and 6, and a student-led environmental project that ran for two years across eight schools. His DSA application read like a map of documented impact, not a list of titles. He received a Confirmed Offer to a school where his PSLE score would have been borderline under normal posting.",
+        outcome: "Confirmed offer — leadership track opened a school 2 AL bands above PSLE path",
+        lesson:
+          "Leadership DSA requires verifiable, documented impact — not just titles. Schools interview closely and check teacher references. A real project with measurable outcomes is far stronger than three committee roles with no recorded results.",
+      },
+      {
+        talentArea: "Swimming",
+        icon: "leadership",
+        illustration: "swimming",
+        scenario:
+          "A student had swum competitively since Primary 2, training four times a week at a national club. By Primary 6 she held regional age-group rankings but not a national title. Her PSLE projection sat around AL 14 — solid, but likely below the COP for the IP school she had her eye on. Through DSA, she applied to that school in May and completed two trial sessions. In June, she received a Confirmed Offer — four months before PSLE results, the question of which secondary school was settled. She sat her PSLE in October without the weight of school selection on her shoulders. Her PSLE came in at AL 13.",
+        outcome: "Confirmed offer in June — PSLE taken with school already secured",
+        lesson:
+          "DSA's most underrated benefit is not the school — it is what it does to a child's state of mind during the PSLE preparation period. A confirmed place in June removes school selection from the PSLE equation entirely.",
+      },
+      {
+        talentArea: "Mathematics & Science (Specialised School)",
+        icon: "robotics",
+        illustration: "science",
+        scenario:
+          "A student who loved mathematics competitions applied to the School of Science and Technology (SST) in Primary 6. SST admits 100% of its students through DSA — there is no PSLE posting pathway. His PSLE projection was around AL 16, well outside the COP for most IP schools, but SST evaluates on STEM aptitude and problem-solving, not academic AL scores alone. He sat a selection test, completed a group activity session, and received a Confirmed Offer. He is now in SST's Applied Learning programme studying engineering and computational thinking.",
+        outcome: "Confirmed offer to SST — a school with no PSLE posting pathway",
+        lesson:
+          "Four Singapore secondary schools — NUS High, SOTA, SST, and Singapore Sports School — admit students exclusively through DSA. For students whose strengths fit these schools, DSA is not an alternative route. It is the only route.",
+      },
+      {
+        talentArea: "Art (Late Start — P5 Discovery)",
+        icon: "dance",
+        illustration: "art_peace",
+        scenario:
+          "A family first heard about DSA in Primary 5 from another parent at a school event. Their daughter had been drawing and painting since she was small, but they had never thought of it as a school admission pathway. Over Primary 5, she joined an external art class, entered two youth art competitions, and built a portfolio of her best work. She applied to three secondary schools through Art DSA in Primary 6. One school invited her for an interview and portfolio review. She received a Confirmed Offer in August.",
+        outcome: "Confirmed offer — portfolio built from scratch in one focused year",
+        lesson:
+          "Primary 5 is not too late if the talent base is real. A year of structured preparation — external coaching, documented work, and two to three competitive entries — can build a credible DSA portfolio from a standing start. The earlier families start, the more runway they have. But late is better than never.",
+      },
+      {
+        talentArea: "Chinese Orchestra",
+        icon: "music",
+        illustration: "music",
+        scenario:
+          "A student had played erhu in her school's Chinese orchestra since Primary 3 and in an external youth orchestra from Primary 5. She was not island-wide ranked — but she had six years of documented, continuous ensemble experience and two youth festival performances on record. She applied DSA to two schools with strong Chinese orchestra programmes. Both shortlisted her. She chose the school closer to home that offered the IP track and accepted the Confirmed Offer in September. Her PSLE came in at AL 18 — the DSA school's COP via normal posting was around AL 14.",
+        outcome: "Confirmed offer — 4 AL bands above PSLE posting reach",
+        lesson:
+          "Years of sustained ensemble involvement — not just peak competition results — is what Chinese orchestra programmes recruit for. A continuous record of participation, including external orchestras and festival performances, matters more than a single audition result.",
+      },
+      {
+        talentArea: "When PSLE Exceeded Expectations",
+        icon: "risk",
+        illustration: "risk",
+        scenario:
+          "A family applied DSA conservatively. Their daughter was projected around AL 16, so they targeted a school with a COP of around AL 14 — a good school, a safe bet. She received a Confirmed Offer and they accepted in September. PSLE came back at AL 10. Suddenly the family was looking at schools two to three tiers above — schools she could have entered through normal S1 posting. The DSA commitment is binding. There is no mechanism to transfer. She thrives at her school and loves it — but the family wishes they had thought carefully about the upside scenario before confirming.",
+        outcome: "Bound to DSA school — could not access higher-tier school despite PSLE result",
+        lesson:
+          "Before confirming a DSA offer, think through both ends of your child's realistic PSLE range — not just the middle estimate. A PSLE outperformance does not override a confirmed DSA commitment.",
+      },
+      {
+        talentArea: "When DSA Doesn't Work Out",
+        icon: "risk",
+        illustration: "risk",
+        scenario:
+          "A student had trained in Chinese instrumental music for five years and applied to three secondary schools — a top-tier IP school, a mid-tier school, and a neighbourhood school she genuinely liked. All three rejected her. Her parents kept the news quiet during PSLE preparation. When results came back at AL 12, the family was surprised: her score opened schools she had not originally considered. She secured a place through normal S1 posting at a school with a strong music programme, joined the Chinese orchestra there, and captained it by Secondary 3.",
+        outcome: "All three DSA applications unsuccessful — PSLE and S1 posting delivered the right outcome",
+        lesson:
+          "DSA rejection is not the end of a musical journey. S1 posting and CCA open trials remain. Some students find a better fit through the regular process.",
+      },
+      {
+        talentArea: "When the Offer Becomes a Mismatch",
+        icon: "risk",
+        illustration: "risk",
+        scenario:
+          "A student was admitted via DSA to a prestigious secondary school for string instruments. Within a semester, two problems emerged: her academic workload was significantly heavier than at her primary school, and the school's string ensemble focused on pieces well below the level she had mastered at her external academy. She spent Secondary 1 managing stress, not music. By Secondary 2 she had adjusted academically — but had switched her private instrumental lessons to a different academy because the school CCA no longer challenged her.",
+        outcome: "Confirmed offer accepted — academic and CCA mismatch emerged post-admission",
+        lesson:
+          "Visit the CCA at open house and ask current student members about the repertoire difficulty and training schedule. A school's reputation in a talent area does not always match the actual CCA experience.",
       },
     ],
   },
@@ -70,8 +228,12 @@ const SECTIONS_EN: DsaExperienceSection[] = [
       "The most academically selective schools (for example Raffles Institution, Hwa Chong Institution, and Nanyang Girls' High School) are also the most selective in DSA. They recruit nationally ranked talent and fill limited vacancies quickly.",
       "Schools with less aggressive academic COPs often still run serious DSA programmes, but they may have unfilled DSA places in certain CCAs. By the time national-level athletes and artists have committed to top schools, mid-tier schools may accept strong—but not nationally dominant—profiles in the same sport or art form.",
       "Think of it as a talent marketplace moving down the ladder: elite performers cluster at the most selective schools first; schools lower on the academic ladder may still want quality talent, but the absolute bar for \"standout\" achievement can be lower when vacancies remain.",
-      "Consider a swimmer who has trained with a club since Primary 2, represented their school at NSG competitions, and achieved national age-group rankings. At the most academically selective schools, this profile earned confirmed offers — but the same swimmer was unsuccessful at one equally well-known school that had already filled its swimming quota with national record holders that year. The school had not lowered its standards; it had simply run out of available places for that talent area.",
-      "A documented pattern across multiple years: students who have represented Singapore at regional or international level in their sport received confirmed offers from some top-tier schools in the same application cycle while being rejected by others at the same tier — not because of a talent gap, but because annual vacancies at each school are finite and fill on a first-qualified basis. A world-class résumé is a powerful credential. It is not a key that opens every door in the same year.",
+    ],
+    examples: [
+      {
+        label: "Real-world pattern",
+        body: "A nationally ranked swimmer — with years of club training, NSG representation, and age-group titles — received confirmed DSA offers from some of Singapore's most academically selective schools in the same cycle, while being unsuccessful at others at the same tier. The difference was not talent. It was that certain schools had already filled their swimming vacancies with students who held national records. Annual intake slots are finite and fill on a first-qualified basis. A strong profile is necessary. It is not sufficient.",
+      },
     ],
     callouts: [
       {
@@ -204,6 +366,53 @@ const SECTIONS_EN: DsaExperienceSection[] = [
       "Assuming the commitment risk only affects children who underperform at PSLE. A child who dramatically outperforms their projection is equally bound — even if their actual PSLE score would have qualified them for a higher-tier school through normal posting. Before confirming, think through both ends of your child's realistic PSLE range, not just the most likely outcome.",
       "Applying to NYGH for Mathematics, Science, or Artistic Gymnastics DSA in the 2026 intake. NYGH discontinued all three programmes for 2026 without extended advance notice. Families who had invested years building portfolios for these specific pathways need to redirect their planning immediately.",
       "Not confirming whether the DSA offer covers the IP or O Level track at dual-stream schools. Schools can counter-offer the O Level track to applicants who expressed a preference for IP, based on their academic results. Confirm the exact track before accepting — you cannot change it afterwards.",
+      "Paying a DSA consultant for 'guaranteed' results or 'school connections'. No consultant has privileged access to MOE school admission quotas or individual selectors' decisions. Legitimate consultants help with preparation — portfolio organisation, interview coaching, timeline management. Any consultant who implies relationships with specific schools, offers 'direct introductions' to DSA coordinators, or guarantees offers is misrepresenting how the process works. MOE's selection is blind to intermediaries.",
+    ],
+  },
+  {
+    id: "section-9",
+    title: "Open House: The Questions That Actually Matter",
+    paragraphs: [
+      "The April and May open houses — held before the DSA application window opens — are your intelligence-gathering window. Schools sometimes reveal shortlisting criteria at open houses that they do not publish anywhere. What you learn here cannot be found on any website.",
+      "The most useful people at an open house are not the teachers explaining policy — they are the current DSA students running activity booths. Talk to both groups, but ask different things.",
+    ],
+    callouts: [
+      {
+        type: "warning",
+        heading: "Only the April–May open houses are relevant for DSA",
+        body: "November open houses (for S1 Posting) are after the DSA cycle is complete. If you miss the April–May window, you lose the only structured opportunity to gather school-specific intelligence before applications close on 2 June.",
+      },
+    ],
+    questionSets: [
+      {
+        label: "Ask the CCA teacher or coach",
+        icon: "teacher",
+        questions: [
+          "How many places are you offering in this talent area this year? How many did you take last year?",
+          "What does a typical successful applicant's profile look like for this specific talent area?",
+          "Will you consider students who have not represented their primary school in inter-school competitions?",
+          "If my child is offered DSA admission, will it be for the IP or O Level track?",
+          "What is the actual weekly training commitment — days, hours, and what happens during examination periods?",
+        ],
+      },
+      {
+        label: "Ask a current DSA student",
+        icon: "student",
+        questions: [
+          "Are you glad you came in through DSA rather than normal PSLE posting?",
+          "Do DSA students and non-DSA students mix well, or is there a noticeable divide?",
+          "What does your actual week look like — how many hours of CCA versus academics?",
+          "Is the training here at the level you expected? Better or harder than you thought?",
+          "If you could go back and choose again, would you still pick this school and this pathway?",
+        ],
+      },
+    ],
+  },
+  {
+    id: "section-10",
+    title: "Practical Checklist Before Applying",
+    paragraphs: [
+      "Work through this list with your child before you submit on the MOE portal. Every item should be a confident \"yes\" or a deliberate plan to complete it before 2 June 2026.",
     ],
   },
   {
@@ -231,53 +440,6 @@ const SECTIONS_EN: DsaExperienceSection[] = [
         heading: "The October ranking is the real decision",
         body: "With multiple COs in hand, the school you rank first in October is the school you will attend — regardless of what PSLE results show in November. Treat the October ranking with the same seriousness as the application itself.",
       },
-    ],
-  },
-  {
-    id: "section-9",
-    title: "Open House: The Questions That Actually Matter",
-    paragraphs: [
-      "The April and May open houses — held before the DSA application window opens — are your intelligence-gathering window. Schools sometimes reveal shortlisting criteria at open houses that they do not publish anywhere. What you learn here cannot be found on any website.",
-      "The most useful people at an open house are not the teachers explaining policy — they are the current DSA students running activity booths. Talk to both groups, but ask different things.",
-    ],
-    callouts: [
-      {
-        type: "warning",
-        heading: "Only the April–May open houses are relevant for DSA",
-        body: "November open houses (for S1 Posting) are after the DSA cycle is complete. If you miss the April–May window, you lose the only structured opportunity to gather school-specific intelligence before applications close on 2 June.",
-      },
-    ],
-    questionSets: [
-      {
-        label: "Ask the CCA teacher or coach",
-        icon: "teacher",
-        questions: [
-          "How many places are you offering in this talent area this year? How many did you take last year?",
-          "What does a typical successful applicant's profile look like for this specific talent area?",
-          "Will you consider students who have not represented their primary school in inter-school competitions?",
-          "If my child is offered DSA admission, will it be for the IP or O Level track?",
-          "What is the actual weekly training commitment — days, hours, and what happens during examination periods?",
-          "What happens if a DSA student wants to leave the CCA mid-way through secondary school?",
-        ],
-      },
-      {
-        label: "Ask a current DSA student",
-        icon: "student",
-        questions: [
-          "Are you glad you came in through DSA rather than normal PSLE posting?",
-          "Do DSA students and non-DSA students mix well, or is there a noticeable divide?",
-          "What does your actual week look like — how many hours of CCA versus academics?",
-          "Is the training here at the level you expected? Better or harder than you thought?",
-          "If you could go back and choose again, would you still pick this school and this pathway?",
-        ],
-      },
-    ],
-  },
-  {
-    id: "section-10",
-    title: "Practical Checklist Before Applying",
-    paragraphs: [
-      "Work through this list with your child before you submit on the MOE portal. Every item should be a confident \"yes\" or a deliberate plan to complete it before 2 June 2026.",
     ],
   },
 ];
@@ -318,14 +480,143 @@ const SECTIONS_ZH: DsaExperienceSection[] = [
       "DSA 确认录取通知书保证入读该校的前提是：学生的 PSLE 成绩达到该校要求的最低分配组别。对于综合课程（IP）和快捷源流学校，这通常意味着 PSLE 成就等级（AL）须为 22 或以下（AL ≤ 22）。",
       "若孩子的 PSLE AL 为 23 或以上，即使持有 DSA 录取通知书，也无法进入 IP 或快捷源流——源流分配由 PSLE 成绩决定，不由录取通知书单独决定。",
       "一旦学生接受 DSA 录取通知书，即承诺就读该校并参与该 CCA 路径，不得再参加 S1 中央分配，申请其他学校。",
-      "在 confirm 任何 DSA 录取通知书之前，请考虑两个方向的风险。如果孩子 PSLE 分数未达到该校最低录取分配组别，条件性录取通知可能被撤销——而 S1 分配通道，他们在 confirm 的那一刻就已退出，无法再回头。同样，如果孩子 PSLE 发挥显著超出预期——考出了按正常分配可以进入更好学校的成绩——DSA 承诺依然具有约束力。没有任何机制允许他们转入凭 PSLE 实际成绩本可进入的更高层级学校。在 confirm 之前，对孩子 PSLE 成绩的上下两个方向都做出清醒判断——而不只是中位预测——是整个 DSA 过程中最关键的决定之一。",
+      "在确认接受任何 DSA 录取通知书之前，请考虑两个方向的风险。如果孩子 PSLE 分数未达到该校最低录取分配组别，条件性录取通知可能被撤销——而 S1 分配通道，他们在确认接受的那一刻就已退出，无法再回头。同样，如果孩子 PSLE 发挥显著超出预期——考出了按正常分配可以进入更好学校的成绩——DSA 承诺依然具有约束力。没有任何机制允许他们转入凭 PSLE 实际成绩本可进入的更高层级学校。在确认接受之前，对孩子 PSLE 成绩的上下两个方向都做出清醒判断——而不只是中位预测——是整个 DSA 过程中最关键的决定之一。",
       "2026 年度 DSA 申请窗口为 2026 年 5 月 6 日至 6 月 2 日。请在网站开放前完成学校研究和开放日参观。",
     ],
     callouts: [
       {
         type: "warning",
-        heading: "Confirm 之前：两个方向都要想清楚",
-        body: "如果 PSLE 未达学校最低分配组别，条件性录取可能被撤销——而 S1 分配通道已在你 confirm 的那一刻关闭。如果 PSLE 大幅超出预期，DSA 承诺依然有效——没有机制让孩子转入凭实际成绩本可进入的更好学校。",
+        heading: "确认接受之前：两个方向都要想清楚",
+        body: "如果 PSLE 未达学校最低分配组别，条件性录取可能被撤销——而 S1 分配通道已在你确认接受的那一刻关闭。如果 PSLE 大幅超出预期，DSA 承诺依然有效——没有机制让孩子转入凭实际成绩本可进入的更好学校。",
+      },
+    ],
+  },
+  {
+    id: "case-studies",
+    title: "十二个家庭，十二条不同的 DSA 路径",
+    paragraphs: [
+      "DSA 的结果因才能领域、目标学校和当年的招生情况而各有不同。以下十二个场景均为综合示例——基于 MOE 公开记录的 DSA 机制、已核实的录取规则，以及家长社群中反复出现的真实模式。它们用于展示 DSA 路径的多样性，并非代表任何具体家庭的经历。姓名、分数与具体细节均为说明性描述。",
+    ],
+    caseStudies: [
+      {
+        talentArea: "击剑（小众运动）",
+        icon: "fencing",
+        illustration: "fencing",
+        scenario:
+          "一名学生从小四起开始在国家级俱乐部接受系统训练，每周练习三次。到小六时，她在同龄组中取得了全国前30的排名。她的PSLE预测成绩约为AL 16——不错，但并非顶尖。通过DSA，她申请了一所历史截止分数（COP）约在AL 12附近的直通车学校，完成两轮选拔后，在PSLE放榜前四个月收到了正式录取确认书。",
+        outcome: "正式录取——比PSLE正常报名途径高约4个AL分段",
+        lesson:
+          "在小众运动中，竞争池本身较小，一个有据可查的全国排名往往比大热门项目中的同等排名更具说服力。申请前，先查清目标学校在你孩子所在运动项目上的全国学校运动会（NSG）成绩。",
+      },
+      {
+        talentArea: "中国舞",
+        icon: "dance",
+        illustration: "dance",
+        scenario:
+          "一名男生从小二起在社区中心学习中国舞，小四加入学校中国舞CCA，小六前共参加了两届全国青少年艺术节演出。他并非新加坡技术最顶尖的舞者，但五年持续的有据可查的参与经历，加上小六担任助理导师的领导角色，让他建立起一份完整的作品集。三所学校对他发出邀请，他最终从一所历史COP远低于其PSLE预测分段的学校收到了正式录取确认书。",
+        outcome: "正式录取——艺术DSA让他进入比PSLE途径高4个分段的学校",
+        lesson:
+          "多年持续参与比单次出色表现更有分量。CCA中的领导角色是真实的申请资质，并非可有可无的点缀。",
+      },
+      {
+        talentArea: "机器人与工程",
+        icon: "robotics",
+        illustration: "robotics",
+        scenario:
+          "从小四起，一名学生把周末时间投入机器人项目——学校社团、假期工作坊，还参加过一次全国比赛，但未获奖。让他的申请脱颖而出的是作品集：他记录了每一次设计迭代、每一次失败，以及从中学到了什么。两所STEM重点学校向他发出入围邀请，其中一所——主要通过DSA招收工程项目学生的学校——给予了他正式录取确认。他的PSLE分数本身并不符合该校的正常报名门槛。",
+        outcome: "正式录取至专业技术学校——仅凭PSLE成绩无法入读",
+        lesson:
+          "对于STEM方向的DSA，一份记录了学习历程的作品集——包括失败与修正——往往比一枚竞赛奖牌更具说服力。",
+      },
+      {
+        talentArea: "合唱团与声乐",
+        icon: "music",
+        illustration: "music",
+        scenario:
+          "一名女生从小二起在学校合唱团演唱，没有私人声乐课，也没有ABRSM考级证书——只有六年的学校合唱团经历、三次演出记录，以及她自己准备的试唱。她申请了SOTA音乐方向，被列入候补名单。十月，一名排名更高的学生选择了其他学校，她的候补名额转为正式录取确认书。她目前正在完成SOTA的六年综合艺术课程。",
+        outcome: "候补转为正式录取——无需私人专业训练",
+        lesson:
+          "来自高选择性学校的候补通知并不等同于被拒绝。大约一半的候补学生最终会在排名较高的申请者放弃名额后获得正式录取。",
+      },
+      {
+        talentArea: "领导力",
+        icon: "leadership",
+        illustration: "leadership",
+        scenario:
+          "这名学生既不是运动员，也不会演奏乐器。他拥有的是六年持续的学校社区参与记录——从小二起担任班长，小五和小六担任风纪生，还主导了一个历时两年、跨越八所学校的学生环保项目。他的DSA申请材料呈现的是一张有据可查的影响力地图，而非一份头衔清单。他收到了一所学校的正式录取确认书，而在正常报名途径下，他的PSLE成绩仅在该校的录取边缘。",
+        outcome: "正式录取——领导力方向比PSLE途径高2个分段",
+        lesson:
+          "领导力DSA要求可核实、有记录的实质影响——而非头衔本身。学校面试会深入追问，并核查教师推荐信。一个有可量化成果的真实项目，远比三个没有记录结果的委员会职位更有力。",
+      },
+      {
+        talentArea: "游泳",
+        icon: "leadership",
+        illustration: "swimming",
+        scenario:
+          "一名女生从小二起参加竞技游泳训练，每周四次，在国家级俱乐部接受系统训练。到小六时，她持有区级年龄组排名，但未取得全国冠军。她的PSLE预测成绩约为AL 14——稳定，但可能低于她心仪的直通车学校的COP。通过DSA，她在五月向该校提交申请，完成两次试训。六月，她收到正式录取确认书——距PSLE放榜还有四个月，学校归属问题已尘埃落定。整个PSLE备考期间，她无需承受择校的心理压力。最终PSLE成绩为AL 13。",
+        outcome: "六月拿到正式录取——PSLE备考期间学校已确定",
+        lesson:
+          "DSA最容易被低估的价值，不在于进了哪所学校，而在于它对孩子备考状态的影响。六月拿到确认书，意味着整个小六下半年的PSLE备考不再带有择校焦虑。",
+      },
+      {
+        talentArea: "数学与科学（特选学校）",
+        icon: "robotics",
+        illustration: "science",
+        scenario:
+          "一名热爱数学竞赛的学生在小六申请了新加坡科技与工程学校（SST）。SST 100%通过DSA招生，没有PSLE正常报名途径。他的PSLE预测分数约为AL 16，远超大多数直通车学校的COP，但SST的评估侧重于STEM能力和解题思维，而非单一的AL分数。他参加了笔试和小组活动，随后收到正式录取确认书。目前他在SST的应用学习项目中学习工程与计算思维。",
+        outcome: "正式录取至SST——该校没有PSLE报名途径",
+        lesson:
+          "新加坡有四所中学——国立大学附属中学、新加坡艺术学校（SOTA）、SST和新加坡体育学校——完全通过DSA招生。对于才能与这些学校匹配的学生，DSA不是备选路径，而是唯一路径。",
+      },
+      {
+        talentArea: "视觉艺术（小五才开始准备）",
+        icon: "dance",
+        illustration: "art_peace",
+        scenario:
+          "一个家庭在小五时，从另一位家长处第一次听说DSA。他们的女儿从小就喜欢绘画，但家人从未将这件事与升学途径联系起来。整个小五阶段，她参加了校外画班，报名参加了两项青少年艺术比赛，并整理出一份最佳作品集。小六时，她通过艺术方向DSA申请了三所中学。其中一所邀请她进行面试和作品集审核，并于八月发出了正式录取确认书。",
+        outcome: "正式录取——作品集在一年内从零开始建立",
+        lesson:
+          "如果才能基础是真实的，小五开始并不算太晚。一年有针对性的准备——校外辅导、作品记录、两至三次比赛参与——足以从零建起一份有竞争力的DSA申请材料。越早开始，准备空间越大；但晚起步也好过放弃。",
+      },
+      {
+        talentArea: "华乐",
+        icon: "music",
+        illustration: "music",
+        scenario:
+          "一名女生从小三起在学校华乐团演奏二胡，小五起加入校外青少年华乐团。她没有全国排名，但拥有六年持续的合奏经历，以及两次青少年艺术节演出记录。她向两所拥有强大华乐团项目的学校提交DSA申请，两所均邀请她参加选拔。她选择了距家较近、提供直通车课程的学校，并于九月接受了正式录取确认书。最终PSLE成绩为AL 18，该校正常报名途径的历史COP约为AL 14。",
+        outcome: "正式录取——比PSLE报名途径高4个分段",
+        lesson:
+          "华乐团项目招收的核心指标是多年持续的合奏参与，而非单次比赛高峰。连续的参与记录——包括校外乐团经历和艺术节演出——比单次试奏结果更有分量。",
+      },
+      {
+        talentArea: "PSLE 超预期时的情况",
+        icon: "risk",
+        illustration: "risk",
+        scenario:
+          "一个家庭在DSA申请时采取了保守策略。他们的女儿预测约为AL 16，于是选择了一所COP约为AL 14的学校——条件不错，选择稳妥。她收到了正式录取确认书，家人在九月接受了邀约。PSLE结果出来是AL 10。突然间，他们发现她原本可以通过正常报名进入高出两三个层级的学校。DSA承诺具有约束力，没有转校机制。她在所就读的学校生活愉快，表现很好——但这个家庭很希望当初在接受确认书之前，能认真想清楚分数超预期的可能性。",
+        outcome: "受DSA承诺约束——PSLE成绩超预期后无法转入更好学校",
+        lesson:
+          "在接受DSA确认书之前，请认真评估孩子PSLE分数在两端的真实可能区间——不只是中间估算。PSLE超预期并不能解除已确认的DSA承诺。",
+      },
+      {
+        talentArea: "DSA 申请未成功时",
+        icon: "risk",
+        illustration: "risk",
+        scenario:
+          "一名学生学习中国乐器五年，向三所中学提交DSA申请——一所顶级直通车学校、一所中等层次学校、一所她真正喜欢的邻里学校。三所全部未能录取。父母在PSLE备考期间对孩子隐瞒了这个结果。PSLE成绩出来是AL 12，家人颇感意外：这个分数打开了他们原本未曾考虑过的学校大门。最终通过正常S1分配，她进入了一所有强大华乐团项目的学校，加入华乐团后在中二时成为团长。",
+        outcome: "三所DSA申请均未成功——PSLE和S1分配带来了更好的结果",
+        lesson:
+          "DSA未成功并不是音乐旅程的终点。S1分配和CCA公开选拔仍然是可走的路。有些学生通过正常途径，反而找到了更合适的学校。",
+      },
+      {
+        talentArea: "进校后发现不匹配",
+        icon: "risk",
+        illustration: "risk",
+        scenario:
+          "一名学生通过DSA凭弦乐才能进入一所知名中学。入读一个学期后，两个问题浮现：学校的学业压力远高于她在小学的经历；学校弦乐团的演奏曲目难度，远低于她在校外音乐学院已掌握的水平。整个中一，她一直在应对压力，而不是享受音乐。到中二时，她在学业上逐渐适应了——但已将私人乐器课转到另一家校外音乐学院，因为学校CCA对她不再具有挑战性。",
+        outcome: "正式录取后接受——入读后发现学业和CCA双重不匹配",
+        lesson:
+          "参加开放日时，一定要实地探访CCA，向现任学生询问曲目难度和训练安排。学校在某个才能领域的声誉，不一定等同于实际CCA的体验水平。",
       },
     ],
   },
@@ -468,7 +759,7 @@ const SECTIONS_ZH: DsaExperienceSection[] = [
       "忽视 CCA 承诺。DSA 录取的学生须在整个中学阶段留在该 CCA。若孩子日后打算换 CCA，请勿以该活动申请 DSA。",
       "低估 AL 要求。即使持有强劲的 DSA 录取通知书，PSLE AL 为 23 或以上的学生也无法进入 IP 或快捷源流。录取通知书不能覆盖源流分配。",
       "跳过开放日。开放日是了解该校是否在当年积极招募你孩子特定才能领域的唯一机会——在确认三个选择前请务必参加。",
-      "认为承诺风险只会影响 PSLE 成绩不达标的孩子。成绩显著超出预期的孩子同样受 confirm 承诺约束——即使他们的实际 PSLE 成绩原本可以通过正常分配进入更高层级的学校。confirm 之前，请对孩子 PSLE 成绩的上下两个方向都做出判断，而不只看最可能的中位结果。",
+      "认为承诺风险只会影响 PSLE 成绩不达标的孩子。成绩显著超出预期的孩子同样受确认接受承诺约束——即使他们的实际 PSLE 成绩原本可以通过正常分配进入更高层级的学校。确认接受之前，请对孩子 PSLE 成绩的上下两个方向都做出判断，而不只看最可能的中位结果。",
       "2026 年向南洋女中报名数学、理科或竞技体操 DSA。NYGH 已取消这三个 2026 年度的 DSA 项目，且未提前足够预警。为此专门投入多年准备的家庭，需要立即重新规划志愿学校。",
       "没有确认 DSA 录取通知书覆盖的是 IP 还是 O Level 轨道——尤其是在双轨制学校。学校可以根据申请者的学业成绩，把 IP 志愿改为 O Level 录取通知，即使申请时已注明偏好 IP。签收前请务必确认对应轨道，事后无法更改。",
     ],
@@ -524,7 +815,6 @@ const SECTIONS_ZH: DsaExperienceSection[] = [
           "没有代表过小学参加校际比赛的孩子，你们会考虑吗？",
           "如果孩子通过 DSA 获得录取，是进 IP 轨道还是 O Level 轨道？",
           "每周实际训练安排是什么——几天、几小时，考试期间怎么办？",
-          "如果 DSA 录取的学生中途想退出该 CCA，会怎么处理？",
         ],
       },
       {
@@ -789,7 +1079,6 @@ const SECTIONS_MS: DsaExperienceSection[] = [
           "Adakah anda akan mempertimbangkan pelajar yang belum mewakili sekolah rendah mereka dalam pertandingan antara sekolah?",
           "Jika anak saya ditawarkan kemasukan DSA, adakah ia untuk trek IP atau O Level?",
           "Apakah komitmen latihan mingguan sebenar — hari, jam, dan apa yang berlaku semasa tempoh peperiksaan?",
-          "Apa yang berlaku jika pelajar DSA ingin meninggalkan CCA di pertengahan sekolah menengah?",
         ],
       },
       {
@@ -1052,7 +1341,6 @@ const SECTIONS_TA: DsaExperienceSection[] = [
           "இடைப்பள்ளி போட்டிகளில் தங்கள் தொடக்கப் பள்ளியை பிரதிநிதித்துவப்படுத்தாத மாணவர்களை நீங்கள் கருத்தில் கொள்வீர்களா?",
           "என் குழந்தைக்கு DSA சேர்க்கை வழங்கப்பட்டால், அது IP அல்லது O Level பாதையாக இருக்குமா?",
           "உண்மையான வாராந்திர பயிற்சி அர்ப்பணிப்பு என்ன — நாட்கள், மணி நேரம், தேர்வு காலங்களில் என்ன நடக்கும்?",
-          "ஒரு DSA மாணவர் இடைநிலை பள்ளியின் நடுவில் CCA-ஐ விட்டு வெளியேற விரும்பினால் என்ன நடக்கும்?",
         ],
       },
       {

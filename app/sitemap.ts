@@ -26,6 +26,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.96,
     },
     {
+      url: `${base}/psle-cop`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${base}/faq`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.94,
+    },
+    {
       url: `${base}/dsa-interview`,
       lastModified: now,
       changeFrequency: "monthly",
@@ -44,16 +56,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${base}/psle-cop`,
+      url: `${base}/dsa-experience`,
       lastModified: now,
       changeFrequency: "weekly",
-      priority: 0.95,
+      priority: 0.88,
     },
     {
-      url: `${base}/faq`,
+      url: `${base}/open-house-guide`,
       lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.94,
+      changeFrequency: "weekly",
+      priority: 0.87,
     },
   ];
 }

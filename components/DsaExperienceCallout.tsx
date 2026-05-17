@@ -22,7 +22,8 @@ export function DsaExperienceCallout() {
           {/* Left: text content */}
           <div>
             <p className="mb-3 text-[10px] font-bold tracking-[0.18em] text-champagne normal-case">
-              {t.dsaExpCalloutKicker}
+              {t.dsaExpCalloutKicker}{" "}
+              <span aria-hidden className="animate-sparkle">★</span>
             </p>
             <h2 className="max-w-lg font-display text-2xl font-extrabold text-white sm:text-[1.75rem] sm:leading-[1.15]">
               {t.dsaExpCalloutTitle}
@@ -62,7 +63,7 @@ export function DsaExperienceCallout() {
                 </span>
                 <div>
                   <p className="font-display text-xl font-extrabold tabular-nums text-white">
-                    8
+                    11
                   </p>
                   <p className="text-xs text-white/45">chapters</p>
                 </div>
@@ -73,7 +74,7 @@ export function DsaExperienceCallout() {
                 </span>
                 <div>
                   <p className="font-display text-xl font-extrabold text-white">
-                    ~20 min
+                    ~35 min
                   </p>
                   <p className="text-xs text-white/45">read time</p>
                 </div>

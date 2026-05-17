@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DsaExperiencePageBody } from "@/components/DsaExperiencePageBody";
+import { buildDsaExperienceStructuredData } from "@/lib/seo";
 
 const PAGE_TITLE =
   "Singapore DSA Experience Guide | School Selectivity, Talent Bars & 2026 Timeline | DSALink";
@@ -44,5 +45,15 @@ export function generateMetadata(): Metadata {
 }
 
 export default function DsaExperiencePage() {
-  return <DsaExperiencePageBody />;
+  const jsonLd = buildDsaExperienceStructuredData();
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <DsaExperiencePageBody />
+    </>
+  );
 }

@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     type: "article",
     url: "/faq",
     siteName: "DSALink",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
 

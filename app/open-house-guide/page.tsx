@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { OpenHouseGuidePageBody } from "@/components/OpenHouseGuidePageBody";
+import { buildOpenHouseGuideStructuredData } from "@/lib/seo";
 
 const PAGE_TITLE =
   "2026 Secondary School Open House Guide | Forum Tips, School Types & 10 Must-Ask Questions | DSALink";
@@ -44,5 +45,15 @@ export function generateMetadata(): Metadata {
 }
 
 export default function OpenHouseGuidePage() {
-  return <OpenHouseGuidePageBody />;
+  const jsonLd = buildOpenHouseGuideStructuredData();
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <OpenHouseGuidePageBody />
+    </>
+  );
 }

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { saveRecommendRecord } from "@/lib/db";
-import { sendWelcomeEmail } from "@/lib/resend";
+import { sendRecommendResultsEmail } from "@/lib/resend";
 import { nanoid } from "nanoid";
 
 export async function POST(req: NextRequest) {
@@ -23,7 +23,11 @@ export async function POST(req: NextRequest) {
   await saveRecommendRecord(record);
 
   if (record.email) {
-    await sendWelcomeEmail(record.email);
+    await sendRecommendResultsEmail(
+      record.email,
+      record.alScore,
+      record.recommendedSchools,
+    );
   }
 
   return NextResponse.json({ ok: true });

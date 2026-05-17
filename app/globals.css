@@ -68,3 +68,13 @@ body { line-height: 1.6; }
 .animate-fade-up-delay-1 { animation-delay: 80ms; }
 .animate-fade-up-delay-2 { animation-delay: 160ms; }
 .animate-fade-up-delay-3 { animation-delay: 240ms; }
+
+/* ── Decorative sparkle animation ── */
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.25); }
+}
+.animate-sparkle {
+  animation: sparkle 2.4s ease-in-out infinite;
+  display: inline-block;
+}

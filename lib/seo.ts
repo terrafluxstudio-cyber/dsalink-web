@@ -433,3 +433,71 @@ export function buildFaqStructuredData(): Record<string, unknown> {
     ],
   };
 }
+
+/**
+ * /dsa-experience — Article schema for the DSA parent experience guide.
+ */
+export function buildDsaExperienceStructuredData(): Record<string, unknown> {
+  const base = getSiteUrl();
+  const pageUrl = `${base}/dsa-experience`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "The DSA Experience: What Parents Wish They Knew",
+    description:
+      "A complete guide to Direct School Admission in Singapore — how selectivity really works, what schools assess, real pathway examples, and the mistakes families make.",
+    url: pageUrl,
+    publisher: {
+      "@type": "Organization",
+      name: "DSALink",
+      url: base,
+    },
+    about: {
+      "@type": "EducationalOccupationalProgram",
+      name: "Direct School Admission (DSA)",
+      description:
+        "Singapore's Direct School Admission programme for Primary 6 students",
+    },
+  };
+}
+
+/**
+ * /open-house-guide — HowTo schema for the secondary school open house guide.
+ */
+export function buildOpenHouseGuideStructuredData(): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Make the Most of Singapore Secondary School Open Houses",
+    description:
+      "A step-by-step guide for P6 parents attending secondary school open houses for DSA research.",
+    step: [
+      {
+        "@type": "HowToStep",
+        name: "Research schools before attending",
+        text: "Check NSG results and school social media before open house day.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Prioritise CCA booths over auditorium talks",
+        text: "The most useful information comes from current students at CCA booths, not official presentations.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Ask specific questions to staff",
+        text: "Ask about DSA spots available, training schedules, and academic support systems.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Talk to currently-enrolled students",
+        text: "Ask students about the actual CCA experience, academic workload, and whether they'd choose the same school again.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Observe school culture",
+        text: "Notice whether student volunteers seem genuinely enthusiastic and what student work is displayed.",
+      },
+    ],
+  };
+}

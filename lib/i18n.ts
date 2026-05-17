@@ -102,10 +102,16 @@ export type Copy = {
   /** /dsa-guide — DSA-Sec application timeline */
   navFaq: string;
   navDsaGuide: string;
+  navDsaExperience: string;
+  featuredGuideKicker: string;
+  featuredGuideTitle: string;
+  featuredGuideCta: string;
   navDsaFinder: string;
   navOpenHouses: string;
   /** /open-house-guide — master guide for secondary school open houses */
   navOpenHouseGuide: string;
+  navFeatured: string;
+  navExplore: string;
   /** /scores — posting COP directory */
   navScores: string;
   navMenu: string;
@@ -431,9 +437,15 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusFinished: "Ended",
     navFaq: "DSA Basics",
     navDsaGuide: "DSA Guide",
+    navDsaExperience: "Parent Playbook",
+    featuredGuideKicker: "Featured guide",
+    featuredGuideTitle: "The DSA Parent Playbook — everything in one place",
+    featuredGuideCta: "Read now",
     navDsaFinder: "DSA Finder",
     navOpenHouses: "Open houses",
     navOpenHouseGuide: "Open House Guide",
+    navFeatured: "Featured",
+    navExplore: "Explore",
     navScores: "PSLE COP",
     navMenu: "Menu",
     navClose: "Close menu",
@@ -728,9 +740,15 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusFinished: "已结束",
     navFaq: "DSA 问答",
     navDsaGuide: "DSA 指南",
+    navDsaExperience: "家长实战指南",
+    featuredGuideKicker: "精选指南",
+    featuredGuideTitle: "DSA 家长实战手册——全程攻略一册收录",
+    featuredGuideCta: "立即阅读",
     navDsaFinder: "DSA 搜索",
     navOpenHouses: "开放日",
     navOpenHouseGuide: "开放日指南",
+    navFeatured: "精选",
+    navExplore: "探索",
     navScores: "PSLE COP",
     navMenu: "菜单",
     navClose: "关闭菜单",
@@ -974,6 +992,7 @@ export const copy: Record<Locale, Copy> = {
     dsaExpBodyCtaDesc:
       "使用我们的学校推荐工具，根据孩子的才能领域和预估 PSLE 分数，筛选保底、冲刺和梦想学校。",
     dsaExpBodyCtaBtn: "使用学校推荐工具",
+    ...dsaGuideEn,
     ...dsaGuideZh,
   },
   ms: {
@@ -1023,9 +1042,15 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusFinished: "Tamat",
     navFaq: "Asas DSA",
     navDsaGuide: "Panduan DSA",
+    navDsaExperience: "Panduan Ibu Bapa",
+    featuredGuideKicker: "Panduan pilihan",
+    featuredGuideTitle: "Buku Panduan DSA untuk Ibu Bapa — semua dalam satu tempat",
+    featuredGuideCta: "Baca sekarang",
     navDsaFinder: "Pencari DSA",
     navOpenHouses: "Hari terbuka",
     navOpenHouseGuide: "Panduan Hari Terbuka",
+    navFeatured: "Pilihan",
+    navExplore: "Teroka",
     navScores: "PSLE COP",
     navMenu: "Menu",
     navClose: "Tutup menu",
@@ -1276,6 +1301,7 @@ export const copy: Record<Locale, Copy> = {
     dsaExpBodyCtaDesc:
       "Gunakan Pencadang Sekolah kami untuk menyenarai pendekkan pilihan Selamat, Capaian dan Impian berdasarkan bidang bakat dan unjuran PSLE anak anda.",
     dsaExpBodyCtaBtn: "Cuba Pencadang Sekolah kami",
+    ...dsaGuideEn,
     ...dsaGuideMs,
   },
   ta: {
@@ -1327,9 +1353,15 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusFinished: "முடிந்தது",
     navFaq: "DSA அடிப்படை",
     navDsaGuide: "DSA வழிகாட்டி",
+    navDsaExperience: "பெற்றோர் வழிகாட்டி",
+    featuredGuideKicker: "சிறப்பு வழிகாட்டி",
+    featuredGuideTitle: "DSA பெற்றோர் கையேடு — அனைத்தும் ஒரே இடத்தில்",
+    featuredGuideCta: "இப்போது படிக்கவும்",
     navDsaFinder: "DSA தேடல்",
     navOpenHouses: "திறந்த வீடுகள்",
-    navOpenHouseGuide: "திறந்த வீடு வழிகாட்டி",
+    navOpenHouseGuide: "திறந்த நாள் வழிகாட்டி",
+    navFeatured: "சிறப்பு",
+    navExplore: "ஆராயுங்கள்",
     navScores: "PSLE COP",
     navMenu: "மெனு",
     navClose: "மெனுவை மூடு",
@@ -1583,6 +1615,7 @@ export const copy: Record<Locale, Copy> = {
     dsaExpBodyCtaDesc:
       "உங்கள் குழந்தையின் திறன் பகுதி மற்றும் PSLE மதிப்பெண் அடிப்படையில் Safe, Reach, Dream பள்ளிகளை தேர்ந்தெடுக்க எங்கள் கருவியைப் பயன்படுத்துங்கள்.",
     dsaExpBodyCtaBtn: "பள்ளி பரிந்துரையாளரை முயற்சிக்கவும்",
+    ...dsaGuideEn,
     ...dsaGuideTa,
   },
 };
@@ -1593,10 +1626,10 @@ export function getGuideLocaleStrings(locale: Locale): DsaGuideStrings {
     case "en":
       return dsaGuideEn;
     case "zh":
-      return dsaGuideZh;
+      return { ...dsaGuideEn, ...dsaGuideZh };
     case "ms":
-      return dsaGuideMs;
+      return { ...dsaGuideEn, ...dsaGuideMs };
     case "ta":
-      return dsaGuideTa;
+      return { ...dsaGuideEn, ...dsaGuideTa };
   }
 }

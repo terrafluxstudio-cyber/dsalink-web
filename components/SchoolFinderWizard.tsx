@@ -194,11 +194,13 @@ function ResultsView({
   alScore,
   onEmailSubmit,
   onEmailSkip,
+  showEmailCapture,
 }: {
   result: RecommendResult;
   alScore: number;
   onEmailSubmit: (email: string) => void;
   onEmailSkip: () => void;
+  showEmailCapture: boolean;
 }) {
   const renderSchool = (school: RecommendedSchool, tier: "safe" | "reach" | "dream" | "special") => (
     <RecommendResultCard
@@ -248,7 +250,7 @@ function ResultsView({
           </section>
         );
       })}
-      <EmailCapture onSubmit={onEmailSubmit} onSkip={onEmailSkip} />
+      {showEmailCapture && <EmailCapture onSubmit={onEmailSubmit} onSkip={onEmailSkip} />}
     </div>
   );
 }
@@ -271,6 +273,8 @@ export function SchoolFinderWizard({ inModal = false, onClose }: SchoolFinderWiz
   const [talentValues, setTalentValues] = useState<Partial<TalentAssessmentInput>[]>([]);
   const [location, setLocation] = useState({ region: "", town: "" });
   const [result, setResult] = useState<RecommendResult | null>(null);
+  const [emailSkipped, setEmailSkipped] = useState(false);
+  const [areaFilter, setAreaFilter] = useState<Partial<Record<TalentCategory, string>>>({});
   const postedRef = useRef(false);
 
   const alBlocked = alScore !== undefined && alScore >= 23;
@@ -350,7 +354,13 @@ export function SchoolFinderWizard({ inModal = false, onClose }: SchoolFinderWiz
             Based on AL {alScore} · {completedTalents.length} talent area{completedTalents.length !== 1 ? "s" : ""} assessed
           </p>
         </div>
-        <ResultsView result={result} alScore={alScore} onEmailSubmit={handleEmailSubmit} onEmailSkip={() => {}} />
+        <ResultsView
+          result={result}
+          alScore={alScore}
+          onEmailSubmit={handleEmailSubmit}
+          onEmailSkip={() => setEmailSkipped(true)}
+          showEmailCapture={!emailSkipped}
+        />
         <div className="flex flex-wrap items-center gap-3 border-t border-slate-100 pt-4">
           {inModal ? (
             <button
@@ -367,7 +377,7 @@ export function SchoolFinderWizard({ inModal = false, onClose }: SchoolFinderWiz
           )}
           <button
             type="button"
-            onClick={() => { postedRef.current = false; setPhase("wizard"); setStep(1); setResult(null); setCurrentTalentIndex(0); }}
+            onClick={() => { postedRef.current = false; setPhase("wizard"); setStep(1); setResult(null); setCurrentTalentIndex(0); setEmailSkipped(false); }}
             className="text-sm text-slate-400 transition hover:text-slate-600"
           >
             Start over
@@ -452,6 +462,9 @@ export function SchoolFinderWizard({ inModal = false, onClose }: SchoolFinderWiz
               const areas = getAreasForCategory(cat.id);
               const isExpanded = expandedCategory === cat.id;
               const selectedArea = areaByCategory[cat.id];
+              const filteredAreas = areas.filter((area) =>
+                area.toLowerCase().includes((areaFilter[cat.id] ?? "").toLowerCase()),
+              );
 
               return (
                 <div
@@ -462,39 +475,87 @@ export function SchoolFinderWizard({ inModal = false, onClose }: SchoolFinderWiz
                       : "border-[#e3ded5] bg-white shadow-card"
                   }`}
                 >
-                  <button
-                    type="button"
-                    onClick={() => setExpandedCategory(isExpanded ? null : cat.id)}
-                    className="flex w-full items-center justify-between px-4 py-3.5 text-left text-sm font-medium text-slate-800 transition hover:bg-black/[0.02]"
-                  >
-                    <span>{cat.label}</span>
-                    {selectedArea ? (
-                      <span className="rounded-full bg-champagne/15 px-2.5 py-0.5 text-[11px] font-semibold text-champagne-dark">
-                        ✓ {selectedArea}
-                      </span>
-                    ) : (
-                      <span className="text-slate-400 text-lg leading-none">{isExpanded ? "−" : "+"}</span>
+                  <div className="flex items-center justify-between px-4 py-3.5 text-left text-sm font-medium text-slate-800 transition hover:bg-black/[0.02]">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setExpandedCategory(isExpanded ? null : cat.id);
+                        if (isExpanded) {
+                          setAreaFilter((prev) => {
+                            const next = { ...prev };
+                            delete next[cat.id];
+                            return next;
+                          });
+                        }
+                      }}
+                      className="flex min-w-0 flex-1 items-center justify-between text-left"
+                    >
+                      <span>{cat.label}</span>
+                      {!selectedArea && (
+                        <span className="text-slate-400 text-lg leading-none">{isExpanded ? "−" : "+"}</span>
+                      )}
+                    </button>
+                    {selectedArea && (
+                      <button
+                        type="button"
+                        aria-label={`Clear ${selectedArea}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setAreaByCategory((prev) => {
+                            const next = { ...prev };
+                            delete next[cat.id];
+                            return next;
+                          });
+                          setExpandedCategory(null);
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" || e.key === " ") {
+                            e.stopPropagation();
+                          }
+                        }}
+                        className="ml-3 flex max-w-[70%] cursor-pointer items-center gap-1 rounded-full bg-champagne/15 py-0.5 pl-2.5 pr-1.5 text-[11px] font-semibold text-champagne-dark transition hover:bg-champagne/25 focus:outline-none focus:ring-2 focus:ring-champagne/30"
+                      >
+                        <span className="truncate">✓ {selectedArea}</span>
+                        <span aria-hidden className="ml-0.5 text-[13px] leading-none">×</span>
+                      </button>
                     )}
-                  </button>
+                  </div>
 
                   {isExpanded && (
-                    <div className="max-h-56 space-y-1.5 overflow-y-auto border-t border-[#e3ded5] bg-surface/50 px-4 py-3">
-                      {areas.length === 0 ? (
-                        <p className="text-xs text-slate-400">No areas listed.</p>
-                      ) : (
-                        areas.map((area) => (
-                          <label key={area} className="flex cursor-pointer items-center gap-3 rounded-lg px-2 py-1.5 text-sm text-slate-700 transition hover:bg-champagne/10">
-                            <input
-                              type="radio"
-                              name={`area-${cat.id}`}
-                              checked={selectedArea === area}
-                              onChange={() => setAreaByCategory((prev) => ({ ...prev, [cat.id]: area }))}
-                              className="accent-champagne-dark"
-                            />
-                            <span>{area}</span>
-                          </label>
-                        ))
-                      )}
+                    <div className="border-t border-[#e3ded5]">
+                      <div className="border-b border-[#e3ded5] bg-white px-4 py-3">
+                        <label className="sr-only" htmlFor={`area-filter-${cat.id}`}>
+                          Filter {cat.label} talent areas
+                        </label>
+                        <input
+                          id={`area-filter-${cat.id}`}
+                          type="text"
+                          placeholder="Type to filter..."
+                          value={areaFilter[cat.id] ?? ""}
+                          onChange={(e) => setAreaFilter((prev) => ({ ...prev, [cat.id]: e.target.value }))}
+                          className="w-full rounded-lg border border-[#e3ded5] bg-surface px-3 py-1.5 text-sm text-slate-700 placeholder:text-slate-400 focus:border-intellectual/40 focus:outline-none focus:ring-1 focus:ring-intellectual/10"
+                        />
+                      </div>
+                      <div className="max-h-56 space-y-1.5 overflow-y-auto bg-surface/50 px-4 py-3">
+                        {areas.length === 0 ? (
+                          <p className="text-xs text-slate-400">No areas listed.</p>
+                        ) : filteredAreas.length === 0 ? (
+                          <p className="text-xs text-slate-400">No matching areas.</p>
+                        ) : (
+                          filteredAreas.map((area) => (
+                            <label key={area} className="flex cursor-pointer items-center gap-3 rounded-lg px-2 py-1.5 text-sm text-slate-700 transition hover:bg-champagne/10">
+                              <input
+                                type="radio"
+                                name={`area-${cat.id}`}
+                                checked={selectedArea === area}
+                                onChange={() => setAreaByCategory((prev) => ({ ...prev, [cat.id]: area }))}
+                                className="accent-champagne-dark"
+                              />
+                              <span>{area}</span>
+                            </label>
+                          ))
+                        )}
+                      </div>
                     </div>
                   )}
                 </div>

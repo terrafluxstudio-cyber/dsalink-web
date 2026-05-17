@@ -211,3 +211,63 @@ Not affiliated with MOE. All information based on official MOE guidelines.
 Unsubscribe: reply to this email with "unsubscribe".`,
   );
 }
+
+export async function sendRecommendResultsEmail(
+  to: string,
+  alScore: number,
+  recommendedSchools: Array<{ name: string; tier: string }>,
+): Promise<boolean> {
+  const tierLabels: Record<string, string> = {
+    special: "Specialised Schools (DSA Only)",
+    safe: "Good matches - secured options",
+    reach: "Stretch schools - DSA is your main pathway",
+    dream: "Aspirational - talent is the key",
+  };
+
+  const grouped: Record<string, string[]> = {};
+  for (const school of recommendedSchools) {
+    if (!grouped[school.tier]) grouped[school.tier] = [];
+    grouped[school.tier].push(school.name);
+  }
+
+  const schoolLines = (["special", "safe", "reach", "dream"] as const)
+    .filter((tier) => grouped[tier]?.length)
+    .map(
+      (tier) =>
+        `${tierLabels[tier]}:\n${grouped[tier]
+          .map((name) => `  - ${name}`)
+          .join("\n")}`,
+    )
+    .join("\n\n");
+
+  return sendEmail(
+    to,
+    `Your DSA school recommendations (AL ${alScore})`,
+    `Hi there,
+
+Here are your personalised DSA school recommendations based on an estimated AL score of ${alScore}:
+
+${schoolLines}
+
+A few things to do next:
+
+1. Check open house dates
+Most schools hold trials and auditions before the June 2 application deadline.
+https://dsalink.sg/open-houses
+
+2. Read the DSA Parent Playbook
+Everything about the process - from choosing the right school to what happens after an offer.
+https://dsalink.sg/dsa-experience
+
+3. Prepare for DSA interviews and trials
+Schools shortlist students based on talent. Here's what selectors actually look for.
+https://dsalink.sg/dsa-interview
+
+We'll send you relevant follow-ups as the DSA calendar unfolds - open house reminders, deadline alerts, and what to expect at each stage.
+
+The DSALink Team
+
+Not affiliated with MOE. All information based on official MOE guidelines.
+Unsubscribe: reply to this email with "unsubscribe".`,
+  );
+}

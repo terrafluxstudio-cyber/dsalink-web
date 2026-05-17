@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { CheckCircle2, Mail } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
 export interface EmailCaptureProps {
@@ -23,23 +24,38 @@ export function EmailCapture({ onSubmit, onSkip }: EmailCaptureProps) {
 
   if (submitted) {
     return (
-      <section className="rounded-lg bg-slate-800 p-4 text-center">
-        <p className="text-base font-medium text-slate-100">We&apos;ll be in touch soon.</p>
+      <section className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+        <div className="flex items-start gap-3">
+          <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-intellectual" aria-hidden />
+          <div>
+            <p className="text-[0.9375rem] font-semibold text-slate-900">
+              Sent - check your inbox
+            </p>
+            <p className="mt-1 text-[0.8125rem] leading-relaxed text-slate-500">
+              Your school recommendations are on their way. We&apos;ll also send follow-ups
+              with open house dates, deadline reminders, and interview prep tips.
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
 
   return (
-    <section className="space-y-4 rounded-lg bg-slate-800 p-4">
-      <div className="space-y-2">
-        <h3 className="text-base font-semibold text-slate-100">
-          Want your free DSA Preparation Guide?
-        </h3>
-        <p className="text-sm text-slate-400">
-          We&apos;ll send you a guide covering: DSA school trials &amp; auditions, interview
-          tips, portfolio preparation, what happens after acceptance, and how to optimise S1
-          if DSA doesn&apos;t work out.
-        </p>
+    <section className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+      <div className="mb-4 flex items-start gap-3">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-intellectual/8 text-intellectual">
+          <Mail className="h-4 w-4" aria-hidden />
+        </span>
+        <div>
+          <h3 className="text-[0.9375rem] font-semibold text-slate-900">
+            Email me my results
+          </h3>
+          <p className="mt-0.5 text-[0.8125rem] leading-relaxed text-slate-500">
+            We&apos;ll send your school recommendations to your inbox. A free resource pack
+            on trials, interviews, and what to do next follows automatically.
+          </p>
+        </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-3">
@@ -49,23 +65,26 @@ export function EmailCapture({ onSubmit, onSkip }: EmailCaptureProps) {
           onChange={(event) => setEmail(event.target.value)}
           placeholder="your@email.com"
           required
-          className="w-full rounded-lg border border-slate-600 bg-slate-900 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="w-full rounded-xl border border-[#e3ded5] bg-surface px-4 py-3 text-[0.9375rem] text-slate-900 placeholder:text-slate-400 transition focus:border-intellectual/40 focus:outline-none focus:ring-2 focus:ring-intellectual/10"
         />
         <div className="flex flex-wrap gap-3">
           <button
             type="submit"
-            className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700"
+            className="rounded-xl bg-champagne px-5 py-2.5 text-sm font-semibold text-intellectual shadow-gold transition hover:bg-champagne-light"
           >
-            Send me the guide
+            Send my results
           </button>
           <button
             type="button"
             onClick={onSkip}
-            className="rounded-lg bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-600"
+            className="rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-sm font-medium text-slate-500 transition hover:border-slate-300 hover:text-slate-700"
           >
-            Skip for now
+            No thanks
           </button>
         </div>
+        <p className="text-[11px] text-slate-400">
+          No spam. Unsubscribe anytime. Not affiliated with MOE.
+        </p>
       </form>
     </section>
   );
