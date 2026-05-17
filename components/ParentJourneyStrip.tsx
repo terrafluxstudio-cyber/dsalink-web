@@ -1,43 +1,48 @@
+"use client";
+
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-
-const JOURNEY_STEPS = [
-  {
-    number: "1",
-    title: "Understand DSA",
-    description: "What it is and if it fits your child",
-    href: "/faq",
-    external: false,
-  },
-  {
-    number: "2",
-    title: "Find schools",
-    description: "1,300+ talent areas · 147 schools",
-    href: "/dsa-finder",
-    external: false,
-  },
-  {
-    number: "3",
-    title: "Visit open houses",
-    description: "Know what to ask before you go",
-    href: "/open-house-guide",
-    external: false,
-  },
-  {
-    number: "4",
-    title: "Apply by 2 Jun",
-    description: "Free · via MOE portal",
-    href: "https://www.moe.gov.sg/secondary/dsa",
-    external: true,
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function ParentJourneyStrip() {
+  const { t } = useLanguage();
+
+  const JOURNEY_STEPS = [
+    {
+      number: "1",
+      title: t.journeyStep1Title,
+      description: t.journeyStep1Desc,
+      href: "/faq",
+      external: false,
+    },
+    {
+      number: "2",
+      title: t.journeyStep2Title,
+      description: t.journeyStep2Desc,
+      href: "/dsa-finder",
+      external: false,
+    },
+    {
+      number: "3",
+      title: t.journeyStep3Title,
+      description: t.journeyStep3Desc,
+      href: "/open-house-guide",
+      external: false,
+    },
+    {
+      number: "4",
+      title: t.journeyStep4Title,
+      description: t.journeyStep4Desc,
+      href: "https://www.moe.gov.sg/secondary/dsa",
+      external: true,
+    },
+  ];
+
   return (
     <section className="border-t border-surface-warm bg-surface-subtle py-6 sm:py-8">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <p className="mb-5 text-[10px] font-bold tracking-[0.16em] text-slate-400">
-          Your DSA Journey
+          {t.journeyTitle}
         </p>
 
         {/* Desktop: horizontal connected timeline */}

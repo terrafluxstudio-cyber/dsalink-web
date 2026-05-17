@@ -3,6 +3,7 @@
 import type { RefObject } from "react";
 import Link from "next/link";
 import { Check, ExternalLink, X } from "lucide-react";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useInView } from "@/hooks/useInView";
 
@@ -11,37 +12,61 @@ const DSA_STEPS = [
     number: "1",
     title: "Apply",
     titleZh: "申请",
+    titleMs: "Mohon",
+    titleTa: "விண்ணப்பிக்கவும்",
     description:
       "Submit up to 3 school choices via the MOE DSA portal. Applications are free and open from 6 May 2026.",
     descriptionZh:
       "通过教育部 DSA 平台提交最多 3 个学校选择。申请免费，并从 2026 年 5 月 6 日开放。",
+    descriptionMs:
+      "Hantar sehingga 3 pilihan sekolah melalui portal MOE DSA. Permohonan percuma dan dibuka mulai 6 Mei 2026.",
+    descriptionTa:
+      "MOE DSA போர்டல் மூலம் 3 வரை பள்ளி தேர்வுகளை சமர்ப்பிக்கவும். விண்ணப்பங்கள் இலவசம், 6 மே 2026 முதல் திறக்கப்படும்.",
     href: "/dsa-guide",
     linkLabel: "How to apply →",
     linkLabelZh: "了解申请流程 →",
+    linkLabelMs: "Cara memohon →",
+    linkLabelTa: "விண்ணப்பிப்பது எப்படி →",
   },
   {
     number: "2",
     title: "Selected",
     titleZh: "入选",
+    titleMs: "Dipilih",
+    titleTa: "தேர்ந்தெடுக்கப்பட்டது",
     description:
       "Schools invite your child for a trial, audition, or interview based on their talent area.",
     descriptionZh:
       "学校会根据孩子的才艺领域，邀请他们参加选拔、试演或面试。",
+    descriptionMs:
+      "Sekolah akan menjemput anak anda untuk ujian, audisi, atau temuduga berdasarkan bidang bakat mereka.",
+    descriptionTa:
+      "பள்ளிகள் உங்கள் குழந்தையின் திறன் பகுதியின் அடிப்படையில் சோதனை, ஆடிஷன் அல்லது நேர்காணலுக்கு அழைக்கும்.",
     href: "/dsa-interview",
     linkLabel: "Interview tips →",
     linkLabelZh: "面试技巧 →",
+    linkLabelMs: "Tips temuduga →",
+    linkLabelTa: "நேர்காணல் குறிப்புகள் →",
   },
   {
     number: "3",
     title: "Confirmed",
     titleZh: "确认",
+    titleMs: "Disahkan",
+    titleTa: "உறுதிப்படுத்தப்பட்டது",
     description:
       "If offered a place, your child's school is secured before PSLE results are released.",
     descriptionZh:
       "如果获得录取名额，孩子会在 PSLE 成绩公布前确定中学去向。",
+    descriptionMs:
+      "Jika ditawarkan tempat, sekolah anak anda dijamin sebelum keputusan PSLE diumumkan.",
+    descriptionTa:
+      "இடம் வழங்கப்பட்டால், PSLE முடிவுகள் வெளியிடப்படுவதற்கு முன்பே உங்கள் குழந்தையின் பள்ளி உறுதிப்படுத்தப்படும்.",
     href: "/faq",
     linkLabel: "Common questions →",
     linkLabelZh: "常见问题 →",
+    linkLabelMs: "Soalan lazim →",
+    linkLabelTa: "பொதுவான கேள்விகள் →",
   },
 ];
 
@@ -49,51 +74,68 @@ const MISCONCEPTIONS = [
   {
     myth: "Only elite students from top primary schools apply.",
     mythZh: "只有名校小学生和顶尖学生才会申请。",
+    mythMs: "Hanya pelajar elit dari sekolah rendah ternama yang memohon.",
+    mythTa:
+      "சிறந்த தொடக்கப் பள்ளிகளிலிருந்து வரும் மிகச் சிறந்த மாணவர்கள் மட்டுமே விண்ணப்பிக்கிறார்கள்.",
     fact: "Any P6 student from any primary school can apply. School name doesn't matter. Talent does.",
     factZh: "任何小学的 P6 学生都可以申请。学校名气不重要，孩子的才能才重要。",
+    factMs:
+      "Mana-mana pelajar Darjah 6 dari mana-mana sekolah rendah boleh memohon. Nama sekolah tidak penting. Bakat anak yang diambil kira.",
+    factTa:
+      "எந்த தொடக்கப் பள்ளியிலிருந்தும் எந்த P6 மாணவரும் விண்ணப்பிக்கலாம். பள்ளியின் பெயர் முக்கியமல்ல. திறன்தான் முக்கியம்.",
   },
   {
     myth: "My child needs national champion results.",
     mythZh: "孩子必须是全国冠军才有机会。",
+    mythMs: "Anak saya mesti menjadi juara kebangsaan untuk berpeluang.",
+    mythTa: "வாய்ப்பு பெற என் குழந்தை தேசிய சாம்பியனாக இருக்க வேண்டும்.",
     fact: "Schools value consistent CCA participation and genuine interest. Trophies help but are not the only path.",
     factZh: "学校也重视长期参与 CCA 和真实兴趣。奖项有帮助，但不是唯一途径。",
+    factMs:
+      "Sekolah menghargai penyertaan CCA yang konsisten dan minat yang sebenar. Piala membantu, tetapi bukan satu-satunya laluan.",
+    factTa:
+      "பள்ளிகள் தொடர்ந்து CCA-வில் பங்கேற்பதையும் உண்மையான ஆர்வத்தையும் மதிக்கின்றன. கோப்பைகள் உதவும், ஆனால் அது ஒரே வழி அல்ல.",
   },
   {
     myth: "It's complicated and costs money.",
     mythZh: "申请很复杂，而且需要花钱。",
+    mythMs: "Prosesnya rumit dan memerlukan bayaran.",
+    mythTa: "இது சிக்கலானது, பணமும் செலவாகும்.",
     fact: "The MOE application is completely free. No agent needed. DSALink is also free.",
     factZh: "教育部申请完全免费，不需要中介。DSALink 也免费使用。",
+    factMs:
+      "Permohonan MOE adalah percuma sepenuhnya. Tiada ejen diperlukan. DSALink juga percuma.",
+    factTa:
+      "MOE விண்ணப்பம் முற்றிலும் இலவசம். முகவர் தேவையில்லை. DSALink-உம் இலவசம்.",
   },
 ];
 
 export function DsaExplainerSection() {
-  const { locale } = useLanguage();
+  const { locale, t } = useLanguage();
   const { ref: cardsRef, inView: cardsInView } = useInView();
 
   return (
     <section className="border-t border-surface-warm bg-white py-8 sm:py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="mb-6 max-w-3xl">
-          <p className="mb-2 text-[10px] font-bold tracking-[0.15em] text-champagne-dark">
-            {locale === "zh" ? "直接收生 · DSA 2026" : "Direct School Admission · DSA 2026"}
-          </p>
-          <h2 className="font-display text-[1.625rem] font-extrabold leading-tight text-slate-900 sm:text-[2rem]">
-            {locale === "zh"
-              ? "PSLE 放榜前，孩子的才能就能锁定学校"
-              : "Before PSLE results day, the right school can already say yes."}
-          </h2>
-          <p className="mt-4 text-[0.9375rem] leading-relaxed text-slate-500">
-            {locale === "zh"
-              ? "DSA 是教育部的免费计划，让小六学生能凭兴趣、能力和潜能申请中学，不只看 PSLE 成绩。"
-              : "DSA is a free MOE programme that lets P6 students apply to secondary schools based on their interests, aptitude, and potential, not just PSLE results."}
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="mb-6 max-w-3xl">
+            <p className="mb-2 text-[10px] font-bold tracking-[0.15em] text-champagne-dark">
+              {t.dsaExplainerKicker}
+            </p>
+            <h2 className="font-display text-[1.625rem] font-extrabold leading-tight text-slate-900 sm:text-[2rem]">
+              {t.dsaExplainerH2}
+            </h2>
+            <p className="mt-4 text-[0.9375rem] leading-relaxed text-slate-500">
+              {t.dsaExplainerIntro}
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="mb-6">
           {/* ── Pathway diagram ──────────────────────────── */}
           <div className="mb-5 overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-br from-slate-50 to-white p-4 sm:p-5">
-            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-slate-400 uppercase">
-              {locale === "zh" ? "中学升学：两条路径" : "Two pathways to secondary school"}
+            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-slate-400">
+              {t.dsaExplainerPathwaysTitle}
             </p>
             <div className="overflow-x-auto">
               <svg
@@ -105,10 +147,10 @@ export function DsaExplainerSection() {
                 {/* ── P6 start node ── */}
                 <rect x="2" y="44" width="104" height="36" rx="8" fill="#1e3a5f" />
                 <text x="54" y="58" textAnchor="middle" fill="white" fontSize="10" fontWeight="700" fontFamily="system-ui, sans-serif">
-                  {locale === "zh" ? "P6 学生" : "P6 Student"}
+                  {t.dsaExplainerSvgP6Label}
                 </text>
                 <text x="54" y="72" textAnchor="middle" fill="rgba(255,255,255,0.55)" fontSize="7.5" fontFamily="system-ui, sans-serif">
-                  {locale === "zh" ? "任何小学均可" : "Any primary school"}
+                  {t.dsaExplainerSvgAnyPrimary}
                 </text>
 
                 {/* ── Stem ── */}
@@ -126,19 +168,19 @@ export function DsaExplainerSection() {
                 {/* ── PSLE card ── */}
                 <rect x="198" y="12" width="138" height="36" rx="8" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="1.5" />
                 <text x="267" y="27" textAnchor="middle" fill="#64748b" fontSize="9.5" fontWeight="700" fontFamily="system-ui, sans-serif">
-                  {locale === "zh" ? "PSLE 统一分配" : "PSLE Posting"}
+                  {t.dsaExplainerSvgPslePosting}
                 </text>
                 <text x="267" y="41" textAnchor="middle" fill="#94a3b8" fontSize="8" fontFamily="system-ui, sans-serif">
-                  {locale === "zh" ? "分数决定学校 · 11月放榜" : "Score → school · November"}
+                  {t.dsaExplainerSvgPsleScore}
                 </text>
 
                 {/* ── DSA card ── */}
                 <rect x="198" y="76" width="138" height="36" rx="8" fill="#fef9ec" stroke="#c6a24a" strokeWidth="1.5" />
                 <text x="267" y="91" textAnchor="middle" fill="#92701a" fontSize="9.5" fontWeight="700" fontFamily="system-ui, sans-serif">
-                  {locale === "zh" ? "DSA 直通通道" : "DSA Pathway"}
+                  {t.dsaExplainerSvgDsaPathway}
                 </text>
                 <text x="267" y="105" textAnchor="middle" fill="#a07820" fontSize="8" fontFamily="system-ui, sans-serif">
-                  {locale === "zh" ? "才能决定学校 · PSLE前锁定" : "Talent → school · Before PSLE"}
+                  {t.dsaExplainerSvgDsaTalent}
                 </text>
 
                 {/* ── Arrows to outcomes ── */}
@@ -150,19 +192,19 @@ export function DsaExplainerSection() {
                 {/* ── Outcome: PSLE ── */}
                 <rect x="366" y="12" width="188" height="36" rx="8" fill="#f1f5f9" stroke="#cbd5e1" strokeWidth="1" />
                 <text x="460" y="27" textAnchor="middle" fill="#475569" fontSize="8.5" fontWeight="600" fontFamily="system-ui, sans-serif">
-                  {locale === "zh" ? "与全体考生竞争分数" : "Compete with all P6 students"}
+                  {t.dsaExplainerSvgPsleCompete}
                 </text>
                 <text x="460" y="41" textAnchor="middle" fill="#94a3b8" fontSize="7.5" fontFamily="system-ui, sans-serif">
-                  {locale === "zh" ? "结果：2026年11月" : "Results day: November 2026"}
+                  {t.dsaExplainerSvgPsleResult}
                 </text>
 
                 {/* ── Outcome: DSA ── */}
                 <rect x="366" y="76" width="188" height="36" rx="8" fill="#fef9ec" stroke="#c6a24a" strokeWidth="1.5" />
                 <text x="460" y="91" textAnchor="middle" fill="#92701a" fontSize="8.5" fontWeight="700" fontFamily="system-ui, sans-serif">
-                  {locale === "zh" ? "PSLE前已锁定学校" : "School secured before PSLE"}
+                  {t.dsaExplainerSvgDsaSecured}
                 </text>
                 <text x="460" y="105" textAnchor="middle" fill="#a07820" fontSize="7.5" fontFamily="system-ui, sans-serif">
-                  {locale === "zh" ? "才能 · 作品集 · 面试" : "Talent · Portfolio · Interview"}
+                  {t.dsaExplainerSvgDsaHow}
                 </text>
               </svg>
             </div>
@@ -184,24 +226,22 @@ export function DsaExplainerSection() {
                   {step.number}
                 </p>
                 <h3 className="mb-2 font-display text-[1rem] font-semibold text-slate-900">
-                  {locale === "zh" ? step.titleZh : step.title}
+                  {locale === "zh" ? step.titleZh : locale === "ms" ? step.titleMs : locale === "ta" ? step.titleTa : step.title}
                 </h3>
                 <p className="text-[0.875rem] leading-relaxed text-slate-600">
-                  {locale === "zh" ? step.descriptionZh : step.description}
+                  {locale === "zh" ? step.descriptionZh : locale === "ms" ? step.descriptionMs : locale === "ta" ? step.descriptionTa : step.description}
                 </p>
                 <Link
                   href={step.href}
                   className="mt-3 inline-block text-[0.8125rem] font-semibold text-intellectual transition hover:text-intellectual-light"
                 >
-                  {locale === "zh" ? step.linkLabelZh : step.linkLabel}
+                  {locale === "zh" ? step.linkLabelZh : locale === "ms" ? step.linkLabelMs : locale === "ta" ? step.linkLabelTa : step.linkLabel}
                 </Link>
               </div>
             ))}
           </div>
           <p className="mt-4 text-[0.8125rem] leading-relaxed text-slate-500">
-            {locale === "zh"
-              ? "DSA 不会取代 PSLE。孩子仍需参加考试，并达到学校的最低分配组别要求。资料来源：MOE ("
-              : "*DSA does not replace PSLE. Your child still sits the exam and must meet the school's minimum posting group score. Source: MOE ("}
+            {t.dsaExplainerFootnote}
             <Link
               href="https://www.moe.gov.sg/secondary/dsa"
               target="_blank"
@@ -222,7 +262,7 @@ export function DsaExplainerSection() {
 
         <div className="mb-6">
           <p className="mb-4 text-[10px] font-bold tracking-[0.15em] text-slate-400">
-            {locale === "zh" ? "常见误解" : "Common misconceptions"}
+            {t.dsaExplainerMisconceptionsLabel}
           </p>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
             {MISCONCEPTIONS.map((item) => (
@@ -233,19 +273,19 @@ export function DsaExplainerSection() {
                 <div className="mb-4 rounded-lg border border-red-200 bg-red-50 p-3">
                   <p className="mb-1 flex items-center gap-1.5 text-[10px] font-bold tracking-wide text-red-600">
                     <X className="h-3.5 w-3.5" aria-hidden />
-                    {locale === "zh" ? "误解" : "Myth"}
+                    {t.dsaExplainerMythLabel}
                   </p>
                   <p className="text-[0.8125rem] leading-snug text-slate-700">
-                    {locale === "zh" ? item.mythZh : item.myth}
+                    {locale === "zh" ? item.mythZh : locale === "ms" ? item.mythMs : locale === "ta" ? item.mythTa : item.myth}
                   </p>
                 </div>
                 <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-3">
                   <p className="mb-1 flex items-center gap-1.5 text-[10px] font-bold tracking-wide text-emerald-700">
                     <Check className="h-3.5 w-3.5" aria-hidden />
-                    {locale === "zh" ? "事实" : "Fact"}
+                    {t.dsaExplainerFactLabel}
                   </p>
                   <p className="text-[0.8125rem] leading-snug text-slate-700">
-                    {locale === "zh" ? item.factZh : item.fact}
+                    {locale === "zh" ? item.factZh : locale === "ms" ? item.factMs : locale === "ta" ? item.factTa : item.fact}
                   </p>
                 </div>
               </div>
@@ -258,12 +298,10 @@ export function DsaExplainerSection() {
             href="/dsa-finder"
             className="inline-flex items-center justify-center rounded-xl bg-champagne px-6 py-3 text-[0.9375rem] font-semibold text-intellectual shadow-soft transition hover:bg-champagne-dark hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne-dark"
           >
-            {locale === "zh" ? "搜索才能领域" : "Search talent areas"}
+            {t.dsaExplainerSearchCta}
           </Link>
           <p className="mt-3 text-[0.8125rem] text-slate-500">
-            {locale === "zh"
-              ? "由 DSALink 提供，免费、独立，与教育部无隶属关系"
-              : "Powered by DSALink, free, independent, not affiliated with MOE"}
+            {t.dsaExplainerPoweredBy}
           </p>
         </div>
       </div>

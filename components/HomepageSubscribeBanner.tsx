@@ -89,7 +89,7 @@ export function HomepageSubscribeBanner() {
                   </button>
                 </form>
                 {status === "error" && (
-                  <p className="mt-2 text-xs text-red-400">Something went wrong. Please try again.</p>
+                  <p className="mt-2 text-xs text-red-400">{t.subscribeError}</p>
                 )}
                 <p className="mt-3 text-center text-[11px] text-white/30">{t.subscribeDisclaimer}</p>
               </div>

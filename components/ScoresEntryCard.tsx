@@ -9,7 +9,7 @@ export function ScoresEntryCard() {
 
   return (
     <section
-      className="mt-4 w-full max-w-xl"
+      className="w-full"
       aria-labelledby="scores-entry-heading"
     >
       <div className="rounded-xl border border-surface-warm bg-white p-4 shadow-card sm:p-5">

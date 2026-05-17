@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { FaqContent } from "@/components/FaqContent";
+import { FaqPageHeader } from "@/components/FaqPageHeader";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { PageHeader } from "@/components/PageHeader";
 import { buildFaqStructuredData } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -46,12 +46,7 @@ export default function FaqPage() {
       />
       <SiteHeader />
       <main>
-        <PageHeader
-          crumbLabel="DSA FAQ"
-          kicker="DSA-Sec 2026 · Singapore"
-          title="Frequently Asked Questions"
-          subtitle="Accurate, up-to-date answers to the most common questions Singapore parents have about DSA-Sec 2026 — eligibility, dates, commitment rules, talent areas, PSLE COP, IP, SAP, ALP and LLP."
-        />
+        <FaqPageHeader />
 
         <FaqContent />
       </main>

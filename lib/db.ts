@@ -16,6 +16,11 @@ export interface RecommendRecord {
   region?: string;
   town?: string;
   email?: string;
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  email2_sent?: boolean;
+  email3_sent?: boolean;
 }
 
 export async function saveRecommendRecord(record: RecommendRecord): Promise<void> {

@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import {
-  DSA_EXPERIENCE_CHECKLIST,
-  DSA_EXPERIENCE_SECTIONS,
-  DSA_EXPERIENCE_TIMELINE,
-  DSA_EXPERIENCE_TOC,
+  getDsaExperienceChecklist,
+  getDsaExperienceSections,
+  getDsaExperienceTimeline,
+  getDsaExperienceToc,
+  type DsaExperienceCallout,
 } from "@/content/dsa-experience";
+import { AlertCircle, Lightbulb } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { PageHeader } from "@/components/PageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -14,6 +16,10 @@ import { SiteHeader } from "@/components/SiteHeader";
 
 export function DsaExperiencePageBody() {
   const { t, locale } = useLanguage();
+  const sections = getDsaExperienceSections(locale);
+  const timeline = getDsaExperienceTimeline(locale);
+  const checklist = getDsaExperienceChecklist(locale);
+  const toc = getDsaExperienceToc(locale);
 
   return (
     <>
@@ -26,14 +32,6 @@ export function DsaExperiencePageBody() {
           subtitle={t.dsaExpPageSubtitle}
         />
 
-        {locale !== "en" && t.dsaExpLangNotice && (
-          <div className="border-b border-amber-200 bg-amber-50 px-4 py-3">
-            <p className="mx-auto max-w-6xl text-center text-sm text-amber-800">
-              {t.dsaExpLangNotice}
-            </p>
-          </div>
-        )}
-
         <div className="bg-surface">
           <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
             <div className="lg:grid lg:grid-cols-[minmax(0,11rem)_minmax(0,1fr)] lg:gap-12 xl:grid-cols-[minmax(0,13rem)_minmax(0,1fr)]">
@@ -42,10 +40,10 @@ export function DsaExperiencePageBody() {
                 className="mb-10 lg:sticky lg:top-24 lg:mb-0 lg:self-start"
               >
                 <p className="mb-3 text-xs font-semibold tracking-wide text-slate-500">
-                  On this page
+                  {t.dsaExpTocLabel}
                 </p>
                 <ol className="space-y-2 border-l border-slate-200 pl-4">
-                  {DSA_EXPERIENCE_TOC.map(({ href, label, shortTitle }) => (
+                  {toc.map(({ href, label, shortTitle }) => (
                     <li key={href}>
                       <a
                         href={href}
@@ -64,7 +62,7 @@ export function DsaExperiencePageBody() {
               </nav>
 
               <article className="mx-auto w-full max-w-3xl min-w-0">
-                {DSA_EXPERIENCE_SECTIONS.map((section, index) => (
+                {sections.map((section, index) => (
                   <section
                     key={section.id}
                     id={section.id}
@@ -88,6 +86,51 @@ export function DsaExperiencePageBody() {
                         <p key={p.slice(0, 48)}>{p}</p>
                       ))}
 
+                      {section.callouts?.map((callout: DsaExperienceCallout, i: number) => (
+                        <div
+                          key={i}
+                          className={`flex gap-3 rounded-r-xl border-l-4 p-4 ${
+                            callout.type === "warning"
+                              ? "border-red-400 bg-red-50"
+                              : "border-champagne bg-champagne-subtle"
+                          }`}
+                        >
+                          <div className="mt-0.5 shrink-0">
+                            {callout.type === "warning" ? (
+                              <AlertCircle
+                                className="h-4 w-4 text-red-500"
+                                aria-hidden
+                              />
+                            ) : (
+                              <Lightbulb
+                                className="h-4 w-4 text-champagne-dark"
+                                aria-hidden
+                              />
+                            )}
+                          </div>
+                          <div>
+                            <p
+                              className={`text-sm font-semibold ${
+                                callout.type === "warning"
+                                  ? "text-red-700"
+                                  : "text-intellectual"
+                              }`}
+                            >
+                              {callout.heading}
+                            </p>
+                            <p
+                              className={`mt-1 text-sm leading-relaxed ${
+                                callout.type === "warning"
+                                  ? "text-red-900/75"
+                                  : "text-slate-600"
+                              }`}
+                            >
+                              {callout.body}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+
                       {section.id === "section-6" ? (
                         <div className="overflow-x-auto rounded-xl border border-[#e3ded5] bg-white shadow-card">
                           <table className="w-full min-w-[28rem] text-left text-sm">
@@ -108,7 +151,7 @@ export function DsaExperiencePageBody() {
                               </tr>
                             </thead>
                             <tbody>
-                              {DSA_EXPERIENCE_TIMELINE.map((row) => (
+                              {timeline.map((row) => (
                                 <tr
                                   key={row.date}
                                   className="border-b border-slate-100 last:border-0"
@@ -144,7 +187,7 @@ export function DsaExperiencePageBody() {
 
                       {section.id === "section-8" ? (
                         <ul className="mt-2 space-y-3 rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
-                          {DSA_EXPERIENCE_CHECKLIST.map((item) => (
+                          {checklist.map((item) => (
                             <li key={item} className="flex gap-3">
                               <input
                                 type="checkbox"
@@ -164,17 +207,16 @@ export function DsaExperiencePageBody() {
 
                 <div className="mt-14 rounded-2xl border border-intellectual/15 bg-gradient-to-br from-intellectual to-intellectual-dark p-6 text-white shadow-soft sm:p-8">
                   <p className="font-display text-lg font-semibold sm:text-xl">
-                    Ready to find the right school?
+                    {t.dsaExpBodyCtaTitle}
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-white/75 sm:text-base">
-                    Use our School Recommender to shortlist Safe, Reach, and Dream
-                    options based on your child&apos;s talent tier and PSLE projection.
+                    {t.dsaExpBodyCtaDesc}
                   </p>
                   <Link
                     href="/recommend"
                     className="mt-5 inline-flex items-center gap-2 rounded-lg bg-champagne px-5 py-2.5 text-sm font-semibold text-intellectual-dark transition hover:bg-champagne-light"
                   >
-                    Try our School Recommender
+                    {t.dsaExpBodyCtaBtn}
                     <span aria-hidden>→</span>
                   </Link>
                 </div>

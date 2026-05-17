@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { Clock } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const DEADLINE = new Date("2026-06-02T08:30:00Z"); // 4:30pm SGT = 08:30 UTC
+const DEADLINE = new Date("2026-06-02T08:30:00Z");
 
 function getDaysLeft(): number {
   const now = new Date();
@@ -12,6 +13,7 @@ function getDaysLeft(): number {
 }
 
 export function DeadlineCard() {
+  const { t } = useLanguage();
   const [days, setDays] = useState<number | null>(null);
 
   useEffect(() => {
@@ -25,25 +27,58 @@ export function DeadlineCard() {
       href="https://www.moe.gov.sg/secondary/dsa"
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-3 rounded-2xl border border-[#e3ded5] bg-white px-4 py-3.5 shadow-card transition hover:border-[#d4cec4] hover:shadow-card-hover"
+      className={`group block rounded-2xl border bg-white px-4 py-4 shadow-card transition hover:shadow-card-hover ${
+        urgent
+          ? "border-red-200 hover:border-red-300"
+          : "border-[#e3ded5] hover:border-[#d4cec4]"
+      }`}
     >
-      <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${urgent ? "bg-red-50 text-red-500" : "bg-amber-50 text-amber-500"}`}>
-        <Clock className="h-4 w-4" aria-hidden />
-      </span>
-      <div className="min-w-0 flex-1">
-        <p className={`text-[10px] font-bold tracking-wide normal-case ${urgent ? "text-red-500" : "text-amber-600"}`}>
-          {urgent ? "CLOSING SOON" : "KEY DEADLINE"}
-        </p>
-        <p className="truncate text-sm font-semibold text-slate-800">
-          DSA closes 2 Jun 2026, 4:30pm SGT
-        </p>
-        {days !== null && (
-          <p className="text-xs text-slate-400">
-            {days === 0 ? "Closes today" : `${days} day${days === 1 ? "" : "s"} left`}
+      <div className="flex items-center gap-4">
+        {/* 大号倒计时数字 */}
+        <div
+          className={`flex shrink-0 flex-col items-center justify-center rounded-xl px-4 py-3 text-center ${
+            urgent ? "bg-red-50" : "bg-amber-50"
+          }`}
+        >
+          <span
+            className={`tabular-nums font-display text-[2rem] font-extrabold leading-none ${
+              urgent ? "text-red-500" : "text-amber-500"
+            }`}
+          >
+            {days !== null ? days : "—"}
+          </span>
+          <span
+            className={`mt-0.5 text-[10px] font-bold tracking-wide normal-case ${
+              urgent ? "text-red-400" : "text-amber-400"
+            }`}
+          >
+            {t.deadlineDaysLeftSuffix}
+          </span>
+        </div>
+
+        {/* 标签 + 日期 */}
+        <div className="min-w-0 flex-1">
+          <p
+            className={`text-[10px] font-bold tracking-[0.14em] normal-case ${
+              urgent ? "text-red-500" : "text-amber-600"
+            }`}
+          >
+            {urgent ? t.deadlineUrgentLabel : t.deadlineLabel}
           </p>
-        )}
+          <p className="mt-0.5 text-sm font-semibold text-slate-800">
+            {t.deadlineDate}
+          </p>
+          {days === 0 && (
+            <p className="mt-0.5 text-xs font-semibold text-red-500">
+              {t.deadlineClosesToday}
+            </p>
+          )}
+        </div>
+
+        <span className="shrink-0 text-sm text-slate-400 transition group-hover:translate-x-0.5">
+          →
+        </span>
       </div>
-      <span className="shrink-0 text-xs text-slate-400 transition group-hover:translate-x-0.5">→</span>
     </a>
   );
 }

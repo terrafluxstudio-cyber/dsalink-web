@@ -18,7 +18,7 @@ export function HeroSearchBox() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-xl">
+    <form onSubmit={handleSubmit} className="w-full">
       <label className="relative block">
         <span className="sr-only">{placeholder}</span>
         <Search

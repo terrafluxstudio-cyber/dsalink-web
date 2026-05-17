@@ -12,7 +12,7 @@ export function HeroSection({ children }: { children?: ReactNode }) {
   return (
     <section className="relative overflow-hidden bg-hero-mesh">
       <div className="relative mx-auto max-w-6xl px-4 pb-12 pt-8 sm:px-6 sm:pb-14 sm:pt-10">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_420px] lg:items-start lg:gap-14">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_420px] lg:items-center lg:gap-14">
 
           {/* ── Left column ── */}
           <div className="flex flex-col">
@@ -38,11 +38,6 @@ export function HeroSection({ children }: { children?: ReactNode }) {
             <div className="mt-5">
               <HomeCtaBlock />
             </div>
-
-            {/* Search box */}
-            <div className="mt-5">
-              <HeroSearchBox />
-            </div>
           </div>
 
           {/* ── Right column: dynamic cards only ── */}
@@ -50,6 +45,11 @@ export function HeroSection({ children }: { children?: ReactNode }) {
             {children}
           </div>
 
+        </div>
+
+        {/* ── Full-width search bar below both columns ── */}
+        <div className="mt-6 sm:mt-8">
+          <HeroSearchBox />
         </div>
       </div>
     </section>

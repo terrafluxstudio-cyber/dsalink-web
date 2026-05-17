@@ -13,6 +13,7 @@ import {
   TrendingDown,
   Trophy,
 } from "lucide-react";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useInView } from "@/hooks/useInView";
 import type { Copy } from "@/lib/i18n";
@@ -213,7 +214,7 @@ export function DsaStrategySection() {
             href="/dsa-finder"
             className="mt-2 shrink-0 text-[0.8125rem] font-semibold text-intellectual transition hover:text-intellectual-light sm:mt-0"
           >
-            Not sure? Try the School Finder →
+            {t.dsaStrategyNotSureCta}
           </Link>
         </div>
 
@@ -224,45 +225,50 @@ export function DsaStrategySection() {
           {PERSONA_KEYS.map((keys, index) => {
             const { Icon, iconBg, accent, tagAccent } = PERSONA_STYLES[index];
             return (
-              <div
+              <ScrollReveal
                 key={keys.titleKey}
-                className={`flex flex-col rounded-xl border p-4 shadow-card transition-all duration-200 hover:shadow-card-hover hover:-translate-y-0.5 ${accent} ${
-                  personaInView
-                    ? `animate-fade-up ${
-                        index === 1 ? 'animate-fade-up-delay-1' :
-                        index === 2 ? 'animate-fade-up-delay-2' :
-                        index === 3 ? 'animate-fade-up-delay-3' : ''
-                      }`
-                    : 'opacity-0'
-                }`}
+                delay={index * 100}
+                className="h-full"
               >
-                <div className={`mb-3 flex h-9 w-9 items-center justify-center rounded-lg ${iconBg}`}>
-                  <Icon className="h-[18px] w-[18px]" aria-hidden />
+                <div
+                  className={`flex h-full flex-col rounded-xl border p-4 shadow-card transition-all duration-200 hover:shadow-card-hover hover:-translate-y-0.5 ${accent} ${
+                    personaInView
+                      ? `animate-fade-up ${
+                          index === 1 ? 'animate-fade-up-delay-1' :
+                          index === 2 ? 'animate-fade-up-delay-2' :
+                          index === 3 ? 'animate-fade-up-delay-3' : ''
+                        }`
+                      : 'opacity-0'
+                  }`}
+                >
+                  <div className={`mb-3 flex h-9 w-9 items-center justify-center rounded-lg ${iconBg}`}>
+                    <Icon className="h-[18px] w-[18px]" aria-hidden />
+                  </div>
+                  <span className={`mb-2 self-start rounded-full px-2.5 py-1 text-[11px] font-semibold ${tagAccent}`}>
+                    {t[keys.tagKey]}
+                  </span>
+                  <h4 className="mb-3 font-display text-base font-semibold text-slate-900">
+                    {t[keys.titleKey]}
+                  </h4>
+                  <p className="mb-3 text-sm leading-relaxed text-slate-600">{t[keys.whoKey]}</p>
+                  <div className="mt-auto space-y-2">
+                    <p className="rounded-lg bg-white/70 px-3 py-2 text-sm leading-relaxed text-slate-700">
+                      <span className="font-semibold text-slate-900">{t.dsaStrategyGoalLabel}</span>{" "}
+                      {t[keys.goalKey]}
+                    </p>
+                    <p className="rounded-lg bg-white/70 px-3 py-2 text-sm leading-relaxed text-slate-600">
+                      <span className="font-semibold text-slate-900">{t.dsaStrategyTipLabel}</span>{" "}
+                      {t[keys.tipKey]}
+                    </p>
+                    <Link
+                      href={keys.href}
+                      className="mt-2 block rounded-lg border border-intellectual/20 bg-white px-4 py-2.5 text-center text-sm font-semibold text-intellectual transition hover:bg-intellectual hover:text-white"
+                    >
+                      {t[keys.ctaKey]}
+                    </Link>
+                  </div>
                 </div>
-                <span className={`mb-2 self-start rounded-full px-2.5 py-1 text-[11px] font-semibold ${tagAccent}`}>
-                  {t[keys.tagKey]}
-                </span>
-                <h4 className="mb-3 font-display text-base font-semibold text-slate-900">
-                  {t[keys.titleKey]}
-                </h4>
-                <p className="mb-3 text-sm leading-relaxed text-slate-600">{t[keys.whoKey]}</p>
-                <div className="mt-auto space-y-2">
-                  <p className="rounded-lg bg-white/70 px-3 py-2 text-sm leading-relaxed text-slate-700">
-                    <span className="font-semibold text-slate-900">{t.dsaStrategyGoalLabel}</span>{" "}
-                    {t[keys.goalKey]}
-                  </p>
-                  <p className="rounded-lg bg-white/70 px-3 py-2 text-sm leading-relaxed text-slate-600">
-                    <span className="font-semibold text-slate-900">{t.dsaStrategyTipLabel}</span>{" "}
-                    {t[keys.tipKey]}
-                  </p>
-                  <Link
-                    href={keys.href}
-                    className="mt-2 block rounded-lg border border-intellectual/20 bg-white px-4 py-2.5 text-center text-sm font-semibold text-intellectual transition hover:bg-intellectual hover:text-white"
-                  >
-                    {t[keys.ctaKey]}
-                  </Link>
-                </div>
-              </div>
+              </ScrollReveal>
             );
           })}
         </div>

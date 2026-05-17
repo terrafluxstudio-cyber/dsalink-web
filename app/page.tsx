@@ -78,9 +78,9 @@ export default function HomePage() {
       <SiteHeader />
       <main>
         <HeroSection>
+          <DeadlineCard />
           <OpenHousePreview />
           <ScoresEntryCard />
-          <DeadlineCard />
         </HeroSection>
         <ParentJourneyStrip />
         <StatsStrip />
@@ -88,8 +88,8 @@ export default function HomePage() {
         <DsaStrategySection />
         <HomepageSubscribeBanner />
         <OpenHouseFieldGuide />
-        <SeoTextBlock />
         <DsaExperienceCallout />
+        <SeoTextBlock />
         <ResourceCards />
       </main>
       <SiteFooter />

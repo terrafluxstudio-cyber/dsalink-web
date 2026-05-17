@@ -1,4 +1,7 @@
+"use client";
+
 import Script from "next/script";
+import { flushEventQueue } from "@/lib/analytics";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID?.trim();
 
@@ -29,6 +32,7 @@ export function GoogleAnalytics() {
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
         strategy="lazyOnload"
+        onLoad={flushEventQueue}
       />
     </>
   );

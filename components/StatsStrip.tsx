@@ -2,14 +2,9 @@
 
 import type { RefObject } from "react";
 import { useEffect, useState } from "react";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { useInView } from "@/hooks/useInView";
-
-const STATS = [
-  { end: 147,  suffix: "",     label: "Secondary schools covered"       },
-  { end: 1300, suffix: "+",    label: "DSA talent areas mapped"         },
-  { end: 2,    suffix: " min", label: "To get your personalised match"  },
-  { end: 100,  suffix: "%",    label: "Free for all P6 families"        },
-] as const;
+import { useLanguage } from "@/contexts/LanguageContext";
 
 function useCounter(end: number, active: boolean, duration = 1200) {
   const [val, setVal] = useState(0);
@@ -52,6 +47,14 @@ function StatItem({
 
 export function StatsStrip() {
   const { ref, inView } = useInView();
+  const { t } = useLanguage();
+
+  const STATS = [
+    { end: 147, suffix: "", label: t.statsLabel1 },
+    { end: 1300, suffix: "+", label: t.statsLabel2 },
+    { end: 2, suffix: " min", label: t.statsLabel3 },
+    { end: 100, suffix: "%", label: t.statsLabel4 },
+  ] as const;
 
   return (
     <section
@@ -60,8 +63,10 @@ export function StatsStrip() {
       aria-label="DSALink by the numbers"
     >
       <div className="mx-auto grid max-w-4xl grid-cols-2 gap-8 px-4 sm:grid-cols-4 sm:gap-6 sm:px-6">
-        {STATS.map((s) => (
-          <StatItem key={s.label} {...s} active={inView} />
+        {STATS.map((s, index) => (
+          <ScrollReveal key={s.label} delay={index * 80}>
+            <StatItem {...s} active={inView} />
+          </ScrollReveal>
         ))}
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { saveRecommendRecord } from "@/lib/db";
-import { addContactToBrevo } from "@/lib/brevo";
+import { sendWelcomeEmail } from "@/lib/resend";
 import { nanoid } from "nanoid";
 
 export async function POST(req: NextRequest) {
@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
   await saveRecommendRecord(record);
 
   if (record.email) {
-    await addContactToBrevo(record.email);
+    await sendWelcomeEmail(record.email);
   }
 
   return NextResponse.json({ ok: true });

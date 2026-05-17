@@ -64,9 +64,9 @@ export function HomeCtaBlock() {
         <div className="relative z-10 px-6 py-7 sm:px-8 sm:py-8">
 
           {/* Eyebrow badge */}
-          <p className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-champagne/30 bg-champagne/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-champagne">
+          <p className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-champagne/30 bg-champagne/10 px-3 py-1 text-[11px] font-bold tracking-[0.12em] text-champagne">
             <Sparkles className="h-3 w-3 shrink-0" aria-hidden />
-            Free personalised tool
+            {t.ctaFreePersonalisedTool}
           </p>
 
           {/* Headline */}
@@ -108,10 +108,10 @@ export function HomeCtaBlock() {
           <div className="mt-5 flex items-center gap-4 border-t border-white/10 pt-4">
             {(
               [
-                { value: "2 min", label: "to complete" },
-                { value: "Free", label: "always" },
-                { value: "Personalised", label: "to your child" },
-              ] as const
+                { value: "2 min", label: t.ctaTrustTimeLabel },
+                { value: "Free", label: t.ctaTrustFreeLabel },
+                { value: t.ctaTrustPersonalVal, label: t.ctaTrustPersonalLabel },
+              ]
             ).map((stat, i) => (
               <div
                 key={stat.label}

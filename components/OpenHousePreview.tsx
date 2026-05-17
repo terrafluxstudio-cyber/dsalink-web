@@ -48,7 +48,7 @@ export function OpenHousePreview() {
 
   return (
     <section
-      className="mt-10 w-full max-w-xl"
+      className="w-full"
       aria-labelledby="open-house-preview-heading"
     >
       <div className="rounded-xl border border-surface-warm bg-white p-4 shadow-card sm:p-5">

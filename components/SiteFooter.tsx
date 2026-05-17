@@ -101,7 +101,7 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
             ariaLabel={t.legalDisclaimerAriaLabel}
           />
           <p className="mt-1 text-[11px] text-slate-400">
-            DSALink covers DSA-Sec (P6 → Secondary 1) only. DSA-JC is a separate process not covered here.
+            {t.footerScopeNote}
           </p>
         </div>
 
