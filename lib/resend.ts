@@ -68,6 +68,61 @@ Unsubscribe: reply to this email with "unsubscribe".`,
   );
 }
 
+export async function sendPlaybookWelcomeEmail(to: string): Promise<boolean> {
+  return sendEmail(
+    to,
+    "Your DSA Parent Playbook — saved to your inbox",
+    `Hi there,
+
+Here's the DSA Parent Playbook you saved: https://dsalink.sg/dsa-experience
+
+It covers everything P6 families need to know about DSA — from understanding what schools actually look for, to timing your application, to what happens on trial day.
+
+Here's what's inside:
+
+Chapter 1 — What is DSA and who it's really for
+Most families misunderstand the eligibility rules. DSA is open to any P6 student — not just top scorers.
+
+Chapter 2 — The talent areas schools accept
+Sports, performing arts, academic subjects, leadership. Each school has its own list — and some surprises.
+
+Chapter 3 — How schools actually select
+Portfolios, trials, interviews, and auditions. What each stage looks like from the inside.
+
+Chapter 4 — The DSA timeline (and when most families act too late)
+The application window opens in May. Most parents only hear about it in August.
+
+Chapter 5 — Open house season: what to look for
+How to use open house visits to assess culture fit — not just facilities.
+
+Chapter 6 — Preparing your child without pressure
+What coaches and parents of successful DSA applicants do differently.
+
+Chapter 7 — The portfolio and how to build it
+What counts as evidence, and how to present it without overpacking.
+
+Chapter 8 — Common mistakes that sink applications
+The avoidable ones: wrong talent area, wrong school fit, late timing.
+
+Chapter 9 — After selection: what happens next
+Acceptance, posting, and what the first term looks like.
+
+Chapter 10 — Open house questions to ask
+A shortlist of questions that reveal what a school is really like.
+
+Chapter 11 — Your DSA checklist
+A practical week-by-week checklist for the next 90 days.
+
+Read the full Playbook here: https://dsalink.sg/dsa-experience
+
+---
+We'll also send you open house alerts and deadline reminders as DSA season progresses.
+
+Not affiliated with MOE. Unsubscribe anytime — just reply to this email.
+DSALink · dsalink.sg`,
+  );
+}
+
 export async function sendOpenHouseEmail(to: string): Promise<boolean> {
   return sendEmail(
     to,
