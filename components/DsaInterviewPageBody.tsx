@@ -120,6 +120,139 @@ export function DsaInterviewPageBody() {
     { q: t.dsaInterviewUiFaq5Q, a: t.dsaInterviewUiFaq5A },
   ];
 
+  const timelineRows = [
+    { date: t.dsaInterviewTimelineRow1Date, event: t.dsaInterviewTimelineRow1Event, detail: t.dsaInterviewTimelineRow1Detail },
+    { date: t.dsaInterviewTimelineRow2Date, event: t.dsaInterviewTimelineRow2Event, detail: t.dsaInterviewTimelineRow2Detail },
+    { date: t.dsaInterviewTimelineRow3Date, event: t.dsaInterviewTimelineRow3Event, detail: t.dsaInterviewTimelineRow3Detail },
+    { date: t.dsaInterviewTimelineRow4Date, event: t.dsaInterviewTimelineRow4Event, detail: t.dsaInterviewTimelineRow4Detail },
+    { date: t.dsaInterviewTimelineRow5Date, event: t.dsaInterviewTimelineRow5Event, detail: t.dsaInterviewTimelineRow5Detail },
+  ];
+
+  const introSteps = [
+    { label: t.dsaInterviewIntroStep1Label, body: t.dsaInterviewIntroStep1Body },
+    { label: t.dsaInterviewIntroStep2Label, body: t.dsaInterviewIntroStep2Body },
+    { label: t.dsaInterviewIntroStep3Label, body: t.dsaInterviewIntroStep3Body },
+    { label: t.dsaInterviewIntroStep4Label, body: t.dsaInterviewIntroStep4Body },
+  ];
+
+  const introParentTips = [
+    { title: t.dsaInterviewIntroParent1Title, body: t.dsaInterviewIntroParent1Body },
+    { title: t.dsaInterviewIntroParent2Title, body: t.dsaInterviewIntroParent2Body },
+    { title: t.dsaInterviewIntroParent3Title, body: t.dsaInterviewIntroParent3Body },
+    { title: t.dsaInterviewIntroParent4Title, body: t.dsaInterviewIntroParent4Body },
+  ];
+
+  const introMistakes = [
+    t.dsaInterviewIntroMistake1,
+    t.dsaInterviewIntroMistake2,
+    t.dsaInterviewIntroMistake3,
+    t.dsaInterviewIntroMistake4,
+  ];
+
+  const mistakeItems = [
+    { title: t.dsaInterviewMistake01Title, body: t.dsaInterviewMistake01Body },
+    { title: t.dsaInterviewMistake02Title, body: t.dsaInterviewMistake02Body },
+    { title: t.dsaInterviewMistake03Title, body: t.dsaInterviewMistake03Body },
+    { title: t.dsaInterviewMistake04Title, body: t.dsaInterviewMistake04Body },
+    { title: t.dsaInterviewMistake05Title, body: t.dsaInterviewMistake05Body },
+    { title: t.dsaInterviewMistake06Title, body: t.dsaInterviewMistake06Body },
+    { title: t.dsaInterviewMistake07Title, body: t.dsaInterviewMistake07Body },
+    { title: t.dsaInterviewMistake08Title, body: t.dsaInterviewMistake08Body },
+    { title: t.dsaInterviewMistake09Title, body: t.dsaInterviewMistake09Body },
+    { title: t.dsaInterviewMistake10Title, body: t.dsaInterviewMistake10Body },
+  ];
+
+  const dayOfSections = [
+    {
+      heading: t.dsaInterviewDayOfSection1,
+      items: [
+        t.dsaInterviewDayOfNight1,
+        t.dsaInterviewDayOfNight2,
+        t.dsaInterviewDayOfNight3,
+        t.dsaInterviewDayOfNight4,
+        t.dsaInterviewDayOfNight5,
+      ],
+    },
+    {
+      heading: t.dsaInterviewDayOfSection2,
+      items: [
+        t.dsaInterviewDayOfMorn1,
+        t.dsaInterviewDayOfMorn2,
+        t.dsaInterviewDayOfMorn3,
+        t.dsaInterviewDayOfMorn4,
+      ],
+    },
+    {
+      heading: t.dsaInterviewDayOfSection3,
+      items: [
+        t.dsaInterviewDayOfRoom1,
+        t.dsaInterviewDayOfRoom2,
+        t.dsaInterviewDayOfRoom3,
+        t.dsaInterviewDayOfRoom4,
+        t.dsaInterviewDayOfRoom5,
+      ],
+    },
+    {
+      heading: t.dsaInterviewDayOfSection4,
+      items: [
+        t.dsaInterviewDayOfAfter1,
+        t.dsaInterviewDayOfAfter2,
+        t.dsaInterviewDayOfAfter3,
+      ],
+    },
+  ];
+
+  const qBankCategories = [
+    {
+      cat: t.dsaInterviewQBankCat1,
+      questions: [
+        { q: t.dsaInterviewQBankSelf1Q, why: t.dsaInterviewQBankSelf1Why },
+        { q: t.dsaInterviewQBankSelf2Q, why: t.dsaInterviewQBankSelf2Why },
+        { q: t.dsaInterviewQBankSelf3Q, why: t.dsaInterviewQBankSelf3Why },
+      ],
+    },
+    {
+      cat: t.dsaInterviewQBankCat2,
+      questions: [
+        { q: t.dsaInterviewQBankWhy1Q, why: t.dsaInterviewQBankWhy1Why },
+        { q: t.dsaInterviewQBankWhy2Q, why: t.dsaInterviewQBankWhy2Why },
+        { q: t.dsaInterviewQBankWhy3Q, why: t.dsaInterviewQBankWhy3Why },
+        { q: t.dsaInterviewQBankWhy4Q, why: t.dsaInterviewQBankWhy4Why },
+        { q: t.dsaInterviewQBankWhy5Q, why: t.dsaInterviewQBankWhy5Why },
+      ],
+    },
+    {
+      cat: t.dsaInterviewQBankCat3,
+      questions: [
+        { q: t.dsaInterviewQBankTalent1Q, why: t.dsaInterviewQBankTalent1Why },
+        { q: t.dsaInterviewQBankTalent2Q, why: t.dsaInterviewQBankTalent2Why },
+        { q: t.dsaInterviewQBankTalent3Q, why: t.dsaInterviewQBankTalent3Why },
+        { q: t.dsaInterviewQBankTalent4Q, why: t.dsaInterviewQBankTalent4Why },
+        { q: t.dsaInterviewQBankTalent5Q, why: t.dsaInterviewQBankTalent5Why },
+      ],
+    },
+    {
+      cat: t.dsaInterviewQBankCat4,
+      questions: [
+        { q: t.dsaInterviewQBankChar1Q, why: t.dsaInterviewQBankChar1Why },
+        { q: t.dsaInterviewQBankChar2Q, why: t.dsaInterviewQBankChar2Why },
+        { q: t.dsaInterviewQBankChar3Q, why: t.dsaInterviewQBankChar3Why },
+        { q: t.dsaInterviewQBankChar4Q, why: t.dsaInterviewQBankChar4Why },
+        { q: t.dsaInterviewQBankChar5Q, why: t.dsaInterviewQBankChar5Why },
+      ],
+    },
+    {
+      cat: t.dsaInterviewQBankCat5,
+      questions: [
+        { q: t.dsaInterviewQBankThink1Q, why: t.dsaInterviewQBankThink1Why },
+        { q: t.dsaInterviewQBankThink2Q, why: t.dsaInterviewQBankThink2Why },
+        { q: t.dsaInterviewQBankThink3Q, why: t.dsaInterviewQBankThink3Why },
+        { q: t.dsaInterviewQBankThink4Q, why: t.dsaInterviewQBankThink4Why },
+        { q: t.dsaInterviewQBankThink5Q, why: t.dsaInterviewQBankThink5Why },
+      ],
+    },
+  ];
+
   const relatedLinks = [
     { href: "/open-houses", label: t.dsaInterviewLinkOpenHouses },
     { href: "/schools", label: t.dsaInterviewLinkSchools },
@@ -206,23 +339,29 @@ export function DsaInterviewPageBody() {
 
             <section className="mb-10">
               <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
-                {t.dsaInterviewQuestionsHeading}
+                {t.dsaInterviewQBankHeading}
               </h2>
-              <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewQuestionsLead}</p>
-              <div className="space-y-3">
-                {interviewQs.map(({ q, why }) => (
-                  <div
-                    key={q}
-                    className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card"
-                  >
-                    <p className="mb-1.5 font-semibold text-slate-900 text-[0.9375rem]">&ldquo;{q}&rdquo;</p>
-                    <p className="text-[0.875rem] text-slate-500">
-                      <span className="font-semibold text-intellectual">{t.dsaInterviewWhyAsked}</span>{" "}
-                      {why}
-                    </p>
+              <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewQBankLead}</p>
+              <div className="space-y-6">
+                {qBankCategories.map(({ cat, questions }) => (
+                  <div key={cat}>
+                    <h3 className="mb-3 text-[0.75rem] font-bold tracking-widest text-slate-400">
+                      {cat}
+                    </h3>
+                    <div className="space-y-2.5">
+                      {questions.map(({ q, why }) => (
+                        <div key={q} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+                          <p className="mb-1.5 font-display text-[0.9375rem] font-semibold text-slate-900">{q}</p>
+                          <p className="text-[0.8125rem] leading-relaxed text-slate-500">{why}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
+              <p className="mt-4 rounded-lg border border-[#e3ded5] bg-surface-warm px-4 py-3 text-[0.8125rem] leading-relaxed text-slate-500">
+                {t.dsaInterviewQBankNote}
+              </p>
             </section>
 
             <section className="mb-10">
@@ -305,6 +444,164 @@ export function DsaInterviewPageBody() {
                     <p className="text-[0.875rem] leading-relaxed text-slate-600">{a}</p>
                   </div>
                 ))}
+              </div>
+            </section>
+
+            <section className="mb-10">
+              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                {t.dsaInterviewTimelineHeading}
+              </h2>
+              <p className="mb-4 text-[0.9375rem] text-slate-600">{t.dsaInterviewTimelineLead}</p>
+              <div className="mb-3 overflow-hidden rounded-xl border border-[#e3ded5] bg-white shadow-card">
+                {timelineRows.map(({ date, event, detail }, i) => (
+                  <div
+                    key={date}
+                    className={`grid grid-cols-1 gap-0.5 px-5 py-4 sm:grid-cols-[160px_1fr] sm:gap-3 ${i < timelineRows.length - 1 ? "border-b border-[#e3ded5]" : ""}`}
+                  >
+                    <p className="text-[0.8125rem] font-bold text-intellectual">{date}</p>
+                    <div>
+                      <p className="text-[0.875rem] font-semibold text-slate-900">{event}</p>
+                      <p className="mt-0.5 text-[0.8125rem] leading-relaxed text-slate-500">{detail}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="rounded-lg border border-intellectual/15 bg-intellectual/5 px-4 py-3 text-[0.8125rem] leading-relaxed text-slate-700">
+                {t.dsaInterviewTimelineNote}
+              </p>
+            </section>
+
+            <section className="mb-10">
+              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                {t.dsaInterviewIntroHeading}
+              </h2>
+              <p className="mb-6 text-[0.9375rem] text-slate-600">{t.dsaInterviewIntroLead}</p>
+
+              <div className="mb-8">
+                <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                  {t.dsaInterviewIntroParentHeading}
+                </h3>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {introParentTips.map(({ title, body }) => (
+                    <div key={title} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+                      <p className="mb-1.5 font-display text-[0.875rem] font-semibold text-slate-900">{title}</p>
+                      <p className="text-[0.8125rem] leading-relaxed text-slate-500">{body}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                  {t.dsaInterviewIntroKidHeading}
+                </h3>
+                <p className="mb-4 text-[0.875rem] text-slate-600">{t.dsaInterviewIntroKidLead}</p>
+                <div className="space-y-3">
+                  {introSteps.map(({ label, body }, i) => (
+                    <div key={label} className="flex gap-4 rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-intellectual text-[0.8125rem] font-bold text-white">
+                        {i + 1}
+                      </div>
+                      <div>
+                        <p className="mb-1 font-display text-[0.875rem] font-semibold text-slate-900">{label}</p>
+                        <p className="text-[0.8125rem] leading-relaxed text-slate-500">{body}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-6 rounded-xl border border-intellectual/20 bg-intellectual/5 p-5">
+                <p className="mb-2 text-[0.75rem] font-bold tracking-wide text-intellectual">
+                  {t.dsaInterviewIntroTemplateHeading}
+                </p>
+                <p className="mb-2 text-[0.9375rem] italic leading-relaxed text-slate-700">
+                  {t.dsaInterviewIntroTemplateBody}
+                </p>
+                <p className="text-[0.75rem] text-slate-400">{t.dsaInterviewIntroTemplateNote}</p>
+              </div>
+
+              <div>
+                <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                  {t.dsaInterviewIntroMistakesHeading}
+                </h3>
+                <div className="space-y-2">
+                  {introMistakes.map((mistake, i) => (
+                    <div key={mistake} className="flex gap-3 rounded-lg border border-champagne/30 bg-champagne-subtle px-4 py-3">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-intellectual/10 text-[0.75rem] font-bold text-intellectual">
+                        {i + 1}
+                      </span>
+                      <p className="text-[0.8125rem] leading-relaxed text-slate-700">{mistake}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Common Mistakes */}
+            <section className="mb-10">
+              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                {t.dsaInterviewMistakesHeading}
+              </h2>
+              <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewMistakesLead}</p>
+              <div className="space-y-3">
+                {mistakeItems.map(({ title, body }, i) => (
+                  <div key={title} className="flex gap-4 rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-champagne/50 bg-champagne-subtle text-[0.75rem] font-bold text-intellectual">
+                      {i + 1}
+                    </div>
+                    <div>
+                      <p className="mb-1 font-display text-[0.875rem] font-semibold text-slate-900">{title}</p>
+                      <p className="text-[0.8125rem] leading-relaxed text-slate-500">{body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Day-Of Checklist */}
+            <section className="mb-10">
+              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                {t.dsaInterviewDayOfHeading}
+              </h2>
+              <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewDayOfLead}</p>
+              <div className="space-y-5">
+                {dayOfSections.map(({ heading, items }) => (
+                  <div key={heading} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+                    <h3 className="mb-3 font-display text-[0.9375rem] font-semibold text-slate-900">
+                      {heading}
+                    </h3>
+                    <ol className="space-y-2.5">
+                      {items.map((item, i) => (
+                        <li key={item} className="flex gap-3">
+                          <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-intellectual/25 bg-intellectual/5 text-[0.6875rem] font-bold text-intellectual">
+                            {i + 1}
+                          </span>
+                          <p className="text-[0.8125rem] leading-relaxed text-slate-600">{item}</p>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="mb-10">
+              <div className="rounded-xl border border-champagne/40 bg-champagne-subtle p-6">
+                <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
+                  <span className="w-fit rounded-full bg-champagne/30 px-3 py-1 text-[0.7rem] font-bold tracking-wide text-champagne-dark">
+                    {t.dsaInterviewOfferComingSoon}
+                  </span>
+                  <h2 className="font-display text-[1.125rem] font-semibold text-slate-900">
+                    {t.dsaInterviewOfferHeading}
+                  </h2>
+                </div>
+                <p className="text-[0.9375rem] leading-relaxed text-slate-600">
+                  {t.dsaInterviewOfferLead}
+                </p>
+                <p className="mt-3 text-[0.8125rem] leading-relaxed text-slate-500">
+                  {t.dsaInterviewOfferComingSoonBody}
+                </p>
               </div>
             </section>
 

@@ -25,6 +25,12 @@ export function generateMetadata(): Metadata {
       "how to prepare for DSA interview",
       "DSA interview questions Singapore",
       "DSA talent portfolio Primary 6",
+      "DSA self introduction Singapore",
+      "DSA interview common mistakes Singapore",
+      "DSA trial timeline 2026",
+      "DSA interview day checklist Singapore",
+      "what to expect DSA trial Singapore",
+      "DSA interview question bank Singapore",
     ],
     alternates: { canonical: "/dsa-interview" },
     openGraph: {
@@ -121,6 +127,18 @@ function buildInterviewStructuredData() {
     {
       q: "What happens at a DSA performing arts audition in Singapore?",
       a: "A performing arts audition typically involves performing a prepared piece or pieces (school specifies genre and duration), sight-reading or improvisation, and a short interview. For orchestra and band: prepare two contrasting pieces demonstrating technical range; bring your own instrument and music. For choir: prepare one song and expect a short ear-training component. For dance: wear appropriate attire; schools may teach an eight-count phrase on the spot to test learning speed. For drama: prepare a short monologue and be ready for a workshop-style improvisation exercise.",
+    },
+    {
+      q: "What are the most common mistakes in DSA interviews and trials?",
+      a: "The most frequently cited failures are: scripted, memorised answers that break down when interviewers probe; applying for sports DSA without genuine competitive experience (coaches identify recreational players quickly during trials); portfolios for visual arts that don't hold up during on-the-spot drawing tests; and children who cannot explain specifically why they chose that particular school. Most mistakes are avoidable with genuine preparation rather than coached responses.",
+    },
+    {
+      q: "How should my child prepare a self-introduction for a DSA interview?",
+      a: "A strong DSA self-introduction covers four parts in 60–90 seconds: who you are (name, school, CCA), what you do (years of experience, training frequency, level), one specific moment (a real story from training or competition — not a generic achievement), and why this school (specific to the programme, not 'it's a good school'). The goal is a clear framework your child can speak from naturally, not a script to memorise. Experienced interviewers identify rehearsed introductions within two minutes.",
+    },
+    {
+      q: "What is the DSA trial and interview timeline after the application closes?",
+      a: "After the application window closes on 2 June 2026: schools notify shortlisted applicants by 10 July 2026; trials and auditions run from 6 July to 4 August 2026; interviews run from 13 July to 14 August 2026; all applicants receive final outcomes (Confirmed Offer, Waitlist, or Unsuccessful) by 28 August 2026; parents with Confirmed Offers submit school preference rankings by 23 October 2026 (4.30pm). Schools notify directly by email — watch spam folders from 1 July onwards.",
     },
   ];
 
