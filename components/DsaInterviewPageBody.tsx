@@ -11,7 +11,7 @@ function splitPipe(s: string) {
 }
 
 export function DsaInterviewPageBody() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   const selectionTypes = [
     {
@@ -274,8 +274,8 @@ export function DsaInterviewPageBody() {
         />
 
         <div className="bg-surface">
-          <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-12">
-            <div className="mb-8 rounded-xl border border-amber-200 bg-amber-50 px-5 py-4">
+          <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-12">
+            <div className="mb-6 rounded-xl border border-amber-200 bg-amber-50 px-5 py-4">
               <p className="text-[0.875rem] font-semibold text-amber-800">
                 📅 {t.dsaInterviewAlertIntro}{" "}
                 <strong>{t.dsaInterviewAlertOpen}</strong> {t.dsaInterviewAlertMid}{" "}
@@ -283,6 +283,25 @@ export function DsaInterviewPageBody() {
                 {t.dsaInterviewAlertOhLead} <strong>{t.dsaInterviewAlertOhSpan}</strong>{" "}
                 {t.dsaInterviewAlertEnd}
               </p>
+            </div>
+
+            {/* ── Coach directory crosslink ── */}
+            <div className="mb-8 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[#e3ded5] bg-white px-5 py-3.5 shadow-card">
+              <p className="text-[0.875rem] text-slate-600">
+                {locale === "zh"
+                  ? "正在寻找DSA辅导机构或个人老师？"
+                  : locale === "ms"
+                  ? "Mencari jurulatih atau pusat latihan DSA?"
+                  : locale === "ta"
+                  ? "DSA பயிற்சியாளரை தேடுகிறீர்களா?"
+                  : "Looking for a DSA coaching provider?"}
+              </p>
+              <Link
+                href="/dsa-coaches"
+                className="shrink-0 rounded-lg border border-intellectual/20 bg-intellectual/5 px-3 py-1.5 text-[0.8125rem] font-semibold text-intellectual transition hover:bg-intellectual hover:text-white"
+              >
+                {t.dsaInterviewLinkCoaches}
+              </Link>
             </div>
 
             <section className="mb-10">

@@ -26,7 +26,6 @@ export function SiteHeader() {
 
   const dataLinks = [
     { href: "/dsa-finder", label: t.navDsaFinder },
-    { href: "/dsa-coaches", label: t.navDsaCoaches },
     { href: "/open-houses", label: t.navOpenHouses },
     { href: "/schools", label: t.navSchools },
     { href: "/psle-cop", label: t.navScores },
@@ -90,6 +89,14 @@ export function SiteHeader() {
             }`}
           >
             {t.navDsaInterview}
+          </Link>
+          <Link
+            href="/dsa-coaches"
+            className={`whitespace-nowrap rounded-lg px-3 py-1.5 text-[0.8125rem] font-medium normal-case transition hover:bg-white/10 hover:text-white ${
+              pathname === "/dsa-coaches" ? "bg-white/10 text-white" : "text-white/70"
+            }`}
+          >
+            {t.navDsaCoaches}
           </Link>
           <div
             className="relative"
@@ -207,6 +214,15 @@ export function SiteHeader() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {t.navDsaInterview}
+              </Link>
+              <Link
+                href="/dsa-coaches"
+                className={`rounded-lg px-3 py-2 text-sm font-medium normal-case transition hover:bg-white/10 hover:text-white ${
+                  pathname === "/dsa-coaches" ? "bg-white/10 text-white" : "text-white/75"
+                }`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {t.navDsaCoaches}
               </Link>
               <div className="mt-1 border-t border-white/10 pt-2">
                 <p className="px-3 py-1 text-[10px] font-semibold normal-case text-white/45">
