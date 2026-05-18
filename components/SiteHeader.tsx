@@ -26,6 +26,7 @@ export function SiteHeader() {
 
   const dataLinks = [
     { href: "/dsa-finder", label: t.navDsaFinder },
+    { href: "/dsa-coaches", label: t.navDsaCoaches },
     { href: "/open-houses", label: t.navOpenHouses },
     { href: "/schools", label: t.navSchools },
     { href: "/psle-cop", label: t.navScores },

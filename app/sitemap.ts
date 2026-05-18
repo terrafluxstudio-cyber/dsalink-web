@@ -67,5 +67,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.87,
     },
+    {
+      url: `${base}/dsa-coaches`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.86,
+    },
   ];
 }
