@@ -565,11 +565,11 @@
   "glossaryDefVocationalSubjects": "职业学科模块——另类教育学校（如晨光中学、光谱中学、圣升明径学校）开设的应用职业课程，涵盖建筑服务、电气作业、食品制备与酒店服务等。",
   "navDsaCoaches": "辅导目录",
   "dsaCoachesMetaTitle": "新加坡DSA辅导机构目录2026 | 音乐、体育、艺术与面试 | DSALink",
-  "dsaCoachesMetaDesc": "查找新加坡DSA辅导机构——音乐老师、体育学院、视觉艺术作品集班、戏剧学校和面试辅导。收录35+机构，由DSALink整理。",
+  "dsaCoachesMetaDesc": "查找新加坡DSA辅导机构——音乐老师、体育学院、视觉艺术作品集班、戏剧学校和面试辅导。收录50+机构，由DSALink整理。",
   "dsaCoachesOgTitle": "新加坡DSA辅导机构目录2026",
-  "dsaCoachesOgDesc": "2026年DSA升学的音乐、体育、视觉艺术、表演艺术、科技和面试辅导机构，由DSALink整理，收录35+服务商。",
+  "dsaCoachesOgDesc": "2026年DSA升学的音乐、体育、视觉艺术、表演艺术、科技和面试辅导机构，由DSALink整理，收录50+服务商。",
   "dsaCoachesHeading": "DSA辅导机构目录",
-  "dsaCoachesLead": "收录35+机构，涵盖音乐、体育、视觉艺术、表演艺术、科技与面试准备。按知名度排序，非付费排名。",
+  "dsaCoachesLead": "收录50+机构，涵盖音乐、体育、视觉艺术、表演艺术、科技与面试准备。按知名度排序，非付费排名。",
   "dsaCoachesDisclaimer": "DSALink不对任何列出机构作背书，亦无商业合作关系。所有信息来源于公开资料，联系方式仅链接至各机构官网。",
   "dsaCoachesFilterAll": "全部",
   "dsaCoachesFilterMusic": "音乐",
@@ -585,7 +585,8 @@
   "dsaCoachesBadgeInstitution": "辅导中心",
   "dsaCoachesBadgeIndividual": "个人老师",
   "dsaCoachesEmptyState": "没有符合条件的机构，请尝试其他筛选组合。",
-  "dsaCoachesCtaHeading": "您是DSA辅导老师？",
-  "dsaCoachesCtaBody": "DSALink接受合格DSA辅导机构的免费刊登申请，请发送您的信息，我们将审核并联系您。",
-  "dsaCoachesCtaButton": "申请免费刊登"
+  "dsaCoachesCtaHeading": "您也在辅导DSA学生吗？",
+  "dsaCoachesCtaBody": "无论您是辅导中心、学校还是个人老师，只要您辅导DSA申请学生，欢迎联系我们申请免费收录。",
+  "dsaCoachesCtaButton": "联系我们申请收录",
+  "dsaInterviewLinkCoaches": "DSA辅导机构目录 →"
 }

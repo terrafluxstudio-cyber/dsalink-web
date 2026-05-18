@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { useMemo, useState } from "react";
 import { PageHeader } from "@/components/PageHeader";
@@ -29,6 +30,66 @@ interface Coach {
 }
 
 export const coaches: Coach[] = [
+  {
+    id: "yamaha-sg",
+    type: "institution",
+    name: "Yamaha Music School Singapore",
+    talentAreas: ["music"],
+    tagline:
+      "Singapore's most recognised music school brand. Individual piano, keyboard, and instrument lessons following the ABRSM grade pathway. 10 branches island-wide. Teachers hold minimum ABRSM Grade 8.",
+    website: "https://sg.yamaha.com/en/education/",
+    prominence: 3,
+  },
+  {
+    id: "cristofori",
+    type: "institution",
+    name: "Cristofori Music School",
+    talentAreas: ["music"],
+    tagline:
+      "Singapore's largest music school - 35 centres, 16,000 students, 500 teachers. Piano, violin, guitar, and drums with annual ABRSM graded exam progression. 45 years of operation.",
+    website: "https://cristofori.asia/",
+    prominence: 3,
+  },
+  {
+    id: "snyo",
+    type: "institution",
+    name: "SNYO - Singapore National Youth Orchestra",
+    talentAreas: ["music"],
+    tagline:
+      "The most prestigious youth music credential in Singapore. MOE-recognised National Project of Excellence for orchestral instruments (strings, woodwind, brass, percussion). Open auditions year-round.",
+    website: "https://www.snyo.org.sg/",
+    prominence: 3,
+  },
+  {
+    id: "activesg",
+    type: "institution",
+    name: "ActiveSG Academies",
+    talentAreas: ["sports"],
+    tagline:
+      "Government-backed youth sports academies covering football, swimming, athletics, badminton, basketball, gymnastics, and more. Development Centre level provides competition experience for DSA-eligible credentials.",
+    website: "https://www.activesgcircle.gov.sg/academies-clubs",
+    prominence: 3,
+  },
+  {
+    id: "act3",
+    type: "institution",
+    name: "ACT 3 International",
+    talentAreas: ["performing-arts"],
+    tagline:
+      "Singapore's first and oldest children's drama academy (est. 1994). Drama classes for ages 18 months to 15 years at Cairnhill Arts Centre and Oasis Terraces, Punggol. Stage production opportunities build performing arts DSA portfolios.",
+    website: "https://act3international.com.sg/",
+    prominence: 3,
+  },
+  {
+    id: "crestar",
+    type: "institution",
+    name: "Crestar Learning Centre",
+    talentAreas: ["visual-arts"],
+    tagline:
+      "Established enrichment brand since 1977 - 50,000+ students. Dedicated Art DSA-Sec programme for ages 10-12 covering multiple mediums, portfolio building, and DSA interview skills. 4+ centres island-wide.",
+    website: "https://crestar.com.sg/",
+    prominence: 3,
+  },
   {
     id: "superminds",
     type: "institution",
@@ -128,6 +189,76 @@ export const coaches: Coach[] = [
       "Competitive swimming pathway for students targeting swimming DSA eligibility, with national championship credentials listed by the club.",
     website: "https://swimfast.com.sg/",
     prominence: 3,
+  },
+  {
+    id: "soma",
+    type: "institution",
+    name: "SOMA - School of Music and the Arts",
+    talentAreas: ["music", "performing-arts"],
+    tagline:
+      "Private music and arts school (est. 2005) offering ABRSM, Trinity, and Rockschool graded pathways. Explicitly lists DSA portfolio guidance. Live recitals build the performance record needed for music DSA.",
+    website: "https://soma.edu.sg/",
+    prominence: 2,
+  },
+  {
+    id: "tree-art",
+    type: "institution",
+    name: "Tree Art",
+    talentAreas: ["visual-arts"],
+    tagline:
+      "Specialist DSA visual arts school with instructors including ex-MOE teachers with 20+ years' experience. Multi-stage coaching: technique, portfolio curation, interview prep, and application support.",
+    website: "https://treeart.co/",
+    prominence: 2,
+  },
+  {
+    id: "art-wonderland",
+    type: "institution",
+    name: "Art Wonderland",
+    talentAreas: ["visual-arts"],
+    tagline:
+      "Advanced art enrichment programme specifically designed for DSA Art portfolios targeting SOTA and secondary school admissions. Traditional and contemporary mediums. Backed by 10+ years experience.",
+    website: "https://www.artwonderland.sg/",
+    prominence: 2,
+  },
+  {
+    id: "artgrain",
+    type: "institution",
+    name: "Artgrain",
+    talentAreas: ["visual-arts"],
+    tagline:
+      "Portfolio Preparatory Course (ages 10-12) for Visual Art DSA, AEP, and local/overseas art schools. Covers observational drawing, painting, clay, 3D, and photography. Portfolio produced is usable as a DSA supporting document.",
+    website: "https://artgrain.com.sg/",
+    prominence: 2,
+  },
+  {
+    id: "saga-athletics",
+    type: "institution",
+    name: "SAGA Athletics",
+    talentAreas: ["sports"],
+    tagline:
+      "Specialist track and field coaching club (est. 2009). Events: sprinting, hurdles, middle/long distance, jumps, and throws. Trains athletes to National School Games qualifying standards for DSA eligibility.",
+    website: "https://www.sagaathletics.com/",
+    prominence: 2,
+  },
+  {
+    id: "club-zoom",
+    type: "institution",
+    name: "Club ZOOM Track and Field",
+    talentAreas: ["sports"],
+    tagline:
+      "SAA-affiliated non-profit athletics club with documented DSA placements via track and field. Athletes train 2-5 times per week and race in local and regional meets to build their competitive record.",
+    website: "https://clubzoom.org.sg/",
+    prominence: 2,
+  },
+  {
+    id: "sg-badminton-school",
+    type: "institution",
+    name: "Singapore Badminton School",
+    talentAreas: ["sports"],
+    tagline:
+      "Dedicated youth badminton coaching school with structured pathways from beginner through competitive levels. Training develops the footwork, match play, and technical skills assessed in school DSA badminton trials.",
+    website: "https://www.singaporebadmintonschool.com.sg/",
+    prominence: 2,
   },
   {
     id: "singacademy",
@@ -269,6 +400,36 @@ export const coaches: Coach[] = [
       "Piano DSA coaching by Patricia: audition coaching, repertoire selection, portfolio building, and mock auditions. Based in Tengah.",
     website: "https://www.musicwithpat.com/dsa-piano-lessons/",
     prominence: 2,
+  },
+  {
+    id: "duck-learning",
+    type: "institution",
+    name: "Duck Learning",
+    talentAreas: ["tech"],
+    tagline:
+      "STEM enrichment and DSA coaching covering computational thinking, robotics, and digital literacy pathways. Publishes a maintained list of STEM DSA schools and offers structured tech DSA preparation.",
+    website: "https://ducklearning.com/",
+    prominence: 2,
+  },
+  {
+    id: "artfully-yours",
+    type: "institution",
+    name: "Artfully Yours",
+    talentAreas: ["visual-arts"],
+    tagline:
+      "Boutique art studio offering structured DSA Portfolio preparation with tailored coaching and portfolio development for secondary school visual arts DSA applications.",
+    website: "https://www.artfullyyours.com.sg/",
+    prominence: 1,
+  },
+  {
+    id: "haus-of-wonders",
+    type: "institution",
+    name: "Haus of Wonders",
+    talentAreas: ["visual-arts"],
+    tagline:
+      "DSA Portfolio Prep Masterclass for ages 8-17. Documented placements into SOTA, Raffles Girls' School, NAFA, and Naval Base Secondary via DSA visual arts. Portfolio curation and interview coaching included.",
+    website: "https://hausofwonders.com/",
+    prominence: 1,
   },
   {
     id: "aq-dance",
@@ -541,6 +702,20 @@ export function DsaCoachesPageBody() {
               ))}
             </div>
           )}
+
+          <div className="mt-10 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[#e3ded5] bg-white px-5 py-4 shadow-card">
+            <p className="text-[0.9375rem] font-medium text-slate-700">
+              {locale === "zh"
+                ? "找到合适的辅导后，继续查看面试准备指南"
+                : "Once you've found a coach, prepare for the trial and interview"}
+            </p>
+            <Link
+              href="/dsa-interview"
+              className="shrink-0 rounded-lg bg-intellectual px-4 py-2 text-[0.8125rem] font-semibold normal-case text-white transition hover:bg-intellectual/90"
+            >
+              {locale === "zh" ? "面试准备指南 →" : "Interview Prep Guide →"}
+            </Link>
+          </div>
 
           <div className="mt-12 rounded-xl border border-champagne/40 bg-champagne/10 p-6 text-center">
             <h2 className="mb-2 font-display text-[1.125rem] font-semibold text-slate-900">

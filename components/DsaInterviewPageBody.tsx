@@ -254,6 +254,7 @@ export function DsaInterviewPageBody() {
   ];
 
   const relatedLinks = [
+    { href: "/dsa-coaches", label: t.dsaInterviewLinkCoaches },
     { href: "/open-houses", label: t.dsaInterviewLinkOpenHouses },
     { href: "/schools", label: t.dsaInterviewLinkSchools },
     { href: "/dsa-guide", label: t.dsaInterviewLinkDsaGuide },

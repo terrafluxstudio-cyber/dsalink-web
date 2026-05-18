@@ -565,11 +565,11 @@
   "glossaryDefVocationalSubjects": "Vocational subject modules at alternative education schools (e.g. NorthLight, Spectra, Assumption Pathway), covering trade skills in building services, electrical work, food preparation, and hospitality.",
   "navDsaCoaches": "Coach Directory",
   "dsaCoachesMetaTitle": "DSA Coaching Directory Singapore 2026 | Music, Sports, Arts & Interview Prep | DSALink",
-  "dsaCoachesMetaDesc": "Find DSA coaching providers in Singapore — music tutors, sports academies, visual arts portfolio classes, drama schools, and interview coaching. 35+ providers curated by DSALink.",
+  "dsaCoachesMetaDesc": "Find DSA coaching providers in Singapore — music tutors, sports academies, visual arts portfolio classes, drama schools, and interview coaching. 50+ providers curated by DSALink.",
   "dsaCoachesOgTitle": "DSA Coaching Directory Singapore 2026",
-  "dsaCoachesOgDesc": "Music, sports, visual arts, performing arts, tech, and interview coaching for DSA-Sec 2026. 35+ providers curated by DSALink.",
+  "dsaCoachesOgDesc": "Music, sports, visual arts, performing arts, tech, and interview coaching for DSA-Sec 2026. 50+ providers curated by DSALink.",
   "dsaCoachesHeading": "DSA Coaching Directory",
-  "dsaCoachesLead": "35+ coaching providers across music, sports, visual arts, performing arts, tech, and interview preparation. Sorted by prominence — not by payment.",
+  "dsaCoachesLead": "50+ coaching providers across music, sports, visual arts, performing arts, tech, and interview preparation. Sorted by prominence — not by payment.",
   "dsaCoachesDisclaimer": "DSALink does not endorse or have a commercial relationship with any listed provider. Listings are compiled from publicly available sources. Contact information links to each provider's official website only.",
   "dsaCoachesFilterAll": "All",
   "dsaCoachesFilterMusic": "Music",
@@ -585,7 +585,8 @@
   "dsaCoachesBadgeInstitution": "Institution",
   "dsaCoachesBadgeIndividual": "Individual Coach",
   "dsaCoachesEmptyState": "No providers match this filter. Try a different combination.",
-  "dsaCoachesCtaHeading": "Are you a DSA coach?",
-  "dsaCoachesCtaBody": "DSALink accepts free listing requests from qualified DSA coaching providers. Send us your details and we will review your submission.",
-  "dsaCoachesCtaButton": "Request a free listing"
+  "dsaCoachesCtaHeading": "Do you coach DSA students?",
+  "dsaCoachesCtaBody": "If you work with DSA applicants — as a centre, school, or individual coach — we would be glad to include you in our directory. Contact us to request a free listing.",
+  "dsaCoachesCtaButton": "Contact us to be listed",
+  "dsaInterviewLinkCoaches": "DSA coach directory →"
 }

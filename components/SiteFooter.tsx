@@ -56,6 +56,11 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
                 </Link>
               </li>
               <li>
+                <Link href="/dsa-coaches" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
+                  {t.navDsaCoaches}
+                </Link>
+              </li>
+              <li>
                 <Link href="/dsa-interview" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
                   {t.navDsaInterview}
                 </Link>
