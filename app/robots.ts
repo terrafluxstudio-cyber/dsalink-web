@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
-
-const SITEMAP_URL = "https://dsalink.sg/sitemap.xml";
+import { getSiteUrl } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
+  const base = getSiteUrl();
   return {
     rules: [
       {
@@ -10,7 +10,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: SITEMAP_URL,
-    host: "dsalink.sg",
+    sitemap: `${base}/sitemap.xml`,
+    host: base.replace(/^https?:\/\//, ""),
   };
 }
