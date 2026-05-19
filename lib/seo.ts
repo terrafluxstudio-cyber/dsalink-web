@@ -403,6 +403,22 @@ export function buildFaqStructuredData(): Record<string, unknown> {
       q: "Where can I find secondary school open house dates for May 2026?",
       a: "DSALink's open house calendar at dsalink.sg/open-houses lists May 2026 sessions for all 147 MOE secondary schools — including dates, on-site vs. online mode, and direct links to each school's official DSA or admissions page.",
     },
+    {
+      q: "Is there a fee to apply for DSA-Sec?",
+      a: "No — DSA-Sec applications are completely free. There are no application fees for any school through the MOE DSA-Sec Portal.",
+    },
+    {
+      q: "If my child gets a DSA offer, do PSLE results still matter?",
+      a: "Yes — a DSA offer is conditional on meeting the school's minimum PSLE Posting Group requirement. For most IP and Express schools this means AL ≤ 22. If results do not qualify, the school may withdraw the offer.",
+    },
+    {
+      q: "My child was rejected or put on a waitlist. What happens next?",
+      a: "A rejection does not prevent applying to the same school through normal S1 Posting after PSLE. DSA appeals are generally not accepted. Waitlisted students may receive a place if higher-ranked applicants decline. All outcomes are notified by 28 August 2026.",
+    },
+    {
+      q: "How competitive is DSA, and which schools are hardest to get into?",
+      a: "Competitiveness varies by school and talent area. Most selective: SOTA (roughly 1 in 5 admitted), Raffles Institution, Hwa Chong, NUS High. IP schools may admit up to 30–35% via DSA; non-IP schools are capped at 20%. MOE does not publish acceptance rates.",
+    },
   ];
 
   return {

@@ -217,6 +217,66 @@ export const FAQ_ITEMS: FaqItem[] = [
       ta: "DSALink-இன் திறந்த நாட்கள் நாட்காட்டி dsalink.sg/open-houses-ல் 147 MOE இடைநிலைப் பள்ளிகள் அனைத்தும் உள்ளன — உறுதிப்படுத்தப்பட்ட மே 2026 தேதிகள், நேரடி/ஆன்லைன் முறை, மற்றும் ஒவ்வொரு பள்ளியின் அதிகாரப்பூர்வ DSA / சேர்க்கை பக்கத்திற்கு நேரடி இணைப்புகள். பள்ளிகள் தேதிகளை வெளியிட்டவுடன் நாட்காட்டி புதுப்பிக்கப்படும் — தவறாமல் பார்க்கவும், எப்போதும் பள்ளியின் அதிகாரப்பூர்வ தளத்தில் உறுதிப்படுத்தவும்.",
     },
   },
+  {
+    id: "dsa-application-free",
+    q: {
+      en: "Is there a fee to apply for DSA-Sec?",
+      zh: "DSA申请需要付费吗？",
+      ms: "Adakah terdapat yuran untuk memohon DSA-Sec?",
+      ta: "DSA-Sec விண்ணப்பிக்க கட்டணம் உண்டா?",
+    },
+    a: {
+      en: "No — DSA-Sec applications are completely free. There are no application fees for any school through the MOE DSA-Sec Portal. If any organisation asks you to pay to submit a DSA application on your child's behalf, that is not an official MOE process.",
+      zh: "完全免费。通过MOE DSA-Sec Portal申请任何学校都不需要支付任何费用。如果有机构要求你付费代为提交DSA申请，那不是MOE官方流程。",
+      ms: "Tidak — permohonan DSA-Sec adalah percuma sepenuhnya. Tiada yuran permohonan untuk mana-mana sekolah melalui Portal DSA-Sec MOE. Jika mana-mana organisasi meminta bayaran untuk menghantar permohonan DSA bagi pihak anak anda, itu bukan proses rasmi MOE.",
+      ta: "இல்லை — DSA-Sec விண்ணப்பங்கள் முற்றிலும் இலவசம். MOE DSA-Sec Portal மூலம் எந்த பள்ளிக்கும் விண்ணப்பக் கட்டணம் இல்லை. ஏதேனும் நிறுவனம் உங்கள் குழந்தையின் சார்பாக DSA விண்ணப்பம் சமர்ப்பிக்க பணம் கேட்டால், அது MOE அதிகாரப்பூர்வ நடைமுறை அல்ல.",
+    },
+  },
+  {
+    id: "dsa-offer-conditional",
+    q: {
+      en: "If my child gets a DSA offer, do PSLE results still matter?",
+      zh: "拿到DSA录取通知后，PSLE成绩还重要吗？",
+      ms: "Jika anak saya mendapat tawaran DSA, adakah keputusan PSLE masih penting?",
+      ta: "என் குழந்தைக்கு DSA சலுகை கிடைத்தால், PSLE மதிப்பெண்கள் இன்னும் முக்கியமா?",
+    },
+    a: {
+      en: "Yes — a DSA offer is conditional on your child meeting the school's minimum PSLE Posting Group requirement. Your child must still sit PSLE. If their results do not qualify them for the school's Posting Group (for example, AL ≤ 22 for most IP and Express schools), the school may withdraw the offer. Check each school's specific requirements before accepting any offer.",
+      zh: "是的——DSA录取通知是有条件的，孩子仍须参加PSLE，且成绩必须达到该校的最低分组要求。例如，大多数IP和快捷课程学校要求AL ≤ 22。如果成绩不达标，学校可能撤回录取通知。接受任何录取通知前，请确认该校的具体要求。",
+      ms: "Ya — tawaran DSA adalah bersyarat bergantung pada anak anda memenuhi keperluan minimum Kumpulan Penempatan PSLE sekolah tersebut. Anak anda masih perlu menduduki PSLE. Jika keputusan mereka tidak memenuhi syarat Kumpulan Penempatan sekolah (contohnya, AL ≤ 22 untuk kebanyakan sekolah IP dan Express), sekolah boleh menarik balik tawaran tersebut.",
+      ta: "ஆம் — DSA சலுகை உங்கள் குழந்தை பள்ளியின் குறைந்தபட்ச PSLE Posting Group தேவையை பூர்த்தி செய்வதை நிபந்தனையாக கொண்டது. உங்கள் குழந்தை இன்னும் PSLE எழுத வேண்டும். பெரும்பாலான IP மற்றும் Express பள்ளிகளுக்கு AL ≤ 22 தேவை. மதிப்பெண்கள் போதுமானதாக இல்லாவிட்டால், பள்ளி சலுகையை திரும்பப் பெறலாம்.",
+    },
+  },
+  {
+    id: "dsa-rejection-waitlist",
+    q: {
+      en: "My child was rejected or put on a waitlist. What happens next?",
+      zh: "孩子被拒绝或列入候补名单，接下来怎么办？",
+      ms: "Anak saya ditolak atau disenaraikan dalam senarai menunggu. Apa yang berlaku seterusnya?",
+      ta: "என் குழந்தை நிராகரிக்கப்பட்டார் அல்லது காத்திருப்பு பட்டியலில் உள்ளார். அடுத்து என்ன நடக்கும்?",
+    },
+    a: {
+      en: "A rejection does not prevent your child from applying to the same school through the normal S1 Posting Exercise after PSLE results — if their score qualifies. DSA appeals are generally not accepted by schools. For waitlisted students: if higher-ranked applicants decline offers or do not meet the PSLE minimum, a place may open up. All DSA outcomes are notified by 28 August 2026. If your child is rejected from all DSA schools, they participate in the S1 Posting Exercise as normal.",
+      zh: "被拒绝不影响孩子在PSLE成绩出来后，通过普通S1分配程序申请同一所学校——前提是成绩达标。学校一般不接受DSA申请结果的申诉。候补名单方面：如果排名较前的申请者放弃录取通知或不达PSLE最低要求，名额可能空出。所有DSA结果将于2026年8月28日前通知。若所有DSA申请均未成功，孩子将正常参加S1分配程序。",
+      ms: "Penolakan tidak menghalang anak anda daripada memohon ke sekolah yang sama melalui Latihan Penempatan S1 biasa selepas keputusan PSLE — jika skor mereka layak. Rayuan DSA pada amnya tidak diterima oleh sekolah. Untuk pelajar dalam senarai menunggu: jika pemohon berkedudukan lebih tinggi menolak tawaran atau tidak memenuhi minimum PSLE, tempat mungkin tersedia. Semua keputusan DSA akan diberitahu menjelang 28 Ogos 2026.",
+      ta: "நிராகரிப்பு என்பது PSLE முடிவுகளுக்குப் பிறகு இயல்பான S1 Posting Exercise மூலம் அதே பள்ளிக்கு விண்ணப்பிக்க தடையில்லை — மதிப்பெண்கள் தகுதியாக இருந்தால். DSA முறையீடுகள் பொதுவாக பள்ளிகளால் ஏற்கப்படுவதில்லை. காத்திருப்பு பட்டியலில் உள்ளவர்களுக்கு: உயர் தரவரிசை விண்ணப்பதாரர்கள் சலுகையை மறுத்தால் அல்லது PSLE குறைந்தபட்சத்தை பூர்த்தி செய்யாவிட்டால், இடம் கிடைக்கலாம். அனைத்து DSA முடிவுகளும் 2026 ஆகஸ்ட் 28 க்குள் அறிவிக்கப்படும்.",
+    },
+  },
+  {
+    id: "dsa-competitiveness",
+    q: {
+      en: "How competitive is DSA, and which schools are hardest to get into?",
+      zh: "DSA竞争有多激烈？哪些学校最难申请？",
+      ms: "Seberapa kompetitif DSA, dan sekolah mana yang paling sukar untuk masuk?",
+      ta: "DSA எவ்வளவு போட்டித்தன்மையானது, எந்த பள்ளிகளுக்கு நுழைவது மிகவும் கடினம்?",
+    },
+    a: {
+      en: "Competitiveness varies widely by school and talent area. The most selective are SOTA (roughly 1 in 5 applicants admitted), Raffles Institution, Hwa Chong, and NUS High. Neighbourhood schools are generally more accessible. IP schools may admit up to 30–35% of their intake via DSA; non-IP schools are capped at 20%. MOE does not publish acceptance rates, so the best approach is to match your child's genuine, verified talent level to schools where they are a realistic candidate — not just the most famous names.",
+      zh: "竞争激烈程度因学校和才艺领域而异。最难申请的包括SOTA（大约每5人录取1人）、莱佛士书院、华侨中学和新加坡国立大学附属高中。一般邻里学校相对容易。IP学校通过DSA最多可录取30-35%的新生；非IP学校上限为20%。MOE不公布录取率，因此最好的方法是根据孩子真实、可证明的才艺水平，选择真正有机会的学校，而不只追名校。",
+      ms: "Tahap persaingan berbeza-beza mengikut sekolah dan bidang bakat. Yang paling selektif ialah SOTA (lebih kurang 1 daripada 5 pemohon diterima), Raffles Institution, Hwa Chong, dan NUS High. Sekolah kejiranan umumnya lebih mudah dimasuki. Sekolah IP boleh menerima sehingga 30–35% pengambilan mereka melalui DSA; sekolah bukan-IP dihadkan kepada 20%. MOE tidak menerbitkan kadar penerimaan, jadi pendekatan terbaik adalah memadankan tahap bakat tulen anak anda dengan sekolah yang realistik.",
+      ta: "போட்டித்தன்மை பள்ளி மற்றும் திறமை துறையைப் பொறுத்து பரவலாக வேறுபடுகிறது. மிகவும் தேர்ந்தெடுக்கும் பள்ளிகள்: SOTA (தோராயமாக 5 விண்ணப்பதாரர்களில் 1 பேர் சேர்க்கப்படுகிறார்கள்), Raffles Institution, Hwa Chong, மற்றும் NUS High. அண்டை பள்ளிகள் பொதுவாக அணுகக்கூடியவை. IP பள்ளிகள் DSA மூலம் 30–35% வரை சேர்க்கலாம்; IP அல்லாத பள்ளிகள் 20% வரை மட்டுமே. MOE ஏற்புவீதங்களை வெளியிடுவதில்லை — உங்கள் குழந்தையின் உண்மையான திறமை நிலைக்கு பொருந்தும் பள்ளிகளை தேர்வு செய்வதே சிறந்த அணுகுமுறை.",
+    },
+  },
 ];
 
 export const FAQ_UI: Record<
