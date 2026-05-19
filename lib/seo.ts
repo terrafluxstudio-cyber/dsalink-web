@@ -24,7 +24,7 @@ export function getSiteUrl(): string {
 
 /** In-page / footer disclaimer anchor (see `LegalDisclaimer` id). */
 export function getDisclaimerLicenseUrl(): string {
-  return `${getSiteUrl()}/#site-disclaimer`;
+  return "https://creativecommons.org/licenses/by-nc/4.0/";
 }
 
 /**
@@ -261,6 +261,7 @@ export function buildScoresStructuredData(): Record<string, unknown> {
         creator: {
           "@type": "Organization",
           name: "Terraflux Studio",
+          url: "https://dsalink.sg",
         },
         variableMeasured: {
           "@type": "PropertyValue",
