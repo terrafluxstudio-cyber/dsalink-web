@@ -12,6 +12,7 @@ import {
   XCircle,
 } from "lucide-react";
 import Link from "next/link";
+import { ChineseNote } from "@/components/ChineseNote";
 import { EmailCapture } from "@/components/EmailCapture";
 import { PageHeader } from "@/components/PageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -363,16 +364,21 @@ export function OpenHouseGuidePageBody() {
                 ? "这个答案帮你判断这所学校对孩子来说是保底、冲刺还是梦想校——与才能无关，纯粹看名额。"
                 : "The answer tells you whether this school is a Safe, Reach, or Dream choice for your child — independent of talent level, purely based on available spots."}
             </p>
-            <div className="mt-4 rounded-xl border border-[#e3ded5] bg-white px-4 py-3.5">
-              <p className="text-[10px] font-bold normal-case tracking-widest text-champagne-dark">
-                {locale === "zh" ? "另外注意" : "Also note"}
-              </p>
-              <p className="mt-1.5 text-sm leading-relaxed text-intellectual-muted">
-                {locale === "zh"
-                  ? "开放日不是正式选拔，但学校工作人员可能会留意孩子的表现和与人互动的方式。这不是威胁，而是机会——让孩子展示真实的热情，而不是刻意表演。"
-                  : "The open house is not a formal selection event, but teachers and CCA staff sometimes take informal note of how students engage. Treat it as an opportunity — let your child show genuine interest naturally, not a coached performance."}
-              </p>
-            </div>
+            <ChineseNote
+              className="mt-4"
+              title={{
+                en: "Also note",
+                zh: "另外注意",
+                ms: "Perkara tambahan",
+                ta: "கூடுதல் நினைவூட்டல்",
+              }}
+              body={{
+                en: "The open house is not a formal selection event, but teachers and CCA staff sometimes take informal note of how students engage. Treat it as an opportunity — let your child show genuine interest naturally, not a coached performance.",
+                zh: "开放日不是正式选拔，但学校工作人员可能会留意孩子的表现和与人互动的方式。这不是威胁，而是机会——让孩子展示真实的热情，而不是刻意表演。",
+                ms: "Hari terbuka bukan acara pemilihan rasmi, tetapi guru dan kakitangan kokurikulum kadangkala memerhatikan cara murid terlibat. Anggap ini peluang — biarkan anak anda tunjuk minat tulen secara semula jadi, bukan persembahan yang dilatih.",
+                ta: "திறந்த வீட்டு நாள் முறையான தேர்வு நிகழ்வு அல்ல, ஆனால் ஆசிரியர்களும் கூடுதல் செயல்பாட்டு ஊழியர்களும் மாணவர்கள் எவ்வாறு ஈடுபடுகிறார்கள் என்பதை சில சமயங்களில் கவனிக்கிறார்கள். இதை வாய்ப்பாகக் கருதுங்கள் — பயிற்சி செய்த நடிப்பு அல்ல, உண்மையான ஆர்வத்தை குழந்தை தானாகவே காட்டட்டும்.",
+              }}
+            />
           </div>
 
           {/* ── Section A: Questions to Ask Staff & Teachers ── */}
