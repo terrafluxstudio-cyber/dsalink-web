@@ -133,19 +133,6 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
               <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/>
             </svg>
           </a>
-
-          <a
-            href="https://www.youtube.com/@DSALink-SG"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="DSALink on YouTube"
-            className="text-white/40 transition hover:text-white/80"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
-              <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/>
-            </svg>
-          </a>
         </div>
 
         {/* Bottom: legal disclaimer */}
