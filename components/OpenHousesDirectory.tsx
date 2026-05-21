@@ -441,7 +441,21 @@ export function OpenHousesDirectory() {
                     <span className="line-clamp-1">{ev.address}</span>
                   </p>
                 </div>
-                <div className="flex shrink-0 flex-col justify-center">
+                <div className="flex shrink-0 flex-col items-end justify-center gap-1.5">
+                  {ev.openHouseUrl && (
+                    <a
+                      href={ev.openHouseUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open House"
+                      className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-champagne/20 text-champagne-light border border-champagne/30 shadow-sm transition hover:bg-champagne/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne sm:h-auto sm:w-auto sm:gap-2 sm:px-4 sm:py-2"
+                    >
+                      <ExternalLink className="h-4 w-4 sm:h-4 sm:w-4" aria-hidden />
+                      <span className="hidden max-w-[6.5rem] text-center text-xs font-semibold leading-tight sm:inline">
+                        Open House
+                      </span>
+                    </a>
+                  )}
                   {(() => {
                     const label = ev.isHomepageOnly ? t.openHouseSchoolLink : t.openHouseOfficialBooking;
                     return (

@@ -43,4 +43,6 @@ export type SchoolOpenHouse = {
   dateDisplayZh?: string;
   /** True when sourceUrl is only the school homepage — no dedicated open house / DSA page found. */
   isHomepageOnly?: boolean;
+  /** Direct link to the school's open house event page (when different from or in addition to sourceUrl). */
+  openHouseUrl?: string;
 };

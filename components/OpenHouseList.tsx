@@ -166,6 +166,17 @@ export function OpenHouseList({
                       </dl>
 
                       <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-intellectual/8 pt-4">
+                        {ev.openHouseUrl && (
+                          <a
+                            href={ev.openHouseUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-champagne/20 px-4 py-2.5 text-center text-sm font-semibold text-champagne-light shadow-soft transition hover:bg-champagne/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne sm:flex-initial sm:justify-start border border-champagne/30"
+                          >
+                            Open House
+                            <ExternalLink className="h-4 w-4 opacity-90" aria-hidden />
+                          </a>
+                        )}
                         <a
                           href={ev.sourceUrl}
                           target="_blank"
