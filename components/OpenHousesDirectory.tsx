@@ -256,18 +256,6 @@ export function OpenHousesDirectory() {
         title={t.sectionOpenHouseTitle}
         subtitle={t.sectionOpenHouseDesc}
       />
-      {/* Takeaways banner */}
-      <div className="border-y border-champagne/40 bg-champagne/10 px-4 py-4 sm:px-6">
-        <div className="mx-auto flex max-w-5xl items-center justify-between gap-3">
-          <p className="text-sm font-semibold text-champagne-dark">✦ {t.ohBannerText}</p>
-          <Link
-            href="/open-house-takeaways"
-            className="shrink-0 rounded-lg bg-champagne px-4 py-2 text-sm font-bold text-intellectual shadow-gold transition hover:bg-champagne-light"
-          >
-            {t.ohBannerCta}
-          </Link>
-        </div>
-      </div>
       <div className="border-b border-intellectual/20 bg-intellectual px-4 py-4 sm:px-6">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-2">
           <div className="flex items-baseline gap-1.5">
@@ -294,6 +282,18 @@ export function OpenHousesDirectory() {
           <div className="ml-auto flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1">
             <span className="text-[0.6875rem] font-semibold tracking-wide text-white/80">MOE Directory · 2026</span>
           </div>
+        </div>
+      </div>
+      {/* Takeaways banner */}
+      <div className="border-b border-champagne/40 bg-champagne/10 px-4 py-4 sm:px-6">
+        <div className="mx-auto flex max-w-5xl items-center justify-between gap-3">
+          <p className="text-sm font-semibold text-champagne-dark">✦ {t.ohBannerText}</p>
+          <Link
+            href="/open-house-takeaways"
+            className="shrink-0 rounded-lg bg-champagne px-4 py-2 text-sm font-bold text-intellectual shadow-gold transition hover:bg-champagne-light"
+          >
+            {t.ohBannerCta}
+          </Link>
         </div>
       </div>
 
@@ -374,13 +374,11 @@ export function OpenHousesDirectory() {
         </div>
       </div>
 
-      <p className="mt-3 text-[11px] text-intellectual-muted sm:mt-4 sm:text-sm">
-        {openHouses.length === 0
-          ? t.openHouseStayTuned
-          : filteredSorted.length === 0
-            ? t.openHouseNoResults
-            : formatResultsSummary(t, shown.length, filteredSorted.length)}
-      </p>
+      {openHouses.length === 0 ? (
+        <p className="mt-3 text-[11px] text-intellectual-muted sm:mt-4 sm:text-sm">{t.openHouseStayTuned}</p>
+      ) : filteredSorted.length === 0 ? (
+        <p className="mt-3 text-[11px] text-intellectual-muted sm:mt-4 sm:text-sm">{t.openHouseNoResults}</p>
+      ) : null}
 
       {filteredSorted.length > 0 ? (
         <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-champagne/30 bg-champagne-subtle/45 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-champagne-dark sm:mt-4 sm:text-xs">
