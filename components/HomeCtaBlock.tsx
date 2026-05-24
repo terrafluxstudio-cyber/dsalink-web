@@ -67,7 +67,7 @@ export function HomeCtaBlock() {
           style={{
             backgroundImage: "url('/ribbon-bow.webp')",
             backgroundRepeat: "no-repeat",
-            backgroundPosition: "right top",
+            backgroundPosition: "calc(100% + 80px) calc(0% - 80px)",
             backgroundSize: "auto 100%",
           }}
         />
