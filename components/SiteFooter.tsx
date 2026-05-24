@@ -16,11 +16,11 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
     <footer className="border-t border-white/[0.08] bg-intellectual-dark">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
 
-        {/* Three-column navigation grid */}
-        <div className="grid grid-cols-2 gap-8 border-b border-white/[0.08] py-10 sm:grid-cols-3 sm:gap-6">
+        {/* Navigation grid */}
+        <div className="grid grid-cols-1 gap-8 border-b border-white/[0.08] py-10 sm:grid-cols-4 sm:gap-6">
 
-          {/* Column 1: Brand + tagline */}
-          <div className="col-span-2 sm:col-span-1">
+          {/* Brand column */}
+          <div className="sm:col-span-1">
             <Link href="/" className="inline-flex items-center gap-2.5 transition-opacity hover:opacity-80">
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-champagne/30 bg-champagne/15 text-champagne-light">
                 <GraduationCap className="h-4 w-4" aria-hidden />
@@ -71,10 +71,10 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
             </div>
           </div>
 
-          {/* Column 2: Resources */}
+          {/* Learn column */}
           <div>
-            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-white/30">
-              {t.footerNavResourcesHeading}
+            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-white/30 uppercase">
+              {t.footerLearnHeading}
             </p>
             <ul className="space-y-2.5">
               <li>
@@ -83,18 +83,32 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href="/dsa-finder" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
-                  {t.navDsaFinder}
+                <Link href="/faq" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
+                  {t.footerFaq}
                 </Link>
               </li>
               <li>
-                <Link href="/open-house-guide" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
-                  {t.navOpenHouseGuide}
+                <Link href="/dsa-experience" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
+                  {t.navParentStories}
                 </Link>
               </li>
               <li>
-                <Link href="/dsa-coaches" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
-                  {t.navDsaCoaches}
+                <Link href="/blog" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
+                  {t.footerBlog}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Apply column */}
+          <div>
+            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-white/30 uppercase">
+              {t.footerApplyHeading}
+            </p>
+            <ul className="space-y-2.5">
+              <li>
+                <Link href="/apply" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
+                  {t.footerApply}
                 </Link>
               </li>
               <li>
@@ -102,28 +116,43 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
                   {t.navDsaInterview}
                 </Link>
               </li>
+              <li>
+                <Link href="/dsa-coaches" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
+                  {t.navFindCoach}
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Column 3: Data */}
+          {/* Explore column */}
           <div>
-            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-white/30">
-              {t.footerNavDataHeading}
+            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-white/30 uppercase">
+              {t.footerExploreHeading}
             </p>
             <ul className="space-y-2.5">
               <li>
-                <Link href="/open-houses" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
-                  {t.navOpenHouses}
+                <Link href="/dsa-finder" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
+                  {t.navSearchSchools}
                 </Link>
               </li>
               <li>
                 <Link href="/schools" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
-                  {t.navSchools}
+                  {t.navAllSchools}
+                </Link>
+              </li>
+              <li>
+                <Link href="/open-houses" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
+                  {t.footerOpenHouseCalendar}
+                </Link>
+              </li>
+              <li>
+                <Link href="/open-house-takeaways" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
+                  {t.footerMissedOpenHouse}
                 </Link>
               </li>
               <li>
                 <Link href="/psle-cop" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
-                  {t.navScores}
+                  {t.navPsleCutoffs}
                 </Link>
               </li>
             </ul>

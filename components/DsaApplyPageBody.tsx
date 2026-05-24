@@ -195,6 +195,8 @@ export function DsaApplyPageBody() {
 
   const [checked, setChecked] = useState<Set<string>>(new Set());
   const [mounted, setMounted] = useState(false);
+  const [subEmail, setSubEmail] = useState("");
+  const [subStatus, setSubStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   // Hydrate from localStorage after mount
   useEffect(() => {
@@ -407,6 +409,62 @@ export function DsaApplyPageBody() {
                 {locale === "zh" ? "DSA 指南" : locale === "ms" ? "Panduan DSA" : locale === "ta" ? "DSA வழிகாட்டி" : "DSA Guide"}
               </Link>
             </p>
+          </div>
+
+          {/* Subscribe block */}
+          <div className="mt-8 rounded-2xl bg-intellectual p-6 sm:p-8">
+            {subStatus === "success" ? (
+              <div className="flex items-center gap-3 text-champagne-light">
+                <CheckCircle2 className="h-5 w-5 shrink-0" aria-hidden />
+                <p className="text-sm font-medium">{t.applySubscribeSuccess}</p>
+              </div>
+            ) : (
+              <>
+                <p className="text-base font-semibold text-white normal-case">{t.applySubscribeTitle}</p>
+                <p className="mt-1.5 text-sm leading-relaxed text-white/60 normal-case">{t.applySubscribeBody}</p>
+                <form
+                  className="mt-4 flex flex-col gap-2 sm:flex-row sm:gap-3"
+                  onSubmit={async (e) => {
+                    e.preventDefault();
+                    if (!subEmail) return;
+                    setSubStatus("loading");
+                    try {
+                      const res = await fetch("/api/subscribe", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ email: subEmail, source: "apply-page" }),
+                      });
+                      if (res.ok) {
+                        setSubStatus("success");
+                      } else {
+                        setSubStatus("error");
+                      }
+                    } catch {
+                      setSubStatus("error");
+                    }
+                  }}
+                >
+                  <input
+                    type="email"
+                    required
+                    value={subEmail}
+                    onChange={(e) => setSubEmail(e.target.value)}
+                    placeholder="your@email.com"
+                    className="flex-1 rounded-lg border border-white/15 bg-white/10 px-3.5 py-2.5 text-sm text-white placeholder:text-white/35 focus:border-champagne/50 focus:outline-none focus:ring-1 focus:ring-champagne/30"
+                  />
+                  <button
+                    type="submit"
+                    disabled={subStatus === "loading"}
+                    className="rounded-lg bg-champagne px-5 py-2.5 text-sm font-semibold text-intellectual transition hover:bg-champagne-light disabled:opacity-60"
+                  >
+                    {subStatus === "loading" ? "…" : t.applySubscribeBtn}
+                  </button>
+                </form>
+                {subStatus === "error" && (
+                  <p className="mt-2 text-xs text-red-400">Something went wrong — please try again.</p>
+                )}
+              </>
+            )}
           </div>
         </div>
       </main>
