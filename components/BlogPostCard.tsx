@@ -19,7 +19,14 @@ export function BlogPostCard({ slug, title, excerpt, date, heroImage }: Props) {
       {/* Hero image */}
       {heroImage ? (
         <div className="relative aspect-[16/9] w-full overflow-hidden bg-intellectual/10">
-          <Image src={heroImage} alt={title} fill className="object-cover transition group-hover:scale-[1.02]" />
+          <Image
+            src={heroImage}
+            alt={title}
+            fill
+            priority
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+            className="object-cover transition group-hover:scale-[1.02]"
+          />
         </div>
       ) : (
         <div className="aspect-[16/9] w-full bg-gradient-to-br from-intellectual/10 via-champagne/10 to-intellectual/5" />
