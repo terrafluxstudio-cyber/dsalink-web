@@ -345,28 +345,23 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
         subtitle={t("ui_hero_subtitle")}
       />
       <div className="mx-auto max-w-5xl px-4 pb-16 pt-6 sm:px-6 sm:pb-20">
-        <div className="space-y-4">
-          {/* Search bar */}
-          <label className="relative mx-auto block max-w-2xl">
-            <span className="sr-only">{t("ui_search_placeholder")}</span>
-            <Search
-              className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-blue-600"
-              aria-hidden
-            />
-            <input
-              type="search"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder={t("ui_search_placeholder")}
-              autoComplete="off"
-              className="w-full rounded-2xl border-2 border-blue-500/20 bg-white py-4 pl-12 pr-4 text-base font-semibold text-intellectual shadow-xl outline-none transition placeholder:text-intellectual-muted/60 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 sm:text-lg"
-            />
-          </label>
+        <style>{`
+          @keyframes twinkle {
+            0%,100% { opacity:1; transform:scale(1) rotate(0deg); filter:drop-shadow(0 0 3px rgba(198,162,74,0.9)); }
+            30%      { opacity:0.5; transform:scale(0.85) rotate(-12deg); filter:drop-shadow(0 0 1px rgba(198,162,74,0.3)); }
+            60%      { opacity:1; transform:scale(1.3) rotate(8deg); filter:drop-shadow(0 0 6px rgba(198,162,74,1)); }
+            80%      { opacity:0.7; transform:scale(1.1) rotate(-4deg); filter:drop-shadow(0 0 4px rgba(198,162,74,0.7)); }
+          }
+          .sparkle-twinkle { animation: twinkle 2.4s ease-in-out infinite; }
+        `}</style>
 
-          {/* Stats + Mini CTA side by side */}
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-stretch sm:gap-5">
-            {/* Stats box — left, narrower */}
-            <div className="flex flex-wrap items-center justify-around gap-y-2 rounded-2xl border border-slate-200 bg-slate-50/80 px-3 py-3 text-center text-slate-500 shadow-sm sm:flex-[1.15] sm:flex-nowrap sm:px-4">
+        {/* Two-column hero: left = stats + search  |  right = CTA card */}
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-stretch sm:gap-5">
+
+          {/* LEFT — stats on top, search below */}
+          <div className="flex flex-col gap-4 sm:flex-[0.95]">
+            {/* Stats */}
+            <div className="flex flex-wrap items-center justify-around gap-y-2 rounded-2xl border border-slate-200 bg-slate-50/80 px-3 py-4 text-center text-slate-500 shadow-sm sm:flex-nowrap sm:px-5">
               <Stat label={t("ui_stat_schools")} value="147" />
               <VerticalDivider className="hidden sm:block" />
               <Stat label={t("ui_stat_talents")} value="1,315" />
@@ -374,33 +369,51 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
               <Stat label={t("ui_stat_categories")} value="5" />
             </div>
 
-            {/* Mini school finder CTA — right */}
-            <div className="relative overflow-hidden rounded-2xl sm:flex-[1.3]">
-              <div aria-hidden className="absolute inset-0" style={{ backgroundColor: "#0d3f5f" }} />
-              <div aria-hidden className="pointer-events-none absolute inset-0" style={{ backgroundImage: GRAIN_BG, backgroundSize: "180px 180px" }} />
-              <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse 65% 60% at 95% -5%, rgba(198,162,74,0.22), transparent 60%)" }} />
-              <div className="relative z-10 flex h-full flex-col justify-between px-5 py-4 sm:py-5">
-                <div>
-                  <p className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-champagne/30 bg-champagne/10 px-2.5 py-0.5 text-[10px] font-bold tracking-[0.12em] text-champagne">
-                    <Sparkles className="h-2.5 w-2.5 shrink-0" aria-hidden />
-                    {copy.ctaFreePersonalisedTool}
-                  </p>
-                  <p className="font-display text-[0.9375rem] font-extrabold leading-snug text-white sm:text-base" style={{ textTransform: "none" }}>
-                    {copy.homeCtaTitle}
-                  </p>
-                  <p className="mt-1 text-[0.75rem] leading-relaxed text-white/60" style={{ textTransform: "none" }}>
-                    {copy.homeCtaSubtitle}
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setFinderModalOpen(true)}
-                  className="mt-3 inline-flex items-center gap-1.5 self-start rounded-xl border border-champagne/50 bg-champagne px-4 py-2 text-xs font-semibold text-intellectual shadow-gold transition hover:bg-champagne-light"
-                >
-                  <span style={{ textTransform: "none" }}>{copy.homeCtaPrimary}</span>
-                  <ArrowRight className="h-3.5 w-3.5 shrink-0" aria-hidden />
-                </button>
+            {/* Search bar */}
+            <label className="relative block">
+              <span className="sr-only">{t("ui_search_placeholder")}</span>
+              <Search
+                className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-blue-600"
+                aria-hidden
+              />
+              <input
+                type="search"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder={t("ui_search_placeholder")}
+                autoComplete="off"
+                className="w-full rounded-2xl border-2 border-blue-500/20 bg-white py-4 pl-12 pr-4 text-base font-semibold text-intellectual shadow-xl outline-none transition placeholder:text-intellectual-muted/60 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 sm:text-lg"
+              />
+            </label>
+          </div>
+
+          {/* RIGHT — CTA card, full height */}
+          <div className="relative overflow-hidden rounded-2xl sm:flex-[1.05]">
+            <div aria-hidden className="absolute inset-0" style={{ backgroundColor: "#0d3f5f" }} />
+            <div aria-hidden className="pointer-events-none absolute inset-0" style={{ backgroundImage: GRAIN_BG, backgroundSize: "180px 180px" }} />
+            <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 65% at 95% -5%, rgba(198,162,74,0.30), transparent 60%)" }} />
+            <div className="relative z-10 flex h-full flex-col justify-between px-6 py-5 sm:py-6">
+              <div>
+                {/* Eyebrow badge — brighter */}
+                <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-champagne/60 bg-champagne/20 px-3 py-1 text-[11px] font-bold tracking-[0.12em] text-champagne-light">
+                  <Sparkles className="sparkle-twinkle h-4 w-4 shrink-0" aria-hidden />
+                  {copy.ctaFreePersonalisedTool}
+                </p>
+                <p className="font-display text-[1.1rem] font-extrabold leading-snug text-white sm:text-[1.2rem]" style={{ textTransform: "none" }}>
+                  {copy.homeCtaTitle}
+                </p>
+                <p className="mt-2 text-[0.8125rem] leading-relaxed text-white/65" style={{ textTransform: "none" }}>
+                  {copy.homeCtaSubtitle}
+                </p>
               </div>
+              <button
+                type="button"
+                onClick={() => setFinderModalOpen(true)}
+                className="mt-4 inline-flex items-center gap-2 self-start rounded-xl border border-champagne/50 bg-champagne px-5 py-2.5 text-sm font-semibold text-intellectual shadow-gold transition hover:bg-champagne-light animate-gold-breathe"
+              >
+                <span style={{ textTransform: "none" }}>{copy.homeCtaPrimary}</span>
+                <ArrowRight className="h-4 w-4 shrink-0" aria-hidden />
+              </button>
             </div>
           </div>
         </div>
