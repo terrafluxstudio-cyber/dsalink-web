@@ -137,6 +137,17 @@ export type Copy = {
   ohMissedCardCta: string;
   navOpenHouseDates: string;
   navOpenHouseMissed: string;
+  navDsaGuideGroup: string;
+  navWhatIsDsa: string;
+  navParentStories: string;
+  navApplyGroup: string;
+  navApplyChecklist: string;
+  navFindCoach: string;
+  navHowToVisit: string;
+  navSchoolFinderGroup: string;
+  navSearchSchools: string;
+  navAllSchools: string;
+  navPsleCutoffs: string;
   ohMissedTakeawaysBtn: string;
   ohTakeawaysAbout: string;
   ohTakeawaysGoodFit: string;
@@ -514,6 +525,17 @@ export const copy: Record<Locale, Copy> = {
     ohMissedCardCta: "Read the takeaways",
     navOpenHouseDates: "Open House Dates",
     navOpenHouseMissed: "Missed an Open House?",
+    navDsaGuideGroup: "DSA Guide",
+    navWhatIsDsa: "What is DSA?",
+    navParentStories: "Parent Stories",
+    navApplyGroup: "Apply for DSA",
+    navApplyChecklist: "Application Checklist",
+    navFindCoach: "Find a Coach",
+    navHowToVisit: "How to Visit an Open House",
+    navSchoolFinderGroup: "School Finder",
+    navSearchSchools: "Search Schools",
+    navAllSchools: "All Schools",
+    navPsleCutoffs: "PSLE Cut-offs",
     ohMissedTakeawaysBtn: "Missed it? Everything's here →",
     ohTakeawaysAbout: "About the School",
     ohTakeawaysGoodFit: "Good Fit For",
@@ -858,6 +880,17 @@ export const copy: Record<Locale, Copy> = {
     ohMissedCardCta: "查看情报整理",
     navOpenHouseDates: "开放日日期",
     navOpenHouseMissed: "错过了开放日？",
+    navDsaGuideGroup: "DSA 指南",
+    navWhatIsDsa: "什么是 DSA？",
+    navParentStories: "家长故事",
+    navApplyGroup: "申请 DSA",
+    navApplyChecklist: "申请清单",
+    navFindCoach: "寻找教练",
+    navHowToVisit: "如何参观开放日",
+    navSchoolFinderGroup: "学校搜索",
+    navSearchSchools: "搜索学校",
+    navAllSchools: "所有学校",
+    navPsleCutoffs: "PSLE 录取分数",
     ohMissedTakeawaysBtn: "错过了？情报全在这里 →",
     ohTakeawaysAbout: "学校简介",
     ohTakeawaysGoodFit: "适合这样的孩子",
@@ -1195,6 +1228,17 @@ export const copy: Record<Locale, Copy> = {
     ohMissedCardCta: "Baca ringkasan",
     navOpenHouseDates: "Tarikh Hari Terbuka",
     navOpenHouseMissed: "Terlepas Hari Terbuka?",
+    navDsaGuideGroup: "Panduan DSA",
+    navWhatIsDsa: "Apa itu DSA?",
+    navParentStories: "Cerita Ibu Bapa",
+    navApplyGroup: "Mohon DSA",
+    navApplyChecklist: "Senarai Semak Permohonan",
+    navFindCoach: "Cari Jurulatih",
+    navHowToVisit: "Cara Melawat Hari Terbuka",
+    navSchoolFinderGroup: "Pencari Sekolah",
+    navSearchSchools: "Cari Sekolah",
+    navAllSchools: "Semua Sekolah",
+    navPsleCutoffs: "Potongan PSLE",
     ohMissedTakeawaysBtn: "Terlepas? Semua ada di sini →",
     ohTakeawaysAbout: "Tentang Sekolah",
     ohTakeawaysGoodFit: "Sesuai Untuk",
@@ -1556,6 +1600,17 @@ export const copy: Record<Locale, Copy> = {
     ohMissedCardCta: "சுருக்கத்தைப் படிக்கவும்",
     navOpenHouseDates: "திறந்த நாள் தேதிகள்",
     navOpenHouseMissed: "திறந்த நாளை தவறவிட்டீர்களா?",
+    navDsaGuideGroup: "DSA வழிகாட்டி",
+    navWhatIsDsa: "DSA என்றால் என்ன?",
+    navParentStories: "பெற்றோர் கதைகள்",
+    navApplyGroup: "DSA விண்ணப்பிக்க",
+    navApplyChecklist: "விண்ணப்ப சரிபார்ப்பு பட்டியல்",
+    navFindCoach: "பயிற்சியாளரை கண்டறியுங்கள்",
+    navHowToVisit: "திறந்த நாளை எவ்வாறு பார்வையிடுவது",
+    navSchoolFinderGroup: "பள்ளி தேடல்",
+    navSearchSchools: "பள்ளிகளை தேடுங்கள்",
+    navAllSchools: "அனைத்து பள்ளிகளும்",
+    navPsleCutoffs: "PSLE கட்-ஆஃப்கள்",
     ohMissedTakeawaysBtn: "தவறவிட்டீர்களா? எல்லாம் இங்கே →",
     ohTakeawaysAbout: "பள்ளியைப் பற்றி",
     ohTakeawaysGoodFit: "பொருத்தமான மாணவர்",
