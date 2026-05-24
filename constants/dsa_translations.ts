@@ -58,10 +58,10 @@ export const DSA_UI_TRANSLATIONS: Record<DsaUiKey, DsaTranslation> = {
     ta: "147 மேல்நிலைப் பள்ளிகள் மற்றும் 1,315 அதிகாரப்பூர்வ DSA திறமைப் பதிவுகளைத் தேடுங்கள்.",
   },
   ui_search_placeholder: {
-    en: 'Search schools, talents, or keywords (e.g. Wushu, Robotics)...',
-    zh: "搜索学校、项目或关键词 (如: Wushu, Robotics)...",
-    ms: "Cari sekolah, bakat atau kata kunci (cth: Wushu, Robotik)...",
-    ta: "பள்ளி அல்லது திறமையைத் தேடுக (எ.கா: வுஷூ, ரோபோட்டிக்ஸ்)...",
+    en: "School name or talent (e.g. Wushu, Robotics)",
+    zh: "学校或才能项目（如：武术、机器人）",
+    ms: "Nama sekolah atau bakat (cth: Wushu, Robotik)",
+    ta: "பள்ளி அல்லது திறமை (எ.கா: வுஷூ)",
   },
   ui_stat_schools: {
     en: "Schools",

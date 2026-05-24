@@ -369,8 +369,8 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
               <Stat label={t("ui_stat_categories")} value="5" />
             </div>
 
-            {/* Search bar */}
-            <label className="relative block">
+            {/* Search bar — flex-1 fills remaining height */}
+            <label className="relative flex flex-1 flex-col">
               <span className="sr-only">{t("ui_search_placeholder")}</span>
               <Search
                 className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-blue-600"
@@ -382,7 +382,7 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder={t("ui_search_placeholder")}
                 autoComplete="off"
-                className="w-full rounded-2xl border-2 border-blue-500/20 bg-white py-4 pl-11 pr-4 text-sm font-semibold text-intellectual shadow-xl outline-none transition placeholder:text-intellectual-muted/60 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 sm:text-base"
+                className="h-full min-h-[56px] w-full rounded-2xl border-2 border-blue-500/20 bg-white py-4 pl-11 pr-4 text-sm font-semibold text-intellectual shadow-xl outline-none transition placeholder:text-intellectual-muted/60 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 sm:text-base"
               />
             </label>
           </div>
