@@ -41,6 +41,13 @@ const TAKEAWAYS_MAP: Record<string, string> = {
   "national-junior-college": "njc",
   "chij-st-nicholas-girls-school": "sngs",
   "anglican-high-school": "ahs",
+  "hwa-chong-institution": "hci",
+  "raffles-girls-school": "rgs",
+  "victoria-school": "vs",
+  "st-josephs-institution": "sji",
+  "dunman-high-school": "dhs",
+  "st-anthonys-canossian-secondary-school": "sacss",
+  "crest-secondary-school": "crest",
 };
 
 /** Returns an i18n key for the urgency tag, or null if no urgency applies.
