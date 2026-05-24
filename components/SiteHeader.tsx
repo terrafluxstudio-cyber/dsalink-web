@@ -135,7 +135,7 @@ export function SiteHeader() {
                       link.href === "/open-house-takeaways"
                         ? pathname === link.href
                           ? "text-champagne"
-                          : "text-champagne/80 hover:text-champagne"
+                          : "text-champagne hover:text-champagne-light"
                         : pathname === link.href
                           ? "text-white"
                           : "text-white/75 hover:text-white"
