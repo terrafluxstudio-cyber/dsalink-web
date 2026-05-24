@@ -417,6 +417,25 @@ export type Copy = {
   dsaExpBodyCtaTitle: string;
   dsaExpBodyCtaDesc: string;
   dsaExpBodyCtaBtn: string;
+  // /apply page
+  applyPageKicker: string;
+  applyPageH1: string;
+  applyPageLead: string;
+  applyProgressLabel: string;
+  applyPhase1Title: string;
+  applyPhase2Title: string;
+  applyPhase3Title: string;
+  applyPhase4Title: string;
+  applyPortalBtn: string;
+  applyPortalNote: string;
+  applyCoTitle: string;
+  applyCoNote: string;
+  applyCrumbHome: string;
+  // NextStepCta (open-houses / dsa-finder bottom)
+  nextStepApplyTitle: string;
+  nextStepApplyBody: string;
+  nextStepApplyBtn: string;
+  nextStepTakeawaysBtn: string;
 } & DsaGuideStrings;
 
 export const copy: Record<Locale, Copy> = {
@@ -747,6 +766,23 @@ export const copy: Record<Locale, Copy> = {
     dsaExpBodyCtaDesc:
       "Use our School Recommender to shortlist Safe, Reach, and Dream options based on your child's talent tier and PSLE projection.",
     dsaExpBodyCtaBtn: "Try our School Recommender",
+    applyPageKicker: "DSA Application Guide · 2026",
+    applyPageH1: "Your DSA 2026 Application Checklist",
+    applyPageLead: "A step-by-step guide to the DSA-Sec exercise — from researching schools to receiving your school allocation. Tick off each step as you go.",
+    applyProgressLabel: "{{done}} of {{total}} steps completed",
+    applyPhase1Title: "Research your schools",
+    applyPhase2Title: "Submit your application",
+    applyPhase3Title: "Wait & prepare for trials",
+    applyPhase4Title: "Preference submission & final allocation",
+    applyPortalBtn: "Open MOE DSA-Sec Portal →",
+    applyPortalNote: "Applications close 2 June 2026, 4:30pm SGT",
+    applyCoTitle: "About Confirmed Offers (CO)",
+    applyCoNote: "A Confirmed Offer is binding — you cannot join the S1 Posting Exercise. Your child still needs to meet the school's minimum PSLE Posting Group requirement. Full details in the DSA Guide.",
+    applyCrumbHome: "Home",
+    nextStepApplyTitle: "Ready to apply?",
+    nextStepApplyBody: "Walk through the full DSA-Sec process step by step — from shortlisting schools to submitting your preference ranking.",
+    nextStepApplyBtn: "See application checklist →",
+    nextStepTakeawaysBtn: "Open house takeaways →",
     ...dsaGuideEn,
   },
   zh: {
@@ -1068,6 +1104,23 @@ export const copy: Record<Locale, Copy> = {
     dsaExpBodyCtaDesc:
       "使用我们的学校推荐工具，根据孩子的才能领域和预估 PSLE 分数，筛选保底、冲刺和梦想学校。",
     dsaExpBodyCtaBtn: "使用学校推荐工具",
+    applyPageKicker: "DSA 申请完整指南 · 2026",
+    applyPageH1: "DSA 2026 申请清单",
+    applyPageLead: "DSA-Sec 全流程分步骤指引——从研究学校到收到分配结果，逐项打勾追踪进度。",
+    applyProgressLabel: "已完成 {{done}} / {{total}} 项",
+    applyPhase1Title: "研究目标学校",
+    applyPhase2Title: "提交申请",
+    applyPhase3Title: "等待 & 备考",
+    applyPhase4Title: "偏好提交 & 最终分配",
+    applyPortalBtn: "前往 MOE DSA-Sec 申请平台 →",
+    applyPortalNote: "申请截止：2026年6月2日 下午4:30（新加坡时间）",
+    applyCoTitle: "关于 Confirmed Offer（CO）",
+    applyCoNote: "Confirmed Offer 具约束力——不得参加 S1 统一分配。孩子仍需达到学校最低 PSLE 分组要求。详情见 DSA 指南。",
+    applyCrumbHome: "首页",
+    nextStepApplyTitle: "准备好申请了吗？",
+    nextStepApplyBody: "完整了解 DSA-Sec 申请全流程——从筛选学校到提交偏好排序，分步骤指引。",
+    nextStepApplyBtn: "查看申请清单 →",
+    nextStepTakeawaysBtn: "开放日情报整理 →",
     ...dsaGuideEn,
     ...dsaGuideZh,
   },
@@ -1401,6 +1454,26 @@ export const copy: Record<Locale, Copy> = {
     dsaExpBodyCtaDesc:
       "Gunakan Pencadang Sekolah kami untuk menyenarai pendekkan pilihan Selamat, Capaian dan Impian berdasarkan bidang bakat dan unjuran PSLE anak anda.",
     dsaExpBodyCtaBtn: "Cuba Pencadang Sekolah kami",
+    applyPageKicker: "Panduan Permohonan DSA · 2026",
+    applyPageH1: "Senarai Semak Permohonan DSA 2026 Anda",
+    applyPageLead:
+      "Panduan langkah demi langkah untuk latihan DSA-Sec — daripada menyelidik sekolah hingga menerima peruntukan anda. Tandakan setiap langkah semasa anda maju.",
+    applyProgressLabel: "{{done}} daripada {{total}} langkah selesai",
+    applyPhase1Title: "Selidiki sekolah anda",
+    applyPhase2Title: "Hantar permohonan anda",
+    applyPhase3Title: "Tunggu & bersedia untuk ujian",
+    applyPhase4Title: "Penyerahan keutamaan & peruntukan akhir",
+    applyPortalBtn: "Buka Portal DSA-Sec MOE →",
+    applyPortalNote: "Permohonan ditutup 2 Jun 2026, 4:30pm SGT",
+    applyCoTitle: "Mengenai Tawaran Disahkan (CO)",
+    applyCoNote:
+      "Tawaran Disahkan adalah mengikat — anda tidak boleh menyertai Latihan S1 Posting. Anak anda masih perlu memenuhi keperluan minimum Kumpulan Penempatan PSLE sekolah.",
+    applyCrumbHome: "Utama",
+    nextStepApplyTitle: "Bersedia untuk memohon?",
+    nextStepApplyBody:
+      "Ikuti proses DSA-Sec penuh langkah demi langkah — daripada menyenarai pendek sekolah hingga menghantar keutamaan.",
+    nextStepApplyBtn: "Lihat senarai semak permohonan →",
+    nextStepTakeawaysBtn: "Intipati hari terbuka →",
     ...dsaGuideEn,
     ...dsaGuideMs,
   },
@@ -1739,6 +1812,26 @@ export const copy: Record<Locale, Copy> = {
     dsaExpBodyCtaDesc:
       "உங்கள் குழந்தையின் திறன் பகுதி மற்றும் PSLE மதிப்பெண் அடிப்படையில் Safe, Reach, Dream பள்ளிகளை தேர்ந்தெடுக்க எங்கள் கருவியைப் பயன்படுத்துங்கள்.",
     dsaExpBodyCtaBtn: "பள்ளி பரிந்துரையாளரை முயற்சிக்கவும்",
+    applyPageKicker: "DSA விண்ணப்ப வழிகாட்டி · 2026",
+    applyPageH1: "உங்கள் DSA 2026 விண்ணப்ப சரிபார்ப்பு பட்டியல்",
+    applyPageLead:
+      "பள்ளிகளை ஆராய்வதிலிருந்து ஒதுக்கீட்டைப் பெறுவது வரை — DSA-Sec பயிற்சிக்கான படிப்படியான வழிகாட்டி. ஒவ்வொரு படியையும் பூர்த்தி செய்யும்போது குறிக்கவும்.",
+    applyProgressLabel: "{{total}} படிகளில் {{done}} முடிந்தது",
+    applyPhase1Title: "உங்கள் பள்ளிகளை ஆராயுங்கள்",
+    applyPhase2Title: "விண்ணப்பத்தை சமர்ப்பிக்கவும்",
+    applyPhase3Title: "காத்திருங்கள் & சோதனைகளுக்கு தயார் செய்யுங்கள்",
+    applyPhase4Title: "விருப்பத்தொகுப்பு சமர்ப்பிப்பு & இறுதி ஒதுக்கீடு",
+    applyPortalBtn: "MOE DSA-Sec போர்டலைத் திறக்கவும் →",
+    applyPortalNote: "விண்ணப்பங்கள் 2 ஜூன் 2026, 4:30pm SGT இல் மூடப்படும்",
+    applyCoTitle: "உறுதிப்படுத்தப்பட்ட சலுகை (CO) பற்றி",
+    applyCoNote:
+      "உறுதிப்படுத்தப்பட்ட சலுகை கட்டுப்படுத்துகிறது — நீங்கள் S1 Posting பயிற்சியில் சேர முடியாது. உங்கள் குழந்தை பள்ளியின் குறைந்தபட்ச PSLE தேவைகளையும் பூர்த்தி செய்ய வேண்டும்.",
+    applyCrumbHome: "முகப்பு",
+    nextStepApplyTitle: "விண்ணப்பிக்க தயாரா?",
+    nextStepApplyBody:
+      "DSA-Sec செயல்முறையை படிப்படியாக பின்பற்றவும் — பள்ளிகளைத் தேர்ந்தெடுப்பதிலிருந்து விருப்பங்களை சமர்ப்பிப்பது வரை.",
+    nextStepApplyBtn: "விண்ணப்ப சரிபார்ப்பு பட்டியலைக் காண்க →",
+    nextStepTakeawaysBtn: "திறந்த நாள் முக்கிய தகவல்கள் →",
     ...dsaGuideEn,
     ...dsaGuideTa,
   },

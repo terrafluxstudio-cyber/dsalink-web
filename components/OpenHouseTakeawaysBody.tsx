@@ -1101,6 +1101,12 @@ export function OpenHouseTakeawaysBody() {
           >
             → {locale === "zh" ? "选拔面试/测试准备" : locale === "ms" ? "Persediaan Ujian Pemilihan" : locale === "ta" ? "தேர்வு தயாரிப்பு" : "Selection Trial Prep"}
           </Link>
+          <Link
+            href="/apply"
+            className="text-sm font-medium text-champagne-dark transition hover:underline"
+          >
+            → {locale === "zh" ? "查看申请清单" : locale === "ms" ? "Senarai semak permohonan" : locale === "ta" ? "விண்ணப்ப சரிபார்ப்பு பட்டியல்" : "Application Checklist"}
+          </Link>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@
 import { Calendar, Clock, ExternalLink, MapPin, Search } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { NextStepCta } from "@/components/NextStepCta";
 import { OpenHouseInlineCta } from "@/components/OpenHouseInlineCta";
 import { PageHeader } from "@/components/PageHeader";
 import { SchoolDisplayName } from "@/components/SchoolDisplayName";
@@ -556,6 +557,15 @@ export function OpenHousesDirectory() {
           {t.openHouseListComplete}
         </p>
       ) : null}
+
+      <NextStepCta
+        title={t.nextStepApplyTitle}
+        body={t.nextStepApplyBody}
+        links={[
+          { href: "/apply", label: t.nextStepApplyBtn, primary: true },
+          { href: "/open-house-takeaways", label: t.nextStepTakeawaysBtn },
+        ]}
+      />
       </div>
     </section>
   );

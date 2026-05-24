@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronDown, HelpCircle, Info, Search, Sparkles } from "lucide-react";
+import { NextStepCta } from "@/components/NextStepCta";
 import { PageHeader } from "@/components/PageHeader";
 import type { ReactNode } from "react";
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
@@ -430,6 +431,15 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
           />
         )}
       </div>
+
+      <NextStepCta
+        title={copy.nextStepApplyTitle}
+        body={copy.nextStepApplyBody}
+        links={[
+          { href: "/apply", label: copy.nextStepApplyBtn, primary: true },
+          { href: "/open-house-takeaways", label: copy.nextStepTakeawaysBtn },
+        ]}
+      />
       </div>
     </>
   );
