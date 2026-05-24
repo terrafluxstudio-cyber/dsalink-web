@@ -30,7 +30,7 @@ export function OpenHouseInlineCta() {
         <CheckCircle2 className="h-5 w-5 shrink-0 text-champagne" aria-hidden />
         <div>
           <p className="text-sm font-semibold text-white">You&apos;re in — check your inbox</p>
-          <p className="text-xs text-white/55">DSA tips, deadline reminders, and interview guides on the way.</p>
+          <p className="text-xs text-white/55">We&apos;ll alert you when schools open DSA registration.</p>
         </div>
       </div>
     );
@@ -47,9 +47,9 @@ export function OpenHouseInlineCta() {
           <Bell className="h-4 w-4" aria-hidden />
         </span>
         <div>
-          <p className="text-sm font-bold text-white">Don&apos;t miss the DSA deadlines</p>
+          <p className="text-sm font-bold text-white">Know the moment DSA registration opens</p>
           <p className="mt-0.5 text-xs leading-relaxed text-white/55">
-            Get school-specific DSA tips, interview guides, and deadline reminders — free.
+            Each school sets its own registration window. We&apos;ll track them and send you a heads-up — free.
           </p>
         </div>
       </div>

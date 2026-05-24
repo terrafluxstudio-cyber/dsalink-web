@@ -8,7 +8,7 @@ export function LanguageToggle({ id = "language-select" }: { id?: string }) {
   const { locale, setLocale, t } = useLanguage();
 
   return (
-    <div className="relative min-w-[10.5rem] sm:min-w-[12rem]">
+    <div className="relative min-w-[5.5rem]">
       <label className="sr-only" htmlFor={id}>
         {t.a11yLanguageSelector}
       </label>

@@ -279,9 +279,14 @@ export function OpenHousesDirectory() {
               {locale === "zh" ? "DSA & 招生直链" : "DSA & admissions links"}
             </span>
           </div>
-          <div className="ml-auto flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1">
-            <span className="text-[0.6875rem] font-semibold tracking-wide text-white/80">MOE Directory · 2026</span>
-          </div>
+          <Link
+            href="https://www.moe.gov.sg/secondary/schools"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-auto flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1 transition hover:border-white/40 hover:bg-white/20"
+          >
+            <span className="text-[0.6875rem] font-semibold tracking-wide text-white/80">MOE Directory · 2026 ↗</span>
+          </Link>
         </div>
       </div>
       {/* Takeaways banner */}
