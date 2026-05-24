@@ -131,8 +131,14 @@ export function SiteHeader() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setOpenHouseMenuOpen(false)}
-                    className={`block px-4 py-2 text-[0.8125rem] font-medium normal-case transition hover:bg-white/10 hover:text-white ${
-                      pathname === link.href ? "text-white" : "text-white/75"
+                    className={`block px-4 py-2 text-[0.8125rem] font-medium normal-case transition hover:bg-white/10 ${
+                      link.href === "/open-house-takeaways"
+                        ? pathname === link.href
+                          ? "text-champagne"
+                          : "text-champagne/80 hover:text-champagne"
+                        : pathname === link.href
+                          ? "text-white"
+                          : "text-white/75 hover:text-white"
                     }`}
                   >
                     {link.label}

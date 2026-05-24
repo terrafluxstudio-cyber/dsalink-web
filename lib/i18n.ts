@@ -450,7 +450,7 @@ export const copy: Record<Locale, Copy> = {
     a11yLanguageSelector: "Choose language",
     heroSearchPlaceholder: "Search schools or talents (e.g. Robotics, Dance)…",
     openHouseKicker: "May 2026 · Island-wide",
-    sectionOpenHouseTitle: "Secondary Open Houses · DSA & Admissions",
+    sectionOpenHouseTitle: "Secondary Open Houses — DSA & Admissions",
     sectionOpenHouseDesc:
       "147 secondary schools (MOE directory, 2026) with bilingual names, region, school type, and official DSA / admissions links. Open-house times are May 2026 (TBC) unless the school has published a date — always confirm on each site.",
     openHouseOfficialLink: "Official open house / admissions",
@@ -777,7 +777,7 @@ export const copy: Record<Locale, Copy> = {
     a11yLanguageSelector: "选择语言",
     heroSearchPlaceholder: "搜索学校或特长（如：机器人、舞蹈）…",
     openHouseKicker: "2026年5月 · 全岛",
-    sectionOpenHouseTitle: "中学开放日 · DSA 与招生",
+    sectionOpenHouseTitle: "中学开放日 — DSA 与招生",
     sectionOpenHouseDesc:
       "收录 MOE 名录中 147 所中学：中英文校名、区域、学校类型与官网 DSA/招生链接。开放日时间除已公布者外暂标为 2026 年 5 月（待定），请以各校页面为准。",
     openHouseOfficialLink: "官方开放日 / 招生页面",

@@ -257,12 +257,12 @@ export function OpenHousesDirectory() {
         subtitle={t.sectionOpenHouseDesc}
       />
       {/* Takeaways banner */}
-      <div className="border-b border-champagne/30 bg-intellectual px-4 py-3.5 sm:px-6">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-2">
-          <p className="text-sm font-medium text-white/90">{t.ohBannerText}</p>
+      <div className="border-y border-champagne/40 bg-champagne/10 px-4 py-4 sm:px-6">
+        <div className="mx-auto flex max-w-5xl items-center justify-between gap-3">
+          <p className="text-sm font-semibold text-champagne-dark">✦ {t.ohBannerText}</p>
           <Link
             href="/open-house-takeaways"
-            className="shrink-0 rounded-lg bg-champagne px-3 py-1.5 text-sm font-semibold text-intellectual transition hover:bg-champagne-light"
+            className="shrink-0 rounded-lg bg-champagne px-4 py-2 text-sm font-bold text-intellectual shadow-gold transition hover:bg-champagne-light"
           >
             {t.ohBannerCta}
           </Link>
@@ -315,7 +315,8 @@ export function OpenHousesDirectory() {
           />
         </label>
 
-        <div className="rounded-xl border border-intellectual/10 bg-slate-50/90 p-2.5 sm:p-4">
+        <div className="rounded-xl border border-intellectual/10 bg-slate-50/90 p-2.5 sm:p-4 flex items-start gap-4 sm:gap-8">
+          <div>
           <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-champagne-dark sm:mb-2 sm:text-xs">
             {t.openHouseFiltersRegion}
           </p>
@@ -338,8 +339,10 @@ export function OpenHousesDirectory() {
               );
             })}
           </div>
+          </div>
 
-          <p className="mb-1.5 mt-3 text-[10px] font-semibold uppercase tracking-[0.12em] text-champagne-dark sm:mb-2 sm:mt-4 sm:text-xs">
+          <div className="border-l border-intellectual/10 pl-4 sm:pl-8">
+          <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-champagne-dark sm:mb-2 sm:text-xs">
             {t.openHouseFiltersProgram}
           </p>
           <div className="flex flex-wrap gap-1 sm:gap-1.5">
@@ -384,6 +387,9 @@ export function OpenHousesDirectory() {
           {t.openHouseSortedByDate}
         </div>
       ) : null}
+
+      {/* ── Email capture CTA ── */}
+      <OpenHouseInlineCta />
 
       <ul className="mt-2 divide-y divide-intellectual/8 border-t border-intellectual/8 sm:mt-3">
         {shown.map((ev) => {
@@ -521,9 +527,6 @@ export function OpenHousesDirectory() {
           );
         })}
       </ul>
-
-      {/* ── Email capture CTA ── */}
-      <OpenHouseInlineCta />
 
       {filteredSorted.length > 0 && hasMore ? (
         <div className="mt-4 flex justify-center sm:mt-6">
