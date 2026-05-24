@@ -60,13 +60,16 @@ export function HomeCtaBlock() {
           }}
         />
 
-        {/* ── Layer 4: gold bow corner decoration ── */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/ribbon-bow.webp"
-          alt=""
+        {/* ── Layer 4: gold ribbon + bow — bg-image scales to card height so ribbon hits both corners ── */}
+        <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-4 -top-28 z-20 w-80"
+          className="pointer-events-none absolute inset-0 z-20"
+          style={{
+            backgroundImage: "url('/ribbon-bow.webp')",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "right top",
+            backgroundSize: "auto 100%",
+          }}
         />
 
         {/* ── Foreground content ── */}
