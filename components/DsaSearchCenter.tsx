@@ -1,8 +1,9 @@
 "use client";
 
-import { ChevronDown, HelpCircle, Info, Search, Sparkles } from "lucide-react";
+import { ArrowRight, ChevronDown, HelpCircle, Info, Search, Sparkles } from "lucide-react";
 import { NextStepCta } from "@/components/NextStepCta";
 import { PageHeader } from "@/components/PageHeader";
+import { SchoolFinderModal } from "@/components/SchoolFinderModal";
 import type { ReactNode } from "react";
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -89,6 +90,9 @@ const CATEGORY_STYLES: Record<Category, string> = {
 };
 
 const VAGUE_TALENT_AREAS = new Set(["academic", "stem"]);
+
+const GRAIN_BG =
+  "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='180' height='180' filter='url(%23n)' opacity='0.15'/></svg>\")";
 
 function normalize(value: string): string {
   return value
@@ -238,6 +242,7 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
   const [expandedCategories, setExpandedCategories] = useState<Set<Category>>(() => new Set());
   const [expandedSchoolLists, setExpandedSchoolLists] = useState<Set<string>>(() => new Set());
   const [showAllSchools, setShowAllSchools] = useState(false);
+  const [finderModalOpen, setFinderModalOpen] = useState(false);
   const deferredQuery = useDeferredValue(query);
   const resultsRef = useRef<HTMLDivElement | null>(null);
 
@@ -332,6 +337,7 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
 
   return (
     <>
+      <SchoolFinderModal open={finderModalOpen} onOpenChange={setFinderModalOpen} />
       <PageHeader
         crumbLabel={copy.dsaFinderCrumb}
         kicker={copy.dsaFinderKicker}
@@ -339,7 +345,8 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
         subtitle={t("ui_hero_subtitle")}
       />
       <div className="mx-auto max-w-5xl px-4 pb-16 pt-6 sm:px-6 sm:pb-20">
-        <div className="space-y-3">
+        <div className="space-y-4">
+          {/* Search bar */}
           <label className="relative mx-auto block max-w-2xl">
             <span className="sr-only">{t("ui_search_placeholder")}</span>
             <Search
@@ -355,36 +362,55 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
               className="w-full rounded-2xl border-2 border-blue-500/20 bg-white py-4 pl-12 pr-4 text-base font-semibold text-intellectual shadow-xl outline-none transition placeholder:text-intellectual-muted/60 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 sm:text-lg"
             />
           </label>
-          <p className="-mt-1 text-xs font-medium text-slate-500">
-            {t("ui_search_hint")}
-          </p>
 
-          <div className="mx-auto flex max-w-2xl flex-wrap items-center justify-around gap-y-2 rounded-2xl border border-slate-200 bg-slate-50/80 px-3 py-2 text-center text-slate-500 shadow-sm sm:flex-nowrap sm:px-4">
-            <Stat label={t("ui_stat_schools")} value="147" />
-            <VerticalDivider className="hidden sm:block" />
-            <Stat label={t("ui_stat_talents")} value="1,315" />
-            <VerticalDivider className="hidden sm:block" />
-            <Stat label={t("ui_stat_categories")} value="5" />
-          </div>
+          {/* Stats + Mini CTA side by side */}
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-stretch sm:gap-5">
+            {/* Stats box — left, narrower */}
+            <div className="flex flex-wrap items-center justify-around gap-y-2 rounded-2xl border border-slate-200 bg-slate-50/80 px-3 py-3 text-center text-slate-500 shadow-sm sm:flex-[1.15] sm:flex-nowrap sm:px-4">
+              <Stat label={t("ui_stat_schools")} value="147" />
+              <VerticalDivider className="hidden sm:block" />
+              <Stat label={t("ui_stat_talents")} value="1,315" />
+              <VerticalDivider className="hidden sm:block" />
+              <Stat label={t("ui_stat_categories")} value="5" />
+            </div>
 
-          <div className="flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-2 text-xs leading-5 text-slate-600 sm:px-4">
-            <Info className="h-4 w-4 shrink-0 text-blue-500" aria-hidden />
-            <p className="min-w-0">
-              {ui.dsaDataNotePrefix}{" "}
-              <a
-                href="https://www.dsa-is.moe.gov.sg/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-slate-800 underline decoration-blue-300 decoration-2 underline-offset-2 transition hover:text-blue-700"
-              >
-                {ui.dsaDataNotePortal}
-              </a>{" "}
-              {ui.dsaDataNoteSuffix}
-            </p>
+            {/* Mini school finder CTA — right */}
+            <div className="relative overflow-hidden rounded-2xl sm:flex-[1.3]">
+              <div aria-hidden className="absolute inset-0" style={{ backgroundColor: "#0d3f5f" }} />
+              <div aria-hidden className="pointer-events-none absolute inset-0" style={{ backgroundImage: GRAIN_BG, backgroundSize: "180px 180px" }} />
+              <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse 65% 60% at 95% -5%, rgba(198,162,74,0.22), transparent 60%)" }} />
+              <div className="relative z-10 flex h-full flex-col justify-between px-5 py-4 sm:py-5">
+                <div>
+                  <p className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-champagne/30 bg-champagne/10 px-2.5 py-0.5 text-[10px] font-bold tracking-[0.12em] text-champagne">
+                    <Sparkles className="h-2.5 w-2.5 shrink-0" aria-hidden />
+                    {copy.ctaFreePersonalisedTool}
+                  </p>
+                  <p className="font-display text-[0.9375rem] font-extrabold leading-snug text-white sm:text-base" style={{ textTransform: "none" }}>
+                    {copy.homeCtaTitle}
+                  </p>
+                  <p className="mt-1 text-[0.75rem] leading-relaxed text-white/60" style={{ textTransform: "none" }}>
+                    {copy.homeCtaSubtitle}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setFinderModalOpen(true)}
+                  className="mt-3 inline-flex items-center gap-1.5 self-start rounded-xl border border-champagne/50 bg-champagne px-4 py-2 text-xs font-semibold text-intellectual shadow-gold transition hover:bg-champagne-light"
+                >
+                  <span style={{ textTransform: "none" }}>{copy.homeCtaPrimary}</span>
+                  <ArrowRight className="h-3.5 w-3.5 shrink-0" aria-hidden />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
-      <div className="sticky top-[65px] z-30 mt-5 rounded-2xl border border-intellectual/10 bg-white/90 p-3 shadow-soft backdrop-blur">
+      {/* Filter hint — just above the sticky tag bar */}
+      <p className="mt-4 text-xs font-medium text-slate-500">
+        {t("ui_search_hint")}
+      </p>
+
+      <div className="sticky top-[65px] z-30 mt-2 rounded-2xl border border-intellectual/10 bg-white/90 p-3 shadow-soft backdrop-blur">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
           <div className="inline-flex rounded-xl bg-slate-100 p-1">
             <ModeButton active={mode === "school"} onClick={() => setMode("school")}>
@@ -440,6 +466,23 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
           { href: "/open-house-takeaways", label: copy.nextStepTakeawaysBtn },
         ]}
       />
+
+      {/* Data note — bottom of page */}
+      <div className="mt-6 flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-2 text-xs leading-5 text-slate-600 sm:px-4">
+        <Info className="h-4 w-4 shrink-0 text-blue-500" aria-hidden />
+        <p className="min-w-0">
+          {ui.dsaDataNotePrefix}{" "}
+          <a
+            href="https://www.dsa-is.moe.gov.sg/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-slate-800 underline decoration-blue-300 decoration-2 underline-offset-2 transition hover:text-blue-700"
+          >
+            {ui.dsaDataNotePortal}
+          </a>{" "}
+          {ui.dsaDataNoteSuffix}
+        </p>
+      </div>
       </div>
     </>
   );
