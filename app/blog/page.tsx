@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BlogPostCard } from "@/components/BlogPostCard";
+import { BlogSubscribeBlock } from "@/components/BlogSubscribeBlock";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
@@ -45,6 +46,9 @@ export default function BlogPage() {
             </div>
           )}
         </div>
+
+        {/* Subscribe + social */}
+        <BlogSubscribeBlock />
       </main>
       <SiteFooter />
     </>

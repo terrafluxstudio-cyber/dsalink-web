@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
@@ -77,8 +78,14 @@ export default async function BlogPostPage({ params }: Props) {
             prose-em:text-intellectual
             prose-li:text-intellectual-muted
             prose-a:text-champagne-dark prose-a:no-underline hover:prose-a:underline
+            prose-table:w-full prose-table:text-sm
+            prose-th:bg-champagne/10 prose-th:text-intellectual prose-th:font-semibold prose-th:px-3 prose-th:py-2 prose-th:text-left prose-th:border prose-th:border-champagne/20
+            prose-td:px-3 prose-td:py-2 prose-td:border prose-td:border-champagne/20 prose-td:text-intellectual-muted
           ">
-            <MDXRemote source={post.content} />
+            <MDXRemote
+              source={post.content}
+              options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+            />
           </div>
         </div>
       </main>
