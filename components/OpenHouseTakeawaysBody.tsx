@@ -654,31 +654,33 @@ const SCHOOLS: SchoolTakeaway[] = [
     aboutEn: [
       "Founded 1852 — Singapore's oldest Catholic boys' school, run by the De La Salle Brothers, at Malcolm Road",
       "Two tracks: 4-year SEC (O-Levels) or 6-year IP (International Baccalaureate Diploma) — choose at application",
-      "Three DSA domains: STEM (Coding, Robotics, 3D Modelling), Visual Arts, and Sports (14 areas)",
-      "STEM and Visual Arts applicants must submit a portfolio; Sports trials held on 11 or 18 July 2026",
+      "Three DSA domains: STEM (Coding, Robotics, 3D Modelling), Visual Arts, and Sports (15 areas)",
+      "STEM and Visual Arts applicants must submit a portfolio; sports trials on 11 or 18 July 2026 — International Chess and Sailing applicants are exempt from trials",
+      "All shortlisted candidates attend in-person interviews between 15 July and 5 August 2026",
       "Prior experience not required — assessment focuses on potential",
     ],
     aboutZh: [
       "1852年创立，由德拉萨兄弟会主办，位于Malcolm Road，全新加坡最古老的天主教男校",
       "两条轨道：四年制SEC（O水准）或六年制IP（国际文凭大学预科项目，IB Diploma）——申请时自行选择",
-      "三大DSA领域：STEM（编程、机器人、3D建模）、视觉艺术、体育（14个项目）",
-      "STEM和视觉艺术申请须提交作品集；体育试训定于2026年7月11日或18日",
+      "三大DSA领域：STEM（编程、机器人、3D建模）、视觉艺术、体育（15个项目）",
+      "STEM和视觉艺术申请须提交作品集；体育试训定于2026年7月11日或18日——国际象棋与帆船申请者免于试训",
+      "入围候选人须于7月15日至8月5日期间参加现场面试",
       "无需相关经验——以潜力为评估重点",
     ],
     goodFitEn: [
       "Boys who want a Catholic mission school with a choice between IB Diploma (IP) or O-Levels (SEC) at point of application",
       "Students with STEM talent — Coding, Robotics, and 3D Modelling are three distinct DSA areas, each requiring a portfolio",
-      "Sports-focused boys: 14 sports including rare options like International Chess, Rugby, and Sailing",
+      "Sports-focused boys: 15 sports including rare options like International Chess, Rugby, and Sailing",
     ],
     goodFitZh: [
       "寻求天主教使命学校、同时可在申请时选择IB文凭（IP）或O水准（SEC）的男生",
       "有STEM才能的学生——编程、机器人与3D建模是三个独立DSA方向，各须提交作品集",
-      "体育型男生：14项体育含国际象棋、橄榄球、帆船等稀有项目",
+      "体育型男生：15项体育含国际象棋、橄榄球、帆船等稀有项目",
     ],
     keySignalEn:
-      "SJI's STEM DSA splits into Coding, Robotics, and Programming & 3D Modelling — three portfolio-based tracks. International Chess and Sailing are rare sports DSA areas. Choose IP (IB Diploma) or SEC (O-Level) upfront — no changing later.",
+      "SJI's STEM DSA splits into Coding, Robotics, and Programming & 3D Modelling — three portfolio-based tracks. International Chess and Sailing applicants skip sports trials (all others trial on 11 or 18 July). Shortlisted candidates face in-person interviews 15 July – 5 August. Choose IP (IB Diploma) or SEC (O-Level) upfront — no changing later.",
     keySignalZh:
-      "圣约瑟书院STEM DSA细分为编程、机器人、3D建模三条作品集路径。国际象棋和帆船是全新加坡罕见的体育DSA项目。IP（IB文凭）与SEC（O水准）在报名时即须选定——之后不可更改。",
+      "圣约瑟书院STEM DSA细分为编程、机器人、3D建模三条作品集路径。国际象棋与帆船申请者免于体育试训（其他项目试训在7月11日或18日）。入围者须于7月15日至8月5日参加现场面试。IP（IB文凭）与SEC（O水准）在报名时即须选定——之后不可更改。",
     talentAreas: [
       "Coding",
       "Leadership",
