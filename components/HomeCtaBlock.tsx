@@ -66,7 +66,7 @@ export function HomeCtaBlock() {
           src="/ribbon-bow.webp"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -right-4 -top-16 z-20 w-80 sm:w-96"
+          className="pointer-events-none absolute -right-4 -top-28 z-20 w-80"
         />
 
         {/* ── Foreground content ── */}
