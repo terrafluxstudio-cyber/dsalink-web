@@ -280,7 +280,7 @@ export function OpenHousesDirectory() {
             </span>
           </div>
           <Link
-            href="https://www.moe.gov.sg/secondary"
+            href="https://www.moe.gov.sg/schoolfinder"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-auto flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1 transition hover:border-white/40 hover:bg-white/20"
