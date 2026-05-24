@@ -370,6 +370,7 @@ export function OpenHousesDirectory() {
               );
             })}
           </div>
+          </div>
         </div>
       </div>
 
