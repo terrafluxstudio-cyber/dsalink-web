@@ -2,6 +2,8 @@
 
 import { Calendar, Clock, ExternalLink, MapPin, Search } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+import { OpenHouseInlineCta } from "@/components/OpenHouseInlineCta";
 import { PageHeader } from "@/components/PageHeader";
 import { SchoolDisplayName } from "@/components/SchoolDisplayName";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -27,8 +29,19 @@ type ProgramKey = "IP" | "SAP" | "OLEVEL";
 
 const INITIAL_VISIBLE = 16;
 const LOAD_MORE_STEP = 36;
-const TBC_RANK = 1;
-const PAST_RANK = 2;
+const TBC_RANK = 2;
+const PAST_RANK = 1;
+
+const TAKEAWAYS_MAP: Record<string, string> = {
+  "singapore-chinese-girls-school": "scgs",
+  "nus-high-school-of-mathematics-and-science": "nushigh",
+  "catholic-high-school": "chs",
+  "st-andrews-school": "sas",
+  "paya-lebar-methodist-girls-school": "plmgs",
+  "national-junior-college": "njc",
+  "chij-st-nicholas-girls-school": "sngs",
+  "anglican-high-school": "ahs",
+};
 
 /** Returns an i18n key for the urgency tag, or null if no urgency applies.
  *  Uses SGT (UTC+8) calendar-day comparison so "Today/Tomorrow" always
@@ -243,6 +256,18 @@ export function OpenHousesDirectory() {
         title={t.sectionOpenHouseTitle}
         subtitle={t.sectionOpenHouseDesc}
       />
+      {/* Takeaways banner */}
+      <div className="border-b border-champagne/30 bg-intellectual px-4 py-3.5 sm:px-6">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-2">
+          <p className="text-sm font-medium text-white/90">{t.ohBannerText}</p>
+          <Link
+            href="/open-house-takeaways"
+            className="shrink-0 rounded-lg bg-champagne px-3 py-1.5 text-sm font-semibold text-intellectual transition hover:bg-champagne-light"
+          >
+            {t.ohBannerCta}
+          </Link>
+        </div>
+      </div>
       <div className="border-b border-intellectual/20 bg-intellectual px-4 py-4 sm:px-6">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-2">
           <div className="flex items-baseline gap-1.5">
@@ -442,7 +467,23 @@ export function OpenHousesDirectory() {
                   </p>
                 </div>
                 <div className="flex shrink-0 flex-col items-end justify-center gap-1.5">
-                  {ev.openHouseUrl && (
+                  {(() => {
+                    const takeawaysId = TAKEAWAYS_MAP[ev.id];
+                    const isPast = Date.parse(ev.endsAt) < Date.now();
+                    if (!isPast || !takeawaysId) return null;
+                    return (
+                      <Link
+                        href={`/open-house-takeaways#school-${takeawaysId}`}
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-champagne/50 bg-champagne/15 text-champagne-dark shadow-sm transition hover:bg-champagne/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne sm:h-auto sm:w-auto sm:gap-2 sm:px-3 sm:py-2"
+                      >
+                        <span className="hidden text-xs font-semibold leading-tight sm:inline">
+                          {t.ohMissedTakeawaysBtn}
+                        </span>
+                        <span className="text-[10px] font-bold sm:hidden">?</span>
+                      </Link>
+                    );
+                  })()}
+                  {ev.openHouseUrl && Date.parse(ev.endsAt) >= Date.now() && (
                     <a
                       href={ev.openHouseUrl}
                       target="_blank"
@@ -480,6 +521,9 @@ export function OpenHousesDirectory() {
           );
         })}
       </ul>
+
+      {/* ── Email capture CTA ── */}
+      <OpenHouseInlineCta />
 
       {filteredSorted.length > 0 && hasMore ? (
         <div className="mt-4 flex justify-center sm:mt-6">

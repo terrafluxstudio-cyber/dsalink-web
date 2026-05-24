@@ -1,0 +1,143 @@
+# CURSOR TASK: Open House Calendar 页面加 Email 订阅 CTA
+
+## 背景
+
+`/open-houses` 是流量最高的页面（FB 推广主要落地页），但用户 100% 跳出、不留任何联系方式。需要在页面内加一个 inline email 订阅 CTA，趁最后一波 Open House 周末（5月30–31日）捕捉邮箱。
+
+**现有资源可直接复用：**
+- API：`/api/subscribe` (POST, body: `{ email, source }`)
+- `HomepageSubscribeBanner.tsx` — 有完整的 fetch + 状态逻辑，参考复制
+
+---
+
+## Task 1 — 新建 `OpenHouseInlineCta` 组件
+
+文件：`components/OpenHouseInlineCta.tsx`
+
+### 视觉设计
+
+紧凑横幅，适合嵌入列表中间。参考风格：`HomeCtaBlock` 的 navy 背景 + champagne 按钮，但**更小、更轻**（不需要蝴蝶结装饰）。
+
+```tsx
+"use client";
+
+import { useState, type FormEvent } from "react";
+import { Bell, CheckCircle2 } from "lucide-react";
+
+export function OpenHouseInlineCta() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    const trimmed = email.trim();
+    if (!trimmed) return;
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: trimmed, source: "open-houses-inline" }),
+      });
+      setStatus(res.ok ? "success" : "error");
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  if (status === "success") {
+    return (
+      <div className="my-4 flex items-center gap-3 rounded-2xl border border-champagne/30 bg-intellectual px-5 py-4">
+        <CheckCircle2 className="h-5 w-5 shrink-0 text-champagne" aria-hidden />
+        <div>
+          <p className="text-sm font-semibold text-white">You're in — check your inbox</p>
+          <p className="text-xs text-white/55">DSA tips, deadline reminders, and interview guides on the way.</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className="my-4 rounded-2xl border border-white/10 px-5 py-5 sm:flex sm:items-center sm:gap-6"
+      style={{ backgroundColor: "#0d3f5f" }}
+    >
+      {/* Left: copy */}
+      <div className="mb-4 flex items-start gap-3 sm:mb-0 sm:flex-1">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-champagne/15 text-champagne">
+          <Bell className="h-4 w-4" aria-hidden />
+        </span>
+        <div>
+          <p className="text-sm font-bold text-white">Don't miss the DSA deadlines</p>
+          <p className="mt-0.5 text-xs leading-relaxed text-white/55">
+            Get school-specific DSA tips, interview guides, and deadline reminders — free.
+          </p>
+        </div>
+      </div>
+
+      {/* Right: form */}
+      <form onSubmit={handleSubmit} className="flex gap-2 sm:w-auto sm:flex-none">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="your@email.com"
+          required
+          disabled={status === "loading"}
+          className="min-w-0 flex-1 rounded-xl border border-white/20 bg-white/10 px-3 py-2.5 text-sm text-white placeholder:text-white/40 focus:border-champagne/60 focus:outline-none disabled:opacity-60 sm:w-48"
+        />
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          className="shrink-0 rounded-xl bg-champagne px-4 py-2.5 text-sm font-bold text-intellectual shadow-gold transition hover:bg-champagne-light disabled:opacity-60"
+        >
+          {status === "loading" ? "..." : "Notify me"}
+        </button>
+      </form>
+
+      {status === "error" && (
+        <p className="mt-2 text-xs text-red-400 sm:hidden">Something went wrong, try again.</p>
+      )}
+    </div>
+  );
+}
+```
+
+---
+
+## Task 2 — 插入到 `OpenHousesDirectory.tsx`
+
+**位置：** 学校列表 `<ul>` 结束后（`</ul>` 之后），Load More 按钮之前。
+
+具体是第 522 行附近：
+
+```tsx
+      </ul>
+
+      {/* ── Email capture CTA ── */}
+      <OpenHouseInlineCta />
+
+      {filteredSorted.length > 0 && hasMore ? (
+```
+
+**Import 加在文件顶部：**
+```tsx
+import { OpenHouseInlineCta } from "@/components/OpenHouseInlineCta";
+```
+
+---
+
+## Task 3 — 验证
+
+1. `npm run dev` → 访问 `/open-houses`
+2. 滚动到学校列表底部，看到深蓝色 CTA 横幅（Bell 图标，"Don't miss the DSA deadlines"）
+3. 填入一个 email 提交，显示 success 状态
+4. 访问 `https://dsalink.sg/admin?key=dsalink2026` 验证 email 出现在记录中，utm_source = "open-houses-inline"
+
+---
+
+## 注意
+
+- 不要动 `OpenHousesDirectory` 里的任何其他逻辑（过滤、排序、分页）
+- 不要加 i18n（暂时纯英文，快速上线）
+- CTA 不依赖 `useLanguage`，保持完全独立

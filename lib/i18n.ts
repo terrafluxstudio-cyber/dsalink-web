@@ -110,7 +110,36 @@ export type Copy = {
   navOpenHouses: string;
   /** /open-house-guide — master guide for secondary school open houses */
   navOpenHouseGuide: string;
+  /** "Open House" dropdown parent label */
+  navOpenHouse: string;
+  /** /open-house-takeaways — takeaways from completed open houses */
+  navOpenHouseTakeaways: string;
   navExplore: string;
+  /** Banner on /open-houses pointing to takeaways */
+  ohBannerText: string;
+  ohBannerCta: string;
+  /** /open-house-takeaways page strings */
+  ohTakeawaysKicker: string;
+  ohTakeawaysTitle: string;
+  ohTakeawaysSubtitle: string;
+  ohTakeawaysKeySignal: string;
+  ohTakeawaysTalentAreas: string;
+  ohTakeawaysOfficialLink: string;
+  ohTakeawaysTalentFinderTitle: string;
+  ohTakeawaysTalentFinderSubtitle: string;
+  ohTakeawaysWhatsNextTitle: string;
+  ohTakeawaysWhatsNextBody: string;
+  ohTakeawaysDeadlineLabel: string;
+  ohTakeawaysApplyBtn: string;
+  navBlog: string;
+  ohMissedCardTitle: string;
+  ohMissedCardBody: string;
+  ohMissedCardCta: string;
+  navOpenHouseDates: string;
+  navOpenHouseMissed: string;
+  ohMissedTakeawaysBtn: string;
+  ohTakeawaysAbout: string;
+  ohTakeawaysGoodFit: string;
   /** /scores — posting COP directory */
   navScores: string;
   navMenu: string;
@@ -443,7 +472,32 @@ export const copy: Record<Locale, Copy> = {
     navDsaFinder: "DSA Finder",
     navOpenHouses: "Open houses",
     navOpenHouseGuide: "Open House Guide",
+    navOpenHouse: "Open House",
+    navOpenHouseTakeaways: "Takeaways",
     navExplore: "Explore",
+    ohBannerText: "8 schools have held their DSA open houses",
+    ohBannerCta: "See what they shared →",
+    ohTakeawaysKicker: "Open House Takeaways · 2026",
+    ohTakeawaysTitle: "Missed the Open House? Here's What Each School Shared",
+    ohTakeawaysSubtitle: "8 schools held their open houses before the application window opened. Here's what each one shared — talent areas, selection signals, and what parents need to know.",
+    ohTakeawaysKeySignal: "Key Signal",
+    ohTakeawaysTalentAreas: "DSA Talent Areas",
+    ohTakeawaysOfficialLink: "Official DSA Page",
+    ohTakeawaysTalentFinderTitle: "Find Schools by Talent Area",
+    ohTakeawaysTalentFinderSubtitle: "Which of these 8 schools offer the talent area your child is applying with?",
+    ohTakeawaysWhatsNextTitle: "What's Next?",
+    ohTakeawaysWhatsNextBody: "The DSA-Sec Exercise application window is now open. Apply directly through the MOE DSA-Sec portal — shortlisting and trials happen separately at each school.",
+    ohTakeawaysDeadlineLabel: "Application closes 2 June 2026, 4:30 pm SGT",
+    ohTakeawaysApplyBtn: "Apply via MOE DSA-Sec Portal",
+    navBlog: "Blog",
+    ohMissedCardTitle: "Missed an Open House?",
+    ohMissedCardBody: "8 schools have shared their DSA talent areas and selection signals.",
+    ohMissedCardCta: "Read the takeaways",
+    navOpenHouseDates: "Open House Dates",
+    navOpenHouseMissed: "Missed an Open House?",
+    ohMissedTakeawaysBtn: "Missed it? Everything's here →",
+    ohTakeawaysAbout: "About the School",
+    ohTakeawaysGoodFit: "Good Fit For",
     navScores: "PSLE COP",
     navMenu: "Menu",
     navClose: "Close menu",
@@ -745,7 +799,32 @@ export const copy: Record<Locale, Copy> = {
     navDsaFinder: "DSA 搜索",
     navOpenHouses: "开放日",
     navOpenHouseGuide: "开放日指南",
+    navOpenHouse: "开放日",
+    navOpenHouseTakeaways: "开放日要点",
     navExplore: "探索",
+    ohBannerText: "8所学校已完成DSA开放日",
+    ohBannerCta: "查看各校分享的要点 →",
+    ohTakeawaysKicker: "2026 DSA开放日情报整理",
+    ohTakeawaysTitle: "错过了开放日？8所学校的DSA情报全在这里",
+    ohTakeawaysSubtitle: "这8所学校在DSA申请窗口开放前已举办开放日。以下是各校传递的关键信息——才能项目、选拔信号，以及申请前家长需要了解的要点。",
+    ohTakeawaysKeySignal: "关键信号",
+    ohTakeawaysTalentAreas: "DSA才能方向",
+    ohTakeawaysOfficialLink: "官方DSA页面",
+    ohTakeawaysTalentFinderTitle: "按才能方向查找学校",
+    ohTakeawaysTalentFinderSubtitle: "这8所学校中，哪些提供你孩子所申请的才能方向？",
+    ohTakeawaysWhatsNextTitle: "接下来怎么做？",
+    ohTakeawaysWhatsNextBody: "DSA-Sec申请窗口现已开放。请通过MOE DSA-Sec入口直接申请——各校的入围通知和选拔测试将另行安排。",
+    ohTakeawaysDeadlineLabel: "申请截止：2026年6月2日（周二）下午4:30（新加坡时间）",
+    ohTakeawaysApplyBtn: "前往MOE DSA-Sec申请平台",
+    navBlog: "博客",
+    ohMissedCardTitle: "错过了开放日？",
+    ohMissedCardBody: "8所学校已公布DSA才能方向与选拔信号，全部整理好了。",
+    ohMissedCardCta: "查看情报整理",
+    navOpenHouseDates: "开放日日期",
+    navOpenHouseMissed: "错过了开放日？",
+    ohMissedTakeawaysBtn: "错过了？情报全在这里 →",
+    ohTakeawaysAbout: "学校简介",
+    ohTakeawaysGoodFit: "适合这样的孩子",
     navScores: "PSLE COP",
     navMenu: "菜单",
     navClose: "关闭菜单",
@@ -1046,7 +1125,32 @@ export const copy: Record<Locale, Copy> = {
     navDsaFinder: "Pencari DSA",
     navOpenHouses: "Hari terbuka",
     navOpenHouseGuide: "Panduan Hari Terbuka",
+    navOpenHouse: "Hari Terbuka",
+    navOpenHouseTakeaways: "Ringkasan",
     navExplore: "Teroka",
+    ohBannerText: "8 sekolah telah mengadakan hari terbuka DSA mereka",
+    ohBannerCta: "Lihat apa yang mereka kongsikan →",
+    ohTakeawaysKicker: "Rumusan Hari Terbuka · 2026",
+    ohTakeawaysTitle: "Terlepas Hari Terbuka? Ini Yang Dikongsi Setiap Sekolah",
+    ohTakeawaysSubtitle: "8 sekolah mengadakan hari terbuka sebelum tempoh permohonan dibuka. Berikut ialah apa yang setiap sekolah kongsikan — bidang bakat, isyarat pemilihan, dan apa yang perlu diketahui ibu bapa.",
+    ohTakeawaysKeySignal: "Isyarat Utama",
+    ohTakeawaysTalentAreas: "Bidang Bakat DSA",
+    ohTakeawaysOfficialLink: "Laman DSA Rasmi",
+    navBlog: "Blog",
+    ohMissedCardTitle: "Terlepas Hari Terbuka?",
+    ohMissedCardBody: "8 sekolah telah berkongsi bidang bakat DSA dan isyarat pemilihan mereka.",
+    ohMissedCardCta: "Baca ringkasan",
+    navOpenHouseDates: "Tarikh Hari Terbuka",
+    navOpenHouseMissed: "Terlepas Hari Terbuka?",
+    ohMissedTakeawaysBtn: "Terlepas? Semua ada di sini →",
+    ohTakeawaysAbout: "Tentang Sekolah",
+    ohTakeawaysGoodFit: "Sesuai Untuk",
+    ohTakeawaysTalentFinderTitle: "Cari Sekolah mengikut Bidang Bakat",
+    ohTakeawaysTalentFinderSubtitle: "Antara 8 sekolah ini, yang mana menawarkan bidang bakat yang anak anda mohon?",
+    ohTakeawaysWhatsNextTitle: "Apa Seterusnya?",
+    ohTakeawaysWhatsNextBody: "Tetingkap permohonan DSA-Sec kini dibuka. Mohon melalui portal MOE DSA-Sec — penyenaraian pendek dan ujian pemilihan dijalankan berasingan di setiap sekolah.",
+    ohTakeawaysDeadlineLabel: "Permohonan tutup 2 Jun 2026, 4:30 petang SGT",
+    ohTakeawaysApplyBtn: "Mohon melalui Portal MOE DSA-Sec",
     navScores: "PSLE COP",
     navMenu: "Menu",
     navClose: "Tutup menu",
@@ -1356,7 +1460,32 @@ export const copy: Record<Locale, Copy> = {
     navDsaFinder: "DSA தேடல்",
     navOpenHouses: "திறந்த வீடுகள்",
     navOpenHouseGuide: "திறந்த நாள் வழிகாட்டி",
+    navOpenHouse: "திறந்த நாள்",
+    navOpenHouseTakeaways: "சுருக்கம்",
     navExplore: "ஆராயுங்கள்",
+    ohBannerText: "8 பள்ளிகள் தங்கள் DSA திறந்த நாளை நடத்தியுள்ளன",
+    ohBannerCta: "அவர்கள் பகிர்ந்ததைப் பாருங்கள் →",
+    ohTakeawaysKicker: "திறந்த நாள் சுருக்கம் · 2026",
+    ohTakeawaysTitle: "திறந்த நாளை தவறவிட்டீர்களா? ஒவ்வொரு பள்ளியும் பகிர்ந்தது இதோ",
+    ohTakeawaysSubtitle: "விண்ணப்ப காலம் தொடங்குவதற்கு முன் 8 பள்ளிகள் திறந்த நாளை நடத்தின. ஒவ்வொன்றும் பகிர்ந்தது — திறன் பகுதிகள், தேர்வு சமிக்ஞைகள், மற்றும் பெற்றோர் அறிய வேண்டியவை.",
+    ohTakeawaysKeySignal: "முக்கிய சமிக்ஞை",
+    ohTakeawaysTalentAreas: "DSA திறன் பகுதிகள்",
+    ohTakeawaysOfficialLink: "அதிகாரப்பூர்வ DSA பக்கம்",
+    ohTakeawaysTalentFinderTitle: "திறன் பகுதி மூலம் பள்ளிகளைக் கண்டறியுங்கள்",
+    ohTakeawaysTalentFinderSubtitle: "இந்த 8 பள்ளிகளில் எந்த பள்ளிகள் உங்கள் குழந்தையின் திறன் பகுதியை வழங்குகின்றன?",
+    ohTakeawaysWhatsNextTitle: "அடுத்தது என்ன?",
+    ohTakeawaysWhatsNextBody: "DSA-Sec விண்ணப்ப காலம் இப்போது திறந்துள்ளது. MOE DSA-Sec தளம் வழியாக நேரடியாக விண்ணப்பிக்கவும் — தேர்வு மற்றும் சோதனைகள் தனித்தனியாக ஒவ்வொரு பள்ளியிலும் நடைபெறும்.",
+    ohTakeawaysDeadlineLabel: "விண்ணப்பம் மூடும் தேதி: 2 ஜூன் 2026, மாலை 4:30 SGT",
+    ohTakeawaysApplyBtn: "MOE DSA-Sec தளம் வழியாக விண்ணப்பிக்கவும்",
+    navBlog: "வலைப்பதிவு",
+    ohMissedCardTitle: "திறந்த நாளை தவறவிட்டீர்களா?",
+    ohMissedCardBody: "8 பள்ளிகள் தங்கள் DSA திறன் பகுதிகள் மற்றும் தேர்வு சமிக்ஞைகளை பகிர்ந்துள்ளன.",
+    ohMissedCardCta: "சுருக்கத்தைப் படிக்கவும்",
+    navOpenHouseDates: "திறந்த நாள் தேதிகள்",
+    navOpenHouseMissed: "திறந்த நாளை தவறவிட்டீர்களா?",
+    ohMissedTakeawaysBtn: "தவறவிட்டீர்களா? எல்லாம் இங்கே →",
+    ohTakeawaysAbout: "பள்ளியைப் பற்றி",
+    ohTakeawaysGoodFit: "பொருத்தமான மாணவர்",
     navScores: "PSLE COP",
     navMenu: "மெனு",
     navClose: "மெனுவை மூடு",

@@ -2,17 +2,20 @@
 
 import {
   Calendar,
+  ChevronRight,
   Clock,
   ExternalLink,
   GraduationCap,
   MapPin,
   Monitor,
 } from "lucide-react";
+import Link from "next/link";
 import { useMemo } from "react";
 import { SchoolDisplayName } from "@/components/SchoolDisplayName";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Locale } from "@/lib/i18n";
 import {
+  recentlyCompletedOpenHouses,
   upcomingOpenHouseEventsByDate,
   type SchoolOpenHouse,
 } from "@/lib/data";
@@ -59,6 +62,8 @@ export function OpenHouseList({
       heading: formatDateHeading(date, locale),
     }));
   }, [locale]);
+
+  const completedEvents = useMemo(() => recentlyCompletedOpenHouses(), []);
 
   return (
     <section
@@ -194,6 +199,42 @@ export function OpenHouseList({
             </div>
           ))}
         </div>
+        )}
+
+        {completedEvents.length > 0 && (
+          <div className="mt-12 rounded-2xl border border-champagne/25 bg-champagne/8 p-5 sm:p-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark mb-1">
+              {locale === "zh" ? "已完结" : "Recently Completed"}
+            </p>
+            <p className="text-sm font-medium text-intellectual-muted mb-4">
+              {locale === "zh"
+                ? "以下学校的开放日已结束"
+                : "These open houses have already taken place"}
+            </p>
+            <ul className="space-y-2 mb-5">
+              {completedEvents.map((ev) => (
+                <li key={ev.id + ev.date} className="flex items-center justify-between gap-3 text-sm">
+                  <span className="font-medium text-intellectual">
+                    <SchoolDisplayName locale={locale} nameEn={ev.nameEn} nameZh={ev.nameZh} />
+                  </span>
+                  <span className="shrink-0 text-xs text-intellectual-muted">
+                    {new Intl.DateTimeFormat(locale === "zh" ? "zh-Hans-SG" : "en-SG", {
+                      month: "short",
+                      day: "numeric",
+                      timeZone: "Asia/Singapore",
+                    }).format(new Date(`${ev.date}T12:00:00+08:00`))}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="/open-house-takeaways"
+              className="inline-flex items-center gap-2 rounded-xl bg-intellectual px-4 py-2.5 text-sm font-semibold text-white shadow-soft transition hover:bg-intellectual-light"
+            >
+              {locale === "zh" ? "错过了？查看各校DSA要点" : "Missed any? See what they shared about DSA"}
+              <ChevronRight className="h-4 w-4" aria-hidden />
+            </Link>
+          </div>
         )}
       </div>
     </section>

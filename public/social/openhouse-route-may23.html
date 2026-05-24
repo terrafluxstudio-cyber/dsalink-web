@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { width:100%; height:100%; background:#e5e5e5; }
+
+body {
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+
+.canvas {
+  width:1080px;
+  height:1080px;
+  background:#FFF8F2;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  transform-origin:top left;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #E63900, #FF6B00);
+  padding: 22px 50px 18px;
+  text-align:center;
+  flex-shrink:0;
+}
+.header .eyebrow {
+  font-size:13px; font-weight:800; letter-spacing:3px;
+  color:#FFCDB8; text-transform:uppercase; margin-bottom:4px;
+}
+.header h1 {
+  font-size:46px; font-weight:900; color:#fff; line-height:1;
+  font-family: Arial Black, Arial, sans-serif;
+}
+.header .sub {
+  font-size:16px; color:#FFCDB8; margin-top:5px; font-weight:600;
+}
+
+/* SECTION LABEL */
+.section-label {
+  display:flex; align-items:center; gap:10px;
+  margin: 14px 40px 8px;
+  flex-shrink:0;
+}
+.section-label .pill {
+  font-size:12px; font-weight:800; color:#fff;
+  padding:5px 16px; border-radius:20px; letter-spacing:1px;
+  text-transform:uppercase;
+}
+.pill.onsite { background:#DC2626; }
+.pill.online { background:#1D4ED8; }
+.section-label .line { flex:1; height:2px; background:#E5E7EB; }
+
+/* SCHOOL ROW */
+.school-row {
+  margin: 0 40px 9px;
+  background:#fff;
+  border-radius:16px;
+  padding: 14px 20px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  border-left:6px solid;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  flex-shrink:0;
+}
+.school-row.boy   { border-color:#1D4ED8; }
+.school-row.girl  { border-color:#BE185D; }
+.school-row.coed  { border-color:#15803D; }
+
+.gender-dot {
+  width:40px; height:40px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:20px; flex-shrink:0;
+}
+.gender-dot.boy  { background:#EFF6FF; }
+.gender-dot.girl { background:#FDF2F8; }
+.gender-dot.coed { background:#F0FDF4; }
+
+.row-info { flex:1; min-width:0; }
+.row-school {
+  font-size:19px; font-weight:900; color:#111; line-height:1.2;
+  font-family: Arial Black, Arial, sans-serif;
+}
+.row-meta {
+  font-size:12.5px; color:#6B7280; margin-top:3px; font-weight:500;
+}
+
+.row-right { text-align:right; flex-shrink:0; }
+.row-time {
+  font-size:16px; font-weight:800; color:#E63900; white-space:nowrap;
+}
+.row-badge {
+  display:inline-block; font-size:11px; font-weight:700;
+  padding:3px 10px; border-radius:20px; margin-top:5px;
+}
+.row-badge.r { background:#FEE2E2; color:#DC2626; }
+.row-badge.b { background:#DBEAFE; color:#1D4ED8; }
+
+/* TIP */
+.tip {
+  margin: 6px 40px 0;
+  background:#FFFBEB; border:2px solid #FCD34D;
+  border-radius:14px; padding:12px 20px;
+  display:flex; align-items:center; gap:12px;
+  flex-shrink:0;
+}
+.tip p {
+  font-size:13.5px; font-weight:600; color:#78350F; line-height:1.4;
+}
+
+/* FOOTER */
+.footer {
+  margin-top:auto;
+  background:#111827; padding:15px;
+  text-align:center; flex-shrink:0;
+}
+.footer p { font-size:18px; font-weight:700; color:#fff; }
+.footer span { color:#FBBF24; font-weight:900; }
+</style>
+<script>
+window.onload = function() {
+  var c = document.querySelector('.canvas');
+  var s = Math.min(window.innerWidth/1080, window.innerHeight/1080);
+  c.style.transform = 'scale('+s+')';
+};
+</script>
+</head>
+<body>
+<div class="canvas">
+
+  <div class="header">
+    <div class="eyebrow">📅 Saturday · 23 May 2026 · Route Planner</div>
+    <h1>Open House Day 🎓</h1>
+    <div class="sub">7 schools open tomorrow — who, when & where</div>
+  </div>
+
+  <!-- ON-SITE -->
+  <div class="section-label">
+    <span class="pill onsite">📍 On-site visits</span>
+    <div class="line"></div>
+  </div>
+
+  <div class="school-row boy">
+    <div class="gender-dot boy">👦</div>
+    <div class="row-info">
+      <div class="row-school">Hwa Chong Institution</div>
+      <div class="row-meta">📍 661 Bukit Timah Road &nbsp;·&nbsp; Boys school</div>
+    </div>
+    <div class="row-right">
+      <div class="row-time">8:00am – 1:00pm</div>
+      <span class="row-badge r">On-site</span>
+    </div>
+  </div>
+
+  <div class="school-row girl">
+    <div class="gender-dot girl">👧</div>
+    <div class="row-info">
+      <div class="row-school">Raffles Girls' School</div>
+      <div class="row-meta">📍 20 Anderson Road &nbsp;·&nbsp; Girls school</div>
+    </div>
+    <div class="row-right">
+      <div class="row-time">8:30am – 1:30pm</div>
+      <span class="row-badge r">On-site</span>
+    </div>
+  </div>
+
+  <div class="school-row boy">
+    <div class="gender-dot boy">👦</div>
+    <div class="row-info">
+      <div class="row-school">Victoria School</div>
+      <div class="row-meta">📍 2 Siglap Link &nbsp;·&nbsp; Boys school · Go early, closes 12pm!</div>
+    </div>
+    <div class="row-right">
+      <div class="row-time">8:00am – 12:00pm</div>
+      <span class="row-badge r">On-site</span>
+    </div>
+  </div>
+
+  <div class="school-row boy">
+    <div class="gender-dot boy">👦</div>
+    <div class="row-info">
+      <div class="row-school">St. Joseph's Institution</div>
+      <div class="row-meta">📍 38 Malcolm Road &nbsp;·&nbsp; Boys school · Open till 4pm</div>
+    </div>
+    <div class="row-right">
+      <div class="row-time">9:00am – 4:00pm</div>
+      <span class="row-badge r">On-site</span>
+    </div>
+  </div>
+
+  <div class="school-row coed">
+    <div class="gender-dot coed">👦👧</div>
+    <div class="row-info">
+      <div class="row-school">Crest Secondary School</div>
+      <div class="row-meta">📍 10 Seraya Lane, Jurong &nbsp;·&nbsp; Co-ed · Ends early!</div>
+    </div>
+    <div class="row-right">
+      <div class="row-time">9:00am – 10:30am</div>
+      <span class="row-badge r">On-site</span>
+    </div>
+  </div>
+
+  <!-- ONLINE -->
+  <div class="section-label">
+    <span class="pill online">💻 Online — attend from anywhere</span>
+    <div class="line"></div>
+  </div>
+
+  <div class="school-row girl">
+    <div class="gender-dot girl">👧</div>
+    <div class="row-info">
+      <div class="row-school">St. Anthony's Canossian</div>
+      <div class="row-meta">💻 Online · Girls school</div>
+    </div>
+    <div class="row-right">
+      <div class="row-time">10:00am – 11:00am</div>
+      <span class="row-badge b">Online</span>
+    </div>
+  </div>
+
+  <div class="school-row coed">
+    <div class="gender-dot coed">👦👧</div>
+    <div class="row-info">
+      <div class="row-school">Dunman High e-Open House</div>
+      <div class="row-meta">💻 Online · Co-ed (IP) · Link live on their website today</div>
+    </div>
+    <div class="row-right">
+      <div class="row-time">All day</div>
+      <span class="row-badge b">Online</span>
+    </div>
+  </div>
+
+  <div class="tip">
+    <span style="font-size:24px">💡</span>
+    <p><strong>Family with both a boy and a girl?</strong> SJI (Malcolm Rd) and RGS (Anderson Rd) are under 1km apart — split up and cover both schools at the same time!</p>
+  </div>
+
+  <div class="footer">
+    <p>Full details, addresses & official links → <span>dsalink.sg/open-houses</span></p>
+  </div>
+
+</div>
+</body>
+</html>

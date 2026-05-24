@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import { DSALINK_LOCALE_KEY } from "@/lib/constants";
 import { getGuideLocaleStrings, isLocale, type Locale } from "@/lib/i18n";
 import { OpenHousePreview, ScoresEntryCard, ResourceCards } from "@/components/HomeDynamic";
+import { TakeawaysEntryCard } from "@/components/TakeawaysEntryCard";
 import { DeadlineCard } from "@/components/DeadlineCard";
 import { DsaExplainerSection } from "@/components/DsaExplainerSection";
 import { DsaStrategySection } from "@/components/DsaStrategySection";
@@ -80,6 +81,7 @@ export default function HomePage() {
         <HeroSection>
           <DeadlineCard />
           <OpenHousePreview />
+          <TakeawaysEntryCard />
           <ScoresEntryCard />
         </HeroSection>
         <ParentJourneyStrip />

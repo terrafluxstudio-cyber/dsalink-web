@@ -118,6 +118,20 @@ export function upcomingOpenHouseEventsByDate(
   return openHouseEventsByDateFrom(upcomingOpenHouses(reference));
 }
 
+/**
+ * Open houses with a confirmed past date (excludes TBC placeholders).
+ * Returns events where date < today AND timeEn does not contain 'TBC'.
+ * Sorted most-recent-first.
+ */
+export function recentlyCompletedOpenHouses(
+  reference: Date = new Date(),
+): SchoolOpenHouse[] {
+  const todayKey = toSingaporeDateKey(reference);
+  return SCHOOL_OPEN_HOUSES.filter(
+    (ev) => ev.date < todayKey && !ev.timeEn.includes("TBC"),
+  ).sort((a, b) => b.date.localeCompare(a.date));
+}
+
 /** All rows flagged as popular (名校). */
 export function popularOpenHouses(): SchoolOpenHouse[] {
   return SCHOOL_OPEN_HOUSES.filter((ev) => ev.isPopular);

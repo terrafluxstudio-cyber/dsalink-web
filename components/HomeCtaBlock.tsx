@@ -60,9 +60,17 @@ export function HomeCtaBlock() {
           }}
         />
 
+        {/* ── Layer 4: gold bow corner decoration ── */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/ribbon-bow.webp"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-4 -top-16 z-20 w-80 sm:w-96"
+        />
+
         {/* ── Foreground content ── */}
         <div className="relative z-10 px-6 py-7 sm:px-8 sm:py-8">
-
           {/* Eyebrow badge */}
           <p className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-champagne/30 bg-champagne/10 px-3 py-1 text-[11px] font-bold tracking-[0.12em] text-champagne">
             <Sparkles className="h-3 w-3 shrink-0" aria-hidden />
