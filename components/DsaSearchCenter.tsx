@@ -359,7 +359,7 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
         <div className="flex flex-col gap-4 sm:flex-row sm:items-stretch sm:gap-5">
 
           {/* LEFT — stats on top, search below */}
-          <div className="flex flex-col gap-4 sm:flex-[0.95]">
+          <div className="flex flex-col gap-4 sm:flex-1">
             {/* Stats */}
             <div className="flex flex-wrap items-center justify-around gap-y-2 rounded-2xl border border-slate-200 bg-slate-50/80 px-3 py-4 text-center text-slate-500 shadow-sm sm:flex-nowrap sm:px-5">
               <Stat label={t("ui_stat_schools")} value="147" />
@@ -382,13 +382,13 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder={t("ui_search_placeholder")}
                 autoComplete="off"
-                className="w-full rounded-2xl border-2 border-blue-500/20 bg-white py-4 pl-12 pr-4 text-base font-semibold text-intellectual shadow-xl outline-none transition placeholder:text-intellectual-muted/60 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 sm:text-lg"
+                className="w-full rounded-2xl border-2 border-blue-500/20 bg-white py-4 pl-11 pr-4 text-sm font-semibold text-intellectual shadow-xl outline-none transition placeholder:text-intellectual-muted/60 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 sm:text-base"
               />
             </label>
           </div>
 
           {/* RIGHT — CTA card, full height */}
-          <div className="relative overflow-hidden rounded-2xl sm:flex-[1.05]">
+          <div className="relative overflow-hidden rounded-2xl sm:flex-1">
             <div aria-hidden className="absolute inset-0" style={{ backgroundColor: "#0d3f5f" }} />
             <div aria-hidden className="pointer-events-none absolute inset-0" style={{ backgroundImage: GRAIN_BG, backgroundSize: "180px 180px" }} />
             <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 65% at 95% -5%, rgba(198,162,74,0.30), transparent 60%)" }} />
