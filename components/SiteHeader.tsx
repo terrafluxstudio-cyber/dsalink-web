@@ -111,7 +111,7 @@ export function SiteHeader() {
   const dsaGuideLinks: readonly NavLink[] = [
     { href: "/dsa-guide", label: t.navWhatIsDsa },
     { href: "/faq", label: t.navFaq },
-    { href: "/dsa-experience", label: t.navParentStories },
+    { href: "/dsa-experience", label: t.navParentStories, gold: true },
   ];
 
   const openHouseLinks: readonly NavLink[] = [
@@ -127,7 +127,7 @@ export function SiteHeader() {
   ];
 
   const schoolFinderLinks: readonly NavLink[] = [
-    { href: "/dsa-finder", label: t.navSearchSchools },
+    { href: "/dsa-finder", label: t.navSearchSchools, gold: true },
     { href: "/schools", label: t.navAllSchools },
     { href: "/psle-cop", label: t.navPsleCutoffs },
   ];

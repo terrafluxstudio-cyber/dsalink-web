@@ -15,13 +15,13 @@ export function BlogSubscribeBlock() {
           {/* Subscribe */}
           <div className="flex-1">
             <p className="text-xs font-bold uppercase tracking-[0.14em] text-champagne">
-              Stay updated
+              Free · No spam
             </p>
             <p className="mt-2 font-display text-xl font-semibold text-white normal-case">
-              Get open house recaps the same day
+              Everything your child needs, in your inbox
             </p>
             <p className="mt-1.5 text-sm leading-relaxed text-white/55 normal-case">
-              We publish takeaways from every DSA open house within 24 hours. No fluff, no spam.
+              School analysis, interview prep, talent area guides, and deadline reminders — one email at a time, only when it matters.
             </p>
             {status === "success" ? (
               <div className="mt-4 flex items-center gap-2 text-champagne-light">
@@ -78,7 +78,7 @@ export function BlogSubscribeBlock() {
               Follow us
             </p>
             <p className="mt-2 text-sm text-white/55 normal-case">
-              We also post daily DSA tips and open house alerts on:
+              Daily DSA tips, school news, and quick guides across:
             </p>
             <ul className="mt-4 space-y-3">
               <li>
