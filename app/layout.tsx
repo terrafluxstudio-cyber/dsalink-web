@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Noto_Sans_SC, Noto_Sans_Tamil, Plus_Jakarta_Sans } from "next/font/google";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { UtmCapture } from "@/components/UtmCapture";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { getSiteUrl } from "@/lib/seo";
 import "./globals.css";
@@ -113,6 +114,7 @@ export default function RootLayout({
       <body className="font-sans">
         <GoogleAnalytics />
         <UtmCapture />
+        <SpeedInsights />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
