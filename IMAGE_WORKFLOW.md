@@ -42,13 +42,30 @@
 **缩放到指定尺寸：**
 预览 → 工具 → 调整大小 → 输入宽度 → 确定
 
-### 第四步：Squoosh压缩
+### 第四步：压缩转WebP（必做，不做不上线）
+
+**方法A — 用sharp脚本（推荐，Claude执行）：**
+```bash
+node -e "
+const sharp = require('sharp');
+sharp('input.png')
+  .resize(1200, 630, { fit: 'cover' })
+  .modulate({ brightness: 1.2 })  // 如需提亮
+  .webp({ quality: 80 })
+  .toFile('output.webp')
+  .then(info => console.log(info));
+"
+```
+
+**方法B — Squoosh（手动）：**
 - 打开 squoosh.app
-- 上传图片
-- 右侧格式选 **WebP**
-- 质量调到 **75–80%**
-- 下载压缩后文件
-- 目标：控制在 **200KB以下**
+- 上传图片，右侧格式选 **WebP**，质量 **75–80%**
+- 下载后替换原文件
+
+**标准：**
+- Blog图：1200×630px，目标 **50KB以下**
+- 其他图：按实际尺寸，目标 **200KB以下**
+- 格式：一律 **.webp**，禁止PNG/JPG直接上线
 
 ### 第五步：放进网站
 - 压缩后图片放入 `public/images/` 目录
