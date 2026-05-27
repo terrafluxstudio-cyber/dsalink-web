@@ -452,8 +452,6 @@ export const SCHOOL_OPEN_HOUSES: SchoolOpenHouse[] = [
     region: "Central",
     schoolType: "IP",
     isPopular: true,
-    dateDisplayEn: "Sat, 30 May",
-    dateDisplayZh: "5月30日（六）",
   },
   {
     id: "changkat-changi-secondary-school",
@@ -1919,8 +1917,6 @@ export const SCHOOL_OPEN_HOUSES: SchoolOpenHouse[] = [
     region: "West",
     schoolType: "Government",
     isPopular: false,
-    dateDisplayEn: "Sat, 30 May",
-    dateDisplayZh: "5月30日（六）",
   },
   {
     id: "school-of-the-arts-singapore",
@@ -2593,8 +2589,6 @@ export const SCHOOL_OPEN_HOUSES: SchoolOpenHouse[] = [
     region: "East",
     schoolType: "Government",
     isPopular: false,
-    dateDisplayEn: "Sat, 30 May",
-    dateDisplayZh: "5月30日（六）",
   },
   {
     id: "yuying-secondary-school",
