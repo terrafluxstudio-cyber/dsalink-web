@@ -49,6 +49,7 @@ const TAKEAWAYS_MAP: Record<string, string> = {
   "dunman-high-school": "dhs",
   "st-anthonys-canossian-secondary-school": "sacss",
   "crest-secondary-school": "crest",
+  "tanjong-katong-secondary-school": "tkss",
 };
 
 /** Returns an i18n key for the urgency tag, or null if no urgency applies.
