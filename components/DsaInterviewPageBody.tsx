@@ -128,18 +128,61 @@ export function DsaInterviewPageBody() {
     { date: t.dsaInterviewTimelineRow5Date, event: t.dsaInterviewTimelineRow5Event, detail: t.dsaInterviewTimelineRow5Detail },
   ];
 
-  const introSteps = [
-    { label: t.dsaInterviewIntroStep1Label, body: t.dsaInterviewIntroStep1Body },
-    { label: t.dsaInterviewIntroStep2Label, body: t.dsaInterviewIntroStep2Body },
-    { label: t.dsaInterviewIntroStep3Label, body: t.dsaInterviewIntroStep3Body },
-    { label: t.dsaInterviewIntroStep4Label, body: t.dsaInterviewIntroStep4Body },
+  const introElements = [
+    { label: t.dsaInterviewIntroEl1Label, body: t.dsaInterviewIntroEl1Body },
+    { label: t.dsaInterviewIntroEl2Label, body: t.dsaInterviewIntroEl2Body },
+    { label: t.dsaInterviewIntroEl3Label, body: t.dsaInterviewIntroEl3Body },
+    { label: t.dsaInterviewIntroEl4Label, body: t.dsaInterviewIntroEl4Body },
+    { label: t.dsaInterviewIntroEl5Label, body: t.dsaInterviewIntroEl5Body },
   ];
 
-  const introParentTips = [
-    { title: t.dsaInterviewIntroParent1Title, body: t.dsaInterviewIntroParent1Body },
-    { title: t.dsaInterviewIntroParent2Title, body: t.dsaInterviewIntroParent2Body },
-    { title: t.dsaInterviewIntroParent3Title, body: t.dsaInterviewIntroParent3Body },
-    { title: t.dsaInterviewIntroParent4Title, body: t.dsaInterviewIntroParent4Body },
+  const introTemplateGroups = [
+    {
+      group: t.dsaInterviewTplGroupSports,
+      templates: [
+        { label: t.dsaInterviewTplCompLabel, body: t.dsaInterviewTplSportsCBody },
+        { label: t.dsaInterviewTplDevLabel, body: t.dsaInterviewTplSportsDBody },
+      ],
+    },
+    {
+      group: t.dsaInterviewTplGroupDance,
+      templates: [
+        { label: t.dsaInterviewTplCompLabel, body: t.dsaInterviewTplDanceCBody },
+        { label: t.dsaInterviewTplDevLabel, body: t.dsaInterviewTplDanceDBody },
+      ],
+    },
+    {
+      group: t.dsaInterviewTplGroupMusic,
+      templates: [
+        { label: t.dsaInterviewTplCompLabel, body: t.dsaInterviewTplMusicCBody },
+        { label: t.dsaInterviewTplDevLabel, body: t.dsaInterviewTplMusicDBody },
+      ],
+    },
+    {
+      group: t.dsaInterviewTplGroupStem,
+      templates: [
+        { label: t.dsaInterviewTplCompLabel, body: t.dsaInterviewTplStemCBody },
+        { label: t.dsaInterviewTplDevLabel, body: t.dsaInterviewTplStemDBody },
+      ],
+    },
+    {
+      group: t.dsaInterviewTplGroupLang,
+      templates: [
+        { label: t.dsaInterviewTplCompLabel, body: t.dsaInterviewTplLangCBody },
+        { label: t.dsaInterviewTplDevLabel, body: t.dsaInterviewTplLangDBody },
+      ],
+    },
+  ];
+
+  const bodyLangBefore = [t.dsaInterviewBodyPre1, t.dsaInterviewBodyPre2, t.dsaInterviewBodyPre3];
+  const bodyLangSpeaking = [t.dsaInterviewBodySpk1, t.dsaInterviewBodySpk2, t.dsaInterviewBodySpk3, t.dsaInterviewBodySpk4, t.dsaInterviewBodySpk5];
+  const bodyLangAvoid = [t.dsaInterviewBodyAvd1, t.dsaInterviewBodyAvd2, t.dsaInterviewBodyAvd3, t.dsaInterviewBodyAvd4];
+
+  const practiceWeeks = [
+    { title: t.dsaInterviewPracticeWk1Title, body: t.dsaInterviewPracticeWk1Body },
+    { title: t.dsaInterviewPracticeWk2Title, body: t.dsaInterviewPracticeWk2Body },
+    { title: t.dsaInterviewPracticeWk3Title, body: t.dsaInterviewPracticeWk3Body },
+    { title: t.dsaInterviewPracticeWk4Title, body: t.dsaInterviewPracticeWk4Body },
   ];
 
   const introMistakes = [
@@ -491,33 +534,21 @@ export function DsaInterviewPageBody() {
               </p>
             </section>
 
+            {/* Self-Introduction */}
             <section className="mb-10">
               <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
                 {t.dsaInterviewIntroHeading}
               </h2>
               <p className="mb-6 text-[0.9375rem] text-slate-600">{t.dsaInterviewIntroLead}</p>
 
+              {/* 5-Element Framework */}
               <div className="mb-8">
-                <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
-                  {t.dsaInterviewIntroParentHeading}
+                <h3 className="mb-1 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                  {t.dsaInterviewIntroElHeading}
                 </h3>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {introParentTips.map(({ title, body }) => (
-                    <div key={title} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
-                      <p className="mb-1.5 font-display text-[0.875rem] font-semibold text-slate-900">{title}</p>
-                      <p className="text-[0.8125rem] leading-relaxed text-slate-500">{body}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
-                  {t.dsaInterviewIntroKidHeading}
-                </h3>
-                <p className="mb-4 text-[0.875rem] text-slate-600">{t.dsaInterviewIntroKidLead}</p>
+                <p className="mb-4 text-[0.875rem] text-slate-500">{t.dsaInterviewIntroElLead}</p>
                 <div className="space-y-3">
-                  {introSteps.map(({ label, body }, i) => (
+                  {introElements.map(({ label, body }, i) => (
                     <div key={label} className="flex gap-4 rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
                       <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-intellectual text-[0.8125rem] font-bold text-white">
                         {i + 1}
@@ -531,16 +562,33 @@ export function DsaInterviewPageBody() {
                 </div>
               </div>
 
-              <div className="mb-6 rounded-xl border border-intellectual/20 bg-intellectual/5 p-5">
-                <p className="mb-2 text-[0.75rem] font-bold tracking-wide text-intellectual">
-                  {t.dsaInterviewIntroTemplateHeading}
+              {/* Templates */}
+              <div className="mb-8">
+                <h3 className="mb-1 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                  {t.dsaInterviewTplHeading}
+                </h3>
+                <p className="mb-2 text-[0.875rem] text-slate-500">{t.dsaInterviewTplLead}</p>
+                <p className="mb-5 rounded-lg border border-intellectual/15 bg-intellectual/5 px-4 py-2.5 text-[0.8125rem] text-slate-600">
+                  {t.dsaInterviewTplNote}
                 </p>
-                <p className="mb-2 text-[0.9375rem] italic leading-relaxed text-slate-700">
-                  {t.dsaInterviewIntroTemplateBody}
-                </p>
-                <p className="text-[0.75rem] text-slate-400">{t.dsaInterviewIntroTemplateNote}</p>
+                <div className="space-y-6">
+                  {introTemplateGroups.map(({ group, templates }) => (
+                    <div key={group}>
+                      <p className="mb-2 font-display text-[0.875rem] font-semibold text-slate-800">{group}</p>
+                      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                        {templates.map(({ label, body }) => (
+                          <div key={label} className="rounded-xl border border-[#e3ded5] bg-white p-4 shadow-card">
+                            <p className="mb-2 text-[0.75rem] font-bold tracking-wide text-intellectual">{label}</p>
+                            <p className="text-[0.8125rem] italic leading-relaxed text-slate-600">{body}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
 
+              {/* Mistakes */}
               <div>
                 <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
                   {t.dsaInterviewIntroMistakesHeading}
@@ -554,6 +602,92 @@ export function DsaInterviewPageBody() {
                       <p className="text-[0.8125rem] leading-relaxed text-slate-700">{mistake}</p>
                     </div>
                   ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Body Language */}
+            <section className="mb-10">
+              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                {t.dsaInterviewBodyHeading}
+              </h2>
+              <p className="mb-6 text-[0.9375rem] text-slate-600">{t.dsaInterviewBodyLead}</p>
+
+              <div className="space-y-7">
+                <div>
+                  <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                    {t.dsaInterviewBodySec1}
+                  </h3>
+                  <div className="space-y-2">
+                    {bodyLangBefore.map((item, i) => (
+                      <div key={i} className="flex gap-3 rounded-lg border border-[#e3ded5] bg-white px-4 py-3 shadow-card">
+                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-intellectual/10 text-[0.75rem] font-bold text-intellectual">
+                          {i + 1}
+                        </span>
+                        <p className="text-[0.8125rem] leading-relaxed text-slate-600">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                    {t.dsaInterviewBodySec2}
+                  </h3>
+                  <div className="space-y-2">
+                    {bodyLangSpeaking.map((item, i) => (
+                      <div key={i} className="flex gap-3 rounded-lg border border-[#e3ded5] bg-white px-4 py-3 shadow-card">
+                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-intellectual/10 text-[0.75rem] font-bold text-intellectual">
+                          {i + 1}
+                        </span>
+                        <p className="text-[0.8125rem] leading-relaxed text-slate-600">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                    {t.dsaInterviewBodySec3}
+                  </h3>
+                  <div className="rounded-xl border border-intellectual/20 bg-intellectual/5 p-5">
+                    <p className="text-[0.9375rem] leading-relaxed text-slate-700">{t.dsaInterviewBodyHabit}</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                    {t.dsaInterviewBodySec4}
+                  </h3>
+                  <div className="space-y-2">
+                    {bodyLangAvoid.map((item, i) => (
+                      <div key={i} className="flex gap-3 rounded-lg border border-champagne/30 bg-champagne-subtle px-4 py-3">
+                        <span className="mt-0.5 text-[0.875rem] font-bold text-champagne-dark shrink-0">✕</span>
+                        <p className="text-[0.8125rem] leading-relaxed text-slate-700">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Parent Practice Guide */}
+            <section className="mb-10">
+              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                {t.dsaInterviewPracticeHeading}
+              </h2>
+              <p className="mb-6 text-[0.9375rem] text-slate-600">{t.dsaInterviewPracticeLead}</p>
+
+              <div className="space-y-4">
+                {practiceWeeks.map(({ title, body }) => (
+                  <div key={title} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+                    <p className="mb-2 font-display text-[0.875rem] font-semibold text-slate-900">{title}</p>
+                    <p className="text-[0.8125rem] leading-relaxed text-slate-500">{body}</p>
+                  </div>
+                ))}
+                <div className="rounded-xl border border-intellectual/20 bg-intellectual/5 p-5">
+                  <p className="mb-2 font-display text-[0.875rem] font-semibold text-intellectual">{t.dsaInterviewPracticePreTitle}</p>
+                  <p className="text-[0.8125rem] leading-relaxed text-slate-600">{t.dsaInterviewPracticePreBody}</p>
                 </div>
               </div>
             </section>
