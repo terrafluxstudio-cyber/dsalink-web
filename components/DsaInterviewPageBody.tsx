@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import Link from "next/link";
+import { Q_BANK } from "@/lib/dsa-qbank";
 import { PageHeader } from "@/components/PageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -14,6 +16,7 @@ function splitPipe(s: string) {
 export function DsaInterviewPageBody() {
   const { t, locale } = useLanguage();
   const [activeTab, setActiveTab] = useState("overview");
+  const [expandedQ, setExpandedQ] = useState<string | null>(null);
 
   // ── Data arrays ────────────────────────────────────────────────────────────
 
@@ -336,14 +339,25 @@ export function DsaInterviewPageBody() {
           : "Self-Introduction",
     },
     {
-      id: "qa",
+      id: "q-bank",
       label:
         locale === "zh"
-          ? "面试问答"
+          ? "面试题库"
           : locale === "ms"
-          ? "Soal Jawab"
+          ? "Bank Soalan"
           : locale === "ta"
-          ? "கேள்வி பதில்"
+          ? "கேள்வி வங்கி"
+          : "Question Bank",
+    },
+    {
+      id: "q-prep",
+      label:
+        locale === "zh"
+          ? "问答策略"
+          : locale === "ms"
+          ? "Strategi Soal Jawab"
+          : locale === "ta"
+          ? "கேள்வி தயாரிப்பு"
           : "Q&A Prep",
     },
     {
@@ -964,8 +978,151 @@ export function DsaInterviewPageBody() {
               </div>
             )}
 
+            {/* ══ TAB: QUESTION BANK ════════════════════════════════════════ */}
+            {activeTab === "q-bank" && (
+              <div className="space-y-8">
+                <div>
+                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                    {locale === "zh"
+                      ? "DSA 面试题库"
+                      : locale === "ms"
+                      ? "Bank Soalan Temuduga DSA"
+                      : locale === "ta"
+                      ? "DSA நேர்காணல் கேள்வி வங்கி"
+                      : "DSA Interview Question Bank"}
+                  </h2>
+                  <p className="mb-6 text-[0.9375rem] text-slate-600">
+                    {locale === "zh"
+                      ? "这些是DSA面试中真实出现的问题——来自家长论坛、校友反馈和面试辅导经验。点击每道题，查看考官真正想听什么、最佳回答角度和模版示例。"
+                      : locale === "ms"
+                      ? "Soalan-soalan ini benar-benar muncul dalam temuduga DSA — daripada forum ibu bapa, maklum balas alumni dan pengalaman bimbingan. Klik setiap soalan untuk melihat apa yang penilai benar-benar ingin dengar, sudut jawapan terbaik, dan contoh templat."
+                      : locale === "ta"
+                      ? "இந்த கேள்விகள் DSA நேர்காணல்களில் உண்மையாக வருகின்றன — பெற்றோர் மன்றங்கள், முன்னோடி மாணவர் கருத்துகள் மற்றும் பயிற்சி அனுபவங்களிலிருந்து. ஒவ்வொரு கேள்வியையும் கிளிக் செய்து மதிப்பீட்டாளர் உண்மையில் என்ன கேட்க விரும்புகிறார், சிறந்த பதில் கோணம் மற்றும் மாதிரி வார்ப்புருக்களை காணுங்கள்."
+                      : "These questions genuinely appear in DSA interviews — drawn from parent forums, alumni feedback, and coaching experience. Click each question to see what the interviewer is really looking for, the best answering angle, and template responses."}
+                  </p>
+                </div>
+
+                {Q_BANK.map((category) => (
+                  <div key={category.id}>
+                    <h3 className="mb-4 text-[0.7rem] font-bold tracking-widest text-slate-400">
+                      {locale === "zh"
+                        ? category.label.zh
+                        : locale === "ms"
+                        ? category.label.ms
+                        : locale === "ta"
+                        ? category.label.ta
+                        : category.label.en}
+                    </h3>
+                    <div className="space-y-2">
+                      {category.questions.map((question) => {
+                        const isOpen = expandedQ === question.id;
+                        return (
+                          <div
+                            key={question.id}
+                            className="overflow-hidden rounded-xl border border-[#e3ded5] bg-white shadow-card"
+                          >
+                            <button
+                              className="flex w-full items-start justify-between gap-3 px-5 py-4 text-left"
+                              onClick={() =>
+                                setExpandedQ(isOpen ? null : question.id)
+                              }
+                              aria-expanded={isOpen}
+                            >
+                              <p className="font-display text-[0.9375rem] font-semibold leading-snug text-slate-900">
+                                {question.q}
+                              </p>
+                              <ChevronDown
+                                className={`mt-0.5 h-4 w-4 shrink-0 text-slate-400 transition-transform duration-200 ${
+                                  isOpen ? "rotate-180" : ""
+                                }`}
+                              />
+                            </button>
+                            {isOpen && (
+                              <div className="space-y-5 border-t border-[#e3ded5] px-5 pb-5 pt-4">
+                                {/* What the interviewer is assessing */}
+                                <div>
+                                  <p className="mb-2 text-[0.7rem] font-bold tracking-widest text-intellectual">
+                                    {locale === "zh"
+                                      ? "考官真正在考察什么"
+                                      : locale === "ms"
+                                      ? "Apa yang penilai benar-benar nilai"
+                                      : locale === "ta"
+                                      ? "மதிப்பீட்டாளர் உண்மையில் என்ன பார்க்கிறார்"
+                                      : "What the interviewer is really assessing"}
+                                  </p>
+                                  <p className="text-[0.875rem] leading-relaxed text-slate-600">
+                                    {locale === "zh"
+                                      ? question.subtext.zh
+                                      : locale === "ms"
+                                      ? question.subtext.ms
+                                      : locale === "ta"
+                                      ? question.subtext.ta
+                                      : question.subtext.en}
+                                  </p>
+                                </div>
+                                {/* How to answer well */}
+                                <div className="rounded-lg border border-intellectual/15 bg-intellectual/5 px-4 py-4">
+                                  <p className="mb-2 text-[0.7rem] font-bold tracking-widest text-intellectual">
+                                    {locale === "zh"
+                                      ? "最佳回答角度"
+                                      : locale === "ms"
+                                      ? "Cara terbaik untuk menjawab"
+                                      : locale === "ta"
+                                      ? "சிறந்த பதில் கோணம்"
+                                      : "How to answer this well"}
+                                  </p>
+                                  <p className="text-[0.875rem] leading-relaxed text-slate-700">
+                                    {locale === "zh"
+                                      ? question.approach.zh
+                                      : locale === "ms"
+                                      ? question.approach.ms
+                                      : locale === "ta"
+                                      ? question.approach.ta
+                                      : question.approach.en}
+                                  </p>
+                                </div>
+                                {/* Sample templates */}
+                                {question.templates.length > 0 && (
+                                  <div>
+                                    <p className="mb-3 text-[0.7rem] font-bold tracking-widest text-champagne-dark">
+                                      {locale === "zh"
+                                        ? "参考答案模版"
+                                        : locale === "ms"
+                                        ? "Templat jawapan rujukan"
+                                        : locale === "ta"
+                                        ? "குறிப்பு பதில் வார்ப்புருக்கள்"
+                                        : "Sample response templates"}
+                                    </p>
+                                    <div className="space-y-3">
+                                      {question.templates.map((tpl) => (
+                                        <div
+                                          key={tpl.label}
+                                          className="rounded-lg border border-champagne/30 bg-champagne-subtle px-4 py-4"
+                                        >
+                                          <p className="mb-2 text-[0.7rem] font-bold tracking-widest text-champagne-dark">
+                                            {tpl.label}
+                                          </p>
+                                          <p className="text-[0.8125rem] italic leading-relaxed text-slate-600">
+                                            &ldquo;{tpl.text}&rdquo;
+                                          </p>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
             {/* ══ TAB: Q&A PREP ══════════════════════════════════════════════ */}
-            {activeTab === "qa" && (
+            {activeTab === "q-prep" && (
               <div className="space-y-10">
 
                 <section>
@@ -995,21 +1152,16 @@ export function DsaInterviewPageBody() {
                   </p>
                 </section>
 
-                {/* Placeholder for upcoming Q&A expansion */}
-                <div className="rounded-xl border border-champagne/40 bg-champagne-subtle p-6">
-                  <div className="mb-2 flex items-center gap-2">
-                    <span className="rounded-full bg-champagne/30 px-3 py-0.5 text-[0.7rem] font-bold tracking-wide text-champagne-dark">
-                      {t.dsaInterviewOfferComingSoon}
-                    </span>
-                  </div>
+                {/* Pointer to Question Bank tab */}
+                <div className="rounded-xl border border-intellectual/15 bg-intellectual/5 px-5 py-4">
                   <p className="text-[0.875rem] leading-relaxed text-slate-600">
                     {locale === "zh"
-                      ? "更多面试问题与模范答案即将上线——包括各DSA领域专属问题、追问应对技巧、评审最看重的回答要素。"
+                      ? "想查看每道题的深度解析、最佳回答角度和模版示例？切换到「面试题库」标签页。"
                       : locale === "ms"
-                      ? "Lebih banyak soalan temuduga dan jawapan contoh akan datang — termasuk soalan khusus mengikut bidang DSA, teknik menangani soalan susulan, dan elemen jawapan yang paling dihargai penilai."
+                      ? "Untuk analisis mendalam, sudut jawapan terbaik, dan templat untuk setiap soalan — lihat tab Bank Soalan."
                       : locale === "ta"
-                      ? "மேலும் நேர்காணல் கேள்விகள் மற்றும் மாதிரி பதில்கள் விரைவில் — DSA பகுதி-குறிப்பிட்ட கேள்விகள், தொடர் கேள்விகளை எதிர்கொள்வது மற்றும் மதிப்பீட்டாளர்கள் மிகவும் மதிக்கும் பதில் கூறுகள் உட்பட."
-                      : "More interview questions and model answers coming soon — including DSA area-specific questions, handling follow-up questions, and the answer elements assessors value most."}
+                      ? "ஒவ்வொரு கேள்விக்கும் ஆழமான பகுப்பாய்வு, சிறந்த பதில் கோணம் மற்றும் மாதிரி வார்ப்புருக்கள் காண — கேள்வி வங்கி tab-க்கு செல்லுங்கள்."
+                      : "For a deep-dive into each question — including what the interviewer is really assessing, how to angle your answer, and full template responses — see the Question Bank tab."}
                   </p>
                 </div>
 
