@@ -730,8 +730,54 @@ export function OpenHouseGuidePageBody() {
                 {locale === "zh" ? "查看选拔准备指南 →" : "Read the Selection Guide →"}
               </Link>
             </div>
+            <div className="mt-5 flex flex-wrap gap-2 border-t border-[#e3ded5] pt-5">
+              <p className="w-full text-[0.75rem] text-slate-400">
+                {locale === "zh"
+                  ? "同时也值得查看"
+                  : locale === "ms"
+                  ? "Juga berguna"
+                  : locale === "ta"
+                  ? "மேலும் உதவியாக இருக்கும்"
+                  : "Also worth checking"}
+              </p>
+              <Link
+                href="/open-houses"
+                className="rounded-lg border border-intellectual/15 bg-white px-3.5 py-1.5 text-[0.8125rem] text-slate-600 transition hover:border-intellectual/30 hover:text-intellectual"
+              >
+                {locale === "zh"
+                  ? "2026 开放日日历"
+                  : locale === "ms"
+                  ? "Kalendar Hari Terbuka 2026"
+                  : locale === "ta"
+                  ? "2026 திறந்த நாள் அட்டவணை"
+                  : "2026 Open House Calendar"}
+              </Link>
+              <Link
+                href="/dsa-finder"
+                className="rounded-lg border border-intellectual/15 bg-white px-3.5 py-1.5 text-[0.8125rem] text-slate-600 transition hover:border-intellectual/30 hover:text-intellectual"
+              >
+                {locale === "zh"
+                  ? "按才能搜索匹配学校"
+                  : locale === "ms"
+                  ? "Cari Sekolah Mengikut Bakat"
+                  : locale === "ta"
+                  ? "திறன் வாரியாக பள்ளிகளை தேடுங்கள்"
+                  : "Find Schools by Talent Area"}
+              </Link>
+              <Link
+                href="/apply"
+                className="rounded-lg border border-intellectual/15 bg-white px-3.5 py-1.5 text-[0.8125rem] text-slate-600 transition hover:border-intellectual/30 hover:text-intellectual"
+              >
+                {locale === "zh"
+                  ? "填好心水学校？查看申请清单"
+                  : locale === "ms"
+                  ? "Sudah buat senarai pendek? Semak senarai semak permohonan"
+                  : locale === "ta"
+                  ? "பள்ளி குறுகிய பட்டியல் தயார்? விண்ணப்ப சரிபார்ப்பு பட்டியல் பாருங்கள்"
+                  : "Shortlist ready? Check the Application Checklist"}
+              </Link>
+            </div>
           </div>
-
         </div>
       </main>
       <SiteFooter scheduleNote={t.ohGuide_footerNote} />

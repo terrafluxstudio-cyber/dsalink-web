@@ -253,6 +253,53 @@ export function DsaGuidePageBody() {
                 </Link>
               </div>
             </div>
+            <div className="mt-5 flex flex-wrap gap-2 border-t border-[#e3ded5] pt-5">
+              <p className="w-full text-[0.75rem] text-slate-400">
+                {locale === "zh"
+                  ? "还有问题？"
+                  : locale === "ms"
+                  ? "Ada soalan lagi?"
+                  : locale === "ta"
+                  ? "இன்னும் கேள்விகள் உள்ளதா?"
+                  : "Still have questions?"}
+              </p>
+              <Link
+                href="/faq"
+                className="rounded-lg border border-intellectual/15 bg-surface px-3.5 py-1.5 text-[0.8125rem] text-slate-600 transition hover:border-intellectual/30 hover:text-intellectual"
+              >
+                {locale === "zh"
+                  ? "DSA 常见问题解答"
+                  : locale === "ms"
+                  ? "Soalan Lazim DSA"
+                  : locale === "ta"
+                  ? "DSA அடிக்கடி கேட்கப்படும் கேள்விகள்"
+                  : "DSA Frequently Asked Questions"}
+              </Link>
+              <Link
+                href="/dsa-interview"
+                className="rounded-lg border border-intellectual/15 bg-surface px-3.5 py-1.5 text-[0.8125rem] text-slate-600 transition hover:border-intellectual/30 hover:text-intellectual"
+              >
+                {locale === "zh"
+                  ? "面试与选拔准备"
+                  : locale === "ms"
+                  ? "Persediaan Temuduga & Pemilihan"
+                  : locale === "ta"
+                  ? "நேர்காணல் & தேர்வு தயாரிப்பு"
+                  : "Interview & Selection Preparation"}
+              </Link>
+              <Link
+                href="/dsa-experience"
+                className="rounded-lg border border-intellectual/15 bg-surface px-3.5 py-1.5 text-[0.8125rem] text-slate-600 transition hover:border-intellectual/30 hover:text-intellectual"
+              >
+                {locale === "zh"
+                  ? "真实家长申请经历"
+                  : locale === "ms"
+                  ? "Pengalaman Ibu Bapa Sebenar"
+                  : locale === "ta"
+                  ? "உண்மையான பெற்றோர் அனுபவங்கள்"
+                  : "Real Parent DSA Experiences"}
+              </Link>
+            </div>
           </div>
         </div>
       </main>

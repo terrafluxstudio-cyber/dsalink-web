@@ -516,6 +516,81 @@ export function DsaExperiencePageBody() {
                     <span aria-hidden>→</span>
                   </Link>
                 </div>
+
+                {/* Related guides */}
+                <div className="mt-10">
+                  <p className="mb-3 text-[10px] font-bold tracking-[0.14em] text-slate-400">
+                    {locale === "zh"
+                      ? "读完之后"
+                      : locale === "ms"
+                      ? "SELEPAS MEMBACA INI"
+                      : locale === "ta"
+                      ? "படித்த பிறகு"
+                      : "WHAT TO DO NEXT"}
+                  </p>
+                  <div className="grid gap-3 sm:grid-cols-3">
+                    <Link
+                      href="/dsa-guide"
+                      className="flex flex-col rounded-xl border border-[#e3ded5] bg-white p-4 shadow-card transition hover:border-intellectual/30 hover:shadow-card-hover"
+                    >
+                      <span className="mb-1 text-[10px] font-bold tracking-wide text-champagne-dark">
+                        {locale === "zh" ? "了解机制" : locale === "ms" ? "FAHAMI PROSESNYA" : locale === "ta" ? "விதிமுறைகளை புரிந்துகொள்ளுங்கள்" : "UNDERSTAND THE PROCESS"}
+                      </span>
+                      <span className="font-display text-[0.9375rem] font-semibold text-slate-900">
+                        {locale === "zh" ? "DSA 完整解析" : locale === "ms" ? "Panduan DSA Lengkap" : locale === "ta" ? "DSA முழுமையான வழிகாட்டி" : "The Complete DSA Guide"}
+                      </span>
+                      <span className="mt-1 text-[0.8125rem] leading-relaxed text-slate-500">
+                        {locale === "zh"
+                          ? "申请时间线、才能领域、Commitment Rule 的完整解释"
+                          : locale === "ms"
+                          ? "Garis masa permohonan, bidang bakat, dan Peraturan Komitmen dijelaskan sepenuhnya"
+                          : locale === "ta"
+                          ? "விண்ணப்ப காலவரிசை, திறன் பகுதிகள், மற்றும் Commitment Rule முழு விளக்கம்"
+                          : "Application timeline, talent areas, and the Commitment Rule — fully explained"}
+                      </span>
+                    </Link>
+                    <Link
+                      href="/dsa-interview"
+                      className="flex flex-col rounded-xl border border-[#e3ded5] bg-white p-4 shadow-card transition hover:border-intellectual/30 hover:shadow-card-hover"
+                    >
+                      <span className="mb-1 text-[10px] font-bold tracking-wide text-champagne-dark">
+                        {locale === "zh" ? "准备选拔" : locale === "ms" ? "BERSEDIA UNTUK TEMUDUGA" : locale === "ta" ? "தேர்வுக்கு தயாராகுங்கள்" : "PREPARE FOR SELECTION"}
+                      </span>
+                      <span className="font-display text-[0.9375rem] font-semibold text-slate-900">
+                        {locale === "zh" ? "面试与选拔准备" : locale === "ms" ? "Persediaan Temuduga & Pemilihan" : locale === "ta" ? "நேர்காணல் & தேர்வு தயாரிப்பு" : "Interview & Selection Prep"}
+                      </span>
+                      <span className="mt-1 text-[0.8125rem] leading-relaxed text-slate-500">
+                        {locale === "zh"
+                          ? "自我介绍范文、面试题库、肢体语言与四周练习计划"
+                          : locale === "ms"
+                          ? "Templat pengenalan diri, bank soalan temuduga, bahasa badan dan pelan latihan 4 minggu"
+                          : locale === "ta"
+                          ? "சுய அறிமுக வார்ப்புருக்கள், கேள்வி வங்கி, உடல் மொழி மற்றும் 4 வார பயிற்சி திட்டம்"
+                          : "Self-introduction templates, question bank, body language, and a 4-week practice plan"}
+                      </span>
+                    </Link>
+                    <Link
+                      href="/open-houses"
+                      className="flex flex-col rounded-xl border border-[#e3ded5] bg-white p-4 shadow-card transition hover:border-intellectual/30 hover:shadow-card-hover"
+                    >
+                      <span className="mb-1 text-[10px] font-bold tracking-wide text-champagne-dark">
+                        {locale === "zh" ? "安排参访" : locale === "ms" ? "DAFTARKAN LAWATAN" : locale === "ta" ? "வருகை திட்டமிடுங்கள்" : "PLAN YOUR VISITS"}
+                      </span>
+                      <span className="font-display text-[0.9375rem] font-semibold text-slate-900">
+                        {locale === "zh" ? "开放日日历" : locale === "ms" ? "Kalendar Hari Terbuka" : locale === "ta" ? "திறந்த நாள் அட்டவணை" : "Open House Calendar"}
+                      </span>
+                      <span className="mt-1 text-[0.8125rem] leading-relaxed text-slate-500">
+                        {locale === "zh"
+                          ? "查看各中学 2026 年开放日日期与报名方式"
+                          : locale === "ms"
+                          ? "Semak tarikh Hari Terbuka 2026 dan cara mendaftar untuk setiap sekolah menengah"
+                          : locale === "ta"
+                          ? "2026 ஆண்டு ஒவ்வொரு இடைநிலைப் பள்ளியின் திறந்த நாள் தேதிகள் மற்றும் பதிவு முறையை சரிபார்க்கவும்"
+                          : "Check 2026 open house dates and registration links for each secondary school"}
+                      </span>
+                    </Link>
+                  </div>
+                </div>
               </article>
             </div>
           </div>

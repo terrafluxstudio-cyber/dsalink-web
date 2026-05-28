@@ -73,5 +73,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.86,
     },
+    {
+      url: `${base}/apply`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${base}/blog`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
+      url: `${base}/open-house-takeaways`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.83,
+    },
   ];
 }

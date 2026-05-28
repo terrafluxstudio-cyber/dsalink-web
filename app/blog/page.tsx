@@ -5,11 +5,44 @@ import { BlogPostCard } from "@/components/BlogPostCard";
 import { BlogSubscribeBlock } from "@/components/BlogSubscribeBlock";
 import { getAllPosts } from "@/lib/blog";
 
+const ogImage = {
+  url: "/opengraph-image",
+  width: 1200,
+  height: 630,
+  alt: "DSALink Blog — DSA guides and open house insights for Singapore parents",
+} as const;
+
 export const metadata: Metadata = {
   title: { absolute: "Blog | DSALink" },
   description:
     "DSA guides, open house insights, and practical tips for Singapore P6 families navigating DSA 2026.",
+  keywords: [
+    "DSA blog Singapore 2026",
+    "DSA Secondary school tips Singapore",
+    "Singapore P6 DSA guide",
+    "open house recap Singapore 2026",
+    "DSA application advice Singapore",
+    "DSA experience Singapore parents",
+    "secondary school selection Singapore",
+    "DSA news Singapore",
+  ],
   alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Blog | DSALink",
+    description:
+      "DSA guides, open house insights, and practical tips for Singapore P6 families navigating DSA 2026.",
+    type: "website",
+    url: "/blog",
+    siteName: "DSALink",
+    images: [ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | DSALink",
+    description:
+      "DSA guides, open house insights, and practical tips for Singapore P6 families navigating DSA 2026.",
+    images: [ogImage.url],
+  },
 };
 
 export default function BlogPage() {

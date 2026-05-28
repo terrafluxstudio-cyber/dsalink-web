@@ -108,6 +108,28 @@ export function FaqContent() {
               { href: "/dsa-guide", label: ui.link1 },
               { href: "/psle-cop", label: ui.link2 },
               { href: "/open-houses", label: ui.link3 },
+              {
+                href: "/dsa-experience",
+                label:
+                  locale === "zh"
+                    ? "真实 DSA 申请经历"
+                    : locale === "ms"
+                    ? "Pengalaman DSA Sebenar"
+                    : locale === "ta"
+                    ? "உண்மையான DSA அனுபவங்கள்"
+                    : "Real DSA Experiences",
+              },
+              {
+                href: "/apply",
+                label:
+                  locale === "zh"
+                    ? "申请清单"
+                    : locale === "ms"
+                    ? "Senarai Semak Permohonan"
+                    : locale === "ta"
+                    ? "விண்ணப்ப சரிபார்ப்பு பட்டியல்"
+                    : "Application Checklist",
+              },
             ].map(({ href, label }) => (
               <Link
                 key={href}
