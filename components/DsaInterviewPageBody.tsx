@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -12,6 +13,9 @@ function splitPipe(s: string) {
 
 export function DsaInterviewPageBody() {
   const { t, locale } = useLanguage();
+  const [activeTab, setActiveTab] = useState("overview");
+
+  // ── Data arrays ────────────────────────────────────────────────────────────
 
   const selectionTypes = [
     {
@@ -68,6 +72,7 @@ export function DsaInterviewPageBody() {
     { q: t.dsaInterviewIv5Q, why: t.dsaInterviewIv5Why },
     { q: t.dsaInterviewIv6Q, why: t.dsaInterviewIv6Why },
   ];
+  void interviewQs; // reserved for future use
 
   const coachingRows = [
     {
@@ -305,6 +310,273 @@ export function DsaInterviewPageBody() {
     { href: "/psle-cop", label: t.dsaInterviewLinkPsleCop },
   ];
 
+  // ── Tab definitions ─────────────────────────────────────────────────────────
+
+  const tabs = [
+    {
+      id: "overview",
+      label:
+        locale === "zh"
+          ? "准备概览"
+          : locale === "ms"
+          ? "Gambaran Keseluruhan"
+          : locale === "ta"
+          ? "கண்ணோட்டம்"
+          : "Overview",
+    },
+    {
+      id: "self-intro",
+      label:
+        locale === "zh"
+          ? "自我介绍"
+          : locale === "ms"
+          ? "Pengenalan Diri"
+          : locale === "ta"
+          ? "சுய அறிமுகம்"
+          : "Self-Introduction",
+    },
+    {
+      id: "qa",
+      label:
+        locale === "zh"
+          ? "面试问答"
+          : locale === "ms"
+          ? "Soal Jawab"
+          : locale === "ta"
+          ? "கேள்வி பதில்"
+          : "Q&A Prep",
+    },
+    {
+      id: "area-guides",
+      label:
+        locale === "zh"
+          ? "领域指南"
+          : locale === "ms"
+          ? "Panduan Bidang"
+          : locale === "ta"
+          ? "பகுதி வழிகாட்டி"
+          : "Area Guides",
+    },
+    {
+      id: "day-of",
+      label:
+        locale === "zh"
+          ? "面试当天"
+          : locale === "ms"
+          ? "Hari Temuduga"
+          : locale === "ta"
+          ? "நேர்காணல் நாள்"
+          : "Day-Of",
+    },
+  ];
+
+  // ── Area Guides placeholder data ────────────────────────────────────────────
+
+  const areaGuides = [
+    {
+      icon: "⚽",
+      id: "sports",
+      title:
+        locale === "zh"
+          ? "体育 DSA"
+          : locale === "ms"
+          ? "Sukan DSA"
+          : locale === "ta"
+          ? "விளையாட்டு DSA"
+          : "Sports DSA",
+      preview:
+        locale === "zh"
+          ? [
+              "学校评估的核心素质（团队精神、抗压力、可教性）",
+              "体育面试常见问题与参考答案",
+              "成就记录整理：比赛战绩 + 证书 + 推荐信",
+              "体能/技术试训注意事项与应对技巧",
+            ]
+          : locale === "ms"
+          ? [
+              "Kualiti utama yang dinilai sekolah (semangat berpasukan, ketahanan, kebolehan belajar)",
+              "Soalan temuduga biasa untuk sukan & jawapan rujukan",
+              "Menyusun rekod pencapaian: rekod pertandingan + sijil + surat syor",
+              "Tips dan strategi untuk ujian fizikal/kemahiran",
+            ]
+          : locale === "ta"
+          ? [
+              "பள்ளிகள் மதிப்பிடும் முக்கிய குணங்கள் (குழு உணர்வு, மன உறுதி, கற்கும் திறன்)",
+              "விளையாட்டு நேர்காணல் பொதுவான கேள்விகள் & குறிப்பு பதில்கள்",
+              "சாதனை பதிவுகள் ஒழுங்குபடுத்துதல்: போட்டி பதிவுகள் + சான்றிதழ்கள் + பரிந்துரை கடிதங்கள்",
+              "உடல்/திறன் சோதனை குறிப்புகள் & உத்திகள்",
+            ]
+          : [
+              "Key attributes schools assess (teamwork, resilience, coachability)",
+              "Common sports interview questions & reference answers",
+              "Organising achievement records: competition results + certifications + recommendation letters",
+              "Physical/skills trial tips and strategies",
+            ],
+    },
+    {
+      icon: "💃",
+      id: "dance",
+      title:
+        locale === "zh"
+          ? "舞蹈 DSA"
+          : locale === "ms"
+          ? "Tarian DSA"
+          : locale === "ta"
+          ? "நடனம் DSA"
+          : "Dance DSA",
+      preview:
+        locale === "zh"
+          ? [
+              "评审重点：技术功底 vs 舞台表现力",
+              "舞蹈面试常见问题与回答策略",
+              "视频/演出集锦的拍摄与剪辑建议",
+              "试镜/演示日现场发挥技巧",
+            ]
+          : locale === "ms"
+          ? [
+              "Fokus penilai: teknik asas vs ekspresi pentas",
+              "Soalan temuduga biasa untuk tarian & strategi menjawab",
+              "Cadangan rakaman & penyuntingan video/highlight persembahan",
+              "Tips persembahan semasa hari audisi/demonstrasi",
+            ]
+          : locale === "ta"
+          ? [
+              "மதிப்பீட்டாளர் கவனம்: தொழில்நுட்ப அடிப்படை vs மேடை வெளிப்பாடு",
+              "நடன நேர்காணல் பொதுவான கேள்விகள் & பதில் உத்திகள்",
+              "வீடியோ/செயல்திறன் சிறப்பம்சங்கள் படம்பிடிப்பு & திருத்தம் பரிந்துரைகள்",
+              "ஆடிஷன்/நிரூபண நாள் உள்ளூர் செயல்திறன் குறிப்புகள்",
+            ]
+          : [
+              "What assessors focus on: technical foundation vs stage expression",
+              "Common dance interview questions & answering strategies",
+              "Tips for filming and editing video/performance highlights",
+              "On-the-day performance tips for audition/demonstration",
+            ],
+    },
+    {
+      icon: "🎵",
+      id: "music",
+      title:
+        locale === "zh"
+          ? "音乐 DSA"
+          : locale === "ms"
+          ? "Muzik DSA"
+          : locale === "ta"
+          ? "இசை DSA"
+          : "Music DSA",
+      preview:
+        locale === "zh"
+          ? [
+              "面试中如何有说服力地展示音乐才能",
+              "音乐理论与乐理问题备考",
+              "考级证书与乐团经历的权重分析",
+              "演奏曲目选择与现场演奏注意事项",
+            ]
+          : locale === "ms"
+          ? [
+              "Cara mempersembahkan bakat muzik secara meyakinkan dalam temuduga",
+              "Persediaan soalan teori muzik",
+              "Analisis kepentingan sijil gred & pengalaman ensembel",
+              "Pemilihan repertoir & perkara yang perlu diambil perhatian semasa persembahan langsung",
+            ]
+          : locale === "ta"
+          ? [
+              "நேர்காணலில் இசை திறனை நம்பிக்கையுடன் வெளிப்படுத்துவது எப்படி",
+              "இசை கோட்பாடு கேள்விகளுக்கு தயாரிப்பு",
+              "தேர்வு சான்றிதழ்கள் & இசைக்குழு அனுபவத்தின் முக்கியத்துவ பகுப்பாய்வு",
+              "இசை தேர்வு தேர்வு & நேரடி செயல்திறன் குறிப்புகள்",
+            ]
+          : [
+              "How to present musical talent convincingly in the interview",
+              "Music theory and aural test preparation",
+              "Weight of grade certificates vs ensemble/orchestra experience",
+              "Repertoire selection and live performance tips",
+            ],
+    },
+    {
+      icon: "🔬",
+      id: "stem",
+      title:
+        locale === "zh"
+          ? "科技/科学 DSA"
+          : locale === "ms"
+          ? "STEM DSA"
+          : locale === "ta"
+          ? "STEM DSA"
+          : "STEM DSA",
+      preview:
+        locale === "zh"
+          ? [
+              "项目展示技巧：如何让评审理解你的研究",
+              "问题解决能力 + 数学思维类面试题应对",
+              "竞赛奖项组合的最优呈现方式",
+              "科学实验与工程设计项目的记录方法",
+            ]
+          : locale === "ms"
+          ? [
+              "Tips pembentangan projek: cara membantu penilai memahami penyelidikan anda",
+              "Menghadapi soalan kemahiran menyelesaikan masalah + pemikiran matematik",
+              "Cara terbaik mempersembahkan gabungan anugerah pertandingan",
+              "Cara mendokumentasikan projek eksperimen sains & reka bentuk kejuruteraan",
+            ]
+          : locale === "ta"
+          ? [
+              "திட்ட விளக்கக்காட்சி குறிப்புகள்: மதிப்பீட்டாளர்கள் உங்கள் ஆராய்ச்சியை புரிந்துகொள்ள உதவுவது எப்படி",
+              "சிக்கல் தீர்க்கும் திறன் + கணித சிந்தனை நேர்காணல் கேள்விகளை எதிர்கொள்வது",
+              "போட்டி விருது கலவையை சிறப்பாக வழங்குவது எப்படி",
+              "அறிவியல் சோதனை & பொறியியல் வடிவமைப்பு திட்டங்களை ஆவணப்படுத்துவது",
+            ]
+          : [
+              "Project presentation tips: helping assessors understand your research",
+              "Handling problem-solving + mathematical thinking interview questions",
+              "Best way to present your competition awards portfolio",
+              "How to document science experiment and engineering design projects",
+            ],
+    },
+    {
+      icon: "🗣️",
+      id: "language",
+      title:
+        locale === "zh"
+          ? "语言/戏剧/辩论 DSA"
+          : locale === "ms"
+          ? "Bahasa / Drama / Debat DSA"
+          : locale === "ta"
+          ? "மொழி / நாடகம் / விவாதம் DSA"
+          : "Language / Drama / Debate DSA",
+      preview:
+        locale === "zh"
+          ? [
+              "口头表达能力如何在面试中脱颖而出",
+              "语言艺术类面试特有问题与回答框架",
+              "辩论/戏剧经历与比赛记录的呈现技巧",
+              "即兴表达训练方法与常见考题类型",
+            ]
+          : locale === "ms"
+          ? [
+              "Cara menonjolkan kemahiran bertutur dalam temuduga",
+              "Soalan khusus temuduga seni bahasa & rangka kerja menjawab",
+              "Cara mempersembahkan pengalaman debat/drama & rekod pertandingan",
+              "Kaedah latihan ekspresi impromptu & jenis soalan biasa",
+            ]
+          : locale === "ta"
+          ? [
+              "நேர்காணலில் வாய்மொழி திறன்களை தனித்துவமாக காட்டுவது எப்படி",
+              "மொழி கலை நேர்காணல் சிறப்பு கேள்விகள் & பதில் கட்டமைப்பு",
+              "விவாதம்/நாடகம் அனுபவம் & போட்டி பதிவுகளை வழங்குவது எப்படி",
+              "திடீர் வெளிப்பாடு பயிற்சி முறைகள் & பொதுவான கேள்வி வகைகள்",
+            ]
+          : [
+              "How to stand out with verbal skills in the interview",
+              "Language arts-specific interview questions & answering frameworks",
+              "How to present debate/drama experience and competition records",
+              "Impromptu expression training methods and common question types",
+            ],
+    },
+  ];
+
+  // ── Render ──────────────────────────────────────────────────────────────────
+
   return (
     <>
       <SiteHeader />
@@ -318,6 +590,8 @@ export function DsaInterviewPageBody() {
 
         <div className="bg-surface">
           <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-12">
+
+            {/* Alert banner */}
             <div className="mb-6 rounded-xl border border-amber-200 bg-amber-50 px-5 py-4">
               <p className="text-[0.875rem] font-semibold text-amber-800">
                 📅 {t.dsaInterviewAlertIntro}{" "}
@@ -328,7 +602,7 @@ export function DsaInterviewPageBody() {
               </p>
             </div>
 
-            {/* ── Coach directory crosslink ── */}
+            {/* Coach directory crosslink */}
             <div className="mb-8 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[#e3ded5] bg-white px-5 py-3.5 shadow-card">
               <p className="text-[0.875rem] text-slate-600">
                 {locale === "zh"
@@ -347,419 +621,552 @@ export function DsaInterviewPageBody() {
               </Link>
             </div>
 
-            <section className="mb-10">
-              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
-                {t.dsaInterviewTypesHeading}
-              </h2>
-              <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewTypesLead}</p>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {selectionTypes.map((s) => (
-                  <div
-                    key={s.title}
-                    className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card"
+            {/* ── Tab bar ── */}
+            <div className="mb-8 overflow-x-auto">
+              <div className="flex min-w-max gap-0 border-b border-[#e3ded5]">
+                {tabs.map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`shrink-0 px-4 py-2.5 text-[0.875rem] font-semibold transition-colors ${
+                      activeTab === tab.id
+                        ? "border-b-2 border-intellectual pb-[9px] text-intellectual"
+                        : "text-slate-500 hover:text-slate-700"
+                    }`}
                   >
-                    <div className="mb-2 text-2xl">{s.icon}</div>
-                    <h3 className="mb-0.5 font-display text-[0.9375rem] font-semibold text-slate-900">
-                      {s.title}
-                    </h3>
-                    <p className="mb-1 text-[0.75rem] font-semibold tracking-wide text-intellectual">
-                      {s.who}
-                    </p>
-                    <p className="mb-2 text-[0.8125rem] leading-snug text-slate-600">{s.what}</p>
-                    <p className="rounded-lg bg-champagne-subtle px-3 py-2 text-[0.8125rem] leading-snug text-slate-700">
-                      <span className="font-semibold text-champagne-dark">{t.dsaStrategyTipLabel}</span>{" "}
-                      {s.tip}
-                    </p>
-                  </div>
+                    {tab.label}
+                  </button>
                 ))}
               </div>
-            </section>
+            </div>
 
-            <section className="mb-10">
-              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
-                {t.dsaInterviewPrepHeading}
-              </h2>
-              <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewPrepLead}</p>
-              <ol className="space-y-4">
-                {prepSteps.map(({ n, title, body }) => (
-                  <li
-                    key={n}
-                    className="flex gap-4 rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card"
-                  >
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-intellectual text-sm font-bold text-white">
-                      {n}
-                    </span>
-                    <div>
-                      <h3 className="mb-1 font-display text-[0.9375rem] font-semibold text-slate-900">
-                        {title}
-                      </h3>
-                      <p className="text-[0.875rem] leading-relaxed text-slate-600">{body}</p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </section>
+            {/* ══ TAB: OVERVIEW ══════════════════════════════════════════════ */}
+            {activeTab === "overview" && (
+              <div className="space-y-10">
 
-            <section className="mb-10">
-              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
-                {t.dsaInterviewQBankHeading}
-              </h2>
-              <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewQBankLead}</p>
-              <div className="space-y-6">
-                {qBankCategories.map(({ cat, questions }) => (
-                  <div key={cat}>
-                    <h3 className="mb-3 text-[0.75rem] font-bold tracking-widest text-slate-400">
-                      {cat}
+                <section>
+                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                    {t.dsaInterviewTypesHeading}
+                  </h2>
+                  <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewTypesLead}</p>
+                  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {selectionTypes.map((s) => (
+                      <div
+                        key={s.title}
+                        className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card"
+                      >
+                        <div className="mb-2 text-2xl">{s.icon}</div>
+                        <h3 className="mb-0.5 font-display text-[0.9375rem] font-semibold text-slate-900">
+                          {s.title}
+                        </h3>
+                        <p className="mb-1 text-[0.75rem] font-semibold tracking-wide text-intellectual">
+                          {s.who}
+                        </p>
+                        <p className="mb-2 text-[0.8125rem] leading-snug text-slate-600">{s.what}</p>
+                        <p className="rounded-lg bg-champagne-subtle px-3 py-2 text-[0.8125rem] leading-snug text-slate-700">
+                          <span className="font-semibold text-champagne-dark">{t.dsaStrategyTipLabel}</span>{" "}
+                          {s.tip}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                <section>
+                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                    {t.dsaInterviewPrepHeading}
+                  </h2>
+                  <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewPrepLead}</p>
+                  <ol className="space-y-4">
+                    {prepSteps.map(({ n, title, body }) => (
+                      <li
+                        key={n}
+                        className="flex gap-4 rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card"
+                      >
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-intellectual text-sm font-bold text-white">
+                          {n}
+                        </span>
+                        <div>
+                          <h3 className="mb-1 font-display text-[0.9375rem] font-semibold text-slate-900">
+                            {title}
+                          </h3>
+                          <p className="text-[0.875rem] leading-relaxed text-slate-600">{body}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </section>
+
+                <section>
+                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                    {t.dsaInterviewTimelineHeading}
+                  </h2>
+                  <p className="mb-4 text-[0.9375rem] text-slate-600">{t.dsaInterviewTimelineLead}</p>
+                  <div className="mb-3 overflow-hidden rounded-xl border border-[#e3ded5] bg-white shadow-card">
+                    {timelineRows.map(({ date, event, detail }, i) => (
+                      <div
+                        key={date}
+                        className={`grid grid-cols-1 gap-0.5 px-5 py-4 sm:grid-cols-[160px_1fr] sm:gap-3 ${i < timelineRows.length - 1 ? "border-b border-[#e3ded5]" : ""}`}
+                      >
+                        <p className="text-[0.8125rem] font-bold text-intellectual">{date}</p>
+                        <div>
+                          <p className="text-[0.875rem] font-semibold text-slate-900">{event}</p>
+                          <p className="mt-0.5 text-[0.8125rem] leading-relaxed text-slate-500">{detail}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="rounded-lg border border-intellectual/15 bg-intellectual/5 px-4 py-3 text-[0.8125rem] leading-relaxed text-slate-700">
+                    {t.dsaInterviewTimelineNote}
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                    {t.dsaInterviewCoachingHeading}
+                  </h2>
+                  <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewCoachingLead}</p>
+                  <div className="overflow-x-auto rounded-xl border border-[#e3ded5] shadow-card">
+                    <table className="w-full text-left text-[0.8125rem]">
+                      <thead>
+                        <tr className="border-b border-[#e3ded5] bg-[#f7f4ef]">
+                          <th className="px-4 py-3 font-semibold text-slate-700">
+                            {t.dsaInterviewTableTalentDomain}
+                          </th>
+                          <th className="px-4 py-3 font-semibold text-slate-700">
+                            {t.dsaInterviewTableRecognised}
+                          </th>
+                          <th className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap">
+                            {t.dsaInterviewTableBenchmark}
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {coachingRows.map((row, i) => (
+                          <tr key={row.domain} className={i % 2 === 0 ? "bg-white" : "bg-[#faf9f7]"}>
+                            <td className="px-4 py-3 font-semibold text-intellectual align-top whitespace-nowrap">
+                              {row.domain}
+                            </td>
+                            <td className="px-4 py-3 text-slate-600 align-top">
+                              <ul className="list-disc list-inside space-y-0.5">
+                                {row.recognised.map((r) => (
+                                  <li key={r}>{r}</li>
+                                ))}
+                              </ul>
+                            </td>
+                            <td className="px-4 py-3 text-slate-600 align-top whitespace-nowrap">
+                              {row.benchmark}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="mt-3 text-[0.8125rem] text-slate-500">{t.dsaInterviewCoachingFootnote}</p>
+                </section>
+
+                <section>
+                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                    {t.dsaInterviewPortfolioHeading}
+                  </h2>
+                  <p className="mb-4 text-[0.9375rem] text-slate-600">{t.dsaInterviewPortfolioLead}</p>
+                  <div className="rounded-xl border border-[#e3ded5] bg-white p-6 shadow-card">
+                    <ul className="space-y-2.5">
+                      {portfolioItems.map(({ item, desc }) => (
+                        <li key={item} className="flex gap-3">
+                          <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2 border-intellectual/30 text-intellectual text-[0.6875rem] font-bold">
+                            ✓
+                          </span>
+                          <div>
+                            <p className="font-semibold text-slate-900 text-[0.875rem]">{item}</p>
+                            <p className="text-[0.8125rem] text-slate-500">{desc}</p>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </section>
+
+                <section>
+                  <h2 className="mb-5 font-display text-[1.125rem] font-semibold text-slate-900">
+                    {t.dsaInterviewFaqHeading}
+                  </h2>
+                  <div className="space-y-4">
+                    {pageFaqs.map(({ q, a }) => (
+                      <div key={q} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+                        <h3 className="mb-2 font-display text-[0.9375rem] font-semibold text-slate-900">{q}</h3>
+                        <p className="text-[0.875rem] leading-relaxed text-slate-600">{a}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+              </div>
+            )}
+
+            {/* ══ TAB: SELF-INTRODUCTION ═════════════════════════════════════ */}
+            {activeTab === "self-intro" && (
+              <div className="space-y-10">
+
+                {/* Self-Introduction */}
+                <section>
+                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                    {t.dsaInterviewIntroHeading}
+                  </h2>
+                  <p className="mb-6 text-[0.9375rem] text-slate-600">{t.dsaInterviewIntroLead}</p>
+
+                  {/* 5-Element Framework */}
+                  <div className="mb-8">
+                    <h3 className="mb-1 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                      {t.dsaInterviewIntroElHeading}
                     </h3>
-                    <div className="space-y-2.5">
-                      {questions.map(({ q, why }) => (
-                        <div key={q} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
-                          <p className="mb-1.5 font-display text-[0.9375rem] font-semibold text-slate-900">{q}</p>
-                          <p className="text-[0.8125rem] leading-relaxed text-slate-500">{why}</p>
+                    <p className="mb-4 text-[0.875rem] text-slate-500">{t.dsaInterviewIntroElLead}</p>
+                    <div className="space-y-3">
+                      {introElements.map(({ label, body }, i) => (
+                        <div key={label} className="flex gap-4 rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+                          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-intellectual text-[0.8125rem] font-bold text-white">
+                            {i + 1}
+                          </div>
+                          <div>
+                            <p className="mb-1 font-display text-[0.875rem] font-semibold text-slate-900">{label}</p>
+                            <p className="text-[0.8125rem] leading-relaxed text-slate-500">{body}</p>
+                          </div>
                         </div>
                       ))}
                     </div>
                   </div>
-                ))}
-              </div>
-              <p className="mt-4 rounded-lg border border-[#e3ded5] bg-surface-warm px-4 py-3 text-[0.8125rem] leading-relaxed text-slate-500">
-                {t.dsaInterviewQBankNote}
-              </p>
-            </section>
 
-            <section className="mb-10">
-              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
-                {t.dsaInterviewCoachingHeading}
-              </h2>
-              <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewCoachingLead}</p>
-              <div className="overflow-x-auto rounded-xl border border-[#e3ded5] shadow-card">
-                <table className="w-full text-left text-[0.8125rem]">
-                  <thead>
-                    <tr className="border-b border-[#e3ded5] bg-[#f7f4ef]">
-                      <th className="px-4 py-3 font-semibold text-slate-700">
-                        {t.dsaInterviewTableTalentDomain}
-                      </th>
-                      <th className="px-4 py-3 font-semibold text-slate-700">
-                        {t.dsaInterviewTableRecognised}
-                      </th>
-                      <th className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap">
-                        {t.dsaInterviewTableBenchmark}
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {coachingRows.map((row, i) => (
-                      <tr
-                        key={row.domain}
-                        className={i % 2 === 0 ? "bg-white" : "bg-[#faf9f7]"}
-                      >
-                        <td className="px-4 py-3 font-semibold text-intellectual align-top whitespace-nowrap">
-                          {row.domain}
-                        </td>
-                        <td className="px-4 py-3 text-slate-600 align-top">
-                          <ul className="list-disc list-inside space-y-0.5">
-                            {row.recognised.map((r) => (
-                              <li key={r}>{r}</li>
+                  {/* Templates */}
+                  <div className="mb-8">
+                    <h3 className="mb-1 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                      {t.dsaInterviewTplHeading}
+                    </h3>
+                    <p className="mb-2 text-[0.875rem] text-slate-500">{t.dsaInterviewTplLead}</p>
+                    <p className="mb-5 rounded-lg border border-intellectual/15 bg-intellectual/5 px-4 py-2.5 text-[0.8125rem] text-slate-600">
+                      {t.dsaInterviewTplNote}
+                    </p>
+                    <div className="space-y-6">
+                      {introTemplateGroups.map(({ group, templates }) => (
+                        <div key={group}>
+                          <p className="mb-2 font-display text-[0.875rem] font-semibold text-slate-800">{group}</p>
+                          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                            {templates.map(({ label, body }) => (
+                              <div key={label} className="rounded-xl border border-[#e3ded5] bg-white p-4 shadow-card">
+                                <p className="mb-2 text-[0.75rem] font-bold tracking-wide text-intellectual">{label}</p>
+                                <p className="text-[0.8125rem] italic leading-relaxed text-slate-600">{body}</p>
+                              </div>
                             ))}
-                          </ul>
-                        </td>
-                        <td className="px-4 py-3 text-slate-600 align-top whitespace-nowrap">
-                          {row.benchmark}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="mt-3 text-[0.8125rem] text-slate-500">{t.dsaInterviewCoachingFootnote}</p>
-            </section>
-
-            <section className="mb-10">
-              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
-                {t.dsaInterviewPortfolioHeading}
-              </h2>
-              <p className="mb-4 text-[0.9375rem] text-slate-600">{t.dsaInterviewPortfolioLead}</p>
-              <div className="rounded-xl border border-[#e3ded5] bg-white p-6 shadow-card">
-                <ul className="space-y-2.5">
-                  {portfolioItems.map(({ item, desc }) => (
-                    <li key={item} className="flex gap-3">
-                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2 border-intellectual/30 text-intellectual text-[0.6875rem] font-bold">
-                        ✓
-                      </span>
-                      <div>
-                        <p className="font-semibold text-slate-900 text-[0.875rem]">{item}</p>
-                        <p className="text-[0.8125rem] text-slate-500">{desc}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </section>
-
-            <section className="mb-10">
-              <h2 className="mb-5 font-display text-[1.125rem] font-semibold text-slate-900">
-                {t.dsaInterviewFaqHeading}
-              </h2>
-              <div className="space-y-4">
-                {pageFaqs.map(({ q, a }) => (
-                  <div key={q} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
-                    <h3 className="mb-2 font-display text-[0.9375rem] font-semibold text-slate-900">{q}</h3>
-                    <p className="text-[0.875rem] leading-relaxed text-slate-600">{a}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                ))}
-              </div>
-            </section>
 
-            <section className="mb-10">
-              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
-                {t.dsaInterviewTimelineHeading}
-              </h2>
-              <p className="mb-4 text-[0.9375rem] text-slate-600">{t.dsaInterviewTimelineLead}</p>
-              <div className="mb-3 overflow-hidden rounded-xl border border-[#e3ded5] bg-white shadow-card">
-                {timelineRows.map(({ date, event, detail }, i) => (
-                  <div
-                    key={date}
-                    className={`grid grid-cols-1 gap-0.5 px-5 py-4 sm:grid-cols-[160px_1fr] sm:gap-3 ${i < timelineRows.length - 1 ? "border-b border-[#e3ded5]" : ""}`}
-                  >
-                    <p className="text-[0.8125rem] font-bold text-intellectual">{date}</p>
+                  {/* Intro Mistakes */}
+                  <div>
+                    <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                      {t.dsaInterviewIntroMistakesHeading}
+                    </h3>
+                    <div className="space-y-2">
+                      {introMistakes.map((mistake, i) => (
+                        <div key={mistake} className="flex gap-3 rounded-lg border border-champagne/30 bg-champagne-subtle px-4 py-3">
+                          <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-intellectual/10 text-[0.75rem] font-bold text-intellectual">
+                            {i + 1}
+                          </span>
+                          <p className="text-[0.8125rem] leading-relaxed text-slate-700">{mistake}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </section>
+
+                {/* Body Language */}
+                <section>
+                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                    {t.dsaInterviewBodyHeading}
+                  </h2>
+                  <p className="mb-6 text-[0.9375rem] text-slate-600">{t.dsaInterviewBodyLead}</p>
+                  <div className="space-y-7">
                     <div>
-                      <p className="text-[0.875rem] font-semibold text-slate-900">{event}</p>
-                      <p className="mt-0.5 text-[0.8125rem] leading-relaxed text-slate-500">{detail}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <p className="rounded-lg border border-intellectual/15 bg-intellectual/5 px-4 py-3 text-[0.8125rem] leading-relaxed text-slate-700">
-                {t.dsaInterviewTimelineNote}
-              </p>
-            </section>
-
-            {/* Self-Introduction */}
-            <section className="mb-10">
-              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
-                {t.dsaInterviewIntroHeading}
-              </h2>
-              <p className="mb-6 text-[0.9375rem] text-slate-600">{t.dsaInterviewIntroLead}</p>
-
-              {/* 5-Element Framework */}
-              <div className="mb-8">
-                <h3 className="mb-1 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
-                  {t.dsaInterviewIntroElHeading}
-                </h3>
-                <p className="mb-4 text-[0.875rem] text-slate-500">{t.dsaInterviewIntroElLead}</p>
-                <div className="space-y-3">
-                  {introElements.map(({ label, body }, i) => (
-                    <div key={label} className="flex gap-4 rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-intellectual text-[0.8125rem] font-bold text-white">
-                        {i + 1}
-                      </div>
-                      <div>
-                        <p className="mb-1 font-display text-[0.875rem] font-semibold text-slate-900">{label}</p>
-                        <p className="text-[0.8125rem] leading-relaxed text-slate-500">{body}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Templates */}
-              <div className="mb-8">
-                <h3 className="mb-1 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
-                  {t.dsaInterviewTplHeading}
-                </h3>
-                <p className="mb-2 text-[0.875rem] text-slate-500">{t.dsaInterviewTplLead}</p>
-                <p className="mb-5 rounded-lg border border-intellectual/15 bg-intellectual/5 px-4 py-2.5 text-[0.8125rem] text-slate-600">
-                  {t.dsaInterviewTplNote}
-                </p>
-                <div className="space-y-6">
-                  {introTemplateGroups.map(({ group, templates }) => (
-                    <div key={group}>
-                      <p className="mb-2 font-display text-[0.875rem] font-semibold text-slate-800">{group}</p>
-                      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                        {templates.map(({ label, body }) => (
-                          <div key={label} className="rounded-xl border border-[#e3ded5] bg-white p-4 shadow-card">
-                            <p className="mb-2 text-[0.75rem] font-bold tracking-wide text-intellectual">{label}</p>
-                            <p className="text-[0.8125rem] italic leading-relaxed text-slate-600">{body}</p>
+                      <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                        {t.dsaInterviewBodySec1}
+                      </h3>
+                      <div className="space-y-2">
+                        {bodyLangBefore.map((item, i) => (
+                          <div key={i} className="flex gap-3 rounded-lg border border-[#e3ded5] bg-white px-4 py-3 shadow-card">
+                            <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-intellectual/10 text-[0.75rem] font-bold text-intellectual">
+                              {i + 1}
+                            </span>
+                            <p className="text-[0.8125rem] leading-relaxed text-slate-600">{item}</p>
                           </div>
                         ))}
                       </div>
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Mistakes */}
-              <div>
-                <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
-                  {t.dsaInterviewIntroMistakesHeading}
-                </h3>
-                <div className="space-y-2">
-                  {introMistakes.map((mistake, i) => (
-                    <div key={mistake} className="flex gap-3 rounded-lg border border-champagne/30 bg-champagne-subtle px-4 py-3">
-                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-intellectual/10 text-[0.75rem] font-bold text-intellectual">
-                        {i + 1}
-                      </span>
-                      <p className="text-[0.8125rem] leading-relaxed text-slate-700">{mistake}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            {/* Body Language */}
-            <section className="mb-10">
-              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
-                {t.dsaInterviewBodyHeading}
-              </h2>
-              <p className="mb-6 text-[0.9375rem] text-slate-600">{t.dsaInterviewBodyLead}</p>
-
-              <div className="space-y-7">
-                <div>
-                  <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
-                    {t.dsaInterviewBodySec1}
-                  </h3>
-                  <div className="space-y-2">
-                    {bodyLangBefore.map((item, i) => (
-                      <div key={i} className="flex gap-3 rounded-lg border border-[#e3ded5] bg-white px-4 py-3 shadow-card">
-                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-intellectual/10 text-[0.75rem] font-bold text-intellectual">
-                          {i + 1}
-                        </span>
-                        <p className="text-[0.8125rem] leading-relaxed text-slate-600">{item}</p>
+                    <div>
+                      <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                        {t.dsaInterviewBodySec2}
+                      </h3>
+                      <div className="space-y-2">
+                        {bodyLangSpeaking.map((item, i) => (
+                          <div key={i} className="flex gap-3 rounded-lg border border-[#e3ded5] bg-white px-4 py-3 shadow-card">
+                            <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-intellectual/10 text-[0.75rem] font-bold text-intellectual">
+                              {i + 1}
+                            </span>
+                            <p className="text-[0.8125rem] leading-relaxed text-slate-600">{item}</p>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
-                    {t.dsaInterviewBodySec2}
-                  </h3>
-                  <div className="space-y-2">
-                    {bodyLangSpeaking.map((item, i) => (
-                      <div key={i} className="flex gap-3 rounded-lg border border-[#e3ded5] bg-white px-4 py-3 shadow-card">
-                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-intellectual/10 text-[0.75rem] font-bold text-intellectual">
-                          {i + 1}
-                        </span>
-                        <p className="text-[0.8125rem] leading-relaxed text-slate-600">{item}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
-                    {t.dsaInterviewBodySec3}
-                  </h3>
-                  <div className="rounded-xl border border-intellectual/20 bg-intellectual/5 p-5">
-                    <p className="text-[0.9375rem] leading-relaxed text-slate-700">{t.dsaInterviewBodyHabit}</p>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
-                    {t.dsaInterviewBodySec4}
-                  </h3>
-                  <div className="space-y-2">
-                    {bodyLangAvoid.map((item, i) => (
-                      <div key={i} className="flex gap-3 rounded-lg border border-champagne/30 bg-champagne-subtle px-4 py-3">
-                        <span className="mt-0.5 text-[0.875rem] font-bold text-champagne-dark shrink-0">✕</span>
-                        <p className="text-[0.8125rem] leading-relaxed text-slate-700">{item}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Parent Practice Guide */}
-            <section className="mb-10">
-              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
-                {t.dsaInterviewPracticeHeading}
-              </h2>
-              <p className="mb-6 text-[0.9375rem] text-slate-600">{t.dsaInterviewPracticeLead}</p>
-
-              <div className="space-y-4">
-                {practiceWeeks.map(({ title, body }) => (
-                  <div key={title} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
-                    <p className="mb-2 font-display text-[0.875rem] font-semibold text-slate-900">{title}</p>
-                    <p className="text-[0.8125rem] leading-relaxed text-slate-500">{body}</p>
-                  </div>
-                ))}
-                <div className="rounded-xl border border-intellectual/20 bg-intellectual/5 p-5">
-                  <p className="mb-2 font-display text-[0.875rem] font-semibold text-intellectual">{t.dsaInterviewPracticePreTitle}</p>
-                  <p className="text-[0.8125rem] leading-relaxed text-slate-600">{t.dsaInterviewPracticePreBody}</p>
-                </div>
-              </div>
-            </section>
-
-            {/* Common Mistakes */}
-            <section className="mb-10">
-              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
-                {t.dsaInterviewMistakesHeading}
-              </h2>
-              <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewMistakesLead}</p>
-              <div className="space-y-3">
-                {mistakeItems.map(({ title, body }, i) => (
-                  <div key={title} className="flex gap-4 rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
-                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-champagne/50 bg-champagne-subtle text-[0.75rem] font-bold text-intellectual">
-                      {i + 1}
                     </div>
                     <div>
-                      <p className="mb-1 font-display text-[0.875rem] font-semibold text-slate-900">{title}</p>
-                      <p className="text-[0.8125rem] leading-relaxed text-slate-500">{body}</p>
+                      <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                        {t.dsaInterviewBodySec3}
+                      </h3>
+                      <div className="rounded-xl border border-intellectual/20 bg-intellectual/5 p-5">
+                        <p className="text-[0.9375rem] leading-relaxed text-slate-700">{t.dsaInterviewBodyHabit}</p>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="mb-3 font-display text-[0.875rem] font-semibold tracking-wide text-slate-700">
+                        {t.dsaInterviewBodySec4}
+                      </h3>
+                      <div className="space-y-2">
+                        {bodyLangAvoid.map((item, i) => (
+                          <div key={i} className="flex gap-3 rounded-lg border border-champagne/30 bg-champagne-subtle px-4 py-3">
+                            <span className="mt-0.5 text-[0.875rem] font-bold text-champagne-dark shrink-0">✕</span>
+                            <p className="text-[0.8125rem] leading-relaxed text-slate-700">{item}</p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                ))}
-              </div>
-            </section>
+                </section>
 
-            {/* Day-Of Checklist */}
-            <section className="mb-10">
-              <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
-                {t.dsaInterviewDayOfHeading}
-              </h2>
-              <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewDayOfLead}</p>
-              <div className="space-y-5">
-                {dayOfSections.map(({ heading, items }) => (
-                  <div key={heading} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
-                    <h3 className="mb-3 font-display text-[0.9375rem] font-semibold text-slate-900">
-                      {heading}
-                    </h3>
-                    <ol className="space-y-2.5">
-                      {items.map((item, i) => (
-                        <li key={item} className="flex gap-3">
-                          <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-intellectual/25 bg-intellectual/5 text-[0.6875rem] font-bold text-intellectual">
-                            {i + 1}
-                          </span>
-                          <p className="text-[0.8125rem] leading-relaxed text-slate-600">{item}</p>
-                        </li>
-                      ))}
-                    </ol>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            <section className="mb-10">
-              <div className="rounded-xl border border-champagne/40 bg-champagne-subtle p-6">
-                <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
-                  <span className="w-fit rounded-full bg-champagne/30 px-3 py-1 text-[0.7rem] font-bold tracking-wide text-champagne-dark">
-                    {t.dsaInterviewOfferComingSoon}
-                  </span>
-                  <h2 className="font-display text-[1.125rem] font-semibold text-slate-900">
-                    {t.dsaInterviewOfferHeading}
+                {/* Parent Practice Guide */}
+                <section>
+                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                    {t.dsaInterviewPracticeHeading}
                   </h2>
+                  <p className="mb-6 text-[0.9375rem] text-slate-600">{t.dsaInterviewPracticeLead}</p>
+                  <div className="space-y-4">
+                    {practiceWeeks.map(({ title, body }) => (
+                      <div key={title} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+                        <p className="mb-2 font-display text-[0.875rem] font-semibold text-slate-900">{title}</p>
+                        <p className="text-[0.8125rem] leading-relaxed text-slate-500">{body}</p>
+                      </div>
+                    ))}
+                    <div className="rounded-xl border border-intellectual/20 bg-intellectual/5 p-5">
+                      <p className="mb-2 font-display text-[0.875rem] font-semibold text-intellectual">{t.dsaInterviewPracticePreTitle}</p>
+                      <p className="text-[0.8125rem] leading-relaxed text-slate-600">{t.dsaInterviewPracticePreBody}</p>
+                    </div>
+                  </div>
+                </section>
+
+              </div>
+            )}
+
+            {/* ══ TAB: Q&A PREP ══════════════════════════════════════════════ */}
+            {activeTab === "qa" && (
+              <div className="space-y-10">
+
+                <section>
+                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                    {t.dsaInterviewQBankHeading}
+                  </h2>
+                  <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewQBankLead}</p>
+                  <div className="space-y-6">
+                    {qBankCategories.map(({ cat, questions }) => (
+                      <div key={cat}>
+                        <h3 className="mb-3 text-[0.75rem] font-bold tracking-widest text-slate-400">
+                          {cat}
+                        </h3>
+                        <div className="space-y-2.5">
+                          {questions.map(({ q, why }) => (
+                            <div key={q} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+                              <p className="mb-1.5 font-display text-[0.9375rem] font-semibold text-slate-900">{q}</p>
+                              <p className="text-[0.8125rem] leading-relaxed text-slate-500">{why}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="mt-4 rounded-lg border border-[#e3ded5] bg-surface-warm px-4 py-3 text-[0.8125rem] leading-relaxed text-slate-500">
+                    {t.dsaInterviewQBankNote}
+                  </p>
+                </section>
+
+                {/* Placeholder for upcoming Q&A expansion */}
+                <div className="rounded-xl border border-champagne/40 bg-champagne-subtle p-6">
+                  <div className="mb-2 flex items-center gap-2">
+                    <span className="rounded-full bg-champagne/30 px-3 py-0.5 text-[0.7rem] font-bold tracking-wide text-champagne-dark">
+                      {t.dsaInterviewOfferComingSoon}
+                    </span>
+                  </div>
+                  <p className="text-[0.875rem] leading-relaxed text-slate-600">
+                    {locale === "zh"
+                      ? "更多面试问题与模范答案即将上线——包括各DSA领域专属问题、追问应对技巧、评审最看重的回答要素。"
+                      : locale === "ms"
+                      ? "Lebih banyak soalan temuduga dan jawapan contoh akan datang — termasuk soalan khusus mengikut bidang DSA, teknik menangani soalan susulan, dan elemen jawapan yang paling dihargai penilai."
+                      : locale === "ta"
+                      ? "மேலும் நேர்காணல் கேள்விகள் மற்றும் மாதிரி பதில்கள் விரைவில் — DSA பகுதி-குறிப்பிட்ட கேள்விகள், தொடர் கேள்விகளை எதிர்கொள்வது மற்றும் மதிப்பீட்டாளர்கள் மிகவும் மதிக்கும் பதில் கூறுகள் உட்பட."
+                      : "More interview questions and model answers coming soon — including DSA area-specific questions, handling follow-up questions, and the answer elements assessors value most."}
+                  </p>
                 </div>
-                <p className="text-[0.9375rem] leading-relaxed text-slate-600">
-                  {t.dsaInterviewOfferLead}
-                </p>
-                <p className="mt-3 text-[0.8125rem] leading-relaxed text-slate-500">
-                  {t.dsaInterviewOfferComingSoonBody}
+
+              </div>
+            )}
+
+            {/* ══ TAB: AREA GUIDES ═══════════════════════════════════════════ */}
+            {activeTab === "area-guides" && (
+              <div>
+                <div className="mb-6">
+                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                    {locale === "zh"
+                      ? "各领域 DSA 面试指南"
+                      : locale === "ms"
+                      ? "Panduan Temuduga DSA Mengikut Bidang"
+                      : locale === "ta"
+                      ? "பகுதிவாரி DSA நேர்காணல் வழிகாட்டி"
+                      : "DSA Interview Guide by Area"}
+                  </h2>
+                  <p className="text-[0.9375rem] text-slate-600">
+                    {locale === "zh"
+                      ? "每个DSA领域的评审重点、常见问题与备考策略各有不同。选择你孩子的申请领域，获取针对性的准备建议。"
+                      : locale === "ms"
+                      ? "Setiap bidang DSA mempunyai fokus penilaian, soalan biasa, dan strategi persediaan yang berbeza. Pilih bidang permohonan anak anda untuk mendapatkan panduan yang lebih khusus."
+                      : locale === "ta"
+                      ? "ஒவ்வொரு DSA பகுதியிலும் மதிப்பீட்டு கவனம், பொதுவான கேள்விகள் மற்றும் தயாரிப்பு உத்திகள் வேறுபடுகின்றன. உங்கள் குழந்தையின் விண்ணப்ப பகுதியை தேர்ந்தெடுத்து குறிப்பிட்ட வழிகாட்டலைப் பெறுங்கள்."
+                      : "Each DSA area has different assessment focuses, common questions, and preparation strategies. Select your child's application area for targeted guidance."}
+                  </p>
+                </div>
+
+                <div className="space-y-5">
+                  {areaGuides.map((area) => (
+                    <div
+                      key={area.id}
+                      className="rounded-xl border border-[#e3ded5] bg-white p-6 shadow-card"
+                    >
+                      <div className="mb-4 flex items-start justify-between gap-3">
+                        <div className="flex items-center gap-3">
+                          <span className="text-2xl">{area.icon}</span>
+                          <h3 className="font-display text-[1rem] font-semibold text-slate-900">
+                            {area.title}
+                          </h3>
+                        </div>
+                        <span className="shrink-0 rounded-full bg-champagne/30 px-2.5 py-0.5 text-[0.7rem] font-bold tracking-wide text-champagne-dark">
+                          {t.dsaInterviewOfferComingSoon}
+                        </span>
+                      </div>
+                      <p className="mb-3 text-[0.75rem] font-bold tracking-wide text-slate-400">
+                        {locale === "zh"
+                          ? "即将涵盖"
+                          : locale === "ms"
+                          ? "AKan datang"
+                          : locale === "ta"
+                          ? "விரைவில் வரவிருக்கும்"
+                          : "What will be covered"}
+                      </p>
+                      <ul className="space-y-2">
+                        {area.preview.map((point, i) => (
+                          <li key={i} className="flex gap-2.5 text-[0.875rem] leading-relaxed text-slate-600">
+                            <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-intellectual/40" />
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="mt-6 rounded-lg border border-intellectual/15 bg-intellectual/5 px-4 py-3 text-[0.8125rem] leading-relaxed text-slate-600">
+                  {locale === "zh"
+                    ? "各领域详细指南将于2026年6月DSA申请窗口期间陆续上线。欢迎订阅更新通知。"
+                    : locale === "ms"
+                    ? "Panduan terperinci mengikut bidang akan diterbitkan secara berperingkat semasa tempoh permohonan DSA Jun 2026. Langgan untuk mendapat pemberitahuan."
+                    : locale === "ta"
+                    ? "பகுதிவாரி விரிவான வழிகாட்டிகள் 2026 ஜூன் DSA விண்ணப்ப காலகட்டத்தில் படிப்படியாக வெளியிடப்படும். புதுப்பிப்புகளுக்கு சந்தா செய்யுங்கள்."
+                    : "Detailed area guides will be published progressively during the June 2026 DSA application window. Subscribe for updates."}
                 </p>
               </div>
-            </section>
+            )}
 
-            <div className="rounded-xl border border-champagne/30 bg-champagne-subtle p-6">
+            {/* ══ TAB: DAY-OF ════════════════════════════════════════════════ */}
+            {activeTab === "day-of" && (
+              <div className="space-y-10">
+
+                {/* Common Mistakes */}
+                <section>
+                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                    {t.dsaInterviewMistakesHeading}
+                  </h2>
+                  <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewMistakesLead}</p>
+                  <div className="space-y-3">
+                    {mistakeItems.map(({ title, body }, i) => (
+                      <div key={title} className="flex gap-4 rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+                        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-champagne/50 bg-champagne-subtle text-[0.75rem] font-bold text-intellectual">
+                          {i + 1}
+                        </div>
+                        <div>
+                          <p className="mb-1 font-display text-[0.875rem] font-semibold text-slate-900">{title}</p>
+                          <p className="text-[0.8125rem] leading-relaxed text-slate-500">{body}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                {/* Day-Of Checklist */}
+                <section>
+                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
+                    {t.dsaInterviewDayOfHeading}
+                  </h2>
+                  <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewDayOfLead}</p>
+                  <div className="space-y-5">
+                    {dayOfSections.map(({ heading, items }) => (
+                      <div key={heading} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+                        <h3 className="mb-3 font-display text-[0.9375rem] font-semibold text-slate-900">
+                          {heading}
+                        </h3>
+                        <ol className="space-y-2.5">
+                          {items.map((item, i) => (
+                            <li key={item} className="flex gap-3">
+                              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-intellectual/25 bg-intellectual/5 text-[0.6875rem] font-bold text-intellectual">
+                                {i + 1}
+                              </span>
+                              <p className="text-[0.8125rem] leading-relaxed text-slate-600">{item}</p>
+                            </li>
+                          ))}
+                        </ol>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                {/* Offer Guide */}
+                <section>
+                  <div className="rounded-xl border border-champagne/40 bg-champagne-subtle p-6">
+                    <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
+                      <span className="w-fit rounded-full bg-champagne/30 px-3 py-1 text-[0.7rem] font-bold tracking-wide text-champagne-dark">
+                        {t.dsaInterviewOfferComingSoon}
+                      </span>
+                      <h2 className="font-display text-[1.125rem] font-semibold text-slate-900">
+                        {t.dsaInterviewOfferHeading}
+                      </h2>
+                    </div>
+                    <p className="text-[0.9375rem] leading-relaxed text-slate-600">
+                      {t.dsaInterviewOfferLead}
+                    </p>
+                    <p className="mt-3 text-[0.8125rem] leading-relaxed text-slate-500">
+                      {t.dsaInterviewOfferComingSoonBody}
+                    </p>
+                  </div>
+                </section>
+
+              </div>
+            )}
+
+            {/* ── Related links (always visible) ── */}
+            <div className="mt-10 rounded-xl border border-champagne/30 bg-champagne-subtle p-6">
               <h2 className="mb-1 font-display text-base font-semibold text-slate-900">
                 {t.dsaInterviewRelatedHeading}
               </h2>
@@ -776,6 +1183,7 @@ export function DsaInterviewPageBody() {
                 ))}
               </div>
             </div>
+
           </div>
         </div>
       </main>
