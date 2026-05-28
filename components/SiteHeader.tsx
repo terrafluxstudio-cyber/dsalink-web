@@ -121,7 +121,6 @@ export function SiteHeader() {
   ];
 
   const applyLinks: readonly NavLink[] = [
-    { href: "/apply", label: t.navApplyChecklist },
     { href: "/dsa-interview", label: t.navDsaInterview },
     { href: "/dsa-coaches", label: t.navFindCoach, gold: true },
   ];
@@ -174,6 +173,14 @@ export function SiteHeader() {
             links={openHouseLinks}
             pathname={pathname}
           />
+          <Link
+            href="/apply"
+            className={`flex items-center whitespace-nowrap rounded-lg px-3 py-1.5 text-[0.8125rem] font-medium normal-case text-white/80 transition hover:bg-white/10 hover:text-white ${
+              pathname === "/apply" ? "bg-white/10 text-white" : ""
+            }`}
+          >
+            {t.navApplyChecklist}
+          </Link>
           <NavDropdown
             label={t.navApplyGroup}
             isOpen={applyMenuOpen}
@@ -267,6 +274,17 @@ export function SiteHeader() {
                     {link.label}
                   </Link>
                 ))}
+              </div>
+              <div className="mt-1 border-t border-white/10 pt-2">
+                <Link
+                  href="/apply"
+                  className={`block rounded-lg px-3 py-2 text-sm font-medium normal-case transition hover:bg-white/10 hover:text-white ${
+                    pathname === "/apply" ? "bg-white/10 text-white" : "text-white/75"
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {t.navApplyChecklist}
+                </Link>
               </div>
               <div className="mt-1 border-t border-white/10 pt-2">
                 <p className="relative inline-flex items-center px-3 py-1 text-[10px] font-semibold normal-case text-white/45">
