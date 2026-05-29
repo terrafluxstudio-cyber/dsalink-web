@@ -3,7 +3,10 @@ const FROM = "DSALink <hello@dsalink.sg>";
 const LOGO_URL = "https://dsalink.sg/logo.png";
 const BRAND_BLUE = "#0d3f5f";
 const BRAND_GOLD = "#c6a24a";
-const SURFACE = "#f8f6f1";
+const PAGE_BG = "#ebe7df";    // warm cream "frame" — darker than card
+const CARD_BG = "#fbfaf6";    // off-white card — softer than pure white
+const FOOTER_BG = "#f3efe5";  // slightly darker than card for footer separation
+const BORDER = "#ddd6c4";     // warm-tinted hairline
 const TEXT = "#1f2937";
 const MUTED = "#6b7280";
 
@@ -15,24 +18,27 @@ function wrapHtml(bodyHtml: string): string {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
-<body style="margin:0;padding:0;background:${SURFACE};font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:${TEXT};line-height:1.6;">
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:${SURFACE};">
+<body style="margin:0;padding:0;background:${PAGE_BG};font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:${TEXT};line-height:1.6;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:${PAGE_BG};">
     <tr>
-      <td align="center" style="padding:32px 16px;">
-        <table role="presentation" width="560" cellspacing="0" cellpadding="0" border="0" style="max-width:560px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(13,63,95,0.08);">
+      <td align="center" style="padding:36px 16px;">
+        <table role="presentation" width="560" cellspacing="0" cellpadding="0" border="0" style="max-width:560px;width:100%;background:${CARD_BG};border:1px solid ${BORDER};border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(13,63,95,0.04),0 8px 24px rgba(13,63,95,0.10);">
           <tr>
-            <td align="center" style="padding:28px 28px 20px;background:#ffffff;border-bottom:1px solid #ece8de;">
-              <img src="${LOGO_URL}" width="64" height="64" alt="DSALink" style="display:block;border-radius:12px;border:0;outline:none;text-decoration:none;">
-              <div style="margin-top:10px;font-size:13px;letter-spacing:0.4px;color:${BRAND_BLUE};font-weight:600;">DSALink</div>
+            <td style="background:${BRAND_GOLD};line-height:0;font-size:0;height:4px;">&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="center" style="padding:30px 28px 22px;background:${CARD_BG};border-bottom:1px solid ${BORDER};">
+              <img src="${LOGO_URL}" width="64" height="64" alt="DSALink" style="display:block;border-radius:12px;border:0;outline:none;text-decoration:none;box-shadow:0 2px 6px rgba(13,63,95,0.15);">
+              <div style="margin-top:12px;font-size:13px;letter-spacing:0.4px;color:${BRAND_BLUE};font-weight:600;">DSALink</div>
             </td>
           </tr>
           <tr>
-            <td style="padding:32px 28px 24px;font-size:15px;color:${TEXT};">
+            <td style="padding:32px 28px 26px;font-size:15px;color:${TEXT};background:${CARD_BG};">
               ${bodyHtml}
             </td>
           </tr>
           <tr>
-            <td style="padding:16px 28px 24px;font-size:11px;color:${MUTED};line-height:1.5;border-top:1px solid #ece8de;background:#fbfaf6;">
+            <td style="padding:16px 28px 22px;font-size:11px;color:${MUTED};line-height:1.5;border-top:1px solid ${BORDER};background:${FOOTER_BG};">
               <p style="margin:0 0 4px;">Not affiliated with MOE. All information based on official MOE guidelines.</p>
               <p style="margin:0;">To unsubscribe, reply with "unsubscribe".</p>
             </td>
@@ -267,11 +273,11 @@ The DSA-Sec application window closes June 2, 4:30pm.
 Before then, three questions worth answering:
 
 1. Have you identified your child's talent area?
-DSA covers 21 talent domains - from sports and performing arts to robotics, languages, and leadership.
+DSA covers a broad range of areas - sports, performing arts, academic subjects, and leadership. DSA is open to every P6 student, with no academic threshold.
 https://dsalink.sg/dsa-finder
 
 2. Do you know which 3 schools to apply to?
-You get exactly 3 choices. A simple rule: one reach, one match, one safe.
+You can apply to up to 3 schools, with up to 2 talent areas per school. A simple rule: one reach, one match, one safe.
 
 3. Does your child know what happens after a DSA offer?
 Accepting a Confirmed Offer is binding - your child cannot participate in the PSLE posting exercise.
@@ -287,10 +293,10 @@ Not affiliated with MOE. Unsubscribe: reply with "unsubscribe".`;
       p(`The DSA-Sec application window closes <strong>June 2, 4:30pm</strong>.`) +
       p("Before then, three questions worth answering:") +
       h2("1. Have you identified your child's talent area?") +
-      p("DSA covers 21 talent domains — from sports and performing arts to robotics, languages, and leadership.") +
+      p("DSA covers sports, performing arts, academic subjects, and leadership. It's open to every P6 student — there is no academic threshold.") +
       btn("https://dsalink.sg/dsa-finder", "Use the DSA Finder →") +
       h2("2. Do you know which 3 schools to apply to?") +
-      p("You get exactly 3 choices. A simple rule: <strong>one reach, one match, one safe.</strong>") +
+      p("You can apply to up to 3 schools, with up to 2 talent areas per school. A simple rule: <strong>one reach, one match, one safe.</strong>") +
       h2("3. Does your child know what happens after a DSA offer?") +
       p("Accepting a Confirmed Offer is <strong>binding</strong> — your child cannot participate in the PSLE posting exercise.") +
       p(`Everything you need is at ${link("https://dsalink.sg", "dsalink.sg")}.`) +
@@ -373,8 +379,8 @@ WEEK 3 — Build the "why this school" story
 
 The hardest interview question is "why did you choose us?" Generic answers fail. Use this week to research each of your 3 schools in depth - the coach's philosophy, recent results, the team culture. Two specific details beat ten generic compliments.
 
-What to expect in July-August:
-Schools typically reach out to shortlisted students between mid-July and September for trials, auditions, and interviews. You don't need to do anything until they contact you.
+What to expect next:
+Schools will contact shortlisted students directly for trials, auditions, and interviews — typically over the months following the application window. You don't need to do anything until they reach out.
 
 — The DSALink Team
 
@@ -392,8 +398,8 @@ Not affiliated with MOE. Unsubscribe: reply with "unsubscribe".`;
       p("The earlier your child sees these, the more naturally they answer when it matters.") +
       h2("Week 3 — Build the \"why this school\" story") +
       p(`The hardest interview question is "why did you choose us?" Generic answers fail. Use this week to research each of your 3 schools in depth — the coach's philosophy, recent results, the team culture. <strong>Two specific details beat ten generic compliments.</strong>`) +
-      h2("What to expect in July–August") +
-      p("Schools typically reach out to shortlisted students between <strong>mid-July and September</strong> for trials, auditions, and interviews. You don't need to do anything until they contact you.") +
+      h2("What to expect next") +
+      p("Schools will contact shortlisted students directly for trials, auditions, and interviews — typically over the months following the application window. You don't need to do anything until they reach out.") +
       signature(),
   );
 
@@ -421,7 +427,7 @@ https://dsalink.sg/dsa-interview
 2. Map your child's talent story onto each of the 3 schools
 Same child, three different versions of "why this school is right." If you can't articulate three distinct stories, you may be applying to schools that overlap too much - in which case you'll learn something useful for the interview itself.
 
-Schools typically begin contacting shortlisted students from mid-July. You still have time.
+Schools contact shortlisted students directly once their selection process begins. You still have time.
 
 — The DSALink Team
 
@@ -442,7 +448,7 @@ Not affiliated with MOE. Unsubscribe: reply with "unsubscribe".`;
       btn("https://dsalink.sg/dsa-interview", "Open the Q Bank →") +
       h2("2. Map your child's talent story onto each of the 3 schools") +
       p(`Same child, three different versions of "why this school is right." If you can't articulate three distinct stories, you may be applying to schools that overlap too much — in which case you'll learn something useful for the interview itself.`) +
-      p(`<span style="color:${MUTED};font-size:13px;">Schools typically begin contacting shortlisted students from mid-July. You still have time.</span>`) +
+      p(`<span style="color:${MUTED};font-size:13px;">Schools contact shortlisted students directly once their selection process begins. You still have time.</span>`) +
       signature(),
   );
 
@@ -500,11 +506,13 @@ DSA results are being released this month.
 
 If your child receives a Confirmed Offer:
 - Accepting is binding - they will not go through the S1 Posting exercise
-- The offer is conditional on meeting the minimum PSLE score (AL <= 22 for Express/IP schools)
+- The offer is conditional on meeting the minimum PSLE score for the school's posting group (AL <= 22 for Express/IP)
+- Once you accept any one Confirmed Offer, you cannot accept another from a different school
 - Think carefully: is this the right school and programme for the next 4-6 years?
 
 If your child receives a Wait List or no offer:
-- They will go through normal PSLE posting in October
+- They will go through normal PSLE posting in late November
+- A rejection does not block any other route - PSLE posting and S1 Appeal both remain available
 - This is not a reflection of your child's ability - DSA selection is highly competitive and programme-specific
 
 Whatever the outcome, you navigated this process. That takes effort.
@@ -519,12 +527,14 @@ Not affiliated with MOE. Unsubscribe: reply with "unsubscribe".`;
       h2("If your child receives a Confirmed Offer") +
       `<ul style="margin:0 0 14px;padding-left:20px;color:${TEXT};">
         <li style="margin-bottom:6px;">Accepting is <strong>binding</strong> — they will not go through the S1 Posting exercise</li>
-        <li style="margin-bottom:6px;">The offer is conditional on meeting the minimum PSLE score (AL ≤ 22 for Express/IP schools)</li>
+        <li style="margin-bottom:6px;">The offer is conditional on meeting the minimum PSLE score for the school's posting group (AL ≤ 22 for Express/IP)</li>
+        <li style="margin-bottom:6px;">Once you accept any one Confirmed Offer, you cannot accept another from a different school</li>
         <li>Think carefully: is this the right school and programme for the next 4–6 years?</li>
       </ul>` +
       h2("If your child receives a Wait List or no offer") +
       `<ul style="margin:0 0 14px;padding-left:20px;color:${TEXT};">
-        <li style="margin-bottom:6px;">They will go through normal PSLE posting in October</li>
+        <li style="margin-bottom:6px;">They will go through normal PSLE posting in late November</li>
+        <li style="margin-bottom:6px;">A rejection does not block any other route — PSLE posting and S1 Appeal both remain available</li>
         <li>This is not a reflection of your child's ability — DSA selection is highly competitive and programme-specific</li>
       </ul>` +
       p("Whatever the outcome, you navigated this process. That takes effort.") +
