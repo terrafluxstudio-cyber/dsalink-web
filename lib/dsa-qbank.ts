@@ -99,6 +99,50 @@ export const Q_BANK: QBankCategory[] = [
         ],
       },
       {
+        id: "q-role-model",
+        q: "Who is someone you admire, and what have you learned from them?",
+        subtext: {
+          en: "Schools are testing reflection depth. A student who names a generic celebrity ('Cristiano Ronaldo because he's the best') hasn't really thought about it. A student who names someone specific — and articulates a precise quality they've learned from — shows the kind of self-awareness DSA schools value.",
+          zh: "学校在测试反思深度。说\"C罗，因为他最强\"的学生没真正思考过。说出一个具体的人——并清楚说明从对方身上学到的某种具体品质——才展示了DSA学校看重的自我意识。",
+          ms: "Sekolah menguji kedalaman refleksi. Pelajar yang menyebut selebriti umum belum berfikir betul-betul. Pelajar yang menyebut seseorang yang spesifik dan menjelaskan kualiti tepat yang mereka pelajari menunjukkan kesedaran diri.",
+          ta: "பள்ளிகள் சிந்தனை ஆழத்தை சோதிக்கின்றன. பொதுவான பிரபலத்தை குறிப்பிடும் மாணவர் உண்மையில் சிந்திக்கவில்லை. குறிப்பிட்ட நபரை குறிப்பிட்டு, கற்றுக்கொண்ட துல்லியமான குணத்தை விளக்கும் மாணவர் சுய விழிப்புணர்வை காட்டுகிறார்.",
+        },
+        approach: {
+          en: "Pick someone real you've actually engaged with — read about, watched closely, or know personally. The lesson should be one specific quality, not 'they're great.' Bonus if the person isn't the obvious GOAT in your field, because that signals genuine engagement rather than default fandom.",
+          zh: "选一个你真正接触过的人——读过其传记、近距离观察过、或亲身认识。学到的东西要是一个具体品质，不是\"他很厉害\"。如果选的不是你领域里最显眼的那位GOAT会加分，因为这表明你是真的关注，不是默认追星。",
+          ms: "Pilih seseorang yang anda benar-benar terlibat dengan — baca tentang mereka, perhatikan rapat, atau kenali secara peribadi. Pelajaran perlu menjadi satu kualiti spesifik, bukan 'mereka hebat.'",
+          ta: "நீங்கள் உண்மையில் ஈடுபட்ட ஒருவரை தேர்ந்தெடுங்கள் — அவர்களைப் பற்றி படித்தீர்கள், கூர்ந்து கவனித்தீர்கள் அல்லது தனிப்பட்ட முறையில் அறிந்திருக்கிறீர்கள். பாடம் ஒரு குறிப்பிட்ட குணமாக இருக்க வேண்டும்.",
+        },
+        templates: [
+          {
+            label: "Specific person + specific lesson",
+            text: "Someone I really admire is [specific person — a coach, an athlete who isn't the most famous one, a family member, an older teammate]. What's stayed with me isn't their results — it's [specific quality, e.g., the way they handle losing / how they treat younger players / their habit of doing the unglamorous work no one sees]. I remember [specific moment or detail you observed or read about]. That changed how I think about [aspect of your own journey]. I try to apply it by [specific thing you've done because of them].",
+          },
+        ],
+      },
+      {
+        id: "q-reading",
+        q: "What have you been reading lately, or what topics are you curious about right now?",
+        subtext: {
+          en: "Top DSA schools care about intellectual curiosity, not just talent skill. This question quickly exposes whether you read at all and whether you have genuine interests outside your training. 'I don't have time to read' is a poor answer; so is naming a book you obviously haven't actually engaged with.",
+          zh: "顶尖DSA学校看重知识好奇心，不只是才艺技能。这个问题会迅速暴露你是否真的阅读、是否有训练之外的真正兴趣。\"我没时间读书\"是糟糕的回答；说出一本明显没真正读过的书也是。",
+          ms: "Sekolah DSA teratas mengambil berat tentang rasa ingin tahu intelektual, bukan sekadar kemahiran bakat. Soalan ini mendedahkan sama ada anda membaca dan mempunyai minat tulen di luar latihan.",
+          ta: "சிறந்த DSA பள்ளிகள் அறிவுசார் ஆர்வத்தை மதிக்கின்றன, வெறும் திறன் மட்டுமல்ல. இந்த கேள்வி நீங்கள் படிக்கிறீர்களா, பயிற்சிக்கு வெளியே உண்மையான ஆர்வங்கள் உள்ளனவா என்பதை வெளிப்படுத்துகிறது.",
+        },
+        approach: {
+          en: "Be honest about your actual format — books are best, but articles, well-made YouTube channels, or podcasts count if you engage with them seriously. Name one specific thing and a real takeaway. Connect it to a question you're trying to answer or something it changed in how you think.",
+          zh: "诚实说出你真正接触的形式——书最好，但你真正认真看的文章、优质YouTube频道、播客也算。说出一个具体内容和真实收获。把它和你正在思考的某个问题、或者它改变了你的某个想法连接起来。",
+          ms: "Jujur tentang format sebenar — buku terbaik tetapi artikel, saluran YouTube berkualiti, atau podcast juga dikira jika anda terlibat secara serius. Sebutkan sesuatu yang spesifik dan pengajaran sebenar.",
+          ta: "உங்கள் உண்மையான வடிவத்தைப் பற்றி நேர்மையாக இருங்கள் — புத்தகங்கள் சிறந்தவை ஆனால் கட்டுரைகள், நல்ல YouTube சேனல்கள் அல்லது போட்காஸ்ட்களும் தீவிரமாக ஈடுபட்டால் கணக்கில் வரும்.",
+        },
+        templates: [
+          {
+            label: "Honest engagement + takeaway",
+            text: "I've recently been reading / watching / listening to [specific title and author/creator]. It's about [one-line description]. What's interested me is [specific idea or insight that hooked you]. It made me think about [how it connects to your own life, your talent, or a question you've been asking]. Outside of that, I'm generally curious about [one broader topic area — e.g., how athletes recover mentally between competitions / why some teams build culture so much better than others]. I find I learn best when I can connect what I'm reading to something I'm actually trying to do.",
+          },
+        ],
+      },
+      {
         id: "q-free-time",
         q: "What do you do in your free time outside of school and training?",
         subtext: {
@@ -247,6 +291,50 @@ export const Q_BANK: QBankCategory[] = [
           },
         ],
       },
+      {
+        id: "q-sacrifice",
+        q: "What have you had to give up to pursue your [talent] seriously?",
+        subtext: {
+          en: "Schools are testing whether you understand the real cost of what you're doing. 'Nothing, I love it' is a red flag — it either means the commitment hasn't been deep enough, or you lack the maturity to see the trade-off. Schools want students who chose this consciously, knowing what it cost.",
+          zh: "学校在测试你是否理解自己所做的事的真实代价。\"没什么牺牲，我喜欢它\"是危险信号——要么说明投入不够深，要么说明你不够成熟、看不到取舍。学校想要那些清楚代价、有意识做出选择的学生。",
+          ms: "Sekolah menguji sama ada anda memahami kos sebenar apa yang anda lakukan. 'Tiada apa-apa, saya sukakannya' adalah isyarat bahaya — sama ada komitmen tidak cukup mendalam, atau anda tidak cukup matang untuk melihat tukar ganti.",
+          ta: "உங்கள் செயலின் உண்மையான விலையை நீங்கள் புரிந்துகொள்கிறீர்களா என்று பள்ளிகள் சோதிக்கின்றன. 'எதையும் இல்லை, எனக்கு இது பிடிக்கும்' என்பது ஆபத்தான அறிகுறி — உறுதிமொழி போதுமான ஆழமாக இல்லை, அல்லது நீங்கள் முதிர்ச்சியடையவில்லை.",
+        },
+        approach: {
+          en: "Name something real — time with friends, sleep, other hobbies, family weekends, a different talent path you didn't pursue. Then show you understood the trade-off and chose it with eyes open. Avoid sounding bitter — the tone should be 'I knew what I was choosing, and I'd choose it again.'",
+          zh: "说一个真实的东西——朋友时间、睡眠、其他爱好、家庭周末、你没走的另一条才能路径。然后表明你理解这个取舍，并且是睁着眼睛做出选择的。避免显得苦涩——语气应该是\"我清楚自己选了什么，再来一次我还会这样选\"。",
+          ms: "Sebutkan sesuatu yang nyata — masa bersama kawan, tidur, hobi lain, hujung minggu keluarga. Kemudian tunjukkan anda faham tukar ganti dan memilih dengan mata terbuka. Elakkan kedengaran pahit.",
+          ta: "உண்மையான ஒன்றை குறிப்பிடுங்கள் — நண்பர்களுடன் நேரம், தூக்கம், மற்ற பொழுதுபோக்குகள், குடும்ப வார இறுதிகள். பின்னர் நீங்கள் வர்த்தகத்தை புரிந்துகொண்டு, கண்களைத் திறந்து தேர்வு செய்தீர்கள் என்று காட்டுங்கள்.",
+        },
+        templates: [
+          {
+            label: "Conscious trade-off",
+            text: "Honestly, [specific thing — e.g., a lot of my weekends with friends, especially through P5 and P6 / a second interest I was good at but had to drop because I couldn't do both seriously / a lot of unstructured time that my classmates have]. I won't pretend that's always been easy — there have been moments, like [specific example — when my friends were at a birthday party and I had a competition / when I saw classmates picking up new things while I was stuck in routine], when I noticed what I was giving up. But I made the choice deliberately, and I'd make it again. [Talent] has given me [what it gave you that justifies the cost — a sense of purpose / a community / a version of myself I'm proud of].",
+          },
+        ],
+      },
+      {
+        id: "q-mid-mistake",
+        q: "What do you do when you make a mistake during a performance or competition?",
+        subtext: {
+          en: "This is different from how you handle pre-match nerves. Schools want to see in-the-moment self-regulation: how fast can you let go of a bad rep, a missed note, a wrong shot — and refocus on the next one? Athletes and performers who can't reset mid-event are a coaching liability, no matter how talented.",
+          zh: "这和如何应对赛前紧张是不一样的。学校想看到的是临场自我调节：一个失误的回合、一个走音、一次错球之后，你能多快放下、重新聚焦到下一个？无法在比赛中重置自己的运动员/表演者，不管多有才能，对教练来说都是负担。",
+          ms: "Ini berbeza daripada bagaimana anda mengendalikan saraf sebelum perlawanan. Sekolah ingin melihat regulasi diri pada masa itu: berapa cepat anda boleh melupakan kesilapan dan fokus semula?",
+          ta: "இது போட்டிக்கு முன் நரம்புகளை எவ்வாறு கையாள்கிறீர்கள் என்பதிலிருந்து வேறுபட்டது. பள்ளிகள் தருணத்தில் சுய ஒழுங்குமுறையை பார்க்க விரும்புகின்றன: ஒரு தவறை எவ்வளவு விரைவில் விட்டு மீண்டும் கவனம் செலுத்த முடியும்?",
+        },
+        approach: {
+          en: "Be honest about what you used to do (dwell, panic, get angry at yourself), then describe the specific reset technique you now use — a physical cue, a breath, a word you say to yourself, a routine between points or movements. The goal is to show you've actively built a process, not just hoped you'd be tougher.",
+          zh: "诚实说出你以前会怎么做（钻牛角尖、慌、生自己气），然后描述你现在用的具体重置方法——一个肢体动作、一个呼吸、一个你对自己说的词、点与点或动作之间的一套流程。目的是展示你主动建立了一套机制，不是单纯希望自己变强。",
+          ms: "Jujur tentang apa yang anda biasa lakukan (terlalu fikir, panik, marah pada diri), kemudian huraikan teknik reset spesifik yang anda gunakan sekarang — isyarat fizikal, pernafasan, perkataan yang anda katakan pada diri sendiri.",
+          ta: "முன்பு என்ன செய்தீர்கள் (கவலைப்படுதல், திகைப்பு, தன்னிடம் கோபம்) என்பதைப் பற்றி நேர்மையாக இருங்கள், பின்னர் இப்போது நீங்கள் பயன்படுத்தும் குறிப்பிட்ட மீட்டமைப்பு நுட்பத்தை விவரியுங்கள்.",
+        },
+        templates: [
+          {
+            label: "Honest reset process",
+            text: "I used to [honest past habit — e.g., replay the mistake in my head for the next few minutes and play tight after / get visibly frustrated, which would compound into more mistakes]. What I do now is [specific reset technique — e.g., I have a physical cue: I tap my leg twice, take one deliberate breath, and say one word to myself like 'next' — it sounds small, but it gives my brain something concrete to do instead of replaying / I treat every point or every bar as a fresh start, and I don't allow myself to add up errors during the performance]. The shift was learning that the next moment is the only one I can actually affect. The mistake is already done — what matters is whether I add a second one because I'm still stuck on the first.",
+          },
+        ],
+      },
     ],
   },
 
@@ -349,6 +437,50 @@ export const Q_BANK: QBankCategory[] = [
           {
             label: "Resilient + grounded",
             text: "I'd be genuinely disappointed — [School] is my first choice, and I've thought about this programme a lot. But I wouldn't stop. [My talent] is something I'll pursue wherever I end up. If DSA doesn't work out here, I'd look at [alternative path — e.g., other DSA schools / joining the relevant CCA through S1 posting / continuing to train outside of school]. What I know for certain is that [my passion for / commitment to talent area] doesn't depend on where I go to school — it's part of who I am.",
+          },
+        ],
+      },
+      {
+        id: "q-why-dsa",
+        q: "Why are you applying through DSA rather than waiting for S1 posting?",
+        subtext: {
+          en: "This tests strategic awareness. Schools want to know that you (and your family) understand what DSA actually means: a confirmed offer locks you in, you can't appeal back into S1 posting. A student who can articulate why this pathway makes sense for them — beyond 'it's a safer route' — shows that the choice is deliberate, not just parent-driven.",
+          zh: "这测试的是策略意识。学校想知道你（和你家人）真的明白DSA意味着什么：接受Confirmed Offer就锁死了，不能再回去走S1 posting。能说清楚为什么这条路对自己合适的学生——不是\"这条路更稳\"——表明这个选择是有意识的，不只是父母推的。",
+          ms: "Ini menguji kesedaran strategik. Sekolah ingin tahu bahawa anda (dan keluarga) memahami apa DSA sebenarnya: tawaran yang disahkan mengikat anda. Pelajar yang boleh menjelaskan mengapa laluan ini sesuai untuk mereka menunjukkan pilihan yang berniat.",
+          ta: "இது மூலோபாய விழிப்புணர்வை சோதிக்கிறது. பள்ளிகள் நீங்கள் (மற்றும் உங்கள் குடும்பம்) DSA என்றால் என்ன என்பதை புரிந்துகொண்டிருக்கிறீர்களா என்று அறிய விரும்புகின்றன: உறுதிப்படுத்தப்பட்ட சலுகை உங்களை பூட்டுகிறது.",
+        },
+        approach: {
+          en: "Don't say 'because it gives me a guaranteed place.' That's the parent-PSLE-anxiety answer, and it tells the school nothing about you. Better: frame it as a fit story — this programme matches where you are in your talent journey, and you want to start building toward [X] from S1, not waste a year settling into a less aligned school.",
+          zh: "不要说\"因为这能保证有学位\"。那是家长焦虑型答案，对学校来说没有信息量。更好的方式：把它框成匹配的故事——这个项目跟你才能成长的阶段对得上，你希望从中一就开始为[X]做准备，不想在一个不那么对口的学校浪费一年。",
+          ms: "Jangan kata 'kerana ia memberi saya tempat yang dijamin.' Itu jawapan kebimbangan ibu bapa. Lebih baik: bingkaikan sebagai kisah kesesuaian — program ini sepadan dengan perjalanan bakat anda.",
+          ta: "'எனக்கு உத்தரவாதமான இடம் தருகிறது' என்று சொல்லாதீர்கள். அது பெற்றோர் கவலையின் பதில். சிறந்தது: இதை பொருத்தக் கதையாக சட்டகமிடுங்கள் — இந்த திட்டம் உங்கள் திறன் பயணத்துடன் பொருந்துகிறது.",
+        },
+        templates: [
+          {
+            label: "Fit-led, deliberate choice",
+            text: "I thought about this carefully with my family. The reason I'm going DSA — and specifically to [School] — is that I'm at a point in [talent] where the next step needs structure: [specific reason — e.g., a coaching environment that matches the level I've reached / a peer group that pushes me / a team or programme where I can start contributing from Day 1 of S1]. I know what accepting a confirmed offer means: I'm choosing this school over the S1 posting route, and I'm choosing it on purpose. I'd rather start building toward [specific goal] from secondary one than spend the year adjusting to a school whose programme doesn't fit where I'm trying to go.",
+          },
+        ],
+      },
+      {
+        id: "q-first-year-goals",
+        q: "What are your goals for your first year at our school?",
+        subtext: {
+          en: "Different from the 5/10-year question. Schools want to see realistic, near-term planning — across talent, academics, and adapting socially. A student who only talks about competition results is one-dimensional. One who shows they've thought about how to settle in academically and contribute to the team culture sounds ready.",
+          zh: "和5/10年规划问题不一样。学校想看到现实的、近期的规划——涵盖才能、学业、社交适应。只谈比赛成绩的学生是单维度的。表明已经想过如何适应学业、如何贡献团队文化的学生听起来更ready。",
+          ms: "Berbeza daripada soalan 5/10 tahun. Sekolah ingin melihat perancangan realistik jangka pendek — merangkumi bakat, akademik, dan penyesuaian sosial. Pelajar yang hanya bercakap tentang keputusan pertandingan adalah satu dimensi.",
+          ta: "5/10 ஆண்டு கேள்வியிலிருந்து வேறுபட்டது. பள்ளிகள் யதார்த்தமான, குறுகிய கால திட்டமிடலை பார்க்க விரும்புகின்றன — திறன், கல்வி மற்றும் சமூக தழுவல் முழுவதும்.",
+        },
+        approach: {
+          en: "Set three concrete goals: one in talent (specific, measurable), one in academics (about adaptation, not 'top of class'), one in community / contribution (how you'll show up for teammates or classmates). Make them sound like commitments, not wishes.",
+          zh: "设三个具体目标：一个关于才能（具体、可衡量），一个关于学业（关于适应，不是\"全班第一\"），一个关于群体/贡献（你如何对待队友或同学）。让它们听起来像承诺，不是愿望。",
+          ms: "Tetapkan tiga matlamat konkrit: satu dalam bakat (spesifik, boleh diukur), satu dalam akademik (tentang penyesuaian, bukan 'terbaik dalam kelas'), satu dalam komuniti / sumbangan.",
+          ta: "மூன்று உறுதியான இலக்குகளை அமைக்கவும்: ஒன்று திறனில் (குறிப்பிட்ட, அளவிடக்கூடிய), ஒன்று கல்வியில் (தழுவல் பற்றி, 'வகுப்பின் முதலாமவர்' அல்ல), ஒன்று சமூகம் / பங்களிப்பில்.",
+        },
+        templates: [
+          {
+            label: "Balanced 3-part goals",
+            text: "I have three goals for my first year. First, in [talent]: [specific, measurable goal — e.g., earn a place in the starting team for the B division by the end of S1 / be performance-ready for the school's annual concert / hit a specific technical milestone my coach and I have already mapped out]. Second, in academics: I want to make a clean transition — that means [specific adaptation goal — e.g., finding a study system that works with my training schedule from the first month rather than scrambling at the first exam / asking for help early if a subject moves faster than I'm used to]. Third, in the community: I want to be the kind of new student who makes the team better, not just one more body in the squad — that means [specific contribution — e.g., showing up early, helping newer juniors when I can, learning the team's culture before trying to change anything].",
           },
         ],
       },
@@ -475,6 +607,72 @@ export const Q_BANK: QBankCategory[] = [
           },
         ],
       },
+      {
+        id: "q-help-teammate",
+        q: "Tell me about a time you helped a teammate or younger student.",
+        subtext: {
+          en: "Different from the leadership question, which is about initiative and crisis moments. This one tests altruism in ordinary moments — who you are when no one asked you to step up. Schools care because a team or cohort culture is built far more by these small moments than by dramatic leadership.",
+          zh: "这和领导力问题不一样，领导力关于主动性和危机时刻。这道题测的是日常中的利他心——没人要求你出头的时候，你是什么样的人。学校在意这个，是因为团队文化或者cohort文化，更多是这些小时刻积累出来的，不是那种戏剧化领导建立的。",
+          ms: "Berbeza daripada soalan kepimpinan, yang mengenai inisiatif dan momen krisis. Soalan ini menguji altruisme dalam momen biasa — siapa anda apabila tiada siapa minta anda bertindak. Budaya pasukan dibina lebih banyak oleh momen kecil seperti ini.",
+          ta: "தலைமைத்துவ கேள்வியிலிருந்து வேறுபட்டது. இந்த கேள்வி சாதாரண தருணங்களில் பிறருக்கு உதவும் தன்மையை சோதிக்கிறது — யாரும் கேட்காதபோது நீங்கள் யார். குழு கலாச்சாரம் இந்த சிறிய தருணங்களால் கட்டப்படுகிறது.",
+        },
+        approach: {
+          en: "Pick a small, specific moment — not a big production. The smaller and more ordinary it sounds, the more credible. Focus on: what you noticed that others didn't, what you did without being asked, and how the other person responded. Don't make yourself the hero of the story; make the other person the subject.",
+          zh: "选一个具体的小时刻——不是大场面。听起来越小、越平常，越可信。聚焦在：你注意到了别人没注意到的什么、你不用别人请就做了什么、对方的反应是什么。不要把自己当成故事的主角；让对方成为主体。",
+          ms: "Pilih momen kecil dan spesifik — bukan persembahan besar. Semakin kecil dan biasa kedengaran, semakin boleh dipercayai. Fokus: apa yang anda perasan, apa yang anda lakukan tanpa diminta, bagaimana orang lain bertindak balas.",
+          ta: "ஒரு சிறிய, குறிப்பிட்ட தருணத்தை தேர்ந்தெடுங்கள் — பெரிய நிகழ்வு அல்ல. கேட்கும்போது சிறியது, சாதாரணமாக இருந்தால், அது மிகவும் நம்பகமானது. நீங்கள் கவனித்தது, கேட்காமலேயே செய்தது, அவர்களின் பதில் — இவற்றில் கவனம் செலுத்துங்கள்.",
+        },
+        templates: [
+          {
+            label: "Small, specific kindness",
+            text: "There's a [younger student / newer teammate] called [name or just 'a Primary 3 kid'] who joined our [club / team] last year. I noticed early on that [specific thing — e.g., they were always the last one to leave the warm-up because they didn't know the order of the drills / they'd get visibly anxious before performances and no one was checking in with them]. I started [specific small action — e.g., walking them through the warm-up sequence quietly before training started / sitting next to them for ten minutes before a competition just so they had someone calm nearby]. I didn't make a big deal of it, and our coach didn't ask me to. Over a few months I watched them get more confident, and now they [outcome — small but real]. I learned that being helpful doesn't have to be dramatic — sometimes it's just being the person who notices.",
+          },
+        ],
+      },
+      {
+        id: "q-values",
+        q: "What are your most important values, and where did they come from?",
+        subtext: {
+          en: "Deeper than 'three words about yourself.' Personality describes how you come across; values are the principles you act on when no one is watching. Schools want to hear values that come from a real source — a parent, a coach, a moment of failure — not abstract virtues borrowed from a self-help book.",
+          zh: "比\"用三个词形容自己\"更深。性格说的是你给人的感觉；价值观说的是没人看的时候你按什么原则行事。学校想听到有真实来源的价值观——某个家长、某个教练、某次失败的瞬间——不是从鸡汤书里借来的抽象美德。",
+          ms: "Lebih mendalam daripada 'tiga perkataan tentang diri.' Personaliti memerihalkan bagaimana anda kelihatan; nilai adalah prinsip yang anda bertindak apabila tiada siapa melihat. Sekolah mahu nilai dari sumber yang nyata.",
+          ta: "'உங்களைப் பற்றி மூன்று வார்த்தைகள்' விட ஆழமானது. ஆளுமை எப்படி தோன்றுகிறீர்கள் என்பதை விவரிக்கிறது; மதிப்புகள் என்பது யாரும் பார்க்காதபோது நீங்கள் செயல்படும் கொள்கைகள். உண்மையான மூலத்திலிருந்து வரும் மதிப்புகளை பள்ளிகள் விரும்புகின்றன.",
+        },
+        approach: {
+          en: "Pick one or two values — not five. For each, trace the origin to a specific person or specific experience. Then give one example where acting on that value cost you something (because that's when a value is real, not when it's convenient). Generic words like 'honesty' need to be tied to a concrete story or they sound empty.",
+          zh: "选一两个价值观——不是五个。每一个都追溯到具体的人或具体的经历。然后给一个例子，那次按这个价值观行事让你付出了代价（因为代价才证明价值观是真的，而不只是方便时才挂在嘴上）。\"诚实\"这种笼统的词必须连接到具体故事，否则听起来很空。",
+          ms: "Pilih satu atau dua nilai — bukan lima. Untuk setiap satu, kesan asal usul kepada orang atau pengalaman spesifik. Kemudian berikan satu contoh di mana bertindak pada nilai itu menelan kos — kerana itulah saat nilai itu nyata.",
+          ta: "ஒன்று அல்லது இரண்டு மதிப்புகளை தேர்ந்தெடுங்கள் — ஐந்து அல்ல. ஒவ்வொன்றுக்கும், ஆரம்பத்தை ஒரு குறிப்பிட்ட நபர் அல்லது அனுபவத்திற்கு கண்டறியுங்கள். அந்த மதிப்பின் படி நடப்பது உங்களுக்கு விலையாக மாறிய ஒரு உதாரணம் கொடுங்கள்.",
+        },
+        templates: [
+          {
+            label: "Sourced value + cost",
+            text: "The value that matters most to me is [specific value — e.g., honesty about my own performance, even when no one would know the difference]. It came from [specific origin — e.g., my [parent/coach], who once caught me celebrating a win in a match where the referee had missed a call that went my way — and they made me name it out loud instead of letting it slide]. That moment stayed with me. A few months ago I [specific recent example where acting on it cost you something — e.g., I told my coach the truth about a session I'd been slacking in, even though it meant losing a spot in the next selection / I admitted to a teammate that I'd been wrong in an argument we'd had]. It cost me [specific cost], but I think values only count when they cost you something.",
+          },
+        ],
+      },
+      {
+        id: "q-feedback-disagree",
+        q: "How do you respond when someone gives you feedback you disagree with?",
+        subtext: {
+          en: "This tests coachability and maturity, but in the harder version. 'I always listen to feedback' is the safe answer that scores low. Schools want a student who can sit with disagreement: weigh it, ask questions, sometimes change their mind, sometimes respectfully maintain their position — without becoming defensive or just nodding along.",
+          zh: "这测试的是可教性和成熟度，但是更难的版本。\"我总是听取反馈\"是安全但低分的回答。学校想要一个能与不同意见共处的学生：能权衡、能提问、有时候改主意、有时候有礼貌地坚持自己的立场——而不是变得防御性或者只是点头敷衍。",
+          ms: "Ini menguji kebolehbimbingan dan kematangan, dalam versi yang lebih sukar. 'Saya sentiasa mendengar maklum balas' adalah jawapan selamat yang mendapat markah rendah. Sekolah mahukan pelajar yang boleh duduk dengan perselisihan.",
+          ta: "இது கற்றுக்கொள்ளும் திறன் மற்றும் முதிர்ச்சியை சோதிக்கிறது, ஆனால் கடினமான பதிப்பில். 'நான் எப்போதும் கருத்துக்களை கேட்கிறேன்' என்பது குறைந்த மதிப்பெண் பெறும் பாதுகாப்பான பதில். பள்ளிகள் கருத்து வேற்றுமையுடன் வாழக்கூடிய மாணவரை விரும்புகின்றன.",
+        },
+        approach: {
+          en: "Show a real process: you take it in, you ask a clarifying question to understand what they actually mean, you weigh it against your own evidence, and then you either change your approach or — respectfully — explain why you're keeping it. The key is showing maturity in both directions: you can be moved by good feedback, and you can also hold your position when you have a reason.",
+          zh: "展示一个真实的过程：先接受，问一个澄清的问题搞清楚对方真正的意思，对照自己的依据权衡，然后要么改变做法，要么有礼貌地解释为什么坚持。关键是两个方向都展示成熟度：好的反馈能让你转变，但你也能在有理由的时候守住自己的立场。",
+          ms: "Tunjukkan proses sebenar: anda menerima, anda bertanya soalan menjelaskan untuk memahami maksud sebenar mereka, anda menimbang terhadap bukti anda sendiri, kemudian sama ada anda mengubah pendekatan atau, dengan hormat, menjelaskan mengapa anda mengekalkannya.",
+          ta: "உண்மையான செயல்முறையை காட்டுங்கள்: நீங்கள் அதை உள்வாங்குகிறீர்கள், அவர்கள் உண்மையில் என்ன சொல்கிறார்கள் என்பதை புரிந்துகொள்ள தெளிவுபடுத்தும் கேள்வி கேட்கிறீர்கள், உங்கள் சொந்த சான்றுகளுடன் எடைபோடுகிறீர்கள், பின்னர் அணுகுமுறையை மாற்றுகிறீர்கள் அல்லது மரியாதையுடன் ஏன் வைத்திருக்கிறீர்கள் என்று விளக்குகிறீர்கள்.",
+        },
+        templates: [
+          {
+            label: "Honest, two-direction maturity",
+            text: "I try not to react in the moment, even if I disagree internally. What I've learned to do is ask a clarifying question first — something like 'can you tell me more about what you saw?' — because often the feedback I'm reacting to isn't actually what the person meant. Once I understand, I look honestly at the evidence. Sometimes I realise they were right and I'd been defending the wrong thing — like the time [specific example — e.g., my coach told me my warm-up wasn't serious enough, I initially disagreed, but watching the footage they had a clear point]. Other times, after thinking about it, I still disagree — and in those cases I'll respectfully explain why, with my reasoning, rather than just nodding along. I think being coachable means being willing to be wrong, not being willing to be a yes-person.",
+          },
+        ],
+      },
     ],
   },
 
@@ -551,6 +749,50 @@ export const Q_BANK: QBankCategory[] = [
           {
             label: "Thoughtful structural challenge",
             text: "From what I've experienced and observed, I think one of the biggest challenges is [specific issue — e.g., the tension between developing a long-term talent and performing academically in the Singapore system / the lack of pathways to continue [talent] seriously after secondary school unless you're at the very top / the fact that quality coaching is concentrated in well-resourced schools, making it hard for students from other backgrounds to develop at the same level]. This matters because [why it's significant]. I don't have a perfect solution, but I think [your thoughtful idea — e.g., more structured mentorship between schools / greater industry partnerships that give students a realistic picture of what a career in [field] looks like in Singapore].",
+          },
+        ],
+      },
+      {
+        id: "q-mentor-advice",
+        q: "If a Primary 3 student told you they wanted to start [your talent] seriously, what advice would you give them?",
+        subtext: {
+          en: "This is a reflection question disguised as a hypothetical. What you'd tell a younger version of yourself reveals what you've learned the hard way — and whether you can translate experience into something useful for someone else. Generic 'just work hard' answers score poorly; specific, slightly counter-intuitive advice scores well.",
+          zh: "这是一个伪装成假设题的反思题。你会告诉年纪小一些的自己什么，揭示的是你通过吃苦头学到了什么——以及你能不能把经验转化成对别人有用的东西。\"努力就好\"这种笼统答案得分低；具体、稍微反直觉的建议得分高。",
+          ms: "Ini soalan refleksi yang disamarkan sebagai hipotesis. Apa yang anda akan beritahu versi diri yang lebih muda mendedahkan apa yang anda pelajari secara sukar. Jawapan 'bekerja keras saja' mendapat markah rendah; nasihat spesifik dan agak luar jangka mendapat markah tinggi.",
+          ta: "இது ஒரு கற்பனை போல மாறுவேடமிட்ட சிந்தனை கேள்வி. உங்களின் இளமைப் பதிப்புக்கு நீங்கள் என்ன சொல்வீர்கள் என்பது நீங்கள் கடினமான வழியில் கற்றதை வெளிப்படுத்துகிறது. 'கடினமாக உழைப்பாய்' என்ற பொதுவான பதில்கள் குறைந்த மதிப்பெண் பெறுகின்றன.",
+        },
+        approach: {
+          en: "Speak from experience, not from a coach's mouth. Pick one thing you wish you'd known earlier and one warning — but not preachy. Tone matters: you're talking to a younger kid, not lecturing them. The best answers include the part where you admit something the younger you didn't realise until much later.",
+          zh: "从自身经验出发，不是教练嘴里的话。选一个你希望自己早一点知道的事和一个提醒——但不要说教。语气重要：你是在跟一个小学弟妹说话，不是给他们上课。最好的答案包含你那时候没意识到、很久以后才明白的部分。",
+          ms: "Bercakap dari pengalaman, bukan dari mulut jurulatih. Pilih satu perkara yang anda harap anda tahu lebih awal dan satu amaran — tetapi tidak berkhutbah. Nada penting: anda bercakap dengan kanak-kanak yang lebih muda, bukan memberi kuliah.",
+          ta: "அனுபவத்திலிருந்து பேசுங்கள், பயிற்சியாளரின் வாயிலிருந்து அல்ல. நீங்கள் முன்பே தெரிந்திருக்க விரும்பிய ஒரு விஷயத்தையும் ஒரு எச்சரிக்கையையும் தேர்ந்தெடுங்கள் — ஆனால் போதனை செய்யாமல். தொனி முக்கியம்: நீங்கள் இளம் குழந்தையிடம் பேசுகிறீர்கள்.",
+        },
+        templates: [
+          {
+            label: "Honest, slightly counter-intuitive advice",
+            text: "I'd tell them two things. First — and this is the one I wish someone had told me at P3 — [specific counter-intuitive advice — e.g., the fun part has to come from the process, not the results, because the results are going to be inconsistent for a long time / the people you train with matter more than the place you train at / don't try to be impressive in front of your coach; just be honest about what's working and what isn't]. Second, I'd warn them about [specific trap — e.g., comparing yourself to the one kid who's already ahead of everyone else, because that's a fast way to lose motivation when the gap is real]. And then I'd say: you don't have to know if you'll love it forever — just give it a real shot for a year and see what happens.",
+          },
+        ],
+      },
+      {
+        id: "q-success",
+        q: "What does success mean to you?",
+        subtext: {
+          en: "This question quietly tests your value framework. Schools want to see students whose definition of success goes beyond trophies — because high-trophy students with trophy-only definitions often burn out or break down when the wins stop. A more layered definition (process, growth, contribution) signals psychological durability.",
+          zh: "这道题悄悄地测试你的价值框架。学校想看到那些对成功的定义不止于奖杯的学生——因为只看奖杯的高成就学生，一旦赢不了就经常崩盘或烧光。多层次的定义（过程、成长、贡献）说明心理韧性更好。",
+          ms: "Soalan ini secara senyap menguji rangka kerja nilai anda. Sekolah ingin melihat pelajar yang definisi kejayaannya melangkaui trofi — kerana pelajar berprestasi tinggi dengan definisi yang hanya berdasarkan trofi sering merasa burnout apabila kemenangan berhenti.",
+          ta: "இந்த கேள்வி உங்கள் மதிப்புக் கட்டமைப்பை அமைதியாக சோதிக்கிறது. கோப்பைகளுக்கு அப்பால் வெற்றியை வரையறுக்கும் மாணவர்களை பள்ளிகள் விரும்புகின்றன — ஏனெனில் கோப்பை மட்டும் வரையறை கொண்ட உயர்-சாதனை மாணவர்கள் வெற்றி நிறுத்தும்போது சோர்ந்துவிடுகிறார்கள்.",
+        },
+        approach: {
+          en: "Don't say 'winning' alone — that's a one-dimensional answer. Don't go fully into 'success is just the journey' either — that sounds like you're avoiding the question. The strongest answer holds two things together: yes, you want to win, AND your definition includes process, growth, contribution, becoming someone you respect. Be specific about which version of yourself you're trying to become.",
+          zh: "不要光说\"赢\"——那是单维度答案。也不要完全走\"成功就是过程\"——那听起来像在回避问题。最强的答案同时持有两件事：是的，我想赢，并且我的定义还包括过程、成长、贡献、成为我自己尊重的那种人。要具体说出你想成为哪个版本的自己。",
+          ms: "Jangan kata 'menang' sahaja — itu jawapan satu dimensi. Tetapi jangan juga sepenuhnya pergi ke 'kejayaan hanya perjalanan' — itu kedengaran seperti anda mengelak soalan. Jawapan paling kuat memegang dua perkara bersama: ya, anda mahu menang, dan definisi anda termasuk proses, pertumbuhan, sumbangan.",
+          ta: "வெறுமனே 'வெற்றி' என்று சொல்லாதீர்கள் — அது ஒரே பரிமாண பதில். 'வெற்றி வெறும் பயணம்' என்று முற்றிலும் செல்லவும் வேண்டாம் — அது நீங்கள் கேள்வியை தவிர்ப்பதாக தோன்றுகிறது. மிகவும் வலுவான பதில் இரண்டையும் ஒன்றாக வைத்திருக்கிறது.",
+        },
+        templates: [
+          {
+            label: "Two-layered, mature definition",
+            text: "I'll be honest: part of success for me is winning — I'm not going to pretend results don't matter, because they do, and I train for them. But that can't be the whole definition, because if it is, you fall apart the day you lose. So for me, success has two layers. The visible one is [specific result-based goal — e.g., reaching the national finals / earning a place on a specific team]. The deeper one is becoming the kind of [athlete / musician / person] I respect — someone who [specific quality — e.g., trains the same way whether anyone's watching or not / handles a loss in a way younger teammates can learn from / can look back in ten years and be proud of how I got where I got, not just where I got]. The trophies are real goals. But who I become getting there is the part that lasts.",
           },
         ],
       },
