@@ -19,11 +19,16 @@ export interface RecommendRecord {
   utm_source?: string;
   utm_medium?: string;
   utm_campaign?: string;
+  // Per-phase flags (drip cron sets these to prevent re-sending)
   phase_open_house_sent?: boolean;
   phase_deadline_reminder_sent?: boolean;
+  phase_final_24h_sent?: boolean;
+  phase_post_application_d1_sent?: boolean;
   phase_post_application_sent?: boolean;
   phase_interview_prep_sent?: boolean;
   phase_results_sent?: boolean;
+  // ISO timestamp of the last email sent to this record (drip cooldown)
+  last_email_sent_at?: string;
 }
 
 export async function saveRecommendRecord(record: RecommendRecord): Promise<void> {
