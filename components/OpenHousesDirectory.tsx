@@ -491,8 +491,8 @@ export function OpenHousesDirectory() {
                 <div className="flex shrink-0 flex-col items-end justify-center gap-1.5">
                   {(() => {
                     const takeawaysId = TAKEAWAYS_MAP[ev.id];
-                    const isPast = Date.parse(ev.endsAt) < Date.now();
-                    if (!isPast || !takeawaysId) return null;
+                    const hasStarted = Date.parse(ev.startsAt) < Date.now();
+                    if (!hasStarted || !takeawaysId) return null;
                     return (
                       <Link
                         href={`/open-house-takeaways#school-${takeawaysId}`}

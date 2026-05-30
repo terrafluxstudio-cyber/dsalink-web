@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { DSALINK_LOCALE_KEY } from "@/lib/constants";
 import { getGuideLocaleStrings, isLocale, type Locale } from "@/lib/i18n";
-import { OpenHousePreview, ScoresEntryCard, ResourceCards } from "@/components/HomeDynamic";
+import { ScoresEntryCard, ResourceCards } from "@/components/HomeDynamic";
 import { TakeawaysEntryCard } from "@/components/TakeawaysEntryCard";
 import { DeadlineCard } from "@/components/DeadlineCard";
 import { DsaExplainerSection } from "@/components/DsaExplainerSection";
@@ -80,7 +80,6 @@ export default function HomePage() {
       <main>
         <HeroSection>
           <DeadlineCard />
-          <OpenHousePreview />
           <TakeawaysEntryCard />
           <ScoresEntryCard />
         </HeroSection>

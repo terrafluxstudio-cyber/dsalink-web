@@ -1,13 +1,45 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import {
+  ChevronDown,
+  ClipboardList,
+  Mic,
+  Users,
+  Target,
+  Lightbulb,
+  X,
+} from "lucide-react";
 import Link from "next/link";
 import { Q_BANK } from "@/lib/dsa-qbank";
+import {
+  Q_PREP_HOOK,
+  Q_PREP_MINDSET,
+  Q_PREP_SECTIONS,
+  type QPrepSection,
+  type QPrepCard,
+} from "@/lib/dsa-qprep";
 import { PageHeader } from "@/components/PageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useLanguage } from "@/contexts/LanguageContext";
+
+const ICON_MAP = {
+  ClipboardList,
+  Mic,
+  Users,
+  Target,
+} as const;
+
+function pickLocaleText(
+  obj: { en: string; zh: string; ms: string; ta: string },
+  locale: string,
+): string {
+  if (locale === "zh") return obj.zh;
+  if (locale === "ms") return obj.ms;
+  if (locale === "ta") return obj.ta;
+  return obj.en;
+}
 
 function splitPipe(s: string) {
   return s.split("|");
@@ -17,6 +49,16 @@ export function DsaInterviewPageBody() {
   const { t, locale } = useLanguage();
   const [activeTab, setActiveTab] = useState("overview");
   const [expandedQ, setExpandedQ] = useState<string | null>(null);
+  const [expandedQPrep, setExpandedQPrep] = useState<Set<string>>(new Set());
+
+  function toggleQPrepCard(num: string) {
+    setExpandedQPrep((prev) => {
+      const next = new Set(prev);
+      if (next.has(num)) next.delete(num);
+      else next.add(num);
+      return next;
+    });
+  }
 
   // ── Data arrays ────────────────────────────────────────────────────────────
 
@@ -1123,45 +1165,244 @@ export function DsaInterviewPageBody() {
 
             {/* ══ TAB: Q&A PREP ══════════════════════════════════════════════ */}
             {activeTab === "q-prep" && (
-              <div className="space-y-10">
+              <div className="space-y-12">
 
-                <section>
-                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
-                    {t.dsaInterviewQBankHeading}
-                  </h2>
-                  <p className="mb-5 text-[0.9375rem] text-slate-600">{t.dsaInterviewQBankLead}</p>
-                  <div className="space-y-6">
-                    {qBankCategories.map(({ cat, questions }) => (
-                      <div key={cat}>
-                        <h3 className="mb-3 text-[0.75rem] font-bold tracking-widest text-slate-400">
-                          {cat}
-                        </h3>
-                        <div className="space-y-2.5">
-                          {questions.map(({ q, why }) => (
-                            <div key={q} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
-                              <p className="mb-1.5 font-display text-[0.9375rem] font-semibold text-slate-900">{q}</p>
-                              <p className="text-[0.8125rem] leading-relaxed text-slate-500">{why}</p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+                {/* ── HOOK ─────────────────────────────────────────── */}
+                <section className="rounded-2xl bg-intellectual px-6 py-8 sm:px-8 sm:py-10">
+                  <p className="mb-6 whitespace-pre-line font-display text-[1.0625rem] font-medium leading-relaxed text-white sm:text-[1.1875rem]">
+                    {pickLocaleText(Q_PREP_HOOK, locale)}
+                  </p>
+                  <div className="flex flex-wrap gap-x-5 gap-y-2.5 border-t border-white/15 pt-5">
+                    {Q_PREP_MINDSET.map((line, i) => (
+                      <span
+                        key={i}
+                        className="text-[0.8125rem] font-semibold text-champagne"
+                      >
+                        {pickLocaleText(line, locale)}
+                        {i < Q_PREP_MINDSET.length - 1 && (
+                          <span className="ml-5 text-white/30" aria-hidden>·</span>
+                        )}
+                      </span>
                     ))}
                   </div>
-                  <p className="mt-4 rounded-lg border border-[#e3ded5] bg-surface-warm px-4 py-3 text-[0.8125rem] leading-relaxed text-slate-500">
-                    {t.dsaInterviewQBankNote}
-                  </p>
                 </section>
+
+                {/* ── STICKY SUB-NAV ───────────────────────────────── */}
+                <nav
+                  aria-label={
+                    locale === "zh"
+                      ? "Q&A Prep 章节导航"
+                      : locale === "ms"
+                      ? "Navigasi seksyen Q&A Prep"
+                      : locale === "ta"
+                      ? "Q&A Prep பிரிவு வழிசெலுத்தல்"
+                      : "Q&A Prep section navigation"
+                  }
+                  className="sticky top-2 z-20 -mx-1 overflow-x-auto rounded-xl border border-intellectual/15 bg-white/95 px-2 py-2 shadow-soft backdrop-blur"
+                >
+                  <ul className="flex gap-1.5 whitespace-nowrap">
+                    {Q_PREP_SECTIONS.map((s) => {
+                      const Icon = ICON_MAP[s.iconName];
+                      return (
+                        <li key={s.id} className="flex-shrink-0">
+                          <a
+                            href={`#qprep-${s.id}`}
+                            className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[0.8125rem] font-semibold text-intellectual transition hover:bg-intellectual/8"
+                          >
+                            <Icon size={14} strokeWidth={2} />
+                            {pickLocaleText(s.navLabel, locale)}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </nav>
+
+                {/* ── 4 SECTIONS ───────────────────────────────────── */}
+                {Q_PREP_SECTIONS.map((section: QPrepSection) => {
+                  const Icon = ICON_MAP[section.iconName];
+                  return (
+                    <section
+                      key={section.id}
+                      id={`qprep-${section.id}`}
+                      className="scroll-mt-20"
+                    >
+                      {/* Section header */}
+                      <div className="mb-6 flex items-start gap-3 border-b border-intellectual/10 pb-4">
+                        <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-intellectual/8">
+                          <Icon size={20} strokeWidth={1.75} className="text-intellectual" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex flex-wrap items-baseline gap-2.5">
+                            <h2 className="font-display text-[1.25rem] font-semibold text-intellectual sm:text-[1.375rem]">
+                              {pickLocaleText(section.heading, locale)}
+                            </h2>
+                            <span className="rounded-full bg-champagne/25 px-2.5 py-0.5 text-[0.7rem] font-semibold tracking-wide text-champagne-dark">
+                              {pickLocaleText(section.timing, locale)}
+                            </span>
+                          </div>
+                          <p className="mt-1 text-[0.875rem] leading-relaxed text-slate-600">
+                            {pickLocaleText(section.intro, locale)}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Cards (accordion — all collapsed by default) */}
+                      <div className="space-y-3">
+                        {section.cards.map((card: QPrepCard) => {
+                          const isOpen = expandedQPrep.has(card.num);
+                          return (
+                            <article
+                              key={card.num}
+                              className="overflow-hidden rounded-xl border border-[#e3ded5] bg-white shadow-card"
+                            >
+                              <button
+                                type="button"
+                                onClick={() => toggleQPrepCard(card.num)}
+                                aria-expanded={isOpen}
+                                className="flex w-full items-center gap-3 px-5 py-4 text-left transition hover:bg-surface-warm sm:px-6"
+                              >
+                                <span className="font-display text-[0.875rem] font-bold tracking-wider text-champagne-dark">
+                                  {card.num}
+                                </span>
+                                <h3 className="flex-1 font-display text-[1rem] font-semibold leading-snug text-slate-900 sm:text-[1.0625rem]">
+                                  {pickLocaleText(card.title, locale)}
+                                </h3>
+                                <ChevronDown
+                                  size={18}
+                                  strokeWidth={2}
+                                  className={`shrink-0 text-intellectual/50 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                                />
+                              </button>
+
+                              {isOpen && (
+                                <div className="border-t border-[#e3ded5] px-5 py-5 sm:px-6 sm:py-6">
+                                  <p className="mb-4 text-[0.9375rem] leading-relaxed text-slate-700">
+                                    {pickLocaleText(card.body, locale)}
+                                  </p>
+
+                                  {card.tryThis && (
+                                    <div className="mb-3 rounded-lg border border-champagne/30 bg-champagne-subtle px-4 py-3.5">
+                                      <div className="mb-1.5 flex items-center gap-1.5 text-[0.75rem] font-bold tracking-wide text-champagne-dark">
+                                        <Lightbulb size={14} strokeWidth={2.25} />
+                                        {locale === "zh"
+                                          ? "这样做"
+                                          : locale === "ms"
+                                          ? "Cuba ini"
+                                          : locale === "ta"
+                                          ? "இதை முயற்சிக்கவும்"
+                                          : "Try this"}
+                                      </div>
+                                      <p className="whitespace-pre-line text-[0.9375rem] leading-relaxed text-slate-700">
+                                        {pickLocaleText(card.tryThis, locale)}
+                                      </p>
+                                    </div>
+                                  )}
+
+                                  {card.avoid && (
+                                    <div className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3.5">
+                                      <div className="mb-1.5 flex items-center gap-1.5 text-[0.75rem] font-bold tracking-wide text-slate-500">
+                                        <X size={14} strokeWidth={2.25} />
+                                        {locale === "zh"
+                                          ? "不要这样"
+                                          : locale === "ms"
+                                          ? "Jangan begini"
+                                          : locale === "ta"
+                                          ? "இப்படி வேண்டாம்"
+                                          : "Avoid"}
+                                      </div>
+                                      <p className="whitespace-pre-line text-[0.9375rem] leading-relaxed text-slate-600">
+                                        {pickLocaleText(card.avoid, locale)}
+                                      </p>
+                                    </div>
+                                  )}
+                                </div>
+                              )}
+                            </article>
+                          );
+                        })}
+                      </div>
+
+                      {/* Section closer */}
+                      <p className="mt-5 rounded-lg border-l-4 border-intellectual bg-intellectual/5 px-4 py-3 font-display text-[0.9375rem] font-semibold leading-relaxed text-intellectual">
+                        {pickLocaleText(section.closer, locale)}
+                      </p>
+                    </section>
+                  );
+                })}
 
                 {/* Pointer to Question Bank tab */}
                 <div className="rounded-xl border border-intellectual/15 bg-intellectual/5 px-5 py-4">
                   <p className="text-[0.875rem] leading-relaxed text-slate-600">
-                    {locale === "zh"
-                      ? "想查看每道题的深度解析、最佳回答角度和模版示例？切换到「面试题库」标签页。"
-                      : locale === "ms"
-                      ? "Untuk analisis mendalam, sudut jawapan terbaik, dan templat untuk setiap soalan — lihat tab Bank Soalan."
-                      : locale === "ta"
-                      ? "ஒவ்வொரு கேள்விக்கும் ஆழமான பகுப்பாய்வு, சிறந்த பதில் கோணம் மற்றும் மாதிரி வார்ப்புருக்கள் காண — கேள்வி வங்கி tab-க்கு செல்லுங்கள்."
-                      : "For a deep-dive into each question — including what the interviewer is really assessing, how to angle your answer, and full template responses — see the Question Bank tab."}
+                    {locale === "zh" ? (
+                      <>
+                        想看具体的题目和参考答案模版？切换到
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setActiveTab("q-bank");
+                            if (typeof window !== "undefined") {
+                              window.scrollTo({ top: 0, behavior: "smooth" });
+                            }
+                          }}
+                          className="mx-1 font-semibold text-intellectual underline decoration-champagne decoration-2 underline-offset-2 hover:text-champagne-dark"
+                        >
+                          「面试题库」
+                        </button>
+                        标签页，33 题深度解析。
+                      </>
+                    ) : locale === "ms" ? (
+                      <>
+                        Untuk soalan khusus dan templat jawapan rujukan — lihat
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setActiveTab("q-bank");
+                            if (typeof window !== "undefined") {
+                              window.scrollTo({ top: 0, behavior: "smooth" });
+                            }
+                          }}
+                          className="mx-1 font-semibold text-intellectual underline decoration-champagne decoration-2 underline-offset-2 hover:text-champagne-dark"
+                        >
+                          tab Bank Soalan
+                        </button>
+                        , 33 soalan dengan analisis mendalam.
+                      </>
+                    ) : locale === "ta" ? (
+                      <>
+                        குறிப்பிட்ட கேள்விகள் மற்றும் மாதிரி பதில்களுக்கு —
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setActiveTab("q-bank");
+                            if (typeof window !== "undefined") {
+                              window.scrollTo({ top: 0, behavior: "smooth" });
+                            }
+                          }}
+                          className="mx-1 font-semibold text-intellectual underline decoration-champagne decoration-2 underline-offset-2 hover:text-champagne-dark"
+                        >
+                          கேள்வி வங்கி tab
+                        </button>
+                        -க்கு செல்லுங்கள், 33 கேள்விகள் ஆழமான பகுப்பாய்வுடன்.
+                      </>
+                    ) : (
+                      <>
+                        For specific questions and template answers — see the
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setActiveTab("q-bank");
+                            if (typeof window !== "undefined") {
+                              window.scrollTo({ top: 0, behavior: "smooth" });
+                            }
+                          }}
+                          className="mx-1 font-semibold text-intellectual underline decoration-champagne decoration-2 underline-offset-2 hover:text-champagne-dark"
+                        >
+                          Question Bank tab
+                        </button>
+                        , with deep-dive analysis for 33 questions.
+                      </>
+                    )}
                   </p>
                 </div>
 
