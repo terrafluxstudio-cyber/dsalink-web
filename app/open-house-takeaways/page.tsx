@@ -13,7 +13,7 @@ const ogImage = {
 export const metadata: Metadata = {
   title: { absolute: "What Did Each DSA Open House Share? | DSALink" },
   description:
-    "Key takeaways from 8 Singapore secondary schools that have already held their 2026 DSA open houses — talent areas, selection signals, and what parents should know.",
+    "Key takeaways from 19 Singapore secondary schools that have already held their 2026 DSA open houses — talent areas, selection signals, and what parents should know.",
   keywords: [
     "DSA open house 2026 Singapore recap",
     "what schools look for DSA Singapore",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "What Did Each DSA Open House Share? | DSALink",
     description:
-      "Key takeaways from 8 Singapore secondary schools that have already held their 2026 DSA open houses — talent areas, selection signals, and what parents should know.",
+      "Key takeaways from 19 Singapore secondary schools that have already held their 2026 DSA open houses — talent areas, selection signals, and what parents should know.",
     type: "article",
     url: "/open-house-takeaways",
     siteName: "DSALink",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "What Did Each DSA Open House Share? | DSALink",
     description:
-      "Key takeaways from 8 Singapore secondary schools that have already held their 2026 DSA open houses — talent areas, selection signals, and what parents should know.",
+      "Key takeaways from 19 Singapore secondary schools that have already held their 2026 DSA open houses — talent areas, selection signals, and what parents should know.",
     images: [ogImage.url],
   },
 };

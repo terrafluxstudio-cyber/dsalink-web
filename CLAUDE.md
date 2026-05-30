@@ -14,6 +14,7 @@
 
 > **自动 compact：** 每次 session 启动后，立即用 CronCreate 设置每5小时自动 `/compact`（cron: `17 */5 * * *`，recurring: true）。
 > **自动整理记忆：** 每次 session 启动后，同时用 CronCreate 设置每周一 10:23 自动 `/anthropic-skills:consolidate-memory`（cron: `23 10 * * 1`，recurring: true）。
+> **进程记录（完成即记）：** `vercel --prod` 成功后立刻更新 `memory/progress_log.md`；`git commit` 后立刻划掉 `memory/project_pending_todos.md` 中已完成项。不等 session 结束。
 
 ---
 
