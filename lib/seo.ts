@@ -480,6 +480,52 @@ export function buildDsaExperienceStructuredData(): Record<string, unknown> {
 }
 
 /**
+ * /blog/[slug] — BlogPosting schema for any blog post.
+ * Pass the post's slug, title, excerpt, ISO date, and optional heroImage path.
+ */
+export function buildBlogPostStructuredData(opts: {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  heroImage?: string;
+}): Record<string, unknown> {
+  const base = getSiteUrl();
+  const url = `${base}/blog/${opts.slug}`;
+  const image = opts.heroImage
+    ? (opts.heroImage.startsWith("http") ? opts.heroImage : `${base}${opts.heroImage}`)
+    : `${base}/opengraph-image`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    headline: opts.title,
+    description: opts.excerpt,
+    image,
+    datePublished: opts.date,
+    dateModified: opts.date,
+    url,
+    author: {
+      "@type": "Organization",
+      name: "DSALink",
+      url: base,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "DSALink",
+      url: base,
+      logo: {
+        "@type": "ImageObject",
+        url: `${base}/logo.png`,
+      },
+    },
+    inLanguage: "en-SG",
+    isAccessibleForFree: true,
+  };
+}
+
+/**
  * /open-house-guide — HowTo schema for the secondary school open house guide.
  */
 export function buildOpenHouseGuideStructuredData(): Record<string, unknown> {

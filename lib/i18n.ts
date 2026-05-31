@@ -148,6 +148,12 @@ export type Copy = {
   navSearchSchools: string;
   navAllSchools: string;
   navPsleCutoffs: string;
+  /** New nav (5-item permanent IA, 2026-05-31) */
+  navDsaBasicsGroup: string;
+  navSchoolsGroup: string;
+  navApplication: string;
+  navAfterApply: string;
+  navCoach: string;
   ohMissedTakeawaysBtn: string;
   ohTakeawaysAbout: string;
   ohTakeawaysGoodFit: string;
@@ -550,6 +556,11 @@ export const copy: Record<Locale, Copy> = {
     navSearchSchools: "Find Your Right School",
     navAllSchools: "147-School Directory",
     navPsleCutoffs: "PSLE Cut-offs · Past 3 Years",
+    navDsaBasicsGroup: "DSA Basics",
+    navSchoolsGroup: "Schools",
+    navApplication: "Application",
+    navAfterApply: "After You Apply",
+    navCoach: "Coach",
     ohMissedTakeawaysBtn: "Missed it? Everything's here →",
     ohTakeawaysAbout: "About the School",
     ohTakeawaysGoodFit: "Good Fit For",
@@ -917,6 +928,11 @@ export const copy: Record<Locale, Copy> = {
     navSearchSchools: "找到你的理想学校",
     navAllSchools: "147所学校名录",
     navPsleCutoffs: "PSLE 录取分数线（近三年）",
+    navDsaBasicsGroup: "DSA 基础",
+    navSchoolsGroup: "学校",
+    navApplication: "申请",
+    navAfterApply: "申请之后",
+    navCoach: "教练",
     ohMissedTakeawaysBtn: "错过了？情报全在这里 →",
     ohTakeawaysAbout: "学校简介",
     ohTakeawaysGoodFit: "适合这样的孩子",
@@ -1277,6 +1293,11 @@ export const copy: Record<Locale, Copy> = {
     navSearchSchools: "Cari Sekolah Tepat Anda",
     navAllSchools: "Direktori 147 Sekolah",
     navPsleCutoffs: "PSLE Cut-offs · 3 Tahun Lepas",
+    navDsaBasicsGroup: "Asas DSA",
+    navSchoolsGroup: "Sekolah",
+    navApplication: "Permohonan",
+    navAfterApply: "Selepas Memohon",
+    navCoach: "Jurulatih",
     ohMissedTakeawaysBtn: "Terlepas? Semua ada di sini →",
     ohTakeawaysAbout: "Tentang Sekolah",
     ohTakeawaysGoodFit: "Sesuai Untuk",
@@ -1661,6 +1682,11 @@ export const copy: Record<Locale, Copy> = {
     navSearchSchools: "உங்கள் சரியான பள்ளியை கண்டறியுங்கள்",
     navAllSchools: "147 பள்ளிகள் அட்டவணை",
     navPsleCutoffs: "PSLE Cut-offs · கடந்த 3 ஆண்டுகள்",
+    navDsaBasicsGroup: "DSA அடிப்படை",
+    navSchoolsGroup: "பள்ளிகள்",
+    navApplication: "விண்ணப்பம்",
+    navAfterApply: "விண்ணப்பித்த பிறகு",
+    navCoach: "பயிற்சியாளர்",
     ohMissedTakeawaysBtn: "தவறவிட்டீர்களா? எல்லாம் இங்கே →",
     ohTakeawaysAbout: "பள்ளியைப் பற்றி",
     ohTakeawaysGoodFit: "பொருத்தமான மாணவர்",

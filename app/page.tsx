@@ -4,11 +4,12 @@ import { DSALINK_LOCALE_KEY } from "@/lib/constants";
 import { getGuideLocaleStrings, isLocale, type Locale } from "@/lib/i18n";
 import { ScoresEntryCard, ResourceCards } from "@/components/HomeDynamic";
 import { TakeawaysEntryCard } from "@/components/TakeawaysEntryCard";
-import { DeadlineCard } from "@/components/DeadlineCard";
 import { DsaExplainerSection } from "@/components/DsaExplainerSection";
 import { DsaStrategySection } from "@/components/DsaStrategySection";
 import { FeaturedGuidesSection } from "@/components/FeaturedGuidesSection";
 import { HeroSection } from "@/components/HeroSection";
+import { HomeNavCardsRow } from "@/components/HomeNavCardsRow";
+import { HomeTimeSlot } from "@/components/HomeTimeSlot";
 import { HomepageSubscribeBanner } from "@/components/HomepageSubscribeBanner";
 import { DsaExperienceCallout } from "@/components/DsaExperienceCallout";
 import { ParentJourneyStrip } from "@/components/ParentJourneyStrip";
@@ -78,20 +79,47 @@ export default function HomePage() {
       />
       <SiteHeader />
       <main>
-        <HeroSection>
-          <DeadlineCard />
-          <TakeawaysEntryCard />
-          <ScoresEntryCard />
-        </HeroSection>
-        <ParentJourneyStrip />
-        <FeaturedGuidesSection />
+        {/* Layer 1 · Hero — reference platform framing (brand + headline + CTA + search) */}
+        <HeroSection />
+
+        {/* Layer 1b · Stats Strip — quantified reference depth */}
         <StatsStrip />
+
+        {/* Layer 2 · Current-moment slot — date-driven single module */}
+        <HomeTimeSlot />
+
+        {/* Layer 3 · Five reference sections — mirrors permanent 5-item nav */}
+        <HomeNavCardsRow />
+
+        {/* Layer 4 · Featured Evergreen — Takeaways · PSLE COP · curated guides */}
+        <section className="bg-surface py-12 sm:py-16">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="mb-6 sm:mb-8">
+              <p className="mb-2 text-[11px] font-semibold tracking-[0.18em] text-intellectual/70 normal-case">
+                Featured · Evergreen
+              </p>
+              <h2 className="font-display text-2xl font-semibold text-intellectual sm:text-3xl">
+                The reference assets parents come back to.
+              </h2>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <TakeawaysEntryCard />
+              <ScoresEntryCard />
+            </div>
+          </div>
+        </section>
+        <FeaturedGuidesSection />
+
+        {/* Layer 5 · Email subscribe — the 8–11 month return mechanism */}
+        <HomepageSubscribeBanner />
+
+        {/* Layer 6 · DSA education depth — explainer, strategy, parent journey, SEO copy */}
+        <ParentJourneyStrip />
         <DsaExplainerSection />
         <DsaStrategySection />
         <DsaExperienceCallout />
-        <SeoTextBlock />
-        <HomepageSubscribeBanner />
         <ResourceCards />
+        <SeoTextBlock />
       </main>
       <SiteFooter />
     </>

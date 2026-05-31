@@ -509,7 +509,7 @@ export function DsaExperiencePageBody() {
                     {t.dsaExpBodyCtaDesc}
                   </p>
                   <Link
-                    href="/recommend"
+                    href="/dsa-finder"
                     className="mt-5 inline-flex items-center gap-2 rounded-lg bg-champagne px-5 py-2.5 text-sm font-semibold text-intellectual-dark transition hover:bg-champagne-light"
                   >
                     {t.dsaExpBodyCtaBtn}

@@ -91,5 +91,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.83,
     },
+    {
+      url: `${base}/after-apply`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.92,
+    },
   ];
 }

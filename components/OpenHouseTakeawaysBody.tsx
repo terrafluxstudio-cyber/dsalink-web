@@ -4,6 +4,30 @@ import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { useMemo } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SchoolLogo } from "@/components/SchoolLogo";
+
+// Map short takeaway IDs → full MOE school slugs (for SchoolLogo lookup).
+const SCHOOL_SLUG_BY_ID: Record<string, string> = {
+  scgs: "singapore-chinese-girls-school",
+  nushigh: "nus-high-school-of-mathematics-and-science",
+  chs: "catholic-high-school",
+  sas: "st-andrews-secondary-school",
+  plmgs: "paya-lebar-methodist-girls-school",
+  njc: "national-junior-college",
+  sngs: "chij-st-nicholas-girls-school",
+  ahs: "anglican-high-school",
+  hci: "hwa-chong-institution",
+  rgs: "raffles-girls-school",
+  vs: "victoria-school",
+  sji: "st-josephs-institution",
+  dhs: "dunman-high-school",
+  sacss: "st-anthonys-canossian-secondary-school",
+  crest: "crest-secondary-school",
+  tkss: "tanjong-katong-secondary-school",
+  cedar: "cedar-girls-secondary-school",
+  sst: "school-of-science-and-technology-singapore",
+  yiss: "yusof-ishak-secondary-school",
+};
 
 type SchoolTakeaway = {
   id: string;
@@ -1110,15 +1134,22 @@ function SchoolCard({
       className="rounded-2xl border border-intellectual/10 bg-card-shine p-5 shadow-sm ring-1 ring-champagne/15 sm:p-6"
     >
       <div className="flex flex-wrap items-start justify-between gap-3">
-        <div>
-          <h2 className="font-display text-lg font-semibold text-intellectual sm:text-xl">
-            {isZh ? school.nameZh : school.nameEn}
-          </h2>
-          <p className="mt-1 text-xs text-intellectual-muted">
-            {isZh ? school.dateZh : school.date}
-            <span className="mx-1.5">·</span>
-            {isZh ? school.eventTypeZh : school.eventType}
-          </p>
+        <div className="flex items-start gap-3">
+          <SchoolLogo
+            schoolId={SCHOOL_SLUG_BY_ID[school.id]}
+            nameEn={school.nameEn}
+            size={44}
+          />
+          <div>
+            <h2 className="font-display text-lg font-semibold text-intellectual sm:text-xl">
+              {isZh ? school.nameZh : school.nameEn}
+            </h2>
+            <p className="mt-1 text-xs text-intellectual-muted">
+              {isZh ? school.dateZh : school.date}
+              <span className="mx-1.5">·</span>
+              {isZh ? school.eventTypeZh : school.eventType}
+            </p>
+          </div>
         </div>
         <div className="flex flex-wrap gap-1.5">
           {school.tags.map((tag) => (

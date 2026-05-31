@@ -28,7 +28,7 @@ export function ScoresEntryCard() {
         </div>
         <div className="mt-4">
           <Link
-            href="/scores"
+            href="/psle-cop"
             className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-surface-warm bg-surface px-4 py-2 text-[0.8125rem] font-semibold text-intellectual transition hover:border-surface-subtle hover:bg-surface-subtle focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-intellectual sm:w-auto sm:min-w-[200px]"
           >
             {t.homeScoresCardCta}

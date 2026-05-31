@@ -14,7 +14,7 @@ export function HeroSearchBox() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const q = query.trim();
-    router.push(q ? `/dsa?q=${encodeURIComponent(q)}` : "/dsa");
+    router.push(q ? `/dsa-finder?q=${encodeURIComponent(q)}` : "/dsa-finder");
   }
 
   return (

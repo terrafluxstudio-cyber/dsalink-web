@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { buildBlogPostStructuredData } from "@/lib/seo";
 import Link from "next/link";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -17,10 +18,36 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   try {
     const post = getPostBySlug(slug);
+    const canonical = `/blog/${slug}`;
+    const ogImage = post.heroImage ?? "/opengraph-image";
+    const fullTitle = `${post.title} | DSALink Blog`;
     return {
-      title: { absolute: `${post.title} | DSALink Blog` },
+      title: { absolute: fullTitle },
       description: post.excerpt,
-      alternates: { canonical: `/blog/${slug}` },
+      alternates: { canonical },
+      openGraph: {
+        title: fullTitle,
+        description: post.excerpt,
+        type: "article",
+        url: canonical,
+        siteName: "DSALink",
+        publishedTime: post.date,
+        modifiedTime: post.date,
+        images: [
+          {
+            url: ogImage,
+            width: 1200,
+            height: 630,
+            alt: post.title,
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: fullTitle,
+        description: post.excerpt,
+        images: [ogImage],
+      },
     };
   } catch {
     return {};
@@ -42,8 +69,20 @@ export default async function BlogPostPage({ params }: Props) {
     year: "numeric",
   });
 
+  const jsonLd = buildBlogPostStructuredData({
+    slug,
+    title: post.title,
+    excerpt: post.excerpt,
+    date: post.date,
+    heroImage: post.heroImage,
+  });
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SiteHeader />
       <main className="min-h-screen bg-surface">
         {/* Article header */}

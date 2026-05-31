@@ -29,6 +29,13 @@ const nextConfig: NextConfig = {
         destination: "/psle-cop",
         permanent: true,
       },
+      // /recommend is a legacy duplicate of /dsa-finder (same SchoolFinderWizard).
+      // 301 to consolidate SEO weight onto the canonical /dsa-finder URL.
+      {
+        source: "/recommend",
+        destination: "/dsa-finder",
+        permanent: true,
+      },
     ];
   },
 };

@@ -8,11 +8,18 @@ import { ShieldCheck } from "lucide-react";
 
 export function HeroSection({ children }: { children?: ReactNode }) {
   const { t, locale } = useLanguage();
+  const hasSideSlot = Boolean(children);
 
   return (
     <section className="relative overflow-hidden bg-hero-mesh">
       <div className="relative mx-auto max-w-6xl px-4 pb-12 pt-8 sm:px-6 sm:pb-14 sm:pt-10">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_420px] lg:items-center lg:gap-14">
+        <div
+          className={`grid grid-cols-1 gap-8 ${
+            hasSideSlot
+              ? "lg:grid-cols-[1fr_420px] lg:items-center lg:gap-14"
+              : ""
+          }`}
+        >
 
           {/* ── Left column ── */}
           <div className="flex flex-col">
@@ -41,9 +48,9 @@ export function HeroSection({ children }: { children?: ReactNode }) {
           </div>
 
           {/* ── Right column: dynamic cards only ── */}
-          <div className="flex flex-col gap-4 lg:pt-2">
-            {children}
-          </div>
+          {hasSideSlot ? (
+            <div className="flex flex-col gap-4 lg:pt-2">{children}</div>
+          ) : null}
 
         </div>
 
