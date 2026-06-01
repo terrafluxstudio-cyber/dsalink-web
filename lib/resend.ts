@@ -127,7 +127,7 @@ https://dsalink.sg/open-houses
 
 3. Understand the timeline
 If this is your first time hearing about DSA, start here. Clear, step-by-step, no jargon.
-https://dsalink.sg/dsa-guide
+https://dsalink.sg/what-is-dsa
 
 DSALink is free and independent - no school affiliations, no sponsored content. Just the facts.
 
@@ -149,7 +149,7 @@ Unsubscribe: reply to this email with "unsubscribe".`;
       btn("https://dsalink.sg/open-houses", "View Open House calendar →") +
       h2("3. Understand the timeline") +
       p("If this is your first time hearing about DSA, start here. Clear, step-by-step, no jargon.") +
-      btn("https://dsalink.sg/dsa-guide", "Read the DSA guide →") +
+      btn("https://dsalink.sg/what-is-dsa", "Read the DSA guide →") +
       p(`DSALink is free and independent — no school affiliations, no sponsored content. Just the facts.`) +
       signature(),
   );

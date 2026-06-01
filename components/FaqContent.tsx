@@ -105,7 +105,7 @@ export function FaqContent() {
           </div>
           <div className="mt-4 flex flex-wrap gap-2">
             {[
-              { href: "/dsa-guide", label: ui.link1 },
+              { href: "/what-is-dsa", label: ui.link1 },
               { href: "/psle-cop", label: ui.link2 },
               { href: "/open-houses", label: ui.link3 },
               {

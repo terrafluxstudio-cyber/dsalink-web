@@ -28,9 +28,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.98,
     },
     {
-      url: `${base}/dsa-guide`,
+      url: `${base}/what-is-dsa`,
       lastModified: now,
-      changeFrequency: "weekly",
+      changeFrequency: "monthly",
       priority: 0.96,
     },
     {
@@ -50,6 +50,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.93,
+    },
+    {
+      url: `${base}/dsa-interview/talents`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.92,
     },
     {
       url: `${base}/schools`,
@@ -106,10 +112,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.83,
     },
     {
-      url: `${base}/after-apply`,
+      url: `${base}/offer`,
       lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.92,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     ...talentEntries,
   ];

@@ -90,7 +90,7 @@ const PERSONA_KEYS: PersonaKeys[] = [
     goalKey: "dsaStrategyPersona3Goal",
     tipKey: "dsaStrategyPersona3Tip",
     ctaKey: "dsaStrategyPersona3Cta",
-    href: "/dsa-guide",
+    href: "/what-is-dsa",
   },
   {
     titleKey: "dsaStrategyPersona4Title",

@@ -22,7 +22,7 @@ const DSA_STEPS = [
       "Hantar sehingga 3 pilihan sekolah melalui portal MOE DSA. Permohonan percuma dan dibuka mulai 6 Mei 2026.",
     descriptionTa:
       "MOE DSA போர்டல் மூலம் 3 வரை பள்ளி தேர்வுகளை சமர்ப்பிக்கவும். விண்ணப்பங்கள் இலவசம், 6 மே 2026 முதல் திறக்கப்படும்.",
-    href: "/dsa-guide",
+    href: "/what-is-dsa",
     linkLabel: "How to apply →",
     linkLabelZh: "了解申请流程 →",
     linkLabelMs: "Cara memohon →",

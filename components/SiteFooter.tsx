@@ -78,8 +78,8 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
             </p>
             <ul className="space-y-2.5">
               <li>
-                <Link href="/dsa-guide" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
-                  {t.navDsaGuide}
+                <Link href="/what-is-dsa" className="text-[0.8125rem] text-white/50 transition hover:text-white/80 normal-case">
+                  {t.navWhatIsDsa}
                 </Link>
               </li>
               <li>

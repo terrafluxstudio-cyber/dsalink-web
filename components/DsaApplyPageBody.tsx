@@ -60,7 +60,7 @@ const PHASES: Phase[] = [
         labelZh: "检查自己的PSLE预期成绩是否符合学校最低录取条件",
         labelMs: "Semak bahawa Kumpulan Penempatan PSLE yang dijangka memenuhi minimum sekolah",
         labelTa: "உங்கள் எதிர்பார்க்கப்படும் PSLE பதவியிடல் குழு பள்ளியின் குறைந்தபட்சத்தை பூர்த்தி செய்கிறதா என சரிபார்க்கவும்",
-        href: "/dsa-guide",
+        href: "/what-is-dsa",
       },
     ],
   },
@@ -146,7 +146,7 @@ const PHASES: Phase[] = [
         labelMs: "Jika anda memegang Tawaran Disahkan (CO): anda tidak boleh menyertai S1 Posting — anak anda masih perlu memenuhi minimum PSLE sekolah",
         labelTa: "உறுதிப்படுத்தப்பட்ட சலுகை (CO) வைத்திருந்தால்: S1 பதவியிடலில் சேர முடியாது — உங்கள் குழந்தை பள்ளியின் குறைந்தபட்ச PSLE தேவைகளை பூர்த்தி செய்ய வேண்டும்",
         note: true,
-        href: "/dsa-guide",
+        href: "/what-is-dsa",
       },
       {
         id: "p4-allocation",
@@ -405,7 +405,7 @@ export function DsaApplyPageBody() {
             <p className="text-sm font-semibold text-intellectual">{t.applyCoTitle}</p>
             <p className="mt-1.5 text-sm leading-relaxed text-intellectual-muted">
               {t.applyCoNote}{" "}
-              <Link href="/dsa-guide" className="font-medium text-champagne-dark underline underline-offset-2 transition hover:text-intellectual">
+              <Link href="/what-is-dsa" className="font-medium text-champagne-dark underline underline-offset-2 transition hover:text-intellectual">
                 {locale === "zh" ? "DSA 指南" : locale === "ms" ? "Panduan DSA" : locale === "ta" ? "DSA வழிகாட்டி" : "DSA Guide"}
               </Link>
             </p>

@@ -158,6 +158,12 @@ export type Copy = {
   navApplicationFaq: string;
   navAfterApplyHub: string;
   navTimeline: string;
+  /** IA v3 (2026-06-01): 5-item permanent nav with Offer + Interview & Trial */
+  navTalentSearchCenter: string;
+  navApplicationTimeline2026: string;
+  navInterviewAndTrial: string;
+  navByTalent: string;
+  navOffer: string;
   ohMissedTakeawaysBtn: string;
   ohTakeawaysAbout: string;
   ohTakeawaysGoodFit: string;
@@ -568,6 +574,11 @@ export const copy: Record<Locale, Copy> = {
     navApplicationFaq: "Application FAQ",
     navAfterApplyHub: "After You Apply (overview)",
     navTimeline: "DSA Timeline",
+    navTalentSearchCenter: "2026 Talent Search Center",
+    navApplicationTimeline2026: "2026 Application Timeline",
+    navInterviewAndTrial: "Interview & Trial",
+    navByTalent: "By Talent",
+    navOffer: "Offer",
     ohMissedTakeawaysBtn: "Missed it? Everything's here →",
     ohTakeawaysAbout: "About the School",
     ohTakeawaysGoodFit: "Good Fit For",
@@ -943,6 +954,11 @@ export const copy: Record<Locale, Copy> = {
     navApplicationFaq: "申请常见问题",
     navAfterApplyHub: "申请之后（总览）",
     navTimeline: "DSA 时间线",
+    navTalentSearchCenter: "2026 才艺学校搜索",
+    navApplicationTimeline2026: "2026 申请时间线",
+    navInterviewAndTrial: "面试与试训",
+    navByTalent: "按才艺分类",
+    navOffer: "录取通知",
     ohMissedTakeawaysBtn: "错过了？情报全在这里 →",
     ohTakeawaysAbout: "学校简介",
     ohTakeawaysGoodFit: "适合这样的孩子",
@@ -1311,6 +1327,11 @@ export const copy: Record<Locale, Copy> = {
     navApplicationFaq: "FAQ Permohonan",
     navAfterApplyHub: "Selepas Memohon (gambaran)",
     navTimeline: "Garis Masa DSA",
+    navTalentSearchCenter: "Pusat Carian Bakat 2026",
+    navApplicationTimeline2026: "Garis Masa Permohonan 2026",
+    navInterviewAndTrial: "Temuduga & Percubaan",
+    navByTalent: "Mengikut Bakat",
+    navOffer: "Tawaran",
     ohMissedTakeawaysBtn: "Terlepas? Semua ada di sini →",
     ohTakeawaysAbout: "Tentang Sekolah",
     ohTakeawaysGoodFit: "Sesuai Untuk",
@@ -1703,6 +1724,11 @@ export const copy: Record<Locale, Copy> = {
     navApplicationFaq: "விண்ணப்ப கேள்விகள்",
     navAfterApplyHub: "விண்ணப்பித்த பிறகு (முழுமை)",
     navTimeline: "DSA கால அட்டவணை",
+    navTalentSearchCenter: "2026 திறமை தேடல் மையம்",
+    navApplicationTimeline2026: "2026 விண்ணப்ப கால அட்டவணை",
+    navInterviewAndTrial: "நேர்காணல் & சோதனை",
+    navByTalent: "திறமை வாரியாக",
+    navOffer: "சலுகை",
     ohMissedTakeawaysBtn: "தவறவிட்டீர்களா? எல்லாம் இங்கே →",
     ohTakeawaysAbout: "பள்ளியைப் பற்றி",
     ohTakeawaysGoodFit: "பொருத்தமான மாணவர்",

@@ -6,20 +6,25 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { getAllTalentPages } from "@/lib/talentPages";
 
-type NavLink = { href: string; label: string; gold?: boolean };
+type NavLink = {
+  href: string;
+  label: string;
+  gold?: boolean;
+  /** White highlight for the year-specific "Talent Search Center" entry. */
+  highlight?: boolean;
+};
 
 /**
  * Star slot rules (Singapore time, annual cycle):
  *   May 5 – Jun 2     → Application (apply window)
- *   Jun 3 – Nov 30    → After You Apply (post-submission to S1 posting)
+ *   Jun 3 – Nov 30    → Interview & Trial (post-submission to S1 posting)
  *   Dec 1 – May 4     → Schools (next-year research phase)
  *
  * Returns null on first server render to avoid hydration mismatch;
  * a client useEffect fills it in.
  */
-type StarSlot = "application" | "after-apply" | "schools" | null;
+type StarSlot = "application" | "interview-trial" | "schools" | null;
 
 function computeStarSlot(now: Date): Exclude<StarSlot, null> {
   // Use Singapore time (UTC+8) by reading UTC date and shifting.
@@ -34,7 +39,7 @@ function computeStarSlot(now: Date): Exclude<StarSlot, null> {
   }
   // Jun 3 – Nov 30
   if ((month === 6 && day >= 3) || (month > 6 && month <= 11)) {
-    return "after-apply";
+    return "interview-trial";
   }
   // Dec 1 – May 4 (default)
   return "schools";
@@ -108,24 +113,27 @@ function NavDropdown({
           id={id}
           className="absolute right-0 top-full z-50 mt-1 min-w-[220px] rounded-xl border border-white/10 bg-intellectual/95 py-1 shadow-lg backdrop-blur-md"
         >
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={onClose}
-              className={`block px-4 py-2 text-[0.8125rem] font-medium normal-case transition hover:bg-white/10 ${
-                link.gold
-                  ? pathname === link.href
-                    ? "text-champagne"
-                    : "text-champagne hover:text-champagne-light"
-                  : pathname === link.href
-                    ? "text-white"
-                    : "text-white/75 hover:text-white"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {links.map((link) => {
+            const colorClass = link.highlight
+              ? "text-white font-semibold"
+              : link.gold
+                ? pathname === link.href
+                  ? "text-champagne"
+                  : "text-champagne hover:text-champagne-light"
+                : pathname === link.href
+                  ? "text-white"
+                  : "text-white/75 hover:text-white";
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={onClose}
+                className={`block px-4 py-2 text-[0.8125rem] font-medium normal-case transition hover:bg-white/10 ${colorClass}`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
       ) : null}
     </div>
@@ -160,13 +168,13 @@ function NavLinkButton({
 }
 
 export function SiteHeader() {
-  const { t, locale } = useLanguage();
+  const { t } = useLanguage();
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [basicsMenuOpen, setBasicsMenuOpen] = useState(false);
   const [schoolsMenuOpen, setSchoolsMenuOpen] = useState(false);
   const [applicationMenuOpen, setApplicationMenuOpen] = useState(false);
-  const [afterApplyMenuOpen, setAfterApplyMenuOpen] = useState(false);
+  const [interviewMenuOpen, setInterviewMenuOpen] = useState(false);
 
   // Star slot: null on SSR, real value after mount (avoids hydration mismatch).
   const [starSlot, setStarSlot] = useState<StarSlot>(null);
@@ -174,15 +182,17 @@ export function SiteHeader() {
     setStarSlot(computeStarSlot(new Date()));
   }, []);
 
-  // IA v2 (2026-06-01): DSA Basics trimmed to 2; Application + After You Apply now dropdowns.
-  // URLs preserved — /faq stays as Application FAQ; /timeline + 8 talent pages added in Phase B.
+  // IA v3 (2026-06-01): 5-item permanent nav.
+  // DSA Basics ▾ │ Schools ▾ │ Application ▾ │ Interview & Trial ▾ │ Offer
+  // Coach moved into Interview & Trial dropdown. /dsa-guide + /after-apply
+  // retired (301 in next.config.ts). /what-is-dsa + /offer + /dsa-interview/talents new.
   const basicsLinks: readonly NavLink[] = [
-    { href: "/dsa-guide", label: t.navWhatIsDsa },
+    { href: "/what-is-dsa", label: t.navWhatIsDsa },
     { href: "/dsa-experience", label: t.navParentStories, gold: true },
   ];
 
   const schoolsLinks: readonly NavLink[] = [
-    { href: "/dsa-finder", label: t.navSearchSchools, gold: true },
+    { href: "/dsa-finder", label: t.navTalentSearchCenter, highlight: true },
     { href: "/schools", label: t.navAllSchools },
     { href: "/psle-cop", label: t.navPsleCutoffs },
     { href: "/open-houses", label: t.navOpenHouseDates },
@@ -191,20 +201,15 @@ export function SiteHeader() {
   ];
 
   const applicationLinks: readonly NavLink[] = [
-    { href: "/timeline", label: t.navTimeline },
+    { href: "/timeline", label: t.navApplicationTimeline2026 },
     { href: "/faq", label: t.navApplicationFaq },
     { href: "/apply", label: t.navApplyChecklist },
   ];
 
-  const talentNavLinks: readonly NavLink[] = getAllTalentPages().map((p) => ({
-    href: `/dsa-interview/${p.slug}`,
-    label: p.navLabel[locale],
-  }));
-
-  const afterApplyLinks: readonly NavLink[] = [
-    { href: "/after-apply", label: t.navAfterApplyHub },
+  const interviewLinks: readonly NavLink[] = [
     { href: "/dsa-interview", label: t.navDsaInterview, gold: true },
-    ...talentNavLinks,
+    { href: "/dsa-interview/talents", label: t.navByTalent },
+    { href: "/dsa-coaches", label: t.navCoach },
   ];
 
   return (
@@ -261,18 +266,18 @@ export function SiteHeader() {
             starred={starSlot === "application"}
           />
           <NavDropdown
-            label={t.navAfterApply}
-            isOpen={afterApplyMenuOpen}
-            onToggle={() => setAfterApplyMenuOpen((o) => !o)}
-            onClose={() => setAfterApplyMenuOpen(false)}
-            id="desktop-after-apply-menu"
-            links={afterApplyLinks}
+            label={t.navInterviewAndTrial}
+            isOpen={interviewMenuOpen}
+            onToggle={() => setInterviewMenuOpen((o) => !o)}
+            onClose={() => setInterviewMenuOpen(false)}
+            id="desktop-interview-menu"
+            links={interviewLinks}
             pathname={pathname}
-            starred={starSlot === "after-apply"}
+            starred={starSlot === "interview-trial"}
           />
           <NavLinkButton
-            href="/dsa-coaches"
-            label={t.navCoach}
+            href="/offer"
+            label={t.navOffer}
             pathname={pathname}
           />
           <div className="ml-2">
@@ -337,11 +342,13 @@ export function SiteHeader() {
                     key={link.href}
                     href={link.href}
                     className={`block rounded-lg px-3 py-2 text-sm font-medium normal-case transition hover:bg-white/10 ${
-                      link.gold
-                        ? "text-champagne hover:text-champagne-light"
-                        : pathname === link.href
-                          ? "bg-white/10 text-white"
-                          : "text-white/75 hover:text-white"
+                      link.highlight
+                        ? "text-white font-semibold"
+                        : link.gold
+                          ? "text-champagne hover:text-champagne-light"
+                          : pathname === link.href
+                            ? "bg-white/10 text-white"
+                            : "text-white/75 hover:text-white"
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -374,15 +381,15 @@ export function SiteHeader() {
                 ))}
               </div>
 
-              {/* After You Apply */}
+              {/* Interview & Trial */}
               <div className="mt-1 border-t border-white/10 pt-2">
                 <p className="relative inline-flex items-center px-3 py-1 text-[10px] font-semibold normal-case text-white/45">
                   <span className="relative pr-4">
-                    {t.navAfterApply}
-                    {starSlot === "after-apply" ? <StarSticker /> : null}
+                    {t.navInterviewAndTrial}
+                    {starSlot === "interview-trial" ? <StarSticker /> : null}
                   </span>
                 </p>
-                {afterApplyLinks.map((link) => (
+                {interviewLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
@@ -400,16 +407,16 @@ export function SiteHeader() {
                 ))}
               </div>
 
-              {/* Coach */}
+              {/* Offer */}
               <div className="mt-1 border-t border-white/10 pt-2">
                 <Link
-                  href="/dsa-coaches"
+                  href="/offer"
                   className={`block rounded-lg px-3 py-2 text-sm font-medium normal-case transition hover:bg-white/10 hover:text-white ${
-                    pathname === "/dsa-coaches" ? "bg-white/10 text-white" : "text-white/75"
+                    pathname === "/offer" ? "bg-white/10 text-white" : "text-white/75"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {t.navCoach}
+                  {t.navOffer}
                 </Link>
               </div>
 

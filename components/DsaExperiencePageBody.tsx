@@ -530,7 +530,7 @@ export function DsaExperiencePageBody() {
                   </p>
                   <div className="grid gap-3 sm:grid-cols-3">
                     <Link
-                      href="/dsa-guide"
+                      href="/what-is-dsa"
                       className="flex flex-col rounded-xl border border-[#e3ded5] bg-white p-4 shadow-card transition hover:border-intellectual/30 hover:shadow-card-hover"
                     >
                       <span className="mb-1 text-[10px] font-bold tracking-wide text-champagne-dark">

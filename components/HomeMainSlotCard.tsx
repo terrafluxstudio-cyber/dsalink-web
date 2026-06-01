@@ -124,12 +124,12 @@ const SLOTS: Record<
       },
     },
     secondary: {
-      href: "/after-apply",
+      href: "/dsa-interview/talents",
       label: {
-        en: "Full after-apply hub",
-        zh: "完整申请之后中心",
-        ms: "Hab selepas memohon penuh",
-        ta: "முழு விண்ணப்பத்திற்குப் பின் மையம்",
+        en: "Browse prep by talent",
+        zh: "按才艺浏览备战",
+        ms: "Lihat persediaan mengikut bakat",
+        ta: "திறமை வாரியாக தயாரிப்பு",
       },
     },
     bullets: [

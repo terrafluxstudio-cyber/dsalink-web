@@ -140,8 +140,8 @@ const PHASES: Phase[] = [
       ta: "DSA முடிவுகள் PSLE-உடன் வெளியிடப்படும். DSA உறுதியானால், ஏற்றுக்கொண்டு S1 Posting-ஐ தவிர்க்கவும். இல்லையெனில் S1 Posting திறக்கும்.",
     },
     link: {
-      href: "/after-apply",
-      label: { en: "After-apply hub", zh: "申请之后中心", ms: "Hab selepas memohon", ta: "விண்ணப்பத்திற்குப் பின் மையம்" },
+      href: "/offer",
+      label: { en: "Offer & PSLE outcome", zh: "录取与 PSLE 结果", ms: "Tawaran & keputusan PSLE", ta: "சலுகை & PSLE முடிவு" },
     },
   },
 ];
@@ -154,28 +154,28 @@ export function TimelinePageBody() {
   const { locale } = useLanguage();
 
   const kicker = {
-    en: "DSA-Sec 2026 · Singapore",
-    zh: "DSA-Sec 2026 · 新加坡",
-    ms: "DSA-Sec 2026 · Singapura",
-    ta: "DSA-Sec 2026 · சிங்கப்பூர்",
+    en: "2026 Application Timeline · Singapore",
+    zh: "2026 申请时间线 · 新加坡",
+    ms: "Garis Masa Permohonan 2026 · Singapura",
+    ta: "2026 விண்ணப்ப கால அட்டவணை · சிங்கப்பூர்",
   };
   const title = {
-    en: "The DSA-Sec timeline at a glance.",
-    zh: "DSA-Sec 全程关键时间，一眼看完。",
-    ms: "Garis masa DSA-Sec sekilas pandang.",
-    ta: "DSA-Sec கால அட்டவணை — ஒரே பார்வை.",
+    en: "The 2026 DSA-Sec timeline at a glance.",
+    zh: "2026 DSA-Sec 全程关键时间，一眼看完。",
+    ms: "Garis masa DSA-Sec 2026 sekilas pandang.",
+    ta: "2026 DSA-Sec கால அட்டவணை — ஒரே பார்வை.",
   };
   const subtitle = {
-    en: "Five phases, plain dates. For a step-by-step walkthrough of each phase, open the DSA Guide.",
-    zh: "五大阶段、明确日期。每阶段详细步骤请看 DSA 指南。",
-    ms: "Lima fasa, tarikh jelas. Untuk langkah demi langkah, buka Panduan DSA.",
-    ta: "ஐந்து கட்டங்கள், தெளிவான தேதிகள். ஒவ்வொரு கட்டத்தின் விரிவான வழிகாட்டுதலுக்கு DSA வழிகாட்டியைத் திறக்கவும்.",
+    en: "Five phases, plain dates for the 2026 application cycle. Each phase links out to the page that goes deeper — what is DSA, what to apply with, what trial coaches assess, what an Offer locks in.",
+    zh: "五大阶段、2026 申请周期的明确日期。每阶段都链接到更深入的内容——什么是 DSA、申请要带什么、trial 教练看什么、Offer 锁定什么。",
+    ms: "Lima fasa, tarikh jelas untuk kitaran permohonan 2026. Setiap fasa menghubung ke halaman yang lebih mendalam.",
+    ta: "ஐந்து கட்டங்கள், 2026 விண்ணப்ப சுழற்சிக்கான தெளிவான தேதிகள். ஒவ்வொரு கட்டமும் ஆழமான பக்கத்துடன் இணைக்கப்பட்டுள்ளது.",
   };
   const guideCta = {
-    en: "Open the full DSA Guide",
-    zh: "打开完整 DSA 指南",
-    ms: "Buka Panduan DSA penuh",
-    ta: "முழு DSA வழிகாட்டியைத் திற",
+    en: "Start with What Is DSA",
+    zh: "先看：什么是 DSA",
+    ms: "Mula dengan Apa itu DSA",
+    ta: "DSA என்றால் என்ன — தொடங்குங்கள்",
   };
 
   return (
@@ -245,24 +245,24 @@ export function TimelinePageBody() {
             <div className="mt-10 rounded-2xl border border-intellectual/15 bg-intellectual p-6 text-white sm:p-8">
               <p className="font-display text-lg font-semibold sm:text-xl">
                 {locale === "zh"
-                  ? "想看每个阶段的具体步骤？"
+                  ? "刚开始了解 DSA？"
                   : locale === "ms"
-                    ? "Mahu langkah terperinci setiap fasa?"
+                    ? "Baru kenal DSA?"
                     : locale === "ta"
-                      ? "ஒவ்வொரு கட்டத்தின் விரிவான படிகளை விரும்புகிறீர்களா?"
-                      : "Want step-by-step detail for each phase?"}
+                      ? "DSA-ஐ இப்போதுதான் அறிந்துகொள்கிறீர்களா?"
+                      : "New to DSA?"}
               </p>
               <p className="mt-2 text-sm leading-relaxed text-white/75">
                 {locale === "zh"
-                  ? "DSA 指南把每个时间节点拆成可执行的步骤、官方链接、注意点。"
+                  ? "先把 DSA-Sec 是什么、为什么存在、和 PSLE 怎么互动看清楚。"
                   : locale === "ms"
-                    ? "Panduan DSA pecahkan setiap tarikh kepada langkah, pautan rasmi, perkara penting."
+                    ? "Mulakan dengan memahami apa itu DSA-Sec, mengapa ia wujud, dan bagaimana ia berinteraksi dengan PSLE."
                     : locale === "ta"
-                      ? "DSA வழிகாட்டி ஒவ்வொரு தேதியையும் செயல்படக்கூடிய படிகள், அதிகாரப்பூர்வ இணைப்புகள், முக்கிய புள்ளிகளாக பிரிக்கிறது."
-                      : "The DSA Guide breaks every date into actionable steps, official links, and watch-outs."}
+                      ? "DSA-Sec என்றால் என்ன, ஏன் உள்ளது, PSLE-உடன் எவ்வாறு தொடர்பு கொள்கிறது என்பதை முதலில் புரிந்துகொள்ளுங்கள்."
+                      : "Start with what DSA-Sec is, why it exists, and how it interacts with PSLE."}
               </p>
               <Link
-                href="/dsa-guide"
+                href="/what-is-dsa"
                 className="mt-5 inline-flex items-center gap-2 rounded-xl bg-champagne px-5 py-2.5 text-sm font-semibold text-intellectual-dark transition hover:bg-champagne-light"
               >
                 <span style={{ textTransform: "none" }}>{pick(guideCta, locale)}</span>

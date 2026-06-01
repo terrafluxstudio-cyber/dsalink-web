@@ -26,7 +26,7 @@ type QuickCard = {
 const CARDS: Record<CardKey, QuickCard> = {
   basics: {
     key: "basics",
-    href: "/dsa-guide",
+    href: "/what-is-dsa",
     icon: BookOpen,
     title: { en: "DSA Basics", zh: "DSA 基础", ms: "Asas DSA", ta: "DSA அடிப்படை" },
     blurb: {
@@ -62,19 +62,19 @@ const CARDS: Record<CardKey, QuickCard> = {
   },
   "after-apply": {
     key: "after-apply",
-    href: "/after-apply",
+    href: "/dsa-interview",
     icon: Compass,
     title: {
-      en: "After You Apply",
-      zh: "申请之后",
-      ms: "Selepas Memohon",
-      ta: "விண்ணப்பித்த பிறகு",
+      en: "Interview & Trial",
+      zh: "面试与试训",
+      ms: "Temu Duga & Percubaan",
+      ta: "நேர்காணல் & சோதனை",
     },
     blurb: {
-      en: "Interview prep, trial signals, results routing, S1 fallback — the 6-month black box.",
-      zh: "面试准备、trial 信号、结果分流、S1 备选——6 个月信息黑箱。",
-      ms: "Persediaan temu duga, isyarat trial, keputusan, sandaran S1 — 6 bulan rujukan.",
-      ta: "நேர்காணல், சோதனை, முடிவு, S1 மாற்று — 6 மாத குறிப்பு.",
+      en: "Eight talent-specific prep pages, sample interview questions, what trial coaches actually assess — the half-year between Submit and Results.",
+      zh: "8 个项目的备战页、面试样题、trial 教练真正看什么——从提交到出结果的半年怎么过。",
+      ms: "Lapan halaman persediaan khusus bakat, soalan temu duga contoh, apa yang jurulatih trial nilai.",
+      ta: "எட்டு திறமை சார்ந்த தயாரிப்பு பக்கங்கள், மாதிரி நேர்காணல் கேள்விகள், சோதனை பயிற்சியாளர்கள் மதிப்பிடுவது.",
     },
   },
   coach: {
