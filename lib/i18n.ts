@@ -154,6 +154,9 @@ export type Copy = {
   navApplication: string;
   navAfterApply: string;
   navCoach: string;
+  /** Sub-items inside Application + After You Apply dropdowns (IA v2, 2026-06-01) */
+  navApplicationFaq: string;
+  navAfterApplyHub: string;
   ohMissedTakeawaysBtn: string;
   ohTakeawaysAbout: string;
   ohTakeawaysGoodFit: string;
@@ -561,6 +564,8 @@ export const copy: Record<Locale, Copy> = {
     navApplication: "Application",
     navAfterApply: "After You Apply",
     navCoach: "Coach",
+    navApplicationFaq: "Application FAQ",
+    navAfterApplyHub: "After You Apply (overview)",
     ohMissedTakeawaysBtn: "Missed it? Everything's here →",
     ohTakeawaysAbout: "About the School",
     ohTakeawaysGoodFit: "Good Fit For",
@@ -933,6 +938,8 @@ export const copy: Record<Locale, Copy> = {
     navApplication: "申请",
     navAfterApply: "申请之后",
     navCoach: "教练",
+    navApplicationFaq: "申请常见问题",
+    navAfterApplyHub: "申请之后（总览）",
     ohMissedTakeawaysBtn: "错过了？情报全在这里 →",
     ohTakeawaysAbout: "学校简介",
     ohTakeawaysGoodFit: "适合这样的孩子",
@@ -1298,6 +1305,8 @@ export const copy: Record<Locale, Copy> = {
     navApplication: "Permohonan",
     navAfterApply: "Selepas Memohon",
     navCoach: "Jurulatih",
+    navApplicationFaq: "FAQ Permohonan",
+    navAfterApplyHub: "Selepas Memohon (gambaran)",
     ohMissedTakeawaysBtn: "Terlepas? Semua ada di sini →",
     ohTakeawaysAbout: "Tentang Sekolah",
     ohTakeawaysGoodFit: "Sesuai Untuk",
@@ -1687,6 +1696,8 @@ export const copy: Record<Locale, Copy> = {
     navApplication: "விண்ணப்பம்",
     navAfterApply: "விண்ணப்பித்த பிறகு",
     navCoach: "பயிற்சியாளர்",
+    navApplicationFaq: "விண்ணப்ப கேள்விகள்",
+    navAfterApplyHub: "விண்ணப்பித்த பிறகு (முழுமை)",
     ohMissedTakeawaysBtn: "தவறவிட்டீர்களா? எல்லாம் இங்கே →",
     ohTakeawaysAbout: "பள்ளியைப் பற்றி",
     ohTakeawaysGoodFit: "பொருத்தமான மாணவர்",

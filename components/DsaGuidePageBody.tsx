@@ -1,7 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { DsaExplainerSection } from "@/components/DsaExplainerSection";
+import { DsaStrategySection } from "@/components/DsaStrategySection";
 import { PageHeader } from "@/components/PageHeader";
+import { SeoTextBlock } from "@/components/SeoTextBlock";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -302,6 +305,11 @@ export function DsaGuidePageBody() {
             </div>
           </div>
         </div>
+
+        {/* Migrated from homepage 2026-06-01: DSA education depth lives in the guide. */}
+        <DsaExplainerSection />
+        <DsaStrategySection />
+        <SeoTextBlock />
       </main>
       <SiteFooter scheduleNote={t.dsaGuideFooterScheduleNote} />
     </>

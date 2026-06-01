@@ -2,18 +2,13 @@ import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { DSALINK_LOCALE_KEY } from "@/lib/constants";
 import { getGuideLocaleStrings, isLocale, type Locale } from "@/lib/i18n";
-import { ScoresEntryCard, ResourceCards } from "@/components/HomeDynamic";
+import { ScoresEntryCard } from "@/components/HomeDynamic";
 import { TakeawaysEntryCard } from "@/components/TakeawaysEntryCard";
-import { DsaExplainerSection } from "@/components/DsaExplainerSection";
-import { DsaStrategySection } from "@/components/DsaStrategySection";
 import { FeaturedGuidesSection } from "@/components/FeaturedGuidesSection";
 import { HeroSection } from "@/components/HeroSection";
+import { HomeMainSlotCard } from "@/components/HomeMainSlotCard";
 import { HomeNavCardsRow } from "@/components/HomeNavCardsRow";
-import { HomeTimeSlot } from "@/components/HomeTimeSlot";
 import { HomepageSubscribeBanner } from "@/components/HomepageSubscribeBanner";
-import { DsaExperienceCallout } from "@/components/DsaExperienceCallout";
-import { ParentJourneyStrip } from "@/components/ParentJourneyStrip";
-import { SeoTextBlock } from "@/components/SeoTextBlock";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StatsStrip } from "@/components/StatsStrip";
@@ -79,19 +74,16 @@ export default function HomePage() {
       />
       <SiteHeader />
       <main>
-        {/* Layer 1 · Hero — reference platform framing (brand + headline + CTA + search) */}
+        {/* L1 · Hero — C2 reference framing */}
         <HeroSection />
 
-        {/* Layer 1b · Stats Strip — quantified reference depth */}
-        <StatsStrip />
+        {/* L2 · Current-period main slot — date-driven big card */}
+        <HomeMainSlotCard />
 
-        {/* Layer 2 · Current-moment slot — date-driven single module */}
-        <HomeTimeSlot />
-
-        {/* Layer 3 · Five reference sections — mirrors permanent 5-item nav */}
+        {/* L3 · 4 quick-link side cards — the rest of the 5-item nav */}
         <HomeNavCardsRow />
 
-        {/* Layer 4 · Featured Evergreen — Takeaways · PSLE COP · curated guides */}
+        {/* L4 · Featured Evergreen — Takeaways · PSLE COP · curated guides */}
         <section className="bg-surface py-12 sm:py-16">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <div className="mb-6 sm:mb-8">
@@ -110,16 +102,11 @@ export default function HomePage() {
         </section>
         <FeaturedGuidesSection />
 
-        {/* Layer 5 · Email subscribe — the 8–11 month return mechanism */}
+        {/* L5 · Email subscribe — the 8–11 month return mechanism */}
         <HomepageSubscribeBanner />
 
-        {/* Layer 6 · DSA education depth — explainer, strategy, parent journey, SEO copy */}
-        <ParentJourneyStrip />
-        <DsaExplainerSection />
-        <DsaStrategySection />
-        <DsaExperienceCallout />
-        <ResourceCards />
-        <SeoTextBlock />
+        {/* L6 · Stats Strip — quantified depth, placed at footer */}
+        <StatsStrip />
       </main>
       <SiteFooter />
     </>

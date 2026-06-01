@@ -164,6 +164,8 @@ export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [basicsMenuOpen, setBasicsMenuOpen] = useState(false);
   const [schoolsMenuOpen, setSchoolsMenuOpen] = useState(false);
+  const [applicationMenuOpen, setApplicationMenuOpen] = useState(false);
+  const [afterApplyMenuOpen, setAfterApplyMenuOpen] = useState(false);
 
   // Star slot: null on SSR, real value after mount (avoids hydration mismatch).
   const [starSlot, setStarSlot] = useState<StarSlot>(null);
@@ -171,10 +173,10 @@ export function SiteHeader() {
     setStarSlot(computeStarSlot(new Date()));
   }, []);
 
-  // Permanent 5-item IA. Order = DSA lifecycle.
+  // IA v2 (2026-06-01): DSA Basics trimmed to 2; Application + After You Apply now dropdowns.
+  // URLs preserved — /faq stays as Application FAQ; /timeline + 8 talent pages added in Phase B.
   const basicsLinks: readonly NavLink[] = [
     { href: "/dsa-guide", label: t.navWhatIsDsa },
-    { href: "/faq", label: t.navFaq },
     { href: "/dsa-experience", label: t.navParentStories, gold: true },
   ];
 
@@ -185,6 +187,16 @@ export function SiteHeader() {
     { href: "/open-houses", label: t.navOpenHouseDates },
     { href: "/open-house-takeaways", label: t.navOpenHouseMissed, gold: true },
     { href: "/open-house-guide", label: t.navHowToVisit },
+  ];
+
+  const applicationLinks: readonly NavLink[] = [
+    { href: "/faq", label: t.navApplicationFaq },
+    { href: "/apply", label: t.navApplyChecklist },
+  ];
+
+  const afterApplyLinks: readonly NavLink[] = [
+    { href: "/after-apply", label: t.navAfterApplyHub },
+    { href: "/dsa-interview", label: t.navDsaInterview, gold: true },
   ];
 
   return (
@@ -230,15 +242,23 @@ export function SiteHeader() {
             pathname={pathname}
             starred={starSlot === "schools"}
           />
-          <NavLinkButton
-            href="/apply"
+          <NavDropdown
             label={t.navApplication}
+            isOpen={applicationMenuOpen}
+            onToggle={() => setApplicationMenuOpen((o) => !o)}
+            onClose={() => setApplicationMenuOpen(false)}
+            id="desktop-application-menu"
+            links={applicationLinks}
             pathname={pathname}
             starred={starSlot === "application"}
           />
-          <NavLinkButton
-            href="/after-apply"
+          <NavDropdown
             label={t.navAfterApply}
+            isOpen={afterApplyMenuOpen}
+            onToggle={() => setAfterApplyMenuOpen((o) => !o)}
+            onClose={() => setAfterApplyMenuOpen(false)}
+            id="desktop-after-apply-menu"
+            links={afterApplyLinks}
             pathname={pathname}
             starred={starSlot === "after-apply"}
           />
@@ -247,14 +267,6 @@ export function SiteHeader() {
             label={t.navCoach}
             pathname={pathname}
           />
-          <Link
-            href="/blog"
-            className={`flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-champagne/40 bg-champagne/15 px-3 py-1.5 text-[0.8125rem] font-medium normal-case text-champagne-light transition hover:bg-champagne/25 hover:text-white ${
-              pathname === "/blog" ? "bg-champagne/30 text-white" : ""
-            }`}
-          >
-            {t.navBlog}
-          </Link>
           <div className="ml-2">
             <LanguageToggle id="language-select-desktop" />
           </div>
@@ -332,46 +344,52 @@ export function SiteHeader() {
 
               {/* Application */}
               <div className="mt-1 border-t border-white/10 pt-2">
-                <Link
-                  href="/apply"
-                  className={`relative block rounded-lg px-3 py-2 text-sm font-medium normal-case transition hover:bg-white/10 hover:text-white ${
-                    pathname === "/apply" ? "bg-white/10 text-white" : "text-white/75"
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                <p className="relative inline-flex items-center px-3 py-1 text-[10px] font-semibold normal-case text-white/45">
                   <span className="relative pr-4">
                     {t.navApplication}
                     {starSlot === "application" ? <StarSticker /> : null}
                   </span>
-                </Link>
+                </p>
+                {applicationLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`block rounded-lg px-3 py-2 text-sm font-medium normal-case transition hover:bg-white/10 ${
+                      pathname === link.href
+                        ? "bg-white/10 text-white"
+                        : "text-white/75 hover:text-white"
+                    }`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </div>
 
               {/* After You Apply */}
               <div className="mt-1 border-t border-white/10 pt-2">
-                <Link
-                  href="/after-apply"
-                  className={`relative block rounded-lg px-3 py-2 text-sm font-medium normal-case transition hover:bg-white/10 hover:text-white ${
-                    pathname === "/after-apply" ? "bg-white/10 text-white" : "text-white/75"
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                <p className="relative inline-flex items-center px-3 py-1 text-[10px] font-semibold normal-case text-white/45">
                   <span className="relative pr-4">
                     {t.navAfterApply}
                     {starSlot === "after-apply" ? <StarSticker /> : null}
                   </span>
-                </Link>
-                {/* Interview is the live entry under After You Apply */}
-                <Link
-                  href="/dsa-interview"
-                  className={`block rounded-lg px-6 py-2 text-[0.8125rem] font-medium normal-case transition hover:bg-white/10 ${
-                    pathname === "/dsa-interview"
-                      ? "bg-white/10 text-white"
-                      : "text-white/65 hover:text-white"
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  · {t.navDsaInterview}
-                </Link>
+                </p>
+                {afterApplyLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`block rounded-lg px-3 py-2 text-sm font-medium normal-case transition hover:bg-white/10 ${
+                      link.gold
+                        ? "text-champagne hover:text-champagne-light"
+                        : pathname === link.href
+                          ? "bg-white/10 text-white"
+                          : "text-white/75 hover:text-white"
+                    }`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </div>
 
               {/* Coach */}
@@ -384,19 +402,6 @@ export function SiteHeader() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t.navCoach}
-                </Link>
-              </div>
-
-              {/* Blog */}
-              <div className="mt-1 border-t border-white/10 pt-2">
-                <Link
-                  href="/blog"
-                  className={`flex items-center gap-2 rounded-lg border border-champagne/40 bg-champagne/15 px-3 py-2 text-sm font-medium normal-case text-champagne-light transition hover:bg-champagne/25 ${
-                    pathname === "/blog" ? "bg-champagne/30 text-white" : ""
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {t.navBlog}
                 </Link>
               </div>
 
