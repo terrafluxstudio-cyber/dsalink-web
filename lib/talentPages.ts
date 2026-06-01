@@ -20,6 +20,65 @@ export type TalentSlug =
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
+/**
+ * Rich content fields use LocaleStrFlex — EN required, ZH/MS/TA optional.
+ * Render layer falls back to EN when a non-EN locale is missing.
+ * This lets a talent page ship EN-first and backfill ZH/MS/TA later.
+ */
+export type LocaleStrFlex = {
+  en: string;
+  zh?: string;
+  ms?: string;
+  ta?: string;
+};
+
+export type DimensionEntry = {
+  /** Short bold label for the dimension. */
+  label: LocaleStrFlex;
+  /** Paragraph body. */
+  body: LocaleStrFlex;
+};
+
+export type PositionEntry = {
+  position: LocaleStrFlex;
+  body: LocaleStrFlex;
+};
+
+export type InterviewQuestion = {
+  question: LocaleStrFlex;
+  subtext: LocaleStrFlex;
+  approach: LocaleStrFlex;
+  template: LocaleStrFlex;
+};
+
+export type RichSchoolEntry = {
+  name: string;
+  url?: string;
+  /** Talent area + tier (e.g. "Basketball (Boys), IP"). */
+  talentArea: LocaleStrFlex;
+  /** One short sentence of public context. */
+  context: LocaleStrFlex;
+};
+
+export type ChecklistGroup = {
+  label: LocaleStrFlex;
+  items: LocaleStrFlex[];
+};
+
+export type RichContent = {
+  trialDimensions: DimensionEntry[];
+  /** Optional lead-in paragraph for trial dimensions section. */
+  trialDimensionsIntro?: LocaleStrFlex;
+  positionFocus: PositionEntry[];
+  /** Optional note after position list (e.g. for SG/C transferability). */
+  positionFocusNote?: LocaleStrFlex;
+  interviewQuestions: InterviewQuestion[];
+  schools: RichSchoolEntry[];
+  parentChecklist: ChecklistGroup[];
+  /** Final paragraph for late-starters. Render in its own visual block. */
+  sprintAdvice: LocaleStrFlex;
+};
+
 export type TalentPage = {
   slug: TalentSlug;
   /** ISO date when full content is expected to land. */
@@ -36,6 +95,8 @@ export type TalentPage = {
   sampleSchools: string[];
   /** Meta description for SEO. */
   metaDescription: LocaleStr;
+  /** Deep content — present once the page is past placeholder stage. */
+  rich?: RichContent;
 };
 
 const TALENT_DATA: Record<TalentSlug, TalentPage> = {
@@ -74,6 +135,287 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       zh: "新加坡篮球 DSA-Sec 面试与 trial 全解析——教练考察什么、面试样题、招生中学清单。",
       ms: "Bagaimana temu duga dan trial DSA-Sec bola keranjang di Singapura — apa yang jurulatih nilai, soalan contoh, sekolah peserta.",
       ta: "சிங்கப்பூரில் கூடைப்பந்து DSA-Sec நேர்காணல் மற்றும் சோதனை எவ்வாறு செயல்படுகிறது — பயிற்சியாளர்கள் என்ன மதிப்பிடுகிறார்கள், மாதிரி கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore basketball trials are usually run by the head coach plus one teacher-in-charge, with a written rubric. A handful of schools — most transparently Kent Ridge Sec — publish the structure: physical assessment, individual technical skills, and game situation skills, with the same rubric applied to every applicant. Most schools do not publish the rubric, but Singapore parent forum reports converge on the same six dimensions.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Decision-making under pressure" },
+          body: {
+            en: "Coaches watch whether the trialist forces passes into traffic or makes the simple, correct play. Dunman Sec scores \"positioning, vision/anticipation, tactical awareness\" as one of three components.",
+          },
+        },
+        {
+          label: { en: "Defensive footwork and stance" },
+          body: {
+            en: "Assessed in 1-on-1 closeouts and during scrimmage. Active hands, low stance, and on-court communication are widely cited as coachability signals on Singapore parent forums.",
+          },
+        },
+        {
+          label: { en: "Off-ball reads" },
+          body: {
+            en: "What the trialist does in the five seconds after passing the ball is the single most under-trained habit at P6 level. Cuts, screens, and floor spacing get noticed even by coaches who don't talk about it.",
+          },
+        },
+        {
+          label: { en: "Shooting form over shooting %" },
+          body: {
+            en: "For a 12-year-old still growing, consistent repeatable form scores higher than a high make-rate with chaotic mechanics. Coaches who've seen growth spurts know the make-rate will follow.",
+          },
+        },
+        {
+          label: { en: "Conditioning" },
+          body: {
+            en: "Trials run deliberately past 90 minutes. A recurring observation on Singapore parent forums is that tired kids start passing only to teammates they already know — which is itself a scored signal.",
+          },
+        },
+        {
+          label: { en: "Attitude and coachability" },
+          body: {
+            en: "How the trialist behaves between drills, whether they pick up loose balls without being asked, whether they thank the coach at the end. International coaching research finds these unanimously rated 10/10 by elite coaches — higher than raw athleticism.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Point Guard" },
+          body: {
+            en: "Left-hand competence at speed and the ability to keep eyes up while dribbling — not flashy crossovers. Coaches typically run 3-on-2 fast-break drills to see whether the PG passes ahead or over-dribbles. Decision speed beats foot speed at twelve.",
+          },
+        },
+        {
+          position: { en: "Small Forward" },
+          body: {
+            en: "The position where raw athleticism gets the most credit. Coaches want rebounding instinct, transition speed, and willingness to defend across positions. At twelve, small forwards are often the tallest kids who haven't specialised — coaches watch hand activity in the paint and whether the kid finishes layups with either hand.",
+          },
+        },
+        {
+          position: { en: "Power Forward" },
+          body: {
+            en: "Box-out technique on every shot — even in warm-ups — is the highest-signal behaviour. P6 power forwards who can catch on the move in the post and finish through contact are rare; schools with strong B-Division programs will fast-track them. Dunman Sec explicitly scores \"passing, footwork, and verticality.\"",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "If your child plays shooting guard or centre, the point guard and small forward entries above transfer well. Specifics for those positions vary too much across schools to generalise responsibly.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love basketball?" },
+          subtext: {
+            en: "The panel wants a specific moment, not a feeling. \"It's fun\" reads as weak motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory, then connect it to character.",
+          },
+          template: {
+            en: "When my P5 team lost the zonals semi by two points, I realised I wanted to be the player who takes that shot — not avoids it.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the program, or are they applying everywhere?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's basketball — a coach's name, an NSG result, a training pattern.",
+          },
+          template: {
+            en: "ACS(I) was National B-Div third in 2023/24 and trains DSA candidates with the competition team — I want that pace from Sec 1.",
+          },
+        },
+        {
+          question: { en: "What position do you play?" },
+          subtext: {
+            en: "Can the kid articulate the role, not just label it?",
+          },
+          approach: {
+            en: "Name the position plus the job.",
+          },
+          template: {
+            en: "Point guard — my job is getting our shooters open looks and slowing the game down when we're rattled.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a challenge." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I missed my P5 school team after the first trial. I joined ActiveSG twice a week, made the team the next round, started by NSG.",
+          },
+        },
+        {
+          question: { en: "Is there a teammate or coach you remember most?" },
+          subtext: {
+            en: "Whether the kid sees teammates as people or as background.",
+          },
+          approach: {
+            en: "Name someone specific by role + what you learned from them.",
+          },
+          template: {
+            en: "My captain made me run lines with him after every practice — I didn't want to but I jumped three inches by year-end.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent trainings?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I do English and Math homework on the bus to training and finish Science before dinner — I keep Sundays for revision.",
+          },
+        },
+        {
+          question: { en: "If School A and School B both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school — your coach's emphasis on defence matches how I play. If the other school called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/basketball/",
+          talentArea: { en: "Basketball (Boys), IP" },
+          context: {
+            en: "2023/24 B-Division National third, 2023 C-Division National second. NSG zone/national experience and BAS/FIBA age-group competition are strong considerations.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Basketball (Boys), IP" },
+          context: {
+            en: "2024 Boys A-Div National second; girls A-Div national champions in recent cycles. Official position is that applicants without prior experience may apply.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/year-1-admission-exercises/year-1-direct-school-admission/",
+          talentArea: { en: "Basketball (Boys), IP" },
+          context: {
+            en: "Listed in RI's 2026 DSA talent areas. Part of RI's broader IP sports portfolio.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Basketball (Boys), DSA-Sec" },
+          context: {
+            en: "Listed in Dunman High's 2026 DSA FAQ. East Zone B-Division champions in 2024.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/",
+          talentArea: { en: "Basketball (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school — applicants must offer Chinese Language or Higher Chinese in primary school. Historically competitive — 2014 C-Division national finalists.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          url: "https://www.nanhuahigh.moe.edu.sg/announcements/talent-areas-for-dsa/",
+          talentArea: { en: "Basketball (Boys), DSA-Sec" },
+          context: {
+            en: "2024 NSG B-Div Boys second runner-up; Girls B-Div third runner-up. Higher Chinese or Chinese Language as Mother Tongue required.",
+          },
+        },
+        {
+          name: "Bukit Panjang Government High",
+          url: "https://www.bpghs.moe.edu.sg/dsa-2026/",
+          talentArea: { en: "Basketball (Boys)" },
+          context: {
+            en: "Trial scored on general motor ability plus sports-specific skills. Two-year CCA membership preferred but not mandatory.",
+          },
+        },
+        {
+          name: "Bedok View Secondary",
+          url: "https://www.bedokviewsec.moe.edu.sg/cca/sports/basketball-boys-n-girls/",
+          talentArea: { en: "Basketball (Boys and Girls)" },
+          context: {
+            en: "Co-ed program. Trains Mon and Thu 3:30–6pm. Welcomes both newcomers and experienced players per the school's own description.",
+          },
+        },
+        {
+          name: "Kent Ridge Secondary",
+          url: "https://www.kentridgesec.moe.edu.sg/school-information/dsa/sports-and-games-basketball/",
+          talentArea: { en: "Basketball (Boys and Girls)" },
+          context: {
+            en: "The most transparent published trial structure of any Singapore school — physical assessment, individual technical skills, game situation skills, same rubric for every applicant.",
+          },
+        },
+        {
+          name: "Yishun Town Secondary",
+          url: "https://www.yishunsec.moe.edu.sg/students/dsa/",
+          talentArea: { en: "Basketball (Boys and Girls)" },
+          context: {
+            en: "Trial assesses ball handling, game awareness, teamwork.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Video-record one full 5-on-5 game. Watch with your child, scoring just two behaviours: (1) what they do in the five seconds after passing the ball — relocate, screen, or stand still? (2) how many possessions did they box out on? These are the two most under-trained P6 habits and the two highest-signal items in the rubrics that Singapore schools have published.",
+            },
+            {
+              en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and competition results, NAPFA, and JSA data from the primary school directly into the DSA portal. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 80%: form shooting only, half-court drills, no new academy session. Final-week added load rarely pays off and frequently produces a tweak.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire. Email the teacher-in-charge if anything is ambiguous — the email itself is a data point on parent attentiveness.",
+            },
+            {
+              en: "One scrimmage with strangers. On Singapore parent forums, a recurring observation is that kids underperform at trials because they start passing only to teammates they know. Force the awkwardness early.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — not 30. Coaches deliberately push trial past the fatigue threshold.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. Shorten the drill cycle to footwork and form shooting. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because that's the only part where a few hours of work can still meaningfully change the outcome. Some families bring in a private coach at this stage to compress the learning curve. A good private coach can speed up specific habit changes — but no coach produces, in three sessions, the muscle memory of a year of practice. Treat it as triage, not a fix.",
+      },
     },
   },
   football: {

@@ -1,19 +1,45 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, ArrowLeft, CalendarClock, School } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowLeft,
+  CalendarClock,
+  ExternalLink,
+  MessageSquareText,
+  School,
+  Sparkles,
+  Target,
+  Timer,
+  Users,
+} from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import type { TalentPage } from "@/lib/talentPages";
+import type {
+  ChecklistGroup,
+  DimensionEntry,
+  InterviewQuestion,
+  LocaleStrFlex,
+  PositionEntry,
+  RichContent,
+  RichSchoolEntry,
+  TalentPage,
+} from "@/lib/talentPages";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
+type Locale = "en" | "zh" | "ms" | "ta";
 
-function pick(s: LocaleStr, locale: "en" | "zh" | "ms" | "ta"): string {
+function pick(s: LocaleStr, locale: Locale): string {
   return s[locale];
 }
 
-function formatDate(iso: string, locale: "en" | "zh" | "ms" | "ta"): string {
+/** Flex picker — falls back to EN when locale missing. */
+function pickFlex(s: LocaleStrFlex, locale: Locale): string {
+  return s[locale] ?? s.en;
+}
+
+function formatDate(iso: string, locale: Locale): string {
   const d = new Date(iso + "T00:00:00Z");
   const monthIdx = d.getUTCMonth();
   const day = d.getUTCDate();
@@ -27,70 +53,476 @@ function formatDate(iso: string, locale: "en" | "zh" | "ms" | "ta"): string {
   return `${monthsEn[monthIdx]} ${day}, ${year}`;
 }
 
-export function InterviewTalentPageBody({ talent }: { talent: TalentPage }) {
-  const { locale } = useLanguage();
+/* ===== Rich-content section components ===== */
 
-  const kicker = {
-    en: "Interview Prep · by talent",
-    zh: "面试准备 · 分项目",
-    ms: "Persediaan Temu Duga · mengikut bakat",
-    ta: "நேர்காணல் தயாரிப்பு · திறமை வாரியாக",
+function TrialDimensionsSection({
+  rich,
+  locale,
+}: {
+  rich: RichContent;
+  locale: Locale;
+}) {
+  const heading: LocaleStr = {
+    en: "What trial coaches actually assess",
+    zh: "教练在 trial 上到底评什么",
+    ms: "Apa yang jurulatih trial sebenarnya nilai",
+    ta: "சோதனை பயிற்சியாளர்கள் உண்மையில் என்ன மதிப்பிடுகிறார்கள்",
   };
-  const comingLabel = {
-    en: "Full content coming by",
-    zh: "完整内容预计上线于",
-    ms: "Kandungan penuh akan datang menjelang",
-    ta: "முழு உள்ளடக்கம் வரும் தேதி",
+  return (
+    <section className="py-12 sm:py-16">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <div className="mb-6 flex items-center gap-3">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-intellectual/8 text-intellectual">
+            <Target className="h-4.5 w-4.5" aria-hidden />
+          </span>
+          <h2 className="font-display text-2xl font-semibold text-intellectual sm:text-3xl">
+            {pick(heading, locale)}
+          </h2>
+        </div>
+        {rich.trialDimensionsIntro ? (
+          <p className="mb-6 text-[0.9375rem] leading-relaxed text-intellectual-muted">
+            {pickFlex(rich.trialDimensionsIntro, locale)}
+          </p>
+        ) : null}
+        <ul className="space-y-4">
+          {rich.trialDimensions.map((d: DimensionEntry, i: number) => (
+            <li
+              key={i}
+              className="rounded-2xl border border-intellectual/12 bg-white p-5 shadow-soft sm:p-6"
+            >
+              <p className="font-display text-base font-semibold text-intellectual sm:text-lg">
+                {pickFlex(d.label, locale)}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-intellectual-muted sm:text-[0.9375rem]">
+                {pickFlex(d.body, locale)}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+function PositionFocusSection({
+  rich,
+  locale,
+}: {
+  rich: RichContent;
+  locale: Locale;
+}) {
+  const heading: LocaleStr = {
+    en: "Position-specific focus",
+    zh: "按位置看：教练重点关注",
+    ms: "Fokus mengikut posisi",
+    ta: "நிலை வாரியான கவனம்",
   };
-  const placeholderTitle = {
-    en: "Why this page exists",
-    zh: "为什么有这页",
-    ms: "Mengapa halaman ini wujud",
-    ta: "இந்த பக்கம் ஏன் உள்ளது",
+  return (
+    <section className="pb-12 sm:pb-16">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <div className="mb-6 flex items-center gap-3">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-intellectual/8 text-intellectual">
+            <Users className="h-4.5 w-4.5" aria-hidden />
+          </span>
+          <h2 className="font-display text-2xl font-semibold text-intellectual sm:text-3xl">
+            {pick(heading, locale)}
+          </h2>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {rich.positionFocus.map((p: PositionEntry, i: number) => (
+            <div
+              key={i}
+              className="rounded-2xl border border-intellectual/12 bg-white p-5 shadow-soft sm:p-6"
+            >
+              <p className="font-display text-base font-semibold text-intellectual sm:text-lg">
+                {pickFlex(p.position, locale)}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-intellectual-muted sm:text-[0.9375rem]">
+                {pickFlex(p.body, locale)}
+              </p>
+            </div>
+          ))}
+        </div>
+        {rich.positionFocusNote ? (
+          <p className="mt-4 text-[0.8125rem] leading-relaxed text-intellectual/60 sm:text-sm">
+            {pickFlex(rich.positionFocusNote, locale)}
+          </p>
+        ) : null}
+      </div>
+    </section>
+  );
+}
+
+function InterviewQuestionsSection({
+  rich,
+  locale,
+}: {
+  rich: RichContent;
+  locale: Locale;
+}) {
+  const heading: LocaleStr = {
+    en: "Sample interview questions",
+    zh: "面试题样：高频问法 + 怎么答",
+    ms: "Soalan temu duga contoh",
+    ta: "மாதிரி நேர்காணல் கேள்விகள்",
   };
-  const placeholderBody = {
-    en: "DSALink is the Singapore parent's reference platform for DSA-Sec. We're filling in each talent area with deep, parent-tested content — questions schools actually ask, what trials measure, and which schools to target. This page goes live first as a placeholder so parents can subscribe and we can ship updates as research lands.",
-    zh: "DSALink 是新加坡家长的 DSA-Sec reference 平台。我们在为每个项目填入深度、家长验证过的内容——学校真正会问的问题、trial 评分维度、哪些学校值得申请。本页先以占位形式上线，方便家长订阅，等调研完成立即更新。",
-    ms: "DSALink ialah platform rujukan ibu bapa Singapura untuk DSA-Sec. Kami sedang mengisi setiap bidang bakat dengan kandungan mendalam — soalan yang sekolah tanya, apa yang trial nilai, sekolah mana untuk disasarkan.",
-    ta: "DSALink என்பது சிங்கப்பூர் பெற்றோர்களுக்கான DSA-Sec குறிப்பு தளம். ஒவ்வொரு திறமை பகுதியிலும் ஆழமான உள்ளடக்கத்தை நிரப்புகிறோம் — பள்ளிகள் கேட்கும் கேள்விகள், சோதனை அளவீடுகள், எந்த பள்ளிகளை இலக்காகக் கொள்ளவேண்டும்.",
+  const subtextLabel: LocaleStr = {
+    en: "Subtext",
+    zh: "潜台词",
+    ms: "Maksud sebenar",
+    ta: "உள்ளார்ந்த பொருள்",
   };
-  const schoolsTitle = {
-    en: "Schools that participate in this talent",
-    zh: "招生此项目的学校（节选）",
-    ms: "Sekolah yang menerima bakat ini",
-    ta: "இந்த திறமைக்கு பங்கேற்கும் பள்ளிகள்",
+  const approachLabel: LocaleStr = {
+    en: "Approach",
+    zh: "怎么答",
+    ms: "Pendekatan",
+    ta: "அணுகுமுறை",
   };
-  const schoolsHint = {
-    en: "A short sample. The full list is in the school finder, filterable by talent area and region.",
-    zh: "节选展示。完整名单在学校 finder，可按才艺与区域筛选。",
-    ms: "Sampel pendek. Senarai penuh dalam pencari sekolah, boleh ditapis mengikut bakat dan kawasan.",
-    ta: "சிறு மாதிரி. முழு பட்டியல் பள்ளி தேடலில் உள்ளது.",
+  const templateLabel: LocaleStr = {
+    en: "Template",
+    zh: "模板答法",
+    ms: "Templat",
+    ta: "வார்ப்புரு",
   };
-  const finderCta = {
+  return (
+    <section className="pb-12 sm:pb-16">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <div className="mb-6 flex items-center gap-3">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-intellectual/8 text-intellectual">
+            <MessageSquareText className="h-4.5 w-4.5" aria-hidden />
+          </span>
+          <h2 className="font-display text-2xl font-semibold text-intellectual sm:text-3xl">
+            {pick(heading, locale)}
+          </h2>
+        </div>
+        <ol className="space-y-5">
+          {rich.interviewQuestions.map((q: InterviewQuestion, i: number) => (
+            <li
+              key={i}
+              className="rounded-2xl border border-intellectual/12 bg-white p-5 shadow-soft sm:p-6"
+            >
+              <p className="text-[11px] font-bold tracking-wider text-champagne-dark">
+                Q{i + 1}
+              </p>
+              <p className="mt-1 font-display text-base font-semibold leading-snug text-intellectual sm:text-lg">
+                "{pickFlex(q.question, locale)}"
+              </p>
+              <dl className="mt-4 space-y-2.5 text-sm leading-relaxed sm:text-[0.9375rem]">
+                <div>
+                  <dt className="inline font-semibold text-intellectual">
+                    {pick(subtextLabel, locale)}:
+                  </dt>{" "}
+                  <dd className="inline text-intellectual-muted">
+                    {pickFlex(q.subtext, locale)}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="inline font-semibold text-intellectual">
+                    {pick(approachLabel, locale)}:
+                  </dt>{" "}
+                  <dd className="inline text-intellectual-muted">
+                    {pickFlex(q.approach, locale)}
+                  </dd>
+                </div>
+                <div className="rounded-lg bg-surface px-3 py-2">
+                  <dt className="inline text-[11px] font-bold uppercase tracking-wider text-champagne-dark">
+                    {pick(templateLabel, locale)}
+                  </dt>
+                  <dd className="mt-1 italic text-intellectual">
+                    "{pickFlex(q.template, locale)}"
+                  </dd>
+                </div>
+              </dl>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}
+
+function RichSchoolsSection({
+  rich,
+  locale,
+}: {
+  rich: RichContent;
+  locale: Locale;
+}) {
+  const heading: LocaleStr = {
+    en: "Schools that offer this talent via DSA",
+    zh: "通过 DSA 招收此项目的学校",
+    ms: "Sekolah yang menawarkan bakat ini melalui DSA",
+    ta: "DSA மூலம் இந்த திறமையை வழங்கும் பள்ளிகள்",
+  };
+  const finderCta: LocaleStr = {
     en: "Open school finder",
     zh: "打开学校 finder",
     ms: "Buka pencari sekolah",
     ta: "பள்ளி தேடலைத் திற",
   };
-  const subscribeTitle = {
-    en: "Get notified when this page goes deep",
-    zh: "本页深度内容上线时邮件通知我",
-    ms: "Diberitahu apabila halaman ini lengkap",
-    ta: "இந்த பக்கம் முழுமை அடையும்போது அறிவிக்கவும்",
+  return (
+    <section className="pb-12 sm:pb-16">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <div className="mb-6 flex items-center gap-3">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-intellectual/8 text-intellectual">
+            <School className="h-4.5 w-4.5" aria-hidden />
+          </span>
+          <h2 className="font-display text-2xl font-semibold text-intellectual sm:text-3xl">
+            {pick(heading, locale)}
+          </h2>
+        </div>
+        <ul className="space-y-3">
+          {rich.schools.map((s: RichSchoolEntry, i: number) => (
+            <li
+              key={i}
+              className="rounded-2xl border border-intellectual/12 bg-white p-5 shadow-soft sm:p-6"
+            >
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <p className="font-display text-base font-semibold text-intellectual sm:text-lg">
+                  {s.name}
+                </p>
+                <p className="text-[0.75rem] font-medium text-champagne-dark">
+                  {pickFlex(s.talentArea, locale)}
+                </p>
+              </div>
+              <p className="mt-2 text-sm leading-relaxed text-intellectual-muted sm:text-[0.9375rem]">
+                {pickFlex(s.context, locale)}
+              </p>
+              {s.url ? (
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1 text-[0.8125rem] font-semibold text-intellectual transition hover:text-intellectual-light"
+                >
+                  Official page
+                  <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                </a>
+              ) : null}
+            </li>
+          ))}
+        </ul>
+        <Link
+          href="/dsa-finder"
+          className="mt-6 inline-flex items-center gap-1.5 text-[0.875rem] font-semibold text-intellectual transition hover:text-intellectual-light"
+        >
+          {pick(finderCta, locale)}
+          <ArrowRight className="h-4 w-4" aria-hidden />
+        </Link>
+      </div>
+    </section>
+  );
+}
+
+function ParentChecklistSection({
+  rich,
+  locale,
+}: {
+  rich: RichContent;
+  locale: Locale;
+}) {
+  const heading: LocaleStr = {
+    en: "Parent-as-coach checklist",
+    zh: "家长陪练清单",
+    ms: "Senarai semak ibu bapa sebagai jurulatih",
+    ta: "பெற்றோர் பயிற்சியாளர் சரிபார்ப்பு பட்டியல்",
   };
-  const subscribeBody = {
-    en: "We send one short email when the full content for this talent lands — sample questions, trial breakdowns, and school-specific notes.",
-    zh: "本项目深度内容（题样、trial 拆解、学校备注）上线时，我们发一封简短邮件给你。",
-    ms: "Kami hantar satu e-mel pendek apabila kandungan penuh sedia — soalan, trial, nota sekolah.",
-    ta: "முழு உள்ளடக்கம் தயாராகும்போது ஒரு சிறு மின்னஞ்சல் அனுப்புவோம் — கேள்விகள், சோதனை, பள்ளி குறிப்புகள்.",
+  return (
+    <section className="pb-12 sm:pb-16">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <div className="mb-6 flex items-center gap-3">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-intellectual/8 text-intellectual">
+            <Timer className="h-4.5 w-4.5" aria-hidden />
+          </span>
+          <h2 className="font-display text-2xl font-semibold text-intellectual sm:text-3xl">
+            {pick(heading, locale)}
+          </h2>
+        </div>
+        <div className="space-y-5">
+          {rich.parentChecklist.map((g: ChecklistGroup, i: number) => (
+            <div
+              key={i}
+              className="rounded-2xl border border-intellectual/12 bg-white p-5 shadow-soft sm:p-6"
+            >
+              <p className="font-display text-base font-semibold text-intellectual sm:text-lg">
+                {pickFlex(g.label, locale)}
+              </p>
+              <ul className="mt-3 space-y-3">
+                {g.items.map((it: LocaleStrFlex, j: number) => (
+                  <li key={j} className="flex gap-3 text-sm leading-relaxed text-intellectual-muted sm:text-[0.9375rem]">
+                    <span
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-champagne"
+                      aria-hidden
+                    />
+                    <span>{pickFlex(it, locale)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SprintAdviceSection({
+  rich,
+  locale,
+}: {
+  rich: RichContent;
+  locale: Locale;
+}) {
+  const heading: LocaleStr = {
+    en: "If the runway is short",
+    zh: "如果时间已经不多",
+    ms: "Jika masa sudah singkat",
+    ta: "நேரம் குறைவாக இருந்தால்",
   };
-  const subscribeCta = {
+  return (
+    <section className="pb-12 sm:pb-16">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <div className="rounded-2xl border border-intellectual/15 bg-surface-warm/60 p-6 sm:p-8">
+          <div className="mb-3 flex items-center gap-3">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-champagne/15 text-champagne-dark">
+              <Sparkles className="h-4.5 w-4.5" aria-hidden />
+            </span>
+            <h2 className="font-display text-xl font-semibold text-intellectual sm:text-2xl">
+              {pick(heading, locale)}
+            </h2>
+          </div>
+          <p className="text-sm leading-relaxed text-intellectual sm:text-[0.9375rem]">
+            {pickFlex(rich.sprintAdvice, locale)}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ===== Placeholder body (used when talent.rich is undefined) ===== */
+
+function PlaceholderBody({ talent }: { talent: TalentPage }) {
+  const { locale } = useLanguage();
+  const placeholderTitle: LocaleStr = {
+    en: "Why this page exists",
+    zh: "为什么有这页",
+    ms: "Mengapa halaman ini wujud",
+    ta: "இந்த பக்கம் ஏன் உள்ளது",
+  };
+  const placeholderBody: LocaleStr = {
+    en: "DSALink is the Singapore parent's reference platform for DSA-Sec. We're filling in each talent area with deep, parent-tested content — questions schools actually ask, what trials measure, and which schools to target. This page goes live first as a placeholder so parents can subscribe and we can ship updates as research lands.",
+    zh: "DSALink 是新加坡家长的 DSA-Sec reference 平台。我们在为每个项目填入深度、家长验证过的内容——学校真正会问的问题、trial 评分维度、哪些学校值得申请。本页先以占位形式上线，方便家长订阅，等调研完成立即更新。",
+    ms: "DSALink ialah platform rujukan ibu bapa Singapura untuk DSA-Sec. Kami sedang mengisi setiap bidang bakat dengan kandungan mendalam — soalan yang sekolah tanya, apa yang trial nilai, sekolah mana untuk disasarkan.",
+    ta: "DSALink என்பது சிங்கப்பூர் பெற்றோர்களுக்கான DSA-Sec குறிப்பு தளம். ஒவ்வொரு திறமை பகுதியிலும் ஆழமான உள்ளடக்கத்தை நிரப்புகிறோம் — பள்ளிகள் கேட்கும் கேள்விகள், சோதனை அளவீடுகள், எந்த பள்ளிகளை இலக்காகக் கொள்ளவேண்டும்.",
+  };
+  const schoolsTitle: LocaleStr = {
+    en: "Schools that participate in this talent",
+    zh: "招生此项目的学校（节选）",
+    ms: "Sekolah yang menerima bakat ini",
+    ta: "இந்த திறமைக்கு பங்கேற்கும் பள்ளிகள்",
+  };
+  const schoolsHint: LocaleStr = {
+    en: "A short sample. The full list is in the school finder, filterable by talent area and region.",
+    zh: "节选展示。完整名单在学校 finder，可按才艺与区域筛选。",
+    ms: "Sampel pendek. Senarai penuh dalam pencari sekolah, boleh ditapis mengikut bakat dan kawasan.",
+    ta: "சிறு மாதிரி. முழு பட்டியல் பள்ளி தேடலில் உள்ளது.",
+  };
+  const finderCta: LocaleStr = {
+    en: "Open school finder",
+    zh: "打开学校 finder",
+    ms: "Buka pencari sekolah",
+    ta: "பள்ளி தேடலைத் திற",
+  };
+  return (
+    <>
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <div className="rounded-2xl border border-intellectual/12 bg-white p-6 shadow-soft sm:p-8">
+            <h2 className="font-display text-xl font-semibold text-intellectual sm:text-2xl">
+              {pick(placeholderTitle, locale)}
+            </h2>
+            <p className="mt-3 text-[0.9375rem] leading-relaxed text-intellectual-muted">
+              {pick(placeholderBody, locale)}
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="pb-12 sm:pb-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <div className="rounded-2xl border border-intellectual/12 bg-white p-6 shadow-soft sm:p-8">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-intellectual/8 text-intellectual">
+                <School className="h-4.5 w-4.5" aria-hidden />
+              </span>
+              <h2 className="font-display text-xl font-semibold text-intellectual sm:text-2xl">
+                {pick(schoolsTitle, locale)}
+              </h2>
+            </div>
+            <p className="text-sm leading-relaxed text-intellectual-muted">
+              {pick(schoolsHint, locale)}
+            </p>
+            <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+              {talent.sampleSchools.map((school) => (
+                <li
+                  key={school}
+                  className="rounded-lg border border-intellectual/10 bg-surface px-3 py-2 text-sm text-intellectual"
+                >
+                  {school}
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="/dsa-finder"
+              className="mt-5 inline-flex items-center gap-1.5 text-[0.875rem] font-semibold text-intellectual transition hover:text-intellectual-light"
+            >
+              {pick(finderCta, locale)}
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+/* ===== Main body ===== */
+
+export function InterviewTalentPageBody({ talent }: { talent: TalentPage }) {
+  const { locale } = useLanguage();
+  const isRich = Boolean(talent.rich);
+
+  const kicker: LocaleStr = {
+    en: "Interview Prep · by talent",
+    zh: "面试准备 · 分项目",
+    ms: "Persediaan Temu Duga · mengikut bakat",
+    ta: "நேர்காணல் தயாரிப்பு · திறமை வாரியாக",
+  };
+  const comingLabel: LocaleStr = {
+    en: "Full content coming by",
+    zh: "完整内容预计上线于",
+    ms: "Kandungan penuh akan datang menjelang",
+    ta: "முழு உள்ளடக்கம் வரும் தேதி",
+  };
+  const subscribeTitle: LocaleStr = {
+    en: "Get notified when this page goes deeper",
+    zh: "本页新内容上线时邮件通知我",
+    ms: "Diberitahu apabila halaman ini lebih mendalam",
+    ta: "இந்த பக்கம் மேலும் ஆழமாகும்போது அறிவிக்கவும்",
+  };
+  const subscribeBody: LocaleStr = {
+    en: "We send one short email when this talent page gets a meaningful update — new questions, school changes, parent reports.",
+    zh: "本项目页面有实质更新时（新题目、学校变动、家长反馈），我们发一封简短邮件。",
+    ms: "Kami hantar satu e-mel pendek apabila halaman bakat ini dikemas kini secara bermakna.",
+    ta: "இந்த பக்கம் முக்கிய புதுப்பித்தலைப் பெறும்போது ஒரு சிறு மின்னஞ்சல் அனுப்புவோம்.",
+  };
+  const subscribeCta: LocaleStr = {
     en: "Subscribe to parent list",
     zh: "订阅家长邮件列表",
     ms: "Langgan senarai ibu bapa",
     ta: "பெற்றோர் பட்டியலில் சேரவும்",
   };
-  const backCta = {
+  const backCta: LocaleStr = {
     en: "All interview prep",
     zh: "全部面试准备",
     ms: "Semua persediaan temu duga",
@@ -101,7 +533,7 @@ export function InterviewTalentPageBody({ talent }: { talent: TalentPage }) {
     <>
       <SiteHeader />
       <main className="bg-surface">
-        {/* Block 1: Hero */}
+        {/* Hero */}
         <section className="bg-hero-mesh">
           <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
             <p className="mb-3 text-[11px] font-semibold tracking-[0.18em] text-intellectual/70 normal-case">
@@ -117,67 +549,33 @@ export function InterviewTalentPageBody({ talent }: { talent: TalentPage }) {
               {pick(talent.intro, locale)}
             </p>
 
-            {/* Coming soon strip */}
-            <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-champagne/40 bg-champagne/10 px-4 py-1.5 text-[12px] font-semibold text-champagne-dark">
-              <CalendarClock className="h-3.5 w-3.5" aria-hidden />
-              <span className="normal-case">
-                {pick(comingLabel, locale)} {formatDate(talent.contentReadyBy, locale)}
-              </span>
-            </div>
-          </div>
-        </section>
-
-        {/* Block 2: Placeholder body */}
-        <section className="py-12 sm:py-16">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6">
-            <div className="rounded-2xl border border-intellectual/12 bg-white p-6 shadow-soft sm:p-8">
-              <h2 className="font-display text-xl font-semibold text-intellectual sm:text-2xl">
-                {pick(placeholderTitle, locale)}
-              </h2>
-              <p className="mt-3 text-[0.9375rem] leading-relaxed text-intellectual-muted">
-                {pick(placeholderBody, locale)}
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Block 3: Sample participating schools */}
-        <section className="pb-12 sm:pb-16">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6">
-            <div className="rounded-2xl border border-intellectual/12 bg-white p-6 shadow-soft sm:p-8">
-              <div className="mb-4 flex items-center gap-3">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-intellectual/8 text-intellectual">
-                  <School className="h-4.5 w-4.5" aria-hidden />
+            {/* Coming-soon pill: only show on placeholder pages. */}
+            {!isRich ? (
+              <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-champagne/40 bg-champagne/10 px-4 py-1.5 text-[12px] font-semibold text-champagne-dark">
+                <CalendarClock className="h-3.5 w-3.5" aria-hidden />
+                <span className="normal-case">
+                  {pick(comingLabel, locale)} {formatDate(talent.contentReadyBy, locale)}
                 </span>
-                <h2 className="font-display text-xl font-semibold text-intellectual sm:text-2xl">
-                  {pick(schoolsTitle, locale)}
-                </h2>
               </div>
-              <p className="text-sm leading-relaxed text-intellectual-muted">
-                {pick(schoolsHint, locale)}
-              </p>
-              <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-                {talent.sampleSchools.map((school) => (
-                  <li
-                    key={school}
-                    className="rounded-lg border border-intellectual/10 bg-surface px-3 py-2 text-sm text-intellectual"
-                  >
-                    {school}
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/dsa-finder"
-                className="mt-5 inline-flex items-center gap-1.5 text-[0.875rem] font-semibold text-intellectual transition hover:text-intellectual-light"
-              >
-                {pick(finderCta, locale)}
-                <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
-            </div>
+            ) : null}
           </div>
         </section>
 
-        {/* Block 4: Subscribe CTA */}
+        {/* Body: rich or placeholder */}
+        {isRich && talent.rich ? (
+          <>
+            <TrialDimensionsSection rich={talent.rich} locale={locale} />
+            <PositionFocusSection rich={talent.rich} locale={locale} />
+            <InterviewQuestionsSection rich={talent.rich} locale={locale} />
+            <RichSchoolsSection rich={talent.rich} locale={locale} />
+            <ParentChecklistSection rich={talent.rich} locale={locale} />
+            <SprintAdviceSection rich={talent.rich} locale={locale} />
+          </>
+        ) : (
+          <PlaceholderBody talent={talent} />
+        )}
+
+        {/* Subscribe CTA */}
         <section className="pb-12 sm:pb-16">
           <div className="mx-auto max-w-4xl px-4 sm:px-6">
             <div className="rounded-2xl border border-intellectual/15 bg-gradient-to-br from-intellectual to-intellectual-dark p-6 text-white shadow-soft sm:p-8">
@@ -198,7 +596,7 @@ export function InterviewTalentPageBody({ talent }: { talent: TalentPage }) {
           </div>
         </section>
 
-        {/* Block 5: Back to overview */}
+        {/* Back link */}
         <section className="pb-16">
           <div className="mx-auto max-w-4xl px-4 sm:px-6">
             <Link
