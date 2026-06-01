@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight, Clock, Compass, FileSearch, MailCheck, MessageSquareText, Sparkles } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getAllTalentPages } from "@/lib/talentPages";
 
 type EntryStatus = "live" | "coming";
 
@@ -255,6 +256,49 @@ export function AfterApplyHubBody() {
             </div>
           );
         })}
+      </div>
+
+      {/* Interview by talent — 8 talent-specific pages */}
+      <div className="mt-12 rounded-2xl border border-intellectual/15 bg-white p-6 shadow-soft sm:p-8">
+        <div className="mb-4 flex items-center gap-3">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-champagne/15 text-champagne-dark">
+            <MessageSquareText className="h-4.5 w-4.5" aria-hidden />
+          </span>
+          <h2 className="font-display text-lg font-semibold text-intellectual sm:text-xl">
+            {locale === "zh"
+              ? "Interview Prep · 8 个项目专页"
+              : locale === "ms"
+                ? "Persediaan Temu Duga · 8 halaman bakat"
+                : locale === "ta"
+                  ? "நேர்காணல் தயாரிப்பு · 8 திறமை பக்கங்கள்"
+                  : "Interview Prep · 8 talent-specific pages"}
+          </h2>
+        </div>
+        <p className="mb-5 text-sm leading-relaxed text-intellectual-muted">
+          {locale === "zh"
+            ? "每个项目独立页：trial 评分维度、面试题样、招生学校。占位上线，整季逐步填深度。"
+            : locale === "ms"
+              ? "Setiap bakat halaman sendiri: kriteria trial, soalan, sekolah peserta. Tempat letak dahulu, kandungan penuh sepanjang musim."
+              : locale === "ta"
+                ? "ஒவ்வொரு திறமைக்கும் தனி பக்கம்: சோதனை அளவுகோல்கள், கேள்விகள், பள்ளிகள். இடம்பிடி, பருவம் முழுவதும் முழுமைப்படுத்தப்படும்."
+                : "One page per talent: trial criteria, sample questions, participating schools. Placeholders ship now; full depth rolls out through the season."}
+        </p>
+        <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+          {getAllTalentPages().map((talent) => (
+            <li key={talent.slug}>
+              <Link
+                href={`/dsa-interview/${talent.slug}`}
+                className="group flex items-center justify-between gap-3 rounded-lg border border-intellectual/12 bg-surface px-3 py-2 text-sm text-intellectual transition hover:border-intellectual/30 hover:bg-white"
+              >
+                <span>{talent.navLabel[locale]}</span>
+                <ArrowRight
+                  className="h-3.5 w-3.5 text-intellectual/40 transition group-hover:text-intellectual"
+                  aria-hidden
+                />
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Email CTA */}

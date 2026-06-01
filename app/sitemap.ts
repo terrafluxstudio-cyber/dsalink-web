@@ -1,9 +1,17 @@
 import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/seo";
+import { TALENT_SLUGS } from "@/lib/talentPages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl(); // https://dsalink.sg — no trailing slash
   const now = new Date();
+
+  const talentEntries: MetadataRoute.Sitemap = TALENT_SLUGS.map((slug) => ({
+    url: `${base}/dsa-interview/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
 
   // Only list canonical URLs. Redirecting aliases (/dsa, /scores) are excluded.
   return [
@@ -80,6 +88,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${base}/timeline`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.91,
+    },
+    {
       url: `${base}/blog`,
       lastModified: now,
       changeFrequency: "weekly",
@@ -97,5 +111,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.92,
     },
+    ...talentEntries,
   ];
 }

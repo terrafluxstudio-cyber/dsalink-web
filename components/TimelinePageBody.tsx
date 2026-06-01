@@ -1,0 +1,278 @@
+"use client";
+
+import Link from "next/link";
+import { ArrowRight, BookOpen, CalendarDays, ClipboardCheck, Compass, FileSearch, MessageSquareText } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
+
+type LocaleStr = { en: string; zh: string; ms: string; ta: string };
+
+type Phase = {
+  id: string;
+  icon: typeof CalendarDays;
+  dates: LocaleStr;
+  label: LocaleStr;
+  detail: LocaleStr;
+  link?: { href: string; label: LocaleStr };
+};
+
+const PHASES: Phase[] = [
+  {
+    id: "research",
+    icon: BookOpen,
+    dates: {
+      en: "Dec — early May",
+      zh: "12 月 — 5 月初",
+      ms: "Dis — awal Mei",
+      ta: "டிசம்பர் — மே தொடக்கம்",
+    },
+    label: {
+      en: "Research phase",
+      zh: "研究阶段",
+      ms: "Fasa kajian",
+      ta: "ஆராய்ச்சி கட்டம்",
+    },
+    detail: {
+      en: "Build your shortlist. Use the school finder, compare PSLE COP history, attend open houses.",
+      zh: "搭建候选名单。用 finder、对比历年 PSLE COP、参加开放日。",
+      ms: "Bina senarai pendek. Gunakan pencari sekolah, banding PSLE COP, lawat hari terbuka.",
+      ta: "உங்கள் குறுகிய பட்டியலை உருவாக்குங்கள். பள்ளி தேடல், PSLE COP ஒப்பீடு, திறந்த நாள் பயன்படுத்துங்கள்.",
+    },
+    link: {
+      href: "/dsa-finder",
+      label: { en: "Open school finder", zh: "打开学校搜索", ms: "Buka pencari sekolah", ta: "பள்ளி தேடலைத் திற" },
+    },
+  },
+  {
+    id: "apply",
+    icon: ClipboardCheck,
+    dates: {
+      en: "5 May — 2 Jun 2026 · 4:30pm SGT",
+      zh: "2026 年 5 月 5 日 — 6 月 2 日 · 下午 4:30",
+      ms: "5 Mei — 2 Jun 2026 · 4:30 petang SGT",
+      ta: "5 மே — 2 ஜூன் 2026 · 4:30 SGT",
+    },
+    label: {
+      en: "Application window",
+      zh: "申请窗口",
+      ms: "Tetingkap permohonan",
+      ta: "விண்ணப்ப காலம்",
+    },
+    detail: {
+      en: "Submit via the official MOE portal. Up to 3 schools across talent areas. Portfolio + supporting documents.",
+      zh: "通过 MOE 官方门户提交。最多 3 所学校，跨才艺方向。作品集 + 推荐材料。",
+      ms: "Hantar melalui portal rasmi MOE. Sehingga 3 sekolah merentasi bakat. Portfolio + dokumen sokongan.",
+      ta: "MOE அதிகாரப்பூர்வ வாயில் மூலம் சமர்ப்பிக்கவும். 3 பள்ளிகள் வரை, திறமை பகுதிகளில். போர்ட்ஃபோலியோ + ஆதரவு ஆவணங்கள்.",
+    },
+    link: {
+      href: "/apply",
+      label: { en: "Open application checklist", zh: "打开申请清单", ms: "Buka senarai semak", ta: "சரிபார்ப்பு பட்டியலைத் திற" },
+    },
+  },
+  {
+    id: "interview",
+    icon: MessageSquareText,
+    dates: {
+      en: "Jun — Sep 2026",
+      zh: "2026 年 6 月 — 9 月",
+      ms: "Jun — Sep 2026",
+      ta: "ஜூன் — செப்டம்பர் 2026",
+    },
+    label: {
+      en: "Interview & trial season",
+      zh: "面试与试课季",
+      ms: "Musim temu duga & percubaan",
+      ta: "நேர்காணல் & சோதனை பருவம்",
+    },
+    detail: {
+      en: "Most schools shortlist within 2–4 weeks. Interviews, talent trials, and assessments run through the holidays.",
+      zh: "大部分学校 2–4 周内筛选。面试、才艺试课、评估贯穿假期。",
+      ms: "Kebanyakan sekolah memilih dalam 2–4 minggu. Temu duga, trial bakat, penilaian sepanjang cuti.",
+      ta: "பெரும்பாலான பள்ளிகள் 2–4 வாரங்களில் தேர்வு செய்யும். நேர்காணல், சோதனை, மதிப்பீடு விடுமுறையில்.",
+    },
+    link: {
+      href: "/dsa-interview",
+      label: { en: "Browse interview prep", zh: "查看面试准备", ms: "Lihat persediaan temu duga", ta: "நேர்காணல் தயாரிப்பு" },
+    },
+  },
+  {
+    id: "preference",
+    icon: Compass,
+    dates: {
+      en: "19 — 23 Oct 2026",
+      zh: "2026 年 10 月 19 — 23 日",
+      ms: "19 — 23 Okt 2026",
+      ta: "19 — 23 அக் 2026",
+    },
+    label: {
+      en: "School preference exercise",
+      zh: "学校志愿填报",
+      ms: "Pemilihan keutamaan sekolah",
+      ta: "பள்ளி விருப்பத் தேர்வு",
+    },
+    detail: {
+      en: "If you received Confirmed Offers from multiple schools, this is when you rank your preference order.",
+      zh: "若收到多所 Confirmed Offer，这一周内排序你的志愿。",
+      ms: "Jika anda menerima Tawaran Sah dari pelbagai sekolah, ini masa untuk susun keutamaan.",
+      ta: "பல உறுதிசெய்யப்பட்ட வாய்ப்புகள் பெற்றால், இந்த வாரத்தில் முன்னுரிமை வரிசையை வரிசைப்படுத்தவும்.",
+    },
+  },
+  {
+    id: "results",
+    icon: FileSearch,
+    dates: {
+      en: "Nov — Dec 2026 · with PSLE",
+      zh: "2026 年 11 月 — 12 月 · 与 PSLE 同步",
+      ms: "Nov — Dis 2026 · bersama PSLE",
+      ta: "நவ — டிச 2026 · PSLE உடன்",
+    },
+    label: {
+      en: "Results released",
+      zh: "结果公布",
+      ms: "Keputusan diumumkan",
+      ta: "முடிவுகள் வெளியீடு",
+    },
+    detail: {
+      en: "DSA outcomes released alongside PSLE results. If DSA confirms, you accept and skip S1 Posting. Otherwise S1 Posting opens.",
+      zh: "DSA 结果与 PSLE 同步公布。DSA 确认即接受，跳过 S1 Posting；否则进入 S1 Posting。",
+      ms: "Keputusan DSA dikeluarkan bersama PSLE. DSA disahkan, terima dan langkau S1 Posting. Jika tidak, S1 Posting bermula.",
+      ta: "DSA முடிவுகள் PSLE-உடன் வெளியிடப்படும். DSA உறுதியானால், ஏற்றுக்கொண்டு S1 Posting-ஐ தவிர்க்கவும். இல்லையெனில் S1 Posting திறக்கும்.",
+    },
+    link: {
+      href: "/after-apply",
+      label: { en: "After-apply hub", zh: "申请之后中心", ms: "Hab selepas memohon", ta: "விண்ணப்பத்திற்குப் பின் மையம்" },
+    },
+  },
+];
+
+function pick(s: LocaleStr, locale: "en" | "zh" | "ms" | "ta"): string {
+  return s[locale];
+}
+
+export function TimelinePageBody() {
+  const { locale } = useLanguage();
+
+  const kicker = {
+    en: "DSA-Sec 2026 · Singapore",
+    zh: "DSA-Sec 2026 · 新加坡",
+    ms: "DSA-Sec 2026 · Singapura",
+    ta: "DSA-Sec 2026 · சிங்கப்பூர்",
+  };
+  const title = {
+    en: "The DSA-Sec timeline at a glance.",
+    zh: "DSA-Sec 全程关键时间，一眼看完。",
+    ms: "Garis masa DSA-Sec sekilas pandang.",
+    ta: "DSA-Sec கால அட்டவணை — ஒரே பார்வை.",
+  };
+  const subtitle = {
+    en: "Five phases, plain dates. For a step-by-step walkthrough of each phase, open the DSA Guide.",
+    zh: "五大阶段、明确日期。每阶段详细步骤请看 DSA 指南。",
+    ms: "Lima fasa, tarikh jelas. Untuk langkah demi langkah, buka Panduan DSA.",
+    ta: "ஐந்து கட்டங்கள், தெளிவான தேதிகள். ஒவ்வொரு கட்டத்தின் விரிவான வழிகாட்டுதலுக்கு DSA வழிகாட்டியைத் திறக்கவும்.",
+  };
+  const guideCta = {
+    en: "Open the full DSA Guide",
+    zh: "打开完整 DSA 指南",
+    ms: "Buka Panduan DSA penuh",
+    ta: "முழு DSA வழிகாட்டியைத் திற",
+  };
+
+  return (
+    <>
+      <SiteHeader />
+      <main className="bg-surface">
+        <section className="bg-hero-mesh">
+          <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
+            <p className="mb-3 text-[11px] font-semibold tracking-[0.18em] text-intellectual/70 normal-case">
+              {pick(kicker, locale)}
+            </p>
+            <h1
+              style={{ textTransform: "none" }}
+              className="font-display text-3xl font-extrabold leading-tight tracking-tight text-intellectual sm:text-4xl lg:text-5xl"
+            >
+              {pick(title, locale)}
+            </h1>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-intellectual-muted">
+              {pick(subtitle, locale)}
+            </p>
+          </div>
+        </section>
+
+        <section className="py-12 sm:py-16">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6">
+            <ol className="space-y-4 sm:space-y-5">
+              {PHASES.map((phase, i) => {
+                const Icon = phase.icon;
+                return (
+                  <li
+                    key={phase.id}
+                    className="relative flex gap-4 rounded-2xl border border-intellectual/12 bg-white p-5 shadow-soft sm:gap-5 sm:p-6"
+                  >
+                    <div className="flex shrink-0 flex-col items-center">
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-intellectual/8 text-intellectual">
+                        <Icon className="h-5 w-5" aria-hidden />
+                      </span>
+                      <span className="mt-2 text-[11px] font-bold tracking-wider text-intellectual/40">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-[11px] font-semibold tracking-[0.12em] text-champagne-dark normal-case">
+                        {pick(phase.dates, locale)}
+                      </p>
+                      <h2 className="mt-1 font-display text-lg font-semibold text-intellectual sm:text-xl">
+                        {pick(phase.label, locale)}
+                      </h2>
+                      <p className="mt-2 text-sm leading-relaxed text-intellectual-muted">
+                        {pick(phase.detail, locale)}
+                      </p>
+                      {phase.link ? (
+                        <Link
+                          href={phase.link.href}
+                          className="mt-3 inline-flex items-center gap-1.5 text-[0.8125rem] font-semibold text-intellectual transition hover:text-intellectual-light"
+                        >
+                          {pick(phase.link.label, locale)}
+                          <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+                        </Link>
+                      ) : null}
+                    </div>
+                  </li>
+                );
+              })}
+            </ol>
+
+            <div className="mt-10 rounded-2xl border border-intellectual/15 bg-intellectual p-6 text-white sm:p-8">
+              <p className="font-display text-lg font-semibold sm:text-xl">
+                {locale === "zh"
+                  ? "想看每个阶段的具体步骤？"
+                  : locale === "ms"
+                    ? "Mahu langkah terperinci setiap fasa?"
+                    : locale === "ta"
+                      ? "ஒவ்வொரு கட்டத்தின் விரிவான படிகளை விரும்புகிறீர்களா?"
+                      : "Want step-by-step detail for each phase?"}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-white/75">
+                {locale === "zh"
+                  ? "DSA 指南把每个时间节点拆成可执行的步骤、官方链接、注意点。"
+                  : locale === "ms"
+                    ? "Panduan DSA pecahkan setiap tarikh kepada langkah, pautan rasmi, perkara penting."
+                    : locale === "ta"
+                      ? "DSA வழிகாட்டி ஒவ்வொரு தேதியையும் செயல்படக்கூடிய படிகள், அதிகாரப்பூர்வ இணைப்புகள், முக்கிய புள்ளிகளாக பிரிக்கிறது."
+                      : "The DSA Guide breaks every date into actionable steps, official links, and watch-outs."}
+              </p>
+              <Link
+                href="/dsa-guide"
+                className="mt-5 inline-flex items-center gap-2 rounded-xl bg-champagne px-5 py-2.5 text-sm font-semibold text-intellectual-dark transition hover:bg-champagne-light"
+              >
+                <span style={{ textTransform: "none" }}>{pick(guideCta, locale)}</span>
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+      <SiteFooter />
+    </>
+  );
+}

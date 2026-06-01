@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getAllTalentPages } from "@/lib/talentPages";
 
 type NavLink = { href: string; label: string; gold?: boolean };
 
@@ -159,7 +160,7 @@ function NavLinkButton({
 }
 
 export function SiteHeader() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [basicsMenuOpen, setBasicsMenuOpen] = useState(false);
@@ -190,13 +191,20 @@ export function SiteHeader() {
   ];
 
   const applicationLinks: readonly NavLink[] = [
+    { href: "/timeline", label: t.navTimeline },
     { href: "/faq", label: t.navApplicationFaq },
     { href: "/apply", label: t.navApplyChecklist },
   ];
 
+  const talentNavLinks: readonly NavLink[] = getAllTalentPages().map((p) => ({
+    href: `/dsa-interview/${p.slug}`,
+    label: p.navLabel[locale],
+  }));
+
   const afterApplyLinks: readonly NavLink[] = [
     { href: "/after-apply", label: t.navAfterApplyHub },
     { href: "/dsa-interview", label: t.navDsaInterview, gold: true },
+    ...talentNavLinks,
   ];
 
   return (
