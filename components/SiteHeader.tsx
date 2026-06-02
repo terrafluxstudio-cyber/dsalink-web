@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ChevronDown, GraduationCap, Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -13,6 +13,8 @@ type NavLink = {
   gold?: boolean;
   /** White highlight for the year-specific "Talent Search Center" entry. */
   highlight?: boolean;
+  /** Render a divider above this link (used to sub-group items inside a dropdown). */
+  sectionBreak?: boolean;
 };
 
 /**
@@ -124,14 +126,18 @@ function NavDropdown({
                   ? "text-white"
                   : "text-white/75 hover:text-white";
             return (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={onClose}
-                className={`block px-4 py-2 text-[0.8125rem] font-medium normal-case transition hover:bg-white/10 ${colorClass}`}
-              >
-                {link.label}
-              </Link>
+              <Fragment key={link.href}>
+                {link.sectionBreak ? (
+                  <div className="my-1 border-t border-white/10" aria-hidden />
+                ) : null}
+                <Link
+                  href={link.href}
+                  onClick={onClose}
+                  className={`block px-4 py-2 text-[0.8125rem] font-medium normal-case transition hover:bg-white/10 ${colorClass}`}
+                >
+                  {link.label}
+                </Link>
+              </Fragment>
             );
           })}
         </div>
@@ -190,7 +196,8 @@ export function SiteHeader() {
     { href: "/dsa-finder", label: t.navTalentSearchCenter, highlight: true },
     { href: "/schools", label: t.navAllSchools },
     { href: "/psle-cop", label: t.navPsleCutoffs },
-    { href: "/open-houses", label: t.navOpenHouseDates },
+    // ── Open House sub-group ──
+    { href: "/open-houses", label: t.navOpenHouseDates, sectionBreak: true },
     { href: "/open-house-takeaways", label: t.navOpenHouseMissed, gold: true },
     { href: "/open-house-guide", label: t.navHowToVisit },
   ];
@@ -321,22 +328,26 @@ export function SiteHeader() {
                   </span>
                 </p>
                 {schoolsLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`block rounded-lg px-3 py-2 text-sm font-medium normal-case transition hover:bg-white/10 ${
-                      link.highlight
-                        ? "text-white font-semibold"
-                        : link.gold
-                          ? "text-champagne hover:text-champagne-light"
-                          : pathname === link.href
-                            ? "bg-white/10 text-white"
-                            : "text-white/75 hover:text-white"
-                    }`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
+                  <Fragment key={link.href}>
+                    {link.sectionBreak ? (
+                      <div className="my-1 mx-3 border-t border-white/10" aria-hidden />
+                    ) : null}
+                    <Link
+                      href={link.href}
+                      className={`block rounded-lg px-3 py-2 text-sm font-medium normal-case transition hover:bg-white/10 ${
+                        link.highlight
+                          ? "text-white font-semibold"
+                          : link.gold
+                            ? "text-champagne hover:text-champagne-light"
+                            : pathname === link.href
+                              ? "bg-white/10 text-white"
+                              : "text-white/75 hover:text-white"
+                      }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  </Fragment>
                 ))}
               </div>
 
