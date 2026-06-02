@@ -1,30 +1,23 @@
 "use client";
 
 import { HeroSearchBox } from "@/components/HeroSearchBox";
+import { HeroTalentGrid } from "@/components/HeroTalentGrid";
 import { HomeCtaBlock } from "@/components/HomeCtaBlock";
 import { useLanguage } from "@/contexts/LanguageContext";
-import type { ReactNode } from "react";
 import { ShieldCheck } from "lucide-react";
 
-export function HeroSection({ children }: { children?: ReactNode }) {
+export function HeroSection() {
   const { t, locale } = useLanguage();
-  const hasSideSlot = Boolean(children);
 
   return (
     <section className="relative overflow-hidden bg-hero-mesh">
       <div className="relative mx-auto max-w-6xl px-4 pb-12 pt-8 sm:px-6 sm:pb-14 sm:pt-10">
-        <div
-          className={`grid grid-cols-1 gap-8 ${
-            hasSideSlot
-              ? "lg:grid-cols-[1fr_420px] lg:items-center lg:gap-14"
-              : ""
-          }`}
-        >
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_360px] lg:items-center lg:gap-12">
 
-          {/* ── Left column ── */}
+          {/* ── Left column: hero content ── */}
           <div className="flex flex-col">
             {/* Kicker badge */}
-            <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-intellectual px-4 py-1.5 text-[11px] font-semibold tracking-[0.08em] text-white">
+            <div className="mb-4 inline-flex items-center gap-2.5 self-start rounded-full border border-white/10 bg-intellectual px-4 py-1.5 text-[11px] font-semibold tracking-[0.08em] text-white">
               <ShieldCheck className="h-3.5 w-3.5 shrink-0" aria-hidden />
               <span className="normal-case">{t.heroBadge}</span>
             </div>
@@ -47,10 +40,8 @@ export function HeroSection({ children }: { children?: ReactNode }) {
             </div>
           </div>
 
-          {/* ── Right column: dynamic cards only ── */}
-          {hasSideSlot ? (
-            <div className="flex flex-col gap-4 lg:pt-2">{children}</div>
-          ) : null}
+          {/* ── Right column: 8 talent grid (lg+ only) ── */}
+          <HeroTalentGrid />
 
         </div>
 
