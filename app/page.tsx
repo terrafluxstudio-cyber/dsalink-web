@@ -119,10 +119,10 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* L6 · Blog — latest 3 time-sensitive posts (EN only) */}
+        {/* L7 · Blog — latest 3 time-sensitive posts (EN only) */}
         <HomeBlogEntry />
 
-        {/* L7 · Email subscribe — the 8–11 month return mechanism */}
+        {/* L8 · Email subscribe — dark closing band, 8–11 month return mechanism */}
         <HomepageSubscribeBanner />
       </main>
       <SiteFooter />

@@ -34,26 +34,30 @@ export function HomepageSubscribeBanner() {
   };
 
   return (
-    <section className="bg-intellectual py-12 sm:py-14">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16">
+    <section className="bg-intellectual py-14 sm:py-20">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
 
           {/* Left: value proposition */}
           <div className="flex-1">
-            <p className="mb-2 text-[10px] font-semibold tracking-[0.18em] text-champagne normal-case">
+            <p className="mb-3 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-champagne normal-case">
+              <span className="h-px w-6 bg-champagne" aria-hidden />
               {t.subscribeKicker}
             </p>
-            <h2 className="text-xl font-bold text-white sm:text-2xl">
+            <h2
+              style={{ textTransform: "none" }}
+              className="font-display text-[1.75rem] font-extrabold leading-[1.1] tracking-tight text-white sm:text-[2.125rem]"
+            >
               {t.subscribeTitle}
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-white/60">
+            <p className="mt-3 max-w-md text-[15px] leading-relaxed text-white/65">
               {t.subscribeDesc}
             </p>
-            <ul className="mt-5 flex flex-col gap-2.5">
+            <ul className="mt-6 flex flex-col gap-2.5">
               {materials.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-champagne" aria-hidden />
-                  <span className="text-sm text-white/80">{item}</span>
+                  <span className="text-[14px] text-white/85">{item}</span>
                 </li>
               ))}
             </ul>
