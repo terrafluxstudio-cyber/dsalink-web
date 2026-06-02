@@ -1147,6 +1147,299 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       ms: "Panduan DSA-Sec badminton — pergerakan kaki, pemilihan pukulan, soalan, sekolah SSP.",
       ta: "சிங்கப்பூர் பேட்மிண்டன் DSA-Sec வழிகாட்டி — கால் நகர்வு, ஷாட் தேர்வு, கேள்விகள், SSP பள்ளிகள்.",
     },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore badminton trials usually run 90 to 120 minutes and are conducted by the school coach (often BWF or SBA-licensed) plus the teacher-in-charge of Sports. Format is consistent across schools: a warm-up, multi-shuttle footwork drills (6-corner court coverage at high tempo), technical stations (clears, drops, drives, smashes), and one or two short scrimmage sets, typically singles. NSG B-Division and zone competition results are read carefully on the application, but they are not a hard gate — coaches care more about what they see live in the school hall than what's on the certificate. The recurring lesson from Singapore parent forums and coaching publications is the same: at P6 level, footwork and shot selection separate the offers from the polite rejections far more than smash speed does.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Footwork — split step and six-corner coverage" },
+          body: {
+            en: "The single most weighted dimension at P6 level. Coaches watch whether the candidate splits before each opponent contact, recovers to base after every shot, and reaches the four corners plus front net positions without crossing feet awkwardly. A candidate who is half a step late to the back-court corners loses more rallies at trial than they lose to inferior strokes. Multi-shuttle drills are deliberately set faster than match pace to expose footwork gaps.",
+          },
+        },
+        {
+          label: { en: "Shot selection and tactical reading" },
+          body: {
+            en: "Whether the candidate hits the right shot, not just a clean one. Repeatedly smashing from the back court when a drop would win the rally reads as untrained tactical thinking. Coaches want a P6 player who can already mix clears, drops, and smashes based on opponent position — not someone playing one shot type until exhausted.",
+          },
+        },
+        {
+          label: { en: "Net play and front-court touch" },
+          body: {
+            en: "Net shots, tight kills, and net lifts are the most under-trained part of P6 badminton because they don't impress on highlight reels. Coaches assessing for Sec 1 weight net play heavily because it predicts doubles potential — and almost every school's badminton programme runs both singles and doubles training from Sec 1. A candidate with confident net play is a more flexible team asset than a one-dimensional smasher.",
+          },
+        },
+        {
+          label: { en: "Defence under pressure" },
+          body: {
+            en: "How the candidate handles the smashes that come at them in scrimmage. Strong P6 defenders absorb the smash into a controlled block or a deep clear, not just a panicked reflex return. Coaches care less about whether the candidate retrieves every smash than about the quality of the return — a high lift back to the back court is a usable defence; a flat return that leaves the candidate stranded is not.",
+          },
+        },
+        {
+          label: { en: "Stamina and stroke quality late in the session" },
+          body: {
+            en: "Trials run deliberately long because schools want to see what the candidate looks like in the last 30 minutes. Stroke quality, footwork crispness, and decision-making all degrade differently — coaches log which goes first. A candidate whose smash power fades but whose shot selection sharpens reads as a future tactical player; one whose footwork collapses reads as someone whose training base is fragile.",
+          },
+        },
+        {
+          label: { en: "Coachability and on-court behaviour" },
+          body: {
+            en: "How the candidate behaves between drills, whether they pick up shuttles without being asked, whether they thank the coach. International coaching research finds these signals weighted as heavily as raw skill in youth selection. Singapore school coaches, who will work with this child for four years, weight them especially heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Singles — attacker style" },
+          body: {
+            en: "P6 attackers tend to over-rely on the smash. Coaches at the strongest programmes deliberately set drills where smashes are returned cleanly — to see whether the attacker has a second tool. Strong attacking singles candidates already mix in attacking clears to the corners, body smashes from the half-court, and net kills after the smash is returned short. If smash is the only weapon, the trial scrimmage will expose it within five rallies.",
+          },
+        },
+        {
+          position: { en: "Singles — counter-attack / all-court style" },
+          body: {
+            en: "Coaches read counter-attack players as longer-term assets — the style ages well into Sec 3 and 4 as opponents get stronger. Trial priorities: defensive depth (high clears that land within 30cm of the back line), retrieve quality, and the half-smash transition from defence to attack. Footwork is exposed more here than in attacking play, because the all-court player must cover all six positions instead of camping at the back-court.",
+          },
+        },
+        {
+          position: { en: "Doubles — front court (net player)" },
+          body: {
+            en: "Most P6 candidates have done little dedicated doubles training, so a candidate who can clearly play the front-court role — tight net kills, blocking returns of smashes, reading opponent net intentions — stands out immediately. Front-court players also need quick reflexes at the half-court; expect the coach to test reflex blocks with multi-shuttle drives. Confidence at the net is the highest-value front-court signal.",
+          },
+        },
+        {
+          position: { en: "Doubles — back court (attacker)" },
+          body: {
+            en: "Back-court doubles players need a heavier and more accurate smash than singles attackers, plus the discipline to keep the smash low and angled rather than flat. Coaches watch whether the candidate can hold the back-court while the partner plays net — including the patience to set up the smash with clears and drops rather than smashing every shuttle that comes up. Mental discipline more than physical power separates back-court doubles candidates.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Most Singapore school programmes do not stream Sec 1 players into singles or doubles specialisations immediately; the strongest programmes train both for at least two years. Lead the application with the candidate's stronger discipline but note doubles or singles cross-training experience as supporting context.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love badminton?" },
+          subtext: {
+            en: "Panels want a specific moment, not a feeling. \"It's fun\" reads as weak motivation.",
+          },
+          approach: {
+            en: "Open with one concrete match or training memory, then connect it to character.",
+          },
+          template: {
+            en: "In the P5 zonals, I was down 14-19 and pulled it back to 21-19 — but only because I stopped smashing and started using drops. That match taught me that badminton isn't about the strongest shot; it's about the right shot at the right moment. That's why I love it.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the badminton programme, or is the application a scatter-shot?",
+          },
+          approach: {
+            en: "Cite one specific thing — a coach, a recent NSG result, a training pattern, an opportunity for both singles and doubles.",
+          },
+          template: {
+            en: "I watched your B-Division team play in the last zonals and noticed how your back-court doubles players varied their smash angles instead of always going flat. That shot selection is exactly what I want to learn from Sec 1.",
+          },
+        },
+        {
+          question: { en: "What's your strongest shot and what are you working to improve?" },
+          subtext: {
+            en: "Tests self-awareness — can the candidate name a real weakness and a real fix?",
+          },
+          approach: {
+            en: "Name the strength concretely, then name a specific shot or footwork pattern you're working on with the drill you use.",
+          },
+          template: {
+            en: "Strongest is my backhand clear — I can land it within 30cm of the back line under pressure. I'm working on my forehand net kill; I'm too tense at the wrist on the kill so I'm doing slow-tempo net drills with a coach twice a week.",
+          },
+        },
+        {
+          question: { en: "Tell us about a match you lost and what you took from it." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → specific change you made afterwards → result. Schools want resilience, not perfection.",
+          },
+          template: {
+            en: "I lost the P5 zone semis to a player who returned every smash with a clean block. After the match I realised my game had been one-dimensional. I spent six weeks doing only drop-shot and net-play drills, and at the inter-school cup the next term I beat him in three sets.",
+          },
+        },
+        {
+          question: { en: "Singles or doubles — which suits you better, and why?" },
+          subtext: {
+            en: "Most schools want both. Tests whether the candidate has thought about their own game.",
+          },
+          approach: {
+            en: "Pick one but acknowledge willingness to play the other — and explain what you bring to the chosen format.",
+          },
+          template: {
+            en: "Singles right now — my footwork holds up well across full court and I like making my own tactical choices. But I'd like to play doubles too; I think my net play is good enough to learn the front-court role in Sec 1.",
+          },
+        },
+        {
+          question: { en: "How will you manage academics with frequent training?" },
+          subtext: {
+            en: "Schools fear DSA-Badminton kids whose grades collapse by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real schedule, not promises about discipline.",
+          },
+          template: {
+            en: "On training days I finish English and Math homework on the bus and do Science before dinner. Friday is my off-day from badminton and I use that evening for harder homework. Sundays I do longer revision sessions. Training is non-negotiable, but it's not unlimited.",
+          },
+        },
+        {
+          question: { en: "If two schools both offer you, how will you decide?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether the family has actually thought about fit.",
+          },
+          approach: {
+            en: "Don't dodge. Pick this school, justify with one specific reason — programme, coach, or fit.",
+          },
+          template: {
+            en: "Honestly, your school. The way your coach develops doubles play from Sec 1 is what I want — the other school focuses more on singles and I want to be a two-discipline player. If the other school called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Singapore Sports School",
+          url: "https://www.sportsschool.edu.sg/admissions/the-direct-school-admission-process",
+          talentArea: { en: "Badminton, full DSA" },
+          context: {
+            en: "Pure sports school — badminton is a core academy. Application and trial timing differ from mainstream DSA-Sec; check the school's website each cycle. Strongest pathway for candidates targeting Singapore national age-group squads alongside academic study.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Badminton (Boys), IP" },
+          context: {
+            en: "Badminton is among HCI's DSA-Sec talent areas. Long-standing programme with consistent A-Division presence; the school's official position is that applicants without prior representative experience may still apply, with the trial and interview carrying more weight than CCA history alone.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/year-1-admission-exercises/year-1-direct-school-admission/",
+          talentArea: { en: "Badminton (Boys), IP" },
+          context: {
+            en: "Badminton is listed in RI's 2026 DSA talent areas. Trains both singles and doubles from Sec 1; the trial reads weight footwork and tactical reading heavily, in line with the school's broader emphasis on intellectual approach to sport.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Badminton (Boys), IP" },
+          context: {
+            en: "Badminton is among ACS(I)'s DSA-Sec talent areas. ACS(I) runs DSA candidates with the existing competition squad during trial windows — useful signal of programme depth.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/admissions/direct-school-admission",
+          talentArea: { en: "Badminton (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school with a competitive B-Division programme. Higher Chinese or Chinese Language as Mother Tongue required. Badminton is one of the most actively recruited talent areas at Catholic High.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Badminton, DSA-Sec, IP" },
+          context: {
+            en: "Listed in Dunman High's 2026 DSA FAQ. SAP heritage — Higher Chinese or Chinese Language requirement applies. East Zone competition presence in B and C Division across recent cycles.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          url: "https://www.nanhuahigh.moe.edu.sg/announcements/talent-areas-for-dsa/",
+          talentArea: { en: "Badminton, DSA-Sec" },
+          context: {
+            en: "SAP school. Badminton is among Nan Hua's listed DSA talent areas; the trial and interview run alongside Higher-Chinese language requirements that apply to all applicants.",
+          },
+        },
+        {
+          name: "Cedar Girls' Secondary",
+          url: "https://www.cedargirlssec.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Badminton (Girls)" },
+          context: {
+            en: "Strong girls badminton programme with consistent NSG B-Division presence. Listed in Cedar's DSA-Sec talent areas. A common destination for top P6 girls who want a competitive non-IP school environment.",
+          },
+        },
+        {
+          name: "Hua Yi Secondary",
+          url: "https://huayisec.moe.edu.sg/admissions/dsa-sec/",
+          talentArea: { en: "Badminton (Boys and Girls)" },
+          context: {
+            en: "Hua Yi has been a consistent NSG badminton presence at zone and national level across both boys and girls. Listed in the school's DSA-Sec talent areas; co-ed entry.",
+          },
+        },
+        {
+          name: "Junyuan Secondary",
+          url: "https://www.junyuansec.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Badminton (Boys and Girls)" },
+          context: {
+            en: "Listed in Junyuan's DSA-Sec pages. Strong East Zone programme with regular NSG B-Division progression. Co-ed entry; trial assesses footwork, shot selection, and short scrimmage performance.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Video-record one full match or training session. Watch back together and score just two things: (1) does the candidate split before each opponent contact? (2) do they recover to base after every shot, or do they get stranded? These two habits separate Sec 1 candidates from current under-13 players more reliably than any other single signal.",
+            },
+            {
+              en: "Confirm your child's CCA records, NSG and zone results, and any age-group accolades are accurate. MOE pulls CCA participation, school awards, and competition results from primary schools' DSA portal entries where they have been logged. Ask the primary school CCA teacher or year-head to confirm what's been entered.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone, watch back together. Flag any answer that ran over 30 seconds or used the word \"passionate.\" Badminton families often over-rely on competition results in interview — verbal articulation about tactics and self-awareness about weaknesses matters more.",
+            },
+            {
+              en: "Schedule one session with players the candidate doesn't know — local academy open court, ActiveSG drop-in, or a friend's club. Trial opponents will be unfamiliar; the awkwardness of playing strangers should be gone by trial day, not faced for the first time on it.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop volume. Switch to maintenance — multi-shuttle footwork at 70% pace, light technical drills, no new tactical work. Final-week added load risks tweaks or shoulder strain that ends the trial before it starts.",
+            },
+            {
+              en: "Confirm logistics in writing. Trial time, venue, attire (most schools require school PE attire or all-white sports gear), and shuttles — bring your own match-grade shuttles if the trial format requires them. Check whether parents can spectate.",
+            },
+            {
+              en: "Pack two grips and a backup string-tension racket. Grip slips happen in humid Singapore halls, and a racket string can go without warning. A backup racket sitting in the bag is a 30-second fix to a trial-ending problem.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — a real meal, not just a snack. Trial duration past the 90-minute mark is deliberate; low blood sugar at minute 75 is a self-inflicted handicap.",
+            },
+            {
+              en: "Warm up at home before leaving. Shoulder rotations, light court-coverage steps. Trial halls in Singapore tend to be cool; arriving warm means the first set of footwork drills are not the first physical effort of the day.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the badminton teacher-in-charge if you meet them, leave. Over-involved parents at the side of the court are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours. Replays of lost scrimmage points between trial and offer are corrosive.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no clear plan — there are still real moves. Cut new tactical work entirely. Focus on two things only: the split step before every opponent contact, and recovery to base after every shot. Both can be drilled with a single multi-shuttle feeder, both are visible in the first ten minutes of trial, and both are the two most under-trained P6 habits — a candidate who does these well looks two years more mature than their actual age. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because the interview is the only part of the selection where a few hours of focused work can still meaningfully change the outcome. Some families bring in a private coach for last-mile prep — a good one can stabilise nerves and refine specific footwork patterns, but no coach produces, in three sessions, the cardiovascular base and stroke memory of a year of structured training. Treat it as triage, not a fix.",
+      },
+    },
   },
   "martial-arts": {
     slug: "martial-arts",
