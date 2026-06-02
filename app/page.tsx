@@ -6,6 +6,7 @@ import { ScoresEntryCard } from "@/components/HomeDynamic";
 import { TakeawaysEntryCard } from "@/components/TakeawaysEntryCard";
 import { FeaturedGuidesSection } from "@/components/FeaturedGuidesSection";
 import { HeroSection } from "@/components/HeroSection";
+import { HomeBlogEntry } from "@/components/HomeBlogEntry";
 import { HomePillarEntry } from "@/components/HomePillarEntry";
 import { HomeMainSlotCard } from "@/components/HomeMainSlotCard";
 import { HomeNavCardsRow } from "@/components/HomeNavCardsRow";
@@ -105,6 +106,9 @@ export default function HomePage() {
           </div>
         </section>
         <FeaturedGuidesSection />
+
+        {/* L4b · Blog — latest 3 time-sensitive posts (EN only) */}
+        <HomeBlogEntry />
 
         {/* L5 · Email subscribe — the 8–11 month return mechanism */}
         <HomepageSubscribeBanner />

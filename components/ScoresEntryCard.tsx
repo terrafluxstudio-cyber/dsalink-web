@@ -4,8 +4,15 @@ import Link from "next/link";
 import { ArrowRight, LineChart } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+const SCORES_BODY = {
+  en: "2023–2025 cut-off points, year-on-year deltas, and stream comparisons in one filterable table.",
+  zh: "2023–2025 历年 COP、同比变化、流派对比，一张可筛选表格。",
+  ms: "Mata henti 2023–2025, perubahan tahunan dan perbandingan aliran dalam satu jadual.",
+  ta: "2023–2025 COP, ஆண்டு வேறுபாடுகள், ஸ்ட்ரீம் ஒப்பீடுகள் — ஒரே வடிகட்டக்கூடிய அட்டவணை.",
+} as const;
+
 export function ScoresEntryCard() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <section
@@ -24,6 +31,9 @@ export function ScoresEntryCard() {
             >
               {t.homeScoresCardTitle}
             </h2>
+            <p className="mt-1 text-[12.5px] leading-relaxed text-intellectual-muted">
+              {SCORES_BODY[locale]}
+            </p>
           </div>
         </div>
         <div className="mt-4">

@@ -24,7 +24,7 @@ export function HeroSection({ children }: { children?: ReactNode }) {
           {/* ── Left column ── */}
           <div className="flex flex-col">
             {/* Kicker badge */}
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-intellectual px-3 py-1 text-xs font-semibold text-white">
+            <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-intellectual px-4 py-1.5 text-[11px] font-semibold tracking-[0.08em] text-white">
               <ShieldCheck className="h-3.5 w-3.5 shrink-0" aria-hidden />
               <span className="normal-case">{t.heroBadge}</span>
             </div>
