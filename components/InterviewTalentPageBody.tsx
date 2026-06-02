@@ -22,15 +22,17 @@ import { SchoolLogo } from "@/components/SchoolLogo";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SubsectionAnchor } from "@/components/SubsectionAnchor";
-import type {
-  ChecklistGroup,
-  DimensionEntry,
-  InterviewQuestion,
-  LocaleStrFlex,
-  PositionEntry,
-  RichContent,
-  RichSchoolEntry,
-  TalentPage,
+import {
+  ADJACENT_TALENTS,
+  getTalentPage,
+  type ChecklistGroup,
+  type DimensionEntry,
+  type InterviewQuestion,
+  type LocaleStrFlex,
+  type PositionEntry,
+  type RichContent,
+  type RichSchoolEntry,
+  type TalentPage,
 } from "@/lib/talentPages";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
@@ -564,29 +566,19 @@ export function InterviewTalentPageBody({ talent }: { talent: TalentPage }) {
     ms: "Bulan demi bulan: tetingkap permohonan, tarikh trial, hari keputusan.",
     ta: "மாதம் வாரியாக: விண்ணப்ப காலம், சோதனை தேதிகள், முடிவு நாள்.",
   };
-  const r2Title: LocaleStr = {
-    en: "All 147 schools",
-    zh: "147 所学校",
-    ms: "147 sekolah",
-    ta: "147 பள்ளிகள்",
-  };
-  const r2Body: LocaleStr = {
-    en: "Filter by talent area, region, IP / non-IP — with PSLE COP and DSA quota signals.",
-    zh: "按才艺方向、区域、IP / 非 IP 筛选 · 含 PSLE COP 和 DSA 名额信号。",
-    ms: "Tapis mengikut bakat, kawasan, IP / bukan IP.",
-    ta: "திறமை, பகுதி, IP / non-IP மூலம் வடிகட்டவும்.",
-  };
-  const r3Title: LocaleStr = {
-    en: "Other 7 talent paths",
-    zh: "其余 7 个才艺方向",
-    ms: "7 laluan bakat lain",
-    ta: "மற்ற 7 திறமை பாதைகள்",
-  };
-  const r3Body: LocaleStr = {
-    en: "Many families apply across two talent areas — see what the trials look like elsewhere.",
-    zh: "很多家庭跨项目申请 · 看看其他项目的 trial 长什么样。",
-    ms: "Ramai keluarga memohon merentas dua bidang — lihat trial di tempat lain.",
-    ta: "பல குடும்பங்கள் இரண்டு திறமை பகுதிகளில் விண்ணப்பிக்கின்றன.",
+
+  // Adjacency-driven "talent → talent" cards (highest cross-cluster SEO value)
+  const adjacentSlugs = ADJACENT_TALENTS[talent.slug];
+  const adjacentPages = adjacentSlugs
+    .map((s) => getTalentPage(s))
+    .filter((p): p is TalentPage => p !== null);
+
+  // "Also consider" prefix for the adjacent talent cards
+  const alsoPrefix: LocaleStr = {
+    en: "Also consider",
+    zh: "也可以看看",
+    ms: "Pertimbang juga",
+    ta: "இவற்றையும் கருதுங்கள்",
   };
 
   return (
@@ -686,18 +678,12 @@ export function InterviewTalentPageBody({ talent }: { talent: TalentPage }) {
             body: pick(r1Body, locale),
             href: "/timeline",
           },
-          {
-            icon: School,
-            title: pick(r2Title, locale),
-            body: pick(r2Body, locale),
-            href: "/dsa-finder",
-          },
-          {
+          ...adjacentPages.map((p) => ({
             icon: Compass,
-            title: pick(r3Title, locale),
-            body: pick(r3Body, locale),
-            href: "/dsa-interview/talents",
-          },
+            title: `${pick(alsoPrefix, locale)}: ${p.navLabel[locale]}`,
+            body: p.hook[locale],
+            href: `/dsa-interview/${p.slug}`,
+          })),
         ]}
       />
       <PillarBackLink />

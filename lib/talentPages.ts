@@ -2740,6 +2740,29 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "math",
 ];
 
+/**
+ * Adjacency map for related-talent cards in InterviewTalentPageBody.
+ * Each talent recommends 2 nearest-neighbour talents. Hand-picked by
+ * trial type / training pattern overlap, not by alphabetical order.
+ *
+ *   Team ball sports cluster:    basketball ↔ football
+ *   Endurance / speed cluster:   swimming ↔ track-field
+ *   Technique-individual cluster: badminton ↔ martial-arts
+ *   Discipline-aesthetic cluster: music ↔ math
+ *
+ * Plus one cross-cluster bridge per talent for broader exploration.
+ */
+export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
+  basketball: ["football", "track-field"],
+  football: ["basketball", "track-field"],
+  swimming: ["track-field", "badminton"],
+  "track-field": ["swimming", "football"],
+  badminton: ["martial-arts", "swimming"],
+  "martial-arts": ["badminton", "basketball"],
+  music: ["math", "martial-arts"],
+  math: ["music", "badminton"],
+};
+
 export function getTalentPage(slug: string): TalentPage | null {
   if (!(slug in TALENT_DATA)) return null;
   return TALENT_DATA[slug as TalentSlug];
