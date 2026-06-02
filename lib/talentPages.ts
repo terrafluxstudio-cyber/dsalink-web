@@ -1769,6 +1769,299 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       ms: "Panduan DSA-Sec seni mempertahankan diri — wushu, taekwondo, judo, lawan pedang. Laluan, trial, soalan.",
       ta: "தற்காப்பு கலை DSA-Sec — வுஷு, தைக்வாண்டோ, ஜூடோ, வாள்வீச்சு. பாதைகள், சோதனை, கேள்விகள், பள்ளிகள்.",
     },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Martial Arts DSA is the most fragmented talent category in Singapore. Each discipline has its own competition body, its own grading framework, its own clusters of participating schools, and its own trial format. Wushu (modern competition Chinese martial arts) is offered most strongly at SAP and IP schools with strong Chinese-language programmes. Taekwondo (Kukkiwon-style) and Judo (Kodokan-style) cluster around schools with established CCAs and Singapore Taekwondo Federation / Singapore Judo Federation registered coaches. Fencing — foil, épée, and sabre — is its own ecosystem, recruited by a smaller set of schools but often with very specific weapon preferences each cycle. Silat is recruited in clusters of schools with Pesilat Singapura affiliations. Trial format varies by discipline: wushu candidates demonstrate forms (taolu) and sometimes sparring (sanda) basics; taekwondo and judo candidates demonstrate technique and free-spar at controlled intensity; fencing candidates bout in pools. Across all disciplines, the candidate's competition record from federation-sanctioned events plus the live trial performance plus the interview combine to produce the offer.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Federation-sanctioned competition record" },
+          body: {
+            en: "Submit results from the relevant national federation's events — Singapore Wushu Dragon & Lion Dance Federation (SWDLDF), Singapore Taekwondo Federation (STF), Singapore Judo Federation (SJF), Fencing Singapore, or Pesilat Singapura. Include full event name, date, weight/age category, and placing. Schools weight federation-sanctioned competition results far more heavily than dojang/club-internal grading because external competition is calibrated and verifiable.",
+          },
+        },
+        {
+          label: { en: "Technical form and discipline-specific fundamentals" },
+          body: {
+            en: "Wushu trials weight taolu (form) execution — stance accuracy, transitions, balance, and the visual quality of the form. Taekwondo trials weight kicking technique (round, side, axe, spinning kicks), basic forms (poomsae), and breaking if applicable. Judo trials weight ukemi (breakfalls), basic throws, and ground control transitions. Fencing trials weight footwork (en garde, advance/retreat, lunge), point control, and parry quality. Coaches do not expect competition-level polish at P6 — they expect the technique to be fundamentally sound and recognisably trained.",
+          },
+        },
+        {
+          label: { en: "Sparring composure" },
+          body: {
+            en: "Controlled sparring or bouting is included in most martial arts trials and is where psychological signals show. Coaches watch whether the candidate maintains technique under pressure, controls aggression, and shows respect (bow, salute, weapon control) at the start and end of every bout. A candidate who lands fewer points but maintains technique reads better than a candidate who scrambles to score and abandons form. Aggression that crosses into uncontrolled behaviour is a strong negative signal — schools value athletes who can be trusted at competitions where they represent the school.",
+          },
+        },
+        {
+          label: { en: "Coachability and dojang/dojo behaviour" },
+          body: {
+            en: "How the candidate enters the training space, bows or salutes the coach, addresses senior students, and behaves between drills. Martial arts traditions weight etiquette heavily and Singapore school coaches expect candidates to have already internalised the conventions of their discipline. A candidate who needs to be reminded to bow or who interrupts the coach reads as undertrained in basics — even if technique is strong.",
+          },
+        },
+        {
+          label: { en: "Discipline-specific conditioning" },
+          body: {
+            en: "Coaches watch whether the candidate has the conditioning their discipline demands — flexibility for wushu and taekwondo, grip and core for judo, lower-body endurance for fencing. Trials sometimes include light fitness components (flexibility tests, plank holds, short shuttle runs) calibrated to the discipline. The point is not raw fitness — it is whether the candidate's body shows the conditioning of a year or more of training in the chosen art.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Wushu — taolu and sanda" },
+          body: {
+            en: "Singapore wushu DSA mostly recruits taolu specialists — changquan (long fist), nanquan (southern fist), taijiquan, and weapon forms (sword, broadsword, staff, spear). Coaches watch stance heights, jump quality, and the rhythm transitions that separate competition-level wushu from beginner-level. A candidate with a complete competition taolu — even a slightly imperfect one — outscores a candidate with several half-learned forms. Sanda candidates are recruited more thinly; schools with sanda programmes tend to be SAP institutions with established Chinese-martial-arts CCAs.",
+          },
+        },
+        {
+          position: { en: "Taekwondo — Kukkiwon-style competition" },
+          body: {
+            en: "Schools recruit both poomsae and kyorugi (sparring) specialists. Poomsae candidates are watched for sharpness of basic kicks (front, side, round), the precision of stances, and the kihap (focal shout) timing within the form. Kyorugi candidates demonstrate scoring kicks (axe, round, spinning back, spinning hook) at pads, then light bouts under hogu. Belt grade is read but not decisive — a 1st kup with weak technique scores lower than a clean blue belt with strong fundamentals.",
+          },
+        },
+        {
+          position: { en: "Judo — throws and ground" },
+          body: {
+            en: "Judo trials test both tachi-waza (standing throws) and ne-waza (groundwork). Coaches watch ukemi quality first — clean breakfalls are non-negotiable, both for the candidate's own safety and for what they signal about training base. Standing techniques typically demonstrated: o-soto-gari, seoi-nage, uchi-mata, tai-otoshi. Ne-waza demonstrations focus on basic pins (kesa-gatame, yoko-shiho-gatame) and one or two transition combinations. Kyu grade and competition record both matter.",
+          },
+        },
+        {
+          position: { en: "Fencing — foil, épée, sabre" },
+          body: {
+            en: "Different weapons have different recruitment cycles each year — confirm with the target school which weapons are being recruited before the trial. Foil and épée trials weight point control, footwork precision, and parry quality. Sabre trials weight tempo, the bind-and-attack pattern, and the lunge speed. Pool-bouting at trial is standard; candidates are watched for tactical adaptation across opponents, not just raw points. Singapore National Schools fencing rankings and ASEAN-level results are weighted on the application.",
+          },
+        },
+        {
+          position: { en: "Silat — silat olahraga / silat seni" },
+          body: {
+            en: "Silat olahraga (sparring) and silat seni (artistic forms) are both recruited, with the balance varying by school. Pesilat Singapura competition records (Singapore Schools' Silat Championships, ASEAN-level events) are read carefully. Trials typically include jurus (form) demonstration plus controlled tanding (sparring) at the school's calibration. Belt grade in the relevant style is logged on the application.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Other martial arts — karate, kendo, brazilian jiu-jitsu, muay thai — have small or non-existent school DSA pipelines in Singapore. Candidates from these disciplines should contact target schools directly to ask whether the discipline is recruited in the current cycle; in some cases a strong record in a related discipline (e.g. karate kumite informing taekwondo kyorugi) can be parlayed into a trial slot.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love your martial art?" },
+          subtext: {
+            en: "Panels want a specific moment or principle, not a feeling. \"It teaches discipline\" reads as a parent's answer, not the candidate's.",
+          },
+          approach: {
+            en: "Open with one concrete training memory or competition moment, then connect it to the candidate's character or philosophy.",
+          },
+          template: {
+            en: "Last year my coach made me lose a sparring match on purpose by giving away my best technique. He wanted me to learn that depending on one strength is a trap. That session changed how I train — I started working on my weak side until it stopped being weak. That's what I love about my art: the lessons stack.",
+          },
+        },
+        {
+          question: { en: "What grade or belt are you, and how did you earn it?" },
+          subtext: {
+            en: "Tests whether the candidate can articulate the work behind the credential, not just name it.",
+          },
+          approach: {
+            en: "Name the grade, the date awarded, the examining body, and one specific technique or test that was hardest.",
+          },
+          template: {
+            en: "Black belt 1st dan, awarded last September by Kukkiwon. The hardest part was breaking — three boards on a spinning back kick. I'd never broken three boards on a spinning technique before; I trained the pivot for three months before the test. Belt's a date on a certificate; what mattered was the three months.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the martial arts CCA, or is this a scatter-shot application?",
+          },
+          approach: {
+            en: "Cite the discipline-specific reason — the school's coach, recent National Schools championship results, the training facility, training frequency.",
+          },
+          template: {
+            en: "Your school's wushu team placed top three at the National School Games taolu finals last year, and your coach has trained two of the current Singapore national junior squad members. The way your team integrates SAP Chinese-language enrichment with wushu training is the exact pathway I want.",
+          },
+        },
+        {
+          question: { en: "Tell us about a competition you didn't win and what you took from it." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → specific cause → specific change you made afterwards → result.",
+          },
+          template: {
+            en: "At the national taolu championships last year, I rushed the difficulty element in my changquan and stepped out of the carpet. I lost points I couldn't recover. After that, my coach added a final-set rehearsal where I had to land the difficulty element five times in a row under fatigue before I went home. At the next competition the element was clean.",
+          },
+        },
+        {
+          question: { en: "How do you balance training, competition, and academics?" },
+          subtext: {
+            en: "Schools fear DSA-Martial-Arts candidates whose grades collapse, especially before major competitions.",
+          },
+          approach: {
+            en: "Describe a real schedule and how you protect academic time during competition season.",
+          },
+          template: {
+            en: "Three weekday sessions plus one Saturday — two hours each. On training days I finish English and Math homework on the bus and do Science before dinner. Two weeks before a competition, I drop volume to one weekday session plus the Saturday so I'm rested and academics don't slip. Sundays are always for revision.",
+          },
+        },
+        {
+          question: { en: "What does martial arts etiquette mean to you?" },
+          subtext: {
+            en: "Schools weight this heavily because they trust DSA-Martial-Arts candidates to represent the school at external competitions.",
+          },
+          approach: {
+            en: "Don't list rules. Give one specific incident where etiquette mattered to you personally.",
+          },
+          template: {
+            en: "At my first competition, I won a close match and didn't bow properly to my opponent because I was excited. My coach didn't congratulate me — he just walked away. That silence taught me more than any lecture about etiquette. I bow first to opponents now, before they bow to me.",
+          },
+        },
+        {
+          question: { en: "If two schools both offer you, how will you decide?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether the family has actually thought about fit.",
+          },
+          approach: {
+            en: "Don't dodge. Pick this school, justify with one specific reason about programme or coach fit.",
+          },
+          template: {
+            en: "Honestly, your school. Your coach's record with competition taolu and the way your CCA structures weekly training around peaking for nationals matches what I want. If the other school called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Wushu (Boys), IP" },
+          context: {
+            en: "Wushu is among HCI's DSA-Sec talent areas. Long-standing competition wushu CCA with consistent National School Games taolu presence. The school's stated position is that applicants without national-meet experience may still apply if the trial supports it.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          url: "https://www.nanhuahigh.moe.edu.sg/announcements/talent-areas-for-dsa/",
+          talentArea: { en: "Wushu, DSA-Sec" },
+          context: {
+            en: "SAP school with strong wushu CCA. Wushu is among Nan Hua's listed DSA talent areas; trials integrate with the school's broader Chinese cultural programme. Higher Chinese or Chinese Language as Mother Tongue required.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Wushu, DSA-Sec, IP" },
+          context: {
+            en: "Listed in Dunman High's 2026 DSA FAQ. SAP heritage with wushu as a featured CCA. Higher Chinese or Chinese Language requirement applies. East Zone presence at National School Games wushu events across recent cycles.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Taekwondo, Fencing, IP" },
+          context: {
+            en: "ACS(I)'s DSA-Sec talent areas include both taekwondo and fencing, with structured CCA programmes for each. Fencing in particular has a long competitive history. ACS(I) runs DSA candidates alongside the existing competition squad during trial windows.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/year-1-admission-exercises/year-1-direct-school-admission/",
+          talentArea: { en: "Fencing, Judo, Taekwondo (Boys), IP" },
+          context: {
+            en: "Multiple martial arts among RI's 2026 DSA talent areas. Fencing in particular has a deep recruitment pipeline. Each discipline runs a separate trial — confirm which is active in the current cycle before applying.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution — Judo / Taekwondo",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Judo, Taekwondo (Boys), IP" },
+          context: {
+            en: "Beyond wushu, HCI also recruits via judo and taekwondo DSA. Each runs as a distinct CCA with its own trial format. Confirm which disciplines are actively recruited each cycle on the school's admissions page.",
+          },
+        },
+        {
+          name: "Saint Joseph's Institution",
+          url: "https://www.sji.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Fencing, Judo (Boys)" },
+          context: {
+            en: "SJI runs both fencing and judo as listed DSA-Sec talent areas. Fencing in particular has produced consistent National Schools-level results. Trials are weapon-specific (fencing) or discipline-specific (judo) — confirm scope before applying.",
+          },
+        },
+        {
+          name: "Methodist Girls' School",
+          url: "https://www.mgs.sch.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Fencing, Taekwondo (Girls), IP" },
+          context: {
+            en: "MGS has well-established fencing and taekwondo CCAs with National Schools competition history. Both are listed as DSA-Sec talent areas. IP track leads to the IB Diploma in senior years.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/admissions/direct-school-admission",
+          talentArea: { en: "Wushu, DSA-Sec (Boys)" },
+          context: {
+            en: "SAP school with wushu among its DSA-Sec talent areas. Strong taolu CCA. Higher Chinese or Chinese Language as Mother Tongue required.",
+          },
+        },
+        {
+          name: "Raffles Girls' School",
+          url: "https://www.rgs.edu.sg/admissions/direct-school-admission",
+          talentArea: { en: "Fencing, Taekwondo (Girls), IP" },
+          context: {
+            en: "RGS lists fencing and taekwondo among its DSA-Sec talent areas. Both have consistent National Schools competition presence. Selection weights both competition record and the interview's articulation of training philosophy.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Compile federation-sanctioned competition results with full event name, date, weight or age category, and placing. Scan all certificates (belt grades, dan certificates, competition placings) and have them ready to upload to the DSA portal. Schools give zero weight to claimed-but-unverified credentials.",
+            },
+            {
+              en: "Confirm CCA records and any martial-arts-related primary school achievements are accurate on the DSA portal entry. MOE pulls these directly from the primary school; missing entries undercut the application. Email the primary school CCA teacher or year-head to verify.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer over 30 seconds or that used the word \"passionate.\" Martial-arts candidates especially need to be able to talk about their discipline — etiquette, training philosophy, specific techniques — in concrete language rather than generic enthusiasm.",
+            },
+            {
+              en: "If the candidate's competition record is thin, attend one federation-sanctioned event in the final 8 weeks before the application closes. Even a non-medal result reads better than no recent external competition, because it shows the candidate is actively competing.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to technique maintenance at 70%. No new techniques, no extra session, no testing for grade. Final-week added load risks the kind of strain (hamstring, shoulder, fingers in judo, wrist in fencing) that ends the trial before it starts.",
+            },
+            {
+              en: "Confirm logistics in writing. Trial date, time, venue, required attire (gi, dobok, fencing kit, wushu uniform — discipline-specific), required equipment (weapon for fencing, breaking boards if specified, mouthguard for taekwondo kyorugi). Email the relevant CCA teacher if anything is ambiguous.",
+            },
+            {
+              en: "Pack a backup of anything that can fail — belt, hogu straps, fencing glove, weapon if your discipline uses one. A snapped strap or broken weapon at trial is a 5-second disaster that a 2-minute pack-check would have prevented.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — a real meal, not a snack. Trial intensity past minute 60 is deliberate; low blood sugar mid-sparring is a self-inflicted handicap.",
+            },
+            {
+              en: "Warm up at home before leaving. Joint mobility, dynamic stretches, light technique. Trial halls in Singapore are cool — arriving warm means the first kicks or throws are not the first physical effort of the day.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the CCA teacher-in-charge if you meet them, leave. Over-involved parents are visible in a small dojang/dojo/salle and the candidate absorbs the cost. Martial arts coaches especially value parent restraint as a signal of disciplined family culture.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours. Replays of lost spars or dropped points between trial and offer are corrosive at any age.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no clear plan — there are still real moves. Cut all new technique acquisition; trust the techniques already trained. Shorten the work to two things only: the candidate's strongest one or two techniques drilled to fluency, and a clean etiquette routine (entering the space, bowing/saluting, addressing the coach) rehearsed until it's automatic. Both are low-injury, high-signal, and visible in the first ten minutes of trial. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because martial-arts interviews especially reward candidates who can articulate the discipline beyond technique — etiquette, philosophy, training history. Some families bring in a private coach at this stage — a good one can stabilise nerves and sharpen specific technique cues, but no coach produces, in three sessions, the years of training that the trial is actually testing. Treat it as triage, not a fix.",
+      },
+    },
   },
   music: {
     slug: "music",
