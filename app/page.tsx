@@ -4,7 +4,6 @@ import { DSALINK_LOCALE_KEY } from "@/lib/constants";
 import { getGuideLocaleStrings, isLocale, type Locale } from "@/lib/i18n";
 import { ScoresEntryCard } from "@/components/HomeDynamic";
 import { TakeawaysEntryCard } from "@/components/TakeawaysEntryCard";
-import { FeaturedGuidesSection } from "@/components/FeaturedGuidesSection";
 import { HeroSection } from "@/components/HeroSection";
 import { HomeBlogEntry } from "@/components/HomeBlogEntry";
 import { HomeParentStoriesGrid } from "@/components/HomeParentStoriesGrid";
@@ -95,24 +94,30 @@ export default function HomePage() {
         {/* L5 · 4 quick-link side cards — the rest of the 5-item nav */}
         <HomeNavCardsRow />
 
-        {/* L5 · Featured Evergreen — Takeaways · PSLE COP · curated guides */}
-        <section className="bg-surface py-12 sm:py-16">
+        {/* L6 · Featured Evergreen — Takeaways · PSLE COP (data anchors) */}
+        <section className="border-y border-champagne/20 bg-champagne-subtle py-14 sm:py-20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="mb-6 sm:mb-8">
-              <p className="mb-2 text-[11px] font-semibold tracking-[0.18em] text-intellectual/70 normal-case">
-                Featured · Evergreen
+            <div className="mb-8 max-w-2xl sm:mb-10">
+              <p className="mb-3 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-champagne-dark normal-case">
+                <span className="h-px w-6 bg-champagne-dark" aria-hidden />
+                Reference · Evergreen
               </p>
-              <h2 className="font-display text-2xl font-semibold text-intellectual sm:text-3xl">
-                The reference assets parents come back to.
+              <h2
+                style={{ textTransform: "none" }}
+                className="font-display text-[1.875rem] font-extrabold leading-[1.1] tracking-tight text-intellectual sm:text-[2.25rem]"
+              >
+                Two data sets parents bookmark.
               </h2>
+              <p className="mt-3 text-[15px] leading-relaxed text-intellectual-muted">
+                Open-house takeaways (what each campus actually felt like) and 3-year PSLE COP history — the two anchors families return to from May through November.
+              </p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-5 sm:grid-cols-2">
               <TakeawaysEntryCard />
               <ScoresEntryCard />
             </div>
           </div>
         </section>
-        <FeaturedGuidesSection />
 
         {/* L6 · Blog — latest 3 time-sensitive posts (EN only) */}
         <HomeBlogEntry />
