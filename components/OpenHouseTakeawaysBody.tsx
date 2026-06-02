@@ -4,6 +4,7 @@ import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { useMemo } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { SchoolLogo } from "@/components/SchoolLogo";
 
 // Map short takeaway IDs → full MOE school slugs (for SchoolLogo lookup).
@@ -1230,8 +1231,21 @@ export function OpenHouseTakeawaysBody() {
   const { locale, t } = useLanguage();
   const talentRows = useMemo(() => buildTalentFinderRows(SCHOOLS), []);
 
+  const bcHere =
+    locale === "zh" ? "开放日笔记" :
+    locale === "ms" ? "Catatan Open House" :
+    locale === "ta" ? "திறந்த நாள் குறிப்புகள்" :
+    "Open House Takeaways";
+
   return (
-    <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
+    <>
+      <Breadcrumb
+        items={[
+          { label: t.navDsaGuide, href: "/dsa-guide" },
+          { label: bcHere },
+        ]}
+      />
+      <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
       {/* Hero */}
       <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark">
         {t.ohTakeawaysKicker}
@@ -1333,5 +1347,6 @@ export function OpenHouseTakeawaysBody() {
         </div>
       </div>
     </div>
+    </>
   );
 }

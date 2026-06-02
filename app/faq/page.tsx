@@ -4,6 +4,7 @@ import { FaqPageHeader } from "@/components/FaqPageHeader";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
+import { StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
 import { buildFaqStructuredData } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -52,6 +53,7 @@ export default function FaqPage() {
 
         <FaqContent />
       </main>
+      <StaticPageRelatedCards page="faq" />
       <PillarBackLink />
       <SiteFooter />
     </>

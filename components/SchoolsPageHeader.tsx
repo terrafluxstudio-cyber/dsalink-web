@@ -9,7 +9,10 @@ export function SchoolsPageHeader() {
 
   return (
     <PageHeader
-      crumbLabel={t.schoolsH1}
+      crumbs={[
+        { label: t.navDsaGuide, href: "/dsa-guide" },
+        { label: t.schoolsH1 },
+      ]}
       kicker={t.schoolsKicker}
       title={t.schoolsH1}
       subtitle={

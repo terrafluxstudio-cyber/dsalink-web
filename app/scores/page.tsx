@@ -3,6 +3,7 @@ import { ScoresPageBody } from "@/components/ScoresPageBody";
 import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
 import { buildScoresStructuredData } from "@/lib/seo";
 
 const SCORES_PAGE_TITLE =
@@ -65,6 +66,7 @@ export default function ScoresPage() {
       <main className="bg-surface">
         <ScoresPageBody />
       </main>
+      <StaticPageRelatedCards page="scores" />
       <PillarBackLink />
       <SiteFooter />
     </>

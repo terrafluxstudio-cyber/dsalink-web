@@ -11,7 +11,10 @@ export function ScoresPageBody() {
   return (
     <>
       <PageHeader
-        crumbLabel="PSLE COP"
+        crumbs={[
+          { label: t.navDsaGuide, href: "/dsa-guide" },
+          { label: "PSLE COP" },
+        ]}
         kicker={t.scoresPageKicker}
         title={t.scoresPageH1}
         subtitle={t.scoresPageLead}

@@ -4,6 +4,7 @@ import { SchoolsPageHeader } from "@/components/SchoolsPageHeader";
 import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
 import { buildSchoolDirectoryStructuredData } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -44,6 +45,7 @@ export default function SchoolsPage() {
           <SchoolsDirectory />
         </div>
       </main>
+      <StaticPageRelatedCards page="schools" />
       <PillarBackLink />
       <SiteFooter />
     </>

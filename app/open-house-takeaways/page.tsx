@@ -3,6 +3,7 @@ import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { OpenHouseTakeawaysBody } from "@/components/OpenHouseTakeawaysBody";
+import { StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
 
 const ogImage = {
   url: "/opengraph-image",
@@ -51,6 +52,7 @@ export default function OpenHouseTakeawaysPage() {
       <main className="min-h-screen bg-surface">
         <OpenHouseTakeawaysBody />
       </main>
+      <StaticPageRelatedCards page="open-house-takeaways" />
       <PillarBackLink />
       <SiteFooter />
     </>
