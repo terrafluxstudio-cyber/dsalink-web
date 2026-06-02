@@ -23,6 +23,7 @@ import {
   Music2,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SectionHeader } from "@/components/SectionHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { STORIES } from "@/lib/parent-stories";
@@ -781,15 +782,11 @@ export function DsaGuidePageBody() {
         {/* ===== SECTION 1 · WHAT DSA IS ===== */}
         <section className="border-t border-intellectual/[0.06] py-14 sm:py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <p className="text-[11px] font-semibold tracking-[0.18em] text-champagne-dark normal-case">
-              {pick(S1_KICKER, locale)}
-            </p>
-            <h2 className="mt-2 font-display text-2xl font-bold text-intellectual sm:text-3xl" style={{ textTransform: "none" }}>
-              {pick(S1_TITLE, locale)}
-            </h2>
-            <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-intellectual-muted sm:text-base">
-              {pick(S1_INTRO, locale)}
-            </p>
+            <SectionHeader
+              kicker={pick(S1_KICKER, locale)}
+              title={pick(S1_TITLE, locale)}
+              intro={pick(S1_INTRO, locale)}
+            />
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-5">
               <article className="rounded-2xl border border-intellectual/12 bg-white p-6 shadow-soft sm:p-7">
@@ -845,15 +842,11 @@ export function DsaGuidePageBody() {
         {/* ===== SECTION 2 · ⭐ PARENT STORIES (HIGH POSITION) ===== */}
         <section className="border-t border-intellectual/[0.06] bg-surface-warm py-14 sm:py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <p className="text-[11px] font-semibold tracking-[0.18em] text-champagne-dark normal-case">
-              {pick(S2_KICKER, locale)}
-            </p>
-            <h2 className="mt-2 font-display text-2xl font-bold text-intellectual sm:text-3xl" style={{ textTransform: "none" }}>
-              {pick(S2_TITLE, locale)}
-            </h2>
-            <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-intellectual-muted sm:text-base">
-              {pick(S2_INTRO, locale)}
-            </p>
+            <SectionHeader
+              kicker={pick(S2_KICKER, locale)}
+              title={pick(S2_TITLE, locale)}
+              intro={pick(S2_INTRO, locale)}
+            />
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
               {STORIES.map((s, i) => {
@@ -895,15 +888,11 @@ export function DsaGuidePageBody() {
         {/* ===== SECTION 3 · 8 TALENTS ===== */}
         <section className="border-t border-intellectual/[0.06] py-14 sm:py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <p className="text-[11px] font-semibold tracking-[0.18em] text-champagne-dark normal-case">
-              {pick(S3_KICKER, locale)}
-            </p>
-            <h2 className="mt-2 font-display text-2xl font-bold text-intellectual sm:text-3xl" style={{ textTransform: "none" }}>
-              {pick(S3_TITLE, locale)}
-            </h2>
-            <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-intellectual-muted sm:text-base">
-              {pick(S3_INTRO, locale)}
-            </p>
+            <SectionHeader
+              kicker={pick(S3_KICKER, locale)}
+              title={pick(S3_TITLE, locale)}
+              intro={pick(S3_INTRO, locale)}
+            />
 
             <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
               {TALENTS.map((t) => {
@@ -945,15 +934,11 @@ export function DsaGuidePageBody() {
         {/* ===== CH 4 · 147 SCHOOLS ===== */}
         <section className="border-t border-intellectual/[0.06] bg-surface-warm py-14 sm:py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <p className="text-[11px] font-semibold tracking-[0.18em] text-champagne-dark normal-case">
-              {pick(S4_KICKER, locale)}
-            </p>
-            <h2 className="mt-2 font-display text-2xl font-bold text-intellectual sm:text-3xl" style={{ textTransform: "none" }}>
-              {pick(S4_TITLE, locale)}
-            </h2>
-            <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-intellectual-muted sm:text-base">
-              {pick(S4_INTRO, locale)}
-            </p>
+            <SectionHeader
+              kicker={pick(S4_KICKER, locale)}
+              title={pick(S4_TITLE, locale)}
+              intro={pick(S4_INTRO, locale)}
+            />
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
               {FULL_DSA_SCHOOLS.map((s, i) => {
@@ -1003,15 +988,11 @@ export function DsaGuidePageBody() {
         {/* ===== CH 5 · TIMELINE HORIZONTAL ===== */}
         <section className="border-t border-intellectual/[0.06] py-14 sm:py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <p className="text-[11px] font-semibold tracking-[0.18em] text-champagne-dark normal-case">
-              {pick(S5_KICKER, locale)}
-            </p>
-            <h2 className="mt-2 font-display text-2xl font-bold text-intellectual sm:text-3xl" style={{ textTransform: "none" }}>
-              {pick(S5_TITLE, locale)}
-            </h2>
-            <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-intellectual-muted sm:text-base">
-              {pick(S5_INTRO, locale)}
-            </p>
+            <SectionHeader
+              kicker={pick(S5_KICKER, locale)}
+              title={pick(S5_TITLE, locale)}
+              intro={pick(S5_INTRO, locale)}
+            />
 
             <div className="mt-8 grid gap-3 sm:grid-cols-5 sm:gap-3">
               {TIMELINE_HORIZ_5.map((p, i) => (
@@ -1063,15 +1044,11 @@ export function DsaGuidePageBody() {
         {/* ===== CH 6 · 5 ELEMENTS ===== */}
         <section className="border-t border-intellectual/[0.06] bg-surface-warm py-14 sm:py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <p className="text-[11px] font-semibold tracking-[0.18em] text-champagne-dark normal-case">
-              {pick(S6_KICKER, locale)}
-            </p>
-            <h2 className="mt-2 font-display text-2xl font-bold text-intellectual sm:text-3xl" style={{ textTransform: "none" }}>
-              {pick(S6_TITLE, locale)}
-            </h2>
-            <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-intellectual-muted sm:text-base">
-              {pick(S6_INTRO, locale)}
-            </p>
+            <SectionHeader
+              kicker={pick(S6_KICKER, locale)}
+              title={pick(S6_TITLE, locale)}
+              intro={pick(S6_INTRO, locale)}
+            />
 
             <ol className="mt-8 grid gap-3 sm:grid-cols-1 sm:gap-3">
               {FIVE_ELEMENTS.map((el, i) => (
@@ -1119,15 +1096,11 @@ export function DsaGuidePageBody() {
         {/* ===== CH 7 · 4 OUTCOMES QUADRANT ===== */}
         <section className="border-t border-intellectual/[0.06] py-14 sm:py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <p className="text-[11px] font-semibold tracking-[0.18em] text-champagne-dark normal-case">
-              {pick(S7_KICKER, locale)}
-            </p>
-            <h2 className="mt-2 font-display text-2xl font-bold text-intellectual sm:text-3xl" style={{ textTransform: "none" }}>
-              {pick(S7_TITLE, locale)}
-            </h2>
-            <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-intellectual-muted sm:text-base">
-              {pick(S7_INTRO, locale)}
-            </p>
+            <SectionHeader
+              kicker={pick(S7_KICKER, locale)}
+              title={pick(S7_TITLE, locale)}
+              intro={pick(S7_INTRO, locale)}
+            />
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-5">
               {OUTCOMES_4.map((o, i) => {
@@ -1169,15 +1142,11 @@ export function DsaGuidePageBody() {
         {/* ===== CH 8 · DSA × PSLE COMPARISON ===== */}
         <section className="border-t border-intellectual/[0.06] bg-surface-warm py-14 sm:py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <p className="text-[11px] font-semibold tracking-[0.18em] text-champagne-dark normal-case">
-              {pick(S8_KICKER, locale)}
-            </p>
-            <h2 className="mt-2 font-display text-2xl font-bold text-intellectual sm:text-3xl" style={{ textTransform: "none" }}>
-              {pick(S8_TITLE, locale)}
-            </h2>
-            <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-intellectual-muted sm:text-base">
-              {pick(S8_INTRO, locale)}
-            </p>
+            <SectionHeader
+              kicker={pick(S8_KICKER, locale)}
+              title={pick(S8_TITLE, locale)}
+              intro={pick(S8_INTRO, locale)}
+            />
 
             <div className="mt-8 overflow-hidden rounded-2xl border border-intellectual/12 bg-white shadow-soft">
               <table className="w-full text-left text-[13px] sm:text-[13.5px]">
@@ -1217,15 +1186,11 @@ export function DsaGuidePageBody() {
         {/* ===== CH 9 · FAQ ACCORDION ===== */}
         <section className="border-t border-intellectual/[0.06] py-14 sm:py-16">
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
-            <p className="text-[11px] font-semibold tracking-[0.18em] text-champagne-dark normal-case">
-              {pick(S9_KICKER, locale)}
-            </p>
-            <h2 className="mt-2 font-display text-2xl font-bold text-intellectual sm:text-3xl" style={{ textTransform: "none" }}>
-              {pick(S9_TITLE, locale)}
-            </h2>
-            <p className="mt-3 text-[15px] leading-relaxed text-intellectual-muted sm:text-base">
-              {pick(S9_INTRO, locale)}
-            </p>
+            <SectionHeader
+              kicker={pick(S9_KICKER, locale)}
+              title={pick(S9_TITLE, locale)}
+              intro={pick(S9_INTRO, locale)}
+            />
 
             <div className="mt-8 space-y-2.5">
               {FAQ_QA.map((item, i) => (

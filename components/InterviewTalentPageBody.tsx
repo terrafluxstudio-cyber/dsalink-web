@@ -17,6 +17,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SubsectionAnchor } from "@/components/SubsectionAnchor";
 import type {
   ChecklistGroup,
   DimensionEntry,
@@ -72,14 +73,11 @@ function TrialDimensionsSection({
   return (
     <section className="py-12 sm:py-16">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <div className="mb-6 flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-intellectual/8 text-intellectual">
-            <Target className="h-4.5 w-4.5" aria-hidden />
-          </span>
-          <h2 className="font-display text-2xl font-semibold text-intellectual sm:text-3xl">
-            {pick(heading, locale)}
-          </h2>
-        </div>
+        <SubsectionAnchor
+          icon={Target}
+          title={pick(heading, locale)}
+          className="mb-6"
+        />
         {rich.trialDimensionsIntro ? (
           <p className="mb-6 text-[0.9375rem] leading-relaxed text-intellectual-muted">
             {pickFlex(rich.trialDimensionsIntro, locale)}
@@ -121,14 +119,11 @@ function PositionFocusSection({
   return (
     <section className="pb-12 sm:pb-16">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <div className="mb-6 flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-intellectual/8 text-intellectual">
-            <Users className="h-4.5 w-4.5" aria-hidden />
-          </span>
-          <h2 className="font-display text-2xl font-semibold text-intellectual sm:text-3xl">
-            {pick(heading, locale)}
-          </h2>
-        </div>
+        <SubsectionAnchor
+          icon={Users}
+          title={pick(heading, locale)}
+          className="mb-6"
+        />
         <div className="grid gap-4 sm:grid-cols-2">
           {rich.positionFocus.map((p: PositionEntry, i: number) => (
             <div
@@ -188,14 +183,11 @@ function InterviewQuestionsSection({
   return (
     <section className="pb-12 sm:pb-16">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <div className="mb-6 flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-intellectual/8 text-intellectual">
-            <MessageSquareText className="h-4.5 w-4.5" aria-hidden />
-          </span>
-          <h2 className="font-display text-2xl font-semibold text-intellectual sm:text-3xl">
-            {pick(heading, locale)}
-          </h2>
-        </div>
+        <SubsectionAnchor
+          icon={MessageSquareText}
+          title={pick(heading, locale)}
+          className="mb-6"
+        />
         <ol className="space-y-5">
           {rich.interviewQuestions.map((q: InterviewQuestion, i: number) => (
             <li
@@ -264,14 +256,11 @@ function RichSchoolsSection({
   return (
     <section className="pb-12 sm:pb-16">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <div className="mb-6 flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-intellectual/8 text-intellectual">
-            <School className="h-4.5 w-4.5" aria-hidden />
-          </span>
-          <h2 className="font-display text-2xl font-semibold text-intellectual sm:text-3xl">
-            {pick(heading, locale)}
-          </h2>
-        </div>
+        <SubsectionAnchor
+          icon={School}
+          title={pick(heading, locale)}
+          className="mb-6"
+        />
         <ul className="space-y-3">
           {rich.schools.map((s: RichSchoolEntry, i: number) => (
             <li
@@ -331,14 +320,11 @@ function ParentChecklistSection({
   return (
     <section className="pb-12 sm:pb-16">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <div className="mb-6 flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-intellectual/8 text-intellectual">
-            <Timer className="h-4.5 w-4.5" aria-hidden />
-          </span>
-          <h2 className="font-display text-2xl font-semibold text-intellectual sm:text-3xl">
-            {pick(heading, locale)}
-          </h2>
-        </div>
+        <SubsectionAnchor
+          icon={Timer}
+          title={pick(heading, locale)}
+          className="mb-6"
+        />
         <div className="space-y-5">
           {rich.parentChecklist.map((g: ChecklistGroup, i: number) => (
             <div
