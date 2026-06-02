@@ -47,7 +47,7 @@ const TALENTS: ReadonlyArray<{
   // ── Visual Arts ────────────────────────────────────────────────────
   { slug: "art", icon: Palette, label: { en: "Visual Arts", zh: "美术", ms: "Seni Visual", ta: "காட்சிக் கலை" }, href: "/dsa-finder?q=art" },
   // ── STEM / Academic ────────────────────────────────────────────────
-  { slug: "robotics", icon: Cpu, label: { en: "Robotics", zh: "机器人", ms: "Robotik", ta: "ரோபோடிக்ஸ்" }, href: "/dsa-finder?q=robotics" },
+  { slug: "robotics", icon: Cpu, label: { en: "Robotics", zh: "机器人", ms: "Robotik", ta: "ரோபோடிக்ஸ்" } },
   { slug: "math", icon: Calculator, label: { en: "Math & Sci", zh: "数理", ms: "Mat & Sains", ta: "கணிதம் & அறிவியல்" } },
   // ── Language ───────────────────────────────────────────────────────
   { slug: "chinese", icon: Languages, label: { en: "Chinese (CLE)", zh: "高级华文", ms: "Bahasa Cina", ta: "சீன மொழி" }, href: "/dsa-finder?q=chinese" },

@@ -16,7 +16,8 @@ export type TalentSlug =
   | "badminton"
   | "martial-arts"
   | "music"
-  | "math";
+  | "math"
+  | "robotics";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -2727,6 +2728,339 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  robotics: {
+    slug: "robotics",
+    contentReadyBy: "2026-06-03",
+    navLabel: { en: "Robotics", zh: "机器人", ms: "Robotik", ta: "ரோபோடிக்ஸ்" },
+    hook: {
+      en: "Robotics DSA — what assessors actually watch during the build challenge.",
+      zh: "机器人 DSA——build challenge 评委真正在看什么。",
+      ms: "DSA Robotik — apa yang penilai sebenarnya nilai semasa cabaran bina.",
+      ta: "ரோபோடிக்ஸ் DSA — பில்ட் சவாலின் போது மதிப்பீட்டாளர்கள் என்ன பார்க்கிறார்கள்.",
+    },
+    intro: {
+      en: "Top STEM schools don't just look for kids who win VEX or FLL. They look for engineering judgment — how you debug when the robot doesn't move, how you document, how you collaborate. Here's what the trial actually measures.",
+      zh: "顶尖 STEM 学校不只看你赢过 VEX 或 FLL。他们看工程判断——机器人不动时怎么 debug、怎么记录、怎么协作。trial 实际在测什么。",
+      ms: "Sekolah STEM teratas bukan sekadar mencari kanak-kanak yang menang VEX atau FLL. Mereka mencari pertimbangan kejuruteraan — bagaimana anda atasi pepijat, dokumentasikan, dan bekerjasama.",
+      ta: "சிறந்த STEM பள்ளிகள் VEX அல்லது FLL வென்றவர்களை மட்டும் தேடவில்லை. பொறியியல் தீர்ப்பு — ரோபோ வேலை செய்யாதபோது நீங்கள் எவ்வாறு பிழைதிருத்துகிறீர்கள், ஆவணப்படுத்துகிறீர்கள், ஒத்துழைக்கிறீர்கள்.",
+    },
+    summary: {
+      en: "Trial dimensions, programming and build focus, sample interview questions, participating STEM schools.",
+      zh: "Trial 评分维度、编程与组装重点、面试题样、STEM 学校清单。",
+      ms: "Dimensi trial, fokus pengaturcaraan dan bina, soalan temu duga, sekolah STEM peserta.",
+      ta: "சோதனை பரிமாணங்கள், நிரலாக்கம் மற்றும் கட்டுமான கவனம், மாதிரி நேர்காணல் கேள்விகள், STEM பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "NUS High School of Math and Science",
+      "School of Science and Technology",
+      "Hwa Chong Institution",
+      "Raffles Institution",
+      "Dunman High School",
+      "Anglo-Chinese School (Independent)",
+    ],
+    metaDescription: {
+      en: "How robotics DSA-Sec interviews and trials work in Singapore — what assessors look for in build challenges and code reviews, sample questions, list of participating STEM schools.",
+      zh: "新加坡机器人 DSA-Sec 面试与 trial 全解析——build challenge 与 code review 评委看什么、面试样题、STEM 学校清单。",
+      ms: "Cara temu duga dan trial DSA-Sec robotik di Singapura — apa yang penilai cari, soalan contoh, sekolah STEM peserta.",
+      ta: "சிங்கப்பூரில் ரோபோடிக்ஸ் DSA-Sec நேர்காணல் மற்றும் சோதனை எவ்வாறு செயல்படுகிறது — மதிப்பீட்டாளர்கள் என்ன தேடுகிறார்கள், மாதிரி கேள்விகள், STEM பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore robotics trials usually run 2 to 3 hours and combine three formats: a timed build-and-code challenge (often with VEX IQ, LEGO Mindstorms, or a school-specific kit), a portfolio interview where the candidate walks the panel through a past project, and a short engineering reasoning conversation. Specialised schools (NUS High, SST) run the most rigorous version — expect a written component on programming logic plus a hands-on debugging task. Most non-specialised schools weight the portfolio interview most heavily because they don't have the lab time for a full build trial. The six dimensions below show up across all formats.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Engineering reasoning under failure" },
+          body: {
+            en: "Assessors deliberately design build tasks that won't work on the first try — a sensor is calibrated wrong, motor power is too low, a code block is missing. What they watch is not whether the candidate fixes it, but the order of operations: do they look at the code first, the mechanics first, or run a diagnostic test? At twelve, this systematic-debugging instinct is the single highest-signal habit. Candidates who randomly try changes lose points even if they happen to fix the bug.",
+          },
+        },
+        {
+          label: { en: "Programming proficiency for age" },
+          body: {
+            en: "Most P6 robotics candidates know Scratch or block-based VEX programming. A meaningful minority can write Python or basic C++. Assessors don't expect production code — they expect clean logic, named variables, and the ability to talk through what each block does. Reading another team's code and finding the bug is a common trial task. Coaches at specialised schools watch how candidates name variables: \"motorL\" beats \"x\" every time.",
+          },
+        },
+        {
+          label: { en: "Mechanical / structural intuition" },
+          body: {
+            en: "Can the candidate eyeball a build and predict which joint will fail under torque? Will they reinforce stress points without being told? VEX and LEGO kit familiarity matters less than the underlying spatial reasoning. Candidates who reach for triangular bracing without instruction stand out — it's a stable engineering instinct, not memorised.",
+          },
+        },
+        {
+          label: { en: "Documentation and engineering notebook" },
+          body: {
+            en: "Bring a physical or digital engineering journal — hand-drawn sketches, iteration logs, dated entries showing what worked and what didn't. This is the single most-overlooked preparation by parents and the single most-cited by assessors at SST and NUS High. A clean document with photos and dated reflections outperforms a polished GitHub repo with no narrative.",
+          },
+        },
+        {
+          label: { en: "Collaboration and team role articulation" },
+          body: {
+            en: "Most robotics work is team-based. Assessors ask candidates to describe their role on past teams — and they listen for whether the candidate can name what teammates did that they couldn't. \"I was the programmer\" is weak. \"I was the programmer; Mei-Lin handled mechanical; we always paired on the sensor calibration because that was the bottleneck\" is what they want.",
+          },
+        },
+        {
+          label: { en: "Curiosity beyond the kit" },
+          body: {
+            en: "What has the candidate built outside school robotics CCA? An Arduino weather station, a hacked-together line follower, a Raspberry Pi project that doesn't quite work yet — anything that shows they tinker on their own. Specialised schools weight this heavily because passion drives the long-term grit needed for competition robotics.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Programmer" },
+          body: {
+            en: "Strongest pathway for candidates who enjoy logic puzzles and can explain code line by line. Schools want clean indentation, comments where needed, and the discipline to test in small increments rather than write fifty lines and pray. Be ready to show one piece of code you wrote — print it out, walk through it. Bonus if you can show a bug you fixed and explain how you found it.",
+          },
+        },
+        {
+          position: { en: "Mechanical builder" },
+          body: {
+            en: "For candidates who love the kit itself — VEX gears, LEGO Technic joints, 3D-printed brackets. Schools want fluency in load distribution, gear ratios, and modular design. Bring photos of complex builds and be ready to explain why you chose specific structural decisions. \"Because it looked cool\" is the wrong answer; \"because the previous version sagged under the lift arm\" is the right one.",
+          },
+        },
+        {
+          position: { en: "Strategist / driver" },
+          body: {
+            en: "In VEX-style competitions, the driver makes split-second decisions in a 2-minute match. Schools recruiting for competition teams watch for game-state awareness — can the candidate read the field, predict the opposing alliance's next move, call audibles. Less common as a DSA entry point than the other three but valuable when the school has an active VEX or VRC program.",
+          },
+        },
+        {
+          position: { en: "Documenter / presenter" },
+          body: {
+            en: "The role most parents underestimate. FIRST LEGO League awards multiple of its trophies based on the engineering notebook and the project presentation — not robot performance. Schools that compete in FLL look hard for candidates who can communicate clearly, both written and verbal. If your child is more articulate than mechanical, this is the lane.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Strong candidates can swing between two of these roles — most P6 winners on Singapore VEX and FLL teams describe themselves as \"programmer + documenter\" or \"builder + strategist.\" Schools don't expect a Sec 1 candidate to commit to one role.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Walk us through a robotics project you built." },
+          subtext: {
+            en: "The panel wants concrete engineering reasoning, not a list of competitions.",
+          },
+          approach: {
+            en: "Pick one project. Describe the problem, your first design, what failed, what you changed. Spend 70% on the failure-and-iteration part.",
+          },
+          template: {
+            en: "Our P5 FLL robot kept missing the loading station because our line sensor read black on the printed mat seam. I tested three sensor heights, then switched from threshold detection to gradient detection — that fixed it. We placed third in the regional.",
+          },
+        },
+        {
+          question: { en: "What programming languages or platforms do you use?" },
+          subtext: {
+            en: "Honesty matters more than range. The panel can spot a kid who's read about Python but never actually written it.",
+          },
+          approach: {
+            en: "Name the platform plus one specific thing you can do in it.",
+          },
+          template: {
+            en: "VEXcode Blocks for our school team — I write the autonomous routines. I started learning Python last year and can do basic loops and conditionals, but I haven't built a full project in it yet.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time your robot didn't work. What did you do?" },
+          subtext: {
+            en: "Tests systematic debugging instinct vs random poking.",
+          },
+          approach: {
+            en: "Describe the symptom, the hypothesis, the test, the fix. Show ordered thinking.",
+          },
+          template: {
+            en: "Our gripper kept dropping the cube halfway through the lift. I first thought the motor was underpowered, but I measured the current and it was fine. Then I checked the grip surface — the rubber band had stretched. Replaced it and tightened the calibration. Took twenty minutes.",
+          },
+        },
+        {
+          question: { en: "Why our school's robotics program?" },
+          subtext: {
+            en: "Did the family research the actual lab and competition record, or are they applying everywhere with STEM?",
+          },
+          approach: {
+            en: "Name one specific thing about the school's robotics — a coach, a competition track, a piece of equipment, an alumnus project.",
+          },
+          template: {
+            en: "NUS High's research-based robotics tracks — the Year 3 project showcase your school published online featured underwater ROV builds, which is what I want to work on. Most schools stop at competition robotics; yours goes further.",
+          },
+        },
+        {
+          question: { en: "Describe a time you disagreed with a teammate on a design decision." },
+          subtext: {
+            en: "Tests collaboration maturity, not whether they always win arguments.",
+          },
+          approach: {
+            en: "Situation → both sides → how it was resolved → what you learned.",
+          },
+          template: {
+            en: "My teammate wanted a larger gear for more torque on our arm. I thought it would slow us down too much in the match. We built both and tested — the smaller gear was 0.6 seconds faster per cycle. He was right that we'd lose grip strength, so we added a second motor instead. I learned to test first, argue second.",
+          },
+        },
+        {
+          question: { en: "How do you balance robotics with academic work?" },
+          subtext: {
+            en: "Schools fear DSA STEM kids who flame out in Sec 2 because robotics swallows their evenings.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I do most of my homework during the school day in short breaks. CCA training nights, I revise on the bus home and only do Math problem sets after dinner — those are the ones that benefit from focus time. Sundays are robotics build day, no homework.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether the candidate would actually enrol.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school — the cross-discipline focus between robotics and biology in your Year 3 modules matches what I want to learn. If the other school called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "NUS High School of Math and Science",
+          url: "https://www.nushigh.edu.sg/",
+          talentArea: { en: "Robotics & Engineering, Specialised IP" },
+          context: {
+            en: "100% DSA admission — no PSLE-posting alternative. Research-based robotics program with annual Year 3 project showcase. Application weights portfolio, engineering reasoning, and a written component on programming logic.",
+          },
+        },
+        {
+          name: "School of Science and Technology",
+          url: "https://www.sst.edu.sg/",
+          talentArea: { en: "Robotics & ICT, Specialised" },
+          context: {
+            en: "Specialised school with applied-learning focus. Robotics is central to the curriculum; expect rigorous trial involving hands-on build and code debugging.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Robotics, IP" },
+          context: {
+            en: "Listed in HCI's DSA talent areas. Active VEX and FIRST competition track; assessors weight engineering notebook and team role articulation heavily.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/year-1-admission-exercises/year-1-direct-school-admission/",
+          talentArea: { en: "Robotics, IP" },
+          context: {
+            en: "Listed in RI's DSA talent areas. Robotics CCA has consistent showings in National Robotics Competition and World Robot Olympiad.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/",
+          talentArea: { en: "Robotics & STEM, IP" },
+          context: {
+            en: "Robotics under broader STEM DSA category. Trial typically includes portfolio review plus a timed build challenge.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          url: "https://www.acsbr.moe.edu.sg/",
+          talentArea: { en: "Robotics, Express" },
+          context: {
+            en: "Active VEX track at lower secondary level. Welcomes candidates with VEX IQ or FLL competition experience but considers self-taught applicants.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Robotics, IP" },
+          context: {
+            en: "Listed in Dunman High's 2026 DSA FAQ under STEM. Higher Chinese or Chinese Language as Mother Tongue required.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          url: "https://www.nanhuahigh.moe.edu.sg/announcements/talent-areas-for-dsa/",
+          talentArea: { en: "Robotics, DSA-Sec" },
+          context: {
+            en: "Active in National Robotics Competition. SAP school — Higher Chinese or Chinese Language as Mother Tongue required.",
+          },
+        },
+        {
+          name: "River Valley High School",
+          url: "https://www.rivervalleyhigh.moe.edu.sg/",
+          talentArea: { en: "Robotics, IP" },
+          context: {
+            en: "Listed in RV High's DSA talent areas. SAP school. Strong programming-side training; mechanical builders welcome but need to demonstrate logic instinct.",
+          },
+        },
+        {
+          name: "Methodist Girls' School",
+          url: "https://www.mgs.sch.edu.sg/",
+          talentArea: { en: "Robotics, IP" },
+          context: {
+            en: "Robotics among MGS's growing STEM tracks; active in FLL. Welcomes applicants from co-ed primary feeders.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Build a portfolio. Pick one robotics project — even a small one — and document it properly: dated photos of each iteration, screenshots of code with comments, a one-page write-up describing the problem, your approach, what failed, what you changed. This single artefact carries more weight than a list of competitions on the application form.",
+            },
+            {
+              en: "Practice talking through code without filler words. Sit your child in front of a printout of their code and have them explain it line by line in 90 seconds. Record on phone. Watch back together. Flag every \"and then\" and \"basically\" — those signal weak articulation under pressure.",
+            },
+            {
+              en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NRC / WRO / FLL results, and any computing-related JSA data from the primary school directly into the DSA portal. Ask the CCA teacher to verify what's been logged. Incomplete records hurt the application.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Time each answer — aim for 45 to 60 seconds. Watch back. Flag any answer over 90 seconds or any answer that doesn't include a specific failure or iteration. Robotics panels are unforgiving on vague answers.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Cancel any new robotics academy session or workshop. Final-week added load rarely pays off and frequently produces nerves on trial day. Stick to what your child already knows.",
+            },
+            {
+              en: "Print one piece of code your child wrote. Hand-mark it with a pencil — circle variable names, underline functions, note edge cases. Walk through it together. The trial will likely involve explaining code, so the physical artefact helps.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire, whether to bring own laptop or kit. Email the teacher-in-charge if anything is ambiguous — the email itself is a data point on parent attentiveness.",
+            },
+            {
+              en: "One scrimmage with strangers. Most kids underperform at the trial because they freeze when a panel of unfamiliar adults watches them debug. Run a mock with a parent friend who knows nothing about robotics — force the awkwardness early.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — protein-heavy, not sugar. Robotics trials with hands-on debugging tasks reward patience and clear thinking; a sugar crash mid-trial is visible.",
+            },
+            {
+              en: "Bring the portfolio. Physical printout if possible, plus a USB stick with code samples backed up. Even if the panel doesn't ask, the kit on the table signals preparation.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing you wished you had done differently?\" Anything else waits 24 hours. Replays of failed debugs during the wait are corrosive.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no clear preparation plan — there are still real moves. Don't try to learn a new programming language. Instead, take the most complex robotics or coding project your child has ever done and turn it into a five-minute walk-through with three slides: problem, approach, what failed and how you fixed it. The single highest-leverage prep is rehearsing this walk-through five or six times until it lands in 90 seconds, smooth, with specific technical detail. The trial itself rewards engineering reasoning the candidate already has; what late preparation buys is composure and articulation, not new skill. Some families bring in a private STEM coach at this stage — a good one can stabilise nerves and tighten the verbal explanation, but no coach produces, in three sessions, the engineering judgment that years of tinkering build. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -2738,6 +3072,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "martial-arts",
   "music",
   "math",
+  "robotics",
 ];
 
 /**
@@ -2760,7 +3095,8 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   badminton: ["martial-arts", "swimming"],
   "martial-arts": ["badminton", "basketball"],
   music: ["math", "martial-arts"],
-  math: ["music", "badminton"],
+  math: ["robotics", "music"],
+  robotics: ["math", "music"],
 };
 
 export function getTalentPage(slug: string): TalentPage | null {
