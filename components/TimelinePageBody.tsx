@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, BookOpen, CalendarDays, ClipboardCheck, Compass, FileSearch, MessageSquareText, Lock, Scale } from "lucide-react";
+import { ArrowRight, BookOpen, CalendarDays, ClipboardCheck, Compass, FileSearch, MessageSquareText, Lock, Scale, School } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { PillarBackLink } from "@/components/PillarBackLink";
+import { RelatedCardsRow } from "@/components/RelatedCardsRow";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
@@ -374,9 +376,77 @@ export function TimelinePageBody() {
     ta: "DSA என்றால் என்ன — தொடங்குங்கள்",
   };
 
+  const bcGuide: LocaleStr = {
+    en: "DSA Guide",
+    zh: "DSA 指南",
+    ms: "Panduan DSA",
+    ta: "DSA வழிகாட்டி",
+  };
+  const bcHere: LocaleStr = {
+    en: "2026 Timeline",
+    zh: "2026 时间线",
+    ms: "Garis Masa 2026",
+    ta: "2026 கால அட்டவணை",
+  };
+
+  const relKicker: LocaleStr = {
+    en: "Related reference",
+    zh: "相关参考",
+    ms: "Rujukan berkaitan",
+    ta: "தொடர்புடைய குறிப்பு",
+  };
+  const relHeading: LocaleStr = {
+    en: "Three references parents pair with the timeline",
+    zh: "家长常与时间线一起看的三个参考",
+    ms: "Tiga rujukan yang ibu bapa pasangkan dengan garis masa",
+    ta: "கால அட்டவணையுடன் பார்க்கும் மூன்று குறிப்புகள்",
+  };
+  const r1T: LocaleStr = {
+    en: "What DSA actually is",
+    zh: "DSA 到底是什么",
+    ms: "Apakah DSA sebenarnya",
+    ta: "DSA உண்மையில் என்ன",
+  };
+  const r1B: LocaleStr = {
+    en: "Mechanism, eligibility, what DSA isn't — before the dates make sense.",
+    zh: "机制、资格、DSA 不是什么 · 看懂日期前先看清楚。",
+    ms: "Mekanisme, kelayakan, apa DSA bukan — sebelum tarikh bermakna.",
+    ta: "முறை, தகுதி, DSA என்ன அல்ல — தேதிகள் புரிய முன்.",
+  };
+  const r2T: LocaleStr = {
+    en: "8 talent paths",
+    zh: "8 个才艺方向",
+    ms: "8 laluan bakat",
+    ta: "8 திறமைப் பாதைகள்",
+  };
+  const r2B: LocaleStr = {
+    en: "Trial formats, what coaches assess, which schools accept what.",
+    zh: "Trial 格式 · 教练评分维度 · 各才艺对应的学校。",
+    ms: "Format trial, apa yang jurulatih nilai, sekolah mana terima apa.",
+    ta: "சோதனை வடிவம், பயிற்சியாளர் என்ன மதிப்பிடுகிறார்கள்.",
+  };
+  const r3T: LocaleStr = {
+    en: "147 schools",
+    zh: "147 所学校",
+    ms: "147 sekolah",
+    ta: "147 பள்ளிகள்",
+  };
+  const r3B: LocaleStr = {
+    en: "Full directory with PSLE COP, DSA availability, and talent areas per school.",
+    zh: "完整目录 · 含 PSLE COP、DSA 名额、各校才艺方向。",
+    ms: "Direktori penuh dengan PSLE COP dan ketersediaan DSA.",
+    ta: "PSLE COP மற்றும் DSA உள்ள முழு பட்டியல்.",
+  };
+
   return (
     <>
       <SiteHeader />
+      <Breadcrumb
+        items={[
+          { label: pick(bcGuide, locale), href: "/dsa-guide" },
+          { label: pick(bcHere, locale) },
+        ]}
+      />
       <main className="bg-surface">
         <section className="bg-hero-mesh">
           <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
@@ -495,6 +565,15 @@ export function TimelinePageBody() {
           </div>
         </section>
       </main>
+      <RelatedCardsRow
+        kicker={pick(relKicker, locale)}
+        heading={pick(relHeading, locale)}
+        items={[
+          { icon: BookOpen, title: pick(r1T, locale), body: pick(r1B, locale), href: "/what-is-dsa" },
+          { icon: Compass, title: pick(r2T, locale), body: pick(r2B, locale), href: "/dsa-interview/talents" },
+          { icon: School, title: pick(r3T, locale), body: pick(r3B, locale), href: "/dsa-finder" },
+        ]}
+      />
       <PillarBackLink />
       <SiteFooter />
     </>

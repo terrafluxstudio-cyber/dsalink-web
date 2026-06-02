@@ -1,9 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, BookOpen, Building2, ClipboardList, Scale, GitMerge, AlertCircle } from "lucide-react";
+import {
+  ArrowRight,
+  BookOpen,
+  Building2,
+  CalendarClock,
+  ClipboardList,
+  Compass,
+  MessageSquareText,
+  Scale,
+  GitMerge,
+  AlertCircle,
+} from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { PillarBackLink } from "@/components/PillarBackLink";
+import { RelatedCardsRow } from "@/components/RelatedCardsRow";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
@@ -298,12 +311,80 @@ const CTA_STORIES: LocaleStr = {
   ta: "DSA பெற்றோர் கதைகள்",
 };
 
+const BC_GUIDE: LocaleStr = {
+  en: "DSA Guide",
+  zh: "DSA 指南",
+  ms: "Panduan DSA",
+  ta: "DSA வழிகாட்டி",
+};
+const BC_HERE: LocaleStr = {
+  en: "What DSA is",
+  zh: "DSA 是什么",
+  ms: "Apa itu DSA",
+  ta: "DSA என்றால் என்ன",
+};
+
+const REL_KICKER: LocaleStr = {
+  en: "Related reference",
+  zh: "相关参考",
+  ms: "Rujukan berkaitan",
+  ta: "தொடர்புடைய குறிப்பு",
+};
+const REL_HEADING: LocaleStr = {
+  en: "Three next steps after understanding the mechanism",
+  zh: "理解机制后的三个下一步",
+  ms: "Tiga langkah selepas memahami mekanisme",
+  ta: "முறையை புரிந்த பிறகு மூன்று அடுத்த படிகள்",
+};
+const R1_T: LocaleStr = {
+  en: "2026 timeline",
+  zh: "2026 时间线",
+  ms: "Garis masa 2026",
+  ta: "2026 கால அட்டவணை",
+};
+const R1_B: LocaleStr = {
+  en: "What happens month-by-month from May application to November results.",
+  zh: "5 月申请到 11 月放榜，逐月在发生什么。",
+  ms: "Apa yang berlaku bulan demi bulan dari Mei hingga November.",
+  ta: "மே விண்ணப்பம் முதல் நவம்பர் முடிவுகள் வரை.",
+};
+const R2_T: LocaleStr = {
+  en: "8 talent paths",
+  zh: "8 个才艺方向",
+  ms: "8 laluan bakat",
+  ta: "8 திறமைப் பாதைகள்",
+};
+const R2_B: LocaleStr = {
+  en: "DSA accepts 8 categories — each with its own trial format and school list.",
+  zh: "DSA 接收 8 个类别 · 每个有独立的 trial 格式与学校簇。",
+  ms: "DSA terima 8 kategori — setiap satu dengan format trial sendiri.",
+  ta: "DSA 8 வகைகளை ஏற்கிறது — ஒவ்வொன்றும் தனி சோதனை வடிவம்.",
+};
+const R3_T: LocaleStr = {
+  en: "12 parent FAQs",
+  zh: "12 个家长常见问题",
+  ms: "12 FAQ ibu bapa",
+  ta: "12 பெற்றோர் கேள்விகள்",
+};
+const R3_B: LocaleStr = {
+  en: "Specific answers to the questions families actually ask in our inbox.",
+  zh: "家长邮件中真实问的问题，对应具体答案。",
+  ms: "Jawapan tepat untuk soalan yang ibu bapa benar-benar tanya.",
+  ta: "குடும்பங்கள் கேட்கும் கேள்விகளுக்கான பதில்கள்.",
+};
+
 export function WhatIsDsaPageBody() {
   const { locale } = useLanguage();
 
   return (
     <>
       <SiteHeader />
+      <Breadcrumb
+        items={[
+          { label: pick(BC_GUIDE, locale), href: "/dsa-guide" },
+          { label: pick(BC_HERE, locale) },
+        ]}
+      />
       <main className="bg-surface">
         <section className="bg-hero-mesh">
           <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
@@ -378,6 +459,15 @@ export function WhatIsDsaPageBody() {
           </div>
         </section>
       </main>
+      <RelatedCardsRow
+        kicker={pick(REL_KICKER, locale)}
+        heading={pick(REL_HEADING, locale)}
+        items={[
+          { icon: CalendarClock, title: pick(R1_T, locale), body: pick(R1_B, locale), href: "/timeline" },
+          { icon: Compass, title: pick(R2_T, locale), body: pick(R2_B, locale), href: "/dsa-interview/talents" },
+          { icon: MessageSquareText, title: pick(R3_T, locale), body: pick(R3_B, locale), href: "/faq" },
+        ]}
+      />
       <PillarBackLink />
       <SiteFooter />
     </>

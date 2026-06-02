@@ -5,6 +5,7 @@ import {
   ArrowRight,
   ArrowLeft,
   CalendarClock,
+  Compass,
   ExternalLink,
   MessageSquareText,
   School,
@@ -14,7 +15,9 @@ import {
   Users,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { PillarBackLink } from "@/components/PillarBackLink";
+import { RelatedCardsRow } from "@/components/RelatedCardsRow";
 import { SchoolLogo } from "@/components/SchoolLogo";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -522,9 +525,80 @@ export function InterviewTalentPageBody({ talent }: { talent: TalentPage }) {
     ta: "அனைத்து நேர்காணல் தயாரிப்பு",
   };
 
+  // Breadcrumb labels — locale-resolved
+  const bcGuide: LocaleStr = {
+    en: "DSA Guide",
+    zh: "DSA 指南",
+    ms: "Panduan DSA",
+    ta: "DSA வழிகாட்டி",
+  };
+  const bcTalents: LocaleStr = {
+    en: "Talents",
+    zh: "才艺方向",
+    ms: "Bakat",
+    ta: "திறமைகள்",
+  };
+
+  // Related-cards copy
+  const relatedKicker: LocaleStr = {
+    en: "Related reference",
+    zh: "相关参考",
+    ms: "Rujukan berkaitan",
+    ta: "தொடர்புடைய குறிப்பு",
+  };
+  const relatedHeading: LocaleStr = {
+    en: "Three more references parents open from this page",
+    zh: "家长从本页常跳的三个参考",
+    ms: "Tiga rujukan tambahan dari halaman ini",
+    ta: "இந்த பக்கத்திலிருந்து பெற்றோர் திறக்கும் மூன்று குறிப்புகள்",
+  };
+  const r1Title: LocaleStr = {
+    en: "2026 timeline",
+    zh: "2026 时间线",
+    ms: "Garis masa 2026",
+    ta: "2026 கால அட்டவணை",
+  };
+  const r1Body: LocaleStr = {
+    en: "Month-by-month: application window, trial dates, results day, when offers become binding.",
+    zh: "逐月：申请窗口、trial 日期、放榜日、offer 何时具约束力。",
+    ms: "Bulan demi bulan: tetingkap permohonan, tarikh trial, hari keputusan.",
+    ta: "மாதம் வாரியாக: விண்ணப்ப காலம், சோதனை தேதிகள், முடிவு நாள்.",
+  };
+  const r2Title: LocaleStr = {
+    en: "All 147 schools",
+    zh: "147 所学校",
+    ms: "147 sekolah",
+    ta: "147 பள்ளிகள்",
+  };
+  const r2Body: LocaleStr = {
+    en: "Filter by talent area, region, IP / non-IP — with PSLE COP and DSA quota signals.",
+    zh: "按才艺方向、区域、IP / 非 IP 筛选 · 含 PSLE COP 和 DSA 名额信号。",
+    ms: "Tapis mengikut bakat, kawasan, IP / bukan IP.",
+    ta: "திறமை, பகுதி, IP / non-IP மூலம் வடிகட்டவும்.",
+  };
+  const r3Title: LocaleStr = {
+    en: "Other 7 talent paths",
+    zh: "其余 7 个才艺方向",
+    ms: "7 laluan bakat lain",
+    ta: "மற்ற 7 திறமை பாதைகள்",
+  };
+  const r3Body: LocaleStr = {
+    en: "Many families apply across two talent areas — see what the trials look like elsewhere.",
+    zh: "很多家庭跨项目申请 · 看看其他项目的 trial 长什么样。",
+    ms: "Ramai keluarga memohon merentas dua bidang — lihat trial di tempat lain.",
+    ta: "பல குடும்பங்கள் இரண்டு திறமை பகுதிகளில் விண்ணப்பிக்கின்றன.",
+  };
+
   return (
     <>
       <SiteHeader />
+      <Breadcrumb
+        items={[
+          { label: pick(bcGuide, locale), href: "/dsa-guide" },
+          { label: pick(bcTalents, locale), href: "/dsa-interview/talents" },
+          { label: pick(talent.navLabel, locale) },
+        ]}
+      />
       <main className="bg-surface">
         {/* Hero */}
         <section className="bg-hero-mesh">
@@ -602,6 +676,30 @@ export function InterviewTalentPageBody({ talent }: { talent: TalentPage }) {
           </div>
         </section>
       </main>
+      <RelatedCardsRow
+        kicker={pick(relatedKicker, locale)}
+        heading={pick(relatedHeading, locale)}
+        items={[
+          {
+            icon: CalendarClock,
+            title: pick(r1Title, locale),
+            body: pick(r1Body, locale),
+            href: "/timeline",
+          },
+          {
+            icon: School,
+            title: pick(r2Title, locale),
+            body: pick(r2Body, locale),
+            href: "/dsa-finder",
+          },
+          {
+            icon: Compass,
+            title: pick(r3Title, locale),
+            body: pick(r3Body, locale),
+            href: "/dsa-interview/talents",
+          },
+        ]}
+      />
       <PillarBackLink />
       <SiteFooter />
     </>
