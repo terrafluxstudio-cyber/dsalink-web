@@ -1,8 +1,13 @@
 import type { ReactNode } from "react";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 
+type Crumb = { label: string; href?: string };
+
 interface PageHeaderProps {
-  crumbLabel: string;
+  /** Legacy single-crumb shorthand (auto-shown as the current page). */
+  crumbLabel?: string;
+  /** Full breadcrumb hierarchy (preferred). Overrides crumbLabel when set. */
+  crumbs?: Crumb[];
   kicker: string;
   title: string;
   subtitle?: ReactNode;
@@ -11,15 +16,18 @@ interface PageHeaderProps {
 
 export function PageHeader({
   crumbLabel,
+  crumbs,
   kicker,
   title,
   subtitle,
   headingId,
 }: PageHeaderProps) {
+  const effectiveCrumbs: Crumb[] =
+    crumbs ?? (crumbLabel ? [{ label: crumbLabel }] : []);
   return (
     <header className="border-b border-white/[0.08] bg-intellectual">
       <div className="mx-auto max-w-5xl px-4 pb-10 pt-7 sm:px-6 sm:pb-12 sm:pt-9">
-        <PageBreadcrumb crumbs={[{ label: crumbLabel }]} />
+        <PageBreadcrumb crumbs={effectiveCrumbs} />
         <div className="mb-3 h-px w-10 rounded-full bg-champagne opacity-70" />
         <div className="mb-3 text-[10px] font-bold tracking-[0.18em] text-champagne sm:text-[11px]">
           {kicker}

@@ -3,12 +3,15 @@
 import { useEffect, useState } from "react";
 import {
   AlertCircle,
+  CalendarClock,
   CheckCircle,
+  ClipboardList,
   Clock,
   ExternalLink,
   Eye,
   ListChecks,
   MessageSquare,
+  School,
   XCircle,
 } from "lucide-react";
 import Link from "next/link";
@@ -16,11 +19,44 @@ import { ChineseNote } from "@/components/ChineseNote";
 import { EmailCapture } from "@/components/EmailCapture";
 import { PageHeader } from "@/components/PageHeader";
 import { PillarBackLink } from "@/components/PillarBackLink";
+import { RelatedCardsRow } from "@/components/RelatedCardsRow";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { FeaturedSchool } from "@/lib/featured-schools";
 import type { Copy } from "@/lib/i18n";
+
+type LocaleStr4 = { en: string; zh: string; ms: string; ta: string };
+const REL_OHG = {
+  kicker: { en: "Related reference", zh: "相关参考", ms: "Rujukan berkaitan", ta: "தொடர்புடைய குறிப்பு" },
+  heading: {
+    en: "Three references parents open after the strategy",
+    zh: "看完策略后家长常打开的三个参考",
+    ms: "Tiga rujukan yang ibu bapa buka selepas strategi",
+    ta: "மூலோபாயத்திற்குப் பிறகு பெற்றோர் திறக்கும் மூன்று குறிப்புகள்",
+  },
+  c1Title: { en: "Open-house takeaways", zh: "开放日实地笔记", ms: "Catatan open-house", ta: "திறந்த நாள் குறிப்புகள்" },
+  c1Body: {
+    en: "Field notes from each campus — what teachers and parents actually said.",
+    zh: "每所学校实际感受 · 老师/家长讲过的话 · 不靠营销话术。",
+    ms: "Catatan padang dari setiap kampus.",
+    ta: "ஒவ்வொரு வளாகத்திலிருந்தும் கள குறிப்புகள்.",
+  },
+  c2Title: { en: "147 schools", zh: "147 所学校", ms: "147 sekolah", ta: "147 பள்ளிகள்" },
+  c2Body: {
+    en: "Filter by talent, region, IP / non-IP — decide which to attend first.",
+    zh: "按才艺、区域、IP / 非 IP 筛选 · 决定先去看哪几所。",
+    ms: "Tapis mengikut bakat, kawasan, IP — putuskan mana untuk dilawat dulu.",
+    ta: "திறமை, பகுதி, IP — முதலில் எதைப் பார்க்க வேண்டும்.",
+  },
+  c3Title: { en: "2026 timeline", zh: "2026 时间线", ms: "Garis masa 2026", ta: "2026 கால அட்டவணை" },
+  c3Body: {
+    en: "Where open houses sit in the year — when to start filtering.",
+    zh: "开放日在全年节奏里的位置 · 何时开始筛选与拜访。",
+    ms: "Di mana open houses dalam tahun ini.",
+    ta: "ஆண்டில் திறந்த நாட்கள் எங்கே.",
+  },
+} satisfies Record<string, LocaleStr4>;
 
 type TKey = keyof Copy;
 
@@ -175,7 +211,10 @@ export function OpenHouseGuidePageBody() {
       <SiteHeader />
       <main className="border-t border-intellectual/5 bg-surface">
         <PageHeader
-          crumbLabel="Open House Guide"
+          crumbs={[
+            { label: t.navDsaGuide, href: "/dsa-guide" },
+            { label: t.navOpenHouseGuide },
+          ]}
           kicker={t.ohGuide_kicker}
           title={t.ohGuide_heroTitle}
           subtitle={t.ohGuide_heroSubtitle}
@@ -781,6 +820,15 @@ export function OpenHouseGuidePageBody() {
           </div>
         </div>
       </main>
+      <RelatedCardsRow
+        kicker={REL_OHG.kicker[locale]}
+        heading={REL_OHG.heading[locale]}
+        items={[
+          { icon: ClipboardList, title: REL_OHG.c1Title[locale], body: REL_OHG.c1Body[locale], href: "/open-house-takeaways" },
+          { icon: School, title: REL_OHG.c2Title[locale], body: REL_OHG.c2Body[locale], href: "/dsa-finder" },
+          { icon: CalendarClock, title: REL_OHG.c3Title[locale], body: REL_OHG.c3Body[locale], href: "/timeline" },
+        ]}
+      />
       <PillarBackLink />
       <SiteFooter scheduleNote={t.ohGuide_footerNote} />
     </>

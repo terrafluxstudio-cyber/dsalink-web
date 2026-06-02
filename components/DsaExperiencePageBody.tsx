@@ -11,14 +11,47 @@ import {
   type DsaExperienceCaseStudy,
   type DsaExperienceQuestionSet,
 } from "@/content/dsa-experience";
-import { AlertCircle, BookMarked, GraduationCap, Lightbulb, Users } from "lucide-react";
+import { AlertCircle, BookMarked, BookOpen, CalendarClock, Compass, GraduationCap, Lightbulb, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { CaseStudyCard } from "@/components/CaseStudyCard";
 import { EmailCapture } from "@/components/EmailCapture";
 import { PageHeader } from "@/components/PageHeader";
 import { PillarBackLink } from "@/components/PillarBackLink";
+import { RelatedCardsRow } from "@/components/RelatedCardsRow";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+
+type LocaleStr4 = { en: string; zh: string; ms: string; ta: string };
+const REL_EXP = {
+  kicker: { en: "Related reference", zh: "相关参考", ms: "Rujukan berkaitan", ta: "தொடர்புடைய குறிப்பு" },
+  heading: {
+    en: "Three references that put these stories in context",
+    zh: "理解这些家庭故事的三个参考",
+    ms: "Tiga rujukan untuk memahami kisah-kisah ini",
+    ta: "இந்த கதைகளை புரிய மூன்று குறிப்புகள்",
+  },
+  c1Title: { en: "What DSA actually is", zh: "DSA 到底是什么", ms: "Apakah DSA sebenarnya", ta: "DSA உண்மையில் என்ன" },
+  c1Body: {
+    en: "Mechanism, eligibility, what DSA isn't — context for why each story unfolds the way it does.",
+    zh: "机制、资格、DSA 不是什么 · 看故事的前置语境。",
+    ms: "Mekanisme, kelayakan — konteks untuk setiap kisah.",
+    ta: "முறை, தகுதி — ஒவ்வொரு கதைக்கான சூழல்.",
+  },
+  c2Title: { en: "2026 timeline", zh: "2026 时间线", ms: "Garis masa 2026", ta: "2026 கால அட்டவணை" },
+  c2Body: {
+    en: "When each family's decisions had to happen — month by month.",
+    zh: "每个家庭何时必须做决定 · 逐月。",
+    ms: "Bila setiap keluarga perlu buat keputusan.",
+    ta: "ஒவ்வொரு குடும்பத்தின் முடிவுகள் எப்போது.",
+  },
+  c3Title: { en: "8 talent paths", zh: "8 个才艺方向", ms: "8 laluan bakat", ta: "8 திறமைப் பாதைகள்" },
+  c3Body: {
+    en: "Talent-specific prep — what each trial measures, which schools accept what.",
+    zh: "分项目备战 · 各 trial 评分维度与对应学校。",
+    ms: "Persediaan mengikut bakat — apa setiap trial nilai.",
+    ta: "திறமை வாரியான தயாரிப்பு — ஒவ்வொரு சோதனை என்ன மதிப்பிடுகிறது.",
+  },
+} satisfies Record<string, LocaleStr4>;
 
 type DsaExperienceStat = {
   value: string;
@@ -83,7 +116,10 @@ export function DsaExperiencePageBody() {
       <SiteHeader />
       <main>
         <PageHeader
-          crumbLabel={t.dsaExpPageCrumb}
+          crumbs={[
+            { label: t.navDsaGuide, href: "/dsa-guide" },
+            { label: t.dsaExpPageCrumb },
+          ]}
           kicker={t.dsaExpPageKicker}
           title={t.dsaExpPageTitle}
           subtitle={t.dsaExpPageSubtitle}
@@ -597,6 +633,15 @@ export function DsaExperiencePageBody() {
           </div>
         </div>
       </main>
+      <RelatedCardsRow
+        kicker={REL_EXP.kicker[locale]}
+        heading={REL_EXP.heading[locale]}
+        items={[
+          { icon: BookOpen, title: REL_EXP.c1Title[locale], body: REL_EXP.c1Body[locale], href: "/what-is-dsa" },
+          { icon: CalendarClock, title: REL_EXP.c2Title[locale], body: REL_EXP.c2Body[locale], href: "/timeline" },
+          { icon: Compass, title: REL_EXP.c3Title[locale], body: REL_EXP.c3Body[locale], href: "/dsa-interview/talents" },
+        ]}
+      />
       <PillarBackLink />
       <SiteFooter />
     </>

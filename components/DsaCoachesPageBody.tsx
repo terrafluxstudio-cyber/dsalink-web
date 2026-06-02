@@ -1,13 +1,46 @@
 "use client";
 
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
+import { Compass, ExternalLink, School, Users } from "lucide-react";
 import { useMemo, useState } from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { PillarBackLink } from "@/components/PillarBackLink";
+import { RelatedCardsRow } from "@/components/RelatedCardsRow";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useLanguage } from "@/contexts/LanguageContext";
+
+type LocaleStr4 = { en: string; zh: string; ms: string; ta: string };
+const REL_COACH = {
+  kicker: { en: "Related reference", zh: "相关参考", ms: "Rujukan berkaitan", ta: "தொடர்புடைய குறிப்பு" },
+  heading: {
+    en: "Three references parents pair with the coach directory",
+    zh: "家长常与教练目录一起看的三个参考",
+    ms: "Tiga rujukan dengan direktori jurulatih",
+    ta: "பயிற்சியாளர் அட்டவணையுடன் மூன்று குறிப்புகள்",
+  },
+  c1Title: { en: "Talent-specific prep", zh: "分项目深度备战", ms: "Persediaan mengikut bakat", ta: "திறமை வாரியான தயாரிப்பு" },
+  c1Body: {
+    en: "Each talent — what coaches assess, where private coaching helps and where it doesn't.",
+    zh: "每项目教练评分维度 · 私教什么时候有用、什么时候不用花钱。",
+    ms: "Setiap bakat — apa jurulatih menilai.",
+    ta: "ஒவ்வொரு திறமைக்கும் — பயிற்சியாளர் என்ன மதிப்பிடுகிறார்.",
+  },
+  c2Title: { en: "Six family pathways", zh: "六条家庭路径", ms: "Enam laluan keluarga", ta: "ஆறு குடும்ப பாதைகள்" },
+  c2Body: {
+    en: "Real-world outcomes — when coaching tipped the balance, when it didn't.",
+    zh: "真实结果 · 教练何时改变了结局，何时没用。",
+    ms: "Hasil sebenar — bila bimbingan membuat perbezaan.",
+    ta: "உண்மையான முடிவுகள் — பயிற்சி எப்போது வேலை செய்தது.",
+  },
+  c3Title: { en: "147 schools", zh: "147 所学校", ms: "147 sekolah", ta: "147 பள்ளிகள்" },
+  c3Body: {
+    en: "Each school's CCA tradition — which talents have strong in-school coaching already.",
+    zh: "每校 CCA 传统 · 哪些才艺校内已有强教练。",
+    ms: "Tradisi CCA setiap sekolah.",
+    ta: "ஒவ்வொரு பள்ளியின் CCA பாரம்பரியம்.",
+  },
+} satisfies Record<string, LocaleStr4>;
 
 type TalentArea =
   | "music"
@@ -603,7 +636,10 @@ export function DsaCoachesPageBody() {
       <SiteHeader />
       <main className="border-t border-intellectual/5 bg-surface pb-16">
         <PageHeader
-          crumbLabel={t.navDsaCoaches}
+          crumbs={[
+            { label: t.navDsaGuide, href: "/dsa-guide" },
+            { label: t.navDsaCoaches },
+          ]}
           kicker={t.navExplore}
           title={t.dsaCoachesHeading}
           subtitle={t.dsaCoachesLead}
@@ -734,6 +770,15 @@ export function DsaCoachesPageBody() {
           </div>
         </section>
       </main>
+      <RelatedCardsRow
+        kicker={REL_COACH.kicker[locale]}
+        heading={REL_COACH.heading[locale]}
+        items={[
+          { icon: Compass, title: REL_COACH.c1Title[locale], body: REL_COACH.c1Body[locale], href: "/dsa-interview/talents" },
+          { icon: Users, title: REL_COACH.c2Title[locale], body: REL_COACH.c2Body[locale], href: "/dsa-experience" },
+          { icon: School, title: REL_COACH.c3Title[locale], body: REL_COACH.c3Body[locale], href: "/dsa-finder" },
+        ]}
+      />
       <PillarBackLink />
       <SiteFooter />
     </>

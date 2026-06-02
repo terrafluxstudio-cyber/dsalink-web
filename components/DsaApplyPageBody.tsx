@@ -2,12 +2,45 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { CheckCircle2, Circle } from "lucide-react";
+import { BookOpen, CalendarClock, CheckCircle2, Circle, MessageSquareText } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { PageHeader } from "@/components/PageHeader";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PillarBackLink } from "@/components/PillarBackLink";
+import { RelatedCardsRow } from "@/components/RelatedCardsRow";
 import { SiteFooter } from "@/components/SiteFooter";
+
+type LocaleStr4 = { en: string; zh: string; ms: string; ta: string };
+const REL_APPLY = {
+  kicker: { en: "Related reference", zh: "相关参考", ms: "Rujukan berkaitan", ta: "தொடர்புடைய குறிப்பு" },
+  heading: {
+    en: "Three more references parents open during the application window",
+    zh: "申请窗口期间家长常打开的三个参考",
+    ms: "Tiga rujukan tambahan semasa tetingkap permohonan",
+    ta: "விண்ணப்ப காலத்தில் மூன்று குறிப்புகள்",
+  },
+  c1Title: { en: "What DSA actually is", zh: "DSA 到底是什么", ms: "Apakah DSA sebenarnya", ta: "DSA உண்மையில் என்ன" },
+  c1Body: {
+    en: "Mechanism, eligibility, what DSA isn't — re-check before submitting.",
+    zh: "机制、资格、DSA 不是什么 · 提交前再核一遍。",
+    ms: "Mekanisme, kelayakan — semak sebelum hantar.",
+    ta: "முறை, தகுதி — சமர்ப்பிக்கும் முன் சரிபார்க்கவும்.",
+  },
+  c2Title: { en: "2026 timeline", zh: "2026 时间线", ms: "Garis masa 2026", ta: "2026 கால அட்டவணை" },
+  c2Body: {
+    en: "Application closes 6/2 4:30pm SGT — and what each later phase decides.",
+    zh: "申请截止 6/2 SGT 16:30 · 之后各阶段在决定什么。",
+    ms: "Permohonan tutup 6/2 4:30pm SGT.",
+    ta: "விண்ணப்பம் 6/2 4:30pm SGT-இல் முடிகிறது.",
+  },
+  c3Title: { en: "12 parent FAQs", zh: "12 个家长常见问题", ms: "12 FAQ ibu bapa", ta: "12 பெற்றோர் கேள்விகள்" },
+  c3Body: {
+    en: "Common application what-ifs — supporting docs, video uploads, 3-school strategy.",
+    zh: "申请中 what-if · 证明材料 · 视频上传 · 三校策略。",
+    ms: "Soalan what-if biasa semasa memohon.",
+    ta: "விண்ணப்ப காலத்தில் what-if கேள்விகள்.",
+  },
+} satisfies Record<string, LocaleStr4>;
 
 const STORAGE_KEY = "dsalink-apply-checks";
 
@@ -252,7 +285,10 @@ export function DsaApplyPageBody() {
       <SiteHeader />
       <main className="min-h-screen bg-surface">
         <PageHeader
-          crumbLabel={t.applyCrumbHome}
+          crumbs={[
+            { label: t.navDsaGuide, href: "/dsa-guide" },
+            { label: t.applyCrumbHome },
+          ]}
           kicker={t.applyPageKicker}
           title={t.applyPageH1}
           subtitle={t.applyPageLead}
@@ -469,6 +505,15 @@ export function DsaApplyPageBody() {
           </div>
         </div>
       </main>
+      <RelatedCardsRow
+        kicker={REL_APPLY.kicker[locale]}
+        heading={REL_APPLY.heading[locale]}
+        items={[
+          { icon: BookOpen, title: REL_APPLY.c1Title[locale], body: REL_APPLY.c1Body[locale], href: "/what-is-dsa" },
+          { icon: CalendarClock, title: REL_APPLY.c2Title[locale], body: REL_APPLY.c2Body[locale], href: "/timeline" },
+          { icon: MessageSquareText, title: REL_APPLY.c3Title[locale], body: REL_APPLY.c3Body[locale], href: "/faq" },
+        ]}
+      />
       <PillarBackLink />
       <SiteFooter />
     </>

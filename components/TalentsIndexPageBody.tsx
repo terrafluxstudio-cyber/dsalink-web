@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen, CalendarClock, School } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { PillarBackLink } from "@/components/PillarBackLink";
+import { RelatedCardsRow } from "@/components/RelatedCardsRow";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { getAllTalentPages } from "@/lib/talentPages";
@@ -77,6 +79,43 @@ const COPY = {
   } satisfies LocaleStr,
 };
 
+const BC_GUIDE: LocaleStr = { en: "DSA Guide", zh: "DSA 指南", ms: "Panduan DSA", ta: "DSA வழிகாட்டி" };
+const BC_HERE: LocaleStr = { en: "Talents", zh: "才艺方向", ms: "Bakat", ta: "திறமைகள்" };
+
+const REL_KICKER: LocaleStr = { en: "Related reference", zh: "相关参考", ms: "Rujukan berkaitan", ta: "தொடர்புடைய குறிப்பு" };
+const REL_HEADING: LocaleStr = {
+  en: "Three references parents pair with the talents index",
+  zh: "家长常与才艺索引一起看的三个参考",
+  ms: "Tiga rujukan yang ibu bapa pasangkan dengan indeks bakat",
+  ta: "திறமை அட்டவணையுடன் பார்க்கும் மூன்று குறிப்புகள்",
+};
+const R1_T: LocaleStr = { en: "2026 timeline", zh: "2026 时间线", ms: "Garis masa 2026", ta: "2026 கால அட்டவணை" };
+const R1_B: LocaleStr = {
+  en: "When the window opens, trial dates land, and offers become binding.",
+  zh: "申请窗口何时开 · trial 何时进行 · offer 何时具约束力。",
+  ms: "Bila tetingkap dibuka, tarikh trial, dan bila tawaran mengikat.",
+  ta: "காலம் திறக்கும்போது, சோதனை தேதிகள், சலுகை எப்போது கட்டுப்படுத்துகிறது.",
+};
+const R2_T: LocaleStr = {
+  en: "Interview prep overview",
+  zh: "面试准备总览",
+  ms: "Gambaran persediaan temu duga",
+  ta: "நேர்காணல் தயாரிப்பு கண்ணோட்டம்",
+};
+const R2_B: LocaleStr = {
+  en: "The 5-element self-intro, what panels score, common questions across all talents.",
+  zh: "5 要素自我介绍 · 评委评分维度 · 跨才艺通用题。",
+  ms: "Pengenalan diri 5-elemen, apa panel menilai, soalan biasa.",
+  ta: "5-உறுப்பு சுய அறிமுகம், குழு என்ன மதிப்பிடுகிறது.",
+};
+const R3_T: LocaleStr = { en: "147 schools", zh: "147 所学校", ms: "147 sekolah", ta: "147 பள்ளிகள்" };
+const R3_B: LocaleStr = {
+  en: "Filter by talent area, region, IP / non-IP — with PSLE COP signals.",
+  zh: "按才艺方向、区域、IP / 非 IP 筛选 · 含 PSLE COP 信号。",
+  ms: "Tapis mengikut bakat, kawasan, IP / bukan IP.",
+  ta: "திறமை, பகுதி, IP / non-IP மூலம் வடிகட்டவும்.",
+};
+
 export function TalentsIndexPageBody() {
   const { locale } = useLanguage();
   const talents = getAllTalentPages();
@@ -84,6 +123,12 @@ export function TalentsIndexPageBody() {
   return (
     <>
       <SiteHeader />
+      <Breadcrumb
+        items={[
+          { label: pick(BC_GUIDE, locale), href: "/dsa-guide" },
+          { label: pick(BC_HERE, locale) },
+        ]}
+      />
       <main className="bg-surface">
         <section className="bg-hero-mesh">
           <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
@@ -162,6 +207,15 @@ export function TalentsIndexPageBody() {
           </div>
         </section>
       </main>
+      <RelatedCardsRow
+        kicker={pick(REL_KICKER, locale)}
+        heading={pick(REL_HEADING, locale)}
+        items={[
+          { icon: CalendarClock, title: pick(R1_T, locale), body: pick(R1_B, locale), href: "/timeline" },
+          { icon: BookOpen, title: pick(R2_T, locale), body: pick(R2_B, locale), href: "/dsa-interview" },
+          { icon: School, title: pick(R3_T, locale), body: pick(R3_B, locale), href: "/dsa-finder" },
+        ]}
+      />
       <PillarBackLink />
       <SiteFooter />
     </>
