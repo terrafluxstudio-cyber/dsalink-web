@@ -782,6 +782,299 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       ms: "Panduan DSA-Sec renang Singapura — masa kelayakan, jangkaan trial, soalan, sekolah peserta.",
       ta: "சிங்கப்பூர் பெற்றோருக்கான நீச்சல் DSA-Sec வழிகாட்டி — தகுதி நேரங்கள், சோதனை, கேள்விகள், பள்ளிகள்.",
     },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Swimming DSA is unusual: the trial often matters less than the times the candidate has already swum at sanctioned meets. Most secondary schools draw from Singapore Swimming Association meet results (Age Group meets, NSG Primary Swimming Championships, and SNAG-sanctioned competitions) and use those times as the primary screening filter. Schools rarely publish cut-off times — what counts as competitive moves cycle to cycle and varies by event and stroke. A useful rule of thumb from public meet results: candidates with top-eight finishes at 13-and-under SSA-ranked meets, or top finishes at NSG Primary Championships, are within range for the strongest swim programmes. The trial then assesses race execution, stroke quality under fatigue, and what the candidate looks like when the clock isn't running. The interview, which most parents under-prepare for, often decides which of multiple qualified candidates gets the offer.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Sanctioned-meet times in your strongest events" },
+          body: {
+            en: "Schools want long-course (50m pool) times where possible — short-course (25m pool) times are accepted but discounted. Submit your child's best three events with full meet name, date, and time on the application; do not submit time-trial or training times, which are not weighted. If a stronger time is set after the application window closes, email the swim department secretary with the official meet result.",
+          },
+        },
+        {
+          label: { en: "Race execution under panel observation" },
+          body: {
+            en: "Trial usually includes a timed swim in the candidate's strongest event with the school coach watching. Panels score what they can see live but not from a results sheet: dive entry depth and streamline, underwater dolphin kicks off each wall, turn execution (specifically the touch-and-push for breaststroke/fly, and the flip for free/back), and the finish lunge. A swimmer with a slightly slower time but cleaner execution often outscores a faster swimmer with sloppy turns.",
+          },
+        },
+        {
+          label: { en: "Stroke quality under fatigue" },
+          body: {
+            en: "Schools want swimmers who hold technique when tired, because those are the swimmers who will improve through Sec 1-2 training volume increases. Trial coaches often add a second swim after a short rest specifically to see whether stroke length collapses, whether the catch shortens, and whether the kick rhythm breaks. The first swim shows what you have; the second shows what you are.",
+          },
+        },
+        {
+          label: { en: "Coachability and pool-deck behaviour" },
+          body: {
+            en: "How the candidate listens at the pool deck briefing, whether they thank the lane judge, whether they help with timing pads or kick boards without being asked. Singapore school swim coaches work with these children for four years — temperament weighs heavily. Parent forum reports consistently note that swimmers who help younger lanes during the trial pool warm-up read very well.",
+          },
+        },
+        {
+          label: { en: "Recovery between events" },
+          body: {
+            en: "If the trial includes multiple swims (often a 50m + 100m + 200m or a stroke + IM combination), coaches watch what the candidate does in the 5-10 minutes between — active swim down, water intake, stretching, or sitting and chatting. Recovery habits predict training resilience over a four-year programme and are easy to fake-it-til-you-make-it, so panels watch closely.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Sprint freestyle (50m / 100m)" },
+          body: {
+            en: "Schools running NSG-competitive sprint programmes value explosive starts and the first 15 metres above almost everything. Trial-day priorities: a powerful dive with a long streamline (held until natural deceleration, not cut short), 4-5 strong dolphin kicks before the first stroke, and a confident finish lunge into the wall. Sprinters who lift their head before the touch lose more time at this age than at any later level.",
+          },
+        },
+        {
+          position: { en: "Mid-distance / distance freestyle (200m–800m)" },
+          body: {
+            en: "Pacing and bilateral breathing read as professional. Coaches watch whether stroke rate stays even through the middle of the race or spikes in the last 50m (panic pace), and whether the swimmer breathes both sides cleanly. Schools with strong distance programmes also assess the open-turn or flip-turn cleanliness — distance swimmers do many turns, and even small inefficiencies compound.",
+          },
+        },
+        {
+          position: { en: "Backstroke" },
+          body: {
+            en: "Backstroke trials weight underwater dolphin kicks and the backstroke flag turn heavily — the visible technical work happens at the walls. Coaches watch body position (whether the hips stay up and the head stays still), and whether the swimmer can hold a straight line without veering into the lane rope. A clean backstroke flag turn (counting strokes from the flag to the wall) is a strong P6-level signal.",
+          },
+        },
+        {
+          position: { en: "Breaststroke" },
+          body: {
+            en: "The most technique-heavy stroke at P6 level. Coaches watch the timing of the kick, the streamline glide between strokes, and the pullout off each wall (one dolphin kick is now legal at all levels — many P6 swimmers still don't use it). Breaststrokers with strong glides outscore breaststrokers with high stroke rates, because the glide-rich stroke pattern is what survives the move to longer distances and faster fields.",
+          },
+        },
+        {
+          position: { en: "Butterfly and IM" },
+          body: {
+            en: "Butterfly: coaches watch whether the kick rhythm holds in the last 15 metres, when most P6 swimmers either slow or lose the two-kicks-per-stroke pattern. A clean fly finish reads as elite, even at slower times. IM (Individual Medley) is the event coaches use to assess versatility — the transitions between strokes, the legal turns (butterfly-to-back, back-to-breast, breast-to-free) are what panels score. Strong IM swimmers are valued as relay options and tend to be recruited even with slightly slower individual times.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "If your child specialises in only one stroke, name it explicitly in the application and lead with that event in the trial. Schools assemble relay teams from DSA cohorts — a specialist breaststroker is often as recruited as a faster all-rounder, because relay points at NSG are won at the margins.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love swimming?" },
+          subtext: {
+            en: "Panels want a specific moment, not a generic feeling. \"It clears my head\" reads as weak motivation.",
+          },
+          approach: {
+            en: "Open with one concrete race or training memory, then connect it to character.",
+          },
+          template: {
+            en: "At my first 13-and-under meet, I finished second in the 200 free by 0.4 seconds. The kid who beat me had a faster last 50. That night I decided I wanted to be the swimmer who closes races, not the one who fades. I've been working on negative splits ever since.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the swim programme, or is the application a scatter-shot?",
+          },
+          approach: {
+            en: "Cite one specific thing about the swim set-up — the coach, recent NSG results, training pattern, or facility.",
+          },
+          template: {
+            en: "I watched your B-Division 4x100m free relay at last year's NSG finals. The way your second leg held the lead under pressure is the kind of race I want to learn from. Your coach's emphasis on closing speed is also what I've been working on this year.",
+          },
+        },
+        {
+          question: { en: "What's your strongest event, and what are you working to improve?" },
+          subtext: {
+            en: "Tests self-awareness — can the swimmer name a real weakness and a real fix?",
+          },
+          approach: {
+            en: "Name the event, name the specific technical issue, and describe the drill or workout you use.",
+          },
+          template: {
+            en: "Strongest is 100m breaststroke — my underwater pullouts are clean and my timing holds in the last 25. I'm working on my backstroke flag-turn count; I currently take five strokes from the flag and I want to consistently take six so I time the flip without slowing.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you didn't reach a goal and how you responded." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → specific change you made → result. Schools want resilience, not perfection.",
+          },
+          template: {
+            en: "I missed my target 200 IM time at the second qualifier last year. My butterfly turn was the problem — I was breaking my streamline too early. I spent six weeks doing only butterfly-into-backstroke transition sets and dropped two seconds at the next meet.",
+          },
+        },
+        {
+          question: { en: "How do you handle a bad race?" },
+          subtext: {
+            en: "Race psychology at 12 predicts race psychology at 16. Schools fear swimmers who collapse after one bad swim.",
+          },
+          approach: {
+            en: "Describe a real protocol — what you do in the 30 minutes after a disappointing swim.",
+          },
+          template: {
+            en: "I do my swim down and then write down two specific things I'll change at the next meet — not feelings, just technique. I don't talk about the race with my parents until after the meet. The next event needs my head where the next race is.",
+          },
+        },
+        {
+          question: { en: "How will you manage academics with morning training?" },
+          subtext: {
+            en: "Schools fear DSA swimmers whose grades collapse by Sec 2 — morning training plus afternoon school is the typical pattern.",
+          },
+          approach: {
+            en: "Describe a real schedule, not promises about discipline.",
+          },
+          template: {
+            en: "I currently train 4:30-6:30am four mornings a week. I finish English and Math homework before training so my brain isn't tired afterwards. Bus ride to school is for review notes. I keep Friday evening light because Saturday morning practice is the hardest of the week.",
+          },
+        },
+        {
+          question: { en: "If two schools both offer you, how will you decide?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether the family has actually thought about fit.",
+          },
+          approach: {
+            en: "Don't dodge. Pick this school, justify with one specific reason — programme, coach, or fit.",
+          },
+          template: {
+            en: "Honestly, your school. Your morning training session pattern and the way your coach builds aerobic base before sprint work matches how I improve best. If the other school called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Singapore Sports School",
+          url: "https://www.sportsschool.edu.sg/admissions/the-direct-school-admission-process",
+          talentArea: { en: "Swimming, full DSA" },
+          context: {
+            en: "Pure sports school — swimming is one of the core academies. Trial process and application timing differ from the mainstream DSA-Sec timeline; check the school's website each cycle. Strongest pathway for swimmers targeting national-team selection alongside academic study.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/year-1-admission-exercises/year-1-direct-school-admission/",
+          talentArea: { en: "Swimming (Boys), IP" },
+          context: {
+            en: "Swimming is listed in RI's 2026 DSA talent areas. Consistent A-Division finalist programme; strong feed into Singapore national age-group squads. Expects times competitive at national-meet level alongside academic profile.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Swimming (Boys), IP" },
+          context: {
+            en: "Swimming is among HCI's DSA talent areas. Official position is that applicants without prior national-meet experience may still apply — the trial and interview carry more weight than meet history alone.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Swimming (Boys), IP" },
+          context: {
+            en: "Long-standing swim programme with NSG B-Division and A-Division success. ACS(I) runs DSA candidates with the existing competition squad during trial windows — programme depth is a useful signal.",
+          },
+        },
+        {
+          name: "Methodist Girls' School",
+          url: "https://www.mgs.sch.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Swimming (Girls), IP" },
+          context: {
+            en: "MGS swim is one of Singapore's strongest girls programmes with consistent NSG results across both B and A Division. Swim is a listed DSA-Sec talent area with structured trial and interview.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nyghs.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Swimming (Girls), IP" },
+          context: {
+            en: "Swimming is a listed DSA-Sec talent at NYGH. SAP designation — Higher Chinese or Chinese Language as Mother Tongue required. Strong pathway for girls who want a SAP school plus competitive swim training.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          url: "https://acsbr.moe.edu.sg/admissions/dsa-sec/",
+          talentArea: { en: "Swimming (Boys)" },
+          context: {
+            en: "Swimming is listed under ACS(BR)'s DSA-Sec talent areas. Consistent NSG B-Division participant; strong route for boys who prefer ACS culture without the IP track at ACS(I).",
+          },
+        },
+        {
+          name: "St Andrew's Secondary School",
+          url: "https://standrewssec.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Swimming (Boys)" },
+          context: {
+            en: "Long-standing swim programme — St Andrew's is consistently identified with NSG swim across both B and C Division. Listed in the school's DSA-Sec talent areas.",
+          },
+        },
+        {
+          name: "Cedar Girls' Secondary",
+          url: "https://www.cedargirlssec.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Swimming (Girls)" },
+          context: {
+            en: "Swimming is among Cedar Girls' listed DSA-Sec talent areas. Strong non-IP route for girls who want a competitive swim programme outside the MGS/NYGH/RGS cluster.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Swimming, DSA-Sec, IP" },
+          context: {
+            en: "Listed in Dunman High's 2026 DSA FAQ. Strong all-round sports programme with consistent NSG presence in swim. Higher Chinese or Chinese Language as Mother Tongue required.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Compile your child's three best sanctioned times with full meet name, date, and pool length (long-course vs short-course). Submit on the application with the official meet result PDF where possible. Do not submit training-set or time-trial times — those are not weighted and may be flagged as inflating the application.",
+            },
+            {
+              en: "Confirm your child's CCA records, NSG and SSA meet results, and any age-group accolades are accurate. MOE pulls CCA participation, school awards, and externally-validated competition results from the primary school directly into the DSA portal where the school has logged them. Email the primary school CCA teacher or year-head to confirm what's been entered.",
+            },
+            {
+              en: "Run a mock interview with a stranger as audience. Record on phone, watch the first 30 seconds back together. Flag any answer that ran over 30 seconds or used the word \"passionate.\" Swim families especially over-rely on race results in interview — verbal articulation about training process matters more.",
+            },
+            {
+              en: "Watch a recording of your child's best race together and pick one technical thing to work on. Not the time — the technique. Coming to the interview with a specific working-on item reads as professional. Coming with only race times reads as parent-driven.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop volume. Maintain stroke feel through short, sharp sets — 25s and 50s with full rest, not endurance work. Final-week volume rarely pays off and frequently leaves the swimmer flat for trial day. Most academies already taper for big meets; coordinate with your private coach if there is one.",
+            },
+            {
+              en: "Confirm logistics in writing. Trial time, venue (pool name and address), what to bring (swimwear, goggles, cap, water, snack, towel, hair tie), and whether parents can spectate. Email the swim coach's secretary if anything is ambiguous.",
+            },
+            {
+              en: "One race-pace set with strangers. Trial pools and competitors are unfamiliar; force that awkwardness early so it's gone by trial day. Local academy meets in the two weeks before are useful, but only if your child swims fresh — pulling out a tired race a week before the trial is a setback.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — a normal carb-led meal, nothing experimental. Low blood sugar at minute 60 of a multi-event trial is a self-inflicted handicap, and so is a stomach unsettled by an unfamiliar breakfast.",
+            },
+            {
+              en: "Bring two pairs of goggles. Goggles fail — leaks, snapped straps, wrong tint for the pool lighting. A backup pair sitting in the kit bag is a 30-cent fix for a trial-ending problem.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the swim coach if you meet them, leave. Over-involved parents are visible on a pool deck and the swimmer absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours. Race replays in a 12-year-old's head between trial and offer are corrosive.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no clear plan — there are still real moves. Cut new training intensity entirely; trust the fitness already in the body. Shorten the work to two things only: dive starts with held streamlines, and turn execution at race pace. Both are low-injury, high-signal, and reveal more about race readiness than any aerobic set could in the time available. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because the interview is the only part of the DSA-Sec swim selection where a few hours of focused work can still meaningfully change the outcome. Some families bring in a private coach for last-mile stroke refinement — a good one can fix a turn or stabilise a finish, but no coach produces, in three sessions, the conditioning of a year of training. Treat it as triage, not a fix.",
+      },
+    },
   },
   "track-field": {
     slug: "track-field",
