@@ -182,10 +182,10 @@ export function SiteHeader() {
     setStarSlot(computeStarSlot(new Date()));
   }, []);
 
-  // IA v3 (2026-06-01): 5-item permanent nav.
-  // DSA Basics ▾ │ Schools ▾ │ Application ▾ │ Interview & Trial ▾ │ Offer
+  // IA v3 (2026-06-02): 5-item permanent nav.
+  // DSA Basics ▾ │ Schools ▾ │ Application ▾ │ Interview & Trial ▾ │ Results
   // Coach moved into Interview & Trial dropdown. /dsa-guide + /after-apply
-  // retired (301 in next.config.ts). /what-is-dsa + /offer + /dsa-interview/talents new.
+  // retired (301). /offer renamed to /dsa-results (SEO — actual search term).
   const basicsLinks: readonly NavLink[] = [
     { href: "/what-is-dsa", label: t.navWhatIsDsa },
     { href: "/dsa-experience", label: t.navParentStories, gold: true },
@@ -276,8 +276,8 @@ export function SiteHeader() {
             starred={starSlot === "interview-trial"}
           />
           <NavLinkButton
-            href="/offer"
-            label={t.navOffer}
+            href="/dsa-results"
+            label={t.navResults}
             pathname={pathname}
           />
           <div className="ml-2">
@@ -407,16 +407,16 @@ export function SiteHeader() {
                 ))}
               </div>
 
-              {/* Offer */}
+              {/* Results */}
               <div className="mt-1 border-t border-white/10 pt-2">
                 <Link
-                  href="/offer"
+                  href="/dsa-results"
                   className={`block rounded-lg px-3 py-2 text-sm font-medium normal-case transition hover:bg-white/10 hover:text-white ${
-                    pathname === "/offer" ? "bg-white/10 text-white" : "text-white/75"
+                    pathname === "/dsa-results" ? "bg-white/10 text-white" : "text-white/75"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {t.navOffer}
+                  {t.navResults}
                 </Link>
               </div>
 

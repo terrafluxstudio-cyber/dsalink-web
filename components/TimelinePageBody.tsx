@@ -276,8 +276,8 @@ const PHASES: Phase[] = [
       ],
     },
     link: {
-      href: "/offer",
-      label: { en: "Offer & PSLE outcome", zh: "录取与 PSLE 结果", ms: "Tawaran & keputusan PSLE", ta: "சலுகை & PSLE முடிவு" },
+      href: "/dsa-results",
+      label: { en: "DSA results & PSLE outcome", zh: "DSA 结果与 PSLE 结果", ms: "Keputusan DSA & PSLE", ta: "DSA & PSLE முடிவுகள்" },
     },
   },
 ];

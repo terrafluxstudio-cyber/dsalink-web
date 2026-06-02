@@ -112,10 +112,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.83,
     },
     {
-      url: `${base}/offer`,
+      url: `${base}/dsa-results`,
       lastModified: now,
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.85,
     },
     ...talentEntries,
   ];

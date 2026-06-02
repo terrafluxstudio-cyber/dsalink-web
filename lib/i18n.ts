@@ -163,7 +163,7 @@ export type Copy = {
   navApplicationTimeline2026: string;
   navInterviewAndTrial: string;
   navByTalent: string;
-  navOffer: string;
+  navResults: string;
   ohMissedTakeawaysBtn: string;
   ohTakeawaysAbout: string;
   ohTakeawaysGoodFit: string;
@@ -578,7 +578,7 @@ export const copy: Record<Locale, Copy> = {
     navApplicationTimeline2026: "2026 Application Timeline",
     navInterviewAndTrial: "Interview & Trial",
     navByTalent: "By Talent",
-    navOffer: "Offer",
+    navResults: "Results",
     ohMissedTakeawaysBtn: "Missed it? Everything's here →",
     ohTakeawaysAbout: "About the School",
     ohTakeawaysGoodFit: "Good Fit For",
@@ -958,7 +958,7 @@ export const copy: Record<Locale, Copy> = {
     navApplicationTimeline2026: "2026 申请时间线",
     navInterviewAndTrial: "面试与试训",
     navByTalent: "按才艺分类",
-    navOffer: "录取通知",
+    navResults: "DSA 结果",
     ohMissedTakeawaysBtn: "错过了？情报全在这里 →",
     ohTakeawaysAbout: "学校简介",
     ohTakeawaysGoodFit: "适合这样的孩子",
@@ -1331,7 +1331,7 @@ export const copy: Record<Locale, Copy> = {
     navApplicationTimeline2026: "Garis Masa Permohonan 2026",
     navInterviewAndTrial: "Temuduga & Percubaan",
     navByTalent: "Mengikut Bakat",
-    navOffer: "Tawaran",
+    navResults: "Keputusan",
     ohMissedTakeawaysBtn: "Terlepas? Semua ada di sini →",
     ohTakeawaysAbout: "Tentang Sekolah",
     ohTakeawaysGoodFit: "Sesuai Untuk",
@@ -1728,7 +1728,7 @@ export const copy: Record<Locale, Copy> = {
     navApplicationTimeline2026: "2026 விண்ணப்ப கால அட்டவணை",
     navInterviewAndTrial: "நேர்காணல் & சோதனை",
     navByTalent: "திறமை வாரியாக",
-    navOffer: "சலுகை",
+    navResults: "முடிவுகள்",
     ohMissedTakeawaysBtn: "தவறவிட்டீர்களா? எல்லாம் இங்கே →",
     ohTakeawaysAbout: "பள்ளியைப் பற்றி",
     ohTakeawaysGoodFit: "பொருத்தமான மாணவர்",

@@ -49,6 +49,14 @@ const nextConfig: NextConfig = {
         destination: "/dsa-interview",
         permanent: true,
       },
+      // IA v3 (2026-06-02): /offer renamed to /dsa-results for SEO —
+      // "DSA results" is the actual search term parents use. The page now
+      // covers all 4 outcomes (Confirmed Offer, Waitlist, Counter-Offer, Unsuccessful).
+      {
+        source: "/offer",
+        destination: "/dsa-results",
+        permanent: true,
+      },
     ];
   },
 };
