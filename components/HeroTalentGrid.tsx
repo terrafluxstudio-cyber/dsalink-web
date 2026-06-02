@@ -4,7 +4,9 @@ import Link from "next/link";
 import {
   Activity,
   Calculator,
+  CircleDot,
   Cpu,
+  Crown,
   Drama,
   Footprints,
   Goal,
@@ -37,6 +39,7 @@ const TALENTS: ReadonlyArray<{
   { slug: "martial-arts", icon: Shield, label: { en: "Martial Arts", zh: "武术", ms: "Seni Bela Diri", ta: "தற்காப்பு கலைகள்" } },
   // ── High-volume DSA talents without dedicated pages → DSA Finder pre-filtered ──
   { slug: "squash", icon: Zap, label: { en: "Squash", zh: "壁球", ms: "Skuasy", ta: "ஸ்குவாஷ்" }, href: "/dsa-finder?q=squash" },
+  { slug: "hockey", icon: CircleDot, label: { en: "Hockey", zh: "曲棍球", ms: "Hoki", ta: "ஹாக்கி" }, href: "/dsa-finder?q=hockey" },
   // ── Performing Arts ────────────────────────────────────────────────
   { slug: "music", icon: Music2, label: { en: "Music", zh: "音乐", ms: "Muzik", ta: "இசை" } },
   { slug: "dance", icon: Activity, label: { en: "Dance", zh: "舞蹈", ms: "Tarian", ta: "நடனம்" }, href: "/dsa-finder?q=dance" },
@@ -48,6 +51,8 @@ const TALENTS: ReadonlyArray<{
   { slug: "math", icon: Calculator, label: { en: "Math & Sci", zh: "数理", ms: "Mat & Sains", ta: "கணிதம் & அறிவியல்" } },
   // ── Language ───────────────────────────────────────────────────────
   { slug: "chinese", icon: Languages, label: { en: "Chinese (CLE)", zh: "高级华文", ms: "Bahasa Cina", ta: "சீன மொழி" }, href: "/dsa-finder?q=chinese" },
+  // ── Leadership (Uniformed Groups · NCC/NPCC + Student Council) ─────
+  { slug: "leadership", icon: Crown, label: { en: "Leadership", zh: "领导力", ms: "Kepimpinan", ta: "தலைமைத்துவம்" }, href: "/dsa-finder?q=leadership" },
 ];
 
 const HEADING: LocaleStr = {
