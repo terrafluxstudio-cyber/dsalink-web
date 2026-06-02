@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { DSALINK_LOCALE_KEY } from "@/lib/constants";
 import { getGuideLocaleStrings, isLocale, type Locale } from "@/lib/i18n";
-import { ScoresEntryCard } from "@/components/HomeDynamic";
-import { TakeawaysEntryCard } from "@/components/TakeawaysEntryCard";
 import { HeroSection } from "@/components/HeroSection";
 import { HomeBlogEntry } from "@/components/HomeBlogEntry";
+import { HomeFeaturedEvergreen } from "@/components/HomeFeaturedEvergreen";
 import { HomeParentStoriesGrid } from "@/components/HomeParentStoriesGrid";
 import { HomePillarEntry } from "@/components/HomePillarEntry";
 import { HomeMainSlotCard } from "@/components/HomeMainSlotCard";
@@ -95,29 +94,7 @@ export default function HomePage() {
         <HomeNavCardsRow />
 
         {/* L6 · Featured Evergreen — Takeaways · PSLE COP (data anchors) */}
-        <section className="border-y border-champagne/20 bg-champagne-subtle py-14 sm:py-20">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="mb-8 max-w-2xl sm:mb-10">
-              <p className="mb-3 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-champagne-dark normal-case">
-                <span className="h-px w-6 bg-champagne-dark" aria-hidden />
-                Reference · Evergreen
-              </p>
-              <h2
-                style={{ textTransform: "none" }}
-                className="font-display text-[1.875rem] font-extrabold leading-[1.1] tracking-tight text-intellectual sm:text-[2.25rem]"
-              >
-                Two data sets parents bookmark.
-              </h2>
-              <p className="mt-3 text-[15px] leading-relaxed text-intellectual-muted">
-                Open-house takeaways (what each campus actually felt like) and 3-year PSLE COP history — the two anchors families return to from May through November.
-              </p>
-            </div>
-            <div className="grid gap-5 sm:grid-cols-2">
-              <TakeawaysEntryCard />
-              <ScoresEntryCard />
-            </div>
-          </div>
-        </section>
+        <HomeFeaturedEvergreen />
 
         {/* L7 · Blog — latest 3 time-sensitive posts (EN only) */}
         <HomeBlogEntry />

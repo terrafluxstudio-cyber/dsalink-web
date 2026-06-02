@@ -40,7 +40,7 @@ function StatItem({
         {val.toLocaleString()}
         {suffix}
       </span>
-      <span className="text-[0.8125rem] text-white/55">{label}</span>
+      <span className="text-[0.8125rem] text-white/75">{label}</span>
     </div>
   );
 }
