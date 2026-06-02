@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { PillarBackLink } from "@/components/PillarBackLink";
+import { SchoolLogo } from "@/components/SchoolLogo";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SubsectionAnchor } from "@/components/SubsectionAnchor";
@@ -267,28 +268,33 @@ function RichSchoolsSection({
               key={i}
               className="rounded-2xl border border-intellectual/12 bg-white p-5 shadow-soft sm:p-6"
             >
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <p className="font-display text-base font-semibold text-intellectual sm:text-lg">
-                  {s.name}
-                </p>
-                <p className="text-[0.75rem] font-medium text-champagne-dark">
-                  {pickFlex(s.talentArea, locale)}
-                </p>
+              <div className="flex items-start gap-4">
+                <SchoolLogo nameEn={s.name} size={44} />
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <p className="font-display text-base font-semibold text-intellectual sm:text-lg">
+                      {s.name}
+                    </p>
+                    <p className="text-[0.75rem] font-medium text-champagne-dark">
+                      {pickFlex(s.talentArea, locale)}
+                    </p>
+                  </div>
+                  <p className="mt-2 text-sm leading-relaxed text-intellectual-muted sm:text-[0.9375rem]">
+                    {pickFlex(s.context, locale)}
+                  </p>
+                  {s.url ? (
+                    <a
+                      href={s.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-1 text-[0.8125rem] font-semibold text-intellectual transition hover:text-intellectual-light"
+                    >
+                      Official page
+                      <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                    </a>
+                  ) : null}
+                </div>
               </div>
-              <p className="mt-2 text-sm leading-relaxed text-intellectual-muted sm:text-[0.9375rem]">
-                {pickFlex(s.context, locale)}
-              </p>
-              {s.url ? (
-                <a
-                  href={s.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-1 text-[0.8125rem] font-semibold text-intellectual transition hover:text-intellectual-light"
-                >
-                  Official page
-                  <ExternalLink className="h-3.5 w-3.5" aria-hidden />
-                </a>
-              ) : null}
             </li>
           ))}
         </ul>

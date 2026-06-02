@@ -4,6 +4,7 @@ import { School } from "lucide-react";
 import { useState } from "react";
 import { SCHOOL_LOGO_URLS } from "@/lib/school-logo-urls";
 import { SCHOOL_PROFILES } from "@/lib/school-profiles";
+import { resolveSchoolId } from "@/lib/school-id-resolver";
 
 const WEBSITE_BY_NAME = new Map<string, string>(
   SCHOOL_PROFILES.map((s) => [s.nameEn.toLowerCase(), s.officialWebsite]),
@@ -23,6 +24,9 @@ export function SchoolLogo({ schoolId, nameEn, officialWebsite, size = 36 }: Pro
   const [src, setSrc] = useState<string | null>(() => {
     // 1. Static MOE crest map (highest quality, always accurate)
     if (schoolId && SCHOOL_LOGO_URLS[schoolId]) return SCHOOL_LOGO_URLS[schoolId];
+    // 1b. Try to resolve schoolId from nameEn (handles variant spellings)
+    const resolvedId = resolveSchoolId(nameEn);
+    if (resolvedId && SCHOOL_LOGO_URLS[resolvedId]) return SCHOOL_LOGO_URLS[resolvedId];
     // 2. Google favicon from officialWebsite or name-matched site
     const site =
       officialWebsite ?? WEBSITE_BY_NAME.get(nameEn.toLowerCase()) ?? "";
@@ -56,7 +60,15 @@ export function SchoolLogo({ schoolId, nameEn, officialWebsite, size = 36 }: Pro
       className="shrink-0 rounded-lg border border-intellectual/10 object-contain p-0.5 bg-white"
       onError={() => {
         // MOE URL failed → try Google favicon
-        const site = officialWebsite ?? WEBSITE_BY_NAME.get(nameEn.toLowerCase()) ?? "";
+        const resolvedId = resolveSchoolId(nameEn);
+        const fallbackProfile = resolvedId
+          ? SCHOOL_PROFILES.find((p) => p.id === resolvedId)
+          : undefined;
+        const site =
+          officialWebsite ??
+          WEBSITE_BY_NAME.get(nameEn.toLowerCase()) ??
+          fallbackProfile?.officialWebsite ??
+          "";
         if (site && !src.includes("gstatic")) {
           setSrc(
             `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${encodeURIComponent(site)}&size=64`,
