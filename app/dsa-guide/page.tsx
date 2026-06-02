@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { DsaGuidePageBody } from "@/components/DsaGuidePageBody";
+import { FAQ_QA } from "@/lib/dsa-guide-faq";
+import { getSiteUrl } from "@/lib/seo";
 
 const PAGE_TITLE =
   "DSA Singapore Guide 2026 | Direct School Admission Complete Guide | DSALink";
@@ -46,6 +48,58 @@ export function generateMetadata(): Metadata {
   };
 }
 
+/**
+ * FAQPage JSON-LD — Google rich snippet eligibility.
+ * EN-only (canonical). The 12 Q&A mirror the on-page FAQ accordion.
+ */
+function FaqStructuredData() {
+  const base = getSiteUrl();
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${base}/dsa-guide#faq`,
+    mainEntity: FAQ_QA.map((item) => ({
+      "@type": "Question",
+      name: item.q.en,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a.en,
+      },
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+/** BreadcrumbList JSON-LD — Home > DSA Guide */
+function BreadcrumbStructuredData() {
+  const base = getSiteUrl();
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: base },
+      { "@type": "ListItem", position: 2, name: "DSA Guide", item: `${base}/dsa-guide` },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
 export default function DsaGuidePage() {
-  return <DsaGuidePageBody />;
+  return (
+    <>
+      <FaqStructuredData />
+      <BreadcrumbStructuredData />
+      <DsaGuidePageBody />
+    </>
+  );
 }

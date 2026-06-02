@@ -6,6 +6,7 @@ import { ScoresEntryCard } from "@/components/HomeDynamic";
 import { TakeawaysEntryCard } from "@/components/TakeawaysEntryCard";
 import { FeaturedGuidesSection } from "@/components/FeaturedGuidesSection";
 import { HeroSection } from "@/components/HeroSection";
+import { HomePillarEntry } from "@/components/HomePillarEntry";
 import { HomeMainSlotCard } from "@/components/HomeMainSlotCard";
 import { HomeNavCardsRow } from "@/components/HomeNavCardsRow";
 import { HomepageSubscribeBanner } from "@/components/HomepageSubscribeBanner";
@@ -76,6 +77,9 @@ export default function HomePage() {
       <main>
         {/* L1 · Hero — C2 reference framing */}
         <HeroSection />
+
+        {/* L1b · Pillar entry — link to /dsa-guide complete reference */}
+        <HomePillarEntry />
 
         {/* L2 · Current-period main slot — date-driven big card */}
         <HomeMainSlotCard />
