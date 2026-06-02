@@ -171,7 +171,6 @@ export function SiteHeader() {
   const { t } = useLanguage();
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [basicsMenuOpen, setBasicsMenuOpen] = useState(false);
   const [schoolsMenuOpen, setSchoolsMenuOpen] = useState(false);
   const [applicationMenuOpen, setApplicationMenuOpen] = useState(false);
   const [interviewMenuOpen, setInterviewMenuOpen] = useState(false);
@@ -182,14 +181,10 @@ export function SiteHeader() {
     setStarSlot(computeStarSlot(new Date()));
   }, []);
 
-  // IA v3 (2026-06-02): 5-item permanent nav.
-  // DSA Basics ▾ │ Schools ▾ │ Application ▾ │ Interview & Trial ▾ │ Results
-  // Coach moved into Interview & Trial dropdown. /dsa-guide + /after-apply
-  // retired (301). /offer renamed to /dsa-results (SEO — actual search term).
-  const basicsLinks: readonly NavLink[] = [
-    { href: "/what-is-dsa", label: t.navWhatIsDsa },
-    { href: "/dsa-experience", label: t.navParentStories, gold: true },
-  ];
+  // IA v3 (2026-06-02 commit 5): 5-item permanent nav, DSA Guide as single link.
+  // DSA Guide │ Schools ▾ │ Application ▾ │ Interview & Trial ▾ │ Results
+  // DSA Guide single link → /what-is-dsa (placeholder; will point to /dsa-guide Pillar
+  // when commit 6 ships). /dsa-experience moved out of nav, accessed via Pillar + footer.
 
   const schoolsLinks: readonly NavLink[] = [
     { href: "/dsa-finder", label: t.navTalentSearchCenter, highlight: true },
@@ -236,13 +231,9 @@ export function SiteHeader() {
           className="hidden min-w-0 shrink-0 flex-nowrap items-center justify-end gap-0.5 md:flex"
           aria-label={t.a11yNavPrimary}
         >
-          <NavDropdown
-            label={t.navDsaBasicsGroup}
-            isOpen={basicsMenuOpen}
-            onToggle={() => setBasicsMenuOpen((o) => !o)}
-            onClose={() => setBasicsMenuOpen(false)}
-            id="desktop-basics-menu"
-            links={basicsLinks}
+          <NavLinkButton
+            href="/what-is-dsa"
+            label={t.navDsaGuide}
             pathname={pathname}
           />
           <NavDropdown
@@ -308,26 +299,18 @@ export function SiteHeader() {
         >
           <nav className="mx-auto max-w-5xl px-4 py-3" aria-label={t.a11yNavMobilePrimary}>
             <div className="grid gap-0.5">
-              {/* DSA Basics */}
-              <p className="px-3 py-1 text-[10px] font-semibold normal-case text-white/45">
-                {t.navDsaBasicsGroup}
-              </p>
-              {basicsLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`block rounded-lg px-3 py-2 text-sm font-medium normal-case transition hover:bg-white/10 ${
-                    link.gold
-                      ? "text-champagne hover:text-champagne-light"
-                      : pathname === link.href
-                        ? "bg-white/10 text-white"
-                        : "text-white/75 hover:text-white"
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {/* DSA Guide (single link) */}
+              <Link
+                href="/what-is-dsa"
+                className={`block rounded-lg px-3 py-2 text-sm font-medium normal-case transition hover:bg-white/10 hover:text-white ${
+                  pathname === "/what-is-dsa" || pathname === "/dsa-guide"
+                    ? "bg-white/10 text-white"
+                    : "text-white/75"
+                }`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {t.navDsaGuide}
+              </Link>
 
               {/* Schools */}
               <div className="mt-1 border-t border-white/10 pt-2">

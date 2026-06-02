@@ -101,8 +101,6 @@ export type Copy = {
   openHouseStatusFinished: string;
   /** /dsa-guide — DSA-Sec application timeline */
   navFaq: string;
-  navDsaGuide: string;
-  navDsaExperience: string;
   featuredGuideKicker: string;
   featuredGuideTitle: string;
   featuredGuideCta: string;
@@ -137,7 +135,6 @@ export type Copy = {
   ohMissedCardCta: string;
   navOpenHouseDates: string;
   navOpenHouseMissed: string;
-  navDsaGuideGroup: string;
   navWhatIsDsa: string;
   navParentStories: string;
   navApplyGroup: string;
@@ -149,7 +146,7 @@ export type Copy = {
   navAllSchools: string;
   navPsleCutoffs: string;
   /** New nav (5-item permanent IA, 2026-05-31) */
-  navDsaBasicsGroup: string;
+  navDsaGuide: string;
   navSchoolsGroup: string;
   navApplication: string;
   navAfterApply: string;
@@ -524,8 +521,6 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusOngoing: "In progress",
     openHouseStatusFinished: "Ended",
     navFaq: "DSA Basics",
-    navDsaGuide: "DSA Guide",
-    navDsaExperience: "Parent Playbook",
     featuredGuideKicker: "Featured guide",
     featuredGuideTitle: "The DSA Parent Playbook — everything in one place",
     featuredGuideCta: "Read now",
@@ -555,7 +550,6 @@ export const copy: Record<Locale, Copy> = {
     ohMissedCardCta: "Read the takeaways",
     navOpenHouseDates: "Open House Dates",
     navOpenHouseMissed: "Missed an Open House?",
-    navDsaGuideGroup: "DSA Guide",
     navWhatIsDsa: "What is DSA?",
     navParentStories: "DSA Experience",
     navApplyGroup: "Interview Prep",
@@ -566,7 +560,7 @@ export const copy: Record<Locale, Copy> = {
     navSearchSchools: "Find Your Right School",
     navAllSchools: "147-School Directory",
     navPsleCutoffs: "PSLE Cut-offs · Past 3 Years",
-    navDsaBasicsGroup: "DSA Basics",
+    navDsaGuide: "DSA Guide",
     navSchoolsGroup: "Schools",
     navApplication: "Application",
     navAfterApply: "After You Apply",
@@ -904,8 +898,6 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusOngoing: "火热进行中",
     openHouseStatusFinished: "已结束",
     navFaq: "DSA 问答",
-    navDsaGuide: "DSA 指南",
-    navDsaExperience: "家长实战指南",
     featuredGuideKicker: "精选指南",
     featuredGuideTitle: "DSA 家长实战手册——全程攻略一册收录",
     featuredGuideCta: "立即阅读",
@@ -935,7 +927,6 @@ export const copy: Record<Locale, Copy> = {
     ohMissedCardCta: "查看情报整理",
     navOpenHouseDates: "开放日日期",
     navOpenHouseMissed: "错过了开放日？",
-    navDsaGuideGroup: "DSA 指南",
     navWhatIsDsa: "什么是 DSA？",
     navParentStories: "DSA 实战体验",
     navApplyGroup: "面试备考",
@@ -946,7 +937,7 @@ export const copy: Record<Locale, Copy> = {
     navSearchSchools: "找到你的理想学校",
     navAllSchools: "147所学校名录",
     navPsleCutoffs: "PSLE 录取分数线（近三年）",
-    navDsaBasicsGroup: "DSA 基础",
+    navDsaGuide: "DSA 完整指南",
     navSchoolsGroup: "学校",
     navApplication: "申请",
     navAfterApply: "申请之后",
@@ -1283,8 +1274,6 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusOngoing: "Sedang berlangsung",
     openHouseStatusFinished: "Tamat",
     navFaq: "Asas DSA",
-    navDsaGuide: "Panduan DSA",
-    navDsaExperience: "Panduan Ibu Bapa",
     featuredGuideKicker: "Panduan pilihan",
     featuredGuideTitle: "Buku Panduan DSA untuk Ibu Bapa — semua dalam satu tempat",
     featuredGuideCta: "Baca sekarang",
@@ -1308,7 +1297,6 @@ export const copy: Record<Locale, Copy> = {
     ohMissedCardCta: "Baca ringkasan",
     navOpenHouseDates: "Tarikh Hari Terbuka",
     navOpenHouseMissed: "Terlepas Hari Terbuka?",
-    navDsaGuideGroup: "Panduan DSA",
     navWhatIsDsa: "Apa itu DSA?",
     navParentStories: "Pengalaman DSA",
     navApplyGroup: "Persediaan Temuduga",
@@ -1319,7 +1307,7 @@ export const copy: Record<Locale, Copy> = {
     navSearchSchools: "Cari Sekolah Tepat Anda",
     navAllSchools: "Direktori 147 Sekolah",
     navPsleCutoffs: "PSLE Cut-offs · 3 Tahun Lepas",
-    navDsaBasicsGroup: "Asas DSA",
+    navDsaGuide: "Panduan DSA",
     navSchoolsGroup: "Sekolah",
     navApplication: "Permohonan",
     navAfterApply: "Selepas Memohon",
@@ -1674,8 +1662,6 @@ export const copy: Record<Locale, Copy> = {
     openHouseStatusOngoing: "நடைபெறுகிறது",
     openHouseStatusFinished: "முடிந்தது",
     navFaq: "DSA அடிப்படை",
-    navDsaGuide: "DSA வழிகாட்டி",
-    navDsaExperience: "பெற்றோர் வழிகாட்டி",
     featuredGuideKicker: "சிறப்பு வழிகாட்டி",
     featuredGuideTitle: "DSA பெற்றோர் கையேடு — அனைத்தும் ஒரே இடத்தில்",
     featuredGuideCta: "இப்போது படிக்கவும்",
@@ -1705,7 +1691,6 @@ export const copy: Record<Locale, Copy> = {
     ohMissedCardCta: "சுருக்கத்தைப் படிக்கவும்",
     navOpenHouseDates: "திறந்த நாள் தேதிகள்",
     navOpenHouseMissed: "திறந்த நாளை தவறவிட்டீர்களா?",
-    navDsaGuideGroup: "DSA வழிகாட்டி",
     navWhatIsDsa: "DSA என்றால் என்ன?",
     navParentStories: "DSA அனுபவம்",
     navApplyGroup: "நேர்காணல் தயாரிப்பு",
@@ -1716,7 +1701,7 @@ export const copy: Record<Locale, Copy> = {
     navSearchSchools: "உங்கள் சரியான பள்ளியை கண்டறியுங்கள்",
     navAllSchools: "147 பள்ளிகள் அட்டவணை",
     navPsleCutoffs: "PSLE Cut-offs · கடந்த 3 ஆண்டுகள்",
-    navDsaBasicsGroup: "DSA அடிப்படை",
+    navDsaGuide: "DSA வழிகாட்டி",
     navSchoolsGroup: "பள்ளிகள்",
     navApplication: "விண்ணப்பம்",
     navAfterApply: "விண்ணப்பித்த பிறகு",
