@@ -926,6 +926,305 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       ms: "Panduan DSA-Sec muzik — keperluan sekolah MEP, audition, soalan, realiti Gred 8 ABRSM.",
       ta: "இசை DSA-Sec வழிகாட்டி — MEP தேவைகள், ஆடிஷன், கேள்விகள், ABRSM கிரேடு 8.",
     },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Music DSA splits into two distinct tracks. The MEP (Music Elective Programme) route runs at five MOE-designated schools — ACS(I), Dunman High, Methodist Girls', Nanyang Girls', and Raffles Girls' — and uses a standardised audition built around two contrasting pieces, sight-reading, aural, and an interview. The non-MEP route runs at many more schools (RI, HCI, Catholic High, Nan Hua, SCGS and others) as a CCA-based DSA talent area — often with the school's symphonic band, Chinese orchestra, or choir. ABRSM Grade 8 practical is widely treated as the MEP benchmark by families, but MOE does not publish a formal grade requirement; non-MEP schools regularly accept Grade 5 to 6. What separates an offer from a polite rejection is rarely the certificate — it's how the candidate plays in the room, sight-reads cleanly, and articulates why music in five sentences of interview.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Technical command on the two contrasting pieces" },
+          body: {
+            en: "Both pieces should be from different periods or styles — Baroque + Romantic, or one fast and one lyrical. Panels listen for accuracy at tempo, articulation, dynamic control, and whether the candidate can shape a long phrase rather than just play through the notes. A confidently-played Grade 7 piece reads better than a struggling Grade 8 piece; choose a piece you can own, not one you're surviving.",
+          },
+        },
+        {
+          label: { en: "Musicality and interpretation" },
+          body: {
+            en: "What distinguishes a Grade 8 pass-with-distinction student from a future MEP candidate is interpretation — phrase shaping, rubato, the choice of when to take time and when to drive forward. Panels are looking for a player who has an idea about the piece, not just a player who has practised it. P6 candidates who can articulate one specific interpretive choice (\"I take more time at this cadence because the harmony resolves there\") stand out immediately.",
+          },
+        },
+        {
+          label: { en: "Sight-reading" },
+          body: {
+            en: "MEP auditions typically set sight-reading at around Grade 5 difficulty — a passage the candidate has 30 seconds to look over, then plays through. What panels watch is not whether every note is right, but whether the candidate keeps tempo, gets the rhythm, and recovers from a mistake without stopping. Stopping at the first wrong note is the most common P6 failure mode and is almost entirely a confidence issue, not a reading one.",
+          },
+        },
+        {
+          label: { en: "Aural skills" },
+          body: {
+            en: "Standard aural tests: clap back a rhythm, sing back a short melodic line, identify intervals, sometimes identify chord quality (major/minor/diminished). Aural is the most under-trained component because ABRSM practical exams test it too lightly — MEP schools weight it more heavily because aural ability predicts ensemble musicianship.",
+          },
+        },
+        {
+          label: { en: "Stage presence and composure" },
+          body: {
+            en: "How the candidate walks in, bows, settles at the instrument, and recovers from a slip. Panels remember the candidate who restarted a piece calmly more vividly than the one who played a flawless first half and crumbled. Confidence is taught — film a mock audition and watch the entrance and the first 15 seconds twice; that's where most marks are won or lost before a note is played.",
+          },
+        },
+        {
+          label: { en: "Verbal articulation about music" },
+          body: {
+            en: "The interview portion separates strong players from MEP-bound students. \"Who is your favourite composer?\" is not testing knowledge — it's testing whether the candidate can talk about music with specific vocabulary (phrase, voicing, articulation, harmonic colour) rather than generic emotion. A P6 who can describe what they hear, not just what they feel, is the candidate panels are hunting for.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Piano" },
+          body: {
+            en: "The most competitive instrument by a wide margin — panels hear dozens of strong pianists in every cycle. Repertoire choice matters: play a piece that shows polyphonic clarity (a Bach prelude and fugue, or a Mozart sonata movement) alongside a Romantic or 20th-century piece that shows colour and pedal control. Avoid pieces every other candidate plays this cycle (overplayed Chopin nocturnes, Für Elise variants). Sight-reading on piano is harder than on a single-line instrument — practice it daily for six months before the audition.",
+          },
+        },
+        {
+          position: { en: "Strings — violin, viola, cello" },
+          body: {
+            en: "Panels listen for intonation first (especially on the open-string-adjacent notes), then bow control, then vibrato consistency. A confident bow change and clean shifts read as professional. Choose contrasting pieces that show both lyrical line and technical agility — a slow movement from a sonata plus a faster Romantic miniature is a safe pairing. Tune carefully in front of the panel; an untuned A is a self-inflicted handicap.",
+          },
+        },
+        {
+          position: { en: "Woodwind and brass" },
+          body: {
+            en: "Tone production carries the most weight — panels can tell within the first phrase whether the embouchure and air column are developed. For wind players, the school's existing band balance also matters: a strong oboe or bassoon candidate is often more recruited than a fifth flute. If your child plays a less common wind instrument (oboe, bassoon, French horn, double bass), name it explicitly in the application — that information shapes which schools fast-track the file.",
+          },
+        },
+        {
+          position: { en: "Voice" },
+          body: {
+            en: "Voice auditions accept a wider age range of repertoire than instrumentalists — an Italian art song or a folk song in the candidate's heritage language both work. Panels listen for breath support, intonation across the range, and diction. Choosing a piece that suits the candidate's current range is critical — a piece that exposes a break in the voice undoes a strong P6 audition. Choral CCA experience helps but is not required.",
+          },
+        },
+        {
+          position: { en: "Chinese instruments" },
+          body: {
+            en: "Erhu, pipa, guzheng, dizi, yangqin, and sheng have a different audition culture — typically held at SAP schools with strong Chinese Orchestra programmes (Dunman High, Catholic High, Nan Hua, Singapore Chinese Girls'). Grading frameworks differ from ABRSM — most candidates use the Singapore Chinese Music Federation (新加坡华乐总会) or local conservatory grades. Audition emphasis tilts toward traditional repertoire, ornamentation, and ensemble readiness; the school's orchestra balance often drives which instruments are most actively recruited each cycle.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Percussion and harp auditions exist but are much rarer — contact target schools directly to confirm whether your instrument is auditioned in the current cycle. Composition portfolios are accepted at some MEP schools as a parallel route; if your child composes, ask whether a portfolio + interview substitutes for the standard performance audition.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love music?" },
+          subtext: {
+            en: "Panels want a specific moment or musical idea, not a feeling. \"It makes me happy\" reads as untrained motivation.",
+          },
+          approach: {
+            en: "Open with one concrete piece or performance memory, then connect it to a musical observation — not just emotion.",
+          },
+          template: {
+            en: "The first time I played a Bach prelude all the way through, I noticed three voices moving at once — and I realised piano isn't one line, it's a conversation. That's when I stopped practising to finish pieces and started practising to listen.",
+          },
+        },
+        {
+          question: { en: "Who is your favourite composer, and why?" },
+          subtext: {
+            en: "Tests whether the candidate can talk about music with specific vocabulary or only generic praise.",
+          },
+          approach: {
+            en: "Name one composer plus one specific musical reason — harmonic language, form, a particular work — not biography.",
+          },
+          template: {
+            en: "Debussy — because his harmony moves by colour rather than function. In Clair de Lune the chord changes don't feel like they're going anywhere, and that's the point. It taught me that not every phrase needs to resolve.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the music programme, or is the application a scatter-shot?",
+          },
+          approach: {
+            en: "Cite something specific — the MEP teacher's reputation, the orchestra's repertoire, a recent concert, the rehearsal pattern.",
+          },
+          template: {
+            en: "I went to your symphonic band's annual concert last September and the programme included a contemporary commission — that mix of standard repertoire and new music is what I want to study under. Most schools play safe; yours doesn't.",
+          },
+        },
+        {
+          question: { en: "Tell us about a piece you found difficult and how you worked through it." },
+          subtext: {
+            en: "Tests practice discipline and self-awareness, not just talent.",
+          },
+          approach: {
+            en: "Situation → specific technique you used → result. Name the exact bar or technique that was the obstacle.",
+          },
+          template: {
+            en: "The cross-hand passage in the third movement of my Mozart sonata kept tripping me up at tempo. I broke it down by practising hands separately at half tempo with a metronome, then layered the hands together one bar at a time. Two weeks of slow practice fixed what fast practice couldn't.",
+          },
+        },
+        {
+          question: { en: "What ensemble experience do you have?" },
+          subtext: {
+            en: "Music programmes need players who can listen and adjust, not just soloists.",
+          },
+          approach: {
+            en: "Name the ensemble, your role, and one specific thing you learned from playing with others.",
+          },
+          template: {
+            en: "I've played second violin in my primary school string ensemble for two years. The biggest lesson was that my intonation has to bend toward the first violin, not be technically correct — and that I have to listen to the cello to know when to lean into a phrase.",
+          },
+        },
+        {
+          question: { en: "How will you manage practice with secondary school workload?" },
+          subtext: {
+            en: "Schools fear DSA-Music kids whose grades collapse by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real practice schedule and how you'll protect academic time.",
+          },
+          template: {
+            en: "I practise 90 minutes on weekdays — 30 minutes scales and sight-reading before school, 60 minutes repertoire after dinner. Weekends I do two hours. I finish homework on the bus and in the period right after school, so practice doesn't compete with assignments.",
+          },
+        },
+        {
+          question: { en: "If two MEP schools both offer you, how will you decide?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether the candidate has actually thought about fit.",
+          },
+          approach: {
+            en: "Don't dodge. Pick this school, justify with one specific reason about programme or teacher fit.",
+          },
+          template: {
+            en: "Honestly, your school. Your MEP teacher's emphasis on chamber music is what I want — I've spent most of my P6 year playing solo, and the next four years I want to play with others. If the other school called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Music — MEP (Boys), IP" },
+          context: {
+            en: "One of five MOE-designated MEP-Sec schools and the only all-boys MEP school. ACS(I) runs symphonic band, string ensemble, and choir at competition level. MEP application is in addition to the school's standard DSA-Sec process — check the school's website for instrument-specific audition slots each cycle.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Music — MEP, IP" },
+          context: {
+            en: "Listed as one of MOE's MEP-Sec schools. SAP heritage makes Dunman High particularly strong for Chinese instruments (erhu, pipa, dizi, yangqin) alongside Western repertoire. Higher Chinese or Chinese Language as Mother Tongue required.",
+          },
+        },
+        {
+          name: "Methodist Girls' School",
+          url: "https://www.mgs.sch.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Music — MEP (Girls), IP" },
+          context: {
+            en: "MEP-Sec school with one of Singapore's longest-running school choir traditions plus strong instrumental programmes. Strong fit for voice and string candidates; piano competition is intense given the school's pianist depth.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nyghs.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Music — MEP (Girls), IP" },
+          context: {
+            en: "MEP-Sec school with SAP designation — exceptionally strong Chinese Orchestra (regularly named at SYF Arts Presentation with Distinction) alongside Western symphonic band. Higher Chinese or Chinese Language as Mother Tongue required.",
+          },
+        },
+        {
+          name: "Raffles Girls' School",
+          url: "https://www.rgs.edu.sg/admissions/direct-school-admission",
+          talentArea: { en: "Music — MEP (Girls), IP" },
+          context: {
+            en: "MEP-Sec school with the strongest academic profile of the MEP cluster. RGS expects MEP candidates to combine technical depth with verbal articulacy at the interview — the academic and musical filters are tightly coupled.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/year-1-admission-exercises/year-1-direct-school-admission/",
+          talentArea: { en: "Music — DSA (non-MEP at Sec), IP" },
+          context: {
+            en: "Does not run MEP at Sec but offers DSA-Sec Music for symphonic band, Chinese orchestra, choir, and string ensemble. RI's MEP track opens at JC (Higher Music available). For boys without an MEP option at Sec, RI plus the JC Higher MEP route is the established pathway.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Music — DSA (non-MEP at Sec), IP" },
+          context: {
+            en: "HCI's Chinese Orchestra is among Singapore's most decorated school ensembles; the symphonic band and string ensemble are also at competition level. DSA-Music applicants are auditioned through the relevant ensemble. Like RI, HCI's MEP pathway opens at JC.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/admissions/direct-school-admission",
+          talentArea: { en: "Music — DSA-Sec (Boys)" },
+          context: {
+            en: "SAP school with a long-standing Chinese Orchestra tradition and active symphonic band. Strong route for Chinese-instrument candidates outside the MEP cluster. Higher Chinese or Chinese Language as Mother Tongue required.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          url: "https://www.nanhuahigh.moe.edu.sg/announcements/talent-areas-for-dsa/",
+          talentArea: { en: "Music — DSA-Sec" },
+          context: {
+            en: "SAP school with a Chinese Orchestra that has reached SYF Distinction repeatedly. DSA-Music is listed as a talent area, with stronger weighting on Chinese-instrument candidates. Higher Chinese or Chinese Language requirement applies.",
+          },
+        },
+        {
+          name: "Singapore Chinese Girls' School",
+          url: "https://www.scgs.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Music — DSA-Sec (Girls)" },
+          context: {
+            en: "Strong music CCA culture with both Western and Chinese ensembles. DSA-Sec accepts a range of instruments; SCGS is a quieter alternative to the MEP cluster for girls who prefer a smaller cohort.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the audition is still weeks out" },
+          items: [
+            {
+              en: "Pick the two contrasting pieces with your teacher and lock them in eight weeks before the audition. Do not change pieces in the final month — even a stronger piece you haven't lived with is riskier than a slightly easier piece you've internalised.",
+            },
+            {
+              en: "Confirm your child's CCA records, ABRSM grades, and any performance certificates are accurate. MOE pulls CCA participation, school awards, and externally-validated certificates (where the primary school has logged them) directly into the DSA portal. Email a clean PDF of each ABRSM certificate to the primary school CCA teacher or year-head so the records are complete.",
+            },
+            {
+              en: "Run a mock audition with a stranger as audience. Record from the same angle the panel would see. Watch the first 15 seconds back together — the bow, the walk to the instrument, and the breath before the first note are where composure marks are awarded and lost.",
+            },
+            {
+              en: "Practise sight-reading daily for 10 minutes minimum. Sight-reading is the most under-trained component for piano candidates especially. Use ABRSM Grade 5 sight-reading books; aim for clean tempo and rhythm, not perfect pitches.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to maintenance practice: scales, the two pieces at performance tempo once a day, sight-reading. No new repertoire, no extra lessons. Final-week practice is about preserving freshness, not gaining ground.",
+            },
+            {
+              en: "Confirm logistics in writing. Audition time, venue, whether the school provides a piano (and if so, ask what make — adjusting to an unfamiliar action is real), whether you can warm up before. Email the music department secretary if anything is ambiguous.",
+            },
+            {
+              en: "Listen to a recording of each piece by a professional musician once. Not as a model to imitate, but to remind your child of the larger shape of the piece. Then put the recording away — the audition is your child's interpretation, not a copy.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of audition" },
+          items: [
+            {
+              en: "Eat 90 minutes before — a real meal, not a snack. Low blood sugar destroys fine motor control more than nerves do.",
+            },
+            {
+              en: "Warm up at home before leaving. The school may offer a warm-up room but the wait can be long; arriving warmed-up means the first phrases at the audition are not the first phrases of the day.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the music staff if you meet them, leave. Over-involved parents are visible in a small department and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the panel said?\" Anything else waits 24 hours. Audition replays in a 12-year-old's head are corrosive.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, audition coming up, no clear plan — there are still moves. Cut new repertoire entirely; play what's most secure even if it's a grade lower than the brochure suggests. A confident Grade 6 piece outscores a survival-mode Grade 8 piece every time. Spend the freed practice time on sight-reading and aural — the two components where focused daily work over three weeks can meaningfully move the needle, and the two components that most P6 candidates neglect. Spend an hour on interview prep using the questions above; verbal articulation about music is the most coachable part of the audition, and the part where strong panels make their final decision. Some families bring in a coach or private teacher for last-mile audition prep — a good one can stabilise nerves and refine the opening 15 seconds of each piece, but no coach produces, in three sessions, a musical voice that takes years to form. Treat it as triage, not a fix.",
+      },
+    },
   },
   math: {
     slug: "math",
