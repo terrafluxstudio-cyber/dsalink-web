@@ -4,23 +4,22 @@ import Link from "next/link";
 import { ArrowRight, CalendarDays, Compass, School } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getCyclePhase } from "@/lib/dsa-cycle";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 type SlotKey = "application" | "after-apply" | "schools";
 
-/**
- * Singapore time period → main slot.
- *   May 5 – Jun 2     → Application
- *   Jun 3 – Nov 30    → After You Apply
- *   Dec 1 – May 4     → Schools
- */
+/** Map the shared cycle phase → this component's local slot enum. */
 function computeSlot(now: Date): SlotKey {
-  const sg = new Date(now.getTime() + 8 * 60 * 60 * 1000);
-  const month = sg.getUTCMonth() + 1;
-  const day = sg.getUTCDate();
-  if ((month === 5 && day >= 5) || (month === 6 && day <= 2)) return "application";
-  if ((month === 6 && day >= 3) || (month > 6 && month <= 11)) return "after-apply";
-  return "schools";
+  switch (getCyclePhase(now)) {
+    case "application":
+      return "application";
+    case "interview-trial":
+      return "after-apply";
+    case "schools-research":
+    default:
+      return "schools";
+  }
 }
 
 const SLOTS: Record<

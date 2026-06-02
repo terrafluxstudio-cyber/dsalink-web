@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SchoolFinderModal } from "@/components/SchoolFinderModal";
+import { getCyclePhase } from "@/lib/dsa-cycle";
 
 // Same grain tile used in SchoolFinderModal — consistent material language.
 const GRAIN_BG =
@@ -14,17 +15,12 @@ type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 type Mode = "apply" | "after-apply";
 
 /**
- * Mode rule (matches HomeMainSlotCard slot rule):
- *   May 5 – Jun 2     → apply       (push Finder → shortlist)
- *   Jun 3 – Nov 30    → after-apply (push interview prep)
- *   Dec 1 – May 4     → apply       (Finder still primary — research mode)
+ * Apply mode covers BOTH the open window AND the off-season research phase
+ * (Finder is still the primary action when DSA isn't currently being filled).
+ * Only the live interview-trial window switches to after-apply.
  */
 function computeMode(now: Date): Mode {
-  const sg = new Date(now.getTime() + 8 * 60 * 60 * 1000);
-  const month = sg.getUTCMonth() + 1;
-  const day = sg.getUTCDate();
-  if ((month === 6 && day >= 3) || (month > 6 && month <= 11)) return "after-apply";
-  return "apply";
+  return getCyclePhase(now) === "interview-trial" ? "after-apply" : "apply";
 }
 
 const AFTER_KICKER: LocaleStr = {

@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getCyclePhase } from "@/lib/dsa-cycle";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 type CardKey = "basics" | "schools" | "application" | "after-apply" | "coach";
@@ -97,12 +98,15 @@ const CARDS: Record<CardKey, QuickCard> = {
  */
 type MainSlot = "application" | "after-apply" | "schools";
 function computeMain(now: Date): MainSlot {
-  const sg = new Date(now.getTime() + 8 * 60 * 60 * 1000);
-  const month = sg.getUTCMonth() + 1;
-  const day = sg.getUTCDate();
-  if ((month === 5 && day >= 5) || (month === 6 && day <= 2)) return "application";
-  if ((month === 6 && day >= 3) || (month > 6 && month <= 11)) return "after-apply";
-  return "schools";
+  switch (getCyclePhase(now)) {
+    case "application":
+      return "application";
+    case "interview-trial":
+      return "after-apply";
+    case "schools-research":
+    default:
+      return "schools";
+  }
 }
 
 function pick(s: LocaleStr, locale: "en" | "zh" | "ms" | "ta"): string {

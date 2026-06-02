@@ -6,6 +6,7 @@ import { Fragment, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getCyclePhase } from "@/lib/dsa-cycle";
 
 type NavLink = {
   href: string;
@@ -18,33 +19,21 @@ type NavLink = {
 };
 
 /**
- * Star slot rules (Singapore time, annual cycle):
- *   May 5 – Jun 2     → Application (apply window)
- *   Jun 3 – Nov 30    → Interview & Trial (post-submission to S1 posting)
- *   Dec 1 – May 4     → Schools (next-year research phase)
- *
- * Returns null on first server render to avoid hydration mismatch;
- * a client useEffect fills it in.
+ * Star slot driven by the shared cycle phase. Returns null on first server
+ * render to avoid hydration mismatch — a client useEffect fills it in.
  */
 type StarSlot = "application" | "interview-trial" | "schools" | null;
 
 function computeStarSlot(now: Date): Exclude<StarSlot, null> {
-  // Use Singapore time (UTC+8) by reading UTC date and shifting.
-  const sgMs = now.getTime() + 8 * 60 * 60 * 1000;
-  const sg = new Date(sgMs);
-  const month = sg.getUTCMonth() + 1; // 1-12
-  const day = sg.getUTCDate();
-
-  // May 5 – Jun 2
-  if ((month === 5 && day >= 5) || (month === 6 && day <= 2)) {
-    return "application";
+  switch (getCyclePhase(now)) {
+    case "application":
+      return "application";
+    case "interview-trial":
+      return "interview-trial";
+    case "schools-research":
+    default:
+      return "schools";
   }
-  // Jun 3 – Nov 30
-  if ((month === 6 && day >= 3) || (month > 6 && month <= 11)) {
-    return "interview-trial";
-  }
-  // Dec 1 – May 4 (default)
-  return "schools";
 }
 
 function StarSticker() {
