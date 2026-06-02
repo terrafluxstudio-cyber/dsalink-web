@@ -73,7 +73,7 @@ export function HeroTalentGrid() {
   const { locale } = useLanguage();
 
   return (
-    <div className="hidden lg:flex lg:flex-col lg:gap-3.5">
+    <div className="hidden lg:flex lg:flex-col lg:gap-3.5 lg:self-end">
       <p className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-slate-500 normal-case">
         <span className="h-px w-6 bg-slate-300" aria-hidden />
         {HEADING[locale]}
