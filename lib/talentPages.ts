@@ -1554,6 +1554,299 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       ms: "Panduan DSA-Sec matematik — SMOPS, NMOS, AMC, ujian pemilihan, soalan, sekolah GEP/IP.",
       ta: "கணித DSA-Sec வழிகாட்டி — SMOPS, NMOS, AMC, தேர்வு, கேள்விகள், GEP/IP பள்ளிகள்.",
     },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Math DSA at Singapore secondary schools runs differently from sports — there is no physical trial, but almost every participating school runs a selection test. The selection test is a 1.5 to 2 hour problem-solving paper, usually 10 to 15 non-routine questions calibrated above the PSLE Math level — closer in style to SMOPS Round 2 or NMOS than to the school's regular math syllabus. Competition awards (SMOPS, NMOS, AMC 8, RIPMWC) open the door — a Silver or Gold from any of the major contests is the most reliable signal that an application will be read carefully — but the offer is decided by the selection test plus a short interview in which the candidate is asked to think out loud about a problem. The strongest STEM schools (NUS High, RI, HCI) read the selection test paper closely; competition pedigree alone does not produce an offer if the test paper shows brittle reasoning.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Selection-test mathematical reasoning" },
+          body: {
+            en: "The selection paper is where most offers are made or lost. Problems are deliberately non-routine: number theory, combinatorics, invariants, and geometry that does not yield to standard PSLE methods. Schools want to see candidates who recognise problem patterns (\"this is a pigeonhole argument\", \"this is invariant under a colouring\"), not candidates who attempt every problem with brute computation. Working shown matters — most papers credit partial reasoning even on unfinished problems.",
+          },
+        },
+        {
+          label: { en: "Time discipline under pressure" },
+          body: {
+            en: "10-15 questions in 90-120 minutes means roughly 7-9 minutes per question. Strong candidates do not solve problems in order — they scan the paper, lock in the problems they can solve cleanly, and ration time. The most common failure mode at P6 level is spending 45 minutes on Question 4 (which the candidate cannot solve) while Questions 9 and 12 (which they could solve) go untouched. Time triage is itself a tested skill.",
+          },
+        },
+        {
+          label: { en: "Communication of solutions" },
+          body: {
+            en: "Several schools — NUS High most clearly — set at least one problem requiring a written explanation rather than a numerical answer alone. Schools want candidates who can articulate why a step works, not just produce the right number. \"Because the sum of digits is divisible by 9, so is the original number\" is a complete sentence with mathematical content; a circled answer with no working is not. Practice writing solutions in full sentences, not just steps.",
+          },
+        },
+        {
+          label: { en: "Verbal reasoning at interview" },
+          body: {
+            en: "The interview often centres on a problem the panel hands the candidate cold — sometimes a problem the candidate has already solved on the selection paper, sometimes a new one. Panels watch how the candidate begins: do they restate the problem in their own words? Do they ask clarifying questions? Do they try a small case before generalising? Schools care more about the thinking process than about reaching the answer in five minutes.",
+          },
+        },
+        {
+          label: { en: "Composure when stuck" },
+          body: {
+            en: "Panels deliberately set problems the candidate may not finish in the interview slot. What they watch is the response to being stuck — does the candidate freeze, blame the problem, or shift strategy? Strong candidates verbalise their dead end (\"this approach is stalling because X\") and propose an alternative. Saying \"I don't know\" with curiosity rather than panic is a strong signal at P6 level.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Number theory" },
+          body: {
+            en: "The most heavily tested area at P6 selection-test level. Divisibility rules, modular arithmetic at the level of remainders and Chinese remainder ideas (without the formal theorem), gcd and lcm, prime factorisation, and parity arguments. Past SMOPS and NMOS papers are the best preparation source. A candidate who can comfortably manipulate \"divisible by 9\", \"remainder when divided by 7\", and \"how many factors does N have\" arguments is at the right baseline for the strongest schools.",
+          },
+        },
+        {
+          position: { en: "Combinatorics and counting" },
+          body: {
+            en: "Counting without listing, casework, complementary counting, simple bijections, and pigeonhole arguments. The pigeonhole principle is the single highest-frequency technique on Singapore P6 olympiad-style papers — practise problems explicitly framed as pigeonhole until the candidate spots them in the first 30 seconds. Many schools set at least one combinatorics problem requiring a clear case split with no missed cases.",
+          },
+        },
+        {
+          position: { en: "Geometry — synthetic and visual" },
+          body: {
+            en: "Selection-test geometry rewards candidates who draw diagrams cleanly and label them aggressively. Standard topics: areas of triangles and trapezoids, similar triangles, angle chasing, and a few problems that turn on coordinates or a clever auxiliary line. Singapore-style P6 olympiad geometry rarely uses formal trigonometry or coordinate geometry beyond Cartesian basics — strong synthetic reasoning beats memorised formulae.",
+          },
+        },
+        {
+          position: { en: "Algebra — manipulation and substitution" },
+          body: {
+            en: "At P6 level, schools expect facility with linear equations, simple Diophantine substitutions, and algebraic identities (squares, cubes, factorisations of x² - y², x³ + y³). Word problems modelled with one or two variables are common. NUS High and the IP schools set occasional problems involving inequalities or simple recursions — exposure to these in NMOS and AMC 8 papers is the cheapest preparation.",
+          },
+        },
+        {
+          position: { en: "Logic and invariants" },
+          body: {
+            en: "A small but high-discrimination category. Invariant arguments (\"colour the squares like a chequerboard\", \"the parity of the sum doesn't change\"), monovariants, and extremal-principle problems separate strong candidates from very strong candidates. Schools running selection-test analytics report that a clean invariant solution is one of the most reliable signals of a future Math Olympiad team member.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Specialist tracks like cryptography, applied computing, or research projects exist at NUS High and at the IP schools' research mentorship programmes but are typically accessed after Sec 1 rather than at DSA-Sec admission. Lead the application with classical olympiad mathematics; specialist interest is supporting context, not the main credential.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love math?" },
+          subtext: {
+            en: "Panels want a specific mathematical experience, not a feeling. \"It's logical\" reads as untrained motivation.",
+          },
+          approach: {
+            en: "Open with one concrete problem or idea you found beautiful, then connect it to how you think.",
+          },
+          template: {
+            en: "The first time I proved that there are infinitely many primes, I realised math isn't about getting answers — it's about being certain something is true forever. That contrast with school math, where you check answers against a key, changed how I work on problems.",
+          },
+        },
+        {
+          question: { en: "Show me a problem you've worked on recently — walk me through your solution." },
+          subtext: {
+            en: "The interview's most common opening question at the strongest schools. Tests whether the candidate can explain reasoning to another person.",
+          },
+          approach: {
+            en: "Pick a problem you've genuinely solved (from SMOPS, NMOS, a past paper) — not a problem you've memorised. Walk through the key insight, the case split or technique, and what made it click.",
+          },
+          template: {
+            en: "A problem from last year's SMOPS Round 2 — six dots on a circle, count the triangles whose interior contains the centre. I tried small cases first (4 dots, then 5) and noticed the answer was related to how many ways to pick three dots that don't all lie on the same semicircle. The insight was the complementary count.",
+          },
+        },
+        {
+          question: { en: "Here's a problem I'd like you to try — think out loud as you go." },
+          subtext: {
+            en: "The thinking-out-loud question. Panels score the process, not the answer.",
+          },
+          approach: {
+            en: "Restate the problem in your own words. Try a small case. Name your strategy out loud (\"let me try parity\"). If stuck, say so and propose an alternative. Do not stay silent.",
+          },
+          template: {
+            en: "Let me make sure I have it right — you want the smallest N such that... Okay. Let me try N = 5 first — that gives... So 5 doesn't work because... Let me try parity — the sum of an odd count of odd numbers is odd...",
+          },
+        },
+        {
+          question: { en: "Tell me about a problem you couldn't solve." },
+          subtext: {
+            en: "Tests honesty and resilience. Schools fear candidates who present a polished image of always being right.",
+          },
+          approach: {
+            en: "Name a real problem, the approaches you tried, why they failed, and what you learned from being stuck.",
+          },
+          template: {
+            en: "A problem from RIPMWC 2024 — I had a counting argument that gave the wrong answer because I was double-counting one configuration. I couldn't see the double-count for a week. When my teacher pointed it out, I realised I'd skipped the small-case sanity check. Now I always check N = 1 and N = 2 against my formula before I trust it.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the math programme, or is this a scatter-shot application?",
+          },
+          approach: {
+            en: "Cite something specific about the school's math culture — a teacher, an olympiad team result, a research mentorship, a specific course in the senior years.",
+          },
+          template: {
+            en: "Your school sends students to the SMO Senior Round annually and has the strongest IMO Singapore selection record over the past decade. The way your math department runs the olympiad training as a regular CCA, not an extracurricular, is what I want from Sec 1 onwards.",
+          },
+        },
+        {
+          question: { en: "How will you balance math training with the rest of the curriculum?" },
+          subtext: {
+            en: "Schools fear DSA-Math kids whose grades elsewhere collapse — and especially fear narrow specialists.",
+          },
+          approach: {
+            en: "Describe a real schedule and name interests outside math.",
+          },
+          template: {
+            en: "I do olympiad problems for an hour on weekday evenings after homework and longer sessions on weekends. I also read history — outside math, that's my favourite subject — and play badminton on Saturdays. Math is my main thing but it's not my only thing.",
+          },
+        },
+        {
+          question: { en: "If two schools both offer you, how will you decide?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether the family has actually thought about fit.",
+          },
+          approach: {
+            en: "Don't dodge. Pick this school, justify with one specific reason about programme or teacher fit.",
+          },
+          template: {
+            en: "Honestly, your school. The way your school structures the IP curriculum's research track from Year 3 means I can move toward research mathematics earlier than at the other school. If the other school called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "NUS High School of Math and Science",
+          url: "https://www.nushigh.edu.sg/admissions/",
+          talentArea: { en: "Math, full DSA — independent admissions" },
+          context: {
+            en: "Singapore's flagship STEM secondary school. NUS High runs its own admission process distinct from mainstream DSA-Sec (different timeline, different application portal). The selection test is widely regarded as the most demanding of any Singapore secondary school's math screening — problem-solving and proof-style questions calibrated above SMOPS Round 2 level. Strongest pathway for candidates targeting research mathematics or IMO selection.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/year-1-admission-exercises/year-1-direct-school-admission/",
+          talentArea: { en: "Math (Boys), IP" },
+          context: {
+            en: "Math is listed in RI's 2026 DSA talent areas. RI runs the deepest olympiad-training pipeline among IP schools, with Math Olympiad as a structured CCA from Sec 1. Selection test rewards classical olympiad fluency; the interview is a thinking-out-loud session built around a single problem.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Math (Boys), IP" },
+          context: {
+            en: "Math is among HCI's 2026 DSA talent areas. Bicultural Studies Programme and Science & Math Talent Programme both anchor the school's STEM identity. Selection test and interview format closely parallel RI's; expect a heavy combinatorics and number theory weighting.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Math, DSA-Sec, IP" },
+          context: {
+            en: "Listed in Dunman High's 2026 DSA FAQ. The Science Mathematics Talent Programme provides accelerated math instruction from Sec 1. SAP school — Higher Chinese or Chinese Language as Mother Tongue required. A common alternative to RI/HCI for bicultural-leaning families.",
+          },
+        },
+        {
+          name: "Raffles Girls' School",
+          url: "https://www.rgs.edu.sg/admissions/direct-school-admission",
+          talentArea: { en: "Math (Girls), IP" },
+          context: {
+            en: "Math is a listed DSA-Sec talent area at RGS. Selection test parallels RI's in difficulty; the interview emphasises clear verbal articulation of mathematical reasoning. Strong fit for girls already on the Math Olympiad track at primary level.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nyghs.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Math (Girls), IP" },
+          context: {
+            en: "Math is a listed DSA-Sec talent at NYGH. SAP designation — Higher Chinese or Chinese Language as Mother Tongue required. The Science & Math Talent Programme integrates with Chinese-language enrichment, making NYGH the natural fit for bicultural STEM-oriented girls.",
+          },
+        },
+        {
+          name: "River Valley High School",
+          url: "https://rivervalleyhigh.moe.edu.sg/admissions/dsa-sec/",
+          talentArea: { en: "Math, DSA-Sec, IP" },
+          context: {
+            en: "Math is a listed DSA talent at RVHS. Bicultural and SAP heritage — Higher Chinese or Chinese Language requirement applies. Selection test difficulty calibrated below NUS High and RI but well above PSLE level; strong route for candidates with SMOPS Silver / NMOS Silver but not yet at Gold.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/admissions/direct-school-admission",
+          talentArea: { en: "Math, DSA-Sec (Boys)" },
+          context: {
+            en: "SAP school with a strong record at SMOPS and NMOS team events. Math is among Catholic High's DSA-Sec talent areas. Higher Chinese or Chinese Language as Mother Tongue required.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Math (Boys), IP" },
+          context: {
+            en: "Math is among ACS(I)'s DSA-Sec talent areas. Selection test difficulty is competitive with RI / HCI; the IP track integrates with the IB Diploma in senior years, making the math pathway distinct from A-Level-track schools.",
+          },
+        },
+        {
+          name: "Methodist Girls' School",
+          url: "https://www.mgs.sch.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Math (Girls), IP" },
+          context: {
+            en: "Math is a listed DSA-Sec talent area at MGS. IP track also leads to the IB Diploma. A quieter alternative to the RGS / NYGH cluster for girls who want competitive math without the SAP-school cohort.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the selection test is still weeks out" },
+          items: [
+            {
+              en: "Work through past SMOPS Round 2 and NMOS papers as the primary preparation. Singapore selection tests draw their difficulty calibration from these contests more than from AMC 8 (which is closer to PSLE level for top P6 students). Aim for 20-30 past problems worked through completely with solutions read after each, not 200 skimmed.",
+            },
+            {
+              en: "Confirm all competition certificates (SMOPS, NMOS, AMC, RIPMWC) are logged accurately. MOE pulls competition results from primary schools' DSA portal entries — if the certificate is not logged, scan and submit directly with the application. Schools that score competition history give zero credit to claimed-but-unverified awards.",
+            },
+            {
+              en: "Run a mock interview where the panellist hands the candidate a problem cold and the candidate has 5 minutes to think out loud. Record it. The most common P6 failure is silence — strong candidates verbalise even when stuck (\"let me try a small case\"). Practice this until thinking-out-loud is automatic.",
+            },
+            {
+              en: "Read one solution write-up per week from a Singapore math olympiad source. The point is not to learn the problem — it is to absorb how mathematical writing is structured (claim, justification, computation, conclusion). Selection tests increasingly require written explanations, and the convention is learnable in 6-8 weeks of reading.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Stop attempting new hard problems three days before the test. Switch to reviewing techniques already learned — pigeonhole, parity, invariants, casework. Final-week new material rarely consolidates and frequently shakes confidence the night before. Trust what's already in the toolbox.",
+            },
+            {
+              en: "Confirm logistics in writing. Test date and time, venue, what to bring (pencils, eraser, ruler, water, watch — most venues prohibit calculators or phones), interview slot. Email the school admissions office if anything is ambiguous.",
+            },
+            {
+              en: "Sleep schedule shift: if the test is at 9am, the candidate should be waking at 7am for at least four days before. Cognitive performance on novel problems is heavily sleep-dependent; an extra hour of last-minute practice the night before is a net negative.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of test / interview" },
+          items: [
+            {
+              en: "Eat a real meal 90 minutes before — complex carbs, modest portion. Avoid sugar surges; novel problem-solving runs better on stable blood sugar than on a caffeine-and-sugar peak.",
+            },
+            {
+              en: "Bring two pencils and a backup eraser. Pencil breaks are the trivial avoidable disaster on selection tests. A working watch (not a smart watch) is essential if the venue clock is small or behind the candidate.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, sign the candidate in, leave. Over-involved parents in the waiting area are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What was the most interesting problem today?\" Anything else waits 24 hours. Replays of unsolved problems between test and offer are corrosive.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, selection test coming up, no clear preparation plan — there are still real moves. Cut new topic learning entirely. Drill exactly three techniques to fluency: the pigeonhole principle, parity / mod 2 arguments, and the practice of trying small cases (N = 1, 2, 3) before generalising. These three appear on almost every Singapore P6 olympiad-style paper and are the cheapest high-return preparation. For the interview, the single highest-leverage practice is thinking out loud — pick three problems the candidate has already solved and rehearse explaining them to a non-mathematical audience. The selection test rewards reasoning the candidate already has; what late preparation buys is composure, not new ability. Some families bring in a private math coach at this stage — a good one can stabilise nerves and sharpen the verbal articulation, but no coach produces, in three sessions, the pattern-recognition that years of contest training build. Treat it as triage, not a fix.",
+      },
+    },
   },
 };
 
