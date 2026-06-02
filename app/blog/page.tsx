@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BlogPostCard } from "@/components/BlogPostCard";
 import { BlogSubscribeBlock } from "@/components/BlogSubscribeBlock";
+import { StaticPageBreadcrumb, StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
 import { getAllPosts } from "@/lib/blog";
 
 const ogImage = {
@@ -51,6 +52,7 @@ export default function BlogPage() {
   return (
     <>
       <SiteHeader />
+      <StaticPageBreadcrumb page="blog" />
       <main className="min-h-screen bg-surface">
         {/* Page header */}
         <div className="border-b border-champagne/20 bg-white px-4 py-10 sm:px-6 sm:py-14">
@@ -83,6 +85,7 @@ export default function BlogPage() {
         {/* Subscribe + social */}
         <BlogSubscribeBlock />
       </main>
+      <StaticPageRelatedCards page="blog" />
       <SiteFooter />
     </>
   );

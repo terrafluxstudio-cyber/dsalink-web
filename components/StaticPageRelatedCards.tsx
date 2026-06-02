@@ -10,6 +10,7 @@ import {
   Users,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { RelatedCardsRow } from "@/components/RelatedCardsRow";
 import type { LucideIcon } from "lucide-react";
 
@@ -112,10 +113,43 @@ const FAQ_CARD: Card = {
   href: "/faq",
 };
 
-const CONFIGS: Record<
-  "schools" | "faq" | "scores" | "open-house-takeaways",
-  PageConfig
-> = {
+type PageId =
+  | "schools"
+  | "faq"
+  | "scores"
+  | "open-house-takeaways"
+  | "open-houses"
+  | "dsa-finder"
+  | "blog";
+
+const BC_GUIDE: LocaleStr4 = { en: "DSA Guide", zh: "DSA 指南", ms: "Panduan DSA", ta: "DSA வழிகாட்டி" };
+
+const BC_LABEL: Record<PageId, LocaleStr4> = {
+  schools: { en: "Schools", zh: "学校目录", ms: "Sekolah", ta: "பள்ளிகள்" },
+  faq: { en: "FAQ", zh: "常见问题", ms: "FAQ", ta: "கேள்விகள்" },
+  scores: { en: "PSLE COP", zh: "PSLE COP", ms: "PSLE COP", ta: "PSLE COP" },
+  "open-house-takeaways": {
+    en: "Open House Takeaways",
+    zh: "开放日笔记",
+    ms: "Catatan Open House",
+    ta: "திறந்த நாள் குறிப்புகள்",
+  },
+  "open-houses": {
+    en: "May 2026 Open Houses",
+    zh: "2026 五月开放日",
+    ms: "Open House Mei 2026",
+    ta: "மே 2026 திறந்த நாட்கள்",
+  },
+  "dsa-finder": {
+    en: "DSA Talent Finder",
+    zh: "DSA 才艺查找",
+    ms: "Pencari Bakat DSA",
+    ta: "DSA திறமை தேடல்",
+  },
+  blog: { en: "Blog", zh: "博客", ms: "Blog", ta: "வலைப்பதிவு" },
+};
+
+const CONFIGS: Record<PageId, PageConfig> = {
   schools: {
     kicker: KICKER,
     heading: {
@@ -156,18 +190,45 @@ const CONFIGS: Record<
     },
     items: [OHG_CARD, SCHOOLS_CARD, FAQ_CARD],
   },
+  "open-houses": {
+    kicker: KICKER,
+    heading: {
+      en: "Three references parents pair with the open-house calendar",
+      zh: "家长常与开放日日历一起看的三个参考",
+      ms: "Tiga rujukan dengan kalendar open-house",
+      ta: "திறந்த நாள் நாட்காட்டியுடன் மூன்று குறிப்புகள்",
+    },
+    items: [OHG_CARD, TIMELINE_CARD, SCHOOLS_CARD],
+  },
+  "dsa-finder": {
+    kicker: KICKER,
+    heading: {
+      en: "Three references parents pair with the talent finder",
+      zh: "家长常与才艺查找一起看的三个参考",
+      ms: "Tiga rujukan dengan pencari bakat",
+      ta: "திறமை தேடலுடன் மூன்று குறிப்புகள்",
+    },
+    items: [TALENTS_CARD, SCHOOLS_CARD, TIMELINE_CARD],
+  },
+  blog: {
+    kicker: KICKER,
+    heading: {
+      en: "Three core references the blog points back to",
+      zh: "博客文章常回指的三个核心参考",
+      ms: "Tiga rujukan utama yang blog merujuk",
+      ta: "வலைப்பதிவு குறிப்பிடும் மூன்று குறிப்புகள்",
+    },
+    items: [WHATISDSA_CARD, TIMELINE_CARD, TALENTS_CARD],
+  },
 };
 
 /**
  * Drop-in related-cards row for static pages (schools / faq / scores /
- * open-house-takeaways) whose page.tsx is server but whose body is client.
+ * open-house-takeaways / open-houses / dsa-finder / blog) whose page.tsx
+ * is server but whose body is client.
  * Renders one of the pre-defined per-page configurations.
  */
-export function StaticPageRelatedCards({
-  page,
-}: {
-  page: keyof typeof CONFIGS;
-}) {
+export function StaticPageRelatedCards({ page }: { page: PageId }) {
   const { locale } = useLanguage();
   const c = CONFIGS[page];
   return (
@@ -180,6 +241,22 @@ export function StaticPageRelatedCards({
         body: item.body[locale],
         href: item.href,
       }))}
+    />
+  );
+}
+
+/**
+ * Drop-in breadcrumb for static pages whose body doesn't already render one.
+ * Renders "DSA Guide > [Page name]" hierarchy in current locale.
+ */
+export function StaticPageBreadcrumb({ page }: { page: PageId }) {
+  const { locale } = useLanguage();
+  return (
+    <Breadcrumb
+      items={[
+        { label: BC_GUIDE[locale], href: "/dsa-guide" },
+        { label: BC_LABEL[page][locale] },
+      ]}
     />
   );
 }

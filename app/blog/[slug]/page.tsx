@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import { BlogPostBreadcrumb } from "@/components/BlogPostBreadcrumb";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { buildBlogPostStructuredData } from "@/lib/seo";
 import Link from "next/link";
@@ -84,6 +86,7 @@ export default async function BlogPostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <SiteHeader />
+      <BlogPostBreadcrumb title={post.title} />
       <main className="min-h-screen bg-surface">
         {/* Article header */}
         <div className="border-b border-champagne/20 bg-white px-4 py-10 sm:px-6 sm:py-14">
@@ -128,6 +131,7 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
       </main>
+      <StaticPageRelatedCards page="blog" />
       <SiteFooter />
     </>
   );

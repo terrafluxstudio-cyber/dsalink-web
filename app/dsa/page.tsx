@@ -3,6 +3,7 @@ import { DsaSearchCenter } from "@/components/DsaSearchCenter";
 import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { StaticPageBreadcrumb, StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
 import { buildDsaFinderStructuredData } from "@/lib/dsa-seo";
 
 const DSA_PAGE_TITLE =
@@ -66,9 +67,11 @@ export default async function DsaPage({
         }}
       />
       <SiteHeader />
+      <StaticPageBreadcrumb page="dsa-finder" />
       <main className="bg-surface">
         <DsaSearchCenter initialQuery={q ?? ""} />
       </main>
+      <StaticPageRelatedCards page="dsa-finder" />
       <PillarBackLink />
       <SiteFooter />
     </>

@@ -4,6 +4,7 @@ import { OpenHouseTracker } from "@/components/OpenHouseTracker";
 import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { StaticPageBreadcrumb, StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
 import { buildOpenHousesStructuredData } from "@/lib/seo";
 
 const OPEN_HOUSES_TITLE =
@@ -62,9 +63,11 @@ export default function OpenHousesPage() {
       />
       <OpenHouseTracker />
       <SiteHeader />
+      <StaticPageBreadcrumb page="open-houses" />
       <main className="bg-surface">
         <OpenHousesDirectory />
       </main>
+      <StaticPageRelatedCards page="open-houses" />
       <PillarBackLink />
       <SiteFooter />
     </>
