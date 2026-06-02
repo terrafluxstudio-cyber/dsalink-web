@@ -232,7 +232,7 @@ export function SiteHeader() {
           aria-label={t.a11yNavPrimary}
         >
           <NavLinkButton
-            href="/what-is-dsa"
+            href="/dsa-guide"
             label={t.navDsaGuide}
             pathname={pathname}
           />
@@ -299,11 +299,11 @@ export function SiteHeader() {
         >
           <nav className="mx-auto max-w-5xl px-4 py-3" aria-label={t.a11yNavMobilePrimary}>
             <div className="grid gap-0.5">
-              {/* DSA Guide (single link) */}
+              {/* DSA Guide (single link · Pillar) */}
               <Link
-                href="/what-is-dsa"
+                href="/dsa-guide"
                 className={`block rounded-lg px-3 py-2 text-sm font-medium normal-case transition hover:bg-white/10 hover:text-white ${
-                  pathname === "/what-is-dsa" || pathname === "/dsa-guide"
+                  pathname === "/dsa-guide"
                     ? "bg-white/10 text-white"
                     : "text-white/75"
                 }`}

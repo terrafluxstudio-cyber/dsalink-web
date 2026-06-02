@@ -36,14 +36,8 @@ const nextConfig: NextConfig = {
         destination: "/dsa-finder",
         permanent: true,
       },
-      // IA v3 (2026-06-01): /dsa-guide retired → evergreen content lives on /what-is-dsa.
+      // IA v3 (2026-06-02): /dsa-guide reclaimed as the Pillar page.
       // /after-apply retired → flow into Interview & Trial at /dsa-interview.
-      // 301 preserves Google indexing on the new URLs.
-      {
-        source: "/dsa-guide",
-        destination: "/what-is-dsa",
-        permanent: true,
-      },
       {
         source: "/after-apply",
         destination: "/dsa-interview",
