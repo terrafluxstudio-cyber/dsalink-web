@@ -1111,6 +1111,299 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       ms: "Panduan DSA-Sec olahraga — pecut, jarak, lempar, lompat. Penanda aras, soalan, sekolah Singapura.",
       ta: "தடகள DSA-Sec வழிகாட்டி — விரைவு, தூரம், எறிதல், தாவல். மதிப்பெண், கேள்விகள், பள்ளிகள்.",
     },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Track & Field DSA splits hard along event lines — a 100m sprinter and a 1500m runner share almost nothing in trial format, training pattern, or recruitment cycle. Schools draw primarily from NSG Primary Athletics Championships and Singapore Athletics Association (SAA)-sanctioned meets, with verified performance times and distances as the screening filter. Few schools publish formal cut-offs and the bar moves each cycle, but candidates with top-eight finishes at NSG nationals or top-three at zonals in their primary event are reliably within range of the strongest programmes. The trial itself usually combines a timed performance in the candidate's primary event with a short observation of running form, drills, and recovery — followed by an interview that weights training history, race psychology, and event versatility. Below, the assessment dimensions are common across events; the per-event focus section breaks down what coaches watch for sprinters, mid-distance, distance, jumpers, and throwers separately.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Sanctioned-meet performance in your primary event" },
+          body: {
+            en: "Schools want SAA-sanctioned or NSG-recorded times and distances on the application, not training-set or time-trial marks. Submit the candidate's best result with full meet name, date, and conditions (wind-aided sprints, hand-timed versus electronic, etc.). If a stronger mark is set after the application window closes, email the school's athletics teacher or admissions office with the official result PDF — late-window improvements are read favourably when properly documented.",
+          },
+        },
+        {
+          label: { en: "Technique under panel observation" },
+          body: {
+            en: "Trial coaches watch what cannot be seen on a results sheet: in sprints, the drive phase out of the blocks and the transition to top-end mechanics; in distance, stride economy and head/shoulder relaxation at race pace; in jumps, the runup consistency and the takeoff position; in throws, the footwork into the release and the follow-through balance. A candidate with a slightly slower mark but cleaner technique often outscores a faster candidate with form that won't hold up to Sec 1-2 training volume increases.",
+          },
+        },
+        {
+          label: { en: "Recovery and second-effort quality" },
+          body: {
+            en: "Most trials include either a second timed attempt after rest or a multi-event observation (e.g. 100m plus 200m, or long jump plus 60m sprint). What coaches log is not the second mark but the pattern — does the candidate maintain technique under fatigue, recover deliberately between efforts, or rush back to the line without water? Recovery habits predict training resilience over a four-year programme and read clearly on the day.",
+          },
+        },
+        {
+          label: { en: "Event versatility — the under-rated multiplier" },
+          body: {
+            en: "School athletics teams need depth across multiple events for NSG team scoring. A sprinter who can also long jump, or a mid-distance runner who can throw the javelin, is a more valuable team asset than a specialist with one elite mark. Coaches log secondary events even when the candidate didn't apply on them — be ready to mention any reasonable second event the candidate has tried, even informally at school sports days.",
+          },
+        },
+        {
+          label: { en: "Coachability and on-track behaviour" },
+          body: {
+            en: "How the candidate listens at the briefing, whether they pack their own kit and warm up without being told, whether they thank the starter or the official. Track-and-field training is more solitary than team-sport training, and coaches are looking for athletes whose self-discipline carries them through morning runs and Saturday long sessions without supervision. The trial day is a small window into that habit.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Sprints — 100m, 200m, 400m, hurdles" },
+          body: {
+            en: "At P6 trial level, coaches care most about the first 30 metres: the drive position out of the blocks (or standing start, depending on venue), arm carriage, and the angle of the shin at first contact. Top-end speed at 12 is genetically variable and trainable later; technique is the signal. For 400m and 400m hurdles candidates, pacing across the back straight and the willingness to attack the third 100m show in the trial mark. Hurdle candidates are watched on lead-leg snap and trail-leg clearance — most P6 hurdlers are still rotating the trail leg too late.",
+          },
+        },
+        {
+          position: { en: "Mid-distance — 800m, 1500m" },
+          body: {
+            en: "Pacing discipline reads as professional at P6. Coaches watch whether the candidate goes out at sustainable pace and accelerates through the bell, or burns the first lap and survives the second. Mid-distance trial marks should ideally come from sanctioned meets where pacing was honest — a paced 800m mark beats a faster but ragged time-trial. Aerobic base, finishing kick, and tactical awareness (when to move on a competitor) are the three things schools weight.",
+          },
+        },
+        {
+          position: { en: "Distance — 3000m and cross-country" },
+          body: {
+            en: "Distance running rewards stride economy over raw speed at the P6 transition to Sec 1. Coaches watch shoulder relaxation, foot strike pattern, and breathing rhythm at race pace. NSG cross-country results and SAA road-race performance are weighted alongside track times. Distance candidates are often recruited even with modestly slower marks if the training history shows consistency across an annual cycle, because the four-year improvement curve at distance is reliably steeper than at sprints.",
+          },
+        },
+        {
+          position: { en: "Jumps — long jump, high jump, triple jump" },
+          body: {
+            en: "Runup precision is the single most weighted technical element. Long and triple jumpers are watched for consistent hit on the board (or for high jump, the runup curve and the planted foot's angle to the bar). Coaches care less about distance or height at the trial than about whether the runup is repeatable — distance follows technique once the candidate enters a school's structured programme. Triple jumpers in particular need clean rhythm across the three phases; a faster sprinter who can't hold rhythm scores lower than a slower athlete who can.",
+          },
+        },
+        {
+          position: { en: "Throws — shot put, discus, javelin" },
+          body: {
+            en: "Power matters but is read as a function of technique at P6. Shot put trials weight the glide or rotational footwork and the release angle; discus weights the wind-up balance and the release plane; javelin weights the cross-step approach and the release angle relative to the ground. Throwing events are recruited more thinly than running events, so a specialist thrower with a solid technical base and one strong sanctioned mark is often actively pursued by schools building team-scoring depth.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Combined-event candidates (multi-event athletes — heptathlon-style training, even informally) are highly recruited. If the candidate has competed in two or more events at zonal level, name both on the application with marks; schools read this as a strong signal of training history and physical literacy.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love track and field?" },
+          subtext: {
+            en: "Panels want a specific moment, not a feeling. \"It clears my head\" reads as untrained motivation.",
+          },
+          approach: {
+            en: "Open with one concrete race or event memory, then connect it to character.",
+          },
+          template: {
+            en: "At the East Zone 200m, I was in lane two and got out badly. I came back in the last 50 to take third. That race taught me that what matters is who you are with 50m left, not who you are at the gun. It's why I keep coming back to the track.",
+          },
+        },
+        {
+          question: { en: "What's your primary event, and what's your training week look like?" },
+          subtext: {
+            en: "Tests whether the candidate understands their own training, or is following a programme by rote.",
+          },
+          approach: {
+            en: "Name the event and outline the actual training pattern across the week — different sessions, recovery, and what each session targets.",
+          },
+          template: {
+            en: "100m and 200m. Monday is acceleration work — short sprints out of blocks with full recovery. Wednesday is top-speed work — flying 30s and 60s. Friday is tempo — longer reps at sub-maximal pace for conditioning. Saturday is a long run for general aerobic base. I don't train Sunday — recovery is the work I do that day.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the athletics programme, or is the application a scatter-shot?",
+          },
+          approach: {
+            en: "Cite something specific — a coach's reputation, the squad's NSG results, the training facility, the way the school programmes multi-event athletes.",
+          },
+          template: {
+            en: "Your B-Division 4x400m relay placed second at last year's NSG nationals. The way your coach builds the long-to-short sprint progression across Term 1 to Term 3 matches my own training philosophy. I want to be the third leg in that relay by Sec 3.",
+          },
+        },
+        {
+          question: { en: "Tell us about a race that didn't go to plan." },
+          subtext: {
+            en: "Tests resilience and self-awareness. Schools fear candidates who only present polished wins.",
+          },
+          approach: {
+            en: "Situation → specific cause → specific change you made → result. A real low point reads more honestly than a polished story.",
+          },
+          template: {
+            en: "At the P5 zonals 800m, I went out at PB pace for the first 200 and blew up by the 600 mark. I finished sixth in a race I could have won. I rebuilt my pacing plan with my coach — first 200m only 95% of target pace — and finished second at the next inter-school meet. Lesson: race plans aren't optional.",
+          },
+        },
+        {
+          question: { en: "Do you have a secondary event you'd train if asked?" },
+          subtext: {
+            en: "Schools value versatility for team scoring. Tests whether the candidate sees themselves as a single-event athlete or a team asset.",
+          },
+          approach: {
+            en: "Name a real second event the candidate has tried — even informally — and one specific thing about it that suits the candidate.",
+          },
+          template: {
+            en: "Long jump. I jumped 4.85m at our school sports day last year on a runup I'd barely practised — the technique is rough but my approach speed is there. If your jumps coach can fit me in, I'd add it as a second event.",
+          },
+        },
+        {
+          question: { en: "How will you manage academics with morning training?" },
+          subtext: {
+            en: "Schools fear DSA-T&F kids whose grades collapse by Sec 2 — morning training is a typical pattern.",
+          },
+          approach: {
+            en: "Describe a real schedule.",
+          },
+          template: {
+            en: "I run at 5:30am four mornings a week before school. I finish English and Math homework before training so my brain isn't tired afterwards. Bus ride to school is for review notes. Saturday long run starts at 7am; the rest of Saturday is school work. Sunday I read and rest — recovery time matters.",
+          },
+        },
+        {
+          question: { en: "If two schools both offer you, how will you decide?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether the family has actually thought about fit.",
+          },
+          approach: {
+            en: "Don't dodge. Pick this school, justify with one specific reason about programme or coach fit.",
+          },
+          template: {
+            en: "Honestly, your school. Your sprint coach's emphasis on technique before volume is how I think the next two years should go for me — I'm still adding muscle and I don't want to burn out chasing volume too early. If the other school called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Singapore Sports School",
+          url: "https://www.sportsschool.edu.sg/admissions/the-direct-school-admission-process",
+          talentArea: { en: "Track & Field, full DSA" },
+          context: {
+            en: "Pure sports school — track and field is a core academy with sprint, distance, jumps, and throws sub-groups. Application and trial timing differ from mainstream DSA-Sec. Strongest pathway for athletes targeting Singapore national age-group squads alongside academic study.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/year-1-admission-exercises/year-1-direct-school-admission/",
+          talentArea: { en: "Track & Field (Boys), IP" },
+          context: {
+            en: "Track & Field is listed in RI's 2026 DSA talent areas. Long-standing A-Division programme across sprints and distance. Recruits across multiple events and weights training history and race psychology heavily at interview.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Track & Field (Boys), IP" },
+          context: {
+            en: "Track & Field is among HCI's DSA talent areas. Consistent NSG B-Division and A-Division presence. The school's stated position is that applicants without national-meet experience may still apply if the trial and interview support the case.",
+          },
+        },
+        {
+          name: "Victoria School",
+          url: "https://www.victoriaschool.moe.edu.sg/admissions/direct-school-admission",
+          talentArea: { en: "Track & Field (Boys)" },
+          context: {
+            en: "Track & Field has been a flagship CCA at Victoria School for decades. Strong NSG B-Division depth across sprint and distance events. Listed under the school's DSA-Sec talent areas with structured trial and interview.",
+          },
+        },
+        {
+          name: "Saint Joseph's Institution",
+          url: "https://www.sji.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Track & Field (Boys)" },
+          context: {
+            en: "Track & Field is among SJI's long-standing sports programmes and is listed under DSA-Sec talent areas. Strong sprint and middle-distance heritage; the school is one of the more accessible non-IP routes for elite athletes.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Track & Field (Boys), IP" },
+          context: {
+            en: "Track & Field is among ACS(I)'s DSA-Sec talent areas with strong sprint and jumps history. ACS(I) runs DSA candidates alongside the competition squad during trial windows.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          url: "https://acsbr.moe.edu.sg/admissions/dsa-sec/",
+          talentArea: { en: "Track & Field (Boys)" },
+          context: {
+            en: "Track & Field is listed under ACS(BR)'s DSA-Sec talent areas. Consistent NSG B-Division participant across sprints and jumps; a useful non-IP alternative for ACS-leaning families.",
+          },
+        },
+        {
+          name: "Methodist Girls' School",
+          url: "https://www.mgs.sch.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Track & Field (Girls), IP" },
+          context: {
+            en: "Track & Field is a listed DSA-Sec talent area at MGS with one of Singapore's strongest girls programmes. Consistent NSG B-Division and A-Division results across sprints, jumps, and middle distance.",
+          },
+        },
+        {
+          name: "Singapore Chinese Girls' School",
+          url: "https://www.scgs.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Track & Field (Girls)" },
+          context: {
+            en: "Track & Field is among SCGS's listed DSA-Sec talent areas. Strong non-IP route for girls with sprint or jumps background; team depth has produced consistent zonal medal returns.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Track & Field, DSA-Sec, IP" },
+          context: {
+            en: "Listed in Dunman High's 2026 DSA FAQ. SAP heritage — Higher Chinese or Chinese Language requirement applies. East Zone B-Division presence across track events with structured recruitment.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Compile the candidate's three best sanctioned marks (NSG, SAA-ranked, inter-school finals) with full meet name, date, conditions, and timing method (electronic vs hand-timed for sprints; rule whether the meet was wind-legal). Submit on the application with official PDFs where possible. Do not submit time-trial or training marks; they are not weighted and may be flagged.",
+            },
+            {
+              en: "Confirm CCA records, competition results, and NAPFA data are accurate on the primary school's DSA portal entry. MOE pulls these directly; missing entries undercut otherwise strong applications. Email the primary school CCA teacher or year-head to confirm what's been logged.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone, watch first 30 seconds back. Flag any answer over 30 seconds or that used the word \"passionate.\" Track families especially over-rely on times and distances in interview — verbal articulation about training process and race tactics matters more than reciting PBs.",
+            },
+            {
+              en: "Video-record one full race or event session and watch back together with one technical thing to fix. Sprint candidates: first three steps out of blocks. Distance: head and shoulder relaxation at race pace. Jumps: runup consistency. Throws: balance after release. Coming to interview with a current working-on item reads as professional.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop volume. Keep speed and technique work crisp at 70-80% intensity. No new training stimulus, no extra time trial, no race-pace volume. Final-week added load rarely pays off and frequently produces a strain or tweak that ends the trial before it starts.",
+            },
+            {
+              en: "Confirm logistics in writing. Trial date, time, venue (track name and address), attire (school PE kit or all-white per school policy), what to bring (spikes if permitted, water, snack, towel, race number if issued). Email the athletics teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "Pack two pairs of spikes (if used) and check the pin length against the venue's track type. A loose pin or wrong-length spike is a self-inflicted trial-day handicap. For throwers, pack the appropriate event implement only if the school requires you to bring one — many tracks provide them.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — a real meal with complex carbs. Track performance at the second-effort mark of trial is sensitive to blood sugar; an empty stomach by minute 60 is a self-inflicted handicap.",
+            },
+            {
+              en: "Warm up properly. Most trial schedules include a coach-led warm-up, but arrive prepared to start your own routine if needed — dynamic stretching, strides, event-specific drills. Cold-starting an explosive event is the fastest way to a hamstring injury.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the athletics teacher-in-charge if you meet them, leave. Over-involved parents trackside are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours. Replays of marks between trial and offer are corrosive at any age.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no clear plan — there are still real moves. Cut all new training intensity. Trust the fitness already in the body. Shorten the work to two things only: event-specific technique drills at 70-80% (sprint A-skips, jumps runup walk-throughs, throws release-position rehearsals — whichever fits the event) and a clean warm-up routine you can repeat under nerves. Both are low-injury, high-signal, and the right kind of practice before an explosive trial. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because the interview is the only part of the trial day where a few hours of focused work can still meaningfully change the outcome. Some families bring in a private coach at this stage — a good one can stabilise nerves and refine specific technique cues, but no coach produces, in three sessions, the conditioning of a year of training. Treat it as triage, not a fix.",
+      },
+    },
   },
   badminton: {
     slug: "badminton",
