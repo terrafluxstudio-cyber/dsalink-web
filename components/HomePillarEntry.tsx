@@ -96,15 +96,17 @@ export function HomePillarEntry() {
               <p className="mt-2 max-w-2xl text-[13.5px] leading-relaxed text-white/75 sm:text-sm">
                 {pick(BODY)}
               </p>
-              <p className="mt-3 inline-flex items-center gap-1.5 text-[11.5px] font-semibold text-champagne-light/85 normal-case">
+              <p className="mt-3 flex w-fit items-center gap-1.5 text-[11.5px] font-semibold text-champagne-light/85 normal-case">
                 <Clock className="h-3.5 w-3.5" aria-hidden />
                 {pick(READ)}
               </p>
 
-              <span className="mt-5 inline-flex items-center gap-2 self-start rounded-xl bg-champagne px-5 py-2.5 text-sm font-semibold text-intellectual-dark transition group-hover:bg-champagne-light">
-                <span style={{ textTransform: "none" }}>{pick(CTA)}</span>
-                <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" aria-hidden />
-              </span>
+              <div className="mt-5">
+                <span className="inline-flex items-center gap-2 rounded-xl bg-champagne px-5 py-2.5 text-sm font-semibold text-intellectual-dark transition group-hover:bg-champagne-light">
+                  <span style={{ textTransform: "none" }}>{pick(CTA)}</span>
+                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" aria-hidden />
+                </span>
+              </div>
             </div>
 
             {/* Right column: 9 chapter preview list (lg+ only) */}
