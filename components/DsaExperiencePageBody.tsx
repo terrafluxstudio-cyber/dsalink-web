@@ -16,6 +16,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { CaseStudyCard } from "@/components/CaseStudyCard";
 import { EmailCapture } from "@/components/EmailCapture";
 import { PageHeader } from "@/components/PageHeader";
+import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
@@ -596,6 +597,7 @@ export function DsaExperiencePageBody() {
           </div>
         </div>
       </main>
+      <PillarBackLink />
       <SiteFooter />
     </>
   );

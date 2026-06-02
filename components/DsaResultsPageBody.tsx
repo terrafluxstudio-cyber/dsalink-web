@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Clock4, MailOpen } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
@@ -199,6 +200,7 @@ export function DsaResultsPageBody() {
           </div>
         </section>
       </main>
+      <PillarBackLink />
       <SiteFooter />
     </>
   );

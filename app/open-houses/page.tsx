@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { OpenHousesDirectory } from "@/components/OpenHousesDirectory";
 import { OpenHouseTracker } from "@/components/OpenHouseTracker";
+import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { buildOpenHousesStructuredData } from "@/lib/seo";
@@ -64,6 +65,7 @@ export default function OpenHousesPage() {
       <main className="bg-surface">
         <OpenHousesDirectory />
       </main>
+      <PillarBackLink />
       <SiteFooter />
     </>
   );

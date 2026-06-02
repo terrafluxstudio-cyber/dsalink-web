@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { getAllTalentPages } from "@/lib/talentPages";
@@ -161,6 +162,7 @@ export function TalentsIndexPageBody() {
           </div>
         </section>
       </main>
+      <PillarBackLink />
       <SiteFooter />
     </>
   );

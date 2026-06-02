@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight, BookOpen, CalendarDays, ClipboardCheck, Compass, FileSearch, MessageSquareText, Lock, Scale } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
@@ -494,6 +495,7 @@ export function TimelinePageBody() {
           </div>
         </section>
       </main>
+      <PillarBackLink />
       <SiteFooter />
     </>
   );

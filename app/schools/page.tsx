@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SchoolsDirectory } from "@/components/SchoolsDirectory";
 import { SchoolsPageHeader } from "@/components/SchoolsPageHeader";
+import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { buildSchoolDirectoryStructuredData } from "@/lib/seo";
@@ -43,6 +44,7 @@ export default function SchoolsPage() {
           <SchoolsDirectory />
         </div>
       </main>
+      <PillarBackLink />
       <SiteFooter />
     </>
   );

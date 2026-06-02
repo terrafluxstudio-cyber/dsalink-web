@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DsaSearchCenter } from "@/components/DsaSearchCenter";
+import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { buildDsaFinderStructuredData } from "@/lib/dsa-seo";
@@ -68,6 +69,7 @@ export default async function DsaPage({
       <main className="bg-surface">
         <DsaSearchCenter initialQuery={q ?? ""} />
       </main>
+      <PillarBackLink />
       <SiteFooter />
     </>
   );

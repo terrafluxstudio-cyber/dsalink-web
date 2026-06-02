@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ScoresPageBody } from "@/components/ScoresPageBody";
+import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { buildScoresStructuredData } from "@/lib/seo";
@@ -64,6 +65,7 @@ export default function ScoresPage() {
       <main className="bg-surface">
         <ScoresPageBody />
       </main>
+      <PillarBackLink />
       <SiteFooter />
     </>
   );

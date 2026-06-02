@@ -14,6 +14,7 @@ import {
   Users,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import type {
@@ -609,6 +610,7 @@ export function InterviewTalentPageBody({ talent }: { talent: TalentPage }) {
           </div>
         </section>
       </main>
+      <PillarBackLink />
       <SiteFooter />
     </>
   );

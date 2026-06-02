@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { OpenHouseTakeawaysBody } from "@/components/OpenHouseTakeawaysBody";
@@ -50,6 +51,7 @@ export default function OpenHouseTakeawaysPage() {
       <main className="min-h-screen bg-surface">
         <OpenHouseTakeawaysBody />
       </main>
+      <PillarBackLink />
       <SiteFooter />
     </>
   );

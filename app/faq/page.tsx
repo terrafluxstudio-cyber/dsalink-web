@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { FaqContent } from "@/components/FaqContent";
 import { FaqPageHeader } from "@/components/FaqPageHeader";
 import { SiteHeader } from "@/components/SiteHeader";
+import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { buildFaqStructuredData } from "@/lib/seo";
 
@@ -51,6 +52,7 @@ export default function FaqPage() {
 
         <FaqContent />
       </main>
+      <PillarBackLink />
       <SiteFooter />
     </>
   );

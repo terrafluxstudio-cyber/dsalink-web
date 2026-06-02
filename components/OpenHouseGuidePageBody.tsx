@@ -15,6 +15,7 @@ import Link from "next/link";
 import { ChineseNote } from "@/components/ChineseNote";
 import { EmailCapture } from "@/components/EmailCapture";
 import { PageHeader } from "@/components/PageHeader";
+import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -780,6 +781,7 @@ export function OpenHouseGuidePageBody() {
           </div>
         </div>
       </main>
+      <PillarBackLink />
       <SiteFooter scheduleNote={t.ohGuide_footerNote} />
     </>
   );

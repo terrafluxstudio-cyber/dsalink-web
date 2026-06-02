@@ -20,6 +20,7 @@ import {
   type QPrepCard,
 } from "@/lib/dsa-qprep";
 import { PageHeader } from "@/components/PageHeader";
+import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -1580,6 +1581,7 @@ export function DsaInterviewPageBody() {
           </div>
         </div>
       </main>
+      <PillarBackLink />
       <SiteFooter />
     </>
   );

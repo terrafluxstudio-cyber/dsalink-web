@@ -6,6 +6,7 @@ import { CheckCircle2, Circle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { PageHeader } from "@/components/PageHeader";
 import { SiteHeader } from "@/components/SiteHeader";
+import { PillarBackLink } from "@/components/PillarBackLink";
 import { SiteFooter } from "@/components/SiteFooter";
 
 const STORAGE_KEY = "dsalink-apply-checks";
@@ -468,6 +469,7 @@ export function DsaApplyPageBody() {
           </div>
         </div>
       </main>
+      <PillarBackLink />
       <SiteFooter />
     </>
   );
