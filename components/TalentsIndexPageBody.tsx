@@ -30,10 +30,10 @@ const COPY = {
     ta: "DSA தயாரிப்பு — உங்கள் குழந்தையின் திறமை வாரியாக.",
   } satisfies LocaleStr,
   subtitle: {
-    en: "Eight talent areas, each with what trial coaches actually assess, sample interview questions parents have reported, and the Singapore secondary schools that offer DSA in that domain.",
-    zh: "8 个才艺方向，每个方向都写了 trial 教练真正看什么、家长论坛反馈的面试题样、以及哪些新加坡中学开这个项目。",
-    ms: "Lapan bidang bakat, setiap satu dengan apa yang dinilai oleh jurulatih percubaan, contoh soalan temu duga, dan sekolah menengah Singapura yang menawarkan DSA dalam domain itu.",
-    ta: "எட்டு திறமை பகுதிகள், ஒவ்வொன்றும் சோதனை பயிற்சியாளர்கள் மதிப்பிடுவது, மாதிரி நேர்காணல் கேள்விகள், அந்த துறையில் DSA வழங்கும் சிங்கப்பூர் இடைநிலை பள்ளிகளை விளக்குகிறது.",
+    en: "Sixteen talent areas across sports, performing arts, visual arts, language, STEM, and leadership — each with what trial coaches actually assess, sample interview questions parents have reported, and the Singapore secondary schools that offer DSA in that domain.",
+    zh: "16 个才艺方向，涵盖体育、表演艺术、视觉艺术、语言、数理、领导力——每个都写了 trial 教练真正看什么、家长论坛反馈的面试题样、以及哪些新加坡中学开这个项目。",
+    ms: "Enam belas bidang bakat merentas sukan, seni persembahan, seni visual, bahasa, STEM, dan kepimpinan — setiap satu dengan apa yang dinilai oleh jurulatih percubaan, contoh soalan, dan sekolah menengah yang menawarkan DSA dalam domain itu.",
+    ta: "விளையாட்டு, நிகழ்த்துக் கலைகள், காட்சிக் கலை, மொழி, STEM, தலைமைத்துவம் ஆகியவற்றில் பதினாறு திறமைப் பகுதிகள் — ஒவ்வொன்றும் சோதனை பயிற்சியாளர்கள் மதிப்பிடுவது, மாதிரி நேர்காணல் கேள்விகள், அந்தத் துறையில் DSA வழங்கும் சிங்கப்பூர் இடைநிலைப் பள்ளிகளை விளக்குகிறது.",
   } satisfies LocaleStr,
   contentBadge: {
     en: "EN content live · ZH · MS · TA rolling out July 2026",

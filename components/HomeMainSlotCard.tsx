@@ -133,10 +133,10 @@ const SLOTS: Record<
     },
     bullets: [
       {
-        en: "Read 8 talent-specific interview pages — what panels actually ask.",
-        zh: "阅读 8 个项目的面试题库——评审到底问什么。",
-        ms: "Baca 8 halaman temu duga khusus bakat — apa panel sebenarnya tanya.",
-        ta: "8 திறமை சார்ந்த நேர்காணல் பக்கங்களைப் படிக்கவும் — குழுக்கள் உண்மையில் என்ன கேட்கின்றன.",
+        en: "Read 16 talent-specific interview pages — what panels actually ask.",
+        zh: "阅读 16 个项目的面试题库——评审到底问什么。",
+        ms: "Baca 16 halaman temu duga khusus bakat — apa panel sebenarnya tanya.",
+        ta: "16 திறமை சார்ந்த நேர்காணல் பக்கங்களைப் படிக்கவும் — குழுக்கள் உண்மையில் என்ன கேட்கின்றன.",
       },
       {
         en: "Trial sessions ≠ rejection. Treat them as observation, not elimination.",

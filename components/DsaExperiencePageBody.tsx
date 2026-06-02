@@ -44,7 +44,7 @@ const REL_EXP = {
     ms: "Bila setiap keluarga perlu buat keputusan.",
     ta: "ஒவ்வொரு குடும்பத்தின் முடிவுகள் எப்போது.",
   },
-  c3Title: { en: "8 talent paths", zh: "8 个才艺方向", ms: "8 laluan bakat", ta: "8 திறமைப் பாதைகள்" },
+  c3Title: { en: "16 talent paths", zh: "16 个才艺方向", ms: "16 laluan bakat", ta: "16 திறமைப் பாதைகள்" },
   c3Body: {
     en: "Talent-specific prep — what each trial measures, which schools accept what.",
     zh: "分项目备战 · 各 trial 评分维度与对应学校。",

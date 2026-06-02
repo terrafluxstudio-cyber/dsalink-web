@@ -414,10 +414,10 @@ export function TimelinePageBody() {
     ta: "முறை, தகுதி, DSA என்ன அல்ல — தேதிகள் புரிய முன்.",
   };
   const r2T: LocaleStr = {
-    en: "8 talent paths",
-    zh: "8 个才艺方向",
-    ms: "8 laluan bakat",
-    ta: "8 திறமைப் பாதைகள்",
+    en: "16 talent paths",
+    zh: "16 个才艺方向",
+    ms: "16 laluan bakat",
+    ta: "16 திறமைப் பாதைகள்",
   };
   const r2B: LocaleStr = {
     en: "Trial formats, what coaches assess, which schools accept what.",

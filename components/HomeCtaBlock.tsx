@@ -38,10 +38,10 @@ const AFTER_TITLE: LocaleStr = {
 };
 
 const AFTER_SUBTITLE: LocaleStr = {
-  en: "8 talent-specific interview pages, real sample questions, and what trial coaches actually look for — so the wait isn't wasted.",
-  zh: "8 个项目的面试备战页、真实样题、trial 教练真正看什么——把等待时间用对地方。",
-  ms: "8 halaman temu duga khusus bakat, soalan contoh sebenar, dan apa yang jurulatih trial nilai — jangan biarkan masa menunggu terbuang.",
-  ta: "8 திறமை சார்ந்த நேர்காணல் பக்கங்கள், உண்மையான மாதிரிக் கேள்விகள், சோதனை பயிற்சியாளர்கள் கவனிக்கும் விஷயங்கள் — காத்திருப்பு வீணாகாமல்.",
+  en: "16 talent-specific interview pages, real sample questions, and what trial coaches actually look for — so the wait isn't wasted.",
+  zh: "16 个项目的面试备战页、真实样题、trial 教练真正看什么——把等待时间用对地方。",
+  ms: "16 halaman temu duga khusus bakat, soalan contoh sebenar, dan apa yang jurulatih trial nilai — jangan biarkan masa menunggu terbuang.",
+  ta: "16 திறமை சார்ந்த நேர்காணல் பக்கங்கள், உண்மையான மாதிரிக் கேள்விகள், சோதனை பயிற்சியாளர்கள் கவனிக்கும் விஷயங்கள் — காத்திருப்பு வீணாகாமல்.",
 };
 
 const AFTER_PRIMARY: LocaleStr = {
@@ -52,17 +52,17 @@ const AFTER_PRIMARY: LocaleStr = {
 };
 
 const AFTER_SECONDARY: LocaleStr = {
-  en: "Browse 8 talent pages",
-  zh: "浏览 8 个项目页",
-  ms: "Lihat 8 halaman bakat",
-  ta: "8 திறமை பக்கங்களைப் பார்க்கவும்",
+  en: "Browse 16 talent pages",
+  zh: "浏览 16 个项目页",
+  ms: "Lihat 16 halaman bakat",
+  ta: "16 திறமை பக்கங்களைப் பார்க்கவும்",
 };
 
 const AFTER_KICKER_BADGE: LocaleStr = {
-  en: "Free reference · 8 talent pages",
-  zh: "免费参考 · 8 个项目页",
-  ms: "Rujukan percuma · 8 halaman bakat",
-  ta: "இலவச குறிப்பு · 8 திறமை பக்கங்கள்",
+  en: "Free reference · 16 talent pages",
+  zh: "免费参考 · 16 个项目页",
+  ms: "Rujukan percuma · 16 halaman bakat",
+  ta: "இலவச குறிப்பு · 16 திறமை பக்கங்கள்",
 };
 
 function pick(s: LocaleStr, locale: "en" | "zh" | "ms" | "ta"): string {

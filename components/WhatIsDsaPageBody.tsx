@@ -349,16 +349,16 @@ const R1_B: LocaleStr = {
   ta: "மே விண்ணப்பம் முதல் நவம்பர் முடிவுகள் வரை.",
 };
 const R2_T: LocaleStr = {
-  en: "8 talent paths",
-  zh: "8 个才艺方向",
-  ms: "8 laluan bakat",
-  ta: "8 திறமைப் பாதைகள்",
+  en: "16 talent paths",
+  zh: "16 个才艺方向",
+  ms: "16 laluan bakat",
+  ta: "16 திறமைப் பாதைகள்",
 };
 const R2_B: LocaleStr = {
-  en: "DSA accepts 8 categories — each with its own trial format and school list.",
-  zh: "DSA 接收 8 个类别 · 每个有独立的 trial 格式与学校簇。",
-  ms: "DSA terima 8 kategori — setiap satu dengan format trial sendiri.",
-  ta: "DSA 8 வகைகளை ஏற்கிறது — ஒவ்வொன்றும் தனி சோதனை வடிவம்.",
+  en: "DSA accepts eight MOE categories — each with its own trial format and school list.",
+  zh: "DSA 接收 8 大 MOE 类别 · 每个有独立的 trial 格式与学校簇。",
+  ms: "DSA terima lapan kategori MOE — setiap satu dengan format trial sendiri.",
+  ta: "DSA எட்டு MOE வகைகளை ஏற்கிறது — ஒவ்வொன்றும் தனி சோதனை வடிவம்.",
 };
 const R3_T: LocaleStr = {
   en: "12 parent FAQs",

@@ -17,7 +17,14 @@ export type TalentSlug =
   | "martial-arts"
   | "music"
   | "math"
-  | "robotics";
+  | "robotics"
+  | "chinese"
+  | "dance"
+  | "drama"
+  | "art"
+  | "hockey"
+  | "squash"
+  | "leadership";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -3061,6 +3068,2274 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  chinese: {
+    slug: "chinese",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Chinese (CLE)", zh: "高级华文", ms: "Bahasa Cina", ta: "சீன மொழி" },
+    hook: {
+      en: "Chinese Language DSA — what SAP schools actually look for.",
+      zh: "华文 DSA——SAP 学校到底在挑什么",
+      ms: "DSA Bahasa Cina — apa sekolah SAP sebenarnya cari.",
+      ta: "சீன மொழி DSA — SAP பள்ளிகள் உண்மையில் எதைத் தேடுகின்றன.",
+    },
+    intro: {
+      en: "Chinese DSA at SAP schools is not a vocabulary test. Panels read for cultural depth, written voice, and whether the candidate can hold a real conversation about a Chinese text — the foundation Higher Chinese and Bicultural Studies will build on.",
+      zh: "SAP 学校的华文 DSA 不是词汇测验。考官看的是文化底蕴、写作个性、以及能否针对一篇中文文本进行真正的对话——这是高级华文与双文化课程未来的底子。",
+      ms: "DSA Bahasa Cina di sekolah SAP bukan ujian perbendaharaan kata. Panel menilai kedalaman budaya, suara penulisan, dan keupayaan untuk berbual tentang teks Cina secara mendalam.",
+      ta: "SAP பள்ளிகளில் சீன மொழி DSA என்பது சொற்களஞ்சிய சோதனை அல்ல. குழு கலாச்சார ஆழம், எழுத்து குரல், சீன உரையைப் பற்றி உரையாட முடியுமா என்பதை மதிப்பிடுகிறது.",
+    },
+    summary: {
+      en: "Trial structure, written essay rubric, oral interview formats, SAP schools, Bicultural Studies pathway.",
+      zh: "Trial 流程、写作评分维度、口试形式、SAP 学校、双文化课程衔接。",
+      ms: "Struktur trial, rubrik karangan, format temu duga lisan, sekolah SAP, laluan Bicultural Studies.",
+      ta: "சோதனை அமைப்பு, கட்டுரை மதிப்பீடு, வாய்மொழி நேர்காணல், SAP பள்ளிகள், Bicultural Studies பாதை.",
+    },
+    sampleSchools: [
+      "Hwa Chong Institution",
+      "Nanyang Girls' High School",
+      "Dunman High School",
+      "Nan Hua High School",
+      "Catholic High School",
+      "River Valley High School",
+    ],
+    metaDescription: {
+      en: "Chinese Language DSA-Sec guide for Singapore P6 — how SAP schools assess Higher Chinese candidates, trial formats, interview questions, participating schools.",
+      zh: "新加坡 P6 华文 DSA-Sec 指南——SAP 学校如何评核高级华文申请者、trial 形式、面试题、招生学校。",
+      ms: "Panduan DSA-Sec Bahasa Cina Singapura — bagaimana sekolah SAP menilai calon Higher Chinese, format trial, soalan temu duga, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 சீன மொழி DSA-Sec வழிகாட்டி — SAP பள்ளிகள் Higher Chinese விண்ணப்பதாரர்களை எவ்வாறு மதிப்பிடுகின்றன, சோதனை வடிவங்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore's eleven Special Assistance Plan (SAP) secondary schools — and a handful of IP schools with Bicultural Studies Programmes — accept DSA-Sec applications for Chinese Language talent. Trials are usually run by the Chinese department head with one HOD-level teacher, and most assess across three live components: a written task (essay or comprehension response), an oral interview in Mandarin, and a sight-reading or recitation segment. No school publishes its rubric, but FAQs from Dunman High, Nan Hua High, and parent-forum reports across the past five admission cycles converge on the six dimensions below.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Written voice over written accuracy" },
+          body: {
+            en: "Panels assume Higher Chinese candidates will make few character errors — that's the floor, not the ceiling. What separates a DSA-Sec offer from an average HCL student is voice: whether the essay sounds like a twelve-year-old who reads widely, or like a tuition centre template. Schools openly tell parents at open houses that templated essays are the most common reason a strong-on-paper candidate doesn't progress.",
+          },
+        },
+        {
+          label: { en: "Oral fluency in topic conversation" },
+          body: {
+            en: "The oral round is not the PSLE oral. Panels ask follow-up questions and probe whether the candidate has opinions about what they've read. A child who recites a memorised answer about 朱自清《背影》 scores lower than one who says \"I didn't like it the first time, but on second read the father's hands stayed with me.\" Personal reaction signals reading depth.",
+          },
+        },
+        {
+          label: { en: "Reading breadth beyond textbook canon" },
+          body: {
+            en: "Most candidates can talk about 《西游记》 and 《三国演义》. The signal comes from candidates who name a contemporary writer — 余华, 莫言, 龙应台, 杨绛 — and have something specific to say about a passage they remember. Reading breadth is the single highest-leverage long-game investment a Chinese-DSA family can make.",
+          },
+        },
+        {
+          label: { en: "Cultural reference fluency" },
+          body: {
+            en: "SAP schools want students who can hold a conversation linking Chinese history, festivals, or proverbs to modern life. The panel may ask why 端午节 traditions matter or what 《论语》 has to say about friendship. Vague \"我觉得很有意义\" answers underperform a candidate who picks one specific custom or one specific 论语 line and explains why.",
+          },
+        },
+        {
+          label: { en: "Calligraphy or recitation (school-dependent)" },
+          body: {
+            en: "Some schools — particularly Maris Stella and Chung Cheng — include a short calligraphy or classical-poem recitation segment. This is not weighted as heavily as essay and oral, but visible neglect of stroke order or rhythm signals a candidate who only practises for exams.",
+          },
+        },
+        {
+          label: { en: "Bicultural curiosity" },
+          body: {
+            en: "Schools with Bicultural Studies Programmes — Hwa Chong, Dunman High, Nanyang Girls', Nan Hua, River Valley — explicitly look for candidates curious about contemporary China alongside Chinese classical heritage. A candidate who mentions reading a Chinese news app, watching a 央视 documentary, or following a Beijing-based bilingual blogger scores meaningfully higher than one who only cites Tang poems.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Essay / 写作 focus" },
+          body: {
+            en: "Most schools allocate the largest single block to a 350–500 character essay on a prompt revealed on the day. Coaches who prep DSA-Sec candidates say the highest-scoring essays open with a specific scene rather than a thesis statement. Panels read for whether the candidate can sustain a single narrative line for the full length, or whether the writing wanders into separate paragraphs that don't connect.",
+          },
+        },
+        {
+          position: { en: "Oral interview / 口试 focus" },
+          body: {
+            en: "Expect 10–15 minutes of live Mandarin conversation. The opener is often \"介绍一本你最近读的中文书\" or a current-affairs prompt. Where candidates lose ground is the second question — when the panel pushes back. Practising not the first answer but how to extend it under follow-up is what separates DSA candidates from PSLE-oral prep.",
+          },
+        },
+        {
+          position: { en: "Comprehension / 阅读理解 focus" },
+          body: {
+            en: "Some schools include a sight-read of an unseen passage — modern essay, news commentary, or excerpt from a contemporary novel — followed by short written or oral response. The signal is whether the candidate can summarise the passage's argument in one sentence and react to it, not whether they can list every supporting detail. Skim-and-react beats slow-and-thorough on the clock.",
+          },
+        },
+        {
+          position: { en: "Recitation / 朗诵 focus" },
+          body: {
+            en: "A minority of schools — Chung Cheng High and Maris Stella have historically included this — ask for a prepared poem or short prose recitation. Choose a Tang or Song poem with clear emotion (李白 《静夜思》 is too obvious; consider 杜甫 《春望》 or a 苏轼 ci). Memorisation alone is not enough — panels listen for whether the candidate understands what they're reciting.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Schools vary which components they emphasise. Hwa Chong and Nanyang Girls' weight essay and oral most heavily. Maris Stella and Chung Cheng include recitation. Dunman High and Nan Hua publish FAQs that list essay, oral, and comprehension as the three core stations.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love Chinese?" },
+          subtext: {
+            en: "The panel wants a specific book, author, or scene — not \"because my parents speak Chinese at home.\"",
+          },
+          approach: {
+            en: "Open with one concrete reading memory, then connect to your character.",
+          },
+          template: {
+            en: "Last year I read 龙应台 《目送》, and the line about watching her son walk away made me cry — that was the first time I realised Chinese could capture something English I had read couldn't.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the Chinese department, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific feature of the school's Chinese programme — Bicultural Studies, a known competition record, a teacher mentioned at open house.",
+          },
+          template: {
+            en: "Dunman's Bicultural Studies Programme — I read your alumni article on the Beijing immersion trip and I want to be in the cohort that goes through that.",
+          },
+        },
+        {
+          question: { en: "What's the last Chinese book you read?" },
+          subtext: {
+            en: "Can the candidate go beyond textbook titles and speak honestly about a personal response?",
+          },
+          approach: {
+            en: "Pick a real book, name one specific scene or line, and say what you actually thought — including what you disliked.",
+          },
+          template: {
+            en: "余华 《活着》. I didn't like it the first time because everyone keeps dying. On the re-read I understood 福贵 is not the victim — the book is asking what 活 means when everything is taken away.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time Chinese was difficult for you." },
+          subtext: {
+            en: "Schools want growth narratives, not natural-talent claims.",
+          },
+          approach: {
+            en: "Pick a real struggle, describe what you did, share the result.",
+          },
+          template: {
+            en: "My P5 composition was returned with red ink on every paragraph. I started keeping a notebook of phrases I copied from books I liked, and by P6 SA2 my essay scored 38 / 40.",
+          },
+        },
+        {
+          question: { en: "How is Chinese different from English for you?" },
+          subtext: {
+            en: "Tests whether the candidate has thought about language at a level beyond translation.",
+          },
+          approach: {
+            en: "Name one specific feature — tone, character images, classical roots — and give one example.",
+          },
+          template: {
+            en: "Chinese characters carry pictures inside them. 休 is a person resting against a tree. English never does that — once I noticed it, I started reading Chinese slower because every character is a small image.",
+          },
+        },
+        {
+          question: { en: "How do you keep up Chinese alongside English-medium subjects?" },
+          subtext: {
+            en: "Schools fear DSA candidates who flame out in Higher Chinese by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real routine, not platitudes about discipline.",
+          },
+          template: {
+            en: "I read a Chinese book for 20 minutes before bed every night — usually a chapter. On weekends my mother and I watch one episode of a Chinese documentary together. It's not extra work, it's how I unwind.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason — Bicultural Studies fit, teacher rapport, programme depth.",
+          },
+          template: {
+            en: "Honestly, your school. Hwa Chong's Bicultural Studies takes Chinese further than any other programme I researched, and that's the future I want.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Chinese Language, IP" },
+          context: {
+            en: "SAP and Bicultural Studies Programme host school. Higher Chinese is a core subject for all students. DSA-Sec Chinese is among the most competitive talent areas at HCI.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Chinese Language, IP" },
+          context: {
+            en: "SAP and Bicultural Studies Programme. Strong literature and cultural-exchange tradition. Higher Chinese is taken by all students.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Chinese Language, IP / DSA-Sec" },
+          context: {
+            en: "SAP and Bicultural Studies Programme. 2026 DSA FAQ lists Chinese Language as a talent area. Trial published as essay, oral, and comprehension components.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          url: "https://www.nanhuahigh.moe.edu.sg/announcements/talent-areas-for-dsa/",
+          talentArea: { en: "Chinese Language, DSA-Sec" },
+          context: {
+            en: "SAP and Bicultural Studies Programme. Higher Chinese or Chinese Language as Mother Tongue is a requirement for all DSA applicants.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/",
+          talentArea: { en: "Chinese Language, DSA-Sec" },
+          context: {
+            en: "SAP school — applicants must offer Chinese Language or Higher Chinese at primary. Strong Chinese literature and debate tradition.",
+          },
+        },
+        {
+          name: "River Valley High School",
+          url: "https://www.rivervalleyhigh.moe.edu.sg/admissions/dsa-sec/",
+          talentArea: { en: "Chinese Language, IP" },
+          context: {
+            en: "SAP and Bicultural Studies Programme. Higher Chinese is core. Recognised for sustained Speech and Drama Festival results in Mandarin.",
+          },
+        },
+        {
+          name: "Chung Cheng High School (Main)",
+          url: "https://www.chunghighmain.moe.edu.sg/",
+          talentArea: { en: "Chinese Language, DSA-Sec" },
+          context: {
+            en: "SAP school with strong calligraphy and literature tradition. Trial historically includes a recitation or calligraphy component alongside essay and oral.",
+          },
+        },
+        {
+          name: "Maris Stella High School",
+          url: "https://www.marisstellahigh.moe.edu.sg/",
+          talentArea: { en: "Chinese Language (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school, all-boys. Recognised for sustained Chinese literature and speech-and-drama record. Higher Chinese is a core offering.",
+          },
+        },
+        {
+          name: "Singapore Chinese Girls' School",
+          url: "https://www.scgs.moe.edu.sg/admissions/dsa/",
+          talentArea: { en: "Chinese Language (Girls), DSA-Sec" },
+          context: {
+            en: "SAP school (since 2019). Strong Chinese language and culture programme. Higher Chinese is widely taken across the cohort.",
+          },
+        },
+        {
+          name: "Anglican High School",
+          url: "https://www.anglicanhigh.moe.edu.sg/",
+          talentArea: { en: "Chinese Language, DSA-Sec" },
+          context: {
+            en: "SAP school. Listed as a Chinese Language DSA-Sec participating school across recent admission cycles.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Have the child read one contemporary Chinese book in full — not a textbook excerpt. Recommended starting authors at P6 level: 龙应台, 杨绛, 林海音 《城南旧事》, 老舍 《骆驼祥子》. The goal is one whole-book reaction the candidate genuinely owns. Panels detect ghost-written summaries within two follow-up questions.",
+            },
+            {
+              en: "Confirm CCA records for any Chinese-related activities at primary school are accurate. MOE pulls CCA participation, school awards, competition results (全国学生华文创作比赛, 学生华文戏剧节, 全国华文常识比赛, MOE Story Telling Competition) into the DSA portal. If your child placed in any of these, check that the CCA teacher has logged it.",
+            },
+            {
+              en: "Run a mock oral interview with a fluent adult — not a tutor reading from a script. The interviewer's job is to ask follow-ups, not to feed lines. Record on phone. Watch back together. Flag any answer that ran over 60 seconds or relied on phrases the child clearly memorised but doesn't understand.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Stop drilling new vocabulary. Vocabulary gains in the final week rarely transfer to live trial use, and the cognitive load shows as hesitation. Switch to re-reading the one book the candidate will discuss in oral, and one current-affairs article in Chinese per day.",
+            },
+            {
+              en: "Confirm trial logistics in writing. Date, time, venue, attire, what to bring (some schools ask for a writing sample portfolio — Catholic High and Chung Cheng have done so in past cycles). Email the school office to confirm if anything in the trial notice is ambiguous.",
+            },
+            {
+              en: "One unfamiliar audience. Have the child explain their favourite Chinese book in Mandarin to a relative or family friend they don't usually speak Chinese with. The discomfort surfaces the gaps tuition has been hiding.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Light breakfast 90 minutes before — the essay component runs long and a heavy meal makes the writing hand sluggish. Bring water in a clear bottle.",
+            },
+            {
+              en: "Drop off, don't hover. Greet the teacher-in-charge by name in Mandarin if you can — the staff notice. Over-involved parents are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What did you write about?\" — give the child space to share without interrogation. Detailed reconstruction can wait 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no clear preparation plan — there are still real moves. Don't try to teach new characters or build vocabulary. Instead, pick one contemporary Chinese book the child has actually read, and rehearse a 90-second spoken response to three questions: what is the book about, what did you think, what stayed with you. The single highest-leverage prep is being able to talk about one book deeply, not five books superficially. For the essay component, practise one prompt opening per day — train the muscle of starting with a specific scene rather than a thesis. Some families bring in a private Chinese tutor at this stage to compress the curve. A good tutor can sharpen the oral response and tighten essay openings, but no tutor produces, in three sessions, the cultural depth that years of reading at home build. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  dance: {
+    slug: "dance",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Dance", zh: "舞蹈", ms: "Tarian", ta: "நடனம்" },
+    hook: {
+      en: "Dance DSA — auditions reward presence, not just technique.",
+      zh: "舞蹈 DSA——audition 看的是台缘，不只是技术",
+      ms: "DSA Tarian — audisi menilai persembahan, bukan teknik semata-mata.",
+      ta: "நடன DSA — ஆடிஷன் தொழில்நுட்பத்தை மட்டுமல்ல, மேடை இருப்பையும் மதிப்பிடுகிறது.",
+    },
+    intro: {
+      en: "Dance DSA auditions test more than flexibility and turns. Panels read for musicality, stage presence, and how quickly a dancer can pick up unfamiliar choreography. Here's what trials at SOTA, SAP, and IP dance programmes really weigh.",
+      zh: "舞蹈 DSA audition 看的不只是软度和旋转。考官读的是音乐性、台缘、以及多快能接住没见过的编舞。SOTA、SAP、IP 舞蹈项目 trial 真正的权重在哪。",
+      ms: "Audisi DSA Tarian menilai lebih daripada kelenturan dan pusingan. Panel menilai musikaliti, kehadiran pentas, dan kepantasan mempelajari koreografi baharu.",
+      ta: "நடன DSA ஆடிஷன் நெகிழ்வுத்தன்மை மற்றும் சுழற்சிகளை மட்டுமல்ல, இசைத்திறன், மேடை இருப்பு, புதிய நடன அமைப்பை எவ்வளவு விரைவாக பின்பற்ற முடியும் என்பதை மதிப்பிடுகிறது.",
+    },
+    summary: {
+      en: "Audition structure, genre-specific notes (Chinese / Indian / Malay / Ballet / Modern), interview questions, sample schools.",
+      zh: "Audition 流程、各舞种重点（华族/印度/马来/芭蕾/现代）、面试题、招生学校。",
+      ms: "Struktur audisi, nota khusus genre, soalan temu duga, sekolah peserta.",
+      ta: "ஆடிஷன் கட்டமைப்பு, வகை சார்ந்த குறிப்புகள், நேர்காணல் கேள்விகள், பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "School of the Arts (SOTA)",
+      "Nanyang Girls' High School",
+      "Singapore Chinese Girls' School",
+      "Raffles Girls' School (Secondary)",
+      "Methodist Girls' School (Secondary)",
+      "River Valley High School",
+    ],
+    metaDescription: {
+      en: "Dance DSA-Sec audition guide for Singapore P6 — what panels assess across Chinese, Indian, Malay, Ballet, and Modern Dance, sample interview questions, participating schools.",
+      zh: "新加坡 P6 舞蹈 DSA-Sec audition 指南——华族/印度/马来/芭蕾/现代舞各舞种考察重点、面试题、招生学校。",
+      ms: "Panduan audisi DSA-Sec Tarian Singapura — apa panel nilai, soalan temu duga, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 நடன DSA-Sec வழிகாட்டி — பல்வேறு வகைகளில் குழு என்ன மதிப்பிடுகிறது, கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Most school dance auditions in Singapore run 90–120 minutes and follow a similar structure: warm-up and floor work led by the school's dance teacher, a short follow-the-leader sequence to test pick-up speed, an applicant's prepared solo (60–90 seconds), and a short interview. SOTA and the SSP (Singapore Schools' Special Programme — for dance) audition is more rigorous: multi-round, with classical technique and improvisation tested separately. No school publishes a rubric, but observations from past Singapore Youth Festival (SYF) Arts Presentation judges and parent reports converge on the six dimensions below.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Musicality and timing" },
+          body: {
+            en: "Whether the dancer hits accents in the music, or moves on their own internal count. Panels deliberately use unfamiliar music in the pick-up sequence to test real musicality versus rehearsed counting. A dancer who lands a turn on the downbeat scores higher than one who lands it cleanly off-beat.",
+          },
+        },
+        {
+          label: { en: "Pick-up speed" },
+          body: {
+            en: "The follow-the-leader sequence is the single highest-signal segment. Panels show 8 to 16 counts of choreography twice, then expect the dancer to perform it. Speed of acquisition predicts how quickly the child will progress in school CCA. A dancer who picks up cleanly on the second viewing scores better than one with stronger technique who needs four passes.",
+          },
+        },
+        {
+          label: { en: "Stage presence and projection" },
+          body: {
+            en: "Eyes up, face engaged, energy reaching the back of the studio. At P6 level, panels see many technically competent dancers who perform like they're rehearsing alone. The one who commits visibly — chin up, gaze out, smile or seriousness owned — stands out before technique is even scored.",
+          },
+        },
+        {
+          label: { en: "Technique appropriate to genre" },
+          body: {
+            en: "For Chinese Dance: turnout, fan or sleeve handling, body shifts. For Indian Dance: hasta mudras, postural stamina, rhythm in jathis. For Malay Dance: lemak gemalai (graceful flow), gestural precision. For Ballet: turnout, alignment, port de bras. For Modern: floor work, release, weight transfer. Panels score technique against age-appropriate expectations, not professional standard.",
+          },
+        },
+        {
+          label: { en: "Improvisation and choice-making" },
+          body: {
+            en: "SOTA and some IP schools include a short improvisation segment — \"dance for 30 seconds to this music we just played.\" Panels look at whether the dancer makes interesting movement choices or defaults to the steps they know. The child who lies on the floor and stays still for 5 seconds before moving often scores higher than one who fills every count with motion.",
+          },
+        },
+        {
+          label: { en: "Coachability and studio etiquette" },
+          body: {
+            en: "How the dancer behaves in the studio — whether they thank the panel, accept corrections without sulking, support fellow auditionees. Panels who will work with this child for four years weight this heavily. Studio etiquette built over years of CCA or external academy training shows immediately.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Chinese Dance" },
+          body: {
+            en: "The strongest CCA tradition in Singapore secondary schools — Nanyang Girls', Dunman High, Nan Hua, Chung Cheng, River Valley, and Catholic High all run nationally competitive Chinese Dance programmes. Audition repertoire that signals depth: a folk dance excerpt with a clear regional style (Mongolian, Dai, Uyghur, Tibetan) outperforms generic \"classical\" choreography. Fan or sleeve handling that holds its line under turns is the key technical separator at P6.",
+          },
+        },
+        {
+          position: { en: "Indian Dance (Bharatanatyam / others)" },
+          body: {
+            en: "Strongest school programmes include the Indian Dance offerings at schools with active Indian cultural CCAs. Audition signals: clean hasta mudras held without trembling, a jathi (rhythmic syllable sequence) the dancer can both speak and dance, and aramandi (half-sitting stance) endurance. A child who has performed at temple or community festivals brings audience experience panels look for.",
+          },
+        },
+        {
+          position: { en: "Malay Dance" },
+          body: {
+            en: "Programmes are strongest in schools with active Malay cultural traditions. Audition signals: lemak gemalai (graceful, flowing quality) that doesn't collapse into softness, precise hand gestures held to the music's phrasing, and an awareness of the difference between Joget, Inang, and Zapin rhythmic feel. A short prepared excerpt from any standard piece is acceptable; specific song mastery is not required at P6.",
+          },
+        },
+        {
+          position: { en: "Ballet / Modern / Contemporary" },
+          body: {
+            en: "SOTA Dance has the strongest classical and contemporary tracks in Singapore secondary. Audition signals for ballet: turnout from the hip not the foot, port de bras that doesn't disconnect at the shoulder, and the ability to hold a tendu without trembling. For contemporary or modern: floor work confidence, weight transfer through the spine, willingness to take up space. Pre-existing RAD or other graded exam levels (Grade 4+) often appear in audition rubrics as a supporting signal.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Most secondary schools have one or two genres they're strongest in. Research the school's CCA history — SYF Arts Presentation results, recent showcase repertoire, and the artistic director's training background tell you whether the school will develop your child's genre or ask them to switch.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love dance?" },
+          subtext: {
+            en: "Panels want a specific moment — first performance, breakthrough class, a piece you couldn't stop watching — not \"because it makes me happy.\"",
+          },
+          approach: {
+            en: "Open with one concrete memory, then connect to your character.",
+          },
+          template: {
+            en: "The first time I did a Mongolian shoulder shake on stage and saw my mother in the front row tearing up — that's when I knew dance wasn't just an after-school activity for me.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the dance programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific item — SYF Distinction, a piece you watched on YouTube, the artistic director's training.",
+          },
+          template: {
+            en: "Your Chinese Dance group's SYF Arts Presentation Distinction in 2025 — I watched the showcase clip three times. The Tibetan piece's transitions are exactly the kind of technical work I want to grow into.",
+          },
+        },
+        {
+          question: { en: "What's the hardest dance piece you've worked on?" },
+          subtext: {
+            en: "Can the dancer articulate technical or emotional difficulty beyond \"the steps were hard\"?",
+          },
+          approach: {
+            en: "Name the piece, the specific moment, what you had to change in your body or mind.",
+          },
+          template: {
+            en: "Last year's Dai folk dance — the slow leg extensions on one foot. I kept losing balance. My teacher made me hold the tendu for 60 seconds every morning. By performance day I held the line.",
+          },
+        },
+        {
+          question: { en: "Tell us about an injury or setback in dance." },
+          subtext: {
+            en: "Schools want growth narratives, not natural-talent claims.",
+          },
+          approach: {
+            en: "Describe a real setback, what you did, what changed.",
+          },
+          template: {
+            en: "I sprained my ankle six weeks before SYF in P5. I sat out floor work but kept doing upper-body and core daily. I performed but my teacher said it taught me what every dancer needs to learn — how to stay in the room when you can't be on the floor.",
+          },
+        },
+        {
+          question: { en: "Who is a dancer or choreographer you admire?" },
+          subtext: {
+            en: "Tests whether the candidate watches dance outside their own class.",
+          },
+          approach: {
+            en: "Name someone specific — and be ready to discuss one specific piece.",
+          },
+          template: {
+            en: "Yang Liping. Her peacock dance solo — the way she holds the arms is the technical aspiration I think about every time I run through my own arm work.",
+          },
+        },
+        {
+          question: { en: "How do you balance dance training with school?" },
+          subtext: {
+            en: "Schools fear DSA dancers who fall behind academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real routine, not platitudes.",
+          },
+          template: {
+            en: "I do English homework on the way to studio, finish Math before dinner, and revise on weekends. I don't dance on Sundays — that's my study and rest day, and my teacher agreed it was the right call.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. SOTA's programme structure dedicates more studio hours per week and gives me the genre depth I want — and that matters more to me than a shorter commute.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "School of the Arts (SOTA)",
+          url: "https://www.sota.edu.sg/admissions/sota-direct-school-admission-dsa-exercise/",
+          talentArea: { en: "Dance (Ballet / Contemporary / Chinese / Indian / Malay), IB" },
+          context: {
+            en: "Specialised arts school. Multi-round audition with classical technique and improvisation tested separately. The most competitive dance DSA pathway in Singapore.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Chinese Dance (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies. SYF Arts Presentation Chinese Dance Distinction repeatedly across recent years. Strong feeder pipeline from Chinese-cultural primaries.",
+          },
+        },
+        {
+          name: "Singapore Chinese Girls' School",
+          url: "https://www.scgs.moe.edu.sg/admissions/dsa/",
+          talentArea: { en: "Chinese Dance (Girls), DSA-Sec" },
+          context: {
+            en: "SAP school. Recognised CCA tradition in Chinese Dance with sustained SYF performance.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/year-1-direct-school-admission/",
+          talentArea: { en: "Dance (Modern / Indian / Chinese / Malay), IP" },
+          context: {
+            en: "IP school with strong multi-genre dance programme. Audition assesses across modern and cultural dance forms depending on candidate's training background.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.sch.edu.sg/admission/dsa/",
+          talentArea: { en: "Dance (Modern / Chinese / Indian), DSA-Sec" },
+          context: {
+            en: "Strong Modern Dance CCA tradition with multiple SYF Distinctions. Indian and Chinese Dance offerings also active.",
+          },
+        },
+        {
+          name: "River Valley High School",
+          url: "https://www.rivervalleyhigh.moe.edu.sg/admissions/dsa-sec/",
+          talentArea: { en: "Chinese Dance, IP / DSA-Sec" },
+          context: {
+            en: "SAP and Bicultural Studies. Chinese Dance offered as DSA-Sec talent area. Studio hours and showcase repertoire scale up at Sec 2 onward.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Chinese Dance, IP / DSA-Sec" },
+          context: {
+            en: "SAP and Bicultural Studies. 2026 DSA FAQ lists Chinese Dance among talent areas. SYF Chinese Dance tradition.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          url: "https://www.nanhuahigh.moe.edu.sg/announcements/talent-areas-for-dsa/",
+          talentArea: { en: "Chinese Dance (Girls), DSA-Sec" },
+          context: {
+            en: "SAP school. Chinese Dance is among Nan Hua's published talent areas. Higher Chinese / Chinese Language as Mother Tongue requirement applies.",
+          },
+        },
+        {
+          name: "Crescent Girls' School",
+          url: "https://www.crescent.moe.edu.sg/admissions/dsa-sec/",
+          talentArea: { en: "Dance (Modern), DSA-Sec" },
+          context: {
+            en: "Recognised Modern Dance CCA with sustained SYF showings. Audition pattern includes technique, performance, and short interview.",
+          },
+        },
+        {
+          name: "CHIJ Saint Nicholas Girls' School",
+          url: "https://www.chijstnicholas.moe.edu.sg/admissions/",
+          talentArea: { en: "Dance (Chinese / Modern), DSA-Sec" },
+          context: {
+            en: "Strong dance tradition with both Chinese and Modern Dance CCAs active at SYF level.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the audition is still weeks out" },
+          items: [
+            {
+              en: "Choose the audition solo carefully. A 60-90 second excerpt your child has performed publicly is safer than a piece they're still rehearsing. Panels see many auditionees attempt material above their level. Clean execution of age-appropriate choreography always outscores stumbling through harder material.",
+            },
+            {
+              en: "Confirm CCA records at primary school. MOE pulls CCA participation, school awards, SYF Arts Presentation results, and external achievements (graded examinations such as RAD or ISTD, NAFA / SOTA junior programme alumni status, recognised festival or showcase performances) into the DSA portal. Incomplete records hurt the application — ask the CCA teacher to verify what's been logged.",
+            },
+            {
+              en: "Run two mock auditions in unfamiliar studios. Most dancers underperform first audition because the studio, the floor, and the mirrors are unfamiliar. Book trial sessions at two different dance schools to surface this in advance, not at the real audition.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Cut intensity. Switch to barre work and floor only — no new choreography, no extra rehearsals. Final-week added load rarely pays off and frequently produces a tweak. Two ankles you don't fully trust on audition day is the most common reason of a strong dancer underperforming.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire (some schools specify hair colour and grip style, leotard colour, no jewellery), audition number pickup. Email the school office to confirm anything ambiguous — written response is your record.",
+            },
+            {
+              en: "One unfamiliar mirror, one unfamiliar floor. Practise the solo at least once in a space the child has never danced in. Spatial recalibration matters more than the dancer realises until they're in the room.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of audition" },
+          items: [
+            {
+              en: "Light breakfast 90 minutes before — no heavy starch, no fizzy drinks. Bring water, a long-sleeve layer for warm-up, hair pins, plasters. Audition halls run cold; muscle warmth is the difference between a controlled extension and a strained one.",
+            },
+            {
+              en: "Drop off, don't hover. Greet the teacher-in-charge by name, leave the waiting area. Parents on the audition floor — even visible through the door — affect performance. Use the time to grab a quiet coffee.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What was your favourite part?\" — give the child space. Notes for next time wait 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, audition coming up, no clear preparation plan — there are still real moves. Don't try to learn a new piece. Instead, take the solo your child can dance cleanly with eyes closed and rehearse it three times in three different rooms. The single highest-leverage prep is presence — eyes up, face engaged, owning the space — and presence is built by repeating familiar choreography in unfamiliar environments. For the pick-up sequence, practise watching an 8-count combination once and performing it on the second viewing. That muscle is trainable in a week even if technique isn't. Some families bring in a private dance coach at this stage. A good coach can sharpen presence and tighten the solo's opening eight bars — but no coach produces, in three sessions, the floor stamina years of class build. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  drama: {
+    slug: "drama",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Drama", zh: "戏剧", ms: "Drama", ta: "நாடகம்" },
+    hook: {
+      en: "Drama DSA — auditions reward truthful, not performative, choices.",
+      zh: "戏剧 DSA——audition 奖励真诚，不奖励表演",
+      ms: "DSA Drama — audisi memilih pilihan jujur, bukan dramatik.",
+      ta: "நாடக DSA — ஆடிஷன் உண்மையான தேர்வுகளை மதிக்கிறது, செயற்கையானவற்றை அல்ல.",
+    },
+    intro: {
+      en: "Drama DSA panels at SOTA and major IP / SAP schools look past loud delivery to whether the actor listens, reacts, and makes specific choices on the spot. Here's what auditions really measure — and what late prep can still fix.",
+      zh: "SOTA 和主要 IP / SAP 学校的戏剧 DSA 考官看的不是大声朗读，而是听、反应、当场做选择的能力。Audition 真正在测什么——以及临阵磨枪还来得及补哪些。",
+      ms: "Panel DSA Drama di SOTA dan sekolah IP / SAP utama menilai pendengaran, tindak balas, dan pilihan spesifik — bukan persembahan kuat.",
+      ta: "SOTA மற்றும் முக்கிய IP / SAP பள்ளிகளின் நாடக DSA குழுக்கள் சத்தமான விளக்கக்காட்சியை மீறி, நடிகர் கேட்கிறாரா, எதிர்வினையாற்றுகிறாரா, குறிப்பிட்ட தேர்வுகளை செய்கிறாரா என்பதைப் பார்க்கிறார்கள்.",
+    },
+    summary: {
+      en: "Audition structure, monologue selection, ensemble work, improvisation, sample interview questions, participating schools.",
+      zh: "Audition 流程、独白选材、群戏配合、即兴、面试题、招生学校。",
+      ms: "Struktur audisi, pilihan monolog, kerja ensemble, improvisasi, soalan temu duga, sekolah peserta.",
+      ta: "ஆடிஷன் கட்டமைப்பு, மோனோலாக் தேர்வு, குழுப் பணி, இம்ப்ரோவ், கேள்விகள், பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "School of the Arts (SOTA)",
+      "Anglo-Chinese School (Independent)",
+      "Victoria School",
+      "Methodist Girls' School (Secondary)",
+      "Raffles Girls' School (Secondary)",
+      "Nanyang Girls' High School",
+    ],
+    metaDescription: {
+      en: "Drama DSA-Sec audition guide for Singapore P6 — what panels assess in monologue, ensemble, and improvisation work, interview questions, participating schools.",
+      zh: "新加坡 P6 戏剧 DSA-Sec audition 指南——独白、群戏、即兴各环节考察重点、面试题、招生学校。",
+      ms: "Panduan audisi DSA-Sec Drama Singapura — penilaian monolog, ensemble, improvisasi, soalan temu duga, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 நாடக DSA-Sec வழிகாட்டி — மோனோலாக், ensemble, இம்ப்ரோவ் மதிப்பீடு, கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Drama auditions in Singapore secondary schools typically run 60–90 minutes for the audition itself, plus a short interview. The standard structure: a prepared monologue (60–90 seconds, often two contrasting pieces at SOTA), a short ensemble or paired improvisation, and a sight-reading from a text the panel provides on the day. SOTA's Theatre programme is the only published multi-round audition format. SYF Arts Presentation Drama judges and parent reports across cycles converge on the six dimensions below.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Listening and reaction" },
+          body: {
+            en: "The single highest-signal dimension at P6 — and the most under-trained. Panels in ensemble or paired improv watch whether the candidate listens to their scene partner or waits to deliver their next line. A candidate who pauses, breathes, and responds to what just happened scores higher than one who powers through a memorised intention. Truth in the listen beats power in the line.",
+          },
+        },
+        {
+          label: { en: "Specific physical and vocal choices" },
+          body: {
+            en: "Are the actor's body and voice neutral, or do they make a choice — a posture, an inflection — that says something about the character? Panels see many auditionees who deliver lines without committing to a body. A candidate who plays the same monologue with their weight on one hip, hands behind their back, voice pitched slightly higher, instantly signals craft awareness.",
+          },
+        },
+        {
+          label: { en: "Material appropriate to age" },
+          body: {
+            en: "A common P6 mistake: choosing adult monologues (Shakespeare's soliloquies, Tennessee Williams, Sarah Kane). Panels see this as a coaching tell — the child has been pushed into material they cannot inhabit. Age-appropriate material played with truth scores higher than ambitious material played generically. Singapore writers like Ovidia Yu, Haresh Sharma, or Alfian Sa'at often have monologues written for young performers.",
+          },
+        },
+        {
+          label: { en: "Improvisation choice-making" },
+          body: {
+            en: "When given a prompt — \"you've just found a letter you weren't supposed to read\" — does the actor commit to a specific situation and stay in it, or do they hedge with generic emotion? The improv segment exposes whether the candidate makes choices or waits to be told what to do. The most common reason a strong-on-paper auditionee underperforms is freezing here.",
+          },
+        },
+        {
+          label: { en: "Ensemble awareness" },
+          body: {
+            en: "In paired work, panels watch whether the candidate makes their partner look good. Drama selection is for a four-year ensemble; a candidate who steamrolls a partner is a coachability red flag. The actor who passes focus generously and supports their partner's choices, while still being present themselves, scores meaningfully higher.",
+          },
+        },
+        {
+          label: { en: "Coachability and self-direction" },
+          body: {
+            en: "After the first monologue pass, panels often give a redirect — \"now play it as if the person you're talking to just laughed at you.\" Does the actor incorporate the note immediately, or do they default to their rehearsed delivery? The note-taking moment is where panels read coachability most clearly. Schools who will work with this child for four years weight this heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Monologue work" },
+          body: {
+            en: "Most schools ask for one or two contrasting monologues. \"Contrasting\" means different tone — one comic, one serious; one classical, one contemporary; one high-status, one low-status. Selection is half the battle: a strong piece played at 80% beats a generic piece played at 100%. Avoid the most-auditioned pieces (the Audition Speeches for Young Actors anthology over-circulates). Singapore playwrights like Haresh Sharma, Alfian Sa'at, and Ovidia Yu have published collections with strong young-performer monologues.",
+          },
+        },
+        {
+          position: { en: "Improvisation / on-the-spot scenes" },
+          body: {
+            en: "The single most under-prepared component. Panels give a prompt (situation + relationship), expect the candidate to make a choice in 5 seconds, and commit. The skill is choice-making, not invention. Practise saying \"yes, and\" rather than blocking — agree with what your partner establishes and add to it. Most P6 candidates default to comedy when nervous; resisting that and finding the honest moment scores higher.",
+          },
+        },
+        {
+          position: { en: "Sight-reading / cold-read" },
+          body: {
+            en: "Some schools — particularly SOTA and ACS(I) — hand the candidate a short text (a poem, a scene fragment) and give 5 minutes to prepare. Panels look at whether the actor finds the meaning of the text before performing it, and whether they commit to one choice rather than reading neutrally. Practising cold-reading three times a week for a month is the highest-leverage prep here.",
+          },
+        },
+        {
+          position: { en: "Ensemble / paired scene" },
+          body: {
+            en: "When paired with another candidate, the audition becomes about listening, not performing. Panels rate how the candidate raises their partner's work. Avoid stealing focus with bigger gestures or louder lines — the panel sees that as a coachability warning. Commit to the scene's relationship and let your partner finish their thought before you respond.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Schools vary which components they emphasise. SOTA's audition is the most structured and includes all four. ACS(I), VS, MGS, and RGS typically use monologue plus a short ensemble or interview-format scene. Nanyang Girls' and other SAP schools with Chinese-language drama programmes may include a Mandarin-language piece option.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love drama?" },
+          subtext: {
+            en: "Panels want a specific moment — first performance, a play you watched, a moment on stage — not \"because it lets me be someone else.\"",
+          },
+          approach: {
+            en: "Open with one concrete memory, then connect to your character.",
+          },
+          template: {
+            en: "The first time I made an audience laugh on a line I didn't think was funny — I realised then that what's on the page is only half of it. The other half is what happens between you and the room.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the drama programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific item — a recent production, a director's name, the school's drama showcase you attended.",
+          },
+          template: {
+            en: "I watched your school's 2025 SYF Distinction piece on YouTube — the staging was unusually still for a school production, and that's the kind of theatre I want to learn from.",
+          },
+        },
+        {
+          question: { en: "What's a play or film that changed how you think about acting?" },
+          subtext: {
+            en: "Tests whether the candidate watches theatre seriously, not just performs.",
+          },
+          approach: {
+            en: "Name something specific — and be ready to discuss one specific moment.",
+          },
+          template: {
+            en: "Watching Wild Rice's production of Emily of Emerald Hill — the way the actress played all the family members herself, just by changing posture. I realised acting was about specificity, not impression.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time something went wrong on stage." },
+          subtext: {
+            en: "Schools want recovery stories, not perfection claims.",
+          },
+          approach: {
+            en: "Describe a real moment, what you did, what you learned.",
+          },
+          template: {
+            en: "My scene partner forgot a cue in our P5 showcase. I improvised a line in character to give her a way back in. She found it. After that, I stopped fearing the gaps — they're where the listening happens.",
+          },
+        },
+        {
+          question: { en: "What's the difference between performing and acting?" },
+          subtext: {
+            en: "Tests whether the candidate has thought about craft at a level beyond \"being on stage.\"",
+          },
+          approach: {
+            en: "Give a specific distinction with a concrete example.",
+          },
+          template: {
+            en: "Performing is showing the audience what you feel. Acting is being in the situation, and trusting the audience to see what's there. When I played Ali Baba last year, the night I stopped performing him and just let him be scared was the night the audience finally laughed at the right moments.",
+          },
+        },
+        {
+          question: { en: "How do you balance drama training with school?" },
+          subtext: {
+            en: "Schools fear DSA actors who flame out academically.",
+          },
+          approach: {
+            en: "Describe a real routine, not platitudes.",
+          },
+          template: {
+            en: "I do homework on the way to rehearsal and revise on weekends. Friday nights I read plays instead of phone — it's the same thing for me, but it counts as study because it builds my craft.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. SOTA's Theatre programme runs five days a week of studio time — that's more than any other school can offer, and that's what I want.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "School of the Arts (SOTA)",
+          url: "https://www.sota.edu.sg/admissions/sota-direct-school-admission-dsa-exercise/",
+          talentArea: { en: "Theatre, IB" },
+          context: {
+            en: "Specialised arts school. The most rigorous Drama audition in Singapore — two contrasting monologues, ensemble work, improvisation, and sight-reading across multiple rounds. Six-year IB Theatre pathway.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Drama (Boys), IP" },
+          context: {
+            en: "IP school with strong Drama CCA tradition and sustained SYF Arts Presentation showings. Audition typically includes a prepared monologue plus a short improvisation.",
+          },
+        },
+        {
+          name: "Victoria School",
+          url: "https://www.victoriaschool.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Drama (Boys), DSA-Sec" },
+          context: {
+            en: "Historic Drama programme. Drama listed as a published DSA-Sec talent area. Pipeline to Victoria Junior College Theatre Studies.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.sch.edu.sg/admission/dsa/",
+          talentArea: { en: "Drama (Girls), DSA-Sec" },
+          context: {
+            en: "Strong Drama CCA with sustained SYF presentation record. Audition pattern: prepared monologue, improvisation, short interview.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/year-1-direct-school-admission/",
+          talentArea: { en: "Drama / Theatre Studies, IP" },
+          context: {
+            en: "IP school with Drama and Theatre Studies pipeline through to Raffles Institution. Audition assesses across monologue, ensemble, and short cold-read.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Chinese Drama (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies. Chinese-language drama tradition with sustained SYF showings in Mandarin theatre. Audition may include Mandarin monologue option.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Chinese Drama, IP" },
+          context: {
+            en: "SAP and Bicultural Studies. Mandarin theatre programme with SYF participation. DSA-Sec talent areas include Chinese-language performing arts.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/",
+          talentArea: { en: "Chinese Drama (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school. Mandarin drama and speech tradition. Higher Chinese requirement applies.",
+          },
+        },
+        {
+          name: "St Joseph's Institution",
+          url: "https://www.sji.edu.sg/admissions/",
+          talentArea: { en: "Drama (Boys), DSA-Sec" },
+          context: {
+            en: "Drama listed in recent DSA cycles. CCA tradition includes regular school production and SYF participation.",
+          },
+        },
+        {
+          name: "Singapore Chinese Girls' School",
+          url: "https://www.scgs.moe.edu.sg/admissions/dsa/",
+          talentArea: { en: "Drama (Girls), DSA-Sec" },
+          context: {
+            en: "SAP school. English and Mandarin drama tracks. Sustained SYF Arts Presentation Drama showings.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the audition is still weeks out" },
+          items: [
+            {
+              en: "Choose monologues carefully. Pick two contrasting pieces age-appropriate for a 12-year-old. Read the full play each monologue comes from — panels often ask. Avoid the most over-circulated pieces; ask a drama teacher or check Singapore playwright collections (Haresh Sharma, Alfian Sa'at, Ovidia Yu) for fresher options.",
+            },
+            {
+              en: "Confirm CCA records at primary school. MOE pulls CCA participation, school awards, SYF Arts Presentation results, and external programme alumni status (Wild Rice Young & Wild, The Theatre Practice Mandarin programmes, Singapore Repertory Theatre youth) into the DSA portal. Ask the CCA teacher to verify all drama-related entries.",
+            },
+            {
+              en: "Run two mock auditions for unfamiliar audiences. Most actors underperform first audition because the room and the panel are unfamiliar. Perform the monologues for a teacher, a relative, and a school friend's parent — three different audiences in three different rooms.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Stop adjusting the monologue. Final-week direction notes rarely stick and frequently introduce hesitation. Run the pieces through cleanly without trying to make them better. Vocal warmth and breath support matter more than further interpretation work.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire, what to bring. Some auditions ask for a prepared headshot or printed copy of the monologue text — check the audition brief twice and confirm anything ambiguous by email.",
+            },
+            {
+              en: "One unfamiliar listener. Have the child run their monologue once for someone they've never performed for. If a smile or a laugh comes back at an unexpected line, that's the line to trust on audition day — not the one rehearsed for effect.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of audition" },
+          items: [
+            {
+              en: "Light breakfast 90 minutes before. Bring water at room temperature — cold water tightens the voice. A lozenge or hot honey lemon 30 minutes pre-audition helps if the throat is dry.",
+            },
+            {
+              en: "Drop off, don't hover. Greet the audition coordinator, leave. Parents waiting in the lobby in costume-coordinated outfits read as over-involved. Use the time to grab a coffee.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What surprised you?\" — let the child share. Reconstruction of every line waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, audition coming up, no clear preparation plan — there are still real moves. Don't pick a new monologue. Instead, take the one piece your child can deliver with eyes closed and practise three different versions: one where they're trying to convince, one where they're confessing, one where they're remembering. The single highest-leverage prep is choice-making — being able to play the same text three ways under pressure — and that muscle is trainable in a week. For improvisation, run \"yes-and\" exercises at home twice a day. For the cold-read, hand the child an unfamiliar poem each evening and give 90 seconds to find one moment, then perform. Some families bring in a private acting coach at this stage. A good coach can sharpen specificity and tighten the opening 10 seconds — but no coach produces, in three sessions, the listening discipline that years of ensemble work build. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  art: {
+    slug: "art",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Visual Arts", zh: "美术", ms: "Seni Visual", ta: "காட்சிக் கலை" },
+    hook: {
+      en: "Visual Arts DSA — portfolios reward thinking, not finish.",
+      zh: "美术 DSA——作品集看的是思考，不是完成度",
+      ms: "DSA Seni Visual — portfolio menghargai pemikiran, bukan kemasan.",
+      ta: "காட்சிக் கலை DSA — பணித்தொகுப்பு சிந்தனையை மதிக்கிறது, முடிப்பை அல்ல.",
+    },
+    intro: {
+      en: "Visual Arts DSA at SOTA, ACS(I), and SAP/IP schools is more about how you see than what you finish. Panels read sketchbooks for curiosity, on-spot tasks for observation, and interviews for whether you can talk about your work. Here's what the portfolio review really weighs.",
+      zh: "SOTA、ACS(I) 和 SAP/IP 学校的美术 DSA 看的是你如何观察，不是你完成了什么。考官读速写本看好奇心、现场题看观察力、面试看你能否谈论自己的作品。Portfolio review 真正的权重在哪。",
+      ms: "DSA Seni Visual di SOTA, ACS(I), dan sekolah SAP/IP menilai cara melihat lebih daripada hasil akhir. Panel membaca buku lakaran untuk rasa ingin tahu, tugas spontan untuk pemerhatian.",
+      ta: "SOTA, ACS(I) மற்றும் SAP/IP பள்ளிகளில் காட்சிக் கலை DSA என்பது நீங்கள் என்ன முடிக்கிறீர்கள் என்பதைவிட எப்படிப் பார்க்கிறீர்கள் என்பதைப் பற்றியது. குழுக்கள் ஸ்கெட்ச்புக்கை ஆர்வத்திற்காகவும், மதிப்பீட்டுப் பணியை அவதானிப்புக்காகவும் படிக்கிறார்கள்.",
+    },
+    summary: {
+      en: "Portfolio expectations, on-spot drawing tasks, interview questions, sample schools across SOTA / SAP / IP.",
+      zh: "作品集要求、现场写生题、面试题、SOTA / SAP / IP 招生学校。",
+      ms: "Jangkaan portfolio, tugas lukisan spontan, soalan temu duga, sekolah peserta.",
+      ta: "பணித்தொகுப்பு எதிர்பார்ப்பு, இட சோதனைப் பணி, கேள்விகள், பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "School of the Arts (SOTA)",
+      "Anglo-Chinese School (Independent)",
+      "Nanyang Girls' High School",
+      "CHIJ Saint Nicholas Girls' School",
+      "Methodist Girls' School (Secondary)",
+      "Nan Hua High School",
+    ],
+    metaDescription: {
+      en: "Visual Arts DSA-Sec audition guide for Singapore P6 — what panels look for in portfolios, on-spot drawing tasks, interview questions, participating schools.",
+      zh: "新加坡 P6 美术 DSA-Sec audition 指南——作品集要求、现场写生、面试题、招生学校。",
+      ms: "Panduan audisi DSA-Sec Seni Visual Singapura — penilaian portfolio, tugas lukisan, soalan temu duga, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 காட்சிக் கலை DSA-Sec வழிகாட்டி — பணித்தொகுப்பு, வரைதல் பணி, கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Visual Arts DSA-Sec auditions in Singapore typically combine three components: a portfolio review (8–15 works submitted in advance or brought on the day), an on-spot drawing or observation task (45–90 minutes), and a short interview about the portfolio. SOTA's Visual Arts audition is the most structured — multi-round, with a written component plus practical work. Other schools (ACS(I), NYGH, MGS, CHIJ St Nicholas, Nan Hua) typically run the three components in a single half-day. No school publishes its rubric, but published guidelines from SOTA and parent reports across cycles converge on the six dimensions below.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Observation over rendering" },
+          body: {
+            en: "Panels look at whether the candidate sees accurately, not whether they render finely. A messy but correctly observed sketch — proportions right, weight of objects felt, light direction consistent — outscores a polished drawing that misreads the subject. The most common P6 mistake is over-rendering one corner while the rest of the composition fails. Observation is the foundation panels will build technique on for four years.",
+          },
+        },
+        {
+          label: { en: "Sketchbook depth" },
+          body: {
+            en: "The sketchbook is the single highest-signal document. Panels flip through looking for breadth, repetition (drawing the same subject five different ways), and evidence the child draws when not asked to. A sketchbook with twenty studies of the same hand, building up confidence, signals more than a sketchbook with twenty finished pieces in different styles. Schools want curiosity, not productivity.",
+          },
+        },
+        {
+          label: { en: "Material range" },
+          body: {
+            en: "Portfolios that show only pencil work, or only watercolour, read as narrow. Panels want to see the candidate has tried at least three media — pencil, watercolour or gouache, ink, charcoal, or digital — and has thought about why each medium serves different subjects. A piece that argues for its medium (a quick gestural ink because the subject moved) scores higher than a perfectly executed watercolour with no clear reason for the choice.",
+          },
+        },
+        {
+          label: { en: "Concept and personal voice" },
+          body: {
+            en: "Especially at SOTA and IP schools, panels read for whether the candidate has anything to say. A portfolio of technically competent still lifes scores lower than one that includes two or three pieces with a clear personal subject — a grandmother's kitchen, a particular tree in the neighbourhood, recurring drawings of the candidate's hand. Voice at P6 is not refined opinion; it's repeated specific interest.",
+          },
+        },
+        {
+          label: { en: "On-spot task adaptability" },
+          body: {
+            en: "The on-spot drawing task is where panels see how the candidate handles unfamiliar material under time pressure. Common prompts: still life, perspective from a specific angle, a thematic word ('weight', 'shelter', 'noise'). The signal is whether the candidate uses the first 5 minutes to look and plan, or starts marking immediately. Five minutes of pre-planning saves the panel from watching a 30-minute correction process.",
+          },
+        },
+        {
+          label: { en: "Articulation of one's own work" },
+          body: {
+            en: "In the interview, panels ask the candidate to walk them through three pieces. A child who says \"this is a still life of fruit\" scores lower than one who says \"this is the third version of this still life — the first two had the bowl too high. I dropped the horizon line and the apples started to sit.\" Process narration signals self-awareness panels will train into the next four years.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Drawing / observational work" },
+          body: {
+            en: "Most portfolios are anchored by drawing. Panels look for proportion, weight, light direction, and consistency of mark-making across pieces. The single most useful exercise at P6 level is timed drawing — 5 minutes, 10 minutes, 20 minutes of the same subject — because it builds the habit of seeing the whole first before refining parts. Schools assume technique can be taught; observation is what they're selecting for.",
+          },
+        },
+        {
+          position: { en: "Painting / colour work" },
+          body: {
+            en: "Watercolour, gouache, and acrylic appear in most strong portfolios. Panels look at whether the candidate has thought about colour — value relationships, complementary colours, restraint in palette — or whether colour is decorative. A monochromatic study can score higher than a bright multi-colour piece if the value structure is clearer. Photographs of larger paintings should be square-on and accurately colour-balanced.",
+          },
+        },
+        {
+          position: { en: "3D / mixed media / digital" },
+          body: {
+            en: "Portfolios that include sculpture, paper construction, photography, or digital work read as broader and signal a candidate already thinking in multiple modes. Photographs of 3D work should show two or three angles, not one. Digital work should be displayed at meaningful size, not as thumbnails. The medium itself is less important than evidence the candidate has actively chosen it.",
+          },
+        },
+        {
+          position: { en: "Sketchbook practice" },
+          body: {
+            en: "Many strong portfolios open or close with sketchbook pages. Panels prefer to see a sketchbook with cross-outs, half-finished ideas, and quick notes — evidence of process — over a presentation sketchbook with only the best pages curated. Bring the actual sketchbook (with the messy pages) rather than a printed selection. The mess is the point.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Schools weight components differently. SOTA's audition is the most demanding and includes a written reflection. ACS(I), NYGH, and CHIJ St Nicholas focus on portfolio and on-spot work. SAP schools (Nan Hua, Dunman High, Catholic High) typically include a shorter portfolio review alongside other DSA components. Some schools also accept Chinese ink painting (中国水墨) or calligraphy work as part of the portfolio.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love drawing or making art?" },
+          subtext: {
+            en: "Panels want a specific moment — a piece you couldn't stop working on, an artist you discovered — not \"because I'm good at it.\"",
+          },
+          approach: {
+            en: "Open with one concrete memory, then connect to your character.",
+          },
+          template: {
+            en: "The first time I drew my grandmother's hands while she peeled garlic — I started over six times because each time I looked back at her hands, they had moved. That was when I realised drawing was about seeing, not copying.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the art programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific item — a school showcase, an exhibition, an alumni artist, the studio facilities.",
+          },
+          template: {
+            en: "I visited your school's Year-End Showcase last December. The way your Sec 4 student handled charcoal — those marks were doing work I want to learn to make. That's why your school.",
+          },
+        },
+        {
+          question: { en: "Walk us through this piece — why did you make it?" },
+          subtext: {
+            en: "Can the candidate narrate process, choices, and what they'd change next time?",
+          },
+          approach: {
+            en: "Talk about what you were trying to see, what you tried, what didn't work, what surprised you.",
+          },
+          template: {
+            en: "This is my grandfather's chair after he passed. I started with photographs but the chair looked staged. I went back and drew it three times from where I usually sit in the living room — the third version finally felt like the chair, not a portrait of the chair.",
+          },
+        },
+        {
+          question: { en: "Which artist or artwork has changed how you see?" },
+          subtext: {
+            en: "Tests whether the candidate looks at art seriously, not just makes it.",
+          },
+          approach: {
+            en: "Name someone specific. Singapore artists, Asian masters, or Western canon are all fine — be ready to discuss one specific work.",
+          },
+          template: {
+            en: "Georgette Chen's still lifes at the National Gallery. The first time I noticed how she painted lychee skin — the bumpy texture coming through with just three or four marks — I rethought how much detail I was putting into my own still lifes.",
+          },
+        },
+        {
+          question: { en: "Tell us about a piece that didn't work." },
+          subtext: {
+            en: "Schools want process honesty, not perfection claims.",
+          },
+          approach: {
+            en: "Describe a real piece, what failed, what you understood.",
+          },
+          template: {
+            en: "I spent three weeks on a self-portrait that never resolved. The face kept looking like someone else. I gave up and started drawing my hands instead. The hand drawings became my strongest pieces — because I let go of the face, not in spite of it.",
+          },
+        },
+        {
+          question: { en: "How do you balance art-making with school?" },
+          subtext: {
+            en: "Schools fear DSA artists who fall behind academically.",
+          },
+          approach: {
+            en: "Describe a real routine, not platitudes.",
+          },
+          template: {
+            en: "I sketch on the bus and during recess — small studies, 5 minutes each. Weekends I do longer pieces. I don't draw on Sunday nights — that's revision and rest. Drawing every day, just briefly, is more sustainable than long sessions on weekends only.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. SOTA's six-year IB Visual Arts pathway gives me studio time no other school can. That structure is the future I want.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "School of the Arts (SOTA)",
+          url: "https://www.sota.edu.sg/admissions/sota-direct-school-admission-dsa-exercise/",
+          talentArea: { en: "Visual Arts, IB" },
+          context: {
+            en: "Specialised arts school. Multi-round Visual Arts audition with portfolio review, on-spot practical task, written reflection, and interview. Six-year IB Visual Arts pathway.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Visual Arts (Boys), IP" },
+          context: {
+            en: "IP school with strong Visual Arts programme. Audition typically combines portfolio review with on-spot task. Pipeline to IB Visual Arts at the Sec 4 / 5 / 6 stage.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Visual Arts (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies. Strong art tradition with sustained Singapore Youth Festival Art Exhibition showings. Chinese ink painting offered alongside Western media.",
+          },
+        },
+        {
+          name: "CHIJ Saint Nicholas Girls' School",
+          url: "https://www.chijstnicholas.moe.edu.sg/admissions/",
+          talentArea: { en: "Visual Arts (Girls), DSA-Sec" },
+          context: {
+            en: "Recognised CCA Art Club with consistent SYF Art Exhibition participation. Audition typically: portfolio + on-spot drawing + interview.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.sch.edu.sg/admission/dsa/",
+          talentArea: { en: "Visual Arts (Girls), DSA-Sec" },
+          context: {
+            en: "Strong art CCA with sustained SYF Art Exhibition showings. Audition assesses portfolio breadth, on-spot work, and personal voice.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          url: "https://www.nanhuahigh.moe.edu.sg/announcements/talent-areas-for-dsa/",
+          talentArea: { en: "Visual Arts, DSA-Sec" },
+          context: {
+            en: "SAP school. Visual Arts among published talent areas. Higher Chinese / Chinese Language as Mother Tongue requirement applies.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Visual Arts, IP / DSA-Sec" },
+          context: {
+            en: "SAP and Bicultural Studies. 2026 DSA FAQ lists Visual Arts as a talent area. Chinese ink painting is part of the school's art curriculum.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/year-1-direct-school-admission/",
+          talentArea: { en: "Visual Arts (Girls), IP" },
+          context: {
+            en: "IP school with Visual Arts pipeline through to Raffles Institution and Raffles Junior College Art Elective. Audition assesses portfolio and personal voice.",
+          },
+        },
+        {
+          name: "Cedar Girls' Secondary School",
+          url: "https://www.cedargirlssec.moe.edu.sg/admissions/",
+          talentArea: { en: "Visual Arts (Girls), DSA-Sec" },
+          context: {
+            en: "Recognised CCA Art Club with sustained SYF Art Exhibition showings. Audition: portfolio review + on-spot drawing.",
+          },
+        },
+        {
+          name: "Crescent Girls' School",
+          url: "https://www.crescent.moe.edu.sg/admissions/dsa-sec/",
+          talentArea: { en: "Visual Arts (Girls), DSA-Sec" },
+          context: {
+            en: "Visual Arts among DSA talent areas. CCA art programme with sustained SYF participation.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the audition is still weeks out" },
+          items: [
+            {
+              en: "Curate the portfolio with restraint. 10–12 strong pieces beats 20 mixed pieces. Include 2–3 sketchbook spreads, 4–6 finished works across at least three media, and 2–3 process pieces (a piece shown in three stages, or two versions of the same subject). Cut anything the candidate isn't proud of — panels remember the weakest piece, not the strongest.",
+            },
+            {
+              en: "Confirm CCA records at primary school. MOE pulls CCA participation, school art awards, SYF Art Exhibition selections, and external programme alumni status (NAFA Junior, SOTA Junior, LASALLE programmes, recognised national art competitions) into the DSA portal. Ask the CCA teacher to verify all art-related entries.",
+            },
+            {
+              en: "Run two mock on-spot tasks. Give the candidate a random subject and 45 minutes — once at home, once somewhere unfamiliar. The unfamiliar setting matters; many candidates underperform first audition because the studio, the lighting, and the materials are not theirs.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Stop adding new work to the portfolio. Anything made in the final week reads as panic. Spend the time photographing existing pieces well (square-on, even lighting, accurate colour) and writing a one-sentence note about each piece's intent — these notes feed the interview.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, materials policy (some schools provide materials, others ask the candidate to bring their own basic kit — pencils, eraser, sharpener, water container, brushes). Email the school if the brief is ambiguous.",
+            },
+            {
+              en: "Pack the sketchbook the day before. Bring the messy sketchbook, not a clean one. Bring a sturdy folder for the portfolio. Bring a power bank if any digital work is on a phone or tablet. Make the packing list once, check it twice.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of audition" },
+          items: [
+            {
+              en: "Light breakfast 90 minutes before. Audition rooms run cold; bring a long-sleeve layer. A graphite-stained hand is the wrong start — wash hands before the on-spot task and bring wet wipes.",
+            },
+            {
+              en: "Drop off, don't hover. Greet the audition coordinator, leave. The candidate brings the portfolio in themselves — that small act of ownership matters for tone-setting.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What did you draw?\" — let the child share. Reviewing the panel's comments waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, audition coming up, no clear preparation plan — there are still real moves. Don't try to make new finished pieces. Instead, fill three sketchbook pages a day for one week with quick observational studies — your hand, a chair, a coffee cup, your sibling sleeping. These pages join the sketchbook and signal the daily-drawing habit panels look for. For the on-spot task, practise the first five minutes: looking, finding the composition, and planning before marking. That habit is trainable in a week. For the interview, write one sentence per piece about what you were trying to see and what didn't work. Rehearse saying these out loud. Some families bring in a private art tutor at this stage. A good tutor can sharpen sketchbook habits and tighten the interview narrative — but no tutor produces, in three sessions, the seeing that years of looking build. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  hockey: {
+    slug: "hockey",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Hockey", zh: "曲棍球", ms: "Hoki", ta: "ஹாக்கி" },
+    hook: {
+      en: "Hockey DSA — trials reward stick-skill habits, not just speed.",
+      zh: "曲棍球 DSA——trial 奖励球杆习惯，不只是速度",
+      ms: "DSA Hoki — trial menghargai tabiat kayu hoki, bukan kelajuan semata-mata.",
+      ta: "ஹாக்கி DSA — சோதனை ஸ்டிக் திறன் பழக்கங்களை மதிக்கிறது, வேகத்தை மட்டுமல்ல.",
+    },
+    intro: {
+      en: "Singapore secondary hockey is dominated by a handful of SSP schools with deep youth pipelines. Trial coaches look beyond pace to first touch, off-ball positioning, and how a player reads the press. Here's what auditions actually weigh.",
+      zh: "新加坡中学曲棍球由几所有深厚青训管道的 SSP 学校主导。Trial 教练看的不只是速度——第一脚处理、无球跑位、看压迫的能力同样重要。Trial 真正在测什么。",
+      ms: "Hoki sekolah menengah Singapura didominasi oleh beberapa sekolah SSP. Jurulatih trial menilai sentuhan pertama, kedudukan tanpa bola, dan bacaan tekanan.",
+      ta: "சிங்கப்பூர் இடைநிலை ஹாக்கி ஒரு சில SSP பள்ளிகளால் ஆதிக்கம் செலுத்தப்படுகிறது. சோதனை பயிற்சியாளர்கள் வேகத்துக்கு அப்பால் முதல் தொடுதல், பந்து இல்லாத நிலைப்பாடு, அழுத்தத்தைப் படிப்பதைப் பார்க்கிறார்கள்.",
+    },
+    summary: {
+      en: "Trial structure, position-specific stick work, interview questions, SSP / SAP / IP hockey schools.",
+      zh: "Trial 流程、位置专项杆法、面试题、SSP / SAP / IP 招生学校。",
+      ms: "Struktur trial, kayu hoki khusus posisi, soalan temu duga, sekolah SSP/SAP/IP.",
+      ta: "சோதனை அமைப்பு, நிலை சார்ந்த ஸ்டிக் வேலை, கேள்விகள், SSP / SAP / IP பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Victoria School",
+      "Anglo-Chinese School (Independent)",
+      "Anglo-Chinese School (Barker Road)",
+      "Raffles Institution",
+      "Raffles Girls' School (Secondary)",
+      "Saint Joseph's Institution",
+    ],
+    metaDescription: {
+      en: "Hockey DSA-Sec trial guide for Singapore P6 — what trials measure, position-specific stick work, sample interview questions, SSP and IP participating schools.",
+      zh: "新加坡 P6 曲棍球 DSA-Sec trial 指南——评分维度、位置专项、面试题、SSP / IP 招生学校。",
+      ms: "Panduan trial DSA-Sec Hoki Singapura — apa trial nilai, kerja kayu hoki khusus posisi, soalan, sekolah SSP/IP.",
+      ta: "சிங்கப்பூர் P6 ஹாக்கி DSA-Sec வழிகாட்டி — சோதனை அளவுகோல்கள், நிலை சார்ந்த பணி, கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore hockey trials run 90–120 minutes and are typically led by the school's head hockey coach (often SHF-registered) alongside the teacher-in-charge. Expect a warm-up, technical stations (push pass, hit, reception, 1v1), and small-sided games (5v5 or 7v7) on a half pitch. The strongest school programmes — particularly under the Schools' Special Programme (SSP) for Hockey at Anglo-Chinese School (Independent), Anglo-Chinese School (Barker Road), Saint Joseph's Institution, and Victoria School — recruit aggressively at P6. No school publishes a rubric, but the FIH-aligned youth coaching framework and parent reports converge on the six dimensions below.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Stick skill habits" },
+          body: {
+            en: "Not whether the trialist can dribble in a straight line — whether the stick stays low, the bottom hand stays loose, and the eyes stay up. P6 players who learned hockey young typically have looser hands; players who came from floorball or other sports carry forearm tension that shows in trial. Coaches assume technique can be built; habits are harder to unlearn.",
+          },
+        },
+        {
+          label: { en: "First touch on a moving ball" },
+          body: {
+            en: "Trial coaches deliberately feed bouncing or angled passes. A reception that kills the ball flat — or worse, where the ball bounces off the stick — costs the next two seconds of play. A P6 player whose first touch sets up their second touch scores meaningfully higher than one with stronger physical tools but poor reception.",
+          },
+        },
+        {
+          label: { en: "Off-ball positioning and reading the press" },
+          body: {
+            en: "What the trialist does in the five seconds after passing — make the supporting run, rotate, or stop and watch — is the single biggest separator at P6 level. Hockey rewards triangles: a player who is always available for the next pass shows positional intelligence that's hard to teach. Coaches at SSP schools especially watch this in the small-sided games.",
+          },
+        },
+        {
+          label: { en: "1v1 defending and recovery" },
+          body: {
+            en: "Stance, distance, and the recovery sprint after being beaten. Defending in hockey is patience — the trialist who jabs and lunges gets stepped past. The one who shows feet, channels the attacker to a side, and waits scores higher. Recovery sprint after being beaten matters as much as the first duel.",
+          },
+        },
+        {
+          label: { en: "Conditioning across the full session" },
+          body: {
+            en: "Trials run past 90 minutes for a reason. The final small-sided game shows who fades — and fatigued players reveal honest habits. Coaches are looking for the player whose touch and decisions hold up in the last 10 minutes, not the one who burned out impressing in minute 20.",
+          },
+        },
+        {
+          label: { en: "Coachability and attitude between drills" },
+          body: {
+            en: "Whether the trialist jogs back to position, picks up cones, listens when corrected, encourages a teammate after a turnover. International coaching research consistently ranks these signals as highly as technical ability for youth selection — and Singapore school coaches, who'll work with this child for four years, weight them heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Goalkeeper" },
+          body: {
+            en: "Goalkeeper trials run as a separate stream. Stations include shot-stopping from close range (slap shots, drag flicks), kicking and clearing, and one-on-one situations against a forward. Coaches care less about reflex saves than about whether the keeper sets their feet, presents a wide stance, and clears in a sensible direction under pressure. A keeper who controls the rebound rather than just stopping the shot signals real game intelligence.",
+          },
+        },
+        {
+          position: { en: "Defender (full-back / sweeper)" },
+          body: {
+            en: "Tackling timing and recovery pace are the headline traits. Coaches focus on whether the defender stays patient and channels the attacker rather than lunging. Aerial reception — taking a high ball cleanly with one hand on the stick — is a separator at P6 level since most players still flinch at the ball. Passing range and the willingness to switch play across the pitch are scored heavily in small-sided games.",
+          },
+        },
+        {
+          position: { en: "Midfielder" },
+          body: {
+            en: "The position where vision shows fastest. Coaches watch whether the midfielder receives on the half-turn (already facing forward) or with their back to play. Pass selection — short and progressive versus safe sideways — is logged across the small-sided game. Defensive workrate matters as much as attacking play; midfielders who don't track back read as a habit problem.",
+          },
+        },
+        {
+          position: { en: "Forward (striker / winger)" },
+          body: {
+            en: "Coaches look for two specific moves: the run in behind the defensive line and the willingness to receive in the D and turn under pressure. Goals scored in trial scrimmages are noted but not weighted heavily — schools have seen too many P6 strikers who score against weak defenders. The defensive press from the front and recovery runs matter more. Drag flick or penalty corner ability is a bonus at P6, not an expectation.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "If your child plays attacking midfielder, the midfielder and forward notes both apply — strong attacking-midfielder candidates typically demonstrate both. For defensive midfielder, lean on the defender notes plus shielding the back line.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love hockey?" },
+          subtext: {
+            en: "Panels want a specific moment, not a feeling. \"I like running with the stick\" reads as weak motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory, then connect it to character.",
+          },
+          template: {
+            en: "We lost the inter-school zonal in P5 on a short corner in the last minute. That night I asked my mother for a goalkeeper kit. I'm a midfielder, but I wanted to know what the keeper saw.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the hockey programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing — SSP status, a coach's name, an NSG result, a training pattern.",
+          },
+          template: {
+            en: "Anglo-Chinese School (Independent) — your hockey programme is under SSP and the senior team trains four times a week. That's the volume I want from Sec 1.",
+          },
+        },
+        {
+          question: { en: "What position do you play and why?" },
+          subtext: {
+            en: "Can the kid articulate the role, not just label it?",
+          },
+          approach: {
+            en: "Name the position plus the job.",
+          },
+          template: {
+            en: "Centre midfielder — my job is connecting defence to attack and being available for the press break. I like the position because the field is in front of you.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I missed my P5 school team after first trial. I joined Saturday morning club sessions and worked on my reverse-stick reception. I made the team next round and played zonal by NSG.",
+          },
+        },
+        {
+          question: { en: "Who is a teammate or coach you remember most?" },
+          subtext: {
+            en: "Whether the kid sees teammates as people or background.",
+          },
+          approach: {
+            en: "Name someone specific by role + what you learned.",
+          },
+          template: {
+            en: "My P6 captain made me do extra push passes after every training. I didn't enjoy it but my pass weight became reliable. He's now in a Sec 1 SSP school and I want to be in that pipeline too.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent trainings?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes.",
+          },
+          template: {
+            en: "I do English and Math on the bus to training and finish Science before dinner. Sundays are for revision and rest. My coach checks in with my mother on academic balance — that's a system, not just discipline.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your SSP status gives me four sessions a week from Sec 1 — no other school can match that volume, and that's the volume I need to keep growing.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Hockey (Boys), IP" },
+          context: {
+            en: "Schools' Special Programme (SSP) for Hockey host school. Sustained NSG A and B Division presence. Pipeline to national age-group teams.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          url: "https://www.acsbr.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Hockey (Boys), DSA-Sec" },
+          context: {
+            en: "Schools' Special Programme (SSP) for Hockey host school. Strong NSG B-Division and C-Division record.",
+          },
+        },
+        {
+          name: "Saint Joseph's Institution",
+          url: "https://www.sji.edu.sg/admissions/",
+          talentArea: { en: "Hockey (Boys), DSA-Sec" },
+          context: {
+            en: "Schools' Special Programme (SSP) for Hockey host school. Strong B Division NSG record.",
+          },
+        },
+        {
+          name: "Victoria School",
+          url: "https://www.victoriaschool.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Hockey (Boys), DSA-Sec" },
+          context: {
+            en: "Schools' Special Programme (SSP) for Hockey host school. Long-running tradition in field hockey with sustained national-team feeder record.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/year-1-admission-exercises/year-1-direct-school-admission/",
+          talentArea: { en: "Hockey (Boys), IP" },
+          context: {
+            en: "IP school with sustained NSG A-Division presence. Hockey is among RI's published DSA talent areas.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/year-1-direct-school-admission/",
+          talentArea: { en: "Hockey (Girls), IP" },
+          context: {
+            en: "IP school with strong Girls' hockey tradition and sustained NSG showings across A, B, and C divisions.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.sch.edu.sg/admission/dsa/",
+          talentArea: { en: "Hockey (Girls), DSA-Sec" },
+          context: {
+            en: "Recognised girls' hockey programme with sustained NSG B-Division and C-Division presence.",
+          },
+        },
+        {
+          name: "Singapore Chinese Girls' School",
+          url: "https://www.scgs.moe.edu.sg/admissions/dsa/",
+          talentArea: { en: "Hockey (Girls), DSA-Sec" },
+          context: {
+            en: "SAP school. Girls' hockey is a published DSA talent area with consistent NSG participation.",
+          },
+        },
+        {
+          name: "St Andrew's Secondary School",
+          url: "https://www.standrewssec.moe.edu.sg/admissions/dsa/",
+          talentArea: { en: "Hockey (Boys), DSA-Sec" },
+          context: {
+            en: "Sustained Boys' hockey programme with regular NSG participation.",
+          },
+        },
+        {
+          name: "Catholic Junior College (Sec via DSA-Sec partner)",
+          url: "https://www.cjc.edu.sg/",
+          talentArea: { en: "Hockey (reference for post-Sec pathway)" },
+          context: {
+            en: "Reference only — CJC is a strong post-Sec hockey programme that often absorbs SSP hockey alumni at A-Division level.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Video-record one full 7-on-7 game. Watch with your child, scoring just two behaviours: (1) what they do in the five seconds after passing the ball — make a supporting run, rotate, or stand still? (2) how many possessions did they receive on the half-turn versus with their back to play? These are the two most under-trained P6 habits and the two highest-signal items in hockey trials.",
+            },
+            {
+              en: "Confirm CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG results, NAPFA, and JSA data directly into the DSA portal. Hockey-specific external programme alumni (Singapore Hockey Federation development squads) also feed in. Ask the CCA teacher or year-head to verify what's been logged.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 80%: passing accuracy, reception drills, half-court small-sided games, no new academy session. Final-week added load rarely pays off and frequently produces a tweak (most commonly hamstring or ankle).",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire (most trials require turf-appropriate footwear, mouthguard, shin pads). Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "One small-sided game with strangers. Kids underperform at trial because they start passing only to teammates they know. Force the awkwardness early — a Saturday morning club session with unfamiliar players is the cheapest fix.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — not 30. Trials run deliberately past the fatigue threshold and the last 20 minutes is where habits show.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. Shorten the drill cycle to push-pass accuracy and reception. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because that's the only part where a few hours can still meaningfully change the outcome. Some families bring in a private hockey coach at this stage to compress the learning curve. A good private coach can speed up specific habit changes — particularly the half-turn reception — but no coach produces, in three sessions, the muscle memory of a year of practice. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  squash: {
+    slug: "squash",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Squash", zh: "壁球", ms: "Skuasy", ta: "ஸ்குவாஷ்" },
+    hook: {
+      en: "Squash DSA — trials reward court craft over raw shot power.",
+      zh: "壁球 DSA——trial 看的是球场调度，不是杀球力量",
+      ms: "DSA Skuasy — trial menilai kemahiran gelanggang, bukan kuasa pukulan semata-mata.",
+      ta: "ஸ்குவாஷ் DSA — சோதனை மைதான திறமையை மதிக்கிறது, பந்து வேகத்தை மட்டுமல்ல.",
+    },
+    intro: {
+      en: "Singapore secondary squash is concentrated at a handful of SSP and IP schools. Trial coaches look at length to the back wall, the T habit, and how quickly a player solves problems mid-rally — not just power. Here's what selectors actually weigh.",
+      zh: "新加坡中学壁球集中在几所 SSP 和 IP 学校。Trial 教练看的是底线长球、回 T 的习惯、以及对回合中临场解题的能力——不只是力量。选拔真正的权重在哪。",
+      ms: "Skuasy sekolah menengah Singapura tertumpu di beberapa sekolah SSP dan IP. Jurulatih menilai panjang ke dinding belakang, tabiat ke T, dan penyelesaian masalah dalam ralli.",
+      ta: "சிங்கப்பூர் இடைநிலை ஸ்குவாஷ் சில SSP மற்றும் IP பள்ளிகளில் குவிந்துள்ளது. பயிற்சியாளர்கள் பின் சுவருக்கு நீளம், T பழக்கம், ரல்லியில் சிக்கல்களைத் தீர்ப்பதைப் பார்க்கிறார்கள்.",
+    },
+    summary: {
+      en: "Trial structure, technical priorities, movement habits, interview questions, SSP / IP / DSA-Sec squash schools.",
+      zh: "Trial 流程、技术重点、移动习惯、面试题、SSP / IP / DSA-Sec 招生学校。",
+      ms: "Struktur trial, keutamaan teknikal, tabiat pergerakan, soalan temu duga, sekolah SSP/IP.",
+      ta: "சோதனை அமைப்பு, தொழில்நுட்ப முன்னுரிமைகள், கேள்விகள், SSP / IP பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Anglo-Chinese School (Independent)",
+      "Raffles Girls' School (Secondary)",
+      "Raffles Institution",
+      "Saint Joseph's Institution",
+      "Hwa Chong Institution",
+      "Methodist Girls' School (Secondary)",
+    ],
+    metaDescription: {
+      en: "Squash DSA-Sec trial guide for Singapore P6 — what trials measure, technical priorities, sample interview questions, SSP and IP participating schools.",
+      zh: "新加坡 P6 壁球 DSA-Sec trial 指南——评分维度、技术重点、面试题、SSP / IP 招生学校。",
+      ms: "Panduan trial DSA-Sec Skuasy Singapura — apa trial nilai, keutamaan teknikal, soalan, sekolah SSP/IP.",
+      ta: "சிங்கப்பூர் P6 ஸ்குவாஷ் DSA-Sec வழிகாட்டி — சோதனை அளவுகோல்கள், நிலை சார்ந்த பணி, கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore squash trials typically run 60–90 minutes on the school's home court and are led by the head squash coach (often Squash Australia or PSA-aligned credentialed) plus the teacher-in-charge of Sports. Expect a warm-up, a solo technical session against the front wall (drives, drops, boasts), a feeding drill where the coach hits to the trialist, and either match play against another trialist or with a school senior. The strongest school programmes — particularly under the Schools' Special Programme (SSP) for Squash at Anglo-Chinese School (Independent) and Raffles Girls' School (Secondary) — recruit early and aggressively. No school publishes a rubric, but the SquashSG / SRA-aligned coaching framework and parent reports converge on the six dimensions below.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Length to the back wall" },
+          body: {
+            en: "The single highest-signal P6 habit. Coaches feed the trialist on a forehand or backhand and watch whether the ball reliably travels past the short line and lands deep. Players who can drive length consistently are scored higher than those who hit harder but short. Length controls the rally; power without length gives the opponent the front of the court.",
+          },
+        },
+        {
+          label: { en: "T habit" },
+          body: {
+            en: "After every shot, where does the trialist go? Returning to the T (centre of the court) is the foundational movement habit and the cheapest tell of years of structured play. Coaches deliberately feed varied shots to test whether the player resets or floats around the back. A child who returns to the T after every shot — even in warm-up — instantly signals trained instincts.",
+          },
+        },
+        {
+          label: { en: "Racket preparation and stance" },
+          body: {
+            en: "Early racket-up signals the player has been coached to read the ball, not react to it. Stance — bent knees, racket head above the wrist, weight on the toes — is the second-most-visible coachability signal. Players whose racket comes up only when the ball is incoming are still learning the foundation. Coaches assume strokes can be refined; reading-and-preparing is a deeper habit.",
+          },
+        },
+        {
+          label: { en: "Shot variation under pressure" },
+          body: {
+            en: "Under match-play conditions, does the trialist use drops, boasts, and lobs — or do they default to drives only? P6 players who can place a soft drop from the back of the court signal real court craft. The signal is choice-making, not perfection — even a missed drop attempt shows the player thinks beyond the next drive.",
+          },
+        },
+        {
+          label: { en: "Fitness and movement endurance" },
+          body: {
+            en: "Trials run past 60 minutes deliberately. The final match shows who fades — and fatigued players reveal honest habits. A trialist whose movement still gets them to the front court at minute 50 scores higher than one whose first ten minutes look sharper. The conditioning required for squash at NSG level is unforgiving; selectors are looking for the engine, not the spike.",
+          },
+        },
+        {
+          label: { en: "Coachability and attitude between rallies" },
+          body: {
+            en: "How the trialist behaves between drills, whether they pick up balls without being asked, whether they thank the coach at the end. International coaching research finds these signals unanimously rated 10/10 by elite coaches — higher than raw athleticism. Singapore school coaches, who'll work with this child for four years, weight them heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Solo technical work" },
+          body: {
+            en: "Most trials open with the trialist alone on court, hitting drives to the front wall for five to ten minutes. Coaches watch the rhythm — can the player sustain a consistent length, switch from forehand to backhand on the same drive line, and add target work (aiming for specific points on the front wall)? Inconsistent solo work is the cheapest tell of a player still drilling, not yet automated.",
+          },
+        },
+        {
+          position: { en: "Feeding drills" },
+          body: {
+            en: "The coach feeds the ball — varying length, side, and pace — while the trialist hits back. Selectors watch: does the player move into position, set their feet, and strike with a stable swing? Or do they reach, drag the racket through, and recover late? The feeding drill is where preparation habits show clearest, because the player can't predict the next ball.",
+          },
+        },
+        {
+          position: { en: "Match play (often against a school senior)" },
+          body: {
+            en: "Some schools pit the trialist against a current Sec 1 or Sec 2 player. The result is less important than how the trialist conducts themselves — whether they stay calm under pressure, vary their shots, return to the T, and respect the senior on court. Losing 0-9 to a Sec 2 player who already trains under SSP is normal; how the trialist played those nine points is what's measured.",
+          },
+        },
+        {
+          position: { en: "Sportsmanship and court etiquette" },
+          body: {
+            en: "Squash is a contact sport played in a small box. Calling lets honestly, walking around the opponent, acknowledging good shots, and not slamming the racket are basic court etiquette signals coaches read in 30 seconds. P6 players who haven't yet learned to call \"let, please\" properly or who play through obvious obstruction read as not-yet-coached.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Squash is not position-divided like field sports. The four areas above describe what gets assessed across the trial; the same player must show all four. Schools weight technical work and match play roughly equally, with sportsmanship as a near-veto for borderline candidates.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love squash?" },
+          subtext: {
+            en: "Panels want a specific moment, not a feeling. \"I like hitting hard\" reads as weak motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory, then connect it to character.",
+          },
+          template: {
+            en: "I lost my P5 zonal semi-final 2-3 to a player who hit nothing but length and drops. He never tried to hit through me — he made me run myself out. That night I asked my coach to teach me drops.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the squash programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing — SSP status, a senior player you watched, the training pattern.",
+          },
+          template: {
+            en: "Anglo-Chinese School (Independent) — your squash programme is under SSP and trains four times a week with court time built into the curriculum. That volume is what I want from Sec 1.",
+          },
+        },
+        {
+          question: { en: "What's the strongest part of your game?" },
+          subtext: {
+            en: "Can the kid articulate their game honestly?",
+          },
+          approach: {
+            en: "Name one strength specifically; do not list everything.",
+          },
+          template: {
+            en: "Length — I can drive length on my backhand for ten balls in a row in practice. My weakness is volley work, which I'm building this year.",
+          },
+        },
+        {
+          question: { en: "Tell us about a match you lost and what you learned." },
+          subtext: {
+            en: "Schools want growth narratives, not natural-talent claims.",
+          },
+          approach: {
+            en: "Describe a real loss, what you changed afterward, what improved.",
+          },
+          template: {
+            en: "I lost a tournament match 0-3 because I kept hitting hard and short. My coach made me play three matches the next week where I wasn't allowed to hit anything past the service box. After that, my length under pressure became consistent.",
+          },
+        },
+        {
+          question: { en: "Who is a coach or training partner you remember most?" },
+          subtext: {
+            en: "Whether the kid sees teammates as people or background.",
+          },
+          approach: {
+            en: "Name someone specific by role + what you learned.",
+          },
+          template: {
+            en: "My P6 coach made me solo-hit for fifteen minutes before every session. I didn't want to, but my rallies extended from five shots to twenty-five shots in six months. That habit changed my whole game.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent court sessions?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes.",
+          },
+          template: {
+            en: "I do English and Math homework on the bus to court and finish Science before dinner. Sundays are for revision and rest. My academic teacher reviews my marks with my mother every report book — that's a system, not just discipline.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your SSP gives me four sessions a week from Sec 1 and a coach pipeline to NSG A-Division — no other school can match that volume, and that's what I need.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Squash (Boys), IP" },
+          context: {
+            en: "Schools' Special Programme (SSP) for Squash host school. Sustained NSG A and B Division presence. Pipeline to national age-group teams.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/year-1-direct-school-admission/",
+          talentArea: { en: "Squash (Girls), IP" },
+          context: {
+            en: "Schools' Special Programme (SSP) for Squash host school. Long-running girls' squash tradition with sustained NSG showings.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/year-1-admission-exercises/year-1-direct-school-admission/",
+          talentArea: { en: "Squash (Boys), IP" },
+          context: {
+            en: "IP school with squash listed among published DSA talent areas. Strong NSG A-Division presence.",
+          },
+        },
+        {
+          name: "Saint Joseph's Institution",
+          url: "https://www.sji.edu.sg/admissions/",
+          talentArea: { en: "Squash (Boys), DSA-Sec" },
+          context: {
+            en: "Squash among published DSA-Sec talent areas. Sustained NSG B-Division and C-Division participation.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Squash (Boys), IP" },
+          context: {
+            en: "IP school with squash among published DSA talent areas. Strong NSG showings across boys' divisions.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.sch.edu.sg/admission/dsa/",
+          talentArea: { en: "Squash (Girls), DSA-Sec" },
+          context: {
+            en: "Recognised girls' squash CCA with sustained NSG B-Division presence.",
+          },
+        },
+        {
+          name: "Singapore Chinese Girls' School",
+          url: "https://www.scgs.moe.edu.sg/admissions/dsa/",
+          talentArea: { en: "Squash (Girls), DSA-Sec" },
+          context: {
+            en: "SAP school. Girls' squash is a published DSA talent area with consistent NSG participation.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          url: "https://www.acsbr.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Squash (Boys), DSA-Sec" },
+          context: {
+            en: "Squash among published DSA-Sec talent areas. Sustained NSG B-Division participation.",
+          },
+        },
+        {
+          name: "Catholic Junior College",
+          url: "https://www.cjc.edu.sg/",
+          talentArea: { en: "Squash (reference for post-Sec pathway)" },
+          context: {
+            en: "Reference only — CJC is a strong post-Sec squash programme that often absorbs SSP squash alumni at A-Division level.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Squash (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies. Squash among published DSA talent areas. Sustained NSG showings.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Video-record one full match against a player of similar level. Watch with your child, scoring just two behaviours: (1) how reliably did they return to the T after each shot? (2) how many drives travelled past the short line and landed deep? These are the two most under-trained P6 habits and the two highest-signal items in squash trials.",
+            },
+            {
+              en: "Confirm CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG results, and external programme alumni status (Squash Singapore / SRA development squads, club rankings) into the DSA portal. Tournament results from open tournaments also count. Ask the CCA teacher or year-head to verify what's been logged.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: solo length practice, gentle feeds, no new technical input. Final-week added load rarely pays off and frequently produces a tweak (most commonly Achilles or lower back).",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire, equipment (most trials require non-marking court shoes, eye protection per WSF rules at junior level). Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "One court session with a stranger. Kids underperform at trial because they're used to their regular partner's rhythm. Force the awkwardness early — a Saturday morning session at an unfamiliar club is the cheapest fix.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — not 30. Trials run past the fatigue threshold deliberately and the last 20 minutes is where habits show.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. Shorten the drill cycle to solo length and T-returns. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because that's the only part where a few hours can still meaningfully change the outcome. Some families bring in a private squash coach at this stage to compress the learning curve. A good private coach can speed up specific habit changes — particularly racket preparation and the T habit — but no coach produces, in three sessions, the rally consistency of a year of solo practice. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  leadership: {
+    slug: "leadership",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Leadership", zh: "领导力", ms: "Kepimpinan", ta: "தலைமைத்துவம்" },
+    hook: {
+      en: "Leadership DSA — panels read for specifics, not titles.",
+      zh: "领导力 DSA——考官读的是具体事，不是头衔",
+      ms: "DSA Kepimpinan — panel menilai khusus, bukan gelaran.",
+      ta: "தலைமைத்துவ DSA — குழுக்கள் தலைப்புகளை அல்ல, விவரங்களை மதிக்கின்றன.",
+    },
+    intro: {
+      en: "Leadership DSA-Sec is the least understood talent area — and the one where applications fail most often by being generic. Panels at top IP / SAP schools want one specific story of changing an outcome, not a list of CCAs and titles. Here's what selectors actually read.",
+      zh: "领导力 DSA-Sec 是最容易被误解的才艺类别——也是最常因泛泛而败的一类。顶尖 IP / SAP 学校的考官要的是一个改变结果的具体故事，不是 CCA 和头衔的清单。选拔真正读的是什么。",
+      ms: "DSA-Sec Kepimpinan adalah kategori bakat yang paling kurang difahami — dan paling kerap gagal kerana terlalu umum. Panel mahukan satu cerita khusus mengubah keputusan, bukan senarai CCA dan gelaran.",
+      ta: "DSA-Sec தலைமைத்துவம் என்பது மிகவும் தவறாக புரிந்து கொள்ளப்படும் திறமைப் பகுதி — மற்றும் மிகவும் பொதுவாக இருப்பதால் தோல்வியடையும் பகுதி. குழுக்கள் CCA மற்றும் தலைப்புகளின் பட்டியலை அல்ல, ஒரு முடிவை மாற்றிய ஒரு குறிப்பிட்ட கதையை விரும்புகின்றன.",
+    },
+    summary: {
+      en: "What counts as Leadership talent, portfolio structure, group activity formats, interview questions, participating schools.",
+      zh: "什么算 Leadership 才艺、portfolio 结构、小组活动形式、面试题、招生学校。",
+      ms: "Apa yang dikira bakat kepimpinan, struktur portfolio, format aktiviti kumpulan, soalan temu duga, sekolah peserta.",
+      ta: "தலைமைத்துவ திறமை என்ன, பணித்தொகுப்பு கட்டமைப்பு, குழு செயல்பாடுகள், கேள்விகள், பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Raffles Institution",
+      "Hwa Chong Institution",
+      "Raffles Girls' School (Secondary)",
+      "Nanyang Girls' High School",
+      "Anglo-Chinese School (Independent)",
+      "Methodist Girls' School (Secondary)",
+    ],
+    metaDescription: {
+      en: "Leadership DSA-Sec guide for Singapore P6 — what panels look for in portfolios and group activity, sample interview questions, IP and SAP participating schools.",
+      zh: "新加坡 P6 领导力 DSA-Sec 指南——考官在 portfolio / 小组活动看什么、面试题、IP / SAP 招生学校。",
+      ms: "Panduan DSA-Sec Kepimpinan Singapura — apa panel nilai dalam portfolio dan aktiviti kumpulan, soalan temu duga, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 தலைமைத்துவ DSA-Sec வழிகாட்டி — பணித்தொகுப்பு மற்றும் குழு செயல்பாட்டில் குழு என்ன பார்க்கிறது, கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Leadership DSA-Sec is offered as a talent category at most IP schools and many SAP schools. \"Leadership\" covers a wide set of evidence: Uniformed Group rank (NCC, NPCC, NCDCC, SJAB, Boys' Brigade, Girls' Brigade, Scouts), Student Council or Prefect roles, captaincy of a school CCA, founder or organiser of a community project, or sustained service initiatives. Selection usually combines three components: a written portfolio (submitted with the application or on the day), a group activity (5–8 candidates given a problem to solve together for 30–60 minutes), and a panel interview. Across schools the four observed selection dimensions converge — and the failure mode is consistent: candidates who lead with titles instead of specifics get filtered out fast.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Specific outcome over generic title" },
+          body: {
+            en: "The single highest-signal habit. A candidate who says \"I was Class Chairperson\" scores low. The one who says \"I noticed our class wasn't returning library books on time, so I made a Friday return-check chart and the teacher said we went from 12 overdues a month to two\" scores high. Panels read for whether the candidate changed something measurable — not what they were called.",
+          },
+        },
+        {
+          label: { en: "Listening before deciding" },
+          body: {
+            en: "In the group activity, panels watch who listens versus who talks first. The candidate who restates what another teammate said before offering their own view consistently scores higher than the one with the strongest opening pitch. Schools selecting future Sec 1 prefects want children who collect information before committing — that's the foundation prefect work depends on.",
+          },
+        },
+        {
+          label: { en: "Bringing others along, not over them" },
+          body: {
+            en: "Panels watch how a candidate handles a quieter teammate. A child who actively asks the silent member's view, makes space for them to speak, and credits their contribution scores higher than one who solves the problem alone. Leadership panels read steamrolling as a coachability red flag — Singapore secondary leadership is collaborative, not assertive.",
+          },
+        },
+        {
+          label: { en: "Accepting redirection without sulking" },
+          body: {
+            en: "When the panel offers a redirect mid-activity — \"now consider this constraint we hadn't mentioned\" — does the candidate fold it in, or visibly resist? Coachability in real time is the most P6-honest test panels can run. Schools fear the future prefect who needs to be right; they reward the one who incorporates feedback fast.",
+          },
+        },
+        {
+          label: { en: "Service over self-promotion" },
+          body: {
+            en: "In the interview, when asked about an achievement, does the candidate centre what was accomplished or who they helped? Panels at religious-affiliated and mission-led schools especially read for this — but it's near-universal. A candidate who frames every story as \"I did X, then we got Y\" outscores one who frames it as \"I won X.\"",
+          },
+        },
+        {
+          label: { en: "Sustained over episodic involvement" },
+          body: {
+            en: "A portfolio with three deep commitments — same Uniformed Group all four years of primary, same community project across two years — scores higher than one with eight superficial entries. Panels read jumping between activities as evidence the candidate hasn't yet committed deeply to anything. Depth over breadth is the consistent signal.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Uniformed Group rank or leadership role" },
+          body: {
+            en: "Active NCC / NPCC / NCDCC / SJAB / Boys' Brigade / Girls' Brigade / Scouts membership in primary, with a leadership position (squad leader, junior commander), is one of the most legible Leadership evidence types for panels. Bring the rank certificate, photos in uniform at events, and one specific story of leading a squad through a difficult exercise. The signal is sustained service and accountability to a team — not just attendance.",
+          },
+        },
+        {
+          position: { en: "Student Council / Prefect / Class Committee" },
+          body: {
+            en: "Council and prefect work is the most common Leadership entry. To stand out: describe one initiative you started or significantly changed (not the title). \"I organised the P5 cohort's first Inter-Class Service Week\" outranks \"I was Vice-Chairperson.\" Bring a one-paragraph description of the initiative plus a teacher's confirmation if possible.",
+          },
+        },
+        {
+          position: { en: "CCA Captaincy or Founding Member" },
+          body: {
+            en: "Captaincy of an established CCA (sports, performing arts, debate, robotics) is read as leadership when paired with evidence of decisions you made — not just longest-serving member. Founding members of a new CCA or a student-initiated club rank highly when supported by teacher endorsement and a brief on what the CCA accomplished. Panels prefer founders who can articulate why the club was needed.",
+          },
+        },
+        {
+          position: { en: "Community Service / Independent Project" },
+          body: {
+            en: "Sustained service initiatives — a fortnightly visit to an elderly home, a recycling drive run for a full year, fundraising for a specific cause with a documented outcome — are powerful when accompanied by evidence: photos, organiser letters, a teacher who can speak to the candidate's role. Single-occasion volunteering is acknowledged but not weighted heavily; consistency is the signal.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Most strong portfolios combine two or three of the above — for example, Patrol Leader in Scouts plus Class Committee Chairperson plus a sustained recycling drive. Avoid listing six superficial entries; panels read that as resume-padding. Two or three deep entries with specific outcomes outperform a long shallow list every cycle.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Tell us about a time you led a team." },
+          subtext: {
+            en: "Panels want a specific situation, action, and result — not a job description.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "Our P6 Scout patrol failed our first night-hike checkpoint because we didn't agree on a navigator. I asked everyone to take 30 seconds to vote, then took accountability for the route myself. We cleared every checkpoint after.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the leadership programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific item — the Prefectorial Board structure, a specific service or community programme, an alumni leader.",
+          },
+          template: {
+            en: "Raffles Institution's Student Council elections involve manifesto presentations and Sec 1 students can submit candidacy with senior endorsement. That structure forces real leadership thinking from day one — and that's what I want.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you disagreed with a teacher or coach." },
+          subtext: {
+            en: "Tests whether the candidate can hold their ground respectfully — and whether they can be wrong gracefully.",
+          },
+          approach: {
+            en: "Describe a real moment, what you did, what you learned — including if you were wrong.",
+          },
+          template: {
+            en: "My CCA teacher wanted to cancel a planned community drive after only six sign-ups. I asked if we could try once more with a different message. We got nineteen sign-ups on the second poster. But I also learned later that her concern about exhausting the team was right — we did three drives that term and the last one was thin.",
+          },
+        },
+        {
+          question: { en: "Describe a teammate or peer you've learned the most from." },
+          subtext: {
+            en: "Whether the candidate sees teammates as people they study, or just background.",
+          },
+          approach: {
+            en: "Name someone specific by role plus what you took away.",
+          },
+          template: {
+            en: "Our Scouts deputy patrol leader didn't speak much but always volunteered first for the tasks no one wanted. I started doing the same in Class Committee work — sign-off, cleanup, the after-event report nobody else wanted to write. The teachers noticed who actually closed loops.",
+          },
+        },
+        {
+          question: { en: "What's a project that didn't work, and why?" },
+          subtext: {
+            en: "Schools want growth narratives, not perfection claims.",
+          },
+          approach: {
+            en: "Describe a real project, what failed, what you understood.",
+          },
+          template: {
+            en: "I tried to start a P5 reading buddy programme for P1 students. It collapsed after three weeks because I planned the sessions but didn't plan how to recruit P1 teachers' help. The lesson: leadership isn't designing the activity, it's getting the people who matter to commit before you announce.",
+          },
+        },
+        {
+          question: { en: "How do you decide what to commit to?" },
+          subtext: {
+            en: "Schools fear DSA-Leadership candidates who over-commit and fail academically.",
+          },
+          approach: {
+            en: "Describe a real filter, not platitudes about prioritising.",
+          },
+          template: {
+            en: "I do three things long-term — Scouts, Class Committee, and a Saturday morning reading session at the community library. I say no to one-off events that compete with those three because depth is what I want, not a wider list.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. The Student Leadership Council structure here lets Sec 1 students propose initiatives directly to the Principal — that's the leadership pipeline I'm committing to.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/year-1-admission-exercises/year-1-direct-school-admission/",
+          talentArea: { en: "Leadership (Boys), IP" },
+          context: {
+            en: "Leadership is among RI's published DSA-Sec talent areas. Strong Student Council and House system tradition. Pipeline to Raffles Junior College leadership programmes.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Leadership (Boys), IP" },
+          context: {
+            en: "SAP and Bicultural Studies. Leadership among published DSA-Sec talent areas. Student Council elections and Boarding School leadership programmes.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/year-1-direct-school-admission/",
+          talentArea: { en: "Leadership (Girls), IP" },
+          context: {
+            en: "IP school with Leadership as a published DSA talent area. Strong Student Council and Peer Support Leader programmes.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Leadership (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies. Leadership listed in published DSA talent areas. Long-standing Prefectorial Board and student initiative tradition.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Leadership (Boys), IP" },
+          context: {
+            en: "Methodist mission-affiliated. Strong Boys' Brigade tradition (the school is the original BB host school in Singapore). Leadership among published DSA talent areas.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.sch.edu.sg/admission/dsa/",
+          talentArea: { en: "Leadership (Girls), DSA-Sec" },
+          context: {
+            en: "Methodist mission-affiliated. Leadership among published DSA-Sec talent areas. Strong Girls' Brigade and service-leadership tradition.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          url: "https://www.acsbr.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Leadership (Boys), DSA-Sec" },
+          context: {
+            en: "Methodist mission-affiliated. Leadership listed in DSA-Sec talent areas. Strong CCA leadership and service programmes.",
+          },
+        },
+        {
+          name: "Cedar Girls' Secondary School",
+          url: "https://www.cedargirlssec.moe.edu.sg/admissions/",
+          talentArea: { en: "Leadership (Girls), DSA-Sec" },
+          context: {
+            en: "Recognised Leadership DSA pathway with strong Student Council programme and service-learning tradition.",
+          },
+        },
+        {
+          name: "Saint Joseph's Institution",
+          url: "https://www.sji.edu.sg/admissions/",
+          talentArea: { en: "Leadership (Boys), DSA-Sec" },
+          context: {
+            en: "Lasallian Catholic mission school. Leadership among DSA-Sec talent areas with strong service-leadership tradition.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/",
+          talentArea: { en: "Leadership (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school with Catholic mission affiliation. Leadership among DSA-Sec talent areas. Higher Chinese / Chinese Language requirement applies.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the application is still weeks out" },
+          items: [
+            {
+              en: "Build a one-page Leadership portfolio. Three entries maximum: each with what you did, what changed, what you learned. Get teacher endorsement letters for each entry. The single highest-leverage prep is converting titles into outcomes — \"Class Chairperson\" becomes \"changed the way our class handled library returns and got overdue rates from 12 to 2 per month.\"",
+            },
+            {
+              en: "Confirm CCA records at primary school are accurate. MOE pulls CCA participation, leadership positions, Uniformed Group ranks, school awards, community-service hours, and competition or campaign results into the DSA portal. Ask the CCA teacher or year-head to verify what's been logged — for Leadership candidates, incomplete records are especially costly.",
+            },
+            {
+              en: "Run two mock group activities. Recruit four or five children of similar age, give them a problem (\"plan a year-end celebration with a $200 budget\"), set a 30-minute timer, and watch. The first run surfaces what your child does under pressure; the second lets them try a different role. Most candidates default to either over-talking or under-talking; the goal is the middle band — listen, propose, credit.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Stop adding new portfolio entries. Anything you add in the final week reads as panic. Spend the time refining the three core entries — sharpen each from a paragraph to four sentences. Brevity with specificity outperforms a longer narrative every time.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, whether the group activity is in-person or virtual, what to bring (a printed portfolio, an ID, sometimes a CCA passbook for Uniformed Group candidates). Email the school office to confirm anything ambiguous.",
+            },
+            {
+              en: "One mock interview with an unfamiliar adult. The interview is where many Leadership candidates fail by sounding rehearsed. Have your child be interviewed by a relative or a teacher's friend who hasn't heard the answers before — the unfamiliar listener forces real conversation instead of recitation.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of selection" },
+          items: [
+            {
+              en: "Light breakfast 90 minutes before. The group activity plus interview can run 90–120 minutes; sugar crashes are visible. Bring water and the printed portfolio in a clean folder.",
+            },
+            {
+              en: "Drop off, don't hover. Greet the coordinator, leave. For Leadership candidates particularly, parents seen organising in the lobby read as the wrong signal. Trust the child to walk in alone.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What did your group decide?\" — give the child space to share without interrogation. Reviewing what went wrong waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, selection coming up, no clear preparation plan — there are still real moves. Don't try to manufacture new leadership experiences. Instead, take the three commitments your child has actually held and rewrite each into a four-sentence story: situation, what they did, what changed, what they learned. The single highest-leverage prep is converting titles into specific outcomes — and that's editing work, not new experience. For the group activity, run two mock sessions at home with siblings or cousins as participants; the goal is practising the listen-then-propose habit, not solving the problem. For the interview, rehearse three of the questions above out loud. Some families consider a private interview coach at this stage. A good coach can sharpen story specificity and remove generic phrasing — but no coach produces, in three sessions, the years of actual service that build a portfolio. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -3073,6 +5348,13 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "music",
   "math",
   "robotics",
+  "chinese",
+  "dance",
+  "drama",
+  "art",
+  "hockey",
+  "squash",
+  "leadership",
 ];
 
 /**
@@ -3095,8 +5377,15 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   badminton: ["martial-arts", "swimming"],
   "martial-arts": ["badminton", "basketball"],
   music: ["math", "martial-arts"],
-  math: ["robotics", "music"],
+  math: ["chinese", "robotics"],
   robotics: ["math", "music"],
+  chinese: ["math", "music"],
+  dance: ["music", "drama"],
+  drama: ["dance", "music"],
+  art: ["drama", "dance"],
+  hockey: ["football", "track-field"],
+  squash: ["badminton", "martial-arts"],
+  leadership: ["chinese", "drama"],
 };
 
 export function getTalentPage(slug: string): TalentPage | null {
