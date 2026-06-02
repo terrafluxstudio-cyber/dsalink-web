@@ -7,6 +7,7 @@ import { TakeawaysEntryCard } from "@/components/TakeawaysEntryCard";
 import { FeaturedGuidesSection } from "@/components/FeaturedGuidesSection";
 import { HeroSection } from "@/components/HeroSection";
 import { HomeBlogEntry } from "@/components/HomeBlogEntry";
+import { HomeParentStoriesGrid } from "@/components/HomeParentStoriesGrid";
 import { HomePillarEntry } from "@/components/HomePillarEntry";
 import { HomeMainSlotCard } from "@/components/HomeMainSlotCard";
 import { HomeNavCardsRow } from "@/components/HomeNavCardsRow";
@@ -85,10 +86,13 @@ export default function HomePage() {
         {/* L2 · Pillar entry — connects with Stats into a dark header block */}
         <HomePillarEntry />
 
-        {/* L3 · Current-period main slot — date-driven big card */}
+        {/* L3 · Parent Stories — emotional mid-page centerpiece (6 composite cases) */}
+        <HomeParentStoriesGrid />
+
+        {/* L4 · Current-period main slot — date-driven big card */}
         <HomeMainSlotCard />
 
-        {/* L4 · 4 quick-link side cards — the rest of the 5-item nav */}
+        {/* L5 · 4 quick-link side cards — the rest of the 5-item nav */}
         <HomeNavCardsRow />
 
         {/* L5 · Featured Evergreen — Takeaways · PSLE COP · curated guides */}
