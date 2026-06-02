@@ -98,7 +98,7 @@ const CopSchoolRow = memo(function CopSchoolRow({
               />
             </p>
             <div className="mt-1.5 flex flex-wrap gap-1.5">
-                <span className="rounded-md bg-intellectual/5 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-intellectual-muted">
+                <span className="rounded-md bg-intellectual/5 px-2 py-0.5 text-[10px] font-semibold tracking-wide text-intellectual-muted">
                   {row.region}
                 </span>
                 {row.gender !== "coed" ? (
@@ -129,7 +129,7 @@ const CopSchoolRow = memo(function CopSchoolRow({
 
           <div className="flex shrink-0 flex-col items-stretch gap-1 sm:items-end">
             <div className="rounded-lg border border-champagne/35 bg-gradient-to-br from-white to-champagne-subtle/40 px-3 py-1.5 text-right shadow-gold sm:min-w-[9.5rem]">
-              <p className="text-[10px] font-semibold uppercase tracking-wide text-intellectual-muted">
+              <p className="text-[10px] font-semibold tracking-wide text-intellectual-muted">
                 {t.scoreboardColG3NonAff}
               </p>
               <p className="mt-0.5 font-display text-lg font-semibold tabular-nums leading-tight text-intellectual">
@@ -165,7 +165,7 @@ const CopSchoolRow = memo(function CopSchoolRow({
               <div className="overflow-x-auto rounded-lg border border-intellectual/10 bg-white/90">
                 <table className="w-full min-w-[520px] text-sm">
                   <thead>
-                    <tr className="border-b border-intellectual/10 bg-champagne-subtle/40 text-left text-[10px] font-semibold uppercase tracking-wide text-intellectual-muted sm:text-xs">
+                    <tr className="border-b border-intellectual/10 bg-champagne-subtle/40 text-left text-[10px] font-semibold tracking-wide text-intellectual-muted sm:text-xs">
                       <th className="px-2 py-2 sm:px-3">{t.scoreboardColYear}</th>
                       <th className="px-2 py-2 sm:px-3">
                         {t.scoreboardTrackNonIp}
@@ -335,7 +335,7 @@ export function ScoreBoard({ omitHeading = false }: { omitHeading?: boolean } = 
         >
           <div className="flex flex-col gap-3 lg:flex-row lg:flex-wrap lg:items-end">
             <label className="flex min-w-[12rem] flex-1 flex-col gap-1.5 text-xs font-semibold text-intellectual-muted">
-              <span className="uppercase tracking-wide">
+              <span className="tracking-wide">
                 {t.openHouseSearchAria}
               </span>
               <input
@@ -347,7 +347,7 @@ export function ScoreBoard({ omitHeading = false }: { omitHeading?: boolean } = 
               />
             </label>
             <label className="flex min-w-[9rem] flex-col gap-1.5 text-xs font-semibold text-intellectual-muted">
-              <span className="uppercase tracking-wide">
+              <span className="tracking-wide">
                 {t.scoreboardFilterRegion}
               </span>
               <select
@@ -374,7 +374,7 @@ export function ScoreBoard({ omitHeading = false }: { omitHeading?: boolean } = 
               </select>
             </label>
             <label className="flex min-w-[10rem] flex-col gap-1.5 text-xs font-semibold text-intellectual-muted">
-              <span className="uppercase tracking-wide">
+              <span className="tracking-wide">
                 {t.scoreboardSortLabel}
               </span>
               <select

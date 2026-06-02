@@ -1156,7 +1156,7 @@ function SchoolCard({
           {school.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-champagne/30 bg-champagne/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-champagne-dark"
+              className="rounded-full border border-champagne/30 bg-champagne/10 px-2 py-0.5 text-[10px] font-semibold tracking-wide text-champagne-dark"
             >
               {tag}
             </span>
@@ -1166,7 +1166,7 @@ function SchoolCard({
 
       {/* About the school */}
       <div className="mt-4">
-        <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-intellectual/40">
+        <p className="mb-1.5 text-[10px] font-semibold tracking-[0.12em] text-intellectual/40">
           {aboutLabel}
         </p>
         <ul className="space-y-1">
@@ -1180,7 +1180,7 @@ function SchoolCard({
       </div>
 
       <div className="mt-3 rounded-xl border border-champagne/20 bg-champagne/6 p-3.5">
-        <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-champagne-dark">
+        <p className="mb-1 text-[10px] font-semibold tracking-[0.12em] text-champagne-dark">
           {keySignalLabel}
         </p>
         <p className="text-sm leading-relaxed text-intellectual">
@@ -1189,7 +1189,7 @@ function SchoolCard({
       </div>
 
       <div className="mt-4">
-        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.12em] text-champagne-dark">
+        <p className="mb-2 text-xs font-semibold tracking-[0.12em] text-champagne-dark">
           {talentAreasLabel}
         </p>
         <div className="flex flex-wrap gap-1.5">
@@ -1201,7 +1201,7 @@ function SchoolCard({
 
       {/* Good Fit For */}
       <div className="mt-4">
-        <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-intellectual/40">
+        <p className="mb-2 text-[10px] font-semibold tracking-[0.12em] text-intellectual/40">
           {goodFitLabel}
         </p>
         <ul className="space-y-1.5">
@@ -1247,7 +1247,7 @@ export function OpenHouseTakeawaysBody() {
       />
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
       {/* Hero */}
-      <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark">
+      <p className="mb-2 text-xs font-semibold tracking-[0.14em] text-champagne-dark">
         {t.ohTakeawaysKicker}
       </p>
       <h1 className="mb-3 font-display text-2xl font-semibold text-intellectual sm:text-3xl">
@@ -1276,7 +1276,7 @@ export function OpenHouseTakeawaysBody() {
       {/* Talent Area Finder */}
       <section className="mt-16" aria-labelledby="talent-finder-heading">
         <div className="mb-6 border-b border-intellectual/10 pb-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark">
+          <p className="text-xs font-semibold tracking-[0.14em] text-champagne-dark">
             {t.ohTakeawaysTalentFinderTitle}
           </p>
           <p className="mt-1 text-sm text-intellectual-muted">

@@ -327,7 +327,7 @@ export function DsaApplyPageBody() {
                   {/* Phase header */}
                   <div className="flex items-start justify-between gap-3 px-5 pb-3 pt-5">
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.13em] text-champagne-dark">
+                      <p className="text-xs font-semibold tracking-[0.13em] text-champagne-dark">
                         Phase {phaseIdx + 1} · {phase.dateHint}
                       </p>
                       <h2 className="mt-1 font-display text-xl font-semibold text-intellectual">
@@ -349,7 +349,7 @@ export function DsaApplyPageBody() {
                         return (
                           <li key={item.id} className="py-3.5">
                             <div className="flex items-start gap-3">
-                              <span className="mt-0.5 shrink-0 rounded-full bg-intellectual/8 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-intellectual-muted">
+                              <span className="mt-0.5 shrink-0 rounded-full bg-intellectual/8 px-2 py-0.5 text-[10px] font-bold tracking-wide text-intellectual-muted">
                                 ℹ
                               </span>
                               <span className="text-sm leading-relaxed text-intellectual-muted">

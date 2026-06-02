@@ -334,7 +334,7 @@ export function OpenHousesDirectory() {
 
         <div className="rounded-xl border border-intellectual/10 bg-slate-50/90 p-2.5 sm:p-4 flex items-start gap-4 sm:gap-8">
           <div>
-          <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-champagne-dark sm:mb-2 sm:text-xs">
+          <p className="mb-1.5 text-[10px] font-semibold tracking-[0.12em] text-champagne-dark sm:mb-2 sm:text-xs">
             {t.openHouseFiltersRegion}
           </p>
           <div className="flex flex-wrap gap-1 sm:gap-1.5">
@@ -359,7 +359,7 @@ export function OpenHousesDirectory() {
           </div>
 
           <div className="border-l border-intellectual/10 pl-4 sm:pl-8">
-          <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-champagne-dark sm:mb-2 sm:text-xs">
+          <p className="mb-1.5 text-[10px] font-semibold tracking-[0.12em] text-champagne-dark sm:mb-2 sm:text-xs">
             {t.openHouseFiltersProgram}
           </p>
           <div className="flex flex-wrap gap-1 sm:gap-1.5">
@@ -398,7 +398,7 @@ export function OpenHousesDirectory() {
       ) : null}
 
       {filteredSorted.length > 0 ? (
-        <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-champagne/30 bg-champagne-subtle/45 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-champagne-dark sm:mt-4 sm:text-xs">
+        <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-champagne/30 bg-champagne-subtle/45 px-3 py-1.5 text-[11px] font-semibold tracking-[0.12em] text-champagne-dark sm:mt-4 sm:text-xs">
           <Calendar className="h-3.5 w-3.5" aria-hidden />
           {t.openHouseSortedByDate}
         </div>
@@ -420,12 +420,12 @@ export function OpenHousesDirectory() {
               >
                 <div className="min-w-0 flex-1 space-y-1 sm:space-y-1.5">
                   <div className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
-                    <span className="inline-flex items-center gap-1 rounded-xl border border-champagne/35 bg-champagne-subtle/55 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-champagne-dark shadow-sm sm:text-xs">
+                    <span className="inline-flex items-center gap-1 rounded-xl border border-champagne/35 bg-champagne-subtle/55 px-2 py-1 text-[10px] font-bold tracking-[0.08em] text-champagne-dark shadow-sm sm:text-xs">
                       <Calendar className="h-3 w-3" aria-hidden />
                       {dateBadge}
                     </span>
                     {urgencyKey && (
-                      <span className="inline-flex items-center rounded-full bg-red-500 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white sm:text-[10px]">
+                      <span className="inline-flex items-center rounded-full bg-red-500 px-2 py-0.5 text-[9px] font-bold tracking-wide text-white sm:text-[10px]">
                         {t[urgencyKey]}
                       </span>
                     )}

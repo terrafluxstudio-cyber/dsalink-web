@@ -14,7 +14,7 @@ export function BlogSubscribeBlock() {
 
           {/* Subscribe */}
           <div className="flex-1">
-            <p className="text-xs font-bold uppercase tracking-[0.14em] text-champagne">
+            <p className="text-xs font-bold tracking-[0.14em] text-champagne">
               Free · No spam
             </p>
             <p className="mt-2 font-display text-xl font-semibold text-white normal-case">
@@ -74,7 +74,7 @@ export function BlogSubscribeBlock() {
 
           {/* Social */}
           <div className="sm:min-w-[180px]">
-            <p className="text-xs font-bold uppercase tracking-[0.14em] text-champagne">
+            <p className="text-xs font-bold tracking-[0.14em] text-champagne">
               Follow us
             </p>
             <p className="mt-2 text-sm text-white/55 normal-case">

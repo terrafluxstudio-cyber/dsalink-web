@@ -74,7 +74,7 @@ export function OpenHouseList({
       <div className="max-w-5xl">
         <div className="flex flex-wrap items-end justify-between gap-3 border-b border-intellectual/10 pb-4">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark">
+            <p className="text-xs font-semibold tracking-[0.14em] text-champagne-dark">
               {t.openHouseKicker}
             </p>
             <HeadingTag
@@ -130,8 +130,8 @@ export function OpenHouseList({
                             <span
                               className={
                                 ev.mode === "online"
-                                  ? "inline-flex items-center gap-1 rounded-full border border-intellectual/15 bg-white/80 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-intellectual sm:text-xs"
-                                  : "inline-flex items-center gap-1 rounded-full border border-champagne/40 bg-champagne-subtle/60 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-champagne-dark sm:text-xs"
+                                  ? "inline-flex items-center gap-1 rounded-full border border-intellectual/15 bg-white/80 px-2 py-0.5 text-[10px] font-semibold tracking-wide text-intellectual sm:text-xs"
+                                  : "inline-flex items-center gap-1 rounded-full border border-champagne/40 bg-champagne-subtle/60 px-2 py-0.5 text-[10px] font-semibold tracking-wide text-champagne-dark sm:text-xs"
                               }
                             >
                               {ev.mode === "online" ? (
@@ -203,7 +203,7 @@ export function OpenHouseList({
 
         {completedEvents.length > 0 && (
           <div className="mt-12 rounded-2xl border border-champagne/25 bg-champagne/8 p-5 sm:p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark mb-1">
+            <p className="text-xs font-semibold tracking-[0.14em] text-champagne-dark mb-1">
               {locale === "zh" ? "已完结" : "Recently Completed"}
             </p>
             <p className="text-sm font-medium text-intellectual-muted mb-4">

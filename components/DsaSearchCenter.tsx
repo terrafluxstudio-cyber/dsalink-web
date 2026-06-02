@@ -505,7 +505,7 @@ function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="min-w-[5.5rem] flex-1 px-1 py-1">
       <p className="font-display text-lg font-bold leading-none text-intellectual/80 sm:text-xl">{value}</p>
-      <p className="mt-1 text-[9px] font-semibold uppercase tracking-wider text-slate-500 sm:text-[10px]">
+      <p className="mt-1 text-[9px] font-semibold tracking-wider text-slate-500 sm:text-[10px]">
         {label}
       </p>
     </div>
@@ -630,7 +630,7 @@ function SchoolCard({
             <h2 className="break-words font-display text-lg font-semibold leading-tight text-intellectual">
               <SchoolDisplayName locale={locale} nameEn={school.schoolName} />
             </h2>
-            <p className="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-champagne-dark">
+            <p className="mt-1 text-xs font-semibold tracking-[0.12em] text-champagne-dark">
               {school.psleLabel ?? copy.dsaFinderPsleEstimate}
             </p>
           </div>
@@ -781,7 +781,7 @@ function TalentCategoryAccordion({
         aria-expanded={open}
       >
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark">
+          <p className="text-xs font-semibold tracking-[0.14em] text-champagne-dark">
             DSA category
           </p>
           <h2 className="mt-1 flex items-center gap-2 font-display text-2xl font-semibold text-intellectual">
@@ -845,7 +845,7 @@ function TalentGroupAccordion({
     <article className="rounded-2xl border border-intellectual/10 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-champagne/40">
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-intellectual/8 pb-3">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark">
+          <p className="text-xs font-semibold tracking-[0.14em] text-champagne-dark">
             {getDsaCategoryLabel(group.category, locale)}
           </p>
           <h3 className="mt-1 break-words font-display text-xl font-semibold text-intellectual">

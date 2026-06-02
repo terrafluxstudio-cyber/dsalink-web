@@ -224,7 +224,7 @@ function InterviewQuestionsSection({
                   </dd>
                 </div>
                 <div className="rounded-lg bg-surface px-3 py-2">
-                  <dt className="inline text-[11px] font-bold uppercase tracking-wider text-champagne-dark">
+                  <dt className="inline text-[11px] font-bold tracking-wider text-champagne-dark">
                     {pick(templateLabel, locale)}
                   </dt>
                   <dd className="mt-1 italic text-intellectual">

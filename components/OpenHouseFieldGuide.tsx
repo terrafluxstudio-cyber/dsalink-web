@@ -18,7 +18,7 @@ export function OpenHouseFieldGuide() {
               <BookOpen className="h-6 w-6" aria-hidden />
             </div>
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-champagne-dark">
+              <p className="text-[10px] font-bold tracking-[0.18em] text-champagne-dark">
                 {t.fieldGuide_kicker}
               </p>
               <h2 className="mt-1 font-display text-[1.25rem] font-extrabold leading-tight text-slate-900 sm:text-[1.5rem]">

@@ -34,7 +34,7 @@ export function BlogPostCard({ slug, title, excerpt, date, heroImage }: Props) {
 
       {/* Content */}
       <div className="flex flex-1 flex-col p-5">
-        <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-champagne-dark">
+        <p className="mb-2 text-[10px] font-semibold tracking-[0.14em] text-champagne-dark">
           {formattedDate}
         </p>
         <h2 className="font-display text-base font-semibold leading-snug text-intellectual group-hover:text-intellectual-light sm:text-[1.0625rem]">

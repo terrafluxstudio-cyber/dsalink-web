@@ -57,7 +57,7 @@ export default function BlogPage() {
         {/* Page header */}
         <div className="border-b border-champagne/20 bg-white px-4 py-10 sm:px-6 sm:py-14">
           <div className="mx-auto max-w-4xl">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-champagne-dark">
+            <p className="mb-2 text-xs font-semibold tracking-[0.14em] text-champagne-dark">
               DSALink
             </p>
             <h1 className="font-display text-3xl font-semibold text-intellectual sm:text-4xl">

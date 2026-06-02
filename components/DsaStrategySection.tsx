@@ -115,7 +115,7 @@ export function DsaStrategySection() {
 
         {/* ── Section header ──────────────────────────────────────── */}
         <div className="mb-6 max-w-2xl">
-          <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.15em] text-intellectual">
+          <p className="mb-2 text-[10px] font-bold tracking-[0.15em] text-intellectual">
             {t.dsaStrategySectionKicker}
           </p>
           <h2 className="font-display text-[1.625rem] font-extrabold leading-tight text-slate-900 sm:text-[2rem]">
@@ -161,7 +161,7 @@ export function DsaStrategySection() {
               <p className="mb-3 text-[0.8125rem] leading-snug text-slate-600">
                 {t.dsaStrategyPsleBody}
               </p>
-              <span className="inline-block rounded-full border border-red-200 bg-red-50 px-3 py-0.5 text-[11px] font-bold uppercase tracking-wide text-red-600">
+              <span className="inline-block rounded-full border border-red-200 bg-red-50 px-3 py-0.5 text-[11px] font-bold tracking-wide text-red-600">
                 {t.dsaStrategyPsleBadge}
               </span>
             </div>
@@ -177,7 +177,7 @@ export function DsaStrategySection() {
               <p className="mb-3 text-[0.8125rem] leading-snug text-slate-600">
                 {t.dsaStrategyDsaBody}
               </p>
-              <span className="inline-block rounded-full border border-green-200 bg-green-50 px-3 py-0.5 text-[11px] font-bold uppercase tracking-wide text-green-700">
+              <span className="inline-block rounded-full border border-green-200 bg-green-50 px-3 py-0.5 text-[11px] font-bold tracking-wide text-green-700">
                 {t.dsaStrategyDsaBadge}
               </span>
             </div>
@@ -194,7 +194,7 @@ export function DsaStrategySection() {
                 {t.dsaStrategySmartBody}
               </p>
             </div>
-            <span className="mt-3 inline-block rounded-full border border-champagne/40 bg-champagne/20 px-3 py-0.5 text-[11px] font-bold uppercase tracking-wide text-champagne-light sm:mt-0 sm:shrink-0">
+            <span className="mt-3 inline-block rounded-full border border-champagne/40 bg-champagne/20 px-3 py-0.5 text-[11px] font-bold tracking-wide text-champagne-light sm:mt-0 sm:shrink-0">
               {t.dsaStrategySmartBadge}
             </span>
           </div>

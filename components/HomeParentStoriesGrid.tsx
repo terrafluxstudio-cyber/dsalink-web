@@ -111,7 +111,7 @@ export function HomeParentStoriesGrid() {
 
                 {/* Talent line */}
                 <div className="border-t border-intellectual/8 pt-3">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-intellectual/45">
+                  <p className="text-[10px] font-semibold tracking-[0.12em] text-intellectual/45">
                     {pick(TALENT_LABEL)}
                   </p>
                   <p className="mt-0.5 text-[13.5px] font-medium leading-snug text-intellectual">
@@ -121,7 +121,7 @@ export function HomeParentStoriesGrid() {
 
                 {/* Outcome — the punchline */}
                 <div className="mt-3 flex-1 rounded-xl bg-champagne/8 p-3.5">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-champagne-dark">
+                  <p className="text-[10px] font-semibold tracking-[0.12em] text-champagne-dark">
                     {pick(OUTCOME_LABEL)}
                   </p>
                   <p className="mt-1 text-[13px] leading-relaxed text-intellectual">

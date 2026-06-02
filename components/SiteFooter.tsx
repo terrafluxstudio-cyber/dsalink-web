@@ -73,7 +73,7 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
 
           {/* Learn column */}
           <div>
-            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-white/30 uppercase">
+            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-white/30">
               {t.footerLearnHeading}
             </p>
             <ul className="space-y-2.5">
@@ -102,7 +102,7 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
 
           {/* Apply column */}
           <div>
-            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-white/30 uppercase">
+            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-white/30">
               {t.footerApplyHeading}
             </p>
             <ul className="space-y-2.5">
@@ -126,7 +126,7 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
 
           {/* Explore column */}
           <div>
-            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-white/30 uppercase">
+            <p className="mb-3 text-[10px] font-bold tracking-[0.15em] text-white/30">
               {t.footerExploreHeading}
             </p>
             <ul className="space-y-2.5">

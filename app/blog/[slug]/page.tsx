@@ -93,11 +93,11 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="mx-auto max-w-2xl">
             <Link
               href="/blog"
-              className="mb-6 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-champagne-dark hover:text-champagne"
+              className="mb-6 inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.12em] text-champagne-dark hover:text-champagne"
             >
               ← Blog
             </Link>
-            <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-intellectual-muted">
+            <p className="mb-3 text-[10px] font-semibold tracking-[0.14em] text-intellectual-muted">
               {formattedDate}
             </p>
             <h1 className="font-display text-2xl font-semibold leading-snug text-intellectual sm:text-3xl sm:leading-tight">
