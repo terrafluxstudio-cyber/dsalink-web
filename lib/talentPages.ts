@@ -453,6 +453,299 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       ms: "Panduan temu duga & trial DSA-Sec bola sepak Singapura — apa trial nilai, soalan, sekolah SSP/SAP.",
       ta: "சிங்கப்பூர் P6 கால்பந்து வீரர்களுக்கான DSA-Sec வழிகாட்டி — சோதனை அளவுகோல்கள், கேள்விகள், SSP/SAP பள்ளிகள்.",
     },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore football trials are usually run by the school football coach — frequently FAS-licensed — alongside the teacher-in-charge of Sports. Expect 90 to 120 minutes split between a warm-up, technical stations (passing, receiving, 1v1), and small-sided games (5v5 or 7v7) on a half pitch. Almost no school publishes its rubric, but reports from Singapore parent forums and the FAS-aligned youth coaching framework converge on the same six dimensions below — and most schools weight the small-sided games more heavily than the isolated drills, because that's where decision-making and off-the-ball habits become visible.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "First touch under pressure" },
+          body: {
+            en: "Not whether the trialist can control a still ball — whether the first touch on a bouncing pass with a defender closing buys the next decision. Coaches deliberately add pressure (a chasing player, a tight grid) because most P6 players have only practised on cones.",
+          },
+        },
+        {
+          label: { en: "Decision-making and vision" },
+          body: {
+            en: "In small-sided games, coaches watch the head — does it lift before the ball arrives? A P6 player who scans twice in the 2 seconds before receiving is rare, and that habit signals years of structured play. The cheapest tell of an untrained player is the head staying down on the ball.",
+          },
+        },
+        {
+          label: { en: "Off-the-ball movement" },
+          body: {
+            en: "What the trialist does in the 5 seconds after passing — make the supporting run, rotate to cover, or stop and watch — is the single biggest separator at P6 level. Schools running NSG B-Division programmes need players who keep moving when they're not on the ball, because that's the habit B-Division opponents will punish.",
+          },
+        },
+        {
+          label: { en: "1v1 defending and recovery" },
+          body: {
+            en: "Stance, distance, and recovery sprint after being beaten. Coaches care more about whether the trialist sprints back into the play than whether they win the first duel. Forwards who don't track back read as a coaching problem in waiting.",
+          },
+        },
+        {
+          label: { en: "Conditioning across the full session" },
+          body: {
+            en: "Trials run past 90 minutes for a reason. The final small-sided game shows who fades — and fatigued players reveal honest habits. Coaches are looking for the player whose touch and decisions hold up in the last 10 minutes, not the one who burned out impressing in minute 20.",
+          },
+        },
+        {
+          label: { en: "Coachability and attitude between drills" },
+          body: {
+            en: "Whether the trialist jogs back to position, picks up cones, listens when corrected, encourages a teammate after a mistake. International coaching research consistently ranks these signals as highly as technical ability for youth selection — and Singapore school coaches, who'll work with this child for four years, weight them heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Goalkeeper" },
+          body: {
+            en: "Goalkeeper trials run as a separate stream — shot-stopping from set distances, distribution (throws and kicks), and command of the area on crosses. Coaches care less about reflex saves than about decision-making on crosses and how cleanly the keeper distributes after a save. At 12, a keeper who plays out from the back with one hand on the line is rarer than one with a fast dive, and it signals more upside.",
+          },
+        },
+        {
+          position: { en: "Centre-back / Full-back" },
+          body: {
+            en: "Heading is checked but rarely decisive at P6 — bodies are still growing. Coaches focus on positioning, the timing of the step-up to intercept, and recovery pace after being turned. Full-backs are also assessed on overlapping runs — does the trialist push forward at the right moment and recover, or do they stay locked to the back line?",
+          },
+        },
+        {
+          position: { en: "Central midfielder" },
+          body: {
+            en: "The position where vision shows fastest. Coaches watch whether the midfielder receives on the half-turn (already facing forward) or with their back to play. Pass selection — short and progressive versus safe sideways — is logged across the small-sided game. A midfielder who plays one forward pass per minute outscores one with a 95% pass completion to the centre-backs.",
+          },
+        },
+        {
+          position: { en: "Winger / Forward" },
+          body: {
+            en: "Trial coaches look for two specific moves: the run in behind the defensive line, and the willingness to receive on the touchline and take a defender on. Goals scored in trial scrimmages are noted but not weighted heavily — schools have seen too many P6 strikers who score against weak defenders and don't translate to NSG-level opposition. The defensive press from the front and recovery runs matter more.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "If your child plays defensive midfielder, the central midfielder notes above mostly transfer — add an emphasis on positional discipline and shielding the back four. For striker, the winger / forward notes are the closest match.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love football?" },
+          subtext: {
+            en: "The panel wants a specific moment, not a feeling. \"It's fun\" reads as weak motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory — a match, a player, a turning point — then connect it to character.",
+          },
+          template: {
+            en: "We lost the P5 inter-class final on penalties and I took the last one and missed. That night I decided I wanted to be the player who takes the next one, not the one who avoids it.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the football programme, or are they applying everywhere?",
+          },
+          approach: {
+            en: "Cite one specific thing about the football set-up — a coach's name, an NSG result you watched, the training pattern.",
+          },
+          template: {
+            en: "I watched your B-Division side play in the West Zone last year and the way the team kept passing under pressure was different from the other zone games I'd seen. I want to learn that style from Sec 1.",
+          },
+        },
+        {
+          question: { en: "What position do you play?" },
+          subtext: {
+            en: "Can the kid articulate the role and its job — not just a label?",
+          },
+          approach: {
+            en: "Name the position plus the job, and add a position you can cover.",
+          },
+          template: {
+            en: "Central midfielder — my job is link the defenders and the forwards and protect the back four when we lose the ball. I've also played right-back when my school team needed cover, so I'm comfortable defending wide.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a challenge." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two or three sentences. A real low point reads more honestly than a polished story.",
+          },
+          template: {
+            en: "I was cut from the P5 school team after the first round of trials. I joined an ActiveSG academy twice a week and ran 5km on Saturdays for three months. I made the team in the second-round trial and started in the inter-school cup.",
+          },
+        },
+        {
+          question: { en: "Is there a teammate or coach you remember most?" },
+          subtext: {
+            en: "Whether the kid sees the people around them, or just themselves.",
+          },
+          approach: {
+            en: "Name someone specific by role, plus what you actually learned from them.",
+          },
+          template: {
+            en: "My P5 coach made us watch the previous match together every Monday before training. I'd never watched my own play before — once I started, I noticed I was ball-watching when we lost possession. That habit was the first thing I fixed.",
+          },
+        },
+        {
+          question: { en: "How will you manage time with frequent training?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system you already use, not promises about discipline.",
+          },
+          template: {
+            en: "On training days I finish English and Math homework on the bus home and do Science before dinner. I keep Sundays for revision and review one of my matches. Friday is my day off from football and I use that evening for harder homework.",
+          },
+        },
+        {
+          question: { en: "If two schools both offer you, how will you decide?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick this school, justify with one specific reason — programme, coach, or fit.",
+          },
+          template: {
+            en: "Honestly, your school. The way your B-Division side keeps building out from the goalkeeper is how I want to play, and your coach's emphasis on tracking back is what my current coach has been pushing me on. If the other school called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Victoria School",
+          url: "https://www.victoriaschool.moe.edu.sg/admissions/direct-school-admission",
+          talentArea: { en: "Football (Boys)" },
+          context: {
+            en: "Long-standing football programme — Victoria School is one of the schools most consistently identified with NSG football across both B and C Division. The school's DSA listing places football among its core sports talent areas.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          url: "https://acsbr.moe.edu.sg/admissions/dsa-sec/",
+          talentArea: { en: "Football (Boys)" },
+          context: {
+            en: "Football is a flagship CCA at ACS(BR) and listed under the school's DSA-Sec talent areas. Strong B-Division track record and a coaching set-up that runs DSA trialists alongside the competition squad.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Football (Boys), IP" },
+          context: {
+            en: "Football is part of HCI's 2026 DSA talent areas. Official position is that applicants without prior representative experience may still apply — the trial and interview carry more weight than CCA history alone.",
+          },
+        },
+        {
+          name: "Saint Joseph's Institution",
+          url: "https://www.sji.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Football (Boys)" },
+          context: {
+            en: "Football is one of SJI's longest-running sports programmes and is listed under DSA-Sec talent areas. Trials emphasise small-sided game decisions over isolated technique.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/admissions/direct-school-admission",
+          talentArea: { en: "Football (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school — applicants must offer Chinese Language or Higher Chinese in primary school. Football is among Catholic High's listed DSA talent areas with a competitive B-Division programme.",
+          },
+        },
+        {
+          name: "Singapore Sports School",
+          url: "https://www.sportsschool.edu.sg/admissions/the-direct-school-admission-process",
+          talentArea: { en: "Football (Boys), full DSA" },
+          context: {
+            en: "Football is one of Singapore Sports School's core academies — a full-DSA pure sports school. Trial is structured around the FAS-aligned development framework. The application and trial happen earlier in the year than the mainstream DSA-Sec timeline; check the school's website for the current cycle.",
+          },
+        },
+        {
+          name: "Meridian Secondary",
+          url: "https://meridiansec.moe.edu.sg/dsa-sec/",
+          talentArea: { en: "Football (Boys)" },
+          context: {
+            en: "MOE-designated football SSP (Sports School Programme). Coaches run trials that emphasise game-situation decisions and positional discipline; the school is one of the more accessible football SSP routes for families outside the elite IP cluster.",
+          },
+        },
+        {
+          name: "Bukit Panjang Government High",
+          url: "https://www.bpghs.moe.edu.sg/dsa-2026/",
+          talentArea: { en: "Football (Boys)" },
+          context: {
+            en: "Listed in BPGHS's published 2026 DSA pages. Trial scored on general motor ability plus sport-specific skills. Two-year primary CCA membership preferred but not mandatory.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Football (Boys), IP" },
+          context: {
+            en: "Football is among ACS(I)'s DSA talent areas. The school runs DSA candidates with the existing competition squad during the trial window — a useful signal of programme depth.",
+          },
+        },
+        {
+          name: "Saint Patrick's School",
+          url: "https://www.stpatricks.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Football (Boys)" },
+          context: {
+            en: "Football is one of the school's most active CCAs and consistently appears in the East Zone NSG B-Division frame. Listed in St Patrick's DSA-Sec talent areas.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Video-record one full match your child plays. Watch back together and score just two behaviours: (1) does your child's head lift to scan in the 2 seconds before receiving the ball? (2) what do they do in the 5 seconds after passing — run, rotate, or stand? These are the two highest-signal habits at P6 trial level, and almost every untrained player fails the first.",
+            },
+            {
+              en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and competition results, and other achievements directly from the primary school into the DSA portal. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged before the window closes.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone, watch back together. Flag any answer that ran over thirty seconds, or used the word \"passionate.\" Both kill the read.",
+            },
+            {
+              en: "Watch one of the target school's NSG matches if you can — zone or national, B or C Division. Even one match gives your child something specific to cite in the interview (\"the way your team built out from the back\"). Generic praise reads as homework not done.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 80% — passing patterns, finishing drills, short sharp running. No new academy session, no extra match. Final-week added load rarely pays off and frequently produces a tweak or pulled muscle that ends the trial before it starts.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire, what to bring (boots, indoor shoes, water). Email the teacher-in-charge if anything is ambiguous — the email itself is a data point on parent attentiveness.",
+            },
+            {
+              en: "One scrimmage with players your child doesn't know. A recurring observation on Singapore parent forums is that kids underperform at trials because they default to passing only to teammates they recognise. Force that awkwardness early so it's already gone by trial day.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat a real meal 90 minutes before — not 30. Coaches deliberately push trials past the fatigue threshold so they can see honest habits. Low blood sugar at minute 60 is a self-inflicted handicap.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "Boots and indoor shoes both in the bag. Trials sometimes move to the indoor sports hall if it rains, and a child in studs on a sports hall floor reads as unprepared.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. Shorten the drill cycle to two things only: receiving on the half-turn (a parent or sibling can play the passer), and 1v1 defending into a recovery sprint. Both are low-injury, high-signal, and the right kind of repetition before a trial. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because that is the only part of the trial day where a few hours of focused work can still meaningfully change the outcome. Some families bring in a private football coach at this stage to compress the learning curve — a good one can speed up specific habit changes like scanning before receiving, but no coach produces, in three sessions, the muscle memory of a year of structured play. Treat it as triage, not a fix.",
+      },
+    },
   },
   swimming: {
     slug: "swimming",
