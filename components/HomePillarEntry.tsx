@@ -46,11 +46,11 @@ export function HomePillarEntry() {
   const pick = (s: LocaleStr) => s[locale];
 
   return (
-    <section className="py-8 sm:py-10">
+    <section className="bg-intellectual pb-12 pt-2 sm:pb-14 sm:pt-3">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Link
           href="/dsa-guide"
-          className="group relative block overflow-hidden rounded-2xl border border-champagne/30 bg-intellectual p-6 shadow-card transition hover:shadow-lg sm:p-8"
+          className="group relative block overflow-hidden rounded-2xl border border-champagne/30 bg-intellectual-dark p-6 shadow-card transition hover:shadow-lg sm:p-8"
         >
           {/* Subtle decorative blob */}
           <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-champagne/15 blur-3xl" aria-hidden />

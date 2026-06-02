@@ -59,7 +59,7 @@ export function StatsStrip() {
   return (
     <section
       ref={ref as RefObject<HTMLElement>}
-      className="border-y border-intellectual/20 bg-intellectual py-8 sm:py-10"
+      className="bg-intellectual pb-6 pt-10 sm:pb-8 sm:pt-12"
       aria-label="DSALink by the numbers"
     >
       <div className="mx-auto grid max-w-4xl grid-cols-2 gap-8 px-4 sm:grid-cols-4 sm:gap-6 sm:px-6">

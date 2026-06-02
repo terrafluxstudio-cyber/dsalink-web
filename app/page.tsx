@@ -79,16 +79,19 @@ export default function HomePage() {
         {/* L1 · Hero — C2 reference framing */}
         <HeroSection />
 
-        {/* L1b · Pillar entry — link to /dsa-guide complete reference */}
+        {/* L1.5 · Stats Strip — quantified trust anchor (moved from footer) */}
+        <StatsStrip />
+
+        {/* L2 · Pillar entry — connects with Stats into a dark header block */}
         <HomePillarEntry />
 
-        {/* L2 · Current-period main slot — date-driven big card */}
+        {/* L3 · Current-period main slot — date-driven big card */}
         <HomeMainSlotCard />
 
-        {/* L3 · 4 quick-link side cards — the rest of the 5-item nav */}
+        {/* L4 · 4 quick-link side cards — the rest of the 5-item nav */}
         <HomeNavCardsRow />
 
-        {/* L4 · Featured Evergreen — Takeaways · PSLE COP · curated guides */}
+        {/* L5 · Featured Evergreen — Takeaways · PSLE COP · curated guides */}
         <section className="bg-surface py-12 sm:py-16">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <div className="mb-6 sm:mb-8">
@@ -107,14 +110,11 @@ export default function HomePage() {
         </section>
         <FeaturedGuidesSection />
 
-        {/* L4b · Blog — latest 3 time-sensitive posts (EN only) */}
+        {/* L6 · Blog — latest 3 time-sensitive posts (EN only) */}
         <HomeBlogEntry />
 
-        {/* L5 · Email subscribe — the 8–11 month return mechanism */}
+        {/* L7 · Email subscribe — the 8–11 month return mechanism */}
         <HomepageSubscribeBanner />
-
-        {/* L6 · Stats Strip — quantified depth, placed at footer */}
-        <StatsStrip />
       </main>
       <SiteFooter />
     </>
