@@ -32,7 +32,8 @@ export type TalentSlug =
   | "choir"
   | "chinese-orchestra"
   | "tennis"
-  | "wushu";
+  | "wushu"
+  | "water-polo";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -8207,6 +8208,333 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  "water-polo": {
+    slug: "water-polo",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Water Polo", zh: "水球", ms: "Polo Air", ta: "வாட்டர் போலோ" },
+    hook: {
+      en: "Water polo DSA — trials reward egg-beater stamina and one-handed ball control, with strong swimming background as the unstated prerequisite.",
+      zh: "水球 DSA——trial 看蛋打腿耐力和单手控球，强游泳基础是默认前提",
+      ms: "DSA Polo Air — trial menghargai stamina kayuhan egg-beater dan kawalan bola sebelah tangan, dengan latar belakang renang kuat sebagai prasyarat.",
+      ta: "வாட்டர் போலோ DSA — egg-beater கால் வலிமை மற்றும் ஒரு கையில் பந்து கட்டுப்பாட்டை மதிக்கிறது, வலுவான நீச்சல் பின்னணி அமைப்புத் தேவை.",
+    },
+    intro: {
+      en: "Water polo in Singapore is concentrated at a small number of schools with established programmes — ACS(I), ACS(BR), SJI, RI, HCI for boys, and a smaller cluster (MGS, RGS, SCGS) for girls. The unstated entry requirement is strong swimming: most water polo DSA recruits already swim at NSG-competitive levels (often 1:15 or faster for 100m freestyle long-course). Trials assess egg-beater treading stamina, one-handed ball control while treading, passing accuracy, shooting variety, and how the candidate reads a crowded six-on-six situation. NSG Zone and National Schools water polo competition results at primary level are explicitly cited by ACS(I) as DSA criteria.",
+      zh: "新加坡水球集中在少数有传统的学校——男队 ACS(I)/ACS(BR)/SJI/RI/HCI，女队 MGS/RGS/SCGS。默认入门门槛是强游泳：多数水球 DSA 招生本身已是 NSG 级游泳手（100m 长池自由泳常在 1:15 以内）。Trial 看蛋打腿（egg-beater）耐力、单手控球（边踩水边接传）、传球精度、射门变化、读 6 对 6 拥挤场面的能力。ACS(I) 明确说 NSG Zone 与 National Schools 小学水球战绩是 DSA 评估依据。",
+      ms: "Polo air di Singapura tertumpu pada bilangan kecil sekolah dengan program mantap. Keperluan tersirat adalah renang kuat. Trial menilai stamina egg-beater, kawalan bola sebelah tangan, ketepatan hantaran, dan pembacaan situasi enam-lawan-enam.",
+      ta: "சிங்கப்பூரில் வாட்டர் போலோ சில பள்ளிகளில் தொகுக்கப்பட்டுள்ளது. மறைமுக தேவை வலுவான நீச்சல் பின்னணி. சோதனை egg-beater வலிமை, பந்து கட்டுப்பாடு, ஹண்டிங் துல்லியம், ஆறு-மீது-ஆறு வாசிப்பை மதிப்பிடுகிறது.",
+    },
+    summary: {
+      en: "Trial structure, position-specific habits, interview questions, water-polo-active schools across boys' and girls' divisions.",
+      zh: "Trial 流程、位置专项习惯、面试题、水球活跃男女校。",
+      ms: "Struktur trial, tabiat khusus posisi, soalan temu duga, sekolah aktif polo air.",
+      ta: "சோதனை அமைப்பு, நிலை சார்ந்த பழக்கங்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Anglo-Chinese School (Independent)",
+      "Anglo-Chinese School (Barker Road)",
+      "St. Joseph's Institution",
+      "Raffles Institution",
+      "Hwa Chong Institution",
+      "Methodist Girls' School (Secondary)",
+    ],
+    metaDescription: {
+      en: "Water polo DSA-Sec trial guide for Singapore P6 — what coaches assess across treading / passing / shooting / positions, NSG context, sample interview questions, water-polo-active participating schools.",
+      zh: "新加坡 P6 水球 DSA-Sec trial 指南——踩水/传球/射门/位置评分、NSG 说明、面试题、水球活跃学校。",
+      ms: "Panduan trial DSA-Sec Polo Air Singapura — apa jurulatih nilai, posisi, soalan, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 வாட்டர் போலோ DSA-Sec வழிகாட்டி — அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore water polo trials typically run 90–120 minutes in the pool, often split between a fitness segment and a small-sided game segment. The standard structure: warm-up swim (commonly 400-800m at moderate intensity), egg-beater and treading drills, one-handed ball handling stations (catch, pass, dribble while swimming), shooting from set positions (5m line, perimeter, drive-shot), then 4-on-4 or 5-on-5 scrimmage to the school's top players. Coaches commonly cite NSG and age-group competition results explicitly as DSA criteria. Six dimensions emerge from public DSA briefs (ACS(I), SJI) and FINA / Singapore Aquatics youth water polo frameworks.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Egg-beater treading stamina and elevation" },
+          body: {
+            en: "The single most-tested element. Coaches run treading sets — often 30 seconds elevated arms-out-of-the-water, repeated 4-6 times with brief rest — and watch shoulder height, head position, and breathing control. A P6 candidate who can keep shoulders above water for full 30-second sets is signalling readiness for game-pace play. Treading is the unique water-polo demand that gym-fit swimmers usually underestimate.",
+          },
+        },
+        {
+          label: { en: "One-handed ball handling while moving" },
+          body: {
+            en: "Coaches feed wet passes at varying angles and watch whether the candidate can catch one-handed, dribble with the ball just ahead of the body (not lifted out of water), and pass cleanly without two-handed lifts (which incur turnovers under FINA rules). A P6 candidate who can catch-and-release in one motion outscores a stronger swimmer who needs both hands for ball control.",
+          },
+        },
+        {
+          label: { en: "Passing accuracy under defensive pressure" },
+          body: {
+            en: "Coaches stage 5–7m pair drills with a defender's arm pressure, then progress to triangle drills with two passers and one mover. They look for accurate dry passes (over-the-water, no splash) to the receiver's catching hand, leading passes (ahead of the swimmer), and the recognition of when to pass long versus reset short. The signal is consistency under match-pace tempo — coaches watch whether the trialist panics into a hopeful pass or finds the next option.",
+          },
+        },
+        {
+          label: { en: "Shooting variety and accuracy" },
+          body: {
+            en: "Most schools test at least three shot types: a perimeter power shot (from 5–7m), a backhand or skip shot, and a quick release after receiving (no winding-up). Coaches focus on placement (high corners and skip-off-the-water are hardest to save) and the speed of the catch-and-release. A P6 who can deliberately skip a shot off the water at the goalkeeper's chest scores higher than one with a faster but predictably-aimed straight shot.",
+          },
+        },
+        {
+          label: { en: "Reading the 6-on-6 game" },
+          body: {
+            en: "In small-sided games, coaches assess whether the candidate understands movement patterns — sprinting back on defence, the centre forward setting position, the perimeter rotation. Water polo at P6 trial level is messy by definition; coaches watch whether the candidate creates space, supports the carrier, and recovers defensively. A P6 who plays without the ball intelligently is recruited over one who only stands out when receiving.",
+          },
+        },
+        {
+          label: { en: "Coachability and pool-deck behaviour" },
+          body: {
+            en: "How the trialist behaves between sets, whether they exit and re-enter the pool calmly, encourage a teammate after a missed shot, and accept immediate corrections without sulking. International youth coaching research consistently rates these signals among the top predictors of long-term improvement — and Singapore school coaches, who'll work with this child for four years across NSG B and A divisions, weight them heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Driver / Perimeter" },
+          body: {
+            en: "The most-recruited cluster — every team needs reliable shooters and passers around the perimeter. Coaches assess shooting variety (perimeter shot + skip + quick release), the ability to drive into the centre on a counter-attack, and defensive recovery to mark the opposing driver. A P6 driver with two reliable shot types and clean defensive transition is the bread-and-butter water polo recruit.",
+          },
+        },
+        {
+          position: { en: "Centre Forward (Hole)" },
+          body: {
+            en: "Specialist position requiring strong upper body, low centre of gravity, and ability to receive passes with defenders draped on the back. Coaches assess holding position in the 2m area (without offence-foul drawing), one-handed receive-and-shoot under pressure, and drawing exclusions. Centre forwards are highly recruited but candidates need both size and bait-and-pull instinct — coaches can train technique but not the willingness to take physical contact.",
+          },
+        },
+        {
+          position: { en: "Centre Back / Defender" },
+          body: {
+            en: "The position that anchors team defence in front of the goalkeeper. Coaches assess defensive treading depth (sinking when needed), one-handed pressing on the opposing centre forward (without foul accumulation), and the long pass to start the counter-attack. A P6 centre back with a strong long pass beats a stronger swimmer who can only clear short.",
+          },
+        },
+        {
+          position: { en: "Goalkeeper (specialist trial)" },
+          body: {
+            en: "Specialist position with a separate trial. Coaches assess vertical jump from a tread (the explosive lift on a save), wingspan reach, reflex on close shots, and the first-pass to start the counter-attack. Goalkeepers play in different gear (a different-coloured cap, weighted shorts in some leagues) and the trial is run with a smaller pool of candidates. A P6 with a strong vertical and clean catching hands is a multi-year asset because keeper development takes longer than field-player development.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Singapore school water polo at P6 trial level usually does not lock a player to one position — coaches assess versatility across perimeter, centre, and defence roles. Goalkeeper is usually a separate decision because keeper trials are scheduled distinctly. If your child plays multiple positions in primary-school games, mention all of them; the school's existing roster (graduating cohort gaps) often drives which position recruits a specific candidate.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love water polo?" },
+          subtext: {
+            en: "Panels want a specific moment, not a feeling. \"I like the sport\" reads as untrained motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character.",
+          },
+          template: {
+            en: "We lost the inter-school P5 quarter-final because I lost track of the centre forward on a 6-on-5 defence. That night I asked my coach what I should have done — I'd been watching the ball, not the player. That was when I realised water polo is the only swimming-based sport where your eyes matter more than your stroke.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the water polo programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's water polo — a coach's name, an NSG result, a training pattern.",
+          },
+          template: {
+            en: "ACS(I)'s water polo programme has produced national-team players consistently. The 4-times-a-week training and the on-campus pool are exactly the setup I want from Sec 1.",
+          },
+        },
+        {
+          question: { en: "What position do you play and why?" },
+          subtext: {
+            en: "Can the kid articulate the role, not just label it?",
+          },
+          approach: {
+            en: "Name the position plus the job.",
+          },
+          template: {
+            en: "Driver. My job is to swim at counter-attack pace, shoot from the perimeter, and recover to mark the opposing driver before the next attack. I picked the position because my freestyle is strong and I like the responsibility for both ends of the pool.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I got my egg-beater scoring rejected in a P5 trial because my shoulders dropped under the surface after 20 seconds. I spent eight weeks adding egg-beater intervals to every swim training — 4 x 30s with 10s rest. By NSG I could tread arms-out for full game length.",
+          },
+        },
+        {
+          question: { en: "Is there a teammate or coach you remember most?" },
+          subtext: {
+            en: "Whether the kid sees teammates as people or background.",
+          },
+          approach: {
+            en: "Name someone specific by role + what you learned from them.",
+          },
+          template: {
+            en: "Our P6 captain played centre forward and refused to be moved off the 2m line by any defender. Watching him take the contact and still receive cleanly taught me that water polo position is held by intent, not by size. I'm not big enough for hole yet, but his composure is what I copy.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent trainings?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I do English and Math homework on the bus to training and finish Science before dinner. Sunday is for revision. My mother shows my report book to my coach every term — if any subject drops a band, we cut one training. That's the rule we set together.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your coach's emphasis on egg-beater conditioning matches what I most want to develop. If School A called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/waterpolo/",
+          talentArea: { en: "Water Polo (Boys), IP" },
+          context: {
+            en: "IP school with Singapore's most decorated school water polo programme. Multi-decade NSG A-Division dominance. ACS(I)'s 2025 DSA brief explicitly lists trial dates, NSG result requirements, and selection criteria for water polo.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          url: "https://www.acsbr.moe.edu.sg/",
+          talentArea: { en: "Water Polo (Boys), DSA-Sec" },
+          context: {
+            en: "Sister school to ACS(I) with strong boys' water polo CCA tradition. Regular NSG B- and A-Division presence.",
+          },
+        },
+        {
+          name: "St. Joseph's Institution",
+          url: "https://www.sji.edu.sg/admission/dsa-at-sji/",
+          talentArea: { en: "Water Polo (Boys), IP / DSA-Sec" },
+          context: {
+            en: "Lasallian boys' school. Water polo among SJI's published DSA talent areas (IP and O Level). Sustained NSG B- and A-Division presence.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/dsa-sec",
+          talentArea: { en: "Water Polo (Boys), IP" },
+          context: {
+            en: "IP school. Water polo among RI's published Sports DSA domain criteria. Sustained NSG A-Division participation.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Water Polo (Boys), IP" },
+          context: {
+            en: "IP school. Water polo among HCI's published DSA talent areas. Sustained NSG participation.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.moe.edu.sg/secondary/admissions/dsa-sec1/",
+          talentArea: { en: "Water Polo (Girls), DSA-Sec" },
+          context: {
+            en: "Methodist heritage girls' school. Water polo among MGS's recognised DSA talent areas. Strong NSG girls' division participation.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/Admission-to-RGS/via-DSA/",
+          talentArea: { en: "Water Polo (Girls), IP" },
+          context: {
+            en: "IP school. Water polo among RGS's recognised DSA talent areas; published in the 2026 Information on Application brief.",
+          },
+        },
+        {
+          name: "Singapore Chinese Girls' School",
+          url: "https://www.scgs.moe.edu.sg/prospective-students/secondary-admission/direct-school-admission/",
+          talentArea: { en: "Water Polo (Girls), DSA-Sec" },
+          context: {
+            en: "SAP girls' school. Water polo among recognised DSA talent areas in the 2026 DSA Infosheet.",
+          },
+        },
+        {
+          name: "St. Andrew's Secondary School",
+          url: "https://www.standrewssec.moe.edu.sg/",
+          talentArea: { en: "Water Polo (Boys), DSA-Sec" },
+          context: {
+            en: "Anglican boys' school. Water polo with sustained NSG presence; St. Andrew's CCA pages and DSA briefs cite competitive water polo.",
+          },
+        },
+        {
+          name: "Outram Secondary School",
+          url: "https://www.outramsec.moe.edu.sg/",
+          talentArea: { en: "Water Polo (Boys), DSA-Sec" },
+          context: {
+            en: "Recognised water polo CCA. Regular NSG B-Division participation.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Verify swimming and water polo records. MOE pulls CCA participation, school awards, NSG Zone and National Schools water polo results, swimming PB times (where the school logs them), and Singapore Aquatics-sanctioned competition results into the DSA portal directly. ACS(I)'s 2025 DSA brief is explicit that primary-level NSG water polo participation is a criterion — confirm the result has been logged.",
+            },
+            {
+              en: "Video-record one full small-sided game. Watch with your child, scoring just two behaviours: (1) at the 30-second mark of any treading sequence, are the shoulders still above water or sinking? (2) when receiving a pass, is the second hand under the water on a treading stroke or up reaching for the ball? These two are the highest-signal items in water polo trials.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: technical sets (egg-beater, dry pass pairs), light shooting, no new heavy conditioning load. Final-week heavy swim sets rarely pay off and frequently produce a shoulder or hip tweak.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue (most school pools — confirm which one), attire (most trials require school swim trunks or competition jammers for boys, training one-piece for girls, plus a competition-style cap if owned). Bring two pairs of goggles. Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "Hydrate, eat enough, sleep. Pool training is dehydrating in ways young athletes underestimate.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — not 30 — and choose a meal that won't sit heavy (avoid heavy carbs and dairy immediately before). The last 20 minutes of trial is where treading endurance breaks down on a heavy stomach.",
+            },
+            {
+              en: "Bring two pairs of goggles. A snapped strap mid-trial is one of the few logistical failures that disrupts a P6 trial — the cheap fix is having backups.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents on the pool deck are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. Shorten the drill cycle to two things only: 30-second egg-beater holds (shoulders above water) and one-handed catch-and-release pairs (no two-hand lifts). Cancel anything that competes with sleep and the shoulder. Spend the freed time on interview prep above, because that's the only part where a few hours can still meaningfully change the outcome. Some families bring in a private water polo coach at this stage. A good private coach can speed up specific habit changes — particularly egg-beater technique and quick-release passing — but no coach produces, in three sessions, the swimming foundation of a year of NSG-level training. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -8234,6 +8562,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "chinese-orchestra",
   "tennis",
   "wushu",
+  "water-polo",
 ];
 
 /**
@@ -8273,6 +8602,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   "chinese-orchestra": ["music", "chinese"],
   tennis: ["badminton", "table-tennis"],
   wushu: ["martial-arts", "chinese"],
+  "water-polo": ["swimming", "basketball"],
 };
 
 /**
