@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import { UnderRecruitedPathsPageBody } from "@/components/UnderRecruitedPathsPageBody";
+import { getSiteUrl } from "@/lib/seo";
 
 const PAGE_TITLE =
-  "Under-recruited DSA Paths — Lion Dance, Rare Instruments, Niche Sports | DSALink Singapore";
+  "Under-recruited DSA Paths 2027 — Lion Dance, Rare Instruments, Niche Sports | DSALink Singapore";
 const PAGE_DESCRIPTION =
-  "Ten under-recruited DSA-Sec talent paths in Singapore — female lion dance at NYGH, rare Chinese instruments, floorball goalkeeper, archery, sailing, fencing, softball, bowling, rare track events, squash. Honest timelines and the caps strategy can't beat.";
+  "Under-recruited DSA-Sec talent paths in Singapore for P5 families planning the 2027 cycle — female lion dance at NYGH, rare Chinese instruments (sheng, suona, zhongruan), floorball goalkeeper, archery, sailing, fencing, softball, bowling, rare track events, squash. Possible routes — not guarantees. Honest timelines, school lists, and the caps strategy can't beat.";
 
 const ogImage = {
   url: "/opengraph-image",
   width: 1200,
   height: 630,
-  alt: "DSALink — Under-recruited DSA paths",
+  alt: "DSALink — Under-recruited DSA paths for 2027 planning",
 } as const;
 
 export function generateMetadata(): Metadata {
@@ -18,7 +19,7 @@ export function generateMetadata(): Metadata {
     title: { absolute: PAGE_TITLE },
     description: PAGE_DESCRIPTION,
     keywords: [
-      "DSA Singapore niche talents",
+      "DSA Singapore niche talents 2027",
       "NYGH lion dance girls DSA",
       "Nanyang girls lion dance audition",
       "DSA female lion dance Singapore",
@@ -31,8 +32,10 @@ export function generateMetadata(): Metadata {
       "DSA pole vault Singapore",
       "DSA fencing Singapore",
       "DSA squash Singapore",
+      "DSA sailing Singapore",
       "less crowded DSA paths Singapore",
-      "DSA strategy 2026",
+      "DSA strategy 2027 P5",
+      "P5 prep for DSA-Sec",
     ],
     alternates: { canonical: "/dsa-interview/under-recruited-paths" },
     openGraph: {
@@ -52,6 +55,78 @@ export function generateMetadata(): Metadata {
   };
 }
 
+/**
+ * Article JSON-LD — rich-snippet eligibility for the strategy page.
+ * Headline + description mirror the canonical EN copy on the page.
+ */
+function ArticleStructuredData() {
+  const base = getSiteUrl();
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${base}/dsa-interview/under-recruited-paths#article`,
+    headline:
+      "Under-recruited DSA paths — possible routes when supply is thin at the school side",
+    description: PAGE_DESCRIPTION,
+    url: `${base}/dsa-interview/under-recruited-paths`,
+    inLanguage: "en-SG",
+    publisher: {
+      "@type": "Organization",
+      name: "DSALink",
+      url: base,
+    },
+    isAccessibleForFree: true,
+    about: [
+      { "@type": "Thing", name: "Direct School Admission Singapore" },
+      { "@type": "Thing", name: "DSA-Sec 2027" },
+      { "@type": "Thing", name: "Female lion dance Singapore" },
+      { "@type": "Thing", name: "Rare Chinese instrument DSA" },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+/** BreadcrumbList JSON-LD — Home > Interview > Under-recruited paths */
+function BreadcrumbStructuredData() {
+  const base = getSiteUrl();
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: base },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Interview & Trial",
+        item: `${base}/dsa-interview`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Under-recruited paths",
+        item: `${base}/dsa-interview/under-recruited-paths`,
+      },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
 export default function UnderRecruitedPathsPage() {
-  return <UnderRecruitedPathsPageBody />;
+  return (
+    <>
+      <ArticleStructuredData />
+      <BreadcrumbStructuredData />
+      <UnderRecruitedPathsPageBody />
+    </>
+  );
 }

@@ -31,31 +31,47 @@ function pick(s: LocaleStr, locale: "en" | "zh" | "ms" | "ta"): string {
 /* ============================ HERO ============================ */
 
 const HERO_KICKER: LocaleStr = {
-  en: "DSA-Sec 2026 · Less-crowded talent paths",
-  zh: "DSA-Sec 2026 · 冷门才艺路径",
-  ms: "DSA-Sec 2026 · Laluan bakat kurang sesak",
-  ta: "DSA-Sec 2026 · குறைந்த நெரிசல் கொண்ட திறமைப் பாதைகள்",
+  en: "DSA-Sec 2027 planning · Less-crowded talent paths",
+  zh: "DSA-Sec 2027 提前规划 · 冷门才艺路径",
+  ms: "Perancangan DSA-Sec 2027 · Laluan bakat kurang sesak",
+  ta: "DSA-Sec 2027 திட்டமிடல் · குறைந்த நெரிசல் கொண்ட பாதைகள்",
 };
 
 const HERO_TITLE: LocaleStr = {
-  en: "Under-recruited DSA paths — where supply is thin and offers are real.",
-  zh: "招收人数 > 报名人数的 DSA 路径——供给薄、offer 真实可得",
-  ms: "Laluan DSA kurang dipohon — di mana penawaran tipis dan tawaran adalah nyata.",
-  ta: "குறைவாக விண்ணப்பிக்கப்படும் DSA பாதைகள் — விநியோகம் குறைவாக, ஆஃபர்கள் உண்மையானவை.",
+  en: "Under-recruited DSA paths — possible routes when supply is thin at the school side.",
+  zh: "招收 > 报名的 DSA 路径——学校供给薄的可能路线",
+  ms: "Laluan DSA kurang dipohon — laluan yang mungkin apabila penawaran sekolah tipis.",
+  ta: "குறைவாக விண்ணப்பிக்கப்படும் DSA பாதைகள் — பள்ளி வழங்கல் குறைவாக இருக்கும்போது சாத்தியமான வழிகள்.",
 };
 
 const HERO_SUB: LocaleStr = {
-  en: "Most DSA conversation happens around the same five sports and three instruments. But MOE accepts DSA in dozens more talent areas where schools quietly recruit because few primary-school families try them. This page maps those paths — what they are, who runs them, and whether a P5 or P6 family can still make it work in time.",
-  zh: "DSA 讨论 90% 集中在那 5 项体育和 3 种乐器。但 MOE 接受的 DSA 才艺范围远远不止——学校在很多冷门方向年年招生，因为小学家庭很少报。本页把这些路径列出来：是什么、谁在招、P5 / P6 家庭 12 个月内还来不来得及。",
-  ms: "Kebanyakan perbincangan DSA tertumpu pada lima sukan dan tiga instrumen yang sama. Tetapi MOE menerima DSA dalam banyak bidang bakat lain di mana sekolah merekrut secara senyap kerana sedikit keluarga sekolah rendah mencubanya.",
-  ta: "பெரும்பாலான DSA விவாதம் ஐந்து விளையாட்டுகள் மற்றும் மூன்று இசைக்கருவிகளைச் சுற்றி நடைபெறுகிறது. ஆனால் MOE பல திறமைப் பகுதிகளில் DSA-ஐ ஏற்றுக்கொள்கிறது.",
+  en: "Most DSA conversation happens around the same five sports and three instruments. But MOE accepts DSA in many more talent areas where schools quietly recruit because few primary-school families try them. This page maps those paths — what they are, who runs them, and which families realistically have time to prepare. These are routes that have worked for some families. They are not invitations, and they do not bypass the academic gate.",
+  zh: "DSA 讨论 90% 集中在那 5 项体育和 3 种乐器。但 MOE 接受的 DSA 才艺远不止——很多冷门方向学校年年招，因为小学家庭很少报。本页把这些路径列出来：是什么、谁在招、哪些家庭现实上来得及准备。这些是部分家庭走通过的路线 · 不是请柬 · 也绕不开学业门槛。",
+  ms: "Kebanyakan perbincangan DSA tertumpu pada lima sukan dan tiga instrumen yang sama. Tetapi MOE menerima DSA dalam banyak bidang bakat lain di mana sekolah merekrut secara senyap. Ini adalah laluan yang berfungsi untuk sebahagian keluarga — bukan jemputan, dan tidak memintas akademik.",
+  ta: "DSA விவாதம் பெரும்பாலும் ஐந்து விளையாட்டுகள் மற்றும் மூன்று இசைக்கருவிகளைச் சுற்றி நடைபெறுகிறது. ஆனால் MOE இன்னும் பல திறமைப் பகுதிகளில் DSA-ஐ ஏற்றுக்கொள்கிறது. இவை சில குடும்பங்களுக்கு வேலை செய்த பாதைகள் — அழைப்புகள் அல்ல.",
 };
 
 const HERO_BADGE: LocaleStr = {
-  en: "Honest framing · Not a hack guide",
-  zh: "诚实定位 · 不是黑客指南",
-  ms: "Rangka jujur · Bukan panduan helah",
-  ta: "நேர்மையான கட்டமைப்பு · ஹேக் வழிகாட்டி அல்ல",
+  en: "Possible routes · Not guarantees · 2026 applications have closed; this page is for 2027 planning",
+  zh: "可能的路线 · 不是保证 · 2026 申请已截止 · 本页面向 2027 规划",
+  ms: "Laluan yang mungkin · Bukan jaminan · Permohonan 2026 telah ditutup; halaman ini untuk perancangan 2027",
+  ta: "சாத்தியமான வழிகள் · உத்தரவாதங்கள் அல்ல · 2026 விண்ணப்பங்கள் முடிந்துவிட்டன; இந்த பக்கம் 2027 திட்டமிடலுக்கானது",
+};
+
+/* ============================ TIMING CALLOUT (P5 opportunity) ============================ */
+
+const TIMING_TITLE: LocaleStr = {
+  en: "If your child is currently P5 — this is your window",
+  zh: "如果你的孩子现在 P5——这就是你的窗口",
+  ms: "Jika anak anda kini P5 — ini tetingkap anda",
+  ta: "உங்கள் குழந்தை தற்போது P5 என்றால் — இதுவே உங்கள் வாய்ப்பு",
+};
+
+const TIMING_BODY: LocaleStr = {
+  en: "DSA-Sec 2026 applications closed on 2 June 2026. The next cycle (DSA-Sec 2027) opens around early May 2027 for current P5 students. That gives a P5 family roughly 11 months to build a credible niche-talent profile — the officially-cited preparation window for potential-based paths. P5 starting now is the realistic point of entry for the paths on this page. If your child is currently P6, the 2027 window has already closed for them; they will apply through PSLE direct posting or the S1 Posting Exercise.",
+  zh: "DSA-Sec 2026 申请已于 2026 年 6 月 2 日截止。下一轮（DSA-Sec 2027）2027 年 5 月初开放 · 面向现在 P5 的学生。P5 家庭从现在开始大概有 11 个月构建可信的冷门才艺履历——这是潜力型路径官方公认的准备窗口。P5 起步是本页这些路径的现实切入点。如果孩子现在 P6 · 2027 窗口已对他们关闭 · 他们走 PSLE 直派或 S1 派位。",
+  ms: "Permohonan DSA-Sec 2026 ditutup pada 2 Jun 2026. Kitaran seterusnya (DSA-Sec 2027) dibuka sekitar awal Mei 2027 untuk pelajar P5 semasa. Itu memberi keluarga P5 kira-kira 11 bulan untuk membina profil bakat niche yang boleh dipercayai.",
+  ta: "DSA-Sec 2026 விண்ணப்பங்கள் 2 ஜூன் 2026-இல் முடிந்தன. அடுத்த சுற்று (DSA-Sec 2027) தற்போதைய P5 மாணவர்களுக்கு மே 2027 தொடக்கத்தில் திறக்கப்படும். P5 குடும்பத்திற்கு சுமார் 11 மாதங்கள் வழங்குகிறது.",
 };
 
 /* ============================ WHY THESE PATHS EXIST ============================ */
@@ -460,22 +476,22 @@ const S3_TITLE: LocaleStr = {
 
 const S3_PARAS: ReadonlyArray<LocaleStr> = [
   {
-    en: "Nanyang Girls' High School's lion dance troupe is the only all-girls lion dance CCA at any Singapore secondary school. The troupe became an independent CCA in 2008, growing out of an earlier NPCC-affiliated cultural performance group dating from 1984. NYGH's 2026 DSA brief renamed the talent area \"Dragon & Lion Dance Troupe\" and now recruits separately for the lion head (狮头) and lion tail (狮尾) roles. Lion dance survived NYGH's 2026 DSA cut that removed Math, Science, and Artistic Gymnastics.",
-    zh: "南洋女子高中的舞狮队是新加坡中学唯一的全女子舞狮 CCA。该队 2008 年从早先 1984 年的 NPCC 文化表演组独立出来。NYGH 2026 DSA brief 将才艺名称改为\"Dragon & Lion Dance Troupe\"，狮头与狮尾分开招生。NYGH 2026 砍了数学、科学、艺术体操，舞狮没动。",
-    ms: "Kumpulan tarian singa Nanyang Girls' High School adalah satu-satunya CCA tarian singa perempuan sepenuhnya di mana-mana sekolah menengah Singapura. Kumpulan ini menjadi CCA bebas pada 2008.",
-    ta: "Nanyang Girls' High School-இன் சிங்க நடனக் குழு சிங்கப்பூரில் ஒரு இடைநிலை பள்ளியில் உள்ள ஒரே முற்றிலும்-பெண்கள் சிங்க நடனக் CCA ஆகும்.",
+    en: "Nanyang Girls' High School runs what is reportedly the only all-girls lion dance CCA at a Singapore secondary school. NYGH's 2026 DSA brief listed the talent area as \"Dragon & Lion Dance Troupe,\" with lion head (狮头) and lion tail (狮尾) treated as distinct selection profiles. Lion dance was retained in NYGH's 2026 DSA list while several other talent areas were dropped that cycle — a signal the school continues to actively recruit for this CCA.",
+    zh: "南洋女子高中的舞狮队据公开资料是新加坡中学唯一的全女子舞狮 CCA。NYGH 2026 DSA brief 将该才艺列为「Dragon & Lion Dance Troupe」 · 狮头与狮尾按不同选拔模式处理。NYGH 2026 砍了部分其他才艺方向 · 舞狮仍在列 · 说明学校还在持续招生。",
+    ms: "Nanyang Girls' High School menjalankan apa yang dilaporkan sebagai satu-satunya CCA tarian singa perempuan sepenuhnya di sekolah menengah Singapura. Brief DSA NYGH 2026 menyenaraikan bidang ini sebagai \"Dragon & Lion Dance Troupe.\"",
+    ta: "Nanyang Girls' High School அறிக்கையின்படி சிங்கப்பூர் இடைநிலை பள்ளியில் முற்றிலும்-பெண்கள் சிங்க நடனக் CCA-ஐ நடத்தும் ஒரே பள்ளி.",
   },
   {
-    en: "The trial assesses physical readiness (deep horse stance held for 30-60 seconds, balance on one foot, basic footwork patterns), coachability under correction, and a short cultural-knowledge exchange. NYGH's published policy is explicit: \"applicants without prior experience may apply.\" The trial is potential-based, not credential-based.",
-    zh: "Trial 评估身体条件（马步深蹲 30-60 秒、单脚平衡、基础步法）、接受纠正的可塑性、以及简短的文化知识交流。NYGH 公开政策明写：\"applicants without prior experience may apply\"。Trial 是潜力型评估，不是履历比拼。",
-    ms: "Percubaan menilai kesediaan fizikal (kuda-kuda dalam 30-60 saat, keseimbangan kaki satu), kebolehan dilatih, dan pertukaran pengetahuan budaya pendek.",
-    ta: "சோதனை உடல் தயார்நிலை, பயிற்சி பெறும் திறன், கலாச்சார அறிவை மதிப்பிடுகிறது.",
+    en: "Public coaching and parent-forum descriptions of the audition typically describe physical readiness checks (deep horse stance, basic footwork, balance), trial coachability, and a short conversation about the candidate's interest in the talent. Parent reports suggest the trial accepts candidates without prior experience — though families should always check the school's published DSA brief in May 2027 for the authoritative 2027 requirements rather than rely on prior-year descriptions.",
+    zh: "公开的教练资料和家长论坛对 trial 的描述通常包括：身体条件检查（马步深蹲、基础步法、平衡）、训练时的可塑性、以及关于为什么对舞狮有兴趣的简短交流。家长反馈显示 trial 接受无经验候选人——但 2027 年 5 月学校发布最新 DSA brief 后 · 以学校官方为准 · 不要只依赖往年描述。",
+    ms: "Penerangan jurulatih awam dan forum ibu bapa biasanya menggambarkan pemeriksaan kesediaan fizikal, kebolehan dilatih dalam percubaan, dan perbualan ringkas tentang minat calon.",
+    ta: "பொது பயிற்சியாளர் மற்றும் பெற்றோர் மன்ற விளக்கங்கள் பொதுவாக உடல் தயார்நிலை சோதனைகள், சோதனை பயிற்சி திறன், மற்றும் வேட்பாளரின் ஆர்வம் பற்றிய சுருக்கமான உரையாடலை விவரிக்கின்றன.",
   },
   {
-    en: "A P6 candidate starting from zero in June 2026 has a 12-month window to the 2027 DSA-Sec trial (typically July-August). Realistic preparation: weekly club training (NamYang Lion Dance, Wenyang, or similar Singapore troupes that train recreational students), daily 15-minute home practice on horse stance, and one filmed performance or training session by month 9 to use in the application. The honest constraint is academic: NYGH is an IP school, and even potential-based DSA candidates need a PSLE score close to the historical cut-off. Lion dance opens the door; PSLE keeps you in the room.",
-    zh: "P6 候选人 2026 年 6 月从零开始 · 到 2027 DSA-Sec trial（通常 7-8 月）有 12 个月窗口。现实准备方案：每周俱乐部训练（NamYang 舞狮、Wenyang，或其他接受业余学员的新加坡舞狮团）· 每天 15 分钟马步家庭训练 · 第 9 个月录一次训练视频或参加一次公开演出。诚实约束是学术：NYGH 是 IP 校 · 即便潜力型 DSA 也要 PSLE 接近历史 cut-off。舞狮打开门 · PSLE 让你坐稳位置。",
-    ms: "Calon P6 yang bermula dari sifar pada Jun 2026 mempunyai tetingkap 12 bulan ke percubaan DSA-Sec 2027 (biasanya Julai-Ogos).",
-    ta: "ஜூன் 2026-இல் சுன்னியில் இருந்து தொடங்கும் P6 வேட்பாளர் 2027 DSA-Sec சோதனைக்கு 12 மாத காலக்கெடு உள்ளது.",
+    en: "Realistic preparation for a P5 family aiming at DSA-Sec 2027: weekly training at a Singapore lion dance club (NamYang Lion Dance, Wenyang, or similar troupes that accept recreational members), a daily home routine of horse-stance holds and basic footwork (15-20 minutes), and one filmed training session or community performance to reference in the DSA application portfolio. The honest constraint is academic: NYGH is an IP school, and potential-based DSA candidates still need a PSLE score within the range the school routinely admits. Lion dance can open a door; PSLE keeps the candidate in the room.",
+    zh: "P5 家庭目标 DSA-Sec 2027 的现实准备：每周新加坡舞狮俱乐部训练（NamYang 舞狮、Wenyang · 或其他接收业余学员的舞狮团）· 每天 15-20 分钟家庭训练（马步 + 基础步法）· 至少录一次训练视频或参加一次社区演出 · 作为 DSA 申请材料的依据。诚实约束是学业：NYGH 是 IP 校 · 即便走潜力型 DSA · PSLE 仍要在学校历年常规录取分范围内。舞狮可能打开门 · PSLE 让候选人坐稳位置。",
+    ms: "Persediaan realistik untuk keluarga P5 menyasarkan DSA-Sec 2027: latihan mingguan di kelab tarian singa Singapura, rutin rumah harian, dan satu sesi latihan yang difilemkan.",
+    ta: "DSA-Sec 2027 இலக்காக கொண்ட P5 குடும்பத்திற்கு யதார்த்த தயாரிப்பு: சிங்கப்பூர் சிங்க நடனக் கிளப்பில் வாராந்திர பயிற்சி, தினசரி வீட்டு வழக்கம், ஒரு படமாக்கப்பட்ட பயிற்சி அமர்வு.",
   },
 ];
 
@@ -521,6 +537,36 @@ const S4_CTA_TEXT: LocaleStr = {
   zh: "打开 Chinese Orchestra DSA 备战页",
   ms: "Buka halaman persediaan DSA Orkestra Cina",
   ta: "Chinese Orchestra DSA தயாரிப்பு பக்கம்",
+};
+
+/* ============================ COACH SECTION ============================ */
+
+const COACH_KICKER: LocaleStr = {
+  en: "Coaching matters most for niche paths",
+  zh: "冷门路径最依赖好教练",
+  ms: "Pengajaran paling penting untuk laluan niche",
+  ta: "Niche பாதைகளுக்கு பயிற்சி மிகவும் முக்கியம்",
+};
+
+const COACH_TITLE: LocaleStr = {
+  en: "Find a coach who has prepared niche-talent DSA candidates before",
+  zh: "找一个有备过冷门才艺 DSA 候选人的教练",
+  ms: "Cari jurulatih yang pernah menyediakan calon DSA niche",
+  ta: "முன்னர் niche திறமை DSA வேட்பாளர்களை தயார் செய்த பயிற்சியாளரைத் தேடுங்கள்",
+};
+
+const COACH_BODY: LocaleStr = {
+  en: "Lion dance, sheng, archery, fencing — these are talents where one good coach matters more than for football or piano, because the candidate is still building the foundation rather than refining an existing skill. A coach with prior DSA-audition experience knows what the panel listens for, what a credible 11-month trajectory looks like, and how to film one training video that reads well in the application portfolio. The smallest signal here — picking a coach who has prepared a DSA candidate in the same talent before — can change the outcome more than the candidate's natural ability.",
+  zh: "舞狮、笙、射箭、击剑——这些项目里 · 一个对的教练比足球或钢琴重要得多 · 因为候选人是在打地基 · 不是在优化已有技能。有 DSA audition 经验的教练知道评审在听什么 · 知道 11 个月可信的轨迹长什么样 · 知道怎么录一段适合 DSA 申请材料的训练视频。这里最小但最关键的信号——选一个备过同项目 DSA 候选人的教练——比孩子的天赋影响更大。",
+  ms: "Tarian singa, sheng, memanah, pedang — ini adalah bakat di mana seorang jurulatih yang baik lebih penting daripada untuk bola sepak atau piano. Jurulatih dengan pengalaman audisi DSA terdahulu tahu apa yang panel mendengar.",
+  ta: "சிங்க நடனம், sheng, வில்வித்தை, வாள் வீச்சு — இவை ஒரு நல்ல பயிற்சியாளர் கால்பந்து அல்லது பியானோவை விட முக்கியமான திறமைகள்.",
+};
+
+const COACH_CTA_TEXT: LocaleStr = {
+  en: "Browse the coach directory",
+  zh: "浏览教练目录",
+  ms: "Layari direktori jurulatih",
+  ta: "பயிற்சியாளர் அடைவைப் பார்க்கவும்",
 };
 
 /* ============================ TIMELINE FRAMEWORK ============================ */
@@ -682,6 +728,20 @@ const S6_CAPS: ReadonlyArray<{
       ta: "ஒரு குழந்தை சிங்க நடனத்தைப் பற்றி உண்மையில் என்ன விரும்புகிறார் என்பதை வெளிப்படுத்த முடியாவிட்டால், நேர்காணலில் தோல்வியடைகிறார்.",
     },
   },
+  {
+    title: {
+      en: "Cap 5 · These are routes, not invitations",
+      zh: "约束 5 · 这些是路线 · 不是请柬",
+      ms: "Had 5 · Ini adalah laluan, bukan jemputan",
+      ta: "வரம்பு 5 · இவை வழிகள், அழைப்புகள் அல்ல",
+    },
+    body: {
+      en: "The paths on this page have worked for some families. They have not worked for many other families who started niche training and never received a DSA offer. We don't have public Singapore data on niche-talent DSA success rates because schools don't publish offer-vs-applicant numbers for individual talent areas. Treat this page as a map of routes that exist — not as a sequence of steps that leads to a guaranteed outcome. If your family commits to one of these paths, do it because the child genuinely enjoys the talent, not because the page implies the odds are favourable.",
+      zh: "本页这些路径对部分家庭走通过 · 也有很多家庭练了冷门项目最终没收到 DSA offer · 这部分公共数据新加坡没有 · 学校不公开各才艺的报录比 · 把本页当作存在的路线地图 · 不要把它当成保证出结果的步骤清单。如果你的家庭走上其中一条 · 是因为孩子真的喜欢 · 不是因为页面看起来概率不错。",
+      ms: "Laluan pada halaman ini telah berfungsi untuk sebahagian keluarga. Ia tidak berfungsi untuk banyak keluarga lain yang memulakan latihan niche dan tidak pernah menerima tawaran DSA.",
+      ta: "இந்த பக்கத்தில் உள்ள பாதைகள் சில குடும்பங்களுக்கு வேலை செய்துள்ளன. ஆனால் niche பயிற்சியைத் தொடங்கி DSA ஆஃபர் பெறாத பல குடும்பங்களுக்கு இது வேலை செய்யவில்லை.",
+    },
+  },
 ];
 
 /* ============================ BOTTOM CTA ============================ */
@@ -756,6 +816,30 @@ export function UnderRecruitedPathsPageBody() {
             {pick(HERO_SUB, locale)}
           </p>
           <p className="mt-4 text-[11px] text-slate-400">{pick(HERO_BADGE, locale)}</p>
+        </section>
+
+        {/* ── TIMING CALLOUT (P5 opportunity) ── */}
+        <section className="mt-8 mb-12 rounded-2xl border-l-4 border-champagne bg-white p-5 shadow-soft sm:p-6">
+          <h2
+            style={{ textTransform: "none" }}
+            className="font-display text-[17px] font-bold leading-snug text-intellectual sm:text-lg"
+          >
+            {pick(TIMING_TITLE, locale)}
+          </h2>
+          <p className="mt-2 text-[14px] leading-relaxed text-slate-700">{pick(TIMING_BODY, locale)}</p>
+          <Link
+            href="/timeline"
+            className="mt-3 inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-intellectual underline decoration-champagne underline-offset-4 hover:text-intellectual-dark"
+          >
+            {locale === "zh"
+              ? "查看完整 DSA-Sec 2026 时间线"
+              : locale === "ms"
+              ? "Lihat garis masa penuh DSA-Sec 2026"
+              : locale === "ta"
+              ? "முழுமையான DSA-Sec 2026 கால அட்டவணையைப் பார்க்கவும்"
+              : "See the full DSA-Sec 2026 timeline"}
+            <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+          </Link>
         </section>
 
         {/* ── SECTION 1: Why ── */}
@@ -901,6 +985,27 @@ export function UnderRecruitedPathsPageBody() {
           </Link>
         </section>
 
+        {/* ── COACH SECTION ── */}
+        <section className="mt-12 mb-12 rounded-2xl bg-intellectual p-6 text-white shadow-card sm:p-8">
+          <p className="text-[11px] font-bold tracking-[0.14em] text-champagne-light normal-case">
+            {pick(COACH_KICKER, locale)}
+          </p>
+          <h2
+            style={{ textTransform: "none" }}
+            className="mt-2 font-display text-2xl font-extrabold leading-snug tracking-tight sm:text-3xl"
+          >
+            {pick(COACH_TITLE, locale)}
+          </h2>
+          <p className="mt-4 text-[14.5px] leading-relaxed text-white/85">{pick(COACH_BODY, locale)}</p>
+          <Link
+            href="/dsa-coaches"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-champagne px-4 py-2.5 text-[13px] font-semibold text-intellectual-dark transition hover:bg-champagne-light"
+          >
+            {pick(COACH_CTA_TEXT, locale)}
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </Link>
+        </section>
+
         {/* ── SECTION 5: Timeline framework ── */}
         <section className="mt-12 mb-12">
           <p className="text-[11px] font-bold tracking-[0.14em] text-champagne-dark normal-case">
@@ -975,14 +1080,23 @@ export function UnderRecruitedPathsPageBody() {
             {pick(BOTTOM_TITLE, locale)}
           </h2>
           <p className="mt-3 text-[14.5px] leading-relaxed text-slate-600">{pick(BOTTOM_BODY, locale)}</p>
-          <Link
-            href="/dsa-interview/talents"
-            className="mt-5 inline-flex items-center gap-2 rounded-lg bg-intellectual px-4 py-2.5 text-[13px] font-semibold text-white transition hover:bg-intellectual-dark"
-          >
-            <Compass className="h-4 w-4" aria-hidden />
-            {pick(BOTTOM_CTA, locale)}
-            <ArrowRight className="h-4 w-4" aria-hidden />
-          </Link>
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Link
+              href="/dsa-interview/talents"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-intellectual px-4 py-2.5 text-[13px] font-semibold text-white transition hover:bg-intellectual-dark"
+            >
+              <Compass className="h-4 w-4" aria-hidden />
+              {pick(BOTTOM_CTA, locale)}
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+            <Link
+              href="/dsa-coaches"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-champagne/60 bg-champagne-subtle/40 px-4 py-2.5 text-[13px] font-semibold text-intellectual transition hover:bg-champagne-subtle hover:border-champagne"
+            >
+              {pick(COACH_CTA_TEXT, locale)}
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+          </div>
         </section>
 
         <PillarBackLink />
