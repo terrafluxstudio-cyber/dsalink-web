@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -72,14 +72,10 @@ function pick(s: LocaleStr, locale: "en" | "zh" | "ms" | "ta"): string {
 export function HomeCtaBlock() {
   const { t, locale } = useLanguage();
   const [modalOpen, setModalOpen] = useState(false);
-  const [mode, setMode] = useState<Mode | null>(null);
-
-  useEffect(() => {
-    setMode(computeMode(new Date()));
-  }, []);
-
-  // Default to "apply" content during SSR — matches the markup we historically rendered.
-  const m: Mode = mode ?? "apply";
+  // Compute mode synchronously on both SSR and client. getCyclePhase uses
+  // APPLY_CLOSE_UTC_MS (UTC absolute), so server and client agree — no flash.
+  const [mode] = useState<Mode>(() => computeMode(new Date()));
+  const m: Mode = mode;
 
   return (
     <>
