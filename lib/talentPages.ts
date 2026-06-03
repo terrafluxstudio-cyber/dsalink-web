@@ -33,7 +33,8 @@ export type TalentSlug =
   | "chinese-orchestra"
   | "tennis"
   | "wushu"
-  | "water-polo";
+  | "water-polo"
+  | "sailing";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -8535,6 +8536,336 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  sailing: {
+    slug: "sailing",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Sailing", zh: "帆船", ms: "Pelayaran", ta: "படகோட்டம்" },
+    hook: {
+      en: "Sailing DSA — trials reward race-result ranking and on-water decision-making, with documented Optimist-class racing as the threshold signal.",
+      zh: "帆船 DSA——招生看赛事排名和水上决策能力，Optimist 级赛事战绩是入门门槛信号",
+      ms: "DSA Pelayaran — uji bakat menghargai kedudukan keputusan perlumbaan dan pembuatan keputusan di atas air, dengan perlumbaan kelas Optimist sebagai isyarat ambang.",
+      ta: "படகோட்டம் DSA — பந்தயம் தரவரிசை மற்றும் நீரில் முடிவெடுக்கும் திறனை மதிக்கிறது, Optimist கிளாஸ் முடிவுகள் தேவையான அளவீடாகும்.",
+    },
+    intro: {
+      en: "Sailing is among Singapore's most resource-intensive school sports — concentrated at IP and elite-sports schools with access to coaching at the National Sailing Centre (Changi Sailing Club) or affiliated clubs. The default racing class for the P6 cohort is the Optimist (8-15 years old) — Singapore Sailing Federation-sanctioned regatta results and Singapore Schools National Sailing Championships placings are explicitly the primary DSA signals. Trials assess wind-reading, boat-handling under varying conditions, racing tactics (start-line, mark roundings, downwind), and capsize-recovery composure. This is one of the few sports where documented competition results often matter more than trial-day performance.",
+      zh: "帆船是新加坡资源密集度最高的学校运动之一——集中在 IP 校和体校 · 教练资源主要在国家帆船中心（樟宜帆船俱乐部）或附属俱乐部。P6 阶段默认赛艇等级是 Optimist（8-15 岁）——新加坡帆船联合会（SSF）官方认证赛事战绩和 Singapore Schools National Sailing Championships 名次明确是 DSA 主要信号。Trial 看读风、不同水况下的操船、比赛战术（起航线/绕标/下风航段）、翻船恢复时的冷静。这是少数赛事战绩比 trial 当天表现更重要的项目。",
+      ms: "Pelayaran adalah antara sukan sekolah paling intensif sumber di Singapura. Kelas perlumbaan lazim untuk P6 adalah Optimist. Keputusan perlumbaan SSF dan Singapore Schools National Sailing Championships adalah isyarat DSA utama.",
+      ta: "சிங்கப்பூரில் படகோட்டம் வளம் சார்ந்த விளையாட்டு. P6 க்கான இயல்பான பந்தய வகுப்பு Optimist. SSF பந்தய முடிவுகள் முதன்மை DSA சமிக்ஞையாகும்.",
+    },
+    summary: {
+      en: "Trial structure, racing-class focus, interview questions, IP and elite-sports schools with established sailing programmes.",
+      zh: "Trial 流程、赛艇等级分析、面试题、有帆船设施的 IP 与体校。",
+      ms: "Struktur trial, kelas perlumbaan, soalan temu duga, sekolah IP terkemuka.",
+      ta: "சோதனை அமைப்பு, பந்தய வகுப்புகள், கேள்விகள், IP பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Raffles Girls' School (Secondary)",
+      "Raffles Institution",
+      "Dunman High School",
+      "Anglo-Chinese School (Independent)",
+      "Hwa Chong Institution",
+      "Singapore Sports School",
+    ],
+    metaDescription: {
+      en: "Sailing DSA-Sec trial guide for Singapore P6 — Optimist racing context, SSF regatta ranking, what coaches assess, sample interview questions, IP and elite-sports participating schools.",
+      zh: "新加坡 P6 帆船 DSA-Sec trial 指南——Optimist 赛事说明、SSF 排名、教练评分维度、面试题、IP/体校招生学校。",
+      ms: "Panduan trial DSA-Sec Pelayaran Singapura — apa jurulatih nilai, kelas, soalan, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 படகோட்டம் DSA-Sec வழிகாட்டி — அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore sailing trials usually run as two-day on-water assessments at affiliated clubs (often National Sailing Centre, Changi Sailing Club, or Republic of Singapore Yacht Club). The structure varies by school: some run a short fleet race observation (one or two short courses), others run a skill-based assessment (rigging, boat-handling drills, capsize recovery). Most coaches lean heavily on documented Optimist regatta results and SSF national-squad participation before the on-water assessment. Six dimensions emerge from public Singapore Sailing Federation youth coaching frameworks and ACS / RI / RGS sailing programme descriptions.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Wind-reading and tactical decision-making" },
+          body: {
+            en: "The single highest-signal element. Coaches deliberately watch whether the candidate reads wind shifts (looking up the course, observing flag and ripple direction) and adjusts course accordingly — heading up in a lift, easing off in a header. A P6 sailor who actively scans the water for new pressure and shifts before reaching it scores far higher than one with cleaner boat-handling but reactive (not predictive) tactical play. Wind-reading is the hardest skill to coach because it requires sustained on-water hours.",
+          },
+        },
+        {
+          label: { en: "Boat-handling — tacks, gybes, mark roundings" },
+          body: {
+            en: "Coaches assess whether the candidate's tack is smooth (boat heel managed, balance maintained, sail trim adjusted within 2 seconds of the tack completing), whether downwind gybes are controlled (no flying jibe, sheets handled properly), and whether mark roundings are tight (tactical priority — wide entry, tight exit). Boat-handling at P6 level is the most heavily-coached technical layer, and trials test whether the candidate is reproducing handling from instinct or from memorised drill.",
+          },
+        },
+        {
+          label: { en: "Start-line execution" },
+          body: {
+            en: "Coaches watch how the candidate approaches the start line under the 5-4-1-0 countdown sequence: holding position with a controlled luffing technique, judging the line bias, accelerating cleanly at zero with full sail trim. A clean start is worth 20-30 places at junior regatta level, and coaches assess this from the start-sequence drills run in trial. A P6 with documented start-line discipline at regatta level is a multi-year asset.",
+          },
+        },
+        {
+          label: { en: "Capsize recovery and composure" },
+          body: {
+            en: "Most trials include a deliberate capsize-and-righting drill — usually one full capsize, one quick-recovery. Coaches assess the candidate's calmness in the water, the technique of climbing onto the centreboard to right the boat (not pulling from the gunwale), and the speed of resuming sailing. A P6 who recovers a capsize in under 30 seconds and immediately resumes racing posture signals competition-readiness; one who panics or asks for assistance is flagged as a safety project.",
+          },
+        },
+        {
+          label: { en: "Rigging knowledge and equipment care" },
+          body: {
+            en: "Coaches assess whether the candidate can rig the boat without assistance — stepping the mast, attaching the sail with correct ties, adjusting outhaul and vang for the day's wind. This is the cheapest tell of accumulated club hours. Schools recruit candidates who treat the equipment as their own — those candidates don't break gear and don't cost the programme replacement equipment.",
+          },
+        },
+        {
+          label: { en: "Coachability and shore-side behaviour" },
+          body: {
+            en: "How the candidate behaves on the boat ramp, whether they help launch and retrieve other boats, accept immediate corrections without sulking, and pack equipment correctly at the end. The Singapore Sailing Federation youth programme emphasises shore-side conduct heavily — and school sailing coaches, who'll work with this child for four years through to NSG and possibly national squad, weight these signals heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Optimist single-handed (primary P6 class)" },
+          body: {
+            en: "The dominant class for the P6 cohort. Coaches assess weight class management (Optimists range from ~30-55 kg sailor weight — heavier sailors are favoured downwind, lighter sailors upwind), single-handed boat-handling, and tactical confidence at junior regattas. Most candidates audition in Optimist; transitioning to dinghy classes (420, ILCA 6) happens in Sec 1-2 as the sailor grows.",
+          },
+        },
+        {
+          position: { en: "ILCA 6 / Laser Radial (upper-end Sec range)" },
+          body: {
+            en: "Some P6 sailors who have outgrown Optimists already train in ILCA 6. Coaches assess whether the candidate handles the bigger boat with appropriate fitness (hiking strength, athleticism at sail trim), and whether the transition has been managed carefully (sail control changes substantially from Optimist). A P6 in ILCA 6 with clean technique is rare and recruited aggressively.",
+          },
+        },
+        {
+          position: { en: "420 / double-handed (rare at P6)" },
+          body: {
+            en: "Two-person dinghy class typically begun in Sec range. Some P6 candidates have early experience as crew (jib + spinnaker handling) in a 420. Coaches assess crew-helm communication, the technical layer of spinnaker work, and willingness to specialise. 420 candidates often signal a serious long-term sailing pathway because the class supports SEA Games-level pathways in Singapore.",
+          },
+        },
+        {
+          position: { en: "Catamaran / windsurfing / kiteboarding (specialist)" },
+          body: {
+            en: "Rare at P6 level but increasingly recruited by elite-sports schools (especially Singapore Sports School) as Singapore's national sailing programme expands across classes. Coaches assess prior experience explicitly and evaluate whether the school's existing programme can support the discipline. Mention this in the application — these specialisations are tracked separately at recruitment.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Singapore school sailing at P6 trial level usually centres on the Optimist class. If your child has trained in multiple classes (Optimist + 420 as crew, for example), mention both; the school's existing roster and the SSF national pathway shape which class assignment recruits a specific candidate. Sailing-friendly weight changes through teenage years also drive class transition decisions, so coaches assess long-term class fit alongside current performance.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love sailing?" },
+          subtext: {
+            en: "Panels want a specific moment, not a feeling. \"I like being on the water\" reads as untrained motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory — a regatta, a wind shift, a teammate moment — then connect it to character.",
+          },
+          template: {
+            en: "I won my first Optimist regatta race because I noticed a wind shift on the right side of the course while everyone tacked left. I'd watched the flag at the start for ten minutes. That was when I realised sailing rewards the person who pays attention more than the person who's strongest.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the sailing programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's sailing — a coach's name, a regatta result, a training pattern.",
+          },
+          template: {
+            en: "RGS's sailing programme uses the same coach group as the SSF Optimist national squad and trains four times a week at NSC. That's the volume and the standard I want from Sec 1.",
+          },
+        },
+        {
+          question: { en: "What class do you sail and why?" },
+          subtext: {
+            en: "Can the kid articulate the class, not just label it?",
+          },
+          approach: {
+            en: "Name the class plus what it asks of you.",
+          },
+          template: {
+            en: "Optimist. My weight (38 kg) puts me at the upper end of competitive — heavier sailors are favoured downwind so my game plan in light winds is to position upwind, then capitalise downwind. I'll transition to ILCA 6 in Sec 1 or Sec 2 depending on growth.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I capsized at the start of the last race of a national regatta and finished last. My coach made me drill capsize-recovery every Saturday for two months. At the next regatta I capsized again — and was back racing in 22 seconds. The difference was practice, not luck.",
+          },
+        },
+        {
+          question: { en: "Is there a teammate or coach you remember most?" },
+          subtext: {
+            en: "Whether the kid sees coaching as a relationship or a transaction.",
+          },
+          approach: {
+            en: "Name someone specific by role + what you learned from them.",
+          },
+          template: {
+            en: "My P5 Optimist coach made the whole training group watch the start sequence from the coach boat for 15 minutes before any racing. We were bored — but I now read start-line bias automatically. He taught me that the boring part of sailing is the part that wins.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent trainings?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I finish English and Math homework on the bus to NSC and complete Science before dinner on training days. Weekend regattas eat my Saturday, so I do revision on Sunday. My mother shows my report book to my coach every term — that's the rule we set together.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your coach group is the SSF Optimist national-squad coach — that's the pathway I want. If School A called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/Admission-to-RGS/via-DSA/",
+          talentArea: { en: "Sailing (Girls), IP" },
+          context: {
+            en: "IP school with one of Singapore's most established girls' sailing programmes. Multi-year top-tier NSG presence. Sailing among RGS's published DSA talent areas.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/dsa-sec",
+          talentArea: { en: "Sailing (Boys), IP" },
+          context: {
+            en: "IP school. Sailing among RI's published Sports DSA domain criteria. Sustained NSG and national-squad pathway.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Sailing (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "SAP school. Sailing among Dunman's 2026 DSA FAQ talent areas. Coastal location supports a strong sailing CCA.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Sailing (Boys), IP" },
+          context: {
+            en: "IP school. Sailing among ACS(I)'s published DSA talent areas. Sustained NSG-active programme.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Sailing (Boys), IP" },
+          context: {
+            en: "IP school. Sailing among HCI's published DSA talent areas. Sustained NSG participation.",
+          },
+        },
+        {
+          name: "Singapore Sports School",
+          url: "https://www.sportsschool.edu.sg/",
+          talentArea: { en: "Sailing (Boys and Girls), Sports School admissions" },
+          context: {
+            en: "Specialist sports school with full-time sailing academy track for elite junior sailors. Separate admissions process distinct from standard DSA-Sec — but high-level SSF-ranked Optimist sailors often apply to both.",
+          },
+        },
+        {
+          name: "St. Joseph's Institution",
+          url: "https://www.sji.edu.sg/admission/dsa-at-sji/",
+          talentArea: { en: "Sailing (Boys), IP / DSA-Sec" },
+          context: {
+            en: "Lasallian boys' school. Sailing among SJI's published DSA talent areas (IP and O Level).",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Sailing (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies school. Sailing among NYGH's recognised DSA talent areas.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          url: "https://www.acsbr.moe.edu.sg/",
+          talentArea: { en: "Sailing (Boys), DSA-Sec" },
+          context: {
+            en: "Sister school to ACS(I) with active sailing CCA. NSG-active.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.moe.edu.sg/secondary/admissions/dsa-sec1/",
+          talentArea: { en: "Sailing (Girls), DSA-Sec" },
+          context: {
+            en: "Methodist heritage girls' school. Sailing among MGS's recognised DSA talent areas. Sustained NSG presence.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Verify SSF regatta results and CCA records. MOE pulls CCA participation, school awards, NSG Singapore Schools National Sailing Championships results, and SSF-sanctioned regatta finishes into the DSA portal directly. A documented top-30 (or better) finish in Optimist national regatta events is the single most-cited signal in sailing DSA — confirm it has been logged.",
+            },
+            {
+              en: "Video-record one full practice race. Watch with your child, scoring just two behaviours: (1) before each tack, did they look up the course for shifts or just tack on a planned schedule? (2) at each mark, was the entry wide and exit tight, or the opposite? These two are the highest-signal items in sailing trials.",
+            },
+            {
+              en: "Confirm equipment is in race-day condition. Hull cleaning, sail check (UV degradation creeps on Optimist sails), spar inspection. A snapped fitting on trial day cannot be improvised.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: light boat-handling drills, mark-rounding practice, no new heavy hiking conditioning load. Final-week heavy hiking sets rarely pay off and frequently produce a hip-flexor or back tweak.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue (typically National Sailing Centre or the school's affiliated club), attire (rash guard, hiking shorts, dinghy boots or wet shoes — NOT regular sports shoes, NOT shorts that slide off the toe straps). Sunscreen, water, sailing gloves. Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "Hydrate aggressively in the days before. Sun-and-saltwater dehydration is the single most underestimated risk for a P6 sailor at trial.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — not 30 — and pack a sandwich or banana for between races. On-water trials can run 4-6 hours and energy drops mid-day.",
+            },
+            {
+              en: "Bring spare hiking strap pads, a spare line for the outhaul, and electrical tape. The cheapest fixes that prevent a trial-ending equipment failure.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Parents in spectator boats are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. If you have on-water access, prioritise two things only: 15 minutes of start-line drill (luffing, accelerating off the line on zero) and capsize-recovery time-trials (target under 30 seconds). Cancel anything that competes with sleep and hydration. Spend the freed time on interview prep above, because that's the only part where a few hours can still meaningfully change the outcome. Some families bring in a private sailing coach at this stage. A good private coach can sharpen one or two tactical habits — particularly start-line approach and mark-rounding execution — but no coach produces, in three sessions, the wind-reading instinct of a year of regatta starts. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -8563,6 +8894,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "tennis",
   "wushu",
   "water-polo",
+  "sailing",
 ];
 
 /**
@@ -8603,6 +8935,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   tennis: ["badminton", "table-tennis"],
   wushu: ["martial-arts", "chinese"],
   "water-polo": ["swimming", "basketball"],
+  sailing: ["swimming", "track-field"],
 };
 
 /**
