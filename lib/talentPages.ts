@@ -25,7 +25,8 @@ export type TalentSlug =
   | "hockey"
   | "squash"
   | "leadership"
-  | "volleyball";
+  | "volleyball"
+  | "table-tennis";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -5850,6 +5851,333 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  "table-tennis": {
+    slug: "table-tennis",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Table Tennis", zh: "乒乓球", ms: "Ping Pong", ta: "மேசை டென்னிஸ்" },
+    hook: {
+      en: "Table Tennis DSA — trials reward stroke consistency under pressure, not the loudest forehand loop.",
+      zh: "乒乓球 DSA——trial 奖励压力下的稳定击球，不是最响的正手弧圈",
+      ms: "DSA Ping Pong — trial menghargai konsistensi pukulan di bawah tekanan, bukan loop hadapan paling kuat.",
+      ta: "மேசை டென்னிஸ் DSA — சோதனை அழுத்தத்தின் கீழ் நிலையான அடிகளை மதிக்கிறது, சத்தமான forehand loop-ஐ அல்ல.",
+    },
+    intro: {
+      en: "Singapore school table tennis trials weigh stroke consistency, footwork, and how the trialist reads spin far more heavily than how hard the forehand can hit. Coaches at SAP schools — where table tennis runs deepest — also screen for STTA-sanctioned ranking points and National Age Group results. Height is irrelevant; what matters is whether the player resets after every miss and whether their feet move before their arm does.",
+      zh: "新加坡中学乒乓球 trial 看的是击球稳定性、脚步、读旋转能力，远远超过正手力量。SAP 学校（乒乓底蕴最深的一批）的教练还会查 STTA 排名分和 National Age Group 成绩。身高无关紧要——关键是每个失误后能否重置心态，以及脚步是否先于手臂动起来。",
+      ms: "Jurulatih trial Ping Pong menilai konsistensi pukulan, pergerakan kaki, dan keupayaan membaca spin jauh lebih tinggi daripada kuasa forehand. Sekolah SAP — yang mempunyai tradisi terdalam — turut menyemak kedudukan STTA dan keputusan National Age Group.",
+      ta: "சிங்கப்பூர் மேசை டென்னிஸ் சோதனைகள் அடிப்படை நிலைத்தன்மை, கால் நகர்வு, spin படிக்கும் திறன் ஆகியவற்றை forehand சக்தியை விட அதிகமாக மதிக்கின்றன. SAP பள்ளிகளில் STTA தரவரிசையும் National Age Group முடிவுகளும் பார்க்கப்படுகின்றன.",
+    },
+    summary: {
+      en: "Trial structure, playing-style profiles, interview questions, SAP and IP schools with sustained NSG table tennis programmes.",
+      zh: "Trial 流程、打法风格分析、面试题、NSG 持续活跃的 SAP 与 IP 校。",
+      ms: "Struktur trial, profil gaya permainan, soalan temu duga, sekolah SAP dan IP yang aktif NSG.",
+      ta: "சோதனை அமைப்பு, விளையாட்டு பாணி, கேள்விகள், NSG-இல் தொடர்ச்சியான பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Dunman High School",
+      "Hwa Chong Institution",
+      "Nanyang Girls' High School",
+      "Nan Hua High School",
+      "Catholic High School",
+      "River Valley High School",
+    ],
+    metaDescription: {
+      en: "Table Tennis DSA-Sec trial guide for Singapore P6 — what coaches assess, playing-style profiles, sample interview questions, STTA ranking context, participating SAP and IP schools.",
+      zh: "新加坡 P6 乒乓球 DSA-Sec trial 指南——教练评分维度、打法分析、面试题、STTA 排名说明、SAP 与 IP 招生学校。",
+      ms: "Panduan trial DSA-Sec Ping Pong Singapura — apa jurulatih nilai, profil gaya, soalan, sekolah SAP dan IP peserta.",
+      ta: "சிங்கப்பூர் P6 மேசை டென்னிஸ் DSA-Sec வழிகாட்டி — அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore table tennis trials typically run 60–90 minutes and are led by the school's head table-tennis coach (often STTA-licensed) plus the teacher-in-charge of Sports. The standard structure: warm-up rally, multi-ball feeding stations (forehand drive, backhand drive, push, loop against backspin, block against loop), service-and-receive sequence, then short games or scrimmage to the school's top junior players. Coaches lean on the six dimensions below, drawn from the ITTF and STTA youth coaching frameworks and parent reports across SAP and IP schools.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Stroke consistency under multi-ball" },
+          body: {
+            en: "Coaches feed 30–50 balls in a row to one corner and watch how long the trialist can keep the stroke shape — same swing length, same contact point, same recovery position. Players who can hold form past ball 20 score meaningfully higher than ones who hit harder for the first ten and break down. Multi-ball is where untrained power exposes itself.",
+          },
+        },
+        {
+          label: { en: "Footwork pattern and recovery to ready position" },
+          body: {
+            en: "Whether the trialist moves with side-shuffles or crosses over, whether they return to neutral between every ball, and whether the upper body stays compact — these are the cheapest tells of a coached versus self-taught player. Coaches feed wide-angle balls deliberately to test recovery. Active feet — small steps, ready stance reset every ball — predict how fast the player will pick up two-step and cross-step patterns in CCA training.",
+          },
+        },
+        {
+          label: { en: "Reading spin on service receive" },
+          body: {
+            en: "The single highest-signal moment of a P6 trial. Coaches serve heavy backspin, sidespin, and no-spin in rotation. A player who reads the spin from the contact (racket angle, swing direction) and adjusts the push or flick scores far higher than one who consistently chops every serve into the net or off the table. Reading service spin is the skill that scales — it's coachable, but P6 candidates who already have it signal sustained quality coaching.",
+          },
+        },
+        {
+          label: { en: "Rally tempo control and ball placement" },
+          body: {
+            en: "Can the trialist mix speed and spin, or do they only have one gear? Coaches stage drills where the candidate must alternate slow loop, fast drive, and short push within the same rally. Placement also matters — wide angle to the opponent's elbow scores higher than dead-centre balls of any pace. A P6 with three usable tempos and an awareness of wide-elbow targeting is a four-year project, not a finished player.",
+          },
+        },
+        {
+          label: { en: "Service quality and variation" },
+          body: {
+            en: "Most schools require both forehand and backhand serves, with at least two spin variations each. Coaches focus on contact deception (low toss is required by ITTF rules — minimum 16 cm — and Singapore schools enforce it strictly) and whether the serve lands short with backspin or long with sidespin on demand. A reliable short backspin serve at P6 is more useful to a school's NSG team than an inconsistent flicked sidespin. Late-trial fatigue tests serve discipline specifically.",
+          },
+        },
+        {
+          label: { en: "Coachability and table behaviour" },
+          body: {
+            en: "How the trialist behaves between drills, whether they pick up balls without being asked, encourage a partner who missed a return, and accept immediate corrections without sulking. International youth coaching research consistently rates these signals among the top predictors of long-term improvement — and Singapore school coaches, who'll work with this child for four years across NSG B and A divisions, weight them heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Shakehand attacker (two-winged looper)" },
+          body: {
+            en: "The dominant modern style globally and the one most Singapore school coaches default to. Coaches look for a forehand loop with the body — legs and core driving the swing, not just the arm — plus a backhand loop or counter that can hold rallies. P6 candidates with clean two-winged shape outscore one-sided forehand hitters in trial scoring, because backhand-weak players have no answer when middle-block coaches feed wide to the backhand.",
+          },
+        },
+        {
+          position: { en: "Penhold attacker (traditional or reverse penhold backhand)" },
+          body: {
+            en: "Once dominant in the region, still seen at SAP schools where Chinese coaching lineage runs strong. Coaches assess the forehand drive's body mechanics and — crucially — whether the player can produce a backhand. Reverse penhold backhand (RPB) candidates are flagged as advanced. Pure traditional-penhold players without a working backhand are scored down because modern school table tennis demands a two-winged answer.",
+          },
+        },
+        {
+          position: { en: "Defensive chopper" },
+          body: {
+            en: "The rarest profile and one a school coach will fast-track if they don't already have one on the team. Coaches assess long-pip or anti-spin racket use, the chop stroke's consistency at distance, and whether the player can pivot to a counter-attack when the opponent loops short. A P6 defensive chopper with reliable forehand-corner attack is a unique asset because most opposing players at NSG B-Division have never trained against the style.",
+          },
+        },
+        {
+          position: { en: "Doubles specialist (rotation discipline)" },
+          body: {
+            en: "Singapore school table tennis NSG includes both singles and doubles events, and doubles points carry equal weight in team scoring. Coaches assess whether the trialist moves out of the way after their stroke (rotation discipline), communicates with the partner (call shots, signal serves), and adjusts shot selection for the partner's strengths. A P6 who plays singles well but freezes their partner's space in doubles is a coaching project, not an immediate asset.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Singapore school table tennis at P6 trial level usually does not lock a player to one style — coaches assess whether the existing shape is clean enough to refine rather than rebuild. If your child has trained primarily under one style, mention it explicitly; the school's existing roster (and head coach's stylistic preference) often drives which candidates fit.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love table tennis?" },
+          subtext: {
+            en: "Panels want a specific moment, not a feeling. \"I like winning\" reads as untrained motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory — a match, a coach moment, a specific stroke — then connect it to character.",
+          },
+          template: {
+            en: "I lost the inter-school P5 quarter-final 11-9 in the deciding game because I missed a short push receive. That night I asked my coach to feed me short backspin for an hour. The next month I won the same opponent 3-1. That was when I learned the small skills win the big points.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the table-tennis programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's table tennis — a coach's name, a recent NSG result, a training pattern.",
+          },
+          template: {
+            en: "Dunman High's table tennis trains four times a week and the SAP environment means I can keep my Higher Chinese alongside competitive training. That combination is rare.",
+          },
+        },
+        {
+          question: { en: "What is your playing style and why?" },
+          subtext: {
+            en: "Can the kid articulate the style, not just label it?",
+          },
+          approach: {
+            en: "Name the style plus what it requires from you.",
+          },
+          template: {
+            en: "Shakehand two-winged attacker. My job is to open with a forehand loop off any push and stay in the rally with backhand counters. I picked it because my coach said my legs are stronger than my wrist, and the style rewards leg drive more than wrist flick.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I was knocked out in the first round of STTA Age Group last year because I couldn't read sidespin serves. I spent eight Saturdays at the club only practising serve receive against three different sidespin players. At the next tournament I made the round of 16.",
+          },
+        },
+        {
+          question: { en: "Is there a coach or training partner you remember most?" },
+          subtext: {
+            en: "Whether the kid sees coaching as a relationship or a transaction.",
+          },
+          approach: {
+            en: "Name someone specific by role + what you learned from them.",
+          },
+          template: {
+            en: "My P5 club coach made me serve 100 short backspins every session before any rally drill. I hated it at first because I wanted to play games. Now my short-backspin serve is the most consistent part of my game. He taught me that the boring repetition is where the matches are actually won.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent trainings?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I finish English and Math homework before training because I'm too tired after. Science I do on weekends. My mother holds the report book and shows my coach every term — if my grades slip, I miss training that week. That's the rule we set together.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your head coach's emphasis on backhand opening matches how I want to develop. If School A called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Table Tennis (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "SAP and Bicultural Studies school. Table tennis is listed in Dunman High's 2026 DSA FAQ for both boys' and girls' divisions. Strong CCA tradition with regular NSG A-Division participation.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Table Tennis (Boys), IP" },
+          context: {
+            en: "IP school with established boys' table tennis CCA. Among HCI's published DSA talent areas. Consistent NSG A-Division presence.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Table Tennis (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies school. Table tennis among NYGH's published DSA talent areas. Active girls' CCA with sustained NSG presence.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          url: "https://www.nanhuahigh.moe.edu.sg/announcements/talent-areas-for-dsa/",
+          talentArea: { en: "Table Tennis, DSA-Sec" },
+          context: {
+            en: "SAP school. Table tennis among Nan Hua's published talent areas. Higher Chinese / Chinese Language as Mother Tongue requirement applies.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/",
+          talentArea: { en: "Table Tennis (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school — applicants must offer Chinese Language or Higher Chinese in primary. Active boys' table tennis CCA with sustained NSG participation.",
+          },
+        },
+        {
+          name: "River Valley High School",
+          url: "https://www.rivervalleyhigh.moe.edu.sg/",
+          talentArea: { en: "Table Tennis (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "SAP school with Bicultural Studies. Table tennis among RVHS's recognised talent areas. Strong NSG presence in both boys' and girls' divisions.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/dsa-sec",
+          talentArea: { en: "Table Tennis (Boys), IP" },
+          context: {
+            en: "IP school with boys' table tennis CCA. Sustained NSG A-Division participation. RI publishes annual DSA talent areas; table tennis has appeared consistently.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Table Tennis (Boys), IP" },
+          context: {
+            en: "IP school with established boys' table tennis CCA. Regular NSG B-Division and A-Division participation.",
+          },
+        },
+        {
+          name: "Chung Cheng High School (Main)",
+          url: "https://www.cchms.moe.edu.sg/",
+          talentArea: { en: "Table Tennis (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "SAP school with Bicultural Studies. Strong table tennis tradition; sustained NSG B- and C-Division participation across boys' and girls' teams.",
+          },
+        },
+        {
+          name: "Maris Stella High School",
+          url: "https://www.marisstellahigh.moe.edu.sg/",
+          talentArea: { en: "Table Tennis (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school. Boys' table tennis CCA with consistent NSG appearances. Higher Chinese / Chinese Language as Mother Tongue requirement applies.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Video-record one full multi-ball training session. Watch with your child, scoring just two behaviours: (1) at ball 25, does the stroke still look like ball 5? (2) does the player return to neutral ready position between each ball, or drift sideways? These two are the highest-signal items in table tennis trials.",
+            },
+            {
+              en: "Confirm STTA ranking and CCA records are accurate. MOE pulls CCA participation, school awards, STTA-sanctioned tournament results, and NAPFA into the DSA portal directly. Ask the CCA teacher or year-head to verify what's been logged.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: serve-and-receive drills, light multi-ball, no new technical work. Final-week stroke changes rarely pay off and frequently break form on trial day.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire (most trials require non-marking indoor shoes and school PE attire or club kit). Bring the player's own racket — schools do not supply equipment. Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "One scrimmage with strangers. On Singapore parent forums, a recurring observation is that kids underperform at trials because they only play partners they know. Force the awkwardness early — a Saturday club open session with unfamiliar opponents is the cheapest fix.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — not 30. Coaches deliberately push trial past the fatigue threshold and the last 15 minutes is where strokes break down.",
+            },
+            {
+              en: "Bring two rackets. A loose rubber or a broken sponge mid-trial is one of the few logistical failures that ends a P6 trial early — the 30-cent fix is having a backup.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. Shorten the drill cycle to two things only: short backspin serve and forehand-corner footwork recovery. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because that's the only part where a few hours can still meaningfully change the outcome. Some families bring in a private table-tennis coach at this stage. A good private coach can speed up specific habit changes — particularly serve disguise and footwork patterns — but no coach produces, in three sessions, the stroke consistency of a year of multi-ball drills. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -5870,6 +6198,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "squash",
   "leadership",
   "volleyball",
+  "table-tennis",
 ];
 
 /**
@@ -5902,6 +6231,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   squash: ["badminton", "martial-arts"],
   leadership: ["chinese", "drama"],
   volleyball: ["basketball", "badminton"],
+  "table-tennis": ["badminton", "chinese"],
 };
 
 /**
