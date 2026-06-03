@@ -34,7 +34,8 @@ export type TalentSlug =
   | "tennis"
   | "wushu"
   | "water-polo"
-  | "sailing";
+  | "sailing"
+  | "rugby";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -8866,6 +8867,336 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  rugby: {
+    slug: "rugby",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Rugby", zh: "橄榄球", ms: "Ragbi", ta: "ரக்பி" },
+    hook: {
+      en: "Rugby DSA — trials reward tackle technique and contact composure, with all-boys heritage schools running the strongest programmes.",
+      zh: "橄榄球 DSA——trial 看擒抱技术和对抗冷静度，男校传统项目最强",
+      ms: "DSA Ragbi — trial menghargai teknik tekel dan ketenangan dalam pertembungan, dengan sekolah lelaki warisan menjalankan program terkuat.",
+      ta: "ரக்பி DSA — டாக்கிள் தொழில்நுட்பத்தையும் தாக்குதலின் போது நிதானத்தையும் மதிக்கிறது, ஆண்கள் பள்ளிகளில் வலுவான திட்டங்கள்.",
+    },
+    intro: {
+      en: "Rugby in Singapore secondary schools is concentrated in heritage boys' schools — ACS(I), SJI, Victoria School, ACS(BR), Raffles Institution, St. Andrew's. The girls' school cluster is smaller and growing (RGS, MGS). Most Singapore primary schools play tag rugby (no contact); secondary moves to full contact under World Rugby and Singapore Rugby Union (SRU) frameworks. Trials assess tackle technique, passing under pressure, kicking accuracy, rucking, lineout work, and the candidate's behaviour in contact. Documented tag-rugby or club contact experience and NSG B/C-Division participation are explicit DSA signals. Strength matters less at P6 than technique and willingness to commit to contact.",
+      zh: "新加坡中学橄榄球集中在男校传统名校——ACS(I)、SJI、Victoria School、ACS(BR)、Raffles Institution、St. Andrew's。女校集群较小但在增长（RGS、MGS）。多数新加坡小学打 tag rugby（无身体接触）；中学转入全接触，遵循 World Rugby 与新加坡橄榄球联合会（SRU）规则。Trial 看擒抱技术、压力下传球、踢球精度、rucking、lineout、对抗时的行为。已记录的 tag rugby/俱乐部接触经验和 NSG B/C 级参赛是明确 DSA 信号。在 P6 阶段，力量比技术和接受身体接触的意愿次要。",
+      ms: "Ragbi di sekolah menengah Singapura tertumpu di sekolah lelaki warisan. Kebanyakan sekolah rendah Singapura bermain tag rugby; sekolah menengah beralih kepada perlanggaran penuh.",
+      ta: "சிங்கப்பூர் இடைநிலைப் பள்ளி ரக்பி பாரம்பரிய ஆண்கள் பள்ளிகளில் தொகுக்கப்பட்டுள்ளது. பெரும்பாலான தொடக்கப் பள்ளிகள் tag rugby விளையாடுகின்றன; இடைநிலையில் முழுத் தொடர்பு.",
+    },
+    summary: {
+      en: "Trial structure, position-specific habits, interview questions, NSG-active boys' (and emerging girls') rugby schools.",
+      zh: "Trial 流程、位置专项习惯、面试题、NSG 活跃男校（以及在崛起的女校）。",
+      ms: "Struktur trial, tabiat khusus posisi, soalan temu duga, sekolah lelaki aktif NSG.",
+      ta: "சோதனை அமைப்பு, நிலை சார்ந்த பழக்கங்கள், கேள்விகள், NSG பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Anglo-Chinese School (Independent)",
+      "St. Joseph's Institution",
+      "Victoria School",
+      "Anglo-Chinese School (Barker Road)",
+      "Raffles Institution",
+      "St. Andrew's Secondary School",
+    ],
+    metaDescription: {
+      en: "Rugby DSA-Sec trial guide for Singapore P6 — what coaches assess across tackle / pass / kick / contact, NSG context, sample interview questions, NSG-active boys' (and emerging girls') participating schools.",
+      zh: "新加坡 P6 橄榄球 DSA-Sec trial 指南——擒抱/传球/踢/对抗评分、NSG 说明、面试题、NSG 活跃男校（与女校）。",
+      ms: "Panduan trial DSA-Sec Ragbi Singapura — apa jurulatih nilai, posisi, soalan, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 ரக்பி DSA-Sec வழிகாட்டி — அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore rugby trials typically run 90–120 minutes on grass and are led by the school's head rugby coach (often SRU / World Rugby-certified) plus the teacher-in-charge of Sports. The standard structure: dynamic warm-up and ball familiarisation, technical stations (passing in pairs, kicking, tackle technique with pads then bodies), contact-decision drills (1-on-1 tackle bag, 2-on-1 attack), then 7-a-side or 10-a-side small-sided games. Tag-rugby candidates and contact-rugby candidates may be assessed in parallel groups. Six dimensions emerge from public SRU youth coaching frameworks and ACS / SJI / Victoria School rugby programme descriptions.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Tackle technique — body shape, head position, follow-through" },
+          body: {
+            en: "The most heavily weighted dimension. Coaches assess shoulder contact (above the waist, head positioned to the side not in front of the ball-carrier — World Rugby head contact framework is strictly enforced from primary level), drive through the tackle, and the recovery to feet. A P6 candidate who can execute a 1-on-1 textbook tackle on a moving ball-carrier scores far higher than a stronger candidate who throws their head into contact. Bad head position at P6 is a four-year safety project — coaches recruit candidates who already have a coachable tackle shape.",
+          },
+        },
+        {
+          label: { en: "Passing under pressure — both sides, off both shoulders" },
+          body: {
+            en: "Coaches stage 4-on-3 attack drills and watch whether the candidate can pass left and right at game-pace, with both feet planted and pre-pass eyes scanning the defender. A P6 who can pop pass cleanly off either shoulder is signalling four-year backline potential. A candidate who can only pass off the strong shoulder (typically right) is read as a coaching project — the second-shoulder pass is the harder skill to teach.",
+          },
+        },
+        {
+          label: { en: "Kicking accuracy and decision-making" },
+          body: {
+            en: "Trials test punt kick, drop kick, and place kick from at least two distances. Coaches focus on accuracy at the receiver's chest height for the punt, not on raw distance, and on the catching technique on the receiving end. Decision-making on when to kick versus carry is assessed in small-sided games — a P6 who can chip-over-the-defence in a 2-on-3 outside-numbers situation is the rare attacking signal that elite schools recruit.",
+          },
+        },
+        {
+          label: { en: "Rucking, ball presentation, and breakdown work" },
+          body: {
+            en: "Coaches assess what the ball-carrier does after going to ground (presents the ball back, drives one more metre, calls support) and what the first-arriving support player does at the breakdown (binds, drives, stays on feet). Breakdown work is more heavily weighted at secondary level than at primary, but coaches scout P6 candidates who already understand body position over the ball — that's the cleanest tell of accumulated club hours.",
+          },
+        },
+        {
+          label: { en: "Contact composure and decision-making" },
+          body: {
+            en: "The single highest-signal mental dimension. Coaches deliberately create contact situations (tackle bag drills, 1-on-1 attack into a defender) and watch whether the candidate hits the line confidently, attempts to step a defender at the right distance, and recovers calmly from being tackled. A P6 who runs hard into contact without shying away signals four-year rugby commitment; one who slows down or steps wide unnecessarily is read as a candidate who hasn't yet committed to contact. This is the moment that separates a tag-rugby player from a future contact player.",
+          },
+        },
+        {
+          label: { en: "Coachability and pitch-side behaviour" },
+          body: {
+            en: "How the trialist behaves between drills, whether they retrieve loose balls without being asked, encourage a teammate, listen to corrections without sulking, and shake hands with opponents after small-sided games. International youth rugby coaching research and the SRU framework consistently emphasise these signals — and Singapore school coaches, who'll work with this child for four years across NSG B and A divisions, weight them heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Forwards (props, hookers, locks, flankers, no. 8)" },
+          body: {
+            en: "Specialist positions for the tight-five and back-row players. Coaches assess body shape and willingness to contest at scrum-time and lineout-time. At P6 level, scrums and lineouts are usually demonstrated, not contested fully — coaches assess body engagement (low body height in scrum drill, jumping ability for lineout candidates), and rucking commitment. Size and frame matter more for forwards than for backs, but technique is still primary at P6.",
+          },
+        },
+        {
+          position: { en: "Halves — Scrum-half and Fly-half" },
+          body: {
+            en: "The team's playmaker positions. Coaches assess pass speed and accuracy from the base of a ruck (scrum-half), and decision-making with the ball in hand under defensive pressure (fly-half). Scrum-half candidates need a clean spin-pass off both hands; fly-half candidates need a kick option (punt or chip) and a running threat. A P6 with a left-foot and right-foot kicking option is rare and recruited aggressively.",
+          },
+        },
+        {
+          position: { en: "Centres and Wings" },
+          body: {
+            en: "The attacking backline. Coaches assess pace, change-of-direction (sidestep technique), tackle technique (centres often defend the opposition's biggest ball-carriers), and finishing ability for wings. A P6 with a clean fend-off in contact and a developing sidestep is the bread-and-butter backline recruit.",
+          },
+        },
+        {
+          position: { en: "Fullback (and emerging Sevens specialist)" },
+          body: {
+            en: "Defensive last line and attacking counter-strike position. Coaches assess high-ball catching under pressure (the up-and-under is the position-defining test), punt kicking from hand, and decision-making on counter-attack runs. Sevens rugby is increasingly recruited as a specialist Sevens pathway at some schools — a candidate with documented Sevens-specific results is treated as a multi-format asset.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Singapore school rugby at P6 trial level usually does not lock a player to one position permanently — coaches assess athletic profile and prior position experience. If your child has played multiple positions in primary-school tag rugby (typically pulled between halves and centres), mention all of them. Position assignment in Sec 1-2 depends on growth and physical development, especially for forwards.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love rugby?" },
+          subtext: {
+            en: "Panels want a specific moment, not a feeling. \"I like tackling\" reads as untrained motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character.",
+          },
+          template: {
+            en: "I missed a tackle on the last play of a P5 zonals final and we lost. The opposing winger had stepped me, and I went the wrong way. My captain put his hand on my shoulder afterwards. That was the moment I realised rugby is the only sport where a mistake becomes the team's moment to support you — not blame you.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the rugby programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's rugby — a coach's name, an NSG result, a training pattern.",
+          },
+          template: {
+            en: "ACS(I)'s rugby programme has the longest schoolboy heritage in Singapore and trains four times a week from Sec 1. The contact-introduction pathway you run for ex-tag-rugby players is exactly what I need.",
+          },
+        },
+        {
+          question: { en: "What position do you play and why?" },
+          subtext: {
+            en: "Can the kid articulate the role, not just label it?",
+          },
+          approach: {
+            en: "Name the position plus the job.",
+          },
+          template: {
+            en: "Scrum-half. My job is the link between forwards and backs — delivering the pass quickly from the base of the ruck and reading whether the backline should run or kick. I picked the position because my pass is my strongest skill and I like the responsibility for the tempo of the team.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I shied away from contact in my first contact-rugby session in P5 and the coach told me to either commit or play tag. I spent six weeks doing 1-on-1 tackle bag drills every Saturday. By the next contact session I was the first to commit to every breakdown.",
+          },
+        },
+        {
+          question: { en: "Is there a teammate or coach you remember most?" },
+          subtext: {
+            en: "Whether the kid sees teammates as people or background.",
+          },
+          approach: {
+            en: "Name someone specific by role + what you learned from them.",
+          },
+          template: {
+            en: "Our P6 captain was the smallest forward in the team but always the first to a ruck. Watching him commit to every breakdown taught me that rugby doesn't reward the biggest player — it rewards the player who decides fastest. I copy his commitment, not his size.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent trainings?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I do English and Math homework on the bus to training and finish Science before dinner. Sunday is for revision. My mother shows my report book to my coach every term — if any subject drops a band, we cut one training. That's the rule we set together.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your coach's emphasis on breakdown work matches how I think about the game. If School A called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Rugby (Boys), IP" },
+          context: {
+            en: "IP school with Singapore's longest schoolboy rugby heritage. Multi-decade NSG A-Division dominance. Rugby among ACS(I)'s published DSA talent areas with structured contact-introduction pathway for ex-tag-rugby players.",
+          },
+        },
+        {
+          name: "St. Joseph's Institution",
+          url: "https://www.sji.edu.sg/admission/dsa-at-sji/",
+          talentArea: { en: "Rugby (Boys), IP / DSA-Sec" },
+          context: {
+            en: "Lasallian boys' school. Rugby among SJI's published DSA talent areas (IP and O Level). Sustained NSG A-Division presence and traditional rivalry with ACS(I) and St. Andrew's.",
+          },
+        },
+        {
+          name: "Victoria School",
+          url: "https://www.victoriaschool.moe.edu.sg/",
+          talentArea: { en: "Rugby (Boys), IP / DSA-Sec" },
+          context: {
+            en: "Heritage boys' school. Rugby CCA with sustained NSG participation across both IP and O Level streams.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          url: "https://www.acsbr.moe.edu.sg/",
+          talentArea: { en: "Rugby (Boys), DSA-Sec" },
+          context: {
+            en: "Sister school to ACS(I). Strong rugby CCA tradition with multi-year NSG presence.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/dsa-sec",
+          talentArea: { en: "Rugby (Boys), IP" },
+          context: {
+            en: "IP school. Rugby among RI's published Sports DSA domain criteria. Sustained NSG A-Division participation.",
+          },
+        },
+        {
+          name: "St. Andrew's Secondary School",
+          url: "https://www.standrewssec.moe.edu.sg/",
+          talentArea: { en: "Rugby (Boys), DSA-Sec" },
+          context: {
+            en: "Anglican boys' school. Heritage rugby programme with sustained NSG B- and A-Division presence; one of the traditional Singapore schoolboy rugby names.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Rugby (Boys), IP" },
+          context: {
+            en: "IP school. Rugby among HCI's recognised DSA talent areas. Sustained NSG presence.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Rugby (Boys), IP / DSA-Sec" },
+          context: {
+            en: "SAP school. Rugby among Dunman's 2026 DSA FAQ talent areas. NSG-active.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/Admission-to-RGS/via-DSA/",
+          talentArea: { en: "Rugby (Girls), IP" },
+          context: {
+            en: "IP school. Rugby among RGS's recognised DSA talent areas in the emerging girls' division; one of Singapore's earliest schoolgirl rugby programmes.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.moe.edu.sg/secondary/admissions/dsa-sec1/",
+          talentArea: { en: "Rugby (Girls), DSA-Sec" },
+          context: {
+            en: "Methodist heritage girls' school. Rugby among MGS's emerging DSA talent areas as schoolgirl rugby expands.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Verify NSG B- or C-Division results and CCA records. MOE pulls CCA participation, school awards, NSG tag-rugby or contact-rugby results, and SRU-affiliated club competition results into the DSA portal directly. A documented NSG Zone or National participation at primary level is the single most-cited signal in rugby DSA — confirm it has been logged.",
+            },
+            {
+              en: "Video-record one full small-sided contact (or full tag) practice. Watch with your child, scoring just two behaviours: (1) on every tackle, was the head positioned to the side of the ball-carrier, not in front? (2) when running with the ball into contact, did the body lower and the shoulder lead, or did the head go down? These two are the highest-signal items in rugby trials.",
+            },
+            {
+              en: "Confirm tetanus and basic medical clearance. Rugby trials involve contact; schools may ask for confirmation of last tetanus shot date and any current medical conditions. Email the teacher-in-charge if there are mouth-guard or scrum-cap requirements.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: pass-pair drills at game pace, light tackle-bag work, no heavy live contact, no new conditioning load. Final-week heavy contact rarely pays off and frequently produces a stinger or a concussion.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue (grass pitch or 3G turf), attire (school PE attire or club kit, rugby boots with appropriate studs — not football boots with high blades, mouth guard required by SRU rules from the contact age, scrum cap recommended). Bring a tackle bag towel and a spare set of attire. Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "One scrimmage with strangers. On Singapore parent forums, a recurring observation is that boys underperform at trials because they only commit to contact against teammates they know. Force the awkwardness early — a Saturday SRU club open session is the cheapest fix.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — not 30. Coaches deliberately push trial past the fatigue threshold and the last 20 minutes is where tackle technique breaks down (head positioning, body height into contact).",
+            },
+            {
+              en: "Bring a mouth-guard you've already worn for at least three training sessions. A new mouth-guard on trial day is uncomfortable and breaks concentration on tackle drills.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents on the pitch-side are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. Shorten the drill cycle to two things only: tackle technique on a tackle bag (head to the side, drive through, recover to feet) and pass-pair drills off both shoulders at game pace. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because that's the only part where a few hours can still meaningfully change the outcome. Some families bring in a private rugby coach at this stage. A good private coach can speed up specific habit changes — particularly tackle shape and breakdown body position — but no coach produces, in three sessions, the contact composure of a year of club training. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -8895,6 +9226,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "wushu",
   "water-polo",
   "sailing",
+  "rugby",
 ];
 
 /**
@@ -8936,6 +9268,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   wushu: ["martial-arts", "chinese"],
   "water-polo": ["swimming", "basketball"],
   sailing: ["swimming", "track-field"],
+  rugby: ["football", "track-field"],
 };
 
 /**
