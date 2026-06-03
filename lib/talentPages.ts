@@ -24,7 +24,8 @@ export type TalentSlug =
   | "art"
   | "hockey"
   | "squash"
-  | "leadership";
+  | "leadership"
+  | "volleyball";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -5525,6 +5526,330 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  volleyball: {
+    slug: "volleyball",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Volleyball", zh: "排球", ms: "Bola Tampar", ta: "கைப்பந்து" },
+    hook: {
+      en: "Volleyball DSA — trials reward platform habits, not raw spike power.",
+      zh: "排球 DSA——trial 奖励垫球习惯，不是单纯扣球力量",
+      ms: "DSA Bola Tampar — trial menghargai tabiat pasing, bukan kuasa mentah.",
+      ta: "கைப்பந்து DSA — சோதனை வழக்கமான பாஸ் திறமைகளை மதிக்கிறது, மூல சக்தியை அல்ல.",
+    },
+    intro: {
+      en: "Singapore school volleyball trials assess far more than how hard a P6 player can spike. Coaches watch the platform on the first contact, footwork to the ball, and whether the trialist can read where the set is going. Height helps but is not destiny at twelve. Here's what trials actually weigh.",
+      zh: "新加坡中学排球 trial 看的不只是 P6 球员能扣多重。教练看第一手垫球的板面、跑位脚步、以及能否读出二传的方向。身高有用，但 12 岁不是决定性因素。Trial 真正的权重在哪。",
+      ms: "Jurulatih trial bola tampar menilai lebih daripada kuasa mentah pukulan keras. Mereka melihat platform pasing, pergerakan kaki ke bola, dan keupayaan membaca arah pasing kedua.",
+      ta: "சிங்கப்பூர் கைப்பந்து சோதனைகள் வீச்சு சக்திக்கு அப்பால் — முதல் தொடுதலின் platform, பந்துக்கு கால் நகர்வு, செட் எங்கு செல்கிறது என்பதைப் படிக்கும் திறன் ஆகியவற்றை மதிப்பிடுகின்றன.",
+    },
+    summary: {
+      en: "Trial structure, position-specific habits, interview questions, NSG-active schools across boys' and girls' divisions.",
+      zh: "Trial 流程、位置专项习惯、面试题、男女队 NSG 活跃学校。",
+      ms: "Struktur trial, tabiat khusus posisi, soalan temu duga, sekolah aktif NSG.",
+      ta: "சோதனை அமைப்பு, நிலை சார்ந்த பழக்கங்கள், கேள்விகள், NSG பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Dunman High School",
+      "Hwa Chong Institution",
+      "Anglo-Chinese School (Independent)",
+      "Raffles Girls' School (Secondary)",
+      "Nanyang Girls' High School",
+      "Cedar Girls' Secondary School",
+    ],
+    metaDescription: {
+      en: "Volleyball DSA-Sec trial guide for Singapore P6 — what coaches assess, position-specific drills, sample interview questions, NSG-active participating schools.",
+      zh: "新加坡 P6 排球 DSA-Sec trial 指南——教练评分维度、位置专项、面试题、NSG 活跃招生学校。",
+      ms: "Panduan trial DSA-Sec Bola Tampar Singapura — apa jurulatih nilai, latihan posisi, soalan, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 கைப்பந்து DSA-Sec வழிகாட்டி — சோதனை அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore volleyball trials typically run 90–120 minutes and are led by the school's head volleyball coach (often VAS-licensed) plus the teacher-in-charge of Sports. The standard structure: warm-up and footwork, technical stations (passing platforms, setting, hitting approach, serving), and a small-sided game on a half court. Height is checked but rarely decisive at P6 — bodies are still growing — so coaches lean on the six habit-based dimensions below, drawn from the FIVB youth coaching framework and parent reports across NSG-active schools.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Platform consistency on the first contact" },
+          body: {
+            en: "Coaches feed passes deliberately — short, deep, off-angle — and watch whether the trialist forms a stable platform with locked elbows and angled to the target. P6 players who can pass ten balls to a 1-metre target zone score meaningfully higher than one with a stronger spike but poor reception. The first contact is the rally; everything after depends on it.",
+          },
+        },
+        {
+          label: { en: "Footwork to the ball" },
+          body: {
+            en: "Whether the player moves their feet to get behind the ball or reaches with the arms is the cheapest tell of a coached versus untrained player. Coaches deliberately feed balls just outside reach to test recovery and shuffle steps. Active footwork — small shuffles, ready position between every ball — is scored heavily because it predicts how quickly the player will pick up rotational play in CCA.",
+          },
+        },
+        {
+          label: { en: "Setting touch and decision-making" },
+          body: {
+            en: "Even non-setter candidates get tested on hand-setting form. Coaches look for soft hands (no slap-finger contact), shoulders square to target, and whether the set's height matches the situation. The decision-making layer — does the trialist set high to a struggling teammate or quick to the strongest hitter — separates court-aware players from technically clean but rigid ones.",
+          },
+        },
+        {
+          label: { en: "Approach footwork and spike timing" },
+          body: {
+            en: "Spike approach is typically a three-step or four-step pattern. Coaches watch whether the trialist times the jump to a high point on the set, swings with full extension, and lands balanced (not falling into the net or away from the play). A clean approach with mediocre power scores higher than wild swings that occasionally produce a kill — the approach is what coaches will build height onto over four years.",
+          },
+        },
+        {
+          label: { en: "Serving under pressure" },
+          body: {
+            en: "Most schools require both an underhand and an overhand (float) serve in the trial; some test jump serves. Coaches focus on whether the serve goes in 8 out of 10 attempts at a target zone — not on raw pace. A reliable underhand serve at P6 is more valuable to a school's NSG team than an inconsistent overhand bomb. Late-trial fatigue tests serving discipline specifically.",
+          },
+        },
+        {
+          label: { en: "Coachability and bench behaviour" },
+          body: {
+            en: "How the trialist behaves between drills, whether they rotate balls back to the coach, encourage a partner who shanked a pass, and accept immediate corrections without sulking. International coaching research consistently rates these signals 10/10 by elite youth coaches — and Singapore school coaches, who'll work with this child for four years, weight them heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Setter" },
+          body: {
+            en: "The position most undersold at P6 because spikes are visible and sets are not. Coaches look for soft hands, consistent set location (about 30 cm inside the antenna, half a metre above the net), and whether the trialist looks at the blockers before deciding where to set. A setter who hides behind the trialist taking a free ball and offers a quick option to the middle outscores one who only sets the outside.",
+          },
+        },
+        {
+          position: { en: "Outside hitter / Opposite" },
+          body: {
+            en: "The most-recruited position because every team needs reliable left-side and right-side hitters. Approach footwork is the headline — coaches will trade some height for clean three-step or four-step timing. Coaches also watch the hitter's recovery to the back row for defensive rotations; outside hitters who don't dig in the back row are read as a coaching problem in waiting.",
+          },
+        },
+        {
+          position: { en: "Middle blocker" },
+          body: {
+            en: "Height matters most here but is not the only signal. Coaches look at jump timing on quick sets, lateral footwork along the net, and reading the opposing setter's eyes. A 1.65 m middle who reads the setter beats a 1.75 m middle who guesses. Blocking technique — sealed hands, penetrating fingers — is checked but coachable; reading is the harder skill.",
+          },
+        },
+        {
+          position: { en: "Libero / Defensive specialist" },
+          body: {
+            en: "The position where the platform-on-first-contact dimension matters most. Coaches focus on serve-receive consistency in a service-target drill, low ready-position stance, and willingness to dig dives. Liberos are often shorter players with exceptional reads; coaches who run a libero-led system will fast-track an undersized P6 with reliable platform skills over a taller but inconsistent receiver.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Singapore school volleyball at P6 trial level usually does not lock a player to one position — coaches assess versatility across two or three roles. If your child plays multiple positions reasonably, mention all of them in the trial; the school's existing roster balance often drives which position recruits a specific candidate.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love volleyball?" },
+          subtext: {
+            en: "Panels want a specific moment, not a feeling. \"I like spiking\" reads as untrained motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character.",
+          },
+          template: {
+            en: "We lost the inter-class final in P5 because I shanked the last serve receive. That night I asked my coach what I should have done differently — that was the first time I cared more about the platform than the kill.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the volleyball programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's volleyball — a coach's name, an NSG result, a training pattern.",
+          },
+          template: {
+            en: "Dunman High's volleyball programme trains four times a week and has produced national-team players. That's the volume I want from Sec 1.",
+          },
+        },
+        {
+          question: { en: "What position do you play and why?" },
+          subtext: {
+            en: "Can the kid articulate the role, not just label it?",
+          },
+          approach: {
+            en: "Name the position plus the job.",
+          },
+          template: {
+            en: "Outside hitter — my job is converting the high ball when the setter is in trouble and digging in the back row when we're not on offence. I like the position because you're always in the play.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I missed my P5 school team after the first trial. I went to a Saturday morning club, drilled platforms for ten weeks straight, and made the team next round. I played setter at zonals.",
+          },
+        },
+        {
+          question: { en: "Is there a teammate or coach you remember most?" },
+          subtext: {
+            en: "Whether the kid sees teammates as people or background.",
+          },
+          approach: {
+            en: "Name someone specific by role + what you learned from them.",
+          },
+          template: {
+            en: "Our P6 captain made me serve 50 times after every practice — overhand, into a 1-square-metre zone. I missed most of them at first. By NSG my serve was the most reliable in the team. He taught me that a habit beats a highlight.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent trainings?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I do English and Math homework on the bus to training and finish Science before dinner. I keep Sundays for revision. My coach asks for my report book every term — that's a real system, not just willpower.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your coach's emphasis on serve-receive matches how I think about the game. If the other school called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Volleyball (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "SAP and Bicultural Studies school. Volleyball is listed in Dunman High's 2026 DSA FAQ for both boys' and girls' divisions. Consistent NSG B-Division presence.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Volleyball (Boys), IP" },
+          context: {
+            en: "IP school with established boys' volleyball CCA. Volleyball listed among HCI's published DSA talent areas. Sustained NSG A-Division participation.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Volleyball (Boys), IP" },
+          context: {
+            en: "IP school with active boys' volleyball CCA. Regular NSG B-Division and C-Division participation.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/year-1-direct-school-admission/",
+          talentArea: { en: "Volleyball (Girls), IP" },
+          context: {
+            en: "IP school with strong girls' volleyball tradition. Consistent NSG showings across divisions.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Volleyball (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies school. Volleyball among published DSA talent areas. Active girls' volleyball CCA with NSG participation.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/",
+          talentArea: { en: "Volleyball (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school — applicants must offer Chinese Language or Higher Chinese in primary. Active boys' volleyball CCA.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          url: "https://www.nanhuahigh.moe.edu.sg/announcements/talent-areas-for-dsa/",
+          talentArea: { en: "Volleyball, DSA-Sec" },
+          context: {
+            en: "SAP school. Volleyball among Nan Hua's published talent areas. Higher Chinese / Chinese Language as Mother Tongue requirement applies.",
+          },
+        },
+        {
+          name: "Cedar Girls' Secondary School",
+          url: "https://www.cedargirlssec.moe.edu.sg/admissions/",
+          talentArea: { en: "Volleyball (Girls), DSA-Sec" },
+          context: {
+            en: "Recognised girls' volleyball CCA with sustained NSG B-Division participation.",
+          },
+        },
+        {
+          name: "Xinmin Secondary School",
+          url: "https://www.xinminsec.moe.edu.sg/ccas/sports-n-games/volleyball/",
+          talentArea: { en: "Volleyball (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "School with sustained volleyball CCA tradition. Boys' and girls' teams both compete in NSG.",
+          },
+        },
+        {
+          name: "Hua Yi Secondary School",
+          url: "https://www.huayisec.moe.edu.sg/",
+          talentArea: { en: "Volleyball (Boys), DSA-Sec" },
+          context: {
+            en: "Recognised boys' volleyball CCA. Active NSG B-Division and C-Division participation.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Video-record one full 6-on-6 game. Watch with your child, scoring just two behaviours: (1) what their platform did on the first contact of each rally — clean or jittery? (2) how many times did they get behind the ball with their feet versus reach with their arms? These two are the highest-signal items in volleyball trials.",
+            },
+            {
+              en: "Confirm CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and external competition results, NAPFA, and JSA data into the DSA portal directly. Volleyball-specific external programmes (Volleyball Association of Singapore — VAS — development squads) also feed in. Ask the CCA teacher or year-head to verify what's been logged.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: passing target work, setting form drills, no new approach load. Final-week added jumping rarely pays off and frequently produces a tweak (most commonly Achilles or knee).",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire (most trials require court-appropriate shoes, knee pads, and no jewellery). Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "One scrimmage with strangers. On Singapore parent forums, a recurring observation is that kids underperform at trials because they only pass to teammates they know. Force the awkwardness early — a Saturday club session with unfamiliar players is the cheapest fix.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — not 30. Coaches deliberately push trial past the fatigue threshold and the last 20 minutes is where habits show.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. Shorten the drill cycle to platform passing and approach footwork. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because that's the only part where a few hours can still meaningfully change the outcome. Some families bring in a private volleyball coach at this stage. A good private coach can speed up specific habit changes — particularly the first-contact platform and three-step approach — but no coach produces, in three sessions, the rally consistency of a year of practice. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -5544,6 +5869,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "hockey",
   "squash",
   "leadership",
+  "volleyball",
 ];
 
 /**
@@ -5575,6 +5901,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   hockey: ["football", "track-field"],
   squash: ["badminton", "martial-arts"],
   leadership: ["chinese", "drama"],
+  volleyball: ["basketball", "badminton"],
 };
 
 export function getTalentPage(slug: string): TalentPage | null {
