@@ -31,7 +31,8 @@ export type TalentSlug =
   | "floorball"
   | "choir"
   | "chinese-orchestra"
-  | "tennis";
+  | "tennis"
+  | "wushu";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -7876,6 +7877,336 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  wushu: {
+    slug: "wushu",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Wushu", zh: "武术", ms: "Wushu", ta: "வுஷு" },
+    hook: {
+      en: "Wushu DSA — trials reward stance depth and form-set precision, with SAP schools running the deepest programmes.",
+      zh: "武术 DSA——trial 看桩功扎实度和套路精度，SAP 校项目最深",
+      ms: "DSA Wushu — trial menghargai kedalaman kuda-kuda dan ketepatan rutin, dengan sekolah SAP mempunyai program terdalam.",
+      ta: "வுஷு DSA — சோதனை நிலையின் ஆழமும் வடிவ துல்லியமும் மதிக்கிறது, SAP பள்ளிகளில் ஆழமான திட்டங்கள்.",
+    },
+    intro: {
+      en: "Wushu in Singapore schools is a Taolu (forms-based) sport, distinct from sparring-based martial arts. The deepest programmes sit at SAP schools — Hwa Chong, Dunman High, River Valley, NYGH — and a small number of strong non-SAP schools. Singapore Wushu Federation (SWF) graded examinations and SWF Wushu Championships results feed directly into the DSA portal. Trials assess stance depth (馬步 / 弓步 / 虛步), the precision of basic technique sets (基本功 — kicks, punches, sweeps), one or two memorised form-sets (Changquan, Nanquan, Taijiquan, or a chosen weapon), and the candidate's posture, focus, and recovery from a slip. Power matters, but form correctness matters more.",
+      zh: "新加坡中学武术是套路（Taolu）类项目，与对抗类格斗术不同。最深的项目集中在 SAP 校——华侨中学、Dunman High、河谷、南华——以及少数非 SAP 强校。新加坡武术联合会（SWF）段位考试与 SWF 武术锦标赛战绩直接反映在 DSA 系统中。Trial 看桩功扎实度（马步/弓步/虚步）、基本功精度（踢/打/扫）、1-2 套记忆套路（长拳、南拳、太极拳，或一种器械）、以及姿态、专注、失误后调整。力量有用，但形准更重要。",
+      ms: "Wushu di sekolah Singapura adalah sukan berdasarkan Taolu (rutin), berbeza dengan seni mempertahankan diri berbentuk perlawanan. Program terdalam berada di sekolah SAP. Trial menilai kedalaman kuda-kuda, ketepatan teknik asas, dan rutin yang dihafal.",
+      ta: "சிங்கப்பூர் பள்ளிகளில் வுஷு வடிவம் சார்ந்த விளையாட்டு (Taolu). மிக ஆழமான திட்டங்கள் SAP பள்ளிகளில். சோதனை நிலையின் ஆழம், அடிப்படை நுட்பத்தின் துல்லியம், மனப்பாட வடிவங்களை மதிப்பிடுகிறது.",
+    },
+    summary: {
+      en: "Trial structure, form / weapon specialisation profiles, interview questions, SAP schools with strong Taolu wushu programmes.",
+      zh: "Trial 流程、拳种/器械分析、面试题、Taolu 武术 SAP 强校。",
+      ms: "Struktur trial, profil rutin / senjata, soalan temu duga, sekolah SAP terkemuka.",
+      ta: "சோதனை அமைப்பு, வடிவம்/ஆயுதம் வகைகள், கேள்விகள், SAP பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Hwa Chong Institution",
+      "Dunman High School",
+      "River Valley High School",
+      "Nanyang Girls' High School",
+      "Catholic High School",
+      "Nan Hua High School",
+    ],
+    metaDescription: {
+      en: "Wushu DSA-Sec trial guide for Singapore P6 — what coaches assess across stance / basics / forms / weapon, SWF ranking context, sample interview questions, SAP participating schools.",
+      zh: "新加坡 P6 武术 DSA-Sec trial 指南——桩功/基本功/套路/器械评分、SWF 段位说明、面试题、SAP 招生学校。",
+      ms: "Panduan trial DSA-Sec Wushu Singapura — apa jurulatih nilai, soalan, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 வுஷு DSA-Sec வழிகாட்டி — அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore wushu trials typically run 60–90 minutes and are led by the school's head wushu coach (often Singapore Wushu Federation-affiliated, frequently a former national team athlete) plus the teacher-in-charge of CCAs. The standard structure: dynamic warm-up and stretching, stance training (馬步 mabu, 弓步 gongbu, 虛步 xubu), basic technique stations (kicks 腿法, punches 拳法, sweeps 掃腿), one or two memorised forms (Changquan / Nanquan / Taijiquan / weapon form), and a short interview. Coaches lean on the six dimensions below, drawn from SWF grading frameworks and public CCA descriptions across SAP schools.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Stance depth and stability" },
+          body: {
+            en: "The single most-listened-for element in wushu. Coaches ask candidates to hold mabu (horse stance) at thigh-parallel depth for 30–60 seconds while observing knee tracking, hip alignment, and breathing. A P6 candidate who can hold a proper mabu for 30 seconds without visible knee wobble outscores a stronger jumper with a shallow stance. Stance is the foundation everything else is built on — coaches who recruit shallow-stance candidates know they're committing to 4 years of stance corrections.",
+          },
+        },
+        {
+          label: { en: "Basic technique precision (基本功 jibengong)" },
+          body: {
+            en: "Coaches run candidates through standard basic-technique sets — front kick (zhengtitui), side kick (cetitui), inside crescent kick (lihetui), straight punch (chongquan), palm strike (tuizhang), sweeps (saotui). The signal here is whether each technique terminates at the correct extension with the correct alignment, not how high or how fast. A P6 candidate with clean technique at 70% extension reads better than one with sloppy technique at 100% extension. Wushu coaches treat basics as the gateway dimension — strong basics signal trainability across the next four years.",
+          },
+        },
+        {
+          label: { en: "Form-set memorisation and precision" },
+          body: {
+            en: "Most schools ask candidates to perform one or two memorised forms — typically the SWF Grade-1/2/3 standardised forms or a competition form from a Singapore Wushu Federation-affiliated school. Coaches watch the sequencing (whether the candidate forgets a section), the transitions (whether stances are reached or floated), and the rhythm (the form has internal tempo, not just speed). Performing one form precisely is better than performing two forms with hesitation.",
+          },
+        },
+        {
+          label: { en: "Focus, gaze, and shen (神 — spirit / projection)" },
+          body: {
+            en: "The dimension that separates a future competition wushu athlete from a clean but mechanical performer. Coaches watch the eye direction during the form — whether the gaze follows the technique (eyes leading the hand in the chuanzhang) and whether there's intent behind the movement, not just memorisation. Wushu Taolu in Singapore school competition is judged partly on this performative quality (yi 意 — intent), and primary-school candidates who already project shen are recruited for competition-team potential.",
+          },
+        },
+        {
+          label: { en: "Recovery from a slip — mental composure" },
+          body: {
+            en: "Coaches deliberately watch what happens when a candidate forgets a section, loses balance on a stance, or stumbles on a sweep. The signal is whether the candidate stops in confusion, asks to restart, or continues with the next remembered section calmly. A P6 who can recover mid-form and finish with composure is signalling competition-readiness; one who stops and apologises is read as a coaching project. In SWF-graded competition there is no restart — the same applies in trial.",
+          },
+        },
+        {
+          label: { en: "Coachability and respect for the discipline" },
+          body: {
+            en: "How the candidate bows to the coach (gongshou greeting), accepts immediate corrections, and treats training equipment (the spear, sword, or staff is bowed to in many Singapore school traditions). International youth coaching research consistently rates these signals among the top predictors of long-term improvement — and Singapore school wushu coaches, who'll work with this child for four years through SWF grading and possibly competition team selection, weight them heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Changquan (long fist) specialist" },
+          body: {
+            en: "The most-recruited specialisation because Changquan is the primary northern-style form most schools teach. Coaches assess the wide low stances (mabu, gongbu transitions), the snap on jumping techniques (jumping front kick, butterfly kick if attempted), and the extension of arm-line techniques. A P6 candidate with a clean SWF Grade-2 or Grade-3 Changquan form is the bread-and-butter recruit for SAP school teams.",
+          },
+        },
+        {
+          position: { en: "Nanquan (southern fist) specialist" },
+          body: {
+            en: "Distinct style with deeper rooted stances and explosive short-range power. Coaches look for the characteristic Nanquan low broad stance (the rooted-bridge feel), the sharp bridge-hand techniques, and the percussive shouting (fasheng 發聲) that punctuates the form's accents. Nanquan candidates are valued at schools with a southern-style tradition — confirm the school's repertoire before committing to specialising here.",
+          },
+        },
+        {
+          position: { en: "Taijiquan (internal style) specialist" },
+          body: {
+            en: "Slower, internal-style forms emphasising structural alignment and breath coordination over external power. Coaches assess the continuity of movement (no visible breaks between postures), the spiral energy through the limbs (chansijin), and the sinking quality of the lower body. Singapore school wushu programmes that train Taijiquan are rarer — usually paired with Changquan as a second specialisation. Pure Taijiquan-only candidates may need to pair with another style for competition-team viability.",
+          },
+        },
+        {
+          position: { en: "Weapon-form specialist (sword 劍, sabre 刀, staff 棍, spear 槍)" },
+          body: {
+            en: "Most school wushu teams expect competition athletes to perform both a hand-form (taolu) and a weapon-form. Sword (jian) and sabre (dao) candidates are highly valued — these instruments demand wrist agility and fluid technique. Staff (gun) and spear (qiang) candidates are valued for the explosive whole-body power they signal. A P6 candidate with a clean sword form alongside a Changquan form is the most-recruited dual specialisation in SAP schools.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Singapore school wushu at P6 trial level usually does not require the candidate to commit to one style or weapon permanently — coaches assess current proficiency and trainability. If your child has primary-school exposure to multiple specialisations (e.g. Changquan + sword), audition with the strongest one but mention the second in the interview. Schools often build their competition rosters around a Changquan / weapon-form pairing — that combination is highly sought.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love wushu?" },
+          subtext: {
+            en: "Panels want a specific moment, not a generic appreciation of Chinese culture.",
+          },
+          approach: {
+            en: "Open with one concrete memory — a form, a coach moment, a competition — then connect it to character.",
+          },
+          template: {
+            en: "I lost my first SWF grading because I couldn't hold a proper mabu at the right depth. My coach made me hold mabu for 90 seconds at the start of every practice for four months. I passed the next grading. That was when I learned wushu is the only sport where the boring foundation is also the entire art.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the wushu programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's wushu — a coach's name, an SWF grading result, the SAP environment.",
+          },
+          template: {
+            en: "Hwa Chong's wushu programme trains four times a week with a former national team coach, and the SAP environment means I can keep Higher Chinese alongside competitive training. That combination is rare.",
+          },
+        },
+        {
+          question: { en: "What is your style and weapon, and why?" },
+          subtext: {
+            en: "Can the kid articulate the specialisation, not just label it?",
+          },
+          approach: {
+            en: "Name the style plus what playing it requires.",
+          },
+          template: {
+            en: "Changquan with sword. My coach said my arm extension is better than my power, so the sword's wrist agility matches my body. I want to learn Nanquan in secondary because I think the explosive power will balance my style.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I forgot the second half of my form during an SWF Championship in P5 and froze on stage. I started practising forms with deliberate \"forgetting\" — my coach would call out a random section and I had to continue from there. At the next competition I forgot a transition but continued without anyone noticing.",
+          },
+        },
+        {
+          question: { en: "Is there a coach or training partner you remember most?" },
+          subtext: {
+            en: "Whether the kid sees coaching as a relationship or a transaction.",
+          },
+          approach: {
+            en: "Name someone specific by role + what you learned from them.",
+          },
+          template: {
+            en: "My P5 senior in the school wushu team made me bow before every form, even in practice. I thought it was unnecessary. Now I realise the bow forces the breath to settle — it's not ceremony, it's the start of the form's rhythm. She taught me that the tradition is the technique.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent trainings?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I do English and Math homework before dinner because the body is too tired after practice. My mother shows my report book to my coach every term — if any subject drops a band, we cut one practice. That's the rule we set together.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your coach's emphasis on stance discipline matches how I want to train. If School A called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Wushu (Boys), IP" },
+          context: {
+            en: "SAP and Bicultural Studies school. Wushu among HCI's published DSA talent areas. Multi-year SWF Wushu Championship participation; former national team coaches on staff in past decades.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Wushu (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "SAP school. Wushu among Dunman's 2026 DSA FAQ talent areas, both boys' and girls' divisions. Sustained SWF Championship participation.",
+          },
+        },
+        {
+          name: "River Valley High School",
+          url: "https://www.rivervalleyhigh.moe.edu.sg/",
+          talentArea: { en: "Wushu (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "SAP school with Bicultural Studies. Wushu among RVHS's recognised DSA talent areas. Strong CCA presence across both divisions.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Wushu (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies school. Wushu among NYGH's recognised DSA talent areas. SWF-affiliated coaching.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/",
+          talentArea: { en: "Wushu (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school — Higher Chinese / Chinese Language as Mother Tongue requirement applies. Boys' wushu CCA with sustained SWF Championship presence.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          url: "https://www.nanhuahigh.moe.edu.sg/announcements/talent-areas-for-dsa/",
+          talentArea: { en: "Wushu, DSA-Sec" },
+          context: {
+            en: "SAP school. Wushu among Nan Hua's published DSA talent areas. Higher Chinese / Chinese Language as Mother Tongue requirement applies.",
+          },
+        },
+        {
+          name: "Maris Stella High School",
+          url: "https://www.marisstellahigh.moe.edu.sg/",
+          talentArea: { en: "Wushu (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school. Boys' wushu CCA. Higher Chinese / Chinese Language as Mother Tongue requirement applies.",
+          },
+        },
+        {
+          name: "Chung Cheng High School (Main)",
+          url: "https://www.chungchenghighmain.moe.edu.sg/direct-school-admission-dsa/",
+          talentArea: { en: "Wushu (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "SAP school. Wushu among Chung Cheng's published DSA talent areas; sustained CCA tradition.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Wushu (Boys), IP" },
+          context: {
+            en: "IP school. Wushu among ACS(I)'s recognised CCAs with sustained SWF participation, despite non-SAP status.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/Admission-to-RGS/via-DSA/",
+          talentArea: { en: "Wushu (Girls), IP" },
+          context: {
+            en: "IP school. Wushu among RGS's recognised DSA talent areas; published in the 2026 Information on Application brief.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Confirm SWF grading and competition records. MOE pulls CCA participation, school awards, SWF Wushu Championship results, NAPFA, and external SWF grading certifications into the DSA portal directly. Ask your wushu coach to verify what's been logged — a documented SWF Grade 3 or above is the single most-cited evidence in wushu DSA.",
+            },
+            {
+              en: "Video-record one full form performance. Watch with your child, scoring just two behaviours: (1) at the bottom of every mabu, does the knee track over the toe with the thigh parallel to the ground? (2) during transitions, do the eyes follow the technique (gaze leads hand), or stay locked forward? These two are the highest-signal items in wushu trials.",
+            },
+            {
+              en: "Practise the chosen form daily, plus 5 minutes of stance hold. The stance hold builds the foundation that coaches assess first. New forms in the final weeks rarely pay off; refine the existing form's lowest stance and sharpest technique instead.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: stance work, technique repetition at 80% speed, the chosen form twice per session (start and middle of practice). No new techniques. No new jumps. Final-week added jumping rarely pays off and frequently produces a knee or ankle tweak.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire (most trials require wushu uniform / changshan or school PE attire — wushu shoes (light flexible soles) recommended, NOT running shoes). Bring the weapon if performing a weapon-form. Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "Sleep, hydration, no late practice the day before. Stretch lightly the day before but do not condition heavily — the body should arrive at the trial fresh, not sore.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Arrive 60 minutes early. Warm up properly — joints, dynamic stretching, light stance hold. Wushu warm-up is more involved than other sports because the trial demands full ranges of motion immediately.",
+            },
+            {
+              en: "Eat 90 minutes before — not 30. Avoid heavy or oily food. Bring a bottle of room-temperature water.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name (gongshou greeting is appropriate in wushu context), leave. Over-involved parents are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. Shorten the drill cycle to two things only: mabu depth (hold for 30 seconds at thigh-parallel without knee wobble) and the chosen form's transitions (eyes leading the hand). Cancel anything that competes with sleep. Spend the freed time on interview prep above, because that's the only part where a few hours can still meaningfully change the outcome. Some families bring in a private wushu coach at this stage. A good private coach can speed up specific habit changes — particularly stance depth and form transitions — but no coach produces, in three sessions, the body foundation of a year of stance training. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -7902,6 +8233,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "choir",
   "chinese-orchestra",
   "tennis",
+  "wushu",
 ];
 
 /**
@@ -7940,6 +8272,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   choir: ["music", "drama"],
   "chinese-orchestra": ["music", "chinese"],
   tennis: ["badminton", "table-tennis"],
+  wushu: ["martial-arts", "chinese"],
 };
 
 /**
