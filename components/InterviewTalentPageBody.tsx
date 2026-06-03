@@ -7,7 +7,9 @@ import {
   CalendarClock,
   Compass,
   ExternalLink,
+  GraduationCap,
   MessageSquareText,
+  Music,
   School,
   Sparkles,
   Target,
@@ -30,6 +32,7 @@ import {
   type InterviewQuestion,
   type LocaleStrFlex,
   type PositionEntry,
+  type PreparedPieceEntry,
   type RichContent,
   type RichSchoolEntry,
   type TalentPage,
@@ -104,6 +107,104 @@ function TrialDimensionsSection({
             </li>
           ))}
         </ul>
+      </div>
+    </section>
+  );
+}
+
+function PreparedPieceSection({
+  rich,
+  locale,
+}: {
+  rich: RichContent;
+  locale: Locale;
+}) {
+  if (!rich.preparedPiece) return null;
+  const pp = rich.preparedPiece;
+
+  const heading: LocaleStr = {
+    en: "Audition piece you need to prepare",
+    zh: "你需要提前准备的 audition piece",
+    ms: "Persembahan yang anda perlu sediakan untuk audisi",
+    ta: "ஆடிஷனுக்கு நீங்கள் தயார் செய்ய வேண்டியவை",
+  };
+  const tagLabel: LocaleStr = {
+    en: "Prep required",
+    zh: "需要提前准备",
+    ms: "Perlu disediakan",
+    ta: "தயாரிப்பு தேவை",
+  };
+  const sourceLabel: LocaleStr = {
+    en: "Source",
+    zh: "来源",
+    ms: "Sumber",
+    ta: "ஆதாரம்",
+  };
+  const coachCtaButton: LocaleStr = {
+    en: "Find a coach",
+    zh: "找一位 coach",
+    ms: "Cari jurulatih",
+    ta: "பயிற்சியாளர் தேடுங்கள்",
+  };
+
+  return (
+    <section className="bg-surface-warm py-12 sm:py-16">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        {/* Header with attention-grabbing badge */}
+        <div className="mb-6 flex flex-wrap items-center gap-3">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-champagne px-3 py-1.5 text-[11px] font-bold tracking-[0.12em] text-intellectual normal-case">
+            <Sparkles className="h-3 w-3 shrink-0" aria-hidden />
+            {pick(tagLabel, locale)}
+          </span>
+          <SubsectionAnchor icon={Music} title={pick(heading, locale)} />
+        </div>
+
+        {/* Intro */}
+        <p className="mb-6 text-[0.9375rem] leading-relaxed text-intellectual-muted">
+          {pickFlex(pp.intro, locale)}
+        </p>
+
+        {/* Variant entries — emphasized card grid */}
+        <ul className="space-y-3">
+          {pp.entries.map((e: PreparedPieceEntry, i: number) => (
+            <li
+              key={i}
+              className="rounded-2xl border border-champagne/40 bg-white p-5 shadow-soft sm:p-6"
+            >
+              <p className="font-display text-[0.9375rem] font-semibold text-intellectual sm:text-base">
+                {pickFlex(e.variant, locale)}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-intellectual sm:text-[0.9375rem]">
+                {pickFlex(e.requirement, locale)}
+              </p>
+              <p className="mt-2.5 inline-flex flex-wrap items-baseline gap-1.5 text-[11.5px] leading-relaxed text-intellectual/55">
+                <span className="font-semibold tracking-[0.06em] text-champagne-dark">
+                  {pick(sourceLabel, locale)}:
+                </span>
+                <span>{pickFlex(e.source, locale)}</span>
+              </p>
+            </li>
+          ))}
+        </ul>
+
+        {/* Coach CTA — gold accent banner */}
+        <div className="mt-7 overflow-hidden rounded-2xl border border-champagne/40 bg-intellectual text-white shadow-card">
+          <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:gap-6 sm:p-6">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-champagne/20 text-champagne-light">
+              <GraduationCap className="h-5 w-5" aria-hidden />
+            </div>
+            <p className="min-w-0 flex-1 text-[0.875rem] leading-relaxed text-white/85 sm:text-[0.9375rem]">
+              {pickFlex(pp.coachCtaBlurb, locale)}
+            </p>
+            <Link
+              href="/dsa-coaches"
+              className="inline-flex shrink-0 items-center justify-center gap-1.5 self-start rounded-xl bg-champagne px-5 py-2.5 text-[13px] font-semibold text-intellectual shadow-gold transition hover:bg-champagne-light sm:self-center"
+            >
+              <span style={{ textTransform: "none" }}>{pick(coachCtaButton, locale)}</span>
+              <ArrowRight className="h-3.5 w-3.5 shrink-0" aria-hidden />
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -624,6 +725,7 @@ export function InterviewTalentPageBody({ talent }: { talent: TalentPage }) {
         {isRich && talent.rich ? (
           <>
             <TrialDimensionsSection rich={talent.rich} locale={locale} />
+            <PreparedPieceSection rich={talent.rich} locale={locale} />
             <PositionFocusSection rich={talent.rich} locale={locale} />
             <InterviewQuestionsSection rich={talent.rich} locale={locale} />
             <RichSchoolsSection rich={talent.rich} locale={locale} />

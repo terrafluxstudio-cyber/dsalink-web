@@ -73,10 +73,39 @@ export type ChecklistGroup = {
   items: LocaleStrFlex[];
 };
 
+/**
+ * Audition piece requirement entry — one per variant (instrument, dance style, etc.).
+ * Used to render the "Prepared piece" visual section. Talents that don't require
+ * a prepared piece (sports, math, leadership narrative) leave `preparedPiece` undefined.
+ */
+export type PreparedPieceEntry = {
+  /** Variant label — e.g. "Chinese Orchestra", "Contemporary Dance", "Concert Band". */
+  variant: LocaleStrFlex;
+  /** Concrete requirement — duration, count, format. */
+  requirement: LocaleStrFlex;
+  /** Which school(s) or source this applies to. */
+  source: LocaleStrFlex;
+};
+
+export type PreparedPieceSection = {
+  /** One-line intro shown above the variant table. */
+  intro: LocaleStrFlex;
+  /** Per-variant rows. */
+  entries: PreparedPieceEntry[];
+  /** Bottom CTA line — sits above the "Find a coach" button. */
+  coachCtaBlurb: LocaleStrFlex;
+};
+
 export type RichContent = {
   trialDimensions: DimensionEntry[];
   /** Optional lead-in paragraph for trial dimensions section. */
   trialDimensionsIntro?: LocaleStrFlex;
+  /**
+   * Optional prepared-piece section. Omitted for talents whose audition is
+   * trial-only (most sports) or has no concept of a pre-rehearsed piece
+   * (math olympiad, leadership group activity).
+   */
+  preparedPiece?: PreparedPieceSection;
   positionFocus: PositionEntry[];
   /** Optional note after position list (e.g. for SG/C transferability). */
   positionFocusNote?: LocaleStrFlex;
@@ -2107,8 +2136,48 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       ta: "இசை DSA-Sec வழிகாட்டி — MEP தேவைகள், ஆடிஷன், கேள்விகள், ABRSM கிரேடு 8.",
     },
     rich: {
+      preparedPiece: {
+        intro: {
+          en: "Music audition requirements vary sharply by ensemble — every instrument family has its own format. The audition slot itself can run up to 45 minutes for Concert Band candidates. Check each target school's 2026 brief before locking in repertoire.",
+        },
+        entries: [
+          {
+            variant: { en: "Chinese Orchestra (erhu, pipa, guzheng, etc.)" },
+            requirement: { en: "Two contrasting pieces on your instrument · total time capped at 5 minutes · plus sight-read from the conductor" },
+            source: { en: "BPGHS DSA 2026 brief; Victoria School DSA 2026 (with 16 bars fast + 16 bars slow tempo requirement)" },
+          },
+          {
+            variant: { en: "Concert Band (wind, brass, percussion)" },
+            requirement: { en: "Two contrasting pieces of your choice · plus all 12 major scales (Victoria) or 4 named keys Bb/Eb/Ab/Db Concert (BPGHS) · plus sight-read · audition slot up to 45 min" },
+            source: { en: "Victoria School + BPGHS DSA 2026 briefs" },
+          },
+          {
+            variant: { en: "String Ensemble (violin, viola, cello)" },
+            requirement: { en: "Two contrasting solo pieces · no accompaniment · plus interview" },
+            source: { en: "Victoria School DSA 2026 brief" },
+          },
+          {
+            variant: { en: "Guitar Ensemble" },
+            requirement: { en: "One solo piece on classical guitar · not more than 5 minutes · plus sight-read · plus interview" },
+            source: { en: "Victoria School DSA 2026 brief" },
+          },
+          {
+            variant: { en: "Choir" },
+            requirement: { en: "No prepared song required — vocal-testing exercise conducted by the choir master, plus interview" },
+            source: { en: "Victoria School DSA 2026 brief — explicit \"no song preparation needed\"" },
+          },
+          {
+            variant: { en: "MEP track (ACS(I), DHS, MGS, NYGH, RGS) · solo instrument" },
+            requirement: { en: "Two contrasting pieces from different periods or styles · plus sight-reading (~Grade 5 difficulty) · plus aural test · plus interview" },
+            source: { en: "MEP standardised audition framework across the 5 MOE-designated schools" },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A private music coach can stabilise audition-day nerves, polish the opening 30 seconds of each prepared piece, and run sight-reading drills at the correct difficulty. Browse our coach directory for instrument specialists.",
+        },
+      },
       trialDimensionsIntro: {
-        en: "Music DSA splits into two distinct tracks. The MEP (Music Elective Programme) route runs at five MOE-designated schools — ACS(I), Dunman High, Methodist Girls', Nanyang Girls', and Raffles Girls' — and uses a standardised audition built around two contrasting pieces, sight-reading, aural, and an interview. The non-MEP route runs at many more schools (RI, HCI, Catholic High, Nan Hua, SCGS and others) as a CCA-based DSA talent area — often with the school's symphonic band, Chinese orchestra, or choir. Prepared-piece requirements vary sharply by ensemble: **Chinese Orchestra** — two contrasting pieces on the candidate's instrument, total time capped at five minutes, plus sight-read from the conductor (BPGHS / Victoria 2026 briefs); **Concert Band** — two contrasting pieces plus all 12 major scales (Victoria) or four named keys plus sight-read (BPGHS), with the audition slot reaching 45 minutes; **String Ensemble** — two contrasting solo pieces, no accompaniment (Victoria); **Guitar Ensemble** — one solo on classical guitar, under five minutes, plus sight-read (Victoria); **Choir** — no prepared song required, vocal-testing exercise conducted by the choir master plus interview (Victoria 2026 explicitly). ABRSM Grade 8 practical is widely treated as the MEP benchmark by families, but MOE does not publish a formal grade requirement; non-MEP schools regularly accept Grade 5 to 6. What separates an offer from a polite rejection is rarely the certificate — it's how the candidate plays in the room, sight-reads cleanly, and articulates why music in five sentences of interview.",
+        en: "Music DSA splits into two distinct tracks. The MEP (Music Elective Programme) route runs at five MOE-designated schools — ACS(I), Dunman High, Methodist Girls', Nanyang Girls', and Raffles Girls' — and uses a standardised audition built around two contrasting pieces, sight-reading, aural, and an interview. The non-MEP route runs at many more schools (RI, HCI, Catholic High, Nan Hua, SCGS and others) as a CCA-based DSA talent area — often with the school's symphonic band, Chinese orchestra, or choir. ABRSM Grade 8 practical is widely treated as the MEP benchmark by families, but MOE does not publish a formal grade requirement; non-MEP schools regularly accept Grade 5 to 6. What separates an offer from a polite rejection is rarely the certificate — it's how the candidate plays in the room, sight-reads cleanly, and articulates why music in five sentences of interview.",
       },
       trialDimensions: [
         {
@@ -2772,6 +2841,36 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       ta: "சிங்கப்பூரில் ரோபோடிக்ஸ் DSA-Sec நேர்காணல் மற்றும் சோதனை எவ்வாறு செயல்படுகிறது — மதிப்பீட்டாளர்கள் என்ன தேடுகிறார்கள், மாதிரி கேள்விகள், STEM பள்ளிகள்.",
     },
     rich: {
+      preparedPiece: {
+        intro: {
+          en: "Robotics auditions split into a hands-on build/debug component (school's call) and a portfolio walk-through (the candidate's prepared piece). Bring a tangible past project plus a tight verbal explanation. Specialised schools (NUS High, SST) also include a written component on programming logic.",
+        },
+        entries: [
+          {
+            variant: { en: "Project portfolio (all schools)" },
+            requirement: { en: "Documentation of 1–3 past robotics or coding projects: dated photos of each iteration, screenshots of code with comments, one-page write-up per project (problem · approach · what failed · how you fixed it)" },
+            source: { en: "Composite from NUS High / SST / IP school audition guidance + Singapore parent forum reports" },
+          },
+          {
+            variant: { en: "Project walk-through (verbal)" },
+            requirement: { en: "5-minute spoken walk-through of the most complex project · 3 slides: problem · approach · failure-and-fix · rehearsed to land in 90 seconds, smooth, with specific technical detail" },
+            source: { en: "Audition pattern across STEM-DSA schools" },
+          },
+          {
+            variant: { en: "NUS High School / SST (specialised)" },
+            requirement: { en: "Portfolio · plus timed build-and-code challenge (VEX IQ, LEGO Mindstorms, or school-specific kit) · plus written component on programming logic · plus hands-on debugging task" },
+            source: { en: "NUS High + SST audition format (most rigorous in Singapore)" },
+          },
+          {
+            variant: { en: "IP schools (RI, HCI, ACS(I), DHS, etc.)" },
+            requirement: { en: "Portfolio interview weights most heavily · plus a shorter build or debug task · less written-component emphasis than specialised schools" },
+            source: { en: "Non-specialised STEM-DSA audition pattern" },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A STEM coach can sharpen the project narrative, run mock debugging sessions, and rehearse the 90-second walk-through under pressure. Browse our coach directory for robotics and coding specialists.",
+        },
+      },
       trialDimensionsIntro: {
         en: "Singapore robotics trials usually run 2 to 3 hours and combine three formats: a timed build-and-code challenge (often with VEX IQ, LEGO Mindstorms, or a school-specific kit), a portfolio interview where the candidate walks the panel through a past project, and a short engineering reasoning conversation. Specialised schools (NUS High, SST) run the most rigorous version — expect a written component on programming logic plus a hands-on debugging task. Most non-specialised schools weight the portfolio interview most heavily because they don't have the lab time for a full build trial. The six dimensions below show up across all formats.",
       },
@@ -3429,6 +3528,36 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       ta: "சிங்கப்பூர் P6 நடன DSA-Sec வழிகாட்டி — பல்வேறு வகைகளில் குழு என்ன மதிப்பிடுகிறது, கேள்விகள், பள்ளிகள்.",
     },
     rich: {
+      preparedPiece: {
+        intro: {
+          en: "The solo is the only fully-controlled segment of the audition. Every other component — pick-up sequence, improvisation, paired work — is the panel's call. Confirm the duration cap for each target school before locking in your child's choreography.",
+        },
+        entries: [
+          {
+            variant: { en: "Chinese Dance · most schools" },
+            requirement: { en: "1–2 minute self-choreographed solo of your choice" },
+            source: { en: "Tang Dance Academy DSA guide (Chinese Dance working range across SAP schools)" },
+          },
+          {
+            variant: { en: "Contemporary Dance · Victoria School 2026" },
+            requirement: { en: "Solo of your choice — not more than 1 minute (Round 1 of 3)" },
+            source: { en: "Victoria School DSA 2026 application brief" },
+          },
+          {
+            variant: { en: "All genres · SOTA Dance" },
+            requirement: { en: "Two contrasting prepared pieces across multiple rounds (classical technique + improvisation tested separately)" },
+            source: { en: "SOTA Talent Academy DSA-Sec audition notes" },
+          },
+          {
+            variant: { en: "Indian / Malay / Ballet · other secondary schools" },
+            requirement: { en: "Typically 1–2 minute solo; some schools also accept a short excerpt from a graded exam (RAD / ISTD)" },
+            source: { en: "Pattern across MGS, RGS, SCGS published briefs and parent reports" },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A private dance coach can sharpen the solo's opening 10 seconds, calibrate timing to each school's cap, and rehearse the pick-up muscle. Browse our coach directory for dance specialists by region and style.",
+        },
+      },
       trialDimensionsIntro: {
         en: "Most school dance auditions in Singapore run 90–120 minutes and follow a similar structure: warm-up and floor work led by the school's dance teacher, a short follow-the-leader sequence to test pick-up speed, an applicant's prepared solo (typically 1–2 minutes — Victoria School caps it at one minute, Tang Dance Academy reports 1–2 minutes as the working range for Chinese Dance, SOTA expects two contrasting pieces across multiple rounds), and a short interview. The solo is your only fully-controlled segment — every other component is the school's call. SOTA and the SSP (Singapore Schools' Special Programme — for dance) audition is more rigorous: multi-round, with classical technique and improvisation tested separately. No school publishes a full rubric, but observations from past Singapore Youth Festival (SYF) Arts Presentation judges and parent reports converge on the six dimensions below.",
       },
@@ -3753,6 +3882,36 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       ta: "சிங்கப்பூர் P6 நாடக DSA-Sec வழிகாட்டி — மோனோலாக், ensemble, இம்ப்ரோவ் மதிப்பீடு, கேள்விகள், பள்ளிகள்.",
     },
     rich: {
+      preparedPiece: {
+        intro: {
+          en: "Drama is the talent area where audition format varies the most by school. Two patterns dominate: the self-prepared monologue route (most schools) and the school-provided scene route (Victoria School's published 2026 brief). Assuming \"prepared monologue\" applies everywhere is the most common P6 misread.",
+        },
+        entries: [
+          {
+            variant: { en: "SOTA Theatre (IB pathway)" },
+            requirement: { en: "Two contrasting prepared monologues · ensemble work · improvisation · sight-reading — across multiple audition rounds" },
+            source: { en: "SOTA Talent Academy DSA-Sec audition notes" },
+          },
+          {
+            variant: { en: "ACS(I), MGS, RGS, SCGS · most IP / SAP schools" },
+            requirement: { en: "One or two contrasting monologues (60–90 seconds each, age-appropriate) · plus short ensemble or paired improvisation · plus interview" },
+            source: { en: "Pattern across published briefs + SYF Arts Presentation Drama observations" },
+          },
+          {
+            variant: { en: "Victoria School (Drama Elective Programme · 2026)" },
+            requirement: { en: "500-word personal statement submitted in advance · NO self-chosen monologue · school provides a 6–7 minute scene to perform live · plus questions + interview" },
+            source: { en: "Victoria Junior College / Victoria School DSA 2026 brief — published" },
+          },
+          {
+            variant: { en: "Nanyang Girls' High + SAP schools with Chinese Drama" },
+            requirement: { en: "Standard monologue format may be done in Mandarin instead of English · check each school's brief for language option" },
+            source: { en: "SAP school Chinese-language drama tradition" },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A drama coach can help select age-appropriate monologues, train two contrasting tones, and rehearse \"yes-and\" improv habits — or coach Victoria-style cold-read on a school-provided scene. Browse our coach directory for drama specialists.",
+        },
+      },
       trialDimensionsIntro: {
         en: "Drama auditions in Singapore secondary schools typically run 60–90 minutes for the audition itself, plus a short interview. Format varies more by school than any other talent area. Two patterns: (1) the **self-prepared route** (SOTA, ACS(I), MGS, RGS, most schools) — applicant brings one or two contrasting monologues, 60–90 seconds each, plus short ensemble or paired improvisation and a sight-read on the day; (2) the **school-provided route** (Victoria School publishes this for 2026 — 500-word personal statement submitted in advance, then a 6–7 minute scene the school provides for the shortlisted applicant to perform live, plus interview). Check each target school's brief carefully — assuming \"prepared monologue\" applies everywhere is the most common P6 misread. SYF Arts Presentation Drama judges and parent reports across cycles converge on the six dimensions below.",
       },
@@ -4077,6 +4236,36 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       ta: "சிங்கப்பூர் P6 காட்சிக் கலை DSA-Sec வழிகாட்டி — பணித்தொகுப்பு, வரைதல் பணி, கேள்விகள், பள்ளிகள்.",
     },
     rich: {
+      preparedPiece: {
+        intro: {
+          en: "The portfolio is the only fully-controlled segment of the audition — the on-spot task and interview prompts are the school's call. Curate the strongest 10–12 pieces (more is not better), include the actual messy sketchbook (not a curated print-out), and confirm each school's submission format.",
+        },
+        entries: [
+          {
+            variant: { en: "SOTA Visual Arts (IB pathway)" },
+            requirement: { en: "Portfolio of 8–15 works submitted in advance · plus on-spot practical task · plus written reflection · plus interview — across multiple rounds" },
+            source: { en: "SOTA Talent Academy DSA-Sec audition notes" },
+          },
+          {
+            variant: { en: "ACS(I), NYGH, CHIJ St Nicholas, MGS, Nan Hua" },
+            requirement: { en: "Portfolio of 8–15 works (some schools require advance digital submission + works brought on day) · plus on-spot drawing or observation task (45–90 min) · plus short interview about the portfolio — single half-day format" },
+            source: { en: "Pattern across IP / SAP school published guidelines and parent reports" },
+          },
+          {
+            variant: { en: "Portfolio composition (all schools)" },
+            requirement: { en: "10–12 strongest pieces · 2–3 sketchbook spreads · 4–6 finished works across at least three media (pencil + watercolour/gouache + ink/charcoal/digital) · 2–3 process pieces showing iteration" },
+            source: { en: "Composite from SOTA + IP / SAP school audition guidance" },
+          },
+          {
+            variant: { en: "SAP schools (Nan Hua, Dunman High, Catholic High)" },
+            requirement: { en: "Chinese ink painting (中国水墨) or calligraphy work optional as part of portfolio" },
+            source: { en: "SAP school Chinese-culture art tradition" },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A private art tutor can sharpen sketchbook habits, tighten the portfolio narrative (one-sentence intent per piece), and rehearse on-spot composition planning. Browse our coach directory for art specialists.",
+        },
+      },
       trialDimensionsIntro: {
         en: "Visual Arts DSA-Sec auditions in Singapore typically combine three components: a portfolio review (8–15 works — most schools accept either advance digital submission or works brought on the day; check each target school's brief, as some require both), an on-spot drawing or observation task (45–90 minutes), and a short interview about the portfolio. SOTA's Visual Arts audition is the most structured — multi-round, with a written reflection plus practical work in addition to the portfolio review. Other schools (ACS(I), NYGH, MGS, CHIJ St Nicholas, Nan Hua) typically run the three components in a single half-day. The portfolio is the only fully-controlled segment — the on-spot task and interview prompts are the school's call, so curate the 10–12 strongest pieces (more is not better) and bring the actual sketchbook with messy process pages, not a curated print-out. No school publishes a full rubric, but published guidelines from SOTA and parent reports across cycles converge on the six dimensions below.",
       },
