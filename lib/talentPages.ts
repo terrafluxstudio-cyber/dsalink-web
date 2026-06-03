@@ -28,7 +28,8 @@ export type TalentSlug =
   | "volleyball"
   | "table-tennis"
   | "netball"
-  | "floorball";
+  | "floorball"
+  | "choir";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -6828,6 +6829,366 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  choir: {
+    slug: "choir",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Choir", zh: "合唱团", ms: "Koir", ta: "பாடகர் குழு" },
+    hook: {
+      en: "Choir DSA — auditions reward vocal placement and aural agility, with school-specific song requirements that vary widely.",
+      zh: "合唱团 DSA——招生看声音位置与听力反应，曲目要求各校差异极大",
+      ms: "DSA Koir — uji bakat menghargai penempatan vokal dan ketangkasan aural, dengan keperluan lagu khusus sekolah.",
+      ta: "பாடகர் குழு DSA — குரல் இடவமைப்பு மற்றும் கேட்கும் திறனை மதிக்கிறது, பள்ளி வாரியான பாடல் தேவைகள் வேறுபடுகின்றன.",
+    },
+    intro: {
+      en: "Choir is one of the most broadly offered DSA talents in Singapore — about 60 secondary schools accept it. Audition requirements split sharply into two camps: most schools ask for one or two prepared songs (often a school song plus a candidate's choice), while a small number (Victoria School is explicit on this) run vocal-test-only auditions with no prepared piece at all. In every case, the audition weighs vocal placement, aural agility (sight-singing, melody echo, rhythm clap-back), and whether the candidate can take and apply a correction in real time. This page covers what coaches actually listen for, position-style voice profiles, and how to confirm each target school's specific format.",
+      zh: "合唱团是新加坡最广泛接受的 DSA 才艺之一——约 60 所中学招收。但招生要求分两派：大多数学校要求 1-2 首准备曲（常见组合是校歌 + 自选曲），少数（Victoria 明确）只做声乐测试不要求准备曲。无论哪种，audition 看声音位置、听力反应（视唱 / 旋律 echo / 节奏 clap-back）、以及能否当场接受并应用纠正。本页讲教练真正在听什么、声部分析、如何确认每所学校的具体格式。",
+      ms: "Koir antara DSA paling luas — kira-kira 60 sekolah menerima. Keperluan uji bakat terbahagi: kebanyakan minta 1-2 lagu disediakan, sebilangan kecil (seperti Victoria) hanya ujian vokal tanpa lagu. Setiap kes menilai penempatan vokal, kelincahan aural, dan keupayaan memohon pembetulan secara langsung.",
+      ta: "சிங்கப்பூரில் கிடைக்கும் DSA திறமைகளில் பாடகர் குழு பரந்த ஒன்று — சுமார் 60 பள்ளிகள் ஏற்கின்றன. தேவைகள் இரு வகையாகப் பிரிக்கப்படுகின்றன: பெரும்பாலான பள்ளிகள் 1-2 பாடல்கள் கேட்கும்; சில (Victoria) பாடல் இல்லாமல் வாய்மொழி சோதனை மட்டுமே. எல்லாவற்றிலும் குரல் இடவமைப்பு, கேட்கும் திறன், திருத்தத்தை நேரடியாகப் பயன்படுத்தும் திறன் மதிப்பிடப்படுகிறது.",
+    },
+    summary: {
+      en: "Audition requirements (prepared-song vs vocal-test-only), voice-part profiles, interview questions, SYF-active schools with strong choirs.",
+      zh: "招生格式（备曲 vs 声乐测试）、声部分析、面试题、SYF 活跃合唱学校。",
+      ms: "Keperluan uji bakat, profil suara, soalan temu duga, sekolah SYF aktif.",
+      ta: "தேர்வுத் தேவைகள், குரல் வகைகள், கேள்விகள், SYF பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Nanyang Girls' High School",
+      "Raffles Girls' School (Secondary)",
+      "Methodist Girls' School (Secondary)",
+      "Hwa Chong Institution",
+      "Victoria School",
+      "Anglican High School",
+    ],
+    metaDescription: {
+      en: "Choir DSA-Sec audition guide for Singapore P6 — prepared-song vs vocal-test-only formats, what coaches assess, sample interview questions, SYF-active participating schools.",
+      zh: "新加坡 P6 合唱团 DSA-Sec audition 指南——备曲 vs 声乐测试格式、评分维度、面试题、SYF 活跃学校。",
+      ms: "Panduan uji bakat DSA-Sec Koir Singapura — format, kriteria, soalan, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 பாடகர் குழு DSA-Sec வழிகாட்டி — வடிவம், அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      preparedPiece: {
+        intro: {
+          en: "Choir auditions in Singapore split into two distinct formats. Most schools require one or two prepared songs (commonly a school song + a candidate's choice that showcases range and musicality). A small number — Victoria School being the publicly-stated example — run no-song vocal tests where the choir master assesses voice through guided exercises only. Always confirm the format with each target school's 2026 DSA brief before locking repertoire.",
+        },
+        entries: [
+          {
+            variant: { en: "Two-song format (most schools)" },
+            requirement: { en: "School song (or a hymn for mission schools) + one candidate's choice that shows range and dynamic control · 2-3 min total · plus aural test (range / pitch / rhythm) and sight-sing" },
+            source: { en: "Common pattern across DSA Academy and Sing the Right Way coaching briefs; aligns with NYGH and RGS audition expectations parents have reported." },
+          },
+          {
+            variant: { en: "One-song format" },
+            requirement: { en: "One candidate's choice song · ideally one that demonstrates head voice and chest voice transition · 90 sec slot · plus aural test and sight-sing" },
+            source: { en: "DSA Academy choir prep brief; aligns with several CHIJ and Methodist school audition expectations." },
+          },
+          {
+            variant: { en: "Vocal-test-only (no song)" },
+            requirement: { en: "No prepared song required — choir master conducts vocal-testing exercises (vocalises, range probes, melody echo, rhythm clap-back) plus interview" },
+            source: { en: "Victoria School DSA 2026 brief — explicit \"no song preparation needed\"" },
+          },
+          {
+            variant: { en: "ACJC IP choir (rare reference for upper-Pri)" },
+            requirement: { en: "ACJC's choir DSA at JC level requires a prepared song from a published list — Sec-level audition formats generally do NOT use a fixed song list" },
+            source: { en: "ACJC Choir DSA 2025 eligibility brief — referenced for terminology, not requirement." },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A private vocal coach can stabilise audition-day nerves, polish the opening 8 bars of each prepared song, run sight-singing drills at audition difficulty, and coach the recovery from a cracked note (the highest-impact composure work). Browse our coach directory for vocal specialists.",
+        },
+      },
+      trialDimensionsIntro: {
+        en: "Singapore choir auditions typically run 10–20 minutes per candidate and are led by the school's choir director. The standard structure: warm-up vocalise led by the director, prepared songs (if the school requires them), aural tests (clap back a rhythm, sing back a melodic line, sight-sing a short passage), and a short interview. Some schools — Victoria School being publicly explicit — run vocal-test-only formats with no prepared song. In every format, the director listens for placement, agility, and trainability far more than for raw volume. Six dimensions emerge from public DSA briefs and aural-musicianship frameworks used in Singapore school choir coaching.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Vocal placement and tone quality" },
+          body: {
+            en: "Directors listen for whether the voice sits forward (mask resonance, clear vowels) or sinks back into the throat. A P6 candidate who can place the voice forward on \"ee\" and \"oo\" vowels signals trainability — that's the foundation directors will build choral blend on. Pushing the voice for volume is a red flag because it predicts a singer who will damage themselves by Sec 2.",
+          },
+        },
+        {
+          label: { en: "Pitch accuracy and intonation" },
+          body: {
+            en: "On the prepared song and during aural drills, directors check whether the candidate stays in tune across phrases, especially on tricky intervals (perfect fourths, augmented seconds, modulations). Singing slightly sharp under nerves is far more forgivable than singing slightly flat — flat singing in a choir destroys blend across the whole section. Directors hear this in the first 8 bars.",
+          },
+        },
+        {
+          label: { en: "Aural agility — clap-back, melody echo, sight-sing" },
+          body: {
+            en: "The most under-trained component of P6 choir preparation. Directors play a 4-beat rhythm and ask the candidate to clap it back; play a 4-bar melodic line and ask them to sing it back; show a short notated passage and ask them to sing it on solfège or neutral syllables. Strong aural ability predicts ensemble musicianship, and weak aural ability is the most common reason a technically clean solo voice is passed over.",
+          },
+        },
+        {
+          label: { en: "Range and register transition" },
+          body: {
+            en: "Directors probe the range with vocalises that climb above the candidate's comfort zone and descend below it, listening for whether the chest-voice-to-head-voice transition is managed smoothly or breaks audibly. A P6 with a flexible 1.5-octave range and a smooth transition is far more recruitable than one with a wider range that breaks loudly at the passaggio.",
+          },
+        },
+        {
+          label: { en: "Coachability — applying a correction in real time" },
+          body: {
+            en: "The single highest-signal moment in many auditions. The director gives one correction — \"try that phrase a touch softer at the end\" or \"shape this vowel more open\" — and listens whether the candidate applies it on the next attempt. Directors hire singers they can teach, not just singers who arrive polished. Visible openness to correction is scored heavily.",
+          },
+        },
+        {
+          label: { en: "Stage presence and composure" },
+          body: {
+            en: "How the candidate walks in, breathes before the first phrase, recovers from a cracked note, and bows at the end. Choirs perform — composure under audience attention matters. Directors remember the candidate who restarted a phrase calmly more vividly than one who delivered a flawless first half and crumbled. Film a mock audition and watch the entrance and first 15 seconds twice.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Soprano (high voice — girls' or upper-treble boys')" },
+          body: {
+            en: "Directors assess the head voice's clarity and the candidate's confidence at the top of the range without strain. Soprano is the most-recruited section in every school choir but also the most competitive — repertoire choice matters more here than in any other voice. Choose a song that sits comfortably in your child's range with a brief climactic top note, not one that pushes them out the top throughout.",
+          },
+        },
+        {
+          position: { en: "Alto (low female voice / changed-voice boys' mezzo)" },
+          body: {
+            en: "Often under-recruited because P6 candidates self-identify as soprano regardless of vocal anatomy. Directors actively look for genuine altos — voices with chest-voice depth, comfort in the lower octave, and the willingness to hold the inner-harmony line. A clear-toned alto signals long-term value because every choir needs three or four reliable inner voices.",
+          },
+        },
+        {
+          position: { en: "Tenor / Bass (changing or changed-voice boys)" },
+          body: {
+            en: "Boys' voices may not have changed yet at P6 — directors are listening for current voice quality and projecting the post-change voice. A boy with a clear unchanged treble who sings musically will be assessed on transferable musicianship (aural, pitch, sight-sing), with the understanding that voice part will be assigned in Sec 1 or 2 after the change. Honesty about voice change progress is welcomed; pretending the voice has already changed is counterproductive.",
+          },
+        },
+        {
+          position: { en: "Section flexibility and reading singer" },
+          body: {
+            en: "Directors highly value the candidate who can credibly read music and might be moved between sections (S2/A1 swing, A2/T1 swing for boys) as the choir's needs change. If your child has experience reading choral parts beyond their primary voice — even at a basic level — mention it. Section flexibility is rare at P6 and is treated as a multiplier on top of vocal quality.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Singapore school choir at P6 audition level usually does not lock a singer to one voice part — directors assign sections after voice classification interviews in Sec 1. What matters at audition is the current voice quality plus aural / musicianship signals. If your child sings two parts comfortably (e.g. soprano in primary school choir but is now comfortable in alto for solo songs), mention both; section need often drives final placement.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love choir?" },
+          subtext: {
+            en: "Panels want a specific moment, not a feeling. \"I like singing\" reads as untrained motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory — a piece, a performance, a teacher moment — then connect it to character.",
+          },
+          template: {
+            en: "We sang Lauridsen's O Magnum Mysterium at SYF and the alto entrance in the middle was the first time I felt how a chord could change a room. After that I started listening to recordings of choral pieces on the bus — that's when I realised choir is the thing I love most.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the choir programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's choir — a recent SYF performance, a director's repertoire approach, a training pattern.",
+          },
+          template: {
+            en: "NYGH choir's SYF gold-with-honours record and the breadth of the repertoire — from a cappella sacred to contemporary Mandarin — is exactly the kind of musical exposure I want.",
+          },
+        },
+        {
+          question: { en: "What is your voice part and why?" },
+          subtext: {
+            en: "Can the candidate articulate the voice, not just label it?",
+          },
+          approach: {
+            en: "Name the part plus what it asks of you.",
+          },
+          template: {
+            en: "I sing soprano in my primary school choir, but I'm most comfortable in the middle of the soprano range — the high C is still a bit of a stretch. I think I'll settle as a soprano two or alto one when my voice matures, and I'm happy to be moved.",
+          },
+        },
+        {
+          question: { en: "Who is your favourite composer or piece, and why?" },
+          subtext: {
+            en: "Tests musical vocabulary, not just emotion.",
+          },
+          approach: {
+            en: "Name the piece plus one specific musical element (harmonic, textural, rhythmic) that you can describe.",
+          },
+          template: {
+            en: "Eric Whitacre's Sleep — because of the cluster chord at the end. It's seven voices that should clash but instead dissolve. I asked my choir teacher how that works harmonically and that started me reading about extended tertian harmony.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I got a vocal nodule in P5 from over-singing during a school production and was told to rest for six weeks. I worked on breath control and ear training during the rest period — by SYF I was singing better than before because I'd stopped pushing.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent rehearsals?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I do English and Math homework before dinner and Science after. Saturdays I sing for two hours and rest the voice the rest of the day. My mother shows my report book to the choir director every term — that's the rule we set together.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your choir's emphasis on sacred a cappella matches what I love most. If School A called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Choir (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies school. Choir among NYGH's published DSA talent areas. Multi-decade SYF distinction record; demanding repertoire spanning English and Mandarin.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/Admission-to-RGS/via-DSA/",
+          talentArea: { en: "Choir (Girls), IP" },
+          context: {
+            en: "IP school. Choir among RGS's recognised DSA talent areas; published in the 2026 Information on Application brief.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.moe.edu.sg/secondary/admissions/dsa-sec1/",
+          talentArea: { en: "Choir (Girls), DSA-Sec" },
+          context: {
+            en: "Methodist heritage girls' school with strong choir tradition. Repertoire balances sacred hymns and secular pieces.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Choir (Boys), IP" },
+          context: {
+            en: "IP school with established boys' choir. Among HCI's published DSA talent areas.",
+          },
+        },
+        {
+          name: "Victoria School",
+          url: "https://www.victoriaschool.moe.edu.sg/",
+          talentArea: { en: "Choir (Boys), IP / DSA-Sec" },
+          context: {
+            en: "Boys' school. Victoria's 2026 DSA brief is explicit that choir audition requires NO prepared song — choir master conducts vocal-testing exercises plus interview.",
+          },
+        },
+        {
+          name: "Anglican High School",
+          url: "https://www.anglicanhigh.moe.edu.sg/",
+          talentArea: { en: "Choir (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "Anglican heritage school. Choir among recognised DSA talent areas; sustained SYF participation.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/",
+          talentArea: { en: "Choir (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school — Higher Chinese / Chinese Language as Mother Tongue requirement. Boys' choir with strong Mandarin repertoire alongside sacred Latin-text pieces.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Choir (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "SAP school. Choir among Dunman's 2026 DSA FAQ talent areas, both boys' and girls' divisions.",
+          },
+        },
+        {
+          name: "Temasek Secondary School",
+          url: "https://www.temaseksec.moe.edu.sg/prospective-students/direct-school-admission/choir-dsa/",
+          talentArea: { en: "Choir (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "Temasek has a dedicated Choir DSA page describing audition format, repertoire suggestions, and aural test components.",
+          },
+        },
+        {
+          name: "CHIJ Secondary (Toa Payoh)",
+          url: "https://chijsectoapayoh.moe.edu.sg/",
+          talentArea: { en: "Choir (Girls), DSA-Sec" },
+          context: {
+            en: "CHIJ girls' school. Choir among published CCA and DSA talent areas with sustained SYF participation.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the audition is still weeks out" },
+          items: [
+            {
+              en: "Confirm each target school's audition format. The split between prepared-song and vocal-test-only is the single most important logistical fact, and it varies — call the school's DSA office or download the school's 2026 DSA brief to verify. Don't assume; ask.",
+            },
+            {
+              en: "Record your child singing the chosen song once a week and listen for two specific behaviours: (1) does the voice sit forward on \"ee\" and \"oo\" vowels, or pull back into the throat? (2) does the head-voice transition happen smoothly, or does the voice break audibly at the passaggio? These are the highest-signal items in choir auditions.",
+            },
+            {
+              en: "Practise sight-singing daily for ten minutes at audition difficulty. Use solfège or numbers. The most common P6 failure mode is freezing on a sight-sing passage — daily exposure cures it faster than any technique work.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: light vocalises, prepared song once per day at the start of the practice session (when the voice is fresh, not at the end), aural drills, no new repertoire. Final-week new songs almost never end well.",
+            },
+            {
+              en: "Sleep, hydration, no dairy or chocolate in the 12 hours before audition. Voice rest the day before. These are not superstitions — they are the standard pre-audition checklist of every reputable vocal teacher.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire (most auditions expect school uniform or smart casual; no perfumes or strong scents that affect the director or the room). Email the teacher-in-charge if anything is ambiguous.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of audition" },
+          items: [
+            {
+              en: "Warm up the voice 60–90 minutes before, not 5. Lip trills, sirens, scales on \"ng,\" then a few lines of the prepared song at half voice. Do not over-sing in the warm-up — the voice should arrive at the audition fresh.",
+            },
+            {
+              en: "Eat 90 minutes before — not 30 — and avoid acidic foods. A glass of room-temperature water 20 minutes before. No cold drinks; no caffeine for a P6 candidate.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the director said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, audition coming up, no real prep — there are still real moves. Confirm each target school's audition format (prepared-song vs vocal-test-only) tonight. If song-based, lock in the first 8 bars of your strongest song — those are the bars the director judges on. Cancel anything that competes with sleep and voice rest. Spend the freed time on aural drills (clap-back, melody echo, sight-sing) and the interview prep above, because both are where a few hours can still meaningfully change the outcome. Some families bring in a private vocal coach at this stage. A good private coach can stabilise the opening 30 seconds and reduce nerves — but no coach produces, in three sessions, the pitch security of a year of choral singing. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -6851,6 +7212,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "table-tennis",
   "netball",
   "floorball",
+  "choir",
 ];
 
 /**
@@ -6886,6 +7248,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   "table-tennis": ["badminton", "chinese"],
   netball: ["basketball", "volleyball"],
   floorball: ["hockey", "basketball"],
+  choir: ["music", "drama"],
 };
 
 /**
