@@ -10856,11 +10856,11 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           },
         },
         {
-          name: "Methodist Girls' School (Secondary)",
-          url: "https://www.mgs.moe.edu.sg/secondary/admissions/dsa-sec1/",
-          talentArea: { en: "Humanities (Girls), DSA-Sec" },
+          name: "River Valley High School",
+          url: "https://www.rivervalleyhigh.moe.edu.sg/",
+          talentArea: { en: "Humanities (Boys and Girls), IP / DSA-Sec" },
           context: {
-            en: "Methodist heritage girls' school with writing-strong humanities pipeline.",
+            en: "SAP school with Bicultural Studies. Humanities-track DSA-Sec for writing-strong candidates; pipelines naturally with the school's BSP track.",
           },
         },
       ],
