@@ -39,7 +39,8 @@ export type TalentSlug =
   | "symphonic-band"
   | "mep"
   | "aep"
-  | "bicultural";
+  | "bicultural"
+  | "humanities";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -10563,6 +10564,361 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  humanities: {
+    slug: "humanities",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Humanities", zh: "人文学科", ms: "Sains Kemanusiaan", ta: "மனிதவியல்" },
+    hook: {
+      en: "Humanities DSA — entry into a school's history / geography / literature pipeline, judged on writing maturity, critical reasoning, and current-affairs engagement.",
+      zh: "人文学科 DSA——进入学校历史 / 地理 / 文学路线，按写作成熟度、批判性推理、时事关注综合评估",
+      ms: "DSA Sains Kemanusiaan — kemasukan ke saluran sejarah / geografi / sastera sekolah, dinilai berdasarkan kematangan penulisan, penaakulan kritis, dan kesedaran hal ehwal semasa.",
+      ta: "மனிதவியல் DSA — பள்ளியின் வரலாறு / புவியியல் / இலக்கிய வழியில் சேர்க்கை, எழுத்து முதிர்ச்சி, விமர்சன பகுத்தறிவு, தற்போதைய நிகழ்வுகள் ஈடுபாடு அடிப்படையில்.",
+    },
+    intro: {
+      en: "Humanities DSA-Sec is the most niche of the academic-track DSA admissions — it covers candidates who plan to take History, Geography, Literature, or Social Studies as upper-level academic subjects and eventually pursue the JC-level Humanities Programme (HP) at schools like Hwa Chong Institution, Raffles Institution, and National Junior College. The DSA-Sec audition tests writing maturity, ability to construct an argument, current-affairs engagement, and reading habits — not memorised facts. This is the right DSA route for the P6 student who reads non-fiction for pleasure, follows news closely, and can write a paragraph with structure. It is not a sport, not an art, and not a music audition; the criteria are entirely text-based.",
+      zh: "人文学科 DSA-Sec 是学术类 DSA 中最小众的一类——针对计划上中学高年级选历史/地理/文学/社会研究、最终走 JC 人文课程（HP）路线的学生。HP 在 Hwa Chong、Raffles、National Junior College 等校开设。DSA-Sec audition 看写作成熟度、构建论证能力、时事关注、阅读习惯——不是记诵事实。适合喜欢读非虚构、关注新闻、能写有结构段落的 P6 学生。不像体育、艺术、音乐——评分完全基于文字。",
+      ms: "DSA Sains Kemanusiaan adalah antara kemasukan DSA yang paling niche. Meliputi calon yang merancang untuk mengambil Sejarah, Geografi, Sastera sebagai subjek akademik atas. Uji bakat menguji kematangan penulisan dan kesedaran hal ehwal semasa.",
+      ta: "மனிதவியல் DSA-Sec மிகவும் சிறப்பானது. வரலாறு, புவியியல், இலக்கியம் எடுக்கத் திட்டமிடும் வேட்பாளர்களுக்கானது. தேர்வு எழுத்து முதிர்ச்சியையும் தற்போதைய நிகழ்வுகள் விழிப்புணர்வையும் சோதிக்கிறது.",
+    },
+    summary: {
+      en: "Humanities DSA-Sec format (essay + discussion + interview), schools with humanities pipelines, sample interview questions, distinction from BSP and pure Higher Chinese tracks.",
+      zh: "人文 DSA-Sec 格式（论文 + 讨论 + 面试）、人文通道学校、面试题、与 BSP/高华路线区别。",
+      ms: "Format DSA-Sec Kemanusiaan, sekolah peserta, soalan temu duga.",
+      ta: "மனிதவியல் DSA-Sec வடிவம், பள்ளிகள், கேள்விகள்.",
+    },
+    sampleSchools: [
+      "Hwa Chong Institution",
+      "Raffles Institution",
+      "Dunman High School",
+      "Anglo-Chinese School (Independent)",
+      "Nanyang Girls' High School",
+      "Raffles Girls' School (Secondary)",
+    ],
+    metaDescription: {
+      en: "Humanities DSA-Sec audition guide for Singapore P6 — essay-based format, current-affairs preparation, sample interview questions, schools with humanities and Humanities Programme pipelines.",
+      zh: "新加坡 P6 人文学科 DSA-Sec audition 指南——论文格式、时事准备、面试题、人文通道学校。",
+      ms: "Panduan uji bakat DSA-Sec Kemanusiaan Singapura — format, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 மனிதவியல் DSA-Sec வழிகாட்டி — வடிவம், பள்ளிகள்.",
+    },
+    rich: {
+      preparedPiece: {
+        intro: {
+          en: "Humanities DSA-Sec at P6 level is not an audition into a formal Humanities Programme — HP enrolment happens at JC level. What P6 DSA-Sec does is admit candidates into schools where the humanities pipeline runs strongly through to JC. The DSA-Sec assessment usually has three components: a timed essay or written-response piece, a discussion or group critical-reading exercise, and an interview. Format varies more across schools than music or art DSA — confirm each target school's specific format before locking preparation.",
+        },
+        entries: [
+          {
+            variant: { en: "Timed essay or written response" },
+            requirement: { en: "60-90 min essay or written response · either a prompt-based argumentative essay (\"Should Singapore abolish single-use plastics?\" or similar) or a response to a short reading passage · 500-800 words typical · evaluates argument structure, evidence use, and writing fluency" },
+            source: { en: "Convention across humanities-pipeline schools; format published in HCI / RI / DHS DSA briefs varies by year." },
+          },
+          {
+            variant: { en: "Discussion or critical-reading exercise" },
+            requirement: { en: "Group discussion (4-6 candidates) on a prompt or shared reading passage · 20-30 min · evaluates listening, responsiveness, ability to build on others' arguments without dominating or going silent" },
+            source: { en: "HCI and RI humanities-track convention; aligns with JC-level Knowledge & Inquiry / Project Work group-discussion preparation." },
+          },
+          {
+            variant: { en: "Personal interview" },
+            requirement: { en: "15-20 min interview covering: (1) reading habits — what non-fiction or essays you've read recently and why, (2) current affairs — one event you've followed closely, (3) personal motivation — why humanities not a hard-skill DSA track, (4) future intentions" },
+            source: { en: "Convention across humanities-pipeline schools." },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A private writing or humanities coach can sharpen argumentative essay structure, drill timed-essay practice at audition difficulty, and rehearse the group-discussion and interview batteries. Humanities-track preparation is unusual in that no single coach specialises in it — look for English-language teachers, JC humanities tutors, or General Paper coaches who can extend their work down to P6 humanities-track DSA. Browse our coach directory for writing-focused coaches.",
+        },
+      },
+      trialDimensionsIntro: {
+        en: "Humanities DSA-Sec assessments are conducted by the school's Humanities Department head (often a History or Geography department teacher) plus a senior English-language teacher. The assessment is evaluated on six dimensions across the timed essay, group discussion, and interview. These dimensions emerge from public information from HCI, RI, DHS and the General Paper / Knowledge & Inquiry framework that the upper-school humanities pipeline feeds into.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Argument structure on the timed essay" },
+          body: {
+            en: "Adjudicators read the essay for one signal above all: does the candidate have an argument? An essay that opens with a clear thesis, develops two or three supporting points with evidence, and lands a concluding implication outscores a more eloquent essay that drifts between observations. A P6 candidate who can write five-paragraph argumentative essays consistently is signalling humanities-track readiness; one who writes descriptively without arguing is read as a coaching project.",
+          },
+        },
+        {
+          label: { en: "Evidence use and specificity" },
+          body: {
+            en: "Strong humanities candidates use specific evidence — named historical events, named geographers / authors / studies, specific current-affairs examples. \"Singapore has worked hard on water security\" is descriptive; \"Singapore's NEWater technology provides 40% of national water demand as of 2020\" is evidence. P6 candidates rarely write at this specificity — those who do are tracked aggressively for humanities-track recruitment.",
+          },
+        },
+        {
+          label: { en: "Group discussion — building on others, not dominating" },
+          body: {
+            en: "What adjudicators look for in the group discussion is responsiveness — does the candidate listen to others, build on what they said, agree-and-extend or respectfully disagree-with-reason, or do they just wait for their turn to deliver pre-prepared points? A candidate who says \"I want to build on what Alex just said about urbanisation — there's an interesting tension with the rural migration he mentioned\" outscores one who delivers a polished but disconnected paragraph.",
+          },
+        },
+        {
+          label: { en: "Current-affairs depth at interview" },
+          body: {
+            en: "Adjudicators ask about a current event the candidate has been following. The signal is depth, not breadth — knowing one event deeply (the timeline, the named actors, the underlying tensions, the candidate's own developing view) outscores knowing five events superficially. A P6 candidate who has been following Singapore's housing-policy debate or the climate-COP cycle in detail is the rare attacking signal.",
+          },
+        },
+        {
+          label: { en: "Reading habits at interview" },
+          body: {
+            en: "Humanities-track candidates read for pleasure beyond the school curriculum. Adjudicators ask what the candidate has read recently — non-fiction in particular. A P6 who can name one book they've read recently (and articulate why it mattered) signals humanities-track readiness. Generic answers (\"I read a lot\") fail the interview; specific titles with a few sentences of reflection succeed.",
+          },
+        },
+        {
+          label: { en: "Personal motivation — why humanities specifically" },
+          body: {
+            en: "The clearest interview signal is the candidate's articulated reason for choosing humanities DSA over sport, art, music, or STEM DSA. A P6 candidate who can say \"I want to be a journalist because I'm interested in how Singapore decides things\" or \"I want to study political economy because I'm fascinated by how Singapore is governed differently from neighbouring countries\" signals a future-direction maturity that adjudicators recruit for.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "History-focused candidate" },
+          body: {
+            en: "Candidates who plan to take History as a strong upper-school subject and eventually History at H2 level in JC. Strong indicators: documented external history quizzes or competitions at primary level, deep familiarity with one historical period (Singapore's nation-building decades, World War II, the Cold War), and reading habits that include named non-fiction history books. Adjudicators look for candidates who can sustain an argument about historical causation, not just list facts.",
+          },
+        },
+        {
+          position: { en: "Geography / current-affairs focused candidate" },
+          body: {
+            en: "Candidates who plan to take Geography as a strong upper-school subject and possibly Geography at H2 level. Strong indicators: ability to discuss one current geographical issue (urbanisation, water security, climate adaptation, supply-chain geopolitics) in depth, reading habits including The Straits Times opinion section or comparable outlets, and familiarity with named case studies. Adjudicators look for candidates who can hold an issue and its counter-issue in mind simultaneously.",
+          },
+        },
+        {
+          position: { en: "Literature / English-language focused candidate" },
+          body: {
+            en: "Candidates who plan to take Literature in English at upper-school level. Strong indicators: extensive independent reading of fiction beyond school requirements (named contemporary novelists, short-story writers, poets), ability to discuss one literary work with specific vocabulary (narrative voice, structure, theme), and writing samples that show literary sensibility. Adjudicators look for candidates who read across cultures and centuries, not just current best-sellers.",
+          },
+        },
+        {
+          position: { en: "Cross-disciplinary humanities candidate" },
+          body: {
+            en: "Candidates whose interests span history + geography + literature, or who are interested in interdisciplinary fields (international relations, political science, public policy, anthropology). This profile fits the JC-level Humanities Programme best. Adjudicators look for candidates who can articulate connections across disciplines — \"I'm interested in how Singapore's geography shaped its political history\" or \"I want to understand how literature reflects social change.\"",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Humanities DSA-Sec candidates do not commit to one subject at P6 level — but the interests they articulate in the interview shape how the school's humanities department develops them across the four years. A candidate with broad interests outscores one with a narrow specialisation, because the JC-level Humanities Programme is itself cross-disciplinary. State your interests honestly; adjudicators see through over-rehearsed specialism.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Tell us about a non-fiction book you've read recently." },
+          subtext: {
+            en: "Tests independent reading habits — generic answers fail this question immediately.",
+          },
+          approach: {
+            en: "Name the book + author + one specific argument or insight you can articulate.",
+          },
+          template: {
+            en: "I read Tim Marshall's Prisoners of Geography earlier this year. The chapter on China and the South China Sea changed how I think about regional disputes — Marshall argues that geographical features (deep water ports, defensible mountains) shape political decisions in ways most news coverage misses. I started reading the news with maps next to me after that.",
+          },
+        },
+        {
+          question: { en: "Walk us through one current event you've been following closely." },
+          subtext: {
+            en: "Tests current-affairs depth, not breadth. Stay with one issue.",
+          },
+          approach: {
+            en: "Name the event + name the actors + describe the underlying tension + share a tentative view.",
+          },
+          template: {
+            en: "Singapore's GST hike to 9% from 2024. The government raised GST partly to fund healthcare costs from the ageing population, but critics worry the regressive nature of GST hurts lower-income households disproportionately. The U-Save vouchers offset some of that, but I want to see whether the offset fully covers the increase for the lowest income decile — I haven't seen clear data either way yet.",
+          },
+        },
+        {
+          question: { en: "Why humanities specifically, not a sport or music DSA?" },
+          subtext: {
+            en: "Tests personal motivation — schools fear candidates who applied to humanities as a backup.",
+          },
+          approach: {
+            en: "Articulate what humanities asks of you that other DSA paths don't.",
+          },
+          template: {
+            en: "I considered music DSA because I play violin, but I realised what excites me most is reading and writing about why things happen — that's a humanities habit, not a music habit. Music is something I'll keep as a CCA. Humanities is what I want as the academic centre of my secondary years.",
+          },
+        },
+        {
+          question: { en: "If you could change one thing about Singapore's housing policy, what would it be?" },
+          subtext: {
+            en: "Tests structured thinking about a complex local issue.",
+          },
+          approach: {
+            en: "Don't oversimplify. Acknowledge the trade-off explicitly, then take a position.",
+          },
+          template: {
+            en: "I'd want HDB resale flat prices to grow more slowly. The trade-off is that current owners benefit from price growth — so cooling measures hurt them in the short term. But if prices grow faster than incomes, my generation will inherit a country where housing is harder to afford than for my parents. I'd accept the short-term cost.",
+          },
+        },
+        {
+          question: { en: "Who is your favourite historical figure and why?" },
+          subtext: {
+            en: "Tests cultural-historical engagement.",
+          },
+          approach: {
+            en: "Name the figure + name one specific event + articulate the reflection.",
+          },
+          template: {
+            en: "Lee Kuan Yew during the water negotiations with Malaysia in the 1960s. His insistence on water self-sufficiency — even when expensive in the short term — built the resilience that NEWater later confirmed. The decision wasn't popular at the time. What I learn from him is that some decisions look obvious in hindsight only because someone made them.",
+          },
+        },
+        {
+          question: { en: "How do you manage time across academic subjects?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I read for 30 minutes every day before doing homework — usually news articles or a non-fiction book. English and Math homework I do before dinner. Science on weekends. My mother shows my report book to my form teacher every term — if any subject drops a band, we cut reading time. That's the rule we set together.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your humanities department's Research Studies programme is something I haven't found at other schools at the Sec 1-4 level. If School A called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Humanities (Boys), IP" },
+          context: {
+            en: "IP school. Humanities among HCI's recognised DSA talent areas with explicit pipeline to the JC-level Humanities Programme. HCI HP is one of Singapore's flagship humanities tracks.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/dsa-sec",
+          talentArea: { en: "Humanities (Boys), IP" },
+          context: {
+            en: "IP school. Humanities among RI's published DSA domain criteria. RI's JC-level Humanities Programme is one of the strongest in Singapore.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Humanities (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "SAP school. Humanities among Dunman's 2026 DSA FAQ talent areas. Pipelines into Bicultural Studies as a natural complement.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Humanities (Boys), IP" },
+          context: {
+            en: "IP school. Humanities among ACS(I)'s recognised DSA talent areas; pipelines into the IB Diploma's Group 3 individuals-and-societies subjects.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Humanities (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies school. Humanities among NYGH's recognised DSA talent areas; pipelines naturally into BSP for Chinese-language-strong candidates.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/Admission-to-RGS/via-DSA/",
+          talentArea: { en: "Humanities (Girls), IP" },
+          context: {
+            en: "IP school. Humanities among RGS's recognised DSA talent areas. RGS pipelines into Raffles Institution's JC-level Humanities Programme.",
+          },
+        },
+        {
+          name: "National Junior College (Integrated Programme)",
+          url: "https://www.nationaljc.moe.edu.sg/",
+          talentArea: { en: "Humanities (Boys and Girls), IP" },
+          context: {
+            en: "IP school (Sec 1 entry through DSA). NJC has Singapore's longest-running Humanities Programme at JC level — DSA-Sec entry positions students for that JC-level HP track.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.moe.edu.sg/secondary/admissions/dsa-sec1/",
+          talentArea: { en: "Humanities (Girls), DSA-Sec" },
+          context: {
+            en: "Methodist heritage girls' school. Humanities-track DSA-Sec for candidates strong in writing and current-affairs engagement.",
+          },
+        },
+        {
+          name: "St. Joseph's Institution",
+          url: "https://www.sji.edu.sg/admission/dsa-at-sji/",
+          talentArea: { en: "Humanities (Boys), IP / DSA-Sec" },
+          context: {
+            en: "Lasallian boys' school. Humanities-track DSA-Sec; pipelines into the IB Diploma Group 3 subjects at upper years.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.moe.edu.sg/secondary/admissions/dsa-sec1/",
+          talentArea: { en: "Humanities (Girls), DSA-Sec" },
+          context: {
+            en: "Methodist heritage girls' school with writing-strong humanities pipeline.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the audition is still weeks out" },
+          items: [
+            {
+              en: "Establish a daily reading habit (30 minutes minimum). Mix non-fiction (a current-affairs book, a history book, an essay collection) with quality fiction. Have a notebook for jotting interesting arguments or vocabulary.",
+            },
+            {
+              en: "Practise timed essay writing weekly. 60-minute essays on argumentative prompts (\"Should Singapore raise the school-leaving age?\" or similar). Mark each essay together — does the thesis hold? Are the supporting paragraphs structurally sound? Is there evidence?",
+            },
+            {
+              en: "Follow one current-affairs issue closely for 4-6 weeks before the audition. Save articles, jot questions, develop a tentative view that can survive a 5-minute interview probe.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity on new content. Switch to reviewing the current-affairs issue you've been following, re-reading one or two key essays, and lightly rehearsing answers to the interview battery.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue (typically the school's conference room or library), bring writing materials (pens, pencils, eraser). Confirm whether the school will provide paper or expects own. Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "One mock group discussion if possible. The group-discussion component is the unique humanities-DSA test that most P6 candidates have never experienced — Saturday tutoring groups or a family discussion exercise can build the muscle.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of audition" },
+          items: [
+            {
+              en: "Arrive 30-45 minutes early. Use the time to read one news article on the phone — primes the mind for the writing and discussion components.",
+            },
+            {
+              en: "Eat 90 minutes before — not 30. The audition is mentally demanding for 2-3 hours; energy loss is the most common P6 failure on essay components.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the panel said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, humanities audition coming up, no real prep — there are still real moves. Prioritise three things: (1) read one news article (in depth, not just headlines) plus one chapter of a non-fiction book daily; (2) write one 60-minute argumentative essay per week and mark it together; (3) practise the interview battery focusing on current-affairs depth rather than breadth. Cancel anything that competes with sleep and reading time. Some families bring in a private English-language or General Paper coach at this stage. A coach can sharpen essay structure and run mock interviews — but no coach produces, in three sessions, the reading habit of years of curiosity. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -10597,6 +10953,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "mep",
   "aep",
   "bicultural",
+  "humanities",
 ];
 
 /**
@@ -10643,6 +11000,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   mep: ["music", "symphonic-band"],
   aep: ["art", "drama"],
   bicultural: ["chinese", "chinese-orchestra"],
+  humanities: ["bicultural", "drama"],
 };
 
 /**
