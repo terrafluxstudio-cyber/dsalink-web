@@ -38,7 +38,8 @@ export type TalentSlug =
   | "rugby"
   | "symphonic-band"
   | "mep"
-  | "aep";
+  | "aep"
+  | "bicultural";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -10248,6 +10249,320 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  bicultural: {
+    slug: "bicultural",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Bicultural Studies", zh: "双文化课程", ms: "Pengajian Dwibudaya", ta: "இரு கலாச்சார படிப்புகள்" },
+    hook: {
+      en: "Bicultural DSA — entry into a SAP school's Bicultural Studies pipeline, judged on Higher Chinese strength, cultural knowledge, and writing maturity.",
+      zh: "双文化 DSA——进入 SAP 校双文化课程通道，按高级华文水平、文化知识、写作成熟度评估",
+      ms: "DSA Dwibudaya — kemasukan ke saluran Pengajian Dwibudaya sekolah SAP, dinilai berdasarkan kekuatan Bahasa Cina Tinggi, pengetahuan budaya, dan kematangan penulisan.",
+      ta: "இரு கலாச்சார DSA — SAP பள்ளியின் இரு கலாச்சார படிப்பு வழியில் சேர்க்கை, உயர் சீன மொழி, கலாச்சார அறிவு, எழுத்து முதிர்ச்சி அடிப்படையில்.",
+    },
+    intro: {
+      en: "The Bicultural Studies Programme (BSP, 双文化课程) is MOE's specialist track for students who will become bicultural-bilingual leaders comfortable in both English-Singapore and China-Mandarin professional contexts. It is offered at five MOE-designated schools — Hwa Chong Institution, Dunman High School, Nanyang Girls' High School, Nan Hua High School, and River Valley High School. Formal BSP entry happens at Secondary 3 after Sec 2 selection — so a P6 DSA candidate is not auditioning into BSP directly. What P6 DSA-Sec does for BSP-track families is admit the candidate into the SAP school where the BSP pipeline exists. The DSA-Sec audition therefore tests Higher Chinese strength, Chinese cultural knowledge (literature / history / current affairs), and writing maturity — the foundation that BSP selection at Sec 2 will build on.",
+      zh: "双文化课程（BSP）是 MOE 为培养通晓中英双语、能在新加坡英语职场和中国普通话职场两边都驾驭的精英学生的专项轨道。仅在 5 所 MOE 指定校开设——华侨中学、Dunman High、南洋女子高中、Nan Hua High、River Valley High。BSP 正式入读在中三（中二选拔后）——所以 P6 DSA 候选人并不是直接报 BSP。P6 DSA-Sec 对 BSP-track 家庭的实际作用是：让孩子进入有 BSP 通道的 SAP 校。DSA-Sec audition 因此测高级华文水平、中华文化知识（文学/历史/时事）、写作成熟度——为中二 BSP 选拔打基础。",
+      ms: "Program Pengajian Dwibudaya (BSP) adalah trek khusus MOE untuk pelajar yang akan menjadi pemimpin dwibahasa-dwibudaya. Ditawarkan di lima sekolah yang ditetapkan MOE. Kemasukan formal di Sec 3 selepas pemilihan Sec 2.",
+      ta: "இரு கலாச்சார படிப்புத் திட்டம் (BSP) ஆங்கிலம் மற்றும் சீன மொழி இரண்டிலும் தலைமை திறனைக் கொண்ட மாணவர்களுக்கான MOE-இன் சிறப்புத் தடம். ஐந்து MOE-நிர்ணயித்த பள்ளிகளில் வழங்கப்படுகிறது.",
+    },
+    summary: {
+      en: "How Bicultural DSA-Sec differs from direct BSP entry, the 5 designated schools, Higher Chinese / writing / interview format, sample interview questions.",
+      zh: "双文化 DSA-Sec 与直接 BSP 入读的区别、5 所指定校、高级华文/写作/面试格式、面试题。",
+      ms: "Perbezaan Dwibudaya DSA-Sec dan kemasukan BSP terus, 5 sekolah, format, soalan.",
+      ta: "இரு கலாச்சார DSA-Sec மற்றும் நேரடி BSP சேர்க்கை வேறுபாடு, 5 பள்ளிகள், வடிவம், கேள்விகள்.",
+    },
+    sampleSchools: [
+      "Hwa Chong Institution",
+      "Dunman High School",
+      "Nanyang Girls' High School",
+      "Nan Hua High School",
+      "River Valley High School",
+    ],
+    metaDescription: {
+      en: "Bicultural Studies DSA-Sec audition guide for Singapore P6 — entry into SAP school BSP pipeline, Higher Chinese / writing / interview format, the 5 MOE-designated schools.",
+      zh: "新加坡 P6 双文化 DSA-Sec audition 指南——进入 SAP 校 BSP 通道、高级华文/写作/面试格式、5 所 MOE 指定校。",
+      ms: "Panduan uji bakat DSA-Sec Dwibudaya Singapura — saluran BSP, format, sekolah.",
+      ta: "சிங்கப்பூர் P6 இரு கலாச்சார DSA-Sec வழிகாட்டி — BSP வழி, வடிவம், பள்ளிகள்.",
+    },
+    rich: {
+      preparedPiece: {
+        intro: {
+          en: "Bicultural-track DSA at P6 level is not an audition into BSP directly (BSP enrolment happens at Sec 3 after Sec 2 selection). It is an admission into a SAP school where the BSP pipeline exists. The DSA-Sec assessment therefore tests three components: a Higher Chinese language test (composition, comprehension, classical Chinese reading), a Chinese-language interview about culture and personal interest in bicultural studies, and (at some schools) a written essay in Chinese on a current-affairs or cultural topic. Confirm each target school's specific format before locking preparation.",
+        },
+        entries: [
+          {
+            variant: { en: "Higher Chinese language assessment" },
+            requirement: { en: "Composition (typically 400-500 字 essay) plus comprehension (often with one classical Chinese passage) plus sometimes a 改正 / 修辞 component testing language manipulation · 60-90 min" },
+            source: { en: "Convention across SAP schools that recruit BSP-track candidates; aligns with PSLE Higher Chinese standards plus extension." },
+          },
+          {
+            variant: { en: "Chinese-language interview" },
+            requirement: { en: "10-15 min interview conducted in Mandarin. Topics: why you want bicultural studies, one Chinese cultural element (festival, historical figure, classical work) you can discuss in depth, current China-Singapore relationship knowledge, personal reading and study habits in Chinese" },
+            source: { en: "Convention across BSP-pipeline schools (HCI, DHS, NYGH, Nan Hua, RVHS); not a single published source." },
+          },
+          {
+            variant: { en: "Cultural-knowledge written piece (some schools)" },
+            requirement: { en: "Short written essay in Chinese (300-500 字) on a cultural topic, current-affairs prompt, or response to a classical Chinese passage · tests written-thinking maturity beyond compositional fluency" },
+            source: { en: "DHS and HCI BSP-pipeline audition convention; varies by year and school." },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A private Chinese-language coach with BSP-pipeline experience can sharpen composition technique, drill classical Chinese passages, and rehearse the Mandarin interview battery. Bicultural-track preparation requires both fluency in modern Mandarin and the cultural-historical vocabulary that distinguishes BSP candidates from strong Higher Chinese students. Browse our coach directory for BSP-experienced Chinese language coaches.",
+        },
+      },
+      trialDimensionsIntro: {
+        en: "Bicultural-track DSA-Sec assessments are conducted by the school's Higher Chinese / Chinese Department head plus a senior teacher familiar with the BSP curriculum. The assessment is evaluated on six dimensions across the language test, interview, and (where applicable) written essay. These dimensions emerge from MOE's BSP description and public information from the five designated schools.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Higher Chinese composition — argument structure and vocabulary range" },
+          body: {
+            en: "Adjudicators read composition for two signals: how the candidate structures an argument (clear thesis → development → conclusion) and the vocabulary range (use of idioms 成语, classical references 典故, varied sentence structures). A composition that uses three 成语 correctly outscores one that uses ten incorrectly — accuracy beats display. BSP candidates are expected to write Chinese the way other DSA candidates write English: with structural maturity, not just fluency.",
+          },
+        },
+        {
+          label: { en: "Classical Chinese reading (where tested)" },
+          body: {
+            en: "Some BSP-pipeline schools include a classical Chinese (文言文) passage in the language test. Adjudicators check whether the candidate can identify subject and verb in a particle-heavy sentence, recognise common classical function words (之 / 而 / 以 / 其 / 则), and infer meaning from context. P6 candidates rarely have formal classical Chinese training — exposure to classical excerpts (Tang poems, Confucian aphorisms, classical novel openings) is the recommended preparation.",
+          },
+        },
+        {
+          label: { en: "Mandarin interview — fluency and topic depth" },
+          body: {
+            en: "What separates a strong Higher Chinese student from a BSP-track candidate is interview depth in Mandarin. Adjudicators ask questions that test cultural-historical engagement — \"Who is your favourite Chinese historical figure and why?\" or \"What do you think is most important about China-Singapore relations?\" — and listen for whether the candidate can sustain a substantive answer in Mandarin without code-switching to English. Cultural vocabulary in Chinese (not English about Chinese culture) is the differentiator.",
+          },
+        },
+        {
+          label: { en: "Cultural knowledge breadth and specificity" },
+          body: {
+            en: "Adjudicators want to see that the P6 candidate has engaged with Chinese culture beyond the Higher Chinese textbook. Examples of specificity: naming one classical Chinese novel and one of its themes (not just \"四大名著\"); naming a specific Chinese composer and one work; describing one historical event with named figures. BSP-track candidates show interest, not just compliance.",
+          },
+        },
+        {
+          label: { en: "Personal motivation for bicultural studies" },
+          body: {
+            en: "Interviewers ask why bicultural studies, not just why Chinese. The strongest candidates can articulate a future use of the dual fluency — diplomacy, business between Singapore and China, cross-cultural research, translation — rather than the generic \"I love Chinese culture.\" A P6 candidate with a specific bicultural future-vision signals four-year commitment to a demanding programme.",
+          },
+        },
+        {
+          label: { en: "Composure and language-switching control" },
+          body: {
+            en: "Adjudicators test composure by asking one or two questions in English mid-Mandarin interview, watching whether the candidate switches cleanly and back without losing fluency. This is a BSP-specific signal — bicultural professionals switch languages constantly. A P6 candidate who panics or simplifies their Chinese after the English interjection is read as monolingually strong but not yet bicultural.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Higher Chinese composition strength (foundational)" },
+          body: {
+            en: "Every BSP-track candidate needs strong PSLE Higher Chinese composition as the baseline. Adjudicators verify this through the language test. If your child achieved Distinction or Merit on Higher Chinese composition consistently in P5 and P6 mock exams, mention this in the application. Composition is the foundation that BSP's writing-heavy upper-year curriculum will be built on.",
+          },
+        },
+        {
+          position: { en: "Classical Chinese exposure (differentiator)" },
+          body: {
+            en: "Candidates who have read classical Chinese excerpts — Tang poetry, Analects passages, classical novel openings — are differentiated immediately. This isn't taught in primary school Higher Chinese; it's self-driven enrichment. A P6 candidate who can recite one Tang poem and explain its structure is signalling an interest level that BSP recruits actively look for.",
+          },
+        },
+        {
+          position: { en: "Cultural-engagement evidence (CCA + reading habits)" },
+          body: {
+            en: "BSP-pipeline candidates often have Chinese-cultural CCA depth — Chinese Orchestra, Chinese Drama, calligraphy 书法, Chinese debate. List CCAs and external programmes in the application. Chinese-language reading habits (named books, named authors) carry weight in interview — a candidate who has read 余华 or 三毛 stands out from one who has read only school-assigned texts.",
+          },
+        },
+        {
+          position: { en: "China-Singapore bicultural awareness (interview lever)" },
+          body: {
+            en: "The clearest interview signal that distinguishes BSP candidates from strong Higher Chinese students. Examples: knowing about Singapore-China bilateral education exchanges (Suzhou Industrial Park, the Singapore-China Free Trade Agreement, named bilateral programmes), being able to discuss one current event involving both countries. P6 candidates rarely know this level of detail — those who do are tracked aggressively.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Bicultural-track DSA-Sec admits candidates into SAP schools that will later select into formal BSP at Sec 3. The DSA-Sec audition tests fundamentals (Higher Chinese strength + cultural knowledge + personal motivation); the BSP-specific selection at Sec 2 tests substantially more. A successful DSA-Sec bicultural-track candidate should plan four years of sustained Higher Chinese practice and cultural engagement — not just the audition prep — to be competitive at Sec 2 BSP selection.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "你为什么对双文化课程感兴趣？(Why are you interested in Bicultural Studies?)" },
+          subtext: {
+            en: "Panels want a specific motivation, not generic appreciation of Chinese culture. Answer in Mandarin.",
+          },
+          approach: {
+            en: "Open with one concrete bicultural moment, then connect it to a future use of the dual fluency.",
+          },
+          template: {
+            en: "我去年和家人去上海，发现新加坡华文跟当地的普通话用法有很多差别——单是\"巴士\"和\"公交车\"就让我意识到，新加坡是一个独特的双语环境。我希望以后能在新加坡和中国之间的合作中工作，这就需要我从中学开始就建立深厚的双语基础。",
+          },
+        },
+        {
+          question: { en: "你最喜欢的中国历史人物是谁？为什么？(Who is your favourite Chinese historical figure and why?)" },
+          subtext: {
+            en: "Tests cultural specificity. Answer in Mandarin with named figure + named event + reflection.",
+          },
+          approach: {
+            en: "Name a specific figure (not just 'arch-emperors'), name one specific event, articulate the reflection.",
+          },
+          template: {
+            en: "苏轼。除了诗词，我特别欣赏他在被贬到黄州后写的《赤壁赋》——他没有抱怨被贬，而是从赤壁想到历史的长河里个人的渺小。我从他身上学到，遇到挫折时可以把目光放得更远。",
+          },
+        },
+        {
+          question: { en: "为什么选择我们学校的双文化通道？(Why our school's bicultural pipeline specifically?)" },
+          subtext: {
+            en: "Did the family research the school's specific BSP track, or is it generic?",
+          },
+          approach: {
+            en: "Cite one specific element of the school's Chinese-cultural environment.",
+          },
+          template: {
+            en: "华中的 BSP 浸濡课程包括上海复旦的暑期项目，这种实地接触是我希望在中学得到的。加上华中的 SAP 环境，我可以从中一开始就把高华和文化结合起来。",
+          },
+        },
+        {
+          question: { en: "Tell us about one Chinese book you've read recently that wasn't a school assignment." },
+          subtext: {
+            en: "Tests independent reading habits — interview may switch between English and Mandarin.",
+          },
+          approach: {
+            en: "Name the book + the author + one specific element you can discuss.",
+          },
+          template: {
+            en: "余华的《活着》。福贵的一生让我看到，二十世纪的中国普通家庭怎样在历史的洪流里活下去。最让我震撼的是结尾，福贵一个人和老牛说话——那种孤独是用词语写不出来的。",
+          },
+        },
+        {
+          question: { en: "What do you think is most important about Singapore-China relations today?" },
+          subtext: {
+            en: "Tests current-affairs awareness — answer expected in Mandarin or with code-switching capacity.",
+          },
+          approach: {
+            en: "Name one specific bilateral program or recent event + articulate a viewpoint.",
+          },
+          template: {
+            en: "苏州工业园是新加坡和中国合作的一个重要例子。我觉得最重要的是，新加坡用自己的城市管理经验帮助中国发展，但同时也学到了中国大规模建设的经验。这种双向学习是双文化的核心。",
+          },
+        },
+        {
+          question: { en: "你高华的学习方法是什么？(What is your Higher Chinese study method?)" },
+          subtext: {
+            en: "Schools test honesty about study habits, not perfect performance.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes.",
+          },
+          template: {
+            en: "我每个星期阅读三篇华文短文章——不是课本上的——并且抄写其中的好句子。妈妈每个学期把我的成绩单给华文老师看，如果我的写作成绩降低，我们就减少其他活动。",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — answer in Mandarin or English as comfortable.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "老实说，贵校。贵校 BSP 通道的浸濡课程跟我的学习方向最匹配。如果其他学校先打电话，我也会等贵校的回复。",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Bicultural Studies pipeline (Boys), IP" },
+          context: {
+            en: "BSP-designated school. SAP and IP school with the longest BSP track in Singapore. Higher Chinese as Mother Tongue is the standard expectation. BSP selection happens at Sec 3 after Sec 2 screening.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Bicultural Studies pipeline (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "BSP-designated school. SAP and Bicultural Studies school. Dunman's 2026 DSA FAQ explicitly lists Bicultural Studies as a recognised talent area for DSA-Sec at P6 level (pipeline admission).",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Bicultural Studies pipeline (Girls), IP" },
+          context: {
+            en: "BSP-designated school. SAP and Bicultural Studies school. NYGH has a Chinese-instrument MEP track integrated alongside BSP — the most culturally-deep Chinese environment among the 5 designated schools.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          url: "https://www.nanhuahigh.moe.edu.sg/announcements/talent-areas-for-dsa/",
+          talentArea: { en: "Bicultural Studies pipeline, DSA-Sec" },
+          context: {
+            en: "BSP-designated school. SAP school. Higher Chinese / Chinese Language as Mother Tongue requirement applies for all DSA candidates.",
+          },
+        },
+        {
+          name: "River Valley High School",
+          url: "https://www.rivervalleyhigh.moe.edu.sg/",
+          talentArea: { en: "Bicultural Studies pipeline (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "BSP-designated school. SAP school with Bicultural Studies. Bicultural Studies among RVHS's recognised DSA talent areas.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the audition is still weeks out" },
+          items: [
+            {
+              en: "Confirm the Higher Chinese composition strength. The PSLE Higher Chinese composition record is the foundation — a P5 / P6 mock exam Merit or Distinction is the working baseline. If composition is below Distinction-borderline, BSP pipeline is a stretch even at P6 admission.",
+            },
+            {
+              en: "Read independently in Chinese for at least 30 minutes daily. Recommended: short-story collections (余华 / 三毛 / 余光中 prose), one classical Chinese poetry anthology with translations alongside, age-appropriate adapted classical novels (《三国演义》青少版 / 《西游记》).",
+            },
+            {
+              en: "Practise classical Chinese excerpt reading. Use a Tang poetry anthology with translations and try to identify the verb + subject in each line before reading the translation. Daily 10 minutes builds the pattern.",
+            },
+            {
+              en: "Run a mock Mandarin interview using the questions above. Record on phone. Watch back together. Flag any answer that switched to English unnecessarily — or that lasted under 20 seconds. Both signal monolingual default thinking.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: light composition practice (one short essay per day in Chinese, on a culturally-themed prompt), continued reading, light classical Chinese exposure. No new vocabulary to memorise; rehearse the vocabulary you already use.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue (typically the school's conference room or Chinese department classroom), bring writing materials (and a dictionary if permitted). Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "One final mock interview, conducted in Mandarin throughout. The most common P6 failure mode in BSP-track interview is code-switching to English under pressure — this drill builds the language-switching control adjudicators specifically test for.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of audition" },
+          items: [
+            {
+              en: "Arrive 30-45 minutes early. Use the time to read one short Chinese passage on the phone or in print — this primes the mind for the language test.",
+            },
+            {
+              en: "Eat 90 minutes before — not 30 — and avoid heavy or cold meals (the language test is mentally demanding for 60-90 minutes straight).",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name (\"老师好\"), leave. Over-involved parents are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the panel said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, bicultural audition coming up, no real prep — there are still real moves. Prioritise three things: (1) read in Chinese for 30 minutes daily (short-story prose, not just textbook material); (2) practise one composition per day in Chinese on a cultural prompt (festival, historical figure, current event); (3) rehearse the Mandarin interview battery without code-switching to English. Cancel anything that competes with sleep. Some families bring in a private Chinese-language coach at this stage. A coach can polish composition structure, rehearse Mandarin interview answers, and drill classical Chinese exposure — but no coach produces, in three sessions, the Chinese reading habit of years of independent engagement. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -10281,6 +10596,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "symphonic-band",
   "mep",
   "aep",
+  "bicultural",
 ];
 
 /**
@@ -10326,6 +10642,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   "symphonic-band": ["music", "chinese-orchestra"],
   mep: ["music", "symphonic-band"],
   aep: ["art", "drama"],
+  bicultural: ["chinese", "chinese-orchestra"],
 };
 
 /**
