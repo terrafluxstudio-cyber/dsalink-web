@@ -19,10 +19,10 @@ const PILLAR = {
 } as const;
 
 const SUBTITLE = {
-  en: "Singapore DSA-Sec 2026 — 9 chapters · 6 parent stories · 8 talents · timeline · FAQ.",
-  zh: "DSA-Sec 2026 完整参考 · 9 章节 · 6 家长故事 · 8 才艺方向 · 时间线 · FAQ。",
-  ms: "DSA-Sec 2026 — 9 bab · 6 kisah ibu bapa · 8 bakat · garis masa · FAQ.",
-  ta: "DSA-Sec 2026 — 9 அத்தியாயங்கள் · 6 பெற்றோர் கதைகள் · 8 திறமைகள் · கால அட்டவணை · FAQ.",
+  en: "Singapore DSA-Sec 2026 — 9 chapters · 6 parent stories · 16 talents · timeline · FAQ.",
+  zh: "DSA-Sec 2026 完整参考 · 9 章节 · 6 家长故事 · 16 才艺方向 · 时间线 · FAQ。",
+  ms: "DSA-Sec 2026 — 9 bab · 6 kisah ibu bapa · 16 bakat · garis masa · FAQ.",
+  ta: "DSA-Sec 2026 — 9 அத்தியாயங்கள் · 6 பெற்றோர் கதைகள் · 16 திறமைகள் · கால அட்டவணை · FAQ.",
 } as const;
 
 const CTA = {

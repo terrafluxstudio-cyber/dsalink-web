@@ -2,25 +2,33 @@
 
 import Link from "next/link";
 import {
+  Activity,
   ArrowRight,
   BookOpen,
   Building2,
+  Calculator,
   CheckCircle2,
+  CircleDot,
   Clock,
   Compass,
+  Cpu,
+  Crown,
+  Drama,
   FileSearch,
+  Footprints,
+  Goal,
   GraduationCap,
+  Languages,
   MessageSquareText,
+  Music2,
+  Palette,
   RotateCcw,
   Shield,
   Sparkles,
   Trophy,
   Waves,
   Wrench,
-  Calculator,
-  Goal,
-  Footprints,
-  Music2,
+  Zap,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -51,15 +59,15 @@ const HERO_TITLE: LocaleStr = {
 };
 
 const HERO_SUB: LocaleStr = {
-  en: "From what DSA actually is, to which 147 schools take part, to the 8 talent areas, the 2026 timeline, interview prep, and what each outcome means at result release. Every section links to the deeper page if you want to go further.",
-  zh: "从 DSA 到底是什么，到哪 147 所学校参与，到 8 大才艺方向，到 2026 时间线、面试准备、结果出来每种 outcome 意味着什么。每个 section 想深挖都有内链到详情页。",
-  ms: "Dari apa itu DSA, ke 147 sekolah yang menyertai, ke 8 bidang bakat, garis masa 2026, persediaan temu duga, dan apa setiap keputusan bermakna apabila keputusan dilepaskan. Setiap bahagian memautkan ke halaman terperinci.",
-  ta: "DSA என்றால் என்ன என்பதிலிருந்து, பங்கேற்கும் 147 பள்ளிகள், 8 திறமைப் பகுதிகள், 2026 கால அட்டவணை, நேர்காணல் தயாரிப்பு, முடிவு வெளியிடப்படும்போது ஒவ்வொரு விளைவும் எதைக் குறிக்கிறது என்பது வரை. ஒவ்வொரு பகுதியும் ஆழமான பக்கத்திற்கு இணைக்கப்பட்டுள்ளது.",
+  en: "From what DSA actually is, to which 147 schools take part, to the 16 talent areas with dedicated prep pages, the 2026 timeline, interview prep, and what each outcome means at result release. Every section links to the deeper page if you want to go further.",
+  zh: "从 DSA 到底是什么，到哪 147 所学校参与，到 16 个才艺方向各自的备战页，到 2026 时间线、面试准备、结果出来每种 outcome 意味着什么。每个 section 想深挖都有内链到详情页。",
+  ms: "Dari apa itu DSA, ke 147 sekolah yang menyertai, ke 16 bidang bakat dengan halaman persediaan khusus, garis masa 2026, persediaan temu duga, dan apa setiap keputusan bermakna apabila keputusan dilepaskan. Setiap bahagian memautkan ke halaman terperinci.",
+  ta: "DSA என்றால் என்ன என்பதிலிருந்து, பங்கேற்கும் 147 பள்ளிகள், தனிப்பட்ட தயாரிப்பு பக்கங்களுடன் 16 திறமைப் பகுதிகள், 2026 கால அட்டவணை, நேர்காணல் தயாரிப்பு, முடிவு வெளியிடப்படும்போது ஒவ்வொரு விளைவும் எதைக் குறிக்கிறது என்பது வரை. ஒவ்வொரு பகுதியும் ஆழமான பக்கத்திற்கு இணைக்கப்பட்டுள்ளது.",
 };
 
 const STATS = [
   { num: "147", label: { en: "secondary schools", zh: "所中学", ms: "sekolah menengah", ta: "இடைநிலை பள்ளிகள்" } },
-  { num: "8", label: { en: "talent categories", zh: "大才艺方向", ms: "kategori bakat", ta: "திறமை வகைகள்" } },
+  { num: "16", label: { en: "talent prep pages", zh: "才艺备战页", ms: "halaman bakat", ta: "திறமை பக்கங்கள்" } },
   { num: "4", label: { en: "full-DSA schools", zh: "所纯 DSA 学校", ms: "sekolah DSA penuh", ta: "முழு DSA பள்ளிகள்" } },
   { num: "20%", label: { en: "S1 cap per school", zh: "学校 S1 名额上限", ms: "had S1 setiap sekolah", ta: "ஒரு பள்ளிக்கு S1 வரம்பு" } },
 ] as const;
@@ -294,27 +302,35 @@ const S3_KICKER: LocaleStr = {
   ta: "அத்தியாயம் 3",
 };
 const S3_TITLE: LocaleStr = {
-  en: "The 8 talent categories MOE accepts",
-  zh: "MOE 接受的 8 大才艺方向",
-  ms: "8 kategori bakat yang MOE terima",
-  ta: "MOE ஏற்றுக்கொள்ளும் 8 திறமை வகைகள்",
+  en: "16 talent areas with dedicated prep pages",
+  zh: "16 个才艺方向 · 各有专属备战页",
+  ms: "16 bidang bakat dengan halaman persediaan khusus",
+  ta: "தனிப்பட்ட தயாரிப்பு பக்கங்களுடன் 16 திறமைப் பகுதிகள்",
 };
 const S3_INTRO: LocaleStr = {
-  en: "Across 147 schools, talent categories cluster into eight families. We're building one deep-prep page per category — basketball is live, the rest follow weekly. Click any tile to open the prep page or see which schools accept that talent.",
-  zh: "147 所学校的才艺方向归到 8 大类。我们正在每个方向出一篇深度备战指南——篮球已上线，其余每周陆续上线。点击任意卡片打开备战页或查看哪些学校接受这个方向。",
-  ms: "Merentas 147 sekolah, kategori bakat berkumpul dalam lapan keluarga. Kami sedang membina satu halaman persediaan mendalam setiap kategori — bola keranjang sudah ada, yang lain mingguan.",
-  ta: "147 பள்ளிகளில், திறமை வகைகள் எட்டு குடும்பங்களாகக் குழுவாக உள்ளன. ஒவ்வொரு வகைக்கும் ஒரு ஆழமான தயாரிப்பு பக்கத்தை உருவாக்குகிறோம் — கூடைப்பந்து வெளியீடு, மற்றவை வாரந்தோறும்.",
+  en: "Across 147 schools, DSA talent areas span sports, performing arts, visual arts, language, STEM, and leadership. We've built one deep-prep page per talent — all 16 are live, each with trial format breakdown, sample interview questions, and the schools that accept that talent. Click any tile to open the prep page.",
+  zh: "147 所学校的 DSA 才艺涵盖体育、表演艺术、视觉艺术、语言、数理、领导力。每个 talent 一篇深度备战指南——全部 16 篇已上线，含 trial 格式拆解、面试样题、招生学校。点击任意卡片打开备战页。",
+  ms: "Merentas 147 sekolah, bidang bakat DSA merangkumi sukan, seni persembahan, seni visual, bahasa, STEM, dan kepimpinan. Kami telah membina satu halaman persediaan mendalam setiap bakat — kesemua 16 telah disiarkan.",
+  ta: "147 பள்ளிகளில், DSA திறமைப் பகுதிகள் விளையாட்டு, நிகழ்த்துக் கலைகள், காட்சிக் கலை, மொழி, STEM மற்றும் தலைமைத்துவம் ஆகியவற்றை உள்ளடக்கியது. ஒவ்வொரு திறமைக்கும் ஒரு ஆழமான தயாரிப்புப் பக்கம் — அனைத்து 16 பக்கங்களும் வெளியீடு.",
 };
 
 const TALENTS = [
   { slug: "basketball", icon: Goal, label: { en: "Basketball", zh: "篮球", ms: "Bola Keranjang", ta: "கூடைப்பந்து" }, live: true },
-  { slug: "football", icon: Trophy, label: { en: "Football", zh: "足球", ms: "Bola Sepak", ta: "கால்பந்து" }, live: false },
-  { slug: "swimming", icon: Waves, label: { en: "Swimming", zh: "游泳", ms: "Renang", ta: "நீச்சல்" }, live: false },
-  { slug: "track-field", icon: Footprints, label: { en: "Track & Field", zh: "田径", ms: "Olahraga", ta: "ஓட்டப்பந்தயம்" }, live: false },
-  { slug: "badminton", icon: Sparkles, label: { en: "Badminton", zh: "羽毛球", ms: "Badminton", ta: "இறகுப்பந்து" }, live: false },
-  { slug: "martial-arts", icon: Shield, label: { en: "Martial Arts", zh: "武术", ms: "Seni Bela Diri", ta: "தற்காப்பு கலைகள்" }, live: false },
-  { slug: "music", icon: Music2, label: { en: "Music", zh: "音乐", ms: "Muzik", ta: "இசை" }, live: false },
-  { slug: "math", icon: Calculator, label: { en: "Math & Sci", zh: "数理", ms: "Mat & Sains", ta: "கணிதம் & அறிவியல்" }, live: false },
+  { slug: "football", icon: Trophy, label: { en: "Football", zh: "足球", ms: "Bola Sepak", ta: "கால்பந்து" }, live: true },
+  { slug: "swimming", icon: Waves, label: { en: "Swimming", zh: "游泳", ms: "Renang", ta: "நீச்சல்" }, live: true },
+  { slug: "track-field", icon: Footprints, label: { en: "Track & Field", zh: "田径", ms: "Olahraga", ta: "ஓட்டப்பந்தயம்" }, live: true },
+  { slug: "badminton", icon: Sparkles, label: { en: "Badminton", zh: "羽毛球", ms: "Badminton", ta: "இறகுப்பந்து" }, live: true },
+  { slug: "martial-arts", icon: Shield, label: { en: "Martial Arts", zh: "武术", ms: "Seni Bela Diri", ta: "தற்காப்பு கலைகள்" }, live: true },
+  { slug: "hockey", icon: CircleDot, label: { en: "Hockey", zh: "曲棍球", ms: "Hoki", ta: "ஹாக்கி" }, live: true },
+  { slug: "squash", icon: Zap, label: { en: "Squash", zh: "壁球", ms: "Skuasy", ta: "ஸ்குவாஷ்" }, live: true },
+  { slug: "music", icon: Music2, label: { en: "Music", zh: "音乐", ms: "Muzik", ta: "இசை" }, live: true },
+  { slug: "dance", icon: Activity, label: { en: "Dance", zh: "舞蹈", ms: "Tarian", ta: "நடனம்" }, live: true },
+  { slug: "drama", icon: Drama, label: { en: "Drama", zh: "戏剧", ms: "Drama", ta: "நாடகம்" }, live: true },
+  { slug: "art", icon: Palette, label: { en: "Visual Arts", zh: "美术", ms: "Seni Visual", ta: "காட்சிக் கலை" }, live: true },
+  { slug: "robotics", icon: Cpu, label: { en: "Robotics", zh: "机器人", ms: "Robotik", ta: "ரோபோடிக்ஸ்" }, live: true },
+  { slug: "math", icon: Calculator, label: { en: "Math & Sci", zh: "数理", ms: "Mat & Sains", ta: "கணிதம் & அறிவியல்" }, live: true },
+  { slug: "chinese", icon: Languages, label: { en: "Chinese (CLE)", zh: "高级华文", ms: "Bahasa Cina", ta: "சீன மொழி" }, live: true },
+  { slug: "leadership", icon: Crown, label: { en: "Leadership", zh: "领导力", ms: "Kepimpinan", ta: "தலைமைத்துவம்" }, live: true },
 ] as const;
 
 const LIVE_BADGE: LocaleStr = {

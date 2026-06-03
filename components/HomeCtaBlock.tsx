@@ -210,7 +210,7 @@ export function HomeCtaBlock() {
                     { value: t.ctaTrustPersonalVal, label: t.ctaTrustPersonalLabel },
                   ]
                 : [
-                    { value: "8", label: locale === "zh" ? "项目页" : locale === "ms" ? "halaman bakat" : locale === "ta" ? "திறமை பக்கங்கள்" : "talent pages" },
+                    { value: "16", label: locale === "zh" ? "项目页" : locale === "ms" ? "halaman bakat" : locale === "ta" ? "திறமை பக்கங்கள்" : "talent pages" },
                     { value: "35+", label: locale === "zh" ? "面试样题" : locale === "ms" ? "soalan contoh" : locale === "ta" ? "மாதிரிக் கேள்விகள்" : "sample questions" },
                     { value: locale === "zh" ? "免费" : locale === "ms" ? "Percuma" : locale === "ta" ? "இலவசம்" : "Free", label: locale === "zh" ? "4 种语言" : locale === "ms" ? "empat bahasa" : locale === "ta" ? "நான்கு மொழிகள்" : "four languages" },
                   ]

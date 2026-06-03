@@ -21,10 +21,10 @@ const TITLE: LocaleStr = {
 };
 
 const BODY: LocaleStr = {
-  en: "9 chapters · 6 parent stories · 8 talent areas · the 2026 timeline · interview prep · 12-question FAQ · all four languages.",
-  zh: "9 章节 · 6 家长故事 · 8 才艺方向 · 2026 时间线 · 面试备战 · 12 个常见问题 · 4 语言全覆盖。",
-  ms: "9 bab · 6 kisah ibu bapa · 8 bidang bakat · garis masa 2026 · persediaan temu duga · FAQ 12 soalan · empat bahasa.",
-  ta: "9 அத்தியாயங்கள் · 6 பெற்றோர் கதைகள் · 8 திறமைப் பகுதிகள் · 2026 கால அட்டவணை · நேர்காணல் தயாரிப்பு · 12-கேள்வி FAQ · நான்கு மொழிகள்.",
+  en: "9 chapters · 6 parent stories · 16 talent areas · the 2026 timeline · interview prep · 12-question FAQ · all four languages.",
+  zh: "9 章节 · 6 家长故事 · 16 才艺方向 · 2026 时间线 · 面试备战 · 12 个常见问题 · 4 语言全覆盖。",
+  ms: "9 bab · 6 kisah ibu bapa · 16 bidang bakat · garis masa 2026 · persediaan temu duga · FAQ 12 soalan · empat bahasa.",
+  ta: "9 அத்தியாயங்கள் · 6 பெற்றோர் கதைகள் · 16 திறமைப் பகுதிகள் · 2026 கால அட்டவணை · நேர்காணல் தயாரிப்பு · 12-கேள்வி FAQ · நான்கு மொழிகள்.",
 };
 
 const READ: LocaleStr = {
@@ -51,7 +51,7 @@ const CHAPTERS_HEADING: LocaleStr = {
 const CHAPTERS: ReadonlyArray<LocaleStr> = [
   { en: "What DSA actually is", zh: "DSA 是什么", ms: "Apakah DSA", ta: "DSA என்றால் என்ன" },
   { en: "Six family pathways", zh: "六条家庭路径", ms: "Enam laluan keluarga", ta: "ஆறு குடும்ப பாதைகள்" },
-  { en: "8 talent categories", zh: "8 大才艺方向", ms: "8 kategori bakat", ta: "8 திறமை வகைகள்" },
+  { en: "16 talent areas", zh: "16 才艺方向", ms: "16 bidang bakat", ta: "16 திறமைப் பகுதிகள்" },
   { en: "The 147 schools", zh: "147 所学校", ms: "147 sekolah", ta: "147 பள்ளிகள்" },
   { en: "2026 timeline", zh: "2026 时间线", ms: "Garis masa 2026", ta: "2026 கால அட்டவணை" },
   { en: "Interview prep", zh: "面试备战", ms: "Persediaan temu duga", ta: "நேர்காணல் தயாரிப்பு" },

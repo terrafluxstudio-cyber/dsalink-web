@@ -6,7 +6,7 @@ import { getSiteUrl } from "@/lib/seo";
 const PAGE_TITLE =
   "DSA Singapore Guide 2026 | Direct School Admission Complete Guide | DSALink";
 const PAGE_DESCRIPTION =
-  "The complete Singapore DSA-Sec guide — what Direct School Admission is, the 2019 reforms, the 8 talent categories, 147 participating schools, the 2026 application timeline, interview prep, and how outcomes work. Built for P5/P6 families.";
+  "The complete Singapore DSA-Sec guide — what Direct School Admission is, the 2019 reforms, 16 talent prep pages, 147 participating schools, the 2026 application timeline, interview prep, and how outcomes work. Built for P5/P6 families.";
 
 const ogImage = {
   url: "/opengraph-image",
