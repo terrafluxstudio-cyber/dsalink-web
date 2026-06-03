@@ -2108,7 +2108,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     },
     rich: {
       trialDimensionsIntro: {
-        en: "Music DSA splits into two distinct tracks. The MEP (Music Elective Programme) route runs at five MOE-designated schools — ACS(I), Dunman High, Methodist Girls', Nanyang Girls', and Raffles Girls' — and uses a standardised audition built around two contrasting pieces, sight-reading, aural, and an interview. The non-MEP route runs at many more schools (RI, HCI, Catholic High, Nan Hua, SCGS and others) as a CCA-based DSA talent area — often with the school's symphonic band, Chinese orchestra, or choir. ABRSM Grade 8 practical is widely treated as the MEP benchmark by families, but MOE does not publish a formal grade requirement; non-MEP schools regularly accept Grade 5 to 6. What separates an offer from a polite rejection is rarely the certificate — it's how the candidate plays in the room, sight-reads cleanly, and articulates why music in five sentences of interview.",
+        en: "Music DSA splits into two distinct tracks. The MEP (Music Elective Programme) route runs at five MOE-designated schools — ACS(I), Dunman High, Methodist Girls', Nanyang Girls', and Raffles Girls' — and uses a standardised audition built around two contrasting pieces, sight-reading, aural, and an interview. The non-MEP route runs at many more schools (RI, HCI, Catholic High, Nan Hua, SCGS and others) as a CCA-based DSA talent area — often with the school's symphonic band, Chinese orchestra, or choir. Prepared-piece requirements vary sharply by ensemble: **Chinese Orchestra** — two contrasting pieces on the candidate's instrument, total time capped at five minutes, plus sight-read from the conductor (BPGHS / Victoria 2026 briefs); **Concert Band** — two contrasting pieces plus all 12 major scales (Victoria) or four named keys plus sight-read (BPGHS), with the audition slot reaching 45 minutes; **String Ensemble** — two contrasting solo pieces, no accompaniment (Victoria); **Guitar Ensemble** — one solo on classical guitar, under five minutes, plus sight-read (Victoria); **Choir** — no prepared song required, vocal-testing exercise conducted by the choir master plus interview (Victoria 2026 explicitly). ABRSM Grade 8 practical is widely treated as the MEP benchmark by families, but MOE does not publish a formal grade requirement; non-MEP schools regularly accept Grade 5 to 6. What separates an offer from a polite rejection is rarely the certificate — it's how the candidate plays in the room, sight-reads cleanly, and articulates why music in five sentences of interview.",
       },
       trialDimensions: [
         {
@@ -3430,7 +3430,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     },
     rich: {
       trialDimensionsIntro: {
-        en: "Most school dance auditions in Singapore run 90–120 minutes and follow a similar structure: warm-up and floor work led by the school's dance teacher, a short follow-the-leader sequence to test pick-up speed, an applicant's prepared solo (60–90 seconds), and a short interview. SOTA and the SSP (Singapore Schools' Special Programme — for dance) audition is more rigorous: multi-round, with classical technique and improvisation tested separately. No school publishes a rubric, but observations from past Singapore Youth Festival (SYF) Arts Presentation judges and parent reports converge on the six dimensions below.",
+        en: "Most school dance auditions in Singapore run 90–120 minutes and follow a similar structure: warm-up and floor work led by the school's dance teacher, a short follow-the-leader sequence to test pick-up speed, an applicant's prepared solo (typically 1–2 minutes — Victoria School caps it at one minute, Tang Dance Academy reports 1–2 minutes as the working range for Chinese Dance, SOTA expects two contrasting pieces across multiple rounds), and a short interview. The solo is your only fully-controlled segment — every other component is the school's call. SOTA and the SSP (Singapore Schools' Special Programme — for dance) audition is more rigorous: multi-round, with classical technique and improvisation tested separately. No school publishes a full rubric, but observations from past Singapore Youth Festival (SYF) Arts Presentation judges and parent reports converge on the six dimensions below.",
       },
       trialDimensions: [
         {
@@ -3672,7 +3672,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           label: { en: "Lead time — when the audition is still weeks out" },
           items: [
             {
-              en: "Choose the audition solo carefully. A 60-90 second excerpt your child has performed publicly is safer than a piece they're still rehearsing. Panels see many auditionees attempt material above their level. Clean execution of age-appropriate choreography always outscores stumbling through harder material.",
+              en: "Choose the audition solo carefully. A 1–2 minute excerpt your child has performed publicly is safer than a piece they're still rehearsing — and confirm the cap (Victoria School: one minute; most others: up to two). Panels see many auditionees attempt material above their level. Clean execution of age-appropriate choreography always outscores stumbling through harder material.",
             },
             {
               en: "Confirm CCA records at primary school. MOE pulls CCA participation, school awards, SYF Arts Presentation results, and external achievements (graded examinations such as RAD or ISTD, NAFA / SOTA junior programme alumni status, recognised festival or showcase performances) into the DSA portal. Incomplete records hurt the application — ask the CCA teacher to verify what's been logged.",
@@ -3754,7 +3754,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     },
     rich: {
       trialDimensionsIntro: {
-        en: "Drama auditions in Singapore secondary schools typically run 60–90 minutes for the audition itself, plus a short interview. The standard structure: a prepared monologue (60–90 seconds, often two contrasting pieces at SOTA), a short ensemble or paired improvisation, and a sight-reading from a text the panel provides on the day. SOTA's Theatre programme is the only published multi-round audition format. SYF Arts Presentation Drama judges and parent reports across cycles converge on the six dimensions below.",
+        en: "Drama auditions in Singapore secondary schools typically run 60–90 minutes for the audition itself, plus a short interview. Format varies more by school than any other talent area. Two patterns: (1) the **self-prepared route** (SOTA, ACS(I), MGS, RGS, most schools) — applicant brings one or two contrasting monologues, 60–90 seconds each, plus short ensemble or paired improvisation and a sight-read on the day; (2) the **school-provided route** (Victoria School publishes this for 2026 — 500-word personal statement submitted in advance, then a 6–7 minute scene the school provides for the shortlisted applicant to perform live, plus interview). Check each target school's brief carefully — assuming \"prepared monologue\" applies everywhere is the most common P6 misread. SYF Arts Presentation Drama judges and parent reports across cycles converge on the six dimensions below.",
       },
       trialDimensions: [
         {
@@ -3821,7 +3821,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
         },
       ],
       positionFocusNote: {
-        en: "Schools vary which components they emphasise. SOTA's audition is the most structured and includes all four. ACS(I), VS, MGS, and RGS typically use monologue plus a short ensemble or interview-format scene. Nanyang Girls' and other SAP schools with Chinese-language drama programmes may include a Mandarin-language piece option.",
+        en: "Schools vary which components they emphasise — and some don't use monologues at all. SOTA's audition is the most structured and includes all four (two prepared monologues, ensemble, improv, sight-read across multiple rounds). ACS(I), MGS, RGS typically use one or two prepared monologues plus a short ensemble or interview-format scene. Victoria School's 2026 brief takes a different route entirely: a 500-word personal statement submitted in advance, followed by a 6–7 minute scene the school provides live. Nanyang Girls' and other SAP schools with Chinese-language drama programmes may include a Mandarin-language piece option. Read every target school's 2026 audition brief before committing rehearsal time to a self-chosen monologue.",
       },
       interviewQuestions: [
         {
@@ -4078,7 +4078,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     },
     rich: {
       trialDimensionsIntro: {
-        en: "Visual Arts DSA-Sec auditions in Singapore typically combine three components: a portfolio review (8–15 works submitted in advance or brought on the day), an on-spot drawing or observation task (45–90 minutes), and a short interview about the portfolio. SOTA's Visual Arts audition is the most structured — multi-round, with a written component plus practical work. Other schools (ACS(I), NYGH, MGS, CHIJ St Nicholas, Nan Hua) typically run the three components in a single half-day. No school publishes its rubric, but published guidelines from SOTA and parent reports across cycles converge on the six dimensions below.",
+        en: "Visual Arts DSA-Sec auditions in Singapore typically combine three components: a portfolio review (8–15 works — most schools accept either advance digital submission or works brought on the day; check each target school's brief, as some require both), an on-spot drawing or observation task (45–90 minutes), and a short interview about the portfolio. SOTA's Visual Arts audition is the most structured — multi-round, with a written reflection plus practical work in addition to the portfolio review. Other schools (ACS(I), NYGH, MGS, CHIJ St Nicholas, Nan Hua) typically run the three components in a single half-day. The portfolio is the only fully-controlled segment — the on-spot task and interview prompts are the school's call, so curate the 10–12 strongest pieces (more is not better) and bring the actual sketchbook with messy process pages, not a curated print-out. No school publishes a full rubric, but published guidelines from SOTA and parent reports across cycles converge on the six dimensions below.",
       },
       trialDimensions: [
         {
