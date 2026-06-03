@@ -35,7 +35,8 @@ export type TalentSlug =
   | "wushu"
   | "water-polo"
   | "sailing"
-  | "rugby";
+  | "rugby"
+  | "symphonic-band";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -9197,6 +9198,369 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  "symphonic-band": {
+    slug: "symphonic-band",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Symphonic Band", zh: "管乐团", ms: "Pancaragam Simfoni", ta: "சிம்போனிக் இசைக்குழு" },
+    hook: {
+      en: "Symphonic Band DSA — auditions reward tone production and scale fluency, with most schools running a 2-piece + scales + sight-read format in a 30-45 minute slot.",
+      zh: "管乐团 DSA——招生看音色与音阶熟练度，多数学校采用 2 曲 + 音阶 + 视奏的 30-45 分钟格式",
+      ms: "DSA Pancaragam Simfoni — uji bakat menghargai penghasilan ton dan kefasihan skala, dengan kebanyakan sekolah menjalankan format 2-keping + skala + baca-pandang dalam slot 30-45 minit.",
+      ta: "சிம்போனிக் இசைக்குழு DSA — ஒலி உருவாக்கம் மற்றும் ஸ்கேல் சரளத்தை மதிக்கிறது, பெரும்பாலான பள்ளிகள் 30-45 நிமிட இடைவெளியில் 2-துண்டு + ஸ்கேல் + பார்த்து வாசிக்கும் வடிவத்தைப் பயன்படுத்துகின்றன.",
+    },
+    intro: {
+      en: "Symphonic Band is one of Singapore's most universally offered school music DSA talents — nearly every major IP school plus a long list of strong non-IP schools run competitive bands. The audition format is unusually structured (compared to other DSA musical talents): two contrasting prepared pieces on the candidate's instrument, all 12 major scales (Victoria School format) or 4 named Concert keys — Bb / Eb / Ab / Db (BPGHS format), plus a sight-read passage, in a 30-45 minute audition slot. Tone production, scale accuracy, and the under-recruited instruments (oboe, bassoon, French horn, tuba) are the levers that most reliably convert into offers.",
+      zh: "管乐团是新加坡最普及的中学音乐 DSA 才艺之一——几乎所有主要 IP 校加上一长串强非 IP 校都有竞争力强的乐团。招生格式比其他音乐类 DSA 更结构化：本乐器 2 首对比曲 · 全部 12 个大调音阶（Victoria 格式）或 4 个指定 Concert 调 Bb/Eb/Ab/Db（BPGHS 格式）· 加视奏 · 30-45 分钟时段。音色、音阶准确、以及稀缺乐器（双簧管、巴松、圆号、大号）是最容易拿到 offer 的杠杆点。",
+      ms: "Pancaragam Simfoni adalah antara DSA muzik sekolah paling meluas. Format luar biasa berstruktur: dua keping berbeza pada instrumen calon, 12 skala besar atau 4 kekunci Concert yang dinamakan, ditambah baca-pandang, dalam slot 30-45 minit.",
+      ta: "சிம்போனிக் இசைக்குழு பரந்த DSA இசை திறமை. வடிவம் கட்டமைக்கப்பட்டுள்ளது: இரண்டு வேறுபட்ட துண்டுகள், 12 முக்கிய ஸ்கேல்கள் அல்லது 4 பெயரிடப்பட்ட Concert கீகள், மற்றும் பார்த்து வாசிக்கும் பகுதி, 30-45 நிமிட இடைவெளியில்.",
+    },
+    summary: {
+      en: "Audition requirements (2 pieces + scales + sight-read), instrument-specific profiles, interview questions, schools with strong Symphonic Band programmes.",
+      zh: "招生格式（2 曲 + 音阶 + 视奏）、乐器分析、面试题、管乐团强校。",
+      ms: "Keperluan uji bakat, profil instrumen, soalan temu duga, sekolah pancaragam terkemuka.",
+      ta: "தேர்வுத் தேவைகள், கருவி வகைகள், கேள்விகள், பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Anglo-Chinese School (Independent)",
+      "Victoria School",
+      "Raffles Institution",
+      "Hwa Chong Institution",
+      "Methodist Girls' School (Secondary)",
+      "Bukit Panjang Government High School",
+    ],
+    metaDescription: {
+      en: "Symphonic Band DSA-Sec audition guide for Singapore P6 — 2-piece + scales + sight-read format, instrument-specific advice, SYF-active participating schools.",
+      zh: "新加坡 P6 管乐团 DSA-Sec audition 指南——2 曲 + 音阶 + 视奏格式、各乐器细节、SYF 活跃学校。",
+      ms: "Panduan uji bakat DSA-Sec Pancaragam Simfoni Singapura — format, kriteria, soalan, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 சிம்போனிக் இசைக்குழு DSA-Sec வழிகாட்டி — வடிவம், அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      preparedPiece: {
+        intro: {
+          en: "Symphonic Band auditions in Singapore are unusually structured compared to other music DSAs. Victoria School's published 2026 brief asks for all 12 major scales (one octave minimum, two octaves preferred for wind players); BPGHS asks for 4 named Concert keys (Bb, Eb, Ab, Db). Both schools require two contrasting prepared pieces and a sight-read. The audition slot itself can run 30 minutes (typical) up to 45 minutes (Victoria, ACS(I)). Confirm each target school's specific scale requirement and slot length before locking repertoire.",
+        },
+        entries: [
+          {
+            variant: { en: "Full 12-scale format — Victoria School" },
+            requirement: { en: "Two contrasting pieces on your instrument · ALL 12 major scales (minimum one octave; two octaves preferred for wind players) · plus sight-read · audition slot up to 45 minutes" },
+            source: { en: "Victoria School DSA 2026 brief — explicit 12-scale and 45-minute slot requirements." },
+          },
+          {
+            variant: { en: "4-key format — BPGHS" },
+            requirement: { en: "Two contrasting pieces on your instrument · 4 named Concert keys (Bb, Eb, Ab, Db) · plus sight-read · 30-minute audition slot typical" },
+            source: { en: "BPGHS DSA 2026 brief — explicit 4-key Concert pitch requirement." },
+          },
+          {
+            variant: { en: "ABRSM-graded format — most IP schools (ACS(I), RI, HCI, MGS)" },
+            requirement: { en: "Two contrasting pieces (often Baroque + Romantic or fast + lyrical) · scales as per the candidate's ABRSM grade · plus sight-read at one grade below the candidate's level · plus interview" },
+            source: { en: "Convention across IP schools that recruit MEP-pathway and band-track candidates; not a single published source." },
+          },
+          {
+            variant: { en: "Percussion specialists" },
+            requirement: { en: "Mallet piece on marimba or xylophone (showing two-mallet technique minimum, four-mallet preferred for advanced candidates) · plus snare drum piece (rudimental) · plus timpani if available · plus sight-read on a chosen percussion family" },
+            source: { en: "Convention across Singapore school symphonic bands; aligns with PAS (Percussive Arts Society) youth examination format." },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A private instrumental coach can verify the contrasting pair choice, drill the requested scale set to fluency, polish the opening 30 seconds of each piece (where the panel listens most carefully), and run sight-reading drills at audition difficulty. Coaches who play the same instrument and have prepared students for IP-school band auditions are especially valuable. Browse our coach directory for band-instrument specialists.",
+        },
+      },
+      trialDimensionsIntro: {
+        en: "Singapore Symphonic Band auditions are conducted by the school's head band director (often a Singapore Armed Forces Music & Drama Company alumnus, conservatory-trained musician, or external SYF adjudicator) plus the teacher-in-charge of CCAs. The structure across schools is more uniform than other music DSAs: prepared pieces, scales (or named-key arpeggios), sight-read, and a short interview. The audition slot can run 30-45 minutes per candidate — longer than most music auditions. Six dimensions emerge from public DSA briefs (Victoria School, BPGHS, ACS(I)) and Singapore conservatory youth examination frameworks.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Tone production on the instrument" },
+          body: {
+            en: "The single most-listened-for element. On wind instruments, directors listen for embouchure stability, steady airflow, and a centered tone across registers. On brass, directors check whether the lip vibration is supported by the abdomen rather than forced. On percussion, directors listen for stick height consistency on mallets and clean rebounds on snare. A clean tone on a Grade 5-6 piece reads better than a struggling tone on a Grade 7-8 piece — choose repertoire your child can produce a beautiful sound on.",
+          },
+        },
+        {
+          label: { en: "Scale and arpeggio fluency in the requested set" },
+          body: {
+            en: "What separates a Symphonic Band audition from other music DSAs is the scale battery — 12 major scales (Victoria) or 4 named keys (BPGHS) are not optional. Directors listen for tempo consistency (no slow-down at the top of the scale), evenness of articulation, and intonation across the range. The most common P6 failure mode is freezing in the middle of a scale because of one missed accidental; daily practice at audition tempo is the cure. Scale fluency at audition signals years of disciplined practice in a way no piece can.",
+          },
+        },
+        {
+          label: { en: "Technical command on the two contrasting pieces" },
+          body: {
+            en: "Both pieces should be from different musical territories — Baroque + Romantic, or fast + lyrical. Directors listen for accuracy at tempo, articulation differences, and dynamic range. A confidently-played Grade 5 piece reads better than a struggling Grade 7 piece. Choose pieces that show two distinct technical layers — slurred legato in one and tongued staccato runs in the other — so the panel hears the candidate's range.",
+          },
+        },
+        {
+          label: { en: "Sight-reading on the instrument" },
+          body: {
+            en: "Directors typically set sight-reading at one grade below the candidate's playing level — a passage of 16-24 bars with 30-60 seconds to review, then play through. What directors watch is not whether every note is right, but whether the candidate keeps tempo, gets the rhythmic structure, and recovers from a mistake without stopping. Daily sight-read practice for six months before the audition is the single highest-leverage prep that converts uncertain candidates into confirmed offers.",
+          },
+        },
+        {
+          label: { en: "Section-fit signal — instrument balance reading" },
+          body: {
+            en: "Band directors recruit for section balance, not just for individual talent. The cleanest tell of a P6 candidate's section-fit is the willingness to mention if you play a less common instrument (oboe, bassoon, French horn, double bass, contrabass clarinet, baritone sax, tuba, euphonium, percussion). Schools actively seek candidates on these instruments because most every band has too many clarinets and flutes already. A P6 who has explored an under-recruited instrument is a high-leverage offer signal.",
+          },
+        },
+        {
+          label: { en: "Stage presence and composure" },
+          body: {
+            en: "How the candidate walks in, bows or nods at the panel, sets up the instrument calmly (cleaning the mouthpiece, drying the pad on wet conditions, warming up the embouchure briefly), and recovers from a slip. Panels remember the candidate who restarted a piece calmly more vividly than the one who played a flawless first half and crumbled. Film a mock audition and watch the entrance and the first 15 seconds twice; that's where most marks are won or lost before a note is played.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Woodwinds — flute, clarinet, saxophone (over-recruited)" },
+          body: {
+            en: "The most over-recruited section by a wide margin. Directors hear dozens of strong flutists and clarinetists in every audition cycle. Repertoire choice and scale fluency matter more on these instruments than on any other — choose pieces that show polyphonic clarity or technical agility, not pieces every other candidate plays this cycle. A flutist with clean Grade 7 repertoire and 12-scale fluency outscores another with stronger Grade 8 repertoire but inconsistent scales.",
+          },
+        },
+        {
+          position: { en: "Woodwinds — oboe, bassoon (under-recruited, premium recruit)" },
+          body: {
+            en: "Schools actively seek oboe and bassoon candidates because these instruments are essential for symphonic band repertoire but few primary-school students study them. A clean Grade 5-6 oboe candidate is recruited ahead of a strong Grade 8 flute candidate in many years. If your child plays oboe or bassoon, name the instrument explicitly in the application — that information shapes which schools fast-track the file.",
+          },
+        },
+        {
+          position: { en: "Brass — trumpet (over-recruited), French horn / euphonium / tuba (under-recruited)" },
+          body: {
+            en: "Trumpet is the over-recruited brass instrument; French horn, euphonium, and tuba are under-recruited and treated as premium recruits. Directors assess embouchure consistency across the range, accuracy on the upper register (the high notes), and breath control on long phrases. A P6 candidate on French horn with a clean Grade 5-6 piece is one of the most-sought audition profiles in Singapore school bands.",
+          },
+        },
+        {
+          position: { en: "Percussion — multi-instrument specialists" },
+          body: {
+            en: "Most school symphonic bands have 3-6 percussion positions per generation, requiring candidates who can credibly play multiple percussion families — mallet (marimba / xylophone), snare drum, timpani, and auxiliary (cymbals, bass drum, tambourine, triangle). Coaches assess versatility explicitly. A P6 candidate who has practiced four-mallet marimba technique alongside rudimental snare is recruited aggressively because percussion versatility is rare at primary level.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Singapore school Symphonic Band at P6 audition level does not lock a candidate to one instrument — but the instrument the candidate auditions on will be the section they join in Sec 1. If your child plays a less common instrument (oboe, bassoon, French horn, tuba, contrabass clarinet, baritone sax), name it explicitly in the application; school recruitment frequently fast-tracks files based on instrument scarcity alone, often ahead of more polished candidates on common instruments.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love Symphonic Band?" },
+          subtext: {
+            en: "Panels want a specific moment, not a feeling. \"I like music\" reads as untrained motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory — a piece, a performance, a section moment — then connect it to character.",
+          },
+          template: {
+            en: "We played Holst's First Suite in E-flat at our primary-school SYF and the brass entry in the second movement was the first time I felt how 30 instruments could speak as one voice. After that I started listening to band recordings on the bus — that's when I realised the section's blend is more interesting to me than my own solo line.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the band programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's band — a director's name, an SYF result, the repertoire pattern.",
+          },
+          template: {
+            en: "ACS(I)'s Symphonic Band trains four times a week, plays at SYF Distinction level, and the director's commitment to commissioned new works (not just standard repertoire) is exactly the musical environment I want.",
+          },
+        },
+        {
+          question: { en: "What is your instrument and why?" },
+          subtext: {
+            en: "Can the candidate articulate the instrument, not just label it?",
+          },
+          approach: {
+            en: "Name the instrument plus what playing it asks of you.",
+          },
+          template: {
+            en: "French horn. My job is the section that has to play both the low brass bass line and the high lyrical line, and I love that switching range demands different embouchure within the same piece. I picked it because my primary-school music teacher said my ear was steady and the French horn is the instrument where intonation is the hardest skill to develop.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I failed Grade 5 ABRSM on aural last year because I'd never practised echoing a melodic line systematically. I worked on aural every morning for ten minutes for four months. I passed Grade 5 the second time and started Grade 6 immediately — and my band-section listening improved noticeably.",
+          },
+        },
+        {
+          question: { en: "Who is your favourite composer or piece, and why?" },
+          subtext: {
+            en: "Tests musical vocabulary specifically for band repertoire.",
+          },
+          approach: {
+            en: "Name the piece plus one specific musical element you can describe (orchestration, rhythmic structure, key colour).",
+          },
+          template: {
+            en: "Eric Whitacre's October — because the way he opens with the woodwinds layered in fifths creates a sense of stillness that's then disrupted by the brass entry. I asked my band teacher how that orchestration choice works; the answer was about how the harmonic series of the brass cuts through the woodwind blend.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent rehearsals?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I finish English and Math homework before practice because the embouchure is too tired after. Science I do on weekends. My mother shows my report book to my band director every term — if any subject drops a band, we cut one practice. That's the rule we set together.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your band's emphasis on commissioned new works matches what I love most. If School A called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Symphonic Band (Boys), IP" },
+          context: {
+            en: "IP school with one of Singapore's most decorated school band programmes. Multi-year SYF Distinction record. Among ACS(I)'s published DSA talent areas with structured audition process.",
+          },
+        },
+        {
+          name: "Victoria School",
+          url: "https://www.victoriaschool.moe.edu.sg/",
+          talentArea: { en: "Symphonic Band (Boys), IP / DSA-Sec" },
+          context: {
+            en: "Heritage boys' school. Victoria's 2026 DSA brief explicitly lists the audition requirements: 2 contrasting pieces + 12 major scales + sight-read + 45-minute audition slot.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/dsa-sec",
+          talentArea: { en: "Symphonic Band (Boys), IP" },
+          context: {
+            en: "IP school. Symphonic Band among RI's published DSA performing-arts domain criteria. Multi-year SYF Distinction record.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Symphonic Band (Boys), IP" },
+          context: {
+            en: "IP school. Among HCI's published DSA talent areas. Sustained SYF Distinction record.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.moe.edu.sg/secondary/admissions/dsa-sec1/",
+          talentArea: { en: "Symphonic Band (Girls), DSA-Sec" },
+          context: {
+            en: "Methodist heritage girls' school. Symphonic Band among MGS's recognised DSA talent areas. Sustained SYF presence.",
+          },
+        },
+        {
+          name: "Bukit Panjang Government High School",
+          url: "https://www.bpghs.moe.edu.sg/dsa-2026/",
+          talentArea: { en: "Symphonic Band (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "BPGHS publishes a detailed DSA 2026 brief explicitly listing Symphonic Band audition requirements: 2 contrasting pieces + 4 named Concert keys (Bb / Eb / Ab / Db) + sight-read.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Symphonic Band (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "SAP school. Symphonic Band among Dunman's 2026 DSA FAQ talent areas, both boys' and girls' divisions.",
+          },
+        },
+        {
+          name: "Anglican High School",
+          url: "https://www.anglicanhigh.moe.edu.sg/",
+          talentArea: { en: "Symphonic Band (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "Anglican heritage school. Symphonic Band among recognised DSA talent areas; sustained SYF participation.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/Admission-to-RGS/via-DSA/",
+          talentArea: { en: "Symphonic Band (Girls), IP" },
+          context: {
+            en: "IP school. Symphonic Band among RGS's recognised DSA talent areas; published in the 2026 Information on Application brief.",
+          },
+        },
+        {
+          name: "CHIJ St. Nicholas Girls' School",
+          url: "https://stnicholasgirls.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Symphonic Band (Girls), IP / DSA-Sec" },
+          context: {
+            en: "SAP girls' school. Symphonic Band among CHIJ St. Nick's IP and O Level DSA talent areas. Multi-year SYF presence.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the audition is still weeks out" },
+          items: [
+            {
+              en: "Confirm each target school's specific scale requirement. Victoria asks for all 12 major scales; BPGHS asks for 4 named Concert keys. Download each target school's 2026 DSA brief and lock the scale set tonight — daily practice for at least 8 weeks is the standard requirement.",
+            },
+            {
+              en: "Choose the contrasting pair early. The strongest pairing is one lyrical Romantic piece (showing tone and musicality) + one technical fast piece (showing articulation and finger / valve agility). Confirm with your child's instrument teacher — a piece that exposes your child's intonation weakness across a 4-octave range is the most common audition mistake.",
+            },
+            {
+              en: "Practise sight-reading daily for ten minutes at audition difficulty. Use the conservatory standard for your instrument; ABRSM sight-reading at one grade below the candidate's level is a useful proxy. Daily exposure builds the confidence that converts strong players into offers.",
+            },
+            {
+              en: "If your child plays an under-recruited instrument (oboe, bassoon, French horn, tuba, contrabass clarinet, baritone sax), confirm the application explicitly names this instrument. Schools fast-track files based on instrument scarcity.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: opening 30 seconds of each piece, the scale set at audition tempo, light sight-read practice. No new technical work. Final-week note-changes almost never end well.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue (often the school's band room or hall), attire (school uniform or smart casual; bring the instrument and any required accessories — reeds for wind players, mallets for percussion, valve oil for brass). Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "For wind players: confirm the reed (clarinet, saxophone, oboe, bassoon) has been played in for at least 5-7 sessions before audition day. A new reed on audition day is the single most common P6 woodwind disaster.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of audition" },
+          items: [
+            {
+              en: "Arrive 60 minutes early. Warm up properly — long tones, scale set at half tempo, opening 16 bars of each piece. Do not over-rehearse the full pieces — the audition is the performance.",
+            },
+            {
+              en: "Eat 90 minutes before — not 30. Avoid acidic foods or anything that affects mouth pH for woodwind / brass players. Hydrate but not immediately before.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the director said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, audition coming up, no real prep — there are still real moves. Lock in the contrasting pair tonight (don't change pieces this week) and prioritise the scale set. Run 10-minute scale drills twice per day plus 10-minute sight-read drills. Cancel anything that competes with sleep and embouchure recovery. Spend the freed time on interview prep above, because that's the only part where a few hours can still meaningfully change the outcome. Some families bring in a private instrumental coach at this stage. A good private coach can drill scales to fluency, polish the opening 30 seconds of each piece, and run sight-read drills at the correct difficulty — but no coach produces, in three sessions, the tone of a year of daily long-tone practice. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -9227,6 +9591,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "water-polo",
   "sailing",
   "rugby",
+  "symphonic-band",
 ];
 
 /**
@@ -9269,6 +9634,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   "water-polo": ["swimming", "basketball"],
   sailing: ["swimming", "track-field"],
   rugby: ["football", "track-field"],
+  "symphonic-band": ["music", "chinese-orchestra"],
 };
 
 /**
