@@ -27,7 +27,8 @@ export type TalentSlug =
   | "leadership"
   | "volleyball"
   | "table-tennis"
-  | "netball";
+  | "netball"
+  | "floorball";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -6503,6 +6504,330 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  floorball: {
+    slug: "floorball",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Floorball", zh: "旱地冰球", ms: "Floorball", ta: "புளோர்பால்" },
+    hook: {
+      en: "Floorball DSA — trials reward stick-skill consistency and defensive transition, not just how hard the shot rips.",
+      zh: "旱地冰球 DSA——trial 奖励持杆稳定性和防守转换，不只看射门力量",
+      ms: "DSA Floorball — trial menghargai konsistensi kemahiran kayu dan peralihan pertahanan, bukan hanya kekuatan tembakan.",
+      ta: "புளோர்பால் DSA — சோதனை குச்சி திறமை நிலைத்தன்மையும் பாதுகாப்பு மாற்றத்தையும் மதிக்கிறது, ஷாட் சக்தியை மட்டுமே அல்ல.",
+    },
+    intro: {
+      en: "Floorball is one of Singapore's most evenly distributed school sports — 35 schools offer DSA in the talent and 53 carry it as a CCA, with strong programmes across boys' and girls' divisions in both IP and O Level streams. Singapore school floorball trials weigh stick handling at speed, passing under defensive pressure, shooting from realistic game positions, and — most heavily — the trialist's behaviour during the defensive transition (the half-second after losing the ball). Speed helps, but court intelligence is what coaches recruit for.",
+      zh: "旱地冰球是新加坡最均衡分布的学校运动之一——35 所学校 DSA 招收，53 所有 CCA，男女队 IP 和 O Level 都有强队。中学 trial 看的是高速持杆、防守压力下传球、真实比赛位置射门，以及——权重最高的——失球后半秒钟的防守转换行为。速度有用，但教练招的是球场智商。",
+      ms: "Floorball antara sukan sekolah paling merata di Singapura. Trial menilai pengendalian kayu pada kelajuan tinggi, hantaran di bawah tekanan pertahanan, tembakan dari kedudukan permainan sebenar, dan peralihan pertahanan.",
+      ta: "சிங்கப்பூர் பள்ளி விளையாட்டுகளில் புளோர்பால் மிகவும் பரவலான ஒன்று. சோதனை வேகத்தில் குச்சி கையாளுதல், அழுத்தத்தில் பாஸ், கேம் நிலைகளில் இருந்து ஷாட், பாதுகாப்பு மாற்றத்தை மதிப்பிடுகிறது.",
+    },
+    summary: {
+      en: "Trial structure, position-specific habits, interview questions, NSG-active schools across boys' and girls' divisions.",
+      zh: "Trial 流程、位置专项习惯、面试题、NSG 男女队活跃学校。",
+      ms: "Struktur trial, tabiat khusus posisi, soalan temu duga, sekolah aktif NSG.",
+      ta: "சோதனை அமைப்பு, நிலை சார்ந்த பழக்கங்கள், கேள்விகள், NSG பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Anglo-Chinese School (Independent)",
+      "St. Joseph's Institution",
+      "Raffles Institution",
+      "Nanyang Girls' High School",
+      "Methodist Girls' School (Secondary)",
+      "Hwa Chong Institution",
+    ],
+    metaDescription: {
+      en: "Floorball DSA-Sec trial guide for Singapore P6 — what coaches assess across forward/defender/goalkeeper, sample interview questions, NSG-active participating schools.",
+      zh: "新加坡 P6 旱地冰球 DSA-Sec trial 指南——前锋/后卫/守门员评分维度、面试题、NSG 活跃招生学校。",
+      ms: "Panduan trial DSA-Sec Floorball Singapura — apa jurulatih nilai, posisi, soalan, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 புளோர்பால் DSA-Sec வழிகாட்டி — அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore floorball trials typically run 90–120 minutes and are led by the school's head floorball coach (often IFF / Floorball Singapore-licensed) plus the teacher-in-charge of Sports. The standard structure: dynamic warm-up and stick warm-up, technique stations (dribbling slalom, passing pairs, wrist shot, slap shot), then 4-v-4 or 5-v-5 small-sided games on a half court. Field-player and goalkeeper trials are usually separate. Coaches lean on the six dimensions below, drawn from the IFF youth coaching framework and parent reports across NSG-active schools.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Stick handling at speed" },
+          body: {
+            en: "Coaches set up a slalom of cones at varying spacing and watch whether the trialist can keep the ball on the blade through tight turns at near-game pace. A P6 player who can dribble at 80% sprint speed without losing the ball scores far higher than one who can hit harder but loses the ball under any traffic. Stick handling at speed is the cheapest tell of accumulated touches.",
+          },
+        },
+        {
+          label: { en: "Passing accuracy under defensive pressure" },
+          body: {
+            en: "Coaches stage passing pairs at 5–10 metre intervals with a defender's stick pressure, then progress to triangle drills with two passers and one mover. They look for crisp wrist-passes flat to the receiver's blade, accurate backhand passes around defenders, and the recognition of when to pass versus carry. The signal here is consistency under the realistic 2-second decision window — coaches watch whether the trialist panics into a hopeful pass or finds the next option.",
+          },
+        },
+        {
+          label: { en: "Shooting from game positions, not stationary drills" },
+          body: {
+            en: "Trials test wrist shot, slap shot, and snap shot off the rebound. Coaches deliberately set up shots that require a one-touch finish or a quick release off a deflection, because that's what actually happens in matches. A clean wrist shot under one-touch pressure scores higher than a powerful slap shot from a stationary set — the slap is teachable; quick release is harder.",
+          },
+        },
+        {
+          label: { en: "Defensive transition — the half-second after losing the ball" },
+          body: {
+            en: "The most underweighted dimension at primary school but the one Singapore school coaches watch most closely. When the trialist loses possession, do they immediately tip-and-track to recover, or do they stand and complain? Coaches deliberately create turnovers in scrimmage to test this. A P6 who instinctively backchecks within one second of losing the ball signals four-year coachability; one who looks at the referee or the floor is read as a coaching problem in waiting.",
+          },
+        },
+        {
+          label: { en: "Spatial awareness and off-the-ball positioning" },
+          body: {
+            en: "Whether the player creates angles by moving without the ball, supports the carrier from behind and to the side rather than crowding, and keeps the goalkeeper's line of sight clean during defensive sets. Coaches watch off-the-ball more than on-the-ball in scrimmage — because half the trial is what the player does when not directly involved. Active feet and head-on-a-swivel scoring predicts game IQ better than highlight plays.",
+          },
+        },
+        {
+          label: { en: "Coachability and bench behaviour" },
+          body: {
+            en: "How the trialist behaves between shifts, whether she rotates back to the bench without prompting, encourages a teammate who shanked a pass, and accepts immediate corrections without sulking. International youth coaching research consistently rates these signals among the top predictors of long-term improvement — and Singapore school coaches, who'll work with this child for four years across NSG B and A divisions, weight them heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Forward (Centre / Wing)" },
+          body: {
+            en: "The most-recruited cluster because every team needs reliable scoring and forechecking. Coaches assess shot variety (wrist shot at minimum, snap or slap as bonus), the ability to find the slot in front of the goal, and forechecking discipline — chasing the opposing defender into corners without giving up positioning. Wing players are scored partly on speed; centre players are scored partly on faceoff and centre-ice awareness.",
+          },
+        },
+        {
+          position: { en: "Defender" },
+          body: {
+            en: "Floorball defenders are not goal-side stoppers — they're rebound starters and breakout passers. Coaches assess defensive-zone positioning (stick on stick, body between attacker and goal), the first-pass to the wings to start the breakout, and willingness to step up into the attacking zone for shots from the point. A P6 defender with a clean breakout pass beats a stronger skater who panics into a clear-and-chase.",
+          },
+        },
+        {
+          position: { en: "Goalkeeper (specialist trial)" },
+          body: {
+            en: "Floorball goalies play without a stick, on knees, blocking shots with body, hands, and feet inside a smaller crease. Trial is usually a separate session of shooter-vs-keeper drills plus reflex tests. Coaches assess the ready position (knees wide, hands inside the body line, head up), the recovery from the first save to the second shot, and decision-making on rebounds (smother vs deflect to corner). Goalkeeping is the position where a P6 with a year of dedicated keeper training has the biggest premium over an outfielder switched to goal.",
+          },
+        },
+        {
+          position: { en: "Utility — Forward / Defender swing" },
+          body: {
+            en: "A small but valuable cluster: players who can credibly slot into both forward and defender roles. Coaches assess game-reading over pure technical skill; the value is roster flexibility across a four-year programme. If your child has genuinely played both positions in primary school games, mention this in the trial — the school's existing roster gaps often decide which utility candidates get an offer.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Singapore school floorball at P6 trial level usually does not lock a player to one position — coaches assess versatility across forward and defender. Goalkeeper is usually a separate decision because keeper trials are scheduled distinctly. If your child plays multiple positions reasonably well, mention all of them; the school's existing roster balance often drives which position recruits a specific candidate.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love floorball?" },
+          subtext: {
+            en: "Panels want a specific moment, not a feeling. \"I like scoring goals\" reads as untrained motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character.",
+          },
+          template: {
+            en: "We lost the zonals semi-final by one goal because I didn't backcheck after a turnover. That night I asked my coach what I should have done differently — that was the first time I cared more about defending the transition than scoring the next goal.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the floorball programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's floorball — a coach's name, an NSG result, a training pattern.",
+          },
+          template: {
+            en: "ACS(I)'s floorball trains four times a week from Sec 1 and the boys' team has been consistently top-four at NSG A-Division. That's the volume and the standard I want from the start.",
+          },
+        },
+        {
+          question: { en: "What position do you play and why?" },
+          subtext: {
+            en: "Can the kid articulate the role, not just label it?",
+          },
+          approach: {
+            en: "Name the position plus the job.",
+          },
+          template: {
+            en: "Centre forward. My job is to win faceoffs, find the slot in front of the goal on offence, and be the first forward back on defence. I like the position because every shift starts and ends with me — there's nowhere to hide.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I broke my stick in a tournament quarter-final and our team lost. I asked my coach what skills I should drill so I didn't depend so much on equipment. We spent eight weeks on weak-hand passing — by the next tournament I could play through a stick swap without losing time.",
+          },
+        },
+        {
+          question: { en: "Is there a teammate or coach you remember most?" },
+          subtext: {
+            en: "Whether the kid sees teammates as people or background.",
+          },
+          approach: {
+            en: "Name someone specific by role + what you learned from them.",
+          },
+          template: {
+            en: "Our P6 captain made the whole team do five-second backcheck drills after every shooting session. None of us liked it but he insisted. By NSG we had the most goals against the run of play in the cluster — and that's why. He taught me that the unglamorous habit is the one that wins.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent trainings?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I do English and Math homework on the bus to training and finish Science before dinner. I keep Sundays for revision. My coach asks for my report book every term — that's a real system, not just willpower.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your coach's emphasis on forechecking matches how I think about the game. If School A called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Floorball (Boys), IP" },
+          context: {
+            en: "IP school with one of Singapore's most established boys' floorball programmes. Consistent NSG A-Division presence. Floorball among ACS(I)'s recognised DSA talent areas.",
+          },
+        },
+        {
+          name: "St. Joseph's Institution",
+          url: "https://www.sji.edu.sg/admission/dsa-at-sji/",
+          talentArea: { en: "Floorball (Boys), IP / DSA-Sec" },
+          context: {
+            en: "Lasallian boys' school. Floorball among SJI's published DSA talent areas (IP and O Level). Sustained NSG B- and A-Division presence.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/dsa-sec",
+          talentArea: { en: "Floorball (Boys), IP" },
+          context: {
+            en: "IP school with active boys' floorball CCA. Regular NSG B- and A-Division participation. RI publishes annual DSA talent areas; floorball appears consistently.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Floorball (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies school. Floorball among NYGH's published DSA talent areas. NSG-active girls' programme.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.moe.edu.sg/secondary/admissions/dsa-sec1/",
+          talentArea: { en: "Floorball (Girls), DSA-Sec" },
+          context: {
+            en: "Methodist heritage girls' school. Floorball among MGS's recognised DSA talent areas. Active NSG B- and A-Division presence.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Floorball (Boys), IP" },
+          context: {
+            en: "IP school with established boys' floorball CCA. Floorball among HCI's published DSA talent areas. Sustained NSG A-Division participation.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          url: "https://www.acsbr.moe.edu.sg/",
+          talentArea: { en: "Floorball (Boys), DSA-Sec" },
+          context: {
+            en: "Boys' school with strong floorball CCA tradition. Regular NSG B- and A-Division presence in the boys' divisions.",
+          },
+        },
+        {
+          name: "Victoria School",
+          url: "https://www.victoriaschool.moe.edu.sg/",
+          talentArea: { en: "Floorball (Boys), IP / DSA-Sec" },
+          context: {
+            en: "Heritage boys' school. Floorball CCA with sustained NSG participation across both IP and O Level streams.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/Admission-to-RGS/via-DSA/",
+          talentArea: { en: "Floorball (Girls), IP" },
+          context: {
+            en: "IP school with active girls' floorball CCA. Sustained NSG presence across divisions. Floorball among RGS's recognised DSA talent areas.",
+          },
+        },
+        {
+          name: "Cedar Girls' Secondary School",
+          url: "https://www.cedargirlssec.moe.edu.sg/admissions/",
+          talentArea: { en: "Floorball (Girls), DSA-Sec" },
+          context: {
+            en: "Girls' school with active floorball CCA. NSG B-Division participation across recent years.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Video-record one full 4-v-4 scrimmage. Watch with your child, scoring just two behaviours: (1) when they lost the ball, how many seconds before they tipped-and-tracked to recover? (2) on every received pass, did they get their stick on the ball with the head up or head down? These two are the highest-signal items in floorball trials.",
+            },
+            {
+              en: "Confirm CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and external competition results, NAPFA, and JSA data into the DSA portal directly. Floorball Singapore club programmes also feed in. Ask the CCA teacher or year-head to verify what's been logged.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: stick-handling figure-eights, passing-pair work, light shooting, no new conditioning load. Final-week added sprinting rarely pays off and frequently produces a tweak (most commonly groin or hamstring).",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire (most trials require court-appropriate non-marking indoor shoes, school PE attire, knee pads optional but recommended). Bring two sticks if possible — broken or cracked stick mid-trial is one of the few logistical failures that ends a P6 trial early. Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "One scrimmage with strangers. On Singapore parent forums, a recurring observation is that kids underperform at trials because they only pass to teammates they know. Force the awkwardness early — a Saturday club open session with unfamiliar players is the cheapest fix.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — not 30. Coaches deliberately push trial past the fatigue threshold and the last 20 minutes is where stick discipline (high stick infringements, stick lifts) breaks down.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. Shorten the drill cycle to two things only: stick handling through a tight slalom and tip-and-track recovery within one second of losing the ball. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because that's the only part where a few hours can still meaningfully change the outcome. Some families bring in a private floorball coach at this stage. A good private coach can speed up specific habit changes — particularly transition reads and shot release — but no coach produces, in three sessions, the game intelligence of a year of scrimmage minutes. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -6525,6 +6850,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "volleyball",
   "table-tennis",
   "netball",
+  "floorball",
 ];
 
 /**
@@ -6559,6 +6885,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   volleyball: ["basketball", "badminton"],
   "table-tennis": ["badminton", "chinese"],
   netball: ["basketball", "volleyball"],
+  floorball: ["hockey", "basketball"],
 };
 
 /**
