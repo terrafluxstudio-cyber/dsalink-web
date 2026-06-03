@@ -30,7 +30,8 @@ export type TalentSlug =
   | "netball"
   | "floorball"
   | "choir"
-  | "chinese-orchestra";
+  | "chinese-orchestra"
+  | "tennis";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -7548,6 +7549,333 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  tennis: {
+    slug: "tennis",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Tennis", zh: "网球", ms: "Tenis", ta: "டென்னிஸ்" },
+    hook: {
+      en: "Tennis DSA — trials reward groundstroke consistency and STA-sanctioned tournament results far more than how hard you serve.",
+      zh: "网球 DSA——trial 看底线球稳定性和 STA 排名赛战绩，远远超过发球速度",
+      ms: "DSA Tenis — trial menghargai konsistensi pukulan ground dan keputusan kejohanan STA jauh lebih tinggi daripada kuasa servis.",
+      ta: "டென்னிஸ் DSA — சோதனை groundstroke நிலைத்தன்மையையும் STA தரவரிசை முடிவுகளையும் சர்வ் வேகத்தை விட அதிகமாக மதிக்கிறது.",
+    },
+    intro: {
+      en: "Tennis is one of Singapore's higher-SES sports in school terms — concentrated at IP and SAP schools with established tennis facilities (ACS(I), RGS, RI, SJI, HCI, Catholic High). Singapore school tennis trials lean heavily on documented Singapore Tennis Association (STA) ranking — SPEX Junior Age Group results in the U10, U12, and U14 brackets count more than trial-day form for many coaches. The trial itself assesses groundstroke consistency, footwork patterns, serve placement, and how the player handles a losing rally. Speed and power help, but rally tolerance is what coaches recruit for. Here's what trials actually weigh.",
+      zh: "网球在新加坡学校生态中是中高 SES 项目——主要集中在有设施的 IP 和 SAP 校（ACS(I)、RGS、RI、SJI、HCI、Catholic High）。中学 trial 高度依赖新加坡网球协会（STA）排名——SPEX Junior Age Group U10/U12/U14 战绩对许多教练比 trial 当天表现更重要。Trial 本身看底线球稳定、跑位模式、发球落点、以及失分球时的反应。速度有用，但教练招的是 rally tolerance。",
+      ms: "Tenis adalah sukan sekolah SES tinggi di Singapura — tertumpu di sekolah IP dan SAP dengan kemudahan tenis. Trial menilai konsistensi groundstroke, corak pergerakan kaki, penempatan servis, dan tindak balas selepas mata rugi.",
+      ta: "சிங்கப்பூரில் டென்னிஸ் உயர் SES விளையாட்டு — வசதிகள் உள்ள IP மற்றும் SAP பள்ளிகளில் தொகுக்கப்பட்டுள்ளது. சோதனை groundstroke நிலைத்தன்மை, கால் நகர்வு, சர்வ் இடம், தோல்வி ரேலி-க்குப் பின் எதிர்வினையை மதிப்பிடுகிறது.",
+    },
+    summary: {
+      en: "Trial structure, playing-style profiles, interview questions, IP and SAP schools with established tennis programmes.",
+      zh: "Trial 流程、打法风格、面试题、有网球设施的 IP/SAP 校。",
+      ms: "Struktur trial, profil gaya, soalan temu duga, sekolah IP/SAP terkemuka.",
+      ta: "சோதனை அமைப்பு, விளையாட்டு பாணி, கேள்விகள், IP/SAP பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Anglo-Chinese School (Independent)",
+      "Raffles Girls' School (Secondary)",
+      "Raffles Institution",
+      "St. Joseph's Institution",
+      "Hwa Chong Institution",
+      "Catholic High School",
+    ],
+    metaDescription: {
+      en: "Tennis DSA-Sec trial guide for Singapore P6 — STA ranking context, what coaches assess, playing-style profiles, sample interview questions, IP and SAP participating schools.",
+      zh: "新加坡 P6 网球 DSA-Sec trial 指南——STA 排名说明、教练评分维度、打法分析、面试题、IP/SAP 招生学校。",
+      ms: "Panduan trial DSA-Sec Tenis Singapura — apa jurulatih nilai, profil gaya, soalan, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 டென்னிஸ் DSA-Sec வழிகாட்டி — அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore tennis trials typically run 60–90 minutes and are led by the school's head tennis coach (often STA / PTR / RPT-certified) plus the teacher-in-charge of Sports. The standard structure: dynamic warm-up and mini-tennis, baseline groundstroke rally drills (forehand cross-court, backhand cross-court, down-the-line), volley pair drills, serve and serve-receive sets, then short sets or pressure-points to the school's top players. STA SPEX Age Group ranking is checked beforehand — many coaches do not call trial candidates without a documented U10/U12/U14 result. Coaches lean on the six dimensions below.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Groundstroke consistency under cross-court rally" },
+          body: {
+            en: "Coaches run baseline cross-court rallies and count how many balls the candidate can keep in play with controlled depth and direction. A P6 player who can hit 15 forehand cross-court rallies into the back third of the court scores meaningfully higher than one with a heavier ball that lands consistently in the middle or breaks down at ball 8. Consistency at junior level predicts the Sec 3-4 baseline player who can sustain points; raw power without consistency predicts a flame-out.",
+          },
+        },
+        {
+          label: { en: "Footwork — split step, recovery, and weight transfer" },
+          body: {
+            en: "Coaches watch whether the player split-steps before every opponent contact, recovers to the middle (slightly behind the baseline) between every shot, and transfers weight forward through groundstrokes (instead of falling back on heavier balls). Active feet are the cheapest tell of a coached player. Coaches deliberately hit deeper balls late in the rally to test recovery and weight transfer — that's when self-taught players default to backing up and slap-hitting from behind the baseline.",
+          },
+        },
+        {
+          label: { en: "Serve placement, not just speed" },
+          body: {
+            en: "Most school trials require both first and second serves, with at least two placement variations on the first serve (T-line / body / wide) and a consistent kick or slice on the second. Coaches focus on whether the first serve goes in at 60% under match-day conditions and whether the second serve stays high to the backhand corner — not on raw pace. A reliable spinning second serve at P6 is more valuable to a school's NSG team than an inconsistent flat bomb.",
+          },
+        },
+        {
+          label: { en: "Net play and volley confidence" },
+          body: {
+            en: "Singapore school tennis at NSG includes both singles and doubles, with doubles points carrying equal team weight. Coaches assess whether the candidate has a clean volley grip (Continental, not Eastern), can move to the net behind an approach shot, and reads the partner's positioning in doubles. A P6 who plays only singles and freezes at net is a coaching project; one who has played doubles in primary school competitions has a meaningful edge.",
+          },
+        },
+        {
+          label: { en: "Mental game — composure after a lost rally" },
+          body: {
+            en: "The single highest-signal moment of a P6 trial. Coaches deliberately create losing situations (feeding the candidate's weakness, calling close balls in or out unpredictably) to watch whether the candidate resets calmly or visibly tilts. A P6 who walks back to the baseline, takes a breath, and resets is signalling four-year coachability; one who slumps shoulders, mutters, or smashes the racket head is scored down heavily even if the technical play was strong.",
+          },
+        },
+        {
+          label: { en: "Coachability and court behaviour between drills" },
+          body: {
+            en: "How the trialist behaves between drills, whether they pick up balls without being asked, encourage a hitting partner, and accept immediate corrections without sulking. International youth coaching research consistently rates these signals among the top predictors of long-term improvement — and Singapore school coaches, who'll work with this child for four years across NSG B and A divisions, weight them heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Baseline grinder (consistency-first)" },
+          body: {
+            en: "The default modern junior style and what most school coaches recruit. Coaches look for cross-court depth, the ability to extend rallies, and patience — building points with two or three groundstrokes before going for a winner. P6 candidates who can rally 20 cross-court groundstrokes and have a topspin lob in reserve outscore harder hitters who go for a winner on ball three.",
+          },
+        },
+        {
+          position: { en: "Aggressive baseliner (first-strike)" },
+          body: {
+            en: "A first-strike player who hunts forehand winners off the second serve return. Coaches assess whether the aggression has structure (set-up shots before the winner attempt) or is just hopeful flat hitting. A P6 with a strong forehand and a developing one-two punch pattern (serve plus forehand to the open court) is recruitable because that style scales to senior level — but only if the second strike is set up by the first, not random.",
+          },
+        },
+        {
+          position: { en: "All-court / serve-and-volley" },
+          body: {
+            en: "The rarest style and one a school coach will fast-track if they don't already have one. Coaches assess approach-shot quality, first-volley placement, and willingness to move to the net behind any serve, not just flat first serves. A P6 with credible serve-and-volley patterns is a unique asset because most opposing players at NSG B-Division have never trained against the style.",
+          },
+        },
+        {
+          position: { en: "Doubles specialist" },
+          body: {
+            en: "Coaches assess net movement, partner communication, and shot selection that protects the partner (cross-court returns at net player's middle). A P6 who plays singles well but freezes their partner's space in doubles is a coaching project; one who reads positioning and calls shots is a doubles-team asset from Sec 1. Singapore school NSG team scoring counts doubles points equally with singles, so doubles specialists are real recruits.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Singapore school tennis at P6 trial level usually does not lock a player to one style — coaches assess whether the existing shape is clean enough to refine. If your child plays mostly singles in primary-school competitions, mention any doubles experience explicitly in the trial; school NSG team need (doubles partner gaps in the existing roster) often drives which candidates receive offers between equally-strong technical players.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love tennis?" },
+          subtext: {
+            en: "Panels want a specific moment, not a feeling. \"I like winning\" reads as untrained motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory — a match, a coach moment, a turning point — then connect it to character.",
+          },
+          template: {
+            en: "I lost a U10 STA Age Group final 4-6, 5-7 because I tried to hit through everything in the third set tiebreak. That night my coach asked me when I'd last hit a slice approach. I hadn't. That was the moment I learned tennis is a thinking game, not just a hitting game.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the tennis programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's tennis — a coach's name, an NSG result, a training pattern.",
+          },
+          template: {
+            en: "ACS(I)'s tennis programme trains four times a week with STA-licensed coaches and the boys' team has been consistently top-four at NSG A-Division. That's the volume and the standard I want from Sec 1.",
+          },
+        },
+        {
+          question: { en: "What is your playing style and why?" },
+          subtext: {
+            en: "Can the kid articulate the style, not just label it?",
+          },
+          approach: {
+            en: "Name the style plus what it requires from you.",
+          },
+          template: {
+            en: "Baseline counter-puncher who can attack the second serve. My job is to extend the rally on neutral balls and step in on the second serve return. I picked the style because my forehand is more reliable than my opponent's patience — that's a 4-year game plan, not just one match.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I lost first round in three consecutive U12 STA tournaments because my second serve kept getting attacked. I spent eight weeks only on second serve — kick serve to the backhand. At the next tournament I made the round of 16 and my second serve didn't get attacked once.",
+          },
+        },
+        {
+          question: { en: "Is there a coach or hitting partner you remember most?" },
+          subtext: {
+            en: "Whether the kid sees coaching as a relationship or a transaction.",
+          },
+          approach: {
+            en: "Name someone specific by role + what you learned from them.",
+          },
+          template: {
+            en: "My P5 club coach made me play sets without serving — just rallying from one feed. I hated it because I wanted to compete with my serve. Now my rally tolerance is the most reliable part of my game. He taught me that the part of tennis you don't enjoy training is usually the part that's holding you back.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent trainings?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I finish English and Math homework on the bus to training and complete Science before dinner. Sunday is for revision. My mother shows my report book to my coach every term — if any subject drops a band, we cut one training. That's the rule we set together.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your head coach's emphasis on net play matches how I want to develop. If School A called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Tennis (Boys), IP" },
+          context: {
+            en: "IP school with one of Singapore's most established boys' tennis programmes. Multi-court on-campus facilities. Consistent NSG A-Division presence.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/Admission-to-RGS/via-DSA/",
+          talentArea: { en: "Tennis (Girls), IP" },
+          context: {
+            en: "IP school with strong girls' tennis tradition. Tennis among RGS's published DSA talent areas. Sustained NSG presence across divisions.",
+          },
+        },
+        {
+          name: "Raffles Institution",
+          url: "https://www.ri.edu.sg/admissions/dsa-sec",
+          talentArea: { en: "Tennis (Boys), IP" },
+          context: {
+            en: "IP school. Tennis among RI's published Sports DSA domain criteria. Sustained NSG A-Division participation.",
+          },
+        },
+        {
+          name: "St. Joseph's Institution",
+          url: "https://www.sji.edu.sg/admission/dsa-at-sji/",
+          talentArea: { en: "Tennis (Boys), IP / DSA-Sec" },
+          context: {
+            en: "Lasallian boys' school. Tennis among SJI's published DSA talent areas (IP and O Level). Active NSG B- and A-Division presence.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Tennis (Boys), IP" },
+          context: {
+            en: "IP school with active boys' tennis CCA. Among HCI's published DSA talent areas. Sustained NSG participation.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/",
+          talentArea: { en: "Tennis (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school — Higher Chinese / Chinese Language as Mother Tongue requirement applies. Active boys' tennis CCA.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.moe.edu.sg/secondary/admissions/dsa-sec1/",
+          talentArea: { en: "Tennis (Girls), DSA-Sec" },
+          context: {
+            en: "Methodist heritage girls' school. Tennis among MGS's recognised DSA talent areas. NSG-active across divisions.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Tennis (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies school. Tennis among NYGH's recognised DSA talent areas.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          url: "https://www.acsbr.moe.edu.sg/",
+          talentArea: { en: "Tennis (Boys), DSA-Sec" },
+          context: {
+            en: "Boys' school with active tennis CCA. Regular NSG B-Division presence.",
+          },
+        },
+        {
+          name: "Singapore Sports School",
+          url: "https://www.sportsschool.edu.sg/",
+          talentArea: { en: "Tennis (Boys and Girls), Sports School admissions" },
+          context: {
+            en: "Specialist sports school with full-time tennis academy track for elite junior players. Separate admissions process distinct from standard DSA-Sec — but high-level STA-ranked candidates often apply to both.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Verify the STA SPEX Age Group ranking and competition record. MOE pulls CCA participation, school awards, NSG results, NAPFA, and STA-sanctioned competition results into the DSA portal directly. A documented U12 or U14 result is the single most-cited piece of evidence in tennis DSA — confirm it has been logged with your child's coach.",
+            },
+            {
+              en: "Video-record one full practice set. Watch with your child, scoring just two behaviours: (1) did they split-step before every opponent contact? (2) after a lost rally, did they reset within five seconds or visibly tilt? These two are the highest-signal items in tennis trials.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: groundstroke pair work, serve placement (not power), light volleys, no new conditioning load. Final-week added matches rarely pay off and frequently produce a tweak (most commonly shoulder, wrist, or knee).",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire (most trials require tennis whites or school PE attire, tennis-specific non-marking shoes — running shoes are not acceptable). Bring own racket and at least two backup grips. Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "Hit with a stranger. On Singapore parent forums, a recurring observation is that kids underperform at trials because they only practise with familiar hitting partners. Force the awkwardness early — a Saturday club open session with unfamiliar players is the cheapest fix.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — not 30. Coaches deliberately push trial past the fatigue threshold and the last 15 minutes is where strokes and footwork break down.",
+            },
+            {
+              en: "Bring two rackets, three grips, and a separate hat. A broken string or sweat-soaked grip is one of the few logistical failures that ends a P6 trial early — the cheap fix is having backups.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents on the court fence are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. Shorten the drill cycle to two things only: cross-court groundstroke depth and second-serve placement (kick to the backhand). Cancel anything that competes with sleep. Spend the freed time on interview prep above, because that's the only part where a few hours can still meaningfully change the outcome. Some families bring in a private tennis coach at this stage. A good private coach can speed up specific habit changes — particularly serve consistency and footwork patterns — but no coach produces, in three sessions, the rally tolerance of a year of match play. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -7573,6 +7901,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "floorball",
   "choir",
   "chinese-orchestra",
+  "tennis",
 ];
 
 /**
@@ -7610,6 +7939,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   floorball: ["hockey", "basketball"],
   choir: ["music", "drama"],
   "chinese-orchestra": ["music", "chinese"],
+  tennis: ["badminton", "table-tennis"],
 };
 
 /**
