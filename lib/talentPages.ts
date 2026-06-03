@@ -26,7 +26,8 @@ export type TalentSlug =
   | "squash"
   | "leadership"
   | "volleyball"
-  | "table-tennis";
+  | "table-tennis"
+  | "netball";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -6178,6 +6179,330 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  netball: {
+    slug: "netball",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Netball", zh: "投球", ms: "Bola Jaring", ta: "நெட்பால்" },
+    hook: {
+      en: "Netball DSA — trials reward footwork discipline and court vision, not just the shooter who can score from the goal circle.",
+      zh: "投球 DSA——trial 奖励脚步纪律和场上视野，不只看进球能力",
+      ms: "DSA Bola Jaring — trial menghargai disiplin pergerakan kaki dan penglihatan padang, bukan hanya kebolehan menjaringkan.",
+      ta: "நெட்பால் DSA — சோதனை கால் நகர்வு ஒழுக்கத்தையும் கள பார்வையையும் மதிக்கிறது, பந்து போடும் திறமையை மட்டுமே அல்ல.",
+    },
+    intro: {
+      en: "Netball is one of the most competitive girls' sports in Singapore secondary schools, with about 50 schools offering DSA in the talent and 81 with active netball CCAs. Singapore school trials weigh footwork (no running with the ball — every step counts), passing under pressure, court awareness across the seven positions, and how the trialist reads space. Height matters for shooter and defender roles but is not destiny at twelve. Here's what trials actually weigh.",
+      zh: "投球是新加坡中学最竞争激烈的女子运动之一——约 50 所学校 DSA 招收，81 所有活跃投球 CCA。中学 trial 看的是脚步（持球不能跑——每一步都被裁判数）、压力下的传球、七个位置的场上意识、读空间能力。身高对射手和后卫位置有用，但 12 岁不是决定性因素。",
+      ms: "Bola jaring antara sukan perempuan paling kompetitif di sekolah menengah Singapura. Trial menilai disiplin pergerakan kaki, hantaran di bawah tekanan, kesedaran padang tujuh posisi, dan pembacaan ruang.",
+      ta: "சிங்கப்பூர் இடைநிலைப் பள்ளிகளில் நெட்பால் மிகவும் போட்டித் தன்மை கொண்ட பெண்கள் விளையாட்டு. சோதனை கால் நகர்வு ஒழுக்கம், அழுத்தத்தில் பாஸ், ஏழு நிலைகளில் கள விழிப்புணர்வை மதிப்பிடுகிறது.",
+    },
+    summary: {
+      en: "Trial structure, seven-position profiles, interview questions, NSG-active girls' schools with strong netball programmes.",
+      zh: "Trial 流程、七位置分析、面试题、NSG 活跃女校。",
+      ms: "Struktur trial, profil tujuh posisi, soalan temu duga, sekolah perempuan aktif NSG.",
+      ta: "சோதனை அமைப்பு, ஏழு நிலைகள், கேள்விகள், NSG பெண்கள் பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Methodist Girls' School (Secondary)",
+      "Raffles Girls' School (Secondary)",
+      "Singapore Chinese Girls' School",
+      "Nanyang Girls' High School",
+      "Cedar Girls' Secondary School",
+      "CHIJ St. Nicholas Girls' School",
+    ],
+    metaDescription: {
+      en: "Netball DSA-Sec trial guide for Singapore P6 — what coaches assess across seven positions, footwork rules, sample interview questions, NSG-active participating girls' schools.",
+      zh: "新加坡 P6 投球 DSA-Sec trial 指南——七位置评分、脚步规则、面试题、NSG 活跃女校。",
+      ms: "Panduan trial DSA-Sec Bola Jaring Singapura — apa jurulatih nilai, posisi, soalan, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 நெட்பால் DSA-Sec வழிகாட்டி — அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore netball trials typically run 90–120 minutes and are led by the school's head netball coach (often Netball Singapore-accredited) plus the teacher-in-charge of Sports. The standard structure: dynamic warm-up, footwork stations (landing one-foot vs two-foot, pivoting without lifting the planted foot), passing-pair drills (chest, shoulder, bounce, overhead), shooting from the goal circle, then small-sided games — often four-a-side on a quarter court — across rotated positions. Coaches lean on the six dimensions below, drawn from the INF / Netball Singapore youth coaching framework and parent reports across NSG-active girls' schools.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Landing and pivoting discipline" },
+          body: {
+            en: "Netball's defining rule is that the player cannot move the landed foot — so coaches deliberately feed passes that force a one-foot landing in awkward angles and watch whether the planted foot stays anchored during the pivot. A P6 trialist who lifts the foot mid-pivot (a footwork infringement) on more than 2 of 10 feeds will struggle in any game scenario. Coaches score this far higher than raw athleticism because the rule cannot be hidden — every coach and every umpire will see it.",
+          },
+        },
+        {
+          label: { en: "Passing speed and accuracy under defensive pressure" },
+          body: {
+            en: "Coaches stage passing pairs at 3–5 metre intervals with a defender's arm-length pressure, then progress to triangle drills with two passers and one mover. They look for a flat, fast chest pass to the receiver's outside hand, accurate bounce passes around defenders, and shoulder passes for longer distance. The signal here is consistency under the three-second held-ball rule — coaches count one-thousand-two and watch whether the trialist panics or finds the next option.",
+          },
+        },
+        {
+          label: { en: "Movement off the ball and dodging to receive" },
+          body: {
+            en: "Whether the player shows for the ball (a clear cut, hand presented to the passer) or stands still is the cheapest tell of court awareness. Coaches especially watch the lead-and-change move — a quick step toward the ball, then a sharp change of direction to the open space. A P6 who can dodge to lose her defender and present a strong target three out of five times scores high; one who waits in place even when the team has stalled is read as a coaching project.",
+          },
+        },
+        {
+          label: { en: "Shooting under fatigue (goal shooter / goal attack only)" },
+          body: {
+            en: "If the trialist plays the two shooting positions, coaches run shooting sets — usually 10–20 attempts from inside the goal circle — and then repeat the sequence after a sprint drill. Reliable form under the second set, not the first, is what separates a school-team shooter from a primary-school star. Coaches accept slightly lower accuracy on the second set; they're looking for the same shooting form, not the same percentage.",
+          },
+        },
+        {
+          label: { en: "Defensive timing and intercept reading" },
+          body: {
+            en: "For goal keeper, goal defence, wing defence, and centre, coaches assess defensive arms (the 0.9-metre obstruction distance is enforced strictly) and whether the trialist can read the passer's eyes to anticipate the pass before it leaves the hand. An intercept in trial is heavily weighted — but coaches also score the near-misses where the timing was right but the lane was off, because timing is harder to coach than positioning.",
+          },
+        },
+        {
+          label: { en: "Coachability and bench behaviour" },
+          body: {
+            en: "How the trialist behaves between drills, whether she rotates back to the line without prompting, encourages a partner who shanked a pass, and accepts immediate corrections without sulking. International youth coaching research consistently rates these signals 10/10 by elite youth coaches — and Singapore school coaches, who'll work with this girl for four years across NSG B and A divisions, weight them heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Goal Shooter / Goal Attack" },
+          body: {
+            en: "The two positions that can score, and the only positions allowed inside the goal circle from the attacking end. Coaches look for a balanced shooting stance (feet shoulder-width, ball above forehead, follow-through to the rim), the ability to back-into a defender, and — for goal attack — the work rate to move between the centre third and goal circle without losing the shooting touch. A P6 shooter who scores 7 of 10 from close range with one cue beats one who scores 9 of 10 from one set spot.",
+          },
+        },
+        {
+          position: { en: "Wing Attack / Centre" },
+          body: {
+            en: "The court's engine room. Centre is the only player allowed in all three thirds (except goal circles); wing attack feeds the shooters and starts most attacking moves. Coaches assess speed across the court (transition pace from defensive third to attacking third), passing-vision (looking before receiving), and the cooperation pattern with the goal attack. Centre players also take the centre pass after every goal — the timing of that initial cut is a recurring trial test.",
+          },
+        },
+        {
+          position: { en: "Wing Defence / Goal Defence" },
+          body: {
+            en: "The mid-court and defending shooters' main support. Wing defence shadows the opposing wing attack — assessment focuses on staying close without obstructing (the 0.9-metre rule), arms up on every pass, and quick recovery to the centre line. Goal defence must defend both the centre court (helping wing defence) and the goal circle (pressuring the goal attack's shot). Coaches look for stamina — these positions cover the most ground per minute on the court.",
+          },
+        },
+        {
+          position: { en: "Goal Keeper" },
+          body: {
+            en: "Specialist position; height helps but reach and timing matter more. Coaches assess shot-rebounding (catching the ball off the goal post or ring after a missed shot), defensive arms inside the goal circle, and the reset pass to the goal defence to start the counter-attack. A goal keeper who panics with the ball — taking the held-ball penalty — costs the team possession; coaches especially watch the goal keeper's first decision with the ball.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Singapore school netball at P6 trial level usually does not lock a player to one position — coaches assess versatility across the seven positions. If your daughter has played two or three positions reasonably well in primary school, mention all of them in the trial; the school's existing roster balance (and graduating cohort gaps) often drives which position recruits a specific candidate.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love netball?" },
+          subtext: {
+            en: "Panels want a specific moment, not a feeling. \"I like sports\" reads as untrained motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character.",
+          },
+          template: {
+            en: "We lost the zonals semi-final by one goal because I missed a centre pass cut. That night I asked my coach what I should have done differently — that was the first time I cared more about the timing of my cut than whether I scored.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the netball programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's netball — a coach's name, an NSG result, a training pattern.",
+          },
+          template: {
+            en: "MGS has been an A-Division top school for years and trains four times a week from Sec 1. That's the volume I want from the start. The Methodist heritage also matches what we look for in a school community.",
+          },
+        },
+        {
+          question: { en: "What position do you play and why?" },
+          subtext: {
+            en: "Can the kid articulate the role, not just label it?",
+          },
+          approach: {
+            en: "Name the position plus the job.",
+          },
+          template: {
+            en: "Wing attack. My job is to feed the shooter from the edge of the goal circle and read where the goal attack will be before she cuts. I like the position because every attacking move runs through me, so I always have to be thinking one pass ahead.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I got a footwork infringement three times in one quarter at zonals. The next Saturday I spent the whole club session on one-foot landings — just landing and pivoting, no passing. By the next tournament I had zero footwork calls in three games.",
+          },
+        },
+        {
+          question: { en: "Is there a teammate or coach you remember most?" },
+          subtext: {
+            en: "Whether the kid sees teammates as people or background.",
+          },
+          approach: {
+            en: "Name someone specific by role + what you learned from them.",
+          },
+          template: {
+            en: "Our P6 centre always called my name before she passed, even when I wasn't expecting the ball. It made me realise good court vision means making your teammates' decisions easier, not just your own. I try to do the same for my goal shooter now.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent trainings?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I finish English and Math homework on the bus to training and complete Science before dinner. Sunday is for revision and family. My mother and I review my report book every term — if any subject drops a band, we cut one extra training. That's the rule we set together.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your head coach's emphasis on dodging to receive matches how I want to develop as a wing attack. If School A called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.moe.edu.sg/secondary/admissions/dsa-sec1/",
+          talentArea: { en: "Netball (Girls), DSA-Sec" },
+          context: {
+            en: "Among Singapore's most decorated school netball programmes. Multi-year NSG A-Division top finisher. Netball is among MGS's published DSA talent areas with a dedicated CCA page describing training pattern and coaching staff.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/Admission-to-RGS/via-DSA/",
+          talentArea: { en: "Netball (Girls), IP" },
+          context: {
+            en: "IP school with sustained NSG A-Division presence. Netball among RGS's recognised DSA talent areas. Strong technical coaching across all seven positions.",
+          },
+        },
+        {
+          name: "Singapore Chinese Girls' School",
+          url: "https://www.scgs.moe.edu.sg/prospective-students/secondary-admission/direct-school-admission/",
+          talentArea: { en: "Netball (Girls), DSA-Sec" },
+          context: {
+            en: "SAP school. Netball among SCGS's published DSA talent areas in the 2026 DSA Infosheet. Active NSG B- and A-Division participation.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Netball (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies school. Netball among NYGH's recognised talent areas. NSG-active across divisions.",
+          },
+        },
+        {
+          name: "Cedar Girls' Secondary School",
+          url: "https://www.cedargirlssec.moe.edu.sg/admissions/",
+          talentArea: { en: "Netball (Girls), IP / DSA-Sec" },
+          context: {
+            en: "Established girls' school with strong netball CCA. Cedar IP and O Level both list netball as a DSA talent area. Regular NSG B-Division and A-Division presence.",
+          },
+        },
+        {
+          name: "CHIJ St. Nicholas Girls' School",
+          url: "https://stnicholasgirls.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "Netball (Girls), IP / DSA-Sec" },
+          context: {
+            en: "SAP school. CHIJ St. Nick's IP and O Level both list netball as a DSA talent area. Sustained NSG presence across divisions.",
+          },
+        },
+        {
+          name: "Paya Lebar Methodist Girls' School (Secondary)",
+          url: "https://www.plmgss.moe.edu.sg/",
+          talentArea: { en: "Netball (Girls), DSA-Sec" },
+          context: {
+            en: "Methodist heritage girls' school with active netball CCA. NSG B- and C-Division participation across recent years.",
+          },
+        },
+        {
+          name: "Crescent Girls' School",
+          url: "https://www.crescent.moe.edu.sg/",
+          talentArea: { en: "Netball (Girls), DSA-Sec" },
+          context: {
+            en: "Girls' school with sustained netball CCA tradition. Regular NSG B-Division participation.",
+          },
+        },
+        {
+          name: "St. Margaret's Secondary School",
+          url: "https://www.stmargaretssec.moe.edu.sg/",
+          talentArea: { en: "Netball (Girls), DSA-Sec" },
+          context: {
+            en: "Anglican heritage girls' school. Netball among recognised CCAs with regular NSG B- and C-Division appearances.",
+          },
+        },
+        {
+          name: "CHIJ Secondary (Toa Payoh)",
+          url: "https://chijsectoapayoh.moe.edu.sg/",
+          talentArea: { en: "Netball (Girls), DSA-Sec" },
+          context: {
+            en: "CHIJ girls' school with active netball CCA. Sustained NSG B- and C-Division presence.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Video-record one full 7-a-side game. Watch with your daughter, scoring just two behaviours: (1) how many times did she lift her planted foot during a pivot? (2) on every received pass, did she present a target hand before the ball left the passer? These two are the highest-signal items in netball trials.",
+            },
+            {
+              en: "Confirm CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and external competition results, NAPFA, and JSA data into the DSA portal directly. Netball Singapore club programmes also feed in. Ask the CCA teacher or year-head to verify what's been logged.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: footwork drills, passing-pair work, light shooting, no new conditioning load. Final-week added jumping rarely pays off and frequently produces a tweak (most commonly ankle).",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire (most trials require court-appropriate non-marking shoes, school PE attire or club kit, no jewellery — earrings must come out, not be taped). Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "One scrimmage with strangers. On Singapore parent forums, a recurring observation is that girls underperform at trials because they only pass to teammates they know. Force the awkwardness early — a Saturday club open session with unfamiliar players is the cheapest fix.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — not 30. Coaches deliberately push trial past the fatigue threshold and the last 20 minutes is where footwork breaks down (lifted pivots, slow lead-and-change).",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. Shorten the drill cycle to two things only: landing-and-pivot discipline (no foot lift) and lead-and-change to present a target hand. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because that's the only part where a few hours can still meaningfully change the outcome. Some families bring in a private netball coach at this stage. A good private coach can speed up specific habit changes — particularly footwork rules and passing form — but no coach produces, in three sessions, the court awareness of a year of game play. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -6199,6 +6524,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "leadership",
   "volleyball",
   "table-tennis",
+  "netball",
 ];
 
 /**
@@ -6232,6 +6558,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   leadership: ["chinese", "drama"],
   volleyball: ["basketball", "badminton"],
   "table-tennis": ["badminton", "chinese"],
+  netball: ["basketball", "volleyball"],
 };
 
 /**
