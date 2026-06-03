@@ -29,7 +29,8 @@ export type TalentSlug =
   | "table-tennis"
   | "netball"
   | "floorball"
-  | "choir";
+  | "choir"
+  | "chinese-orchestra";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -7189,6 +7190,364 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  "chinese-orchestra": {
+    slug: "chinese-orchestra",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "Chinese Orchestra", zh: "华乐", ms: "Orkestra Cina", ta: "சீன இசைக்குழு" },
+    hook: {
+      en: "Chinese Orchestra DSA — auditions reward tone production and sight-reading on traditional instruments, with a clear two-piece + five-minute format across most schools.",
+      zh: "华乐 DSA——招生看传统乐器音色与视奏能力，多数学校沿用 2 首对比曲 + 5 分钟标准格式",
+      ms: "DSA Orkestra Cina — uji bakat menilai penghasilan ton dan pembacaan pandang pada instrumen tradisional, dengan format 2-keping + 5-minit di kebanyakan sekolah.",
+      ta: "சீன இசைக்குழு DSA — பாரம்பரிய இசைக்கருவிகளில் ஒலி உருவாக்கம் மற்றும் பார்த்து வாசிக்கும் திறனை மதிக்கிறது, பெரும்பாலான பள்ளிகளில் 2-துண்டு + 5-நிமிட வடிவம்.",
+    },
+    intro: {
+      en: "Chinese Orchestra is the DSA route most closely tied to Singapore's SAP school ecosystem — the deepest programmes sit at SAP schools and a handful of strong non-SAP schools. The audition format is unusually standardised across schools: two contrasting pieces on the candidate's instrument (excerpts allowed), total time capped at five minutes, plus a sight-read passage given during the interview. Instruments accepted span the full Chinese orchestra — Erhu, Pipa, Guzheng, Dizi, Yangqin, the Ruan family, Liuqin, Sheng (high and middle), Suona (high and middle), Cello, Double Bass, Hulusi, Guanzi, Percussion, and Guqin. This page covers what panels actually listen for, instrument-specific notes, and how to choose contrasting pieces.",
+      zh: "华乐是与新加坡 SAP 学校生态最紧密结合的 DSA 路线——最深的项目集中在 SAP 校 + 少数非 SAP 强校。招生格式各校罕见地统一：本乐器 2 首对比曲（可选段）· 总时长 5 分钟内 · 加面试时给一段视奏。乐器涵盖完整华乐编制——二胡、琵琶、古筝、笛子、扬琴、阮族、柳琴、笙（高/中音）、唢呐（高/中音）、大提琴、低音提琴、葫芦丝、管子、打击乐、古琴。本页讲教练真正在听什么、各乐器细节、如何选对比曲。",
+      ms: "Orkestra Cina paling rapat dengan ekosistem sekolah SAP. Format uji bakat luar biasa diseragamkan: dua keping berbeza pada instrumen calon (petikan dibenarkan), jumlah masa tidak melebihi lima minit, ditambah bahagian baca-pandang semasa temu duga.",
+      ta: "சீன இசைக்குழு SAP பள்ளி சூழலுடன் நெருக்கமாக இணைக்கப்பட்டுள்ளது. தேர்வு வடிவம் பள்ளிகளில் ஒரே மாதிரியாக உள்ளது: இரண்டு வேறுபட்ட துண்டுகள் · மொத்த நேரம் 5 நிமிடம் · மற்றும் நேர்காணலின் போது பார்த்து வாசிக்கும் பகுதி.",
+    },
+    summary: {
+      en: "Audition format (2 contrasting + 5 min + sight-read), instrument-specific profiles, interview questions, SAP and IP schools with strong Chinese Orchestra programmes.",
+      zh: "招生格式（2 对比曲 + 5 分钟 + 视奏）、乐器分析、面试题、SAP/IP 强校。",
+      ms: "Format uji bakat, profil instrumen, soalan temu duga, sekolah SAP/IP terkemuka.",
+      ta: "தேர்வு வடிவம், கருவி வகைகள், கேள்விகள், SAP/IP பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Dunman High School",
+      "Hwa Chong Institution",
+      "Nan Hua High School",
+      "River Valley High School",
+      "Nanyang Girls' High School",
+      "Catholic High School",
+    ],
+    metaDescription: {
+      en: "Chinese Orchestra DSA-Sec audition guide for Singapore P6 — 2-piece + 5-minute format, sight-reading, instrument-specific advice, SAP and IP participating schools.",
+      zh: "新加坡 P6 华乐 DSA-Sec audition 指南——2 对比曲 + 5 分钟 + 视奏格式、各乐器细节、SAP/IP 招生学校。",
+      ms: "Panduan uji bakat DSA-Sec Orkestra Cina Singapura — format, kriteria, soalan, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 சீன இசைக்குழு DSA-Sec வழிகாட்டி — வடிவம், அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      preparedPiece: {
+        intro: {
+          en: "Chinese Orchestra auditions in Singapore are unusually standardised: most schools follow the same two-piece + five-minute + sight-read format. The contrasting pair is the strategic decision — one fast-and-virtuosic piece showing technical command, plus one lyrical-and-tonal piece showing musicality, is the safest pairing. Sight-reading is typically at an intermediate level appropriate to the instrument's standard repertoire.",
+        },
+        entries: [
+          {
+            variant: { en: "Standard format — most schools (BPGHS, Victoria, RGS, NYGH, Dunman High, Nan Hua, RVHS, Catholic High)" },
+            requirement: { en: "Two contrasting pieces on your instrument · excerpts allowed · total time capped at 5 minutes · plus sight-read given by the conductor during the audition" },
+            source: { en: "BPGHS DSA 2026 brief; Victoria School DSA 2026 brief; aligns with public DSA briefs across SAP schools and TENG Company examination format." },
+          },
+          {
+            variant: { en: "With tempo specification — Victoria School" },
+            requirement: { en: "Two contrasting pieces with explicit tempo requirement: 16 bars fast tempo + 16 bars slow tempo · plus sight-read" },
+            source: { en: "Victoria School DSA 2026 brief — explicit \"16 bars fast + 16 bars slow tempo\" requirement." },
+          },
+          {
+            variant: { en: "Percussion specialists" },
+            requirement: { en: "Two contrasting pieces showing different percussion techniques (e.g. one melodic xylophone / yangqin-adjacent piece, one rhythmic drum or gong piece) · plus sight-read on the percussion family the candidate specialises in" },
+            source: { en: "TENG Company DSA examination format for percussion; aligns with Singapore school CO percussion roster needs." },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A private Chinese-instrument coach can verify the contrasting pair choice, polish the opening 30 seconds of each piece (where the conductor judges most heavily), and run sight-read drills at audition difficulty. Coaches who play the same instrument and have prepared students for SAP-school auditions are especially valuable. Browse our coach directory for Chinese-instrument specialists.",
+        },
+      },
+      trialDimensionsIntro: {
+        en: "Singapore Chinese Orchestra auditions typically run 15–20 minutes per candidate and are led by the school's CO conductor (often a Singapore Chinese Orchestra-affiliated musician) plus the teacher-in-charge of CCAs. The format is unusually standardised across schools: two contrasting prepared pieces (excerpts allowed, total time capped at 5 minutes), a sight-reading passage on the candidate's instrument, and a short interview about the candidate's musical journey. Conductors lean on the six dimensions below, drawn from public DSA briefs (BPGHS, Victoria School, Catholic High) and aural-musicianship frameworks used in SAP-school CO coaching.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Tone production on the instrument" },
+          body: {
+            en: "The single most-listened-for element. On bowed strings (erhu, gaohu, zhonghu, cello, bass) conductors listen for bow weight and contact-point consistency; on plucked strings (pipa, guzheng, liuqin, ruan) they listen for fingertip-versus-fingernail clarity and rest-stroke control; on winds (dizi, sheng, suona, hulusi, guanzi) they listen for embouchure stability and steady airflow. A clean, consistent tone on a Grade 7 piece reads better than a struggling tone on a Grade 9 piece — choose repertoire your child can produce a beautiful sound on.",
+          },
+        },
+        {
+          label: { en: "Technical command on the two contrasting pieces" },
+          body: {
+            en: "Conductors listen for accuracy at tempo, articulation differences between the two pieces (legato lyrical vs detached fast), and dynamic range. Both pieces should be from different musical territories — a traditional folk piece + a virtuosic conservatory piece is a safe pairing, as is a slow Cantonese-style piece + a Northern technique piece. Avoid two pieces that sound similar — the contrast is the brief, and panels notice when it isn't there.",
+          },
+        },
+        {
+          label: { en: "Musicality and interpretation" },
+          body: {
+            en: "What distinguishes a clean player from a future Chinese Orchestra principal is interpretation — phrase shaping, the use of vibrato, the choice of when to push and when to hold back, the cultural idiom appropriate to the piece. A candidate who can articulate one specific interpretive choice (\"I take more time at this phrase because it imitates a singer's breath\") stands out immediately. Knowing the cultural context of the piece — Cantonese, Chaozhou, Jiangnan, or Northern — is a strong signal.",
+          },
+        },
+        {
+          label: { en: "Sight-reading on the instrument" },
+          body: {
+            en: "Conductors typically set sight-reading at an intermediate level relative to the candidate's instrument standard — a passage of 8–16 bars with 30 seconds to review, then play through. What conductors watch is not whether every note is right, but whether the candidate keeps tempo, gets the rhythmic structure, and recovers from a mistake without stopping. Sight-reading on Chinese instruments uses both jianpu (numbered notation) and Western staff — confirm with each target school which notation the audition uses.",
+          },
+        },
+        {
+          label: { en: "Cultural idiom and Mandarin / dialect comfort" },
+          body: {
+            en: "SAP-school CO conductors actively listen for whether the candidate plays with the right cultural inflection — bending notes appropriate to the style, ornaments idiomatic to the piece's region. This is hard to learn from a Western-trained teacher and is a strong differentiator. Candidates comfortable with Mandarin (and in some cases dialect-specific repertoire) communicate better with the conductor and signal long-term fit with the SAP environment.",
+          },
+        },
+        {
+          label: { en: "Stage presence, composure, and bowing etiquette" },
+          body: {
+            en: "How the candidate walks in, bows to the conductor, settles at the instrument (tuning calmly, adjusting the chair or stand), and recovers from a slip. Chinese Orchestra culture is particularly attentive to bowing and conductor-respect etiquette — a candidate who bows correctly and addresses the conductor as \"老师\" or \"Mr / Ms\" appropriately signals cultural literacy that matches the SAP environment.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Bowed strings — erhu, gaohu, zhonghu, banhu" },
+          body: {
+            en: "The most-recruited section in nearly every school CO. Conductors listen for bow weight (not pressed) and the consistency of the contact point between the bow and the inner strings on the erhu. Vibrato use, slide ornaments (huayin), and the cultural inflection on traditional folk pieces are heavily weighted. Choose contrasting pieces that show both lyrical line (folk tune) and technical agility (fast variations) — Northern technique pieces are often a strong second choice.",
+          },
+        },
+        {
+          position: { en: "Plucked strings — pipa, guzheng, liuqin, ruan family" },
+          body: {
+            en: "Highly competitive on pipa and guzheng because these are the instruments many primary-school students begin with. Conductors listen for fingertip-versus-fingernail consistency, rest-stroke control on pipa, and right-hand strength on guzheng. For ruan players (zhongruan, daruan), conductors are often actively looking — these are under-recruited inner-voice instruments and a competent ruan candidate is treated as a section-flexibility multiplier.",
+          },
+        },
+        {
+          position: { en: "Wind instruments — dizi, sheng, suona, hulusi, guanzi" },
+          body: {
+            en: "Conductors listen for embouchure stability first (steady airflow producing a clean tone across the range), then articulation (tonguing on dizi, finger coordination on sheng, lip control on suona). Sheng players in particular are often under-recruited — both gaoyin sheng (high) and zhongyin sheng (middle) are essential to the CO sound but are taught by fewer teachers. If your child plays a less common wind instrument (suona, guanzi, hulusi), name it explicitly in the application — that information shapes which schools fast-track the file.",
+          },
+        },
+        {
+          position: { en: "Yangqin, percussion, and orchestral support (cello, double bass)" },
+          body: {
+            en: "Yangqin is a high-skill specialist instrument; conductors recruit yangqin candidates carefully because the instrument anchors much of the orchestral texture. Percussion candidates audition on a primary percussion family (drums, gongs, cymbals) plus a melodic-percussion piece if available. Cello and double bass in Chinese Orchestra are usually played by candidates who have classical training — conductors assess whether the candidate can adapt classical technique to the CO repertoire's rhythmic and ornamental conventions.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Singapore school Chinese Orchestra at P6 audition level usually does not require the candidate to commit to one instrument permanently — but the instrument the candidate auditions on will be the section they join in Sec 1. If your child has primary-school experience on two instruments (e.g. plays erhu and yangqin), audition on the stronger one but mention the second in the interview. Section flexibility is a significant tiebreaker between equally-strong primary instrument candidates.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love Chinese Orchestra?" },
+          subtext: {
+            en: "Panels want a specific moment, not a generic appreciation of Chinese culture.",
+          },
+          approach: {
+            en: "Open with one concrete memory — a piece, a performance, a teacher moment — then connect it to your relationship with the instrument.",
+          },
+          template: {
+            en: "I started erhu at six because my grandfather played, but the moment I knew I loved it was watching the Singapore Chinese Orchestra play Jasmine Flower at a community concert. The way the section breathed together — that's when I realised CO isn't a solo art, even when you're playing solo.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the CO programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's CO — a conductor's name, an SYF result, the SAP/Bicultural Studies environment.",
+          },
+          template: {
+            en: "Dunman High's CO trains four times a week, plays at SYF Distinction level, and the SAP environment means I can keep Higher Chinese alongside competitive training. That combination is rare.",
+          },
+        },
+        {
+          question: { en: "What is your instrument and why?" },
+          subtext: {
+            en: "Can the candidate articulate what the instrument asks of them?",
+          },
+          approach: {
+            en: "Name the instrument plus what playing it requires.",
+          },
+          template: {
+            en: "Pipa. My job is the section that often carries the melody but always has to dance between melody and percussive accompaniment. I love it because the right hand has to think two beats ahead of the left — that's the only instrument where I feel both halves of my brain working at once.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I broke my erhu bridge two weeks before a school CO concert and couldn't get a replacement in time. My teacher lent me her instrument but the setup felt completely different. I spent every evening adjusting until the bow weight felt right — the concert went without anyone noticing.",
+          },
+        },
+        {
+          question: { en: "Who is your favourite composer or piece, and why?" },
+          subtext: {
+            en: "Tests musical vocabulary in the Chinese-music tradition specifically.",
+          },
+          approach: {
+            en: "Name the piece plus one specific musical element you can describe (regional style, ornament, rhythmic structure).",
+          },
+          template: {
+            en: "Liu Tianhua's San Bao Fo for erhu — because of the way the slide ornaments (huayin) carry the emotional weight more than the melody itself. I asked my teacher how to bow those slides; the answer changed how I think about every piece I play.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent rehearsals?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I finish English and Math homework before dinner because I'm too tired after practice. My mother shows my report book to my CO teacher every term — if my grades slip, we cut practice from 90 minutes to 60. That's the rule we set together.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your conductor's emphasis on Cantonese-style repertoire matches what I want to learn. If School A called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "Chinese Orchestra (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "SAP and Bicultural Studies school. Chinese Orchestra among Dunman's 2026 DSA FAQ talent areas. Multi-year SYF Distinction record.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "Chinese Orchestra (Boys), IP" },
+          context: {
+            en: "SAP and Bicultural Studies school. Boys' CO among HCI's published DSA talent areas. Sustained SYF Distinction record.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          url: "https://www.nanhuahigh.moe.edu.sg/announcements/talent-areas-for-dsa/",
+          talentArea: { en: "Chinese Orchestra, DSA-Sec" },
+          context: {
+            en: "SAP school. CO among Nan Hua's published DSA talent areas. Higher Chinese / Chinese Language as Mother Tongue requirement applies.",
+          },
+        },
+        {
+          name: "River Valley High School",
+          url: "https://www.rivervalleyhigh.moe.edu.sg/",
+          talentArea: { en: "Chinese Orchestra (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "SAP school with Bicultural Studies. CO among RVHS's recognised DSA talent areas. Active SYF participation.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "Chinese Orchestra (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies school. CO among NYGH's recognised DSA talent areas. SYF Distinction record.",
+          },
+        },
+        {
+          name: "Catholic High School",
+          url: "https://www.catholichigh.moe.edu.sg/",
+          talentArea: { en: "Chinese Orchestra (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school — Higher Chinese / Chinese Language as Mother Tongue requirement applies. Boys' CO with strong SYF record.",
+          },
+        },
+        {
+          name: "Chung Cheng High School (Main)",
+          url: "https://www.chungchenghighmain.moe.edu.sg/direct-school-admission-dsa/",
+          talentArea: { en: "Chinese Orchestra (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "SAP school. CO among Chung Cheng's published DSA talent areas. Strong cultural tradition with sustained SYF participation.",
+          },
+        },
+        {
+          name: "Maris Stella High School",
+          url: "https://www.marisstellahigh.moe.edu.sg/",
+          talentArea: { en: "Chinese Orchestra (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school. Boys' CO with consistent SYF appearances. Higher Chinese / Chinese Language as Mother Tongue requirement applies.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://www.rgs.edu.sg/admissions/Admission-to-RGS/via-DSA/",
+          talentArea: { en: "Chinese Orchestra (Girls), IP" },
+          context: {
+            en: "IP school. CO among RGS's recognised DSA talent areas. Active SYF participation; published in the 2026 Information on Application brief.",
+          },
+        },
+        {
+          name: "Bukit Panjang Government High School",
+          url: "https://www.bpghs.moe.edu.sg/dsa-2026/",
+          talentArea: { en: "Chinese Orchestra (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "BPGHS publishes a detailed DSA 2026 brief explicitly listing CO audition requirements (2 contrasting pieces + sight-read).",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the audition is still weeks out" },
+          items: [
+            {
+              en: "Confirm the audition format with each target school. Most use the 2-piece + 5-minute + sight-read format, but specifics (Victoria School's 16-bars-fast + 16-bars-slow tempo requirement, the notation system used for sight-read) vary. Download each school's 2026 DSA brief.",
+            },
+            {
+              en: "Choose the contrasting pair early. The strongest pairing is one lyrical / tonal piece (folk-style, demonstrating tone and musicality) + one fast / technical piece (conservatory-style, demonstrating command). Confirm the choice with your child's teacher — repertoire that feels comfortable but exposes weaknesses is the most common audition mistake.",
+            },
+            {
+              en: "Practise sight-reading daily for ten minutes at audition difficulty. Use both jianpu and staff notation. Sight-reading on Chinese instruments is under-practised by many candidates because primary-school CO programmes focus on repertoire memorisation.",
+            },
+            {
+              en: "Confirm CCA records at primary school are accurate. MOE pulls CCA participation, school awards, SYF results, and external competition results (Singapore Chinese Music Competition, NUS Chinese Music Festival) into the DSA portal directly. Ask the CCA teacher to verify what's been logged.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: warm-up scales, opening 30 seconds of each piece, sight-read practice, no new technical work. Final-week note-changes almost never end well.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire (most auditions expect school uniform or smart casual; bring the instrument and any required accessories — rosin, spare strings, a tuner). Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "For bowed strings, change the strings 5–7 days before audition so they have time to settle. New strings on audition day go out of tune mid-piece.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of audition" },
+          items: [
+            {
+              en: "Arrive 60 minutes early. Warm up in a quiet corner of the school — scales, the opening 16 bars of each piece, two minutes of sight-reading any printed material. Do not over-rehearse the full pieces — the audition is the performance.",
+            },
+            {
+              en: "Eat 90 minutes before — not 30. Avoid cold drinks if playing wind instruments. Bring a bottle of room-temperature water.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the conductor said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, audition coming up, no real prep — there are still real moves. Lock in the contrasting pair (don't change pieces this week). Focus practice on the opening 30 seconds of each piece and the sight-read drill — those are the highest-leverage minutes. Confirm each target school's specific format (notation system, tempo requirement if any) tonight. Cancel anything that competes with sleep and instrument care. Spend the freed time on aural drills and the interview prep above. Some families bring in a private Chinese-instrument coach at this stage. A good private coach can stabilise audition-day nerves, polish the opening phrase of each piece, and run sight-read drills at the correct difficulty — but no coach produces, in three sessions, the tone of a year of daily practice. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -7213,6 +7572,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "netball",
   "floorball",
   "choir",
+  "chinese-orchestra",
 ];
 
 /**
@@ -7249,6 +7609,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   netball: ["basketball", "volleyball"],
   floorball: ["hockey", "basketball"],
   choir: ["music", "drama"],
+  "chinese-orchestra": ["music", "chinese"],
 };
 
 /**
