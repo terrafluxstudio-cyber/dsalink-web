@@ -37,7 +37,8 @@ export type TalentSlug =
   | "sailing"
   | "rugby"
   | "symphonic-band"
-  | "mep";
+  | "mep"
+  | "aep";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -9884,6 +9885,369 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  aep: {
+    slug: "aep",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "AEP (Art Elective)", zh: "美术特选课程", ms: "Program Seni Pilihan", ta: "AEP கலை சிறப்புத் திட்டம்" },
+    hook: {
+      en: "AEP DSA — entry into a 4-year visual art academic track, judged on portfolio depth, on-spot drawing, written reflection, and interview.",
+      zh: "AEP DSA——进入 4 年视觉艺术学术轨道，按作品集深度、现场绘画、书面反思、面试综合评估",
+      ms: "DSA AEP — kemasukan ke trek akademik seni visual 4 tahun, dinilai berdasarkan portfolio, lukisan di tempat, refleksi bertulis, dan temu duga.",
+      ta: "AEP DSA — 4 ஆண்டு கலைக் கல்வித் தடத்தில் சேர்க்கை, போர்ட்ஃபோலியோ, இடத்தில் வரைதல், எழுத்து சிந்தனை, நேர்காணல் அடிப்படையில் தீர்மானிக்கப்படுகிறது.",
+    },
+    intro: {
+      en: "The Art Elective Programme (AEP) is MOE's secondary-school visual art academic track. AEP students take Art as an examinable academic subject covering drawing, painting, three-dimensional studies, art history, and critical writing about art. The DSA audition spans multiple components — portfolio submission, on-spot drawing or painting test, written reflection (about own work or about a presented artwork), and interview. The audition itself typically runs 2-3 hours per candidate. AEP is distinct from non-AEP Visual Arts DSA in two ways: it's a four-year academic commitment with theory and writing demands, and it leads naturally into the H2 Art syllabus at JC level for students continuing visual art into Pre-U.",
+      zh: "美术特选课程（AEP）是 MOE 在中学阶段的视觉艺术学术轨道。AEP 学生把美术作为可考的学术科目，涵盖素描、绘画、三维创作、艺术史、艺术评论写作。DSA audition 多组件——作品集提交、现场绘画 / 绘画测试、书面反思（针对自己作品或呈现的艺术品）、面试。Audition 本身常 2-3 小时/人。AEP 与非 AEP 视觉艺术 DSA 的两大区别：①4 年学术承诺含理论与写作要求；②自然衔接 JC 阶段的 H2 Art syllabus。",
+      ms: "AEP adalah trek akademik seni visual MOE di sekolah menengah. Pelajar AEP mengambil Seni sebagai subjek akademik diperiksa. Uji bakat DSA merangkumi pelbagai komponen — portfolio, ujian lukisan di tempat, refleksi bertulis, temu duga.",
+      ta: "AEP MOE-இன் இடைநிலை பள்ளி காட்சிக் கலை கல்வித் தடம். மாணவர்கள் கலையை தேர்வுசெய்யக்கூடிய கல்விப் பாடமாக எடுக்கிறார்கள். DSA தேர்வு பல கூறுகள் — போர்ட்ஃபோலியோ, இடத்தில் வரைதல், எழுத்து சிந்தனை, நேர்காணல்.",
+    },
+    summary: {
+      en: "AEP school list, audition components (portfolio + on-spot + written + interview), portfolio guidance, sample interview questions, AEP differentiation from non-AEP Visual Arts DSA.",
+      zh: "AEP 校单、audition 组件（作品集 + 现场 + 书面 + 面试）、作品集指南、面试题、AEP 与非 AEP 视觉艺术 DSA 区别。",
+      ms: "Senarai sekolah AEP, komponen uji bakat, panduan portfolio, soalan temu duga.",
+      ta: "AEP பள்ளி பட்டியல், தேர்வு கூறுகள், போர்ட்ஃபோலியோ வழிகாட்டி, கேள்விகள்.",
+    },
+    sampleSchools: [
+      "Nanyang Girls' High School",
+      "Singapore Chinese Girls' School",
+      "Crescent Girls' School",
+      "Dunman High School",
+      "Anglo-Chinese School (Independent)",
+      "Hwa Chong Institution",
+    ],
+    metaDescription: {
+      en: "AEP (Art Elective Programme) DSA-Sec audition guide for Singapore P6 — portfolio + on-spot drawing + written reflection + interview format, AEP-designated schools.",
+      zh: "新加坡 P6 AEP 美术特选课程 DSA-Sec audition 指南——作品集 + 现场绘画 + 书面反思 + 面试格式、AEP 指定学校。",
+      ms: "Panduan uji bakat DSA-Sec AEP Singapura — komponen, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 AEP DSA-Sec வழிகாட்டி — வடிவம், பள்ளிகள்.",
+    },
+    rich: {
+      preparedPiece: {
+        intro: {
+          en: "AEP DSA assessment combines four components: a submitted portfolio of prior work, an on-spot drawing or painting test, a written reflection (either about a piece in the portfolio or about an artwork shown by the panel), and an interview. The audition slot typically runs 2-3 hours per candidate. Portfolio is the single most important component — what's inside it predicts the outcome more than any other element.",
+        },
+        entries: [
+          {
+            variant: { en: "Portfolio submission (the core component)" },
+            requirement: { en: "8-15 artworks showing variety across media (drawing, painting, mixed media, 3D if available), subject matter (still life, figure, landscape, abstract), and process (finished works + working sketchbook pages). At least one developmental sequence (sketch → study → final work) is highly recommended" },
+            source: { en: "Convention across the AEP-designated schools; aligns with MOE's published Art Elective Programme description and Singapore school AEP open house briefs." },
+          },
+          {
+            variant: { en: "On-spot drawing or painting test" },
+            requirement: { en: "Typically 90-120 minutes · subject given on the spot (still-life setup, observational drawing prompt, or themed brief) · materials usually provided or specified · candidate brings own preferred drawing tools" },
+            source: { en: "AEP audition convention across schools." },
+          },
+          {
+            variant: { en: "Written reflection" },
+            requirement: { en: "Short essay (200-500 words typical) — either reflecting on one work in your portfolio (explaining the conceptual or technical decisions) or responding to an artwork the panel shows you · evaluates analytical-writing capacity, not just art-making" },
+            source: { en: "AEP audition convention; aligns with H2 Art syllabus written-component preparation." },
+          },
+          {
+            variant: { en: "Interview" },
+            requirement: { en: "Panel interview covering: (1) why AEP, (2) how the candidate thinks about their artistic process, (3) one artist or artwork the candidate finds meaningful, (4) post-AEP intentions. Tests academic engagement with art history and contemporary practice" },
+            source: { en: "AEP audition convention." },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A private art coach with AEP audition experience can curate the portfolio (selecting works that show range and depth), develop a working sketchbook to a presentable standard, run timed on-spot drawing drills, and rehearse the written-reflection component (which most P6 candidates underestimate). Browse our coach directory for AEP-experienced art coaches.",
+        },
+      },
+      trialDimensionsIntro: {
+        en: "AEP auditions are conducted by the school's AEP coordinator plus an external adjudicator (often an established artist, NAFA / LASALLE faculty, or H2 Art syllabus examiner). The audition is evaluated on six dimensions across the portfolio, on-spot test, written reflection, and interview. These dimensions emerge from MOE's AEP description and public AEP open house briefs.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Portfolio depth and developmental thinking" },
+          body: {
+            en: "The single most-weighted dimension. Adjudicators look for two signals in the portfolio: range (drawing + painting + 3D + mixed media, spanning observational + imaginative work) and development (sketches → studies → finished pieces showing how an idea evolved). A portfolio of 15 isolated finished works reads as untrained selection; a portfolio of 10 finished works plus sketchbook pages showing the thinking behind each work reads as AEP-ready. The sketchbook is often the single most important inclusion.",
+          },
+        },
+        {
+          label: { en: "Observational drawing skill on the on-spot test" },
+          body: {
+            en: "The fundamental technical skill assessed in the on-spot. Adjudicators look for proportional accuracy, value range (light to dark), tonal modelling that establishes three-dimensional form, and confident mark-making. A P6 candidate who can sustain observational drawing for 90 minutes without losing composition control signals AEP readiness; one who finishes in 20 minutes with a flat sketch is read as a coaching project.",
+          },
+        },
+        {
+          label: { en: "Conceptual thinking on the on-spot test" },
+          body: {
+            en: "On-spot tests increasingly include thematic prompts (\"depict the idea of transition\" or \"respond to the concept of fragility\") alongside or instead of pure observational tests. Adjudicators assess whether the candidate plans before drawing (thumbnail sketches in the corner of the paper), develops a clear visual concept, and executes it cohesively. Idea-first candidates outscore strong technicians who default to literal interpretation.",
+          },
+        },
+        {
+          label: { en: "Written reflection — analytical writing about art" },
+          body: {
+            en: "AEP students will write critical essays about art across four years; the audition tests whether the P6 candidate already has analytical writing capacity about visual work. Adjudicators look for specific visual vocabulary (composition, palette, line quality, texture, scale, contrast) rather than generic emotional response (\"I like this painting because it's beautiful\"). A 300-word reflection using six specific visual terms outscores a 600-word reflection using emotional language.",
+          },
+        },
+        {
+          label: { en: "Art-historical and contemporary awareness at interview" },
+          body: {
+            en: "What separates a strong portfolio candidate from an AEP-bound candidate is interview engagement with art history and contemporary practice. \"Who is your favourite artist?\" is testing whether the candidate can describe the artist's work, situate them historically, and articulate why their practice matters. Naming a Singaporean contemporary artist (Georgette Chen, Cheong Soo Pieng, Han Sai Por, Suzann Victor, Jane Lee, Robert Zhao) signals contextual awareness that purely international names don't.",
+          },
+        },
+        {
+          label: { en: "Composure and ownership at interview" },
+          body: {
+            en: "How the candidate explains their own work — whether they can talk about a piece confidently, identify what worked and what they'd change, and accept critique without becoming defensive. Adjudicators want to see candidates who own their portfolio (have made every choice for a reason) rather than ones who present polished work without being able to articulate the decisions behind it.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Drawing and painting specialist (traditional 2D)" },
+          body: {
+            en: "The most common AEP candidate profile. Adjudicators look for fluency across pencil, ink, watercolour, acrylic, and oil (where available). Strong observational drawing is the foundation; colour theory and mixing skill are the developing layer. Portfolio should include life drawing or figure studies where access permits — figure studies are the single most under-represented portfolio element from primary-school candidates.",
+          },
+        },
+        {
+          position: { en: "Mixed media and 3D" },
+          body: {
+            en: "Candidates working in collage, found-object assemblage, ceramics, or sculpture are valued for portfolio range. Adjudicators assess whether the 3D work shows the same conceptual development as the 2D — sketches and maquettes alongside finished pieces. A P6 with credible 3D work alongside drawing fluency is the most-recruited AEP candidate profile because the H2 Art syllabus tests across dimensions.",
+          },
+        },
+        {
+          position: { en: "Photography / digital media" },
+          body: {
+            en: "Photography candidates need a portfolio that shows compositional decision-making and image processing thinking, not just a collection of attractive images. Digital media (illustration, simple animation, digital painting) is increasingly accepted as part of AEP portfolios. Confirm with each target school whether digital-only portfolios are accepted — most schools want traditional 2D fundamentals alongside any digital work.",
+          },
+        },
+        {
+          position: { en: "Conceptual / installation (rare at P6)" },
+          body: {
+            en: "Rare at P6 level but increasingly recruited by AEP schools that emphasise contemporary practice. Adjudicators look for documented installation or performance work (photo or video documentation), a clear conceptual statement for each piece, and the ability to articulate the work in interview. If your child has done conceptual work, name it explicitly in the application.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "AEP candidates do not specialise in one medium permanently — but the portfolio's centre-of-gravity (where the strongest works sit) usually drives how the candidate develops over the four years. If your child has a clear medium where they're strongest, lead with that work in the portfolio while still showing range. The strongest portfolios show one deep specialisation plus credible breadth.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love art?" },
+          subtext: {
+            en: "Panels want a specific moment plus an academic-engagement signal, not generic appreciation.",
+          },
+          approach: {
+            en: "Open with one concrete artistic memory, then connect it to how you think about art academically.",
+          },
+          template: {
+            en: "I drew a still life of my grandmother's hands during the school holidays in P5 — and that was the first time I noticed how light wraps around a curved surface differently from a flat one. After that I started looking at portrait paintings for how artists model form with shadow. That's when I realised art is the only subject where what I see and what I think have to work together.",
+          },
+        },
+        {
+          question: { en: "Why AEP at our school specifically?" },
+          subtext: {
+            en: "Did the family research the AEP programme's distinct character at this school?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's AEP — the cohort size, the studio facilities, the H2 Art pathway.",
+          },
+          template: {
+            en: "NYGH's AEP has a sustained printmaking tradition and the studio's collaboration with NAFA for life drawing is exactly the breadth of practice I want.",
+          },
+        },
+        {
+          question: { en: "Walk us through this piece in your portfolio." },
+          subtext: {
+            en: "Can the candidate articulate the work, not just present it?",
+          },
+          approach: {
+            en: "Name the inspiration plus one specific technical decision plus what you'd change.",
+          },
+          template: {
+            en: "This is a watercolour study of mangrove roots — I started from a photograph I took at Sungei Buloh. I chose watercolour for the transparency of the layered roots in shallow water. If I redid it, I'd commit harder to the darks because the painting still looks washed-out at the bottom.",
+          },
+        },
+        {
+          question: { en: "Who is your favourite artist and why?" },
+          subtext: {
+            en: "Tests art-historical engagement and academic vocabulary.",
+          },
+          approach: {
+            en: "Name the artist plus one specific element of their practice you can describe (medium, subject, formal device).",
+          },
+          template: {
+            en: "Georgette Chen — because her Nanyang-style oil paintings blend Western oil technique with Southeast Asian subject matter, and her self-portraits use compositional asymmetry to suggest interiority rather than just likeness. I asked my teacher how she developed the technique; that started me reading about the Nanyang school.",
+          },
+        },
+        {
+          question: { en: "Tell us about a piece you started and didn't finish." },
+          subtext: {
+            en: "Tests honesty and ability to articulate failure constructively.",
+          },
+          approach: {
+            en: "Name the work, name the problem, name what you'd do differently.",
+          },
+          template: {
+            en: "I started an acrylic portrait of my brother in March but stopped at the underpainting stage because I couldn't get the colour temperature right in his skin tones — too pink everywhere. I should have done a colour study first. Now I always do a small colour study before any portrait.",
+          },
+        },
+        {
+          question: { en: "How do you manage time across academic subjects and art practice?" },
+          subtext: {
+            en: "AEP schools fear DSA kids who flame out academically — and AEP students carry an extra academic subject (Art itself).",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I finish English and Math homework before starting art so I can lose track of time without consequence. Science I do on weekends. My mother shows my report book to my art teacher every term — if any subject drops a band, we cut one drawing session. That's the rule we set together.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you AEP, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your AEP teacher's emphasis on Singaporean contemporary practice matches what I most want to develop. If School A called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "AEP (Girls), IP" },
+          context: {
+            en: "AEP-designated school. SAP and Bicultural Studies environment. NYGH AEP has a sustained printmaking and life drawing tradition with established external faculty links.",
+          },
+        },
+        {
+          name: "Singapore Chinese Girls' School",
+          url: "https://www.scgs.moe.edu.sg/prospective-students/secondary-admission/direct-school-admission/",
+          talentArea: { en: "AEP (Girls), DSA-Sec" },
+          context: {
+            en: "AEP-designated school. SAP girls' school. AEP among recognised DSA talent areas in the 2026 DSA Infosheet.",
+          },
+        },
+        {
+          name: "Crescent Girls' School",
+          url: "https://www.crescent.moe.edu.sg/",
+          talentArea: { en: "AEP (Girls), DSA-Sec" },
+          context: {
+            en: "AEP-designated school. Girls' school with established AEP tradition and dedicated art studios.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "AEP (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "AEP-designated school. SAP and Bicultural Studies school. AEP among Dunman's 2026 DSA FAQ talent areas.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "AEP (Boys), IP" },
+          context: {
+            en: "AEP-designated school. IP school with AEP feeding into the IB Visual Arts higher level pathway in upper years.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution",
+          url: "https://www.admissions.hci.edu.sg/direct-school-admission",
+          talentArea: { en: "AEP (Boys), IP" },
+          context: {
+            en: "AEP-designated school. IP school with AEP among published DSA talent areas.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.moe.edu.sg/secondary/admissions/dsa-sec1/",
+          talentArea: { en: "AEP (Girls), DSA-Sec" },
+          context: {
+            en: "AEP-designated school. Methodist heritage girls' school.",
+          },
+        },
+        {
+          name: "CHIJ Secondary (Toa Payoh)",
+          url: "https://chijsectoapayoh.moe.edu.sg/",
+          talentArea: { en: "AEP (Girls), DSA-Sec" },
+          context: {
+            en: "AEP-designated school. CHIJ heritage girls' school.",
+          },
+        },
+        {
+          name: "Bukit Panjang Government High School",
+          url: "https://www.bpghs.moe.edu.sg/dsa-2026/",
+          talentArea: { en: "AEP (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "AEP-designated school. BPGHS publishes a detailed DSA 2026 brief covering AEP audition requirements.",
+          },
+        },
+        {
+          name: "Zhonghua Secondary School",
+          url: "https://www.zhss.moe.edu.sg/",
+          talentArea: { en: "AEP (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "AEP-designated school. Co-educational with sustained AEP programme.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the audition is still weeks out" },
+          items: [
+            {
+              en: "Curate the portfolio carefully. Pick 8-12 finished works that show range AND depth. Include at least one developmental sequence (sketch → study → final work) — adjudicators want to see the thinking, not just the outcomes. Include sketchbook pages as part of the portfolio submission.",
+            },
+            {
+              en: "Practise observational drawing daily — 30-minute sessions minimum, longer when possible. The on-spot test rewards sustained looking. Daily figure studies (siblings, family members posing for short poses) build the proportional eye fastest.",
+            },
+            {
+              en: "Practise written reflection. Write a 300-word reflection on three different artworks from your portfolio AND three artworks from museum visits. Use specific visual vocabulary (composition / palette / line quality / texture / scale / contrast). This is the easiest dimension to upgrade with focused practice.",
+            },
+            {
+              en: "Study Singapore art. Visit the National Gallery Singapore in person; read about Nanyang school artists (Cheong Soo Pieng, Liu Kang, Chen Wen Hsi, Chen Chong Swee, Georgette Chen). Knowing Singaporean contemporary artists (Han Sai Por, Jane Lee, Robert Zhao, Suzann Victor, Vincent Leow) is a strong differentiator.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity on portfolio work. The portfolio is locked; further changes rarely improve and often weaken it. Switch to short observational drawing drills (10-20 minute studies) and written reflection practice.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue (typically the school's art room), bring required materials (sketchbook, pencils 2B-6B, eraser, drawing pen, watercolour set or acrylics if specified). Confirm whether the school provides paper or expects the candidate to bring their own. Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "Visit the National Gallery Singapore one final time if possible. Stand in front of one painting for 15 minutes and write a 200-word reflection on the spot. The exercise builds the focused-looking habit the on-spot test rewards.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of audition" },
+          items: [
+            {
+              en: "Arrive 60 minutes early. Set up materials calmly — pencils sharpened in advance, eraser clean, paper on the easel before the prompt is given.",
+            },
+            {
+              en: "Eat 90 minutes before — not 30. The on-spot test runs 90-120 minutes; mid-test hunger destroys concentration.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the panel said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, AEP audition coming up, no real prep — there are still real moves. Don't try to rebuild the portfolio this week; it is what it is. Instead, prioritise three things: (1) practise observational drawing daily for 30-60 minutes (the on-spot test rewards this); (2) write 300-word reflections on three works using specific visual vocabulary; (3) visit the National Gallery Singapore and read about Singaporean contemporary artists you can name in the interview. Cancel anything that competes with sleep. Some families bring in a private art coach with AEP experience at this stage. A coach can help select the strongest portfolio works, run timed on-spot drills, and rehearse the written reflection — but no coach produces, in three sessions, the looking habit of years of drawing practice. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -9916,6 +10280,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "rugby",
   "symphonic-band",
   "mep",
+  "aep",
 ];
 
 /**
@@ -9960,6 +10325,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   rugby: ["football", "track-field"],
   "symphonic-band": ["music", "chinese-orchestra"],
   mep: ["music", "symphonic-band"],
+  aep: ["art", "drama"],
 };
 
 /**
