@@ -349,10 +349,10 @@ const R1_B: LocaleStr = {
   ta: "மே விண்ணப்பம் முதல் நவம்பர் முடிவுகள் வரை.",
 };
 const R2_T: LocaleStr = {
-  en: "16 talent paths",
-  zh: "16 个才艺方向",
-  ms: "16 laluan bakat",
-  ta: "16 திறமைப் பாதைகள்",
+  en: "All talent paths",
+  zh: "全部才艺方向",
+  ms: "Semua laluan bakat",
+  ta: "அனைத்து திறமைப் பாதைகள்",
 };
 const R2_B: LocaleStr = {
   en: "DSA accepts eight MOE categories — each with its own trial format and school list.",

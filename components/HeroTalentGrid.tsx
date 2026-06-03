@@ -3,8 +3,8 @@
 import Link from "next/link";
 import {
   Activity,
+  ArrowRight,
   Calculator,
-  CircleDot,
   Cpu,
   Crown,
   Drama,
@@ -17,42 +17,47 @@ import {
   Sparkles,
   Trophy,
   Waves,
-  Zap,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
+/**
+ * Curated top-14 talent paths shown in the Hero grid.
+ * Order = popularity (sports 5 → performing arts 3 → visual arts 1 →
+ *         STEM 2 → language → drama → leadership → martial arts).
+ *
+ * NOTE: this list is intentionally curated and HARD-CODED, not auto-derived
+ * from TALENT_SLUGS. Hockey + squash + future niche talents still have
+ * full prep pages but live behind the "See all" card → /dsa-interview/talents.
+ */
 const TALENTS: ReadonlyArray<{
   slug: string;
   icon: typeof Goal;
   label: LocaleStr;
-  /** Optional href override — defaults to /dsa-interview/[slug]. */
-  href?: string;
 }> = [
-  // ── Sports (have dedicated /dsa-interview pages) ────────────────────
-  { slug: "basketball", icon: Goal, label: { en: "Basketball", zh: "篮球", ms: "Bola Keranjang", ta: "கூடைப்பந்து" } },
+  // ── Sports · top 5 (gender-balanced, large NSG) ─────────────────────
   { slug: "football", icon: Trophy, label: { en: "Football", zh: "足球", ms: "Bola Sepak", ta: "கால்பந்து" } },
+  { slug: "basketball", icon: Goal, label: { en: "Basketball", zh: "篮球", ms: "Bola Keranjang", ta: "கூடைப்பந்து" } },
   { slug: "swimming", icon: Waves, label: { en: "Swimming", zh: "游泳", ms: "Renang", ta: "நீச்சல்" } },
-  { slug: "track-field", icon: Footprints, label: { en: "Track & Field", zh: "田径", ms: "Olahraga", ta: "ஓட்டப்பந்தயம்" } },
   { slug: "badminton", icon: Sparkles, label: { en: "Badminton", zh: "羽毛球", ms: "Badminton", ta: "இறகுப்பந்து" } },
-  { slug: "martial-arts", icon: Shield, label: { en: "Martial Arts", zh: "武术", ms: "Seni Bela Diri", ta: "தற்காப்பு கலைகள்" } },
-  // ── High-volume DSA talents without dedicated pages → DSA Finder pre-filtered ──
-  { slug: "squash", icon: Zap, label: { en: "Squash", zh: "壁球", ms: "Skuasy", ta: "ஸ்குவாஷ்" } },
-  { slug: "hockey", icon: CircleDot, label: { en: "Hockey", zh: "曲棍球", ms: "Hoki", ta: "ஹாக்கி" } },
-  // ── Performing Arts ────────────────────────────────────────────────
+  { slug: "track-field", icon: Footprints, label: { en: "Track & Field", zh: "田径", ms: "Olahraga", ta: "ஓட்டப்பந்தயம்" } },
+  // ── Performing Arts · 3 ─────────────────────────────────────────────
   { slug: "music", icon: Music2, label: { en: "Music", zh: "音乐", ms: "Muzik", ta: "இசை" } },
   { slug: "dance", icon: Activity, label: { en: "Dance", zh: "舞蹈", ms: "Tarian", ta: "நடனம்" } },
-  { slug: "drama", icon: Drama, label: { en: "Drama", zh: "戏剧", ms: "Drama", ta: "நாடகம்" } },
-  // ── Visual Arts ────────────────────────────────────────────────────
+  // ── Visual Arts · 1 ─────────────────────────────────────────────────
   { slug: "art", icon: Palette, label: { en: "Visual Arts", zh: "美术", ms: "Seni Visual", ta: "காட்சிக் கலை" } },
-  // ── STEM / Academic ────────────────────────────────────────────────
-  { slug: "robotics", icon: Cpu, label: { en: "Robotics", zh: "机器人", ms: "Robotik", ta: "ரோபோடிக்ஸ்" } },
+  // ── STEM · 2 ────────────────────────────────────────────────────────
   { slug: "math", icon: Calculator, label: { en: "Math & Sci", zh: "数理", ms: "Mat & Sains", ta: "கணிதம் & அறிவியல்" } },
-  // ── Language ───────────────────────────────────────────────────────
+  { slug: "robotics", icon: Cpu, label: { en: "Robotics", zh: "机器人", ms: "Robotik", ta: "ரோபோடிக்ஸ்" } },
+  // ── Language ────────────────────────────────────────────────────────
   { slug: "chinese", icon: Languages, label: { en: "Chinese (CLE)", zh: "高级华文", ms: "Bahasa Cina", ta: "சீன மொழி" } },
-  // ── Leadership (Uniformed Groups · NCC/NPCC + Student Council) ─────
+  // ── Drama ───────────────────────────────────────────────────────────
+  { slug: "drama", icon: Drama, label: { en: "Drama", zh: "戏剧", ms: "Drama", ta: "நாடகம்" } },
+  // ── Leadership ──────────────────────────────────────────────────────
   { slug: "leadership", icon: Crown, label: { en: "Leadership", zh: "领导力", ms: "Kepimpinan", ta: "தலைமைத்துவம்" } },
+  // ── Martial Arts ────────────────────────────────────────────────────
+  { slug: "martial-arts", icon: Shield, label: { en: "Martial Arts", zh: "武术", ms: "Seni Bela Diri", ta: "தற்காப்பு கலைகள்" } },
 ];
 
 const HEADING: LocaleStr = {
@@ -67,6 +72,13 @@ const SUB: LocaleStr = {
   zh: "点击任一才艺打开 DSA 备考指南",
   ms: "Tekan bakat untuk buka panduan DSA.",
   ta: "DSA தயாரிப்பு வழிகாட்டியைத் திறக்க தட்டவும்.",
+};
+
+const SEE_ALL_LABEL: LocaleStr = {
+  en: "Browse all talents",
+  zh: "查看全部才艺",
+  ms: "Lihat semua bakat",
+  ta: "அனைத்து திறமைகள்",
 };
 
 export function HeroTalentGrid() {
@@ -84,7 +96,7 @@ export function HeroTalentGrid() {
           return (
             <Link
               key={t.slug}
-              href={t.href ?? `/dsa-interview/${t.slug}`}
+              href={`/dsa-interview/${t.slug}`}
               className="group flex items-center gap-2.5 rounded-xl border border-slate-200/80 bg-white/95 px-3 py-3 shadow-soft backdrop-blur transition hover:-translate-y-0.5 hover:border-champagne hover:shadow-card"
             >
               <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-champagne-subtle text-champagne-dark transition group-hover:bg-champagne group-hover:text-intellectual-dark">
@@ -99,6 +111,22 @@ export function HeroTalentGrid() {
             </Link>
           );
         })}
+
+        {/* ── See-all card · spans 2 cols · champagne accent ─────────── */}
+        <Link
+          href="/dsa-interview/talents"
+          className="group col-span-2 flex items-center justify-between gap-2.5 rounded-xl border border-champagne/60 bg-champagne-subtle/40 px-3 py-3 shadow-soft backdrop-blur transition hover:-translate-y-0.5 hover:border-champagne hover:bg-champagne-subtle hover:shadow-card"
+        >
+          <span
+            style={{ textTransform: "none" }}
+            className="truncate text-[12.5px] font-semibold text-intellectual"
+          >
+            {SEE_ALL_LABEL[locale]}
+          </span>
+          <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-champagne text-intellectual-dark transition group-hover:bg-intellectual group-hover:text-white">
+            <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+          </span>
+        </Link>
       </div>
       <p className="text-[11px] leading-relaxed text-slate-400">{SUB[locale]}</p>
     </div>

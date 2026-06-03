@@ -633,12 +633,12 @@ const SCHOOLS: SchoolTakeaway[] = [
     ],
     goodFitEn: [
       "Boys who want the IP pathway in a heritage school — VCA IP leads directly to Victoria JC",
-      "Students with talent in sport, aesthetics, or STEM — 16 talent areas cover most types",
+      "Students with talent in sport, aesthetics, or STEM — our talent prep pages cover most types",
       "Boys who prefer a large, active boys' school in the East with a strong inter-school sports culture",
     ],
     goodFitZh: [
       "希望走IP路线、钟爱历史底蕴学校的男生——VCA IP直通维多利亚初级学院",
-      "在体育、艺术或STEM上有才能的学生——16个才能方向涵盖大多数类型",
+      "在体育、艺术或STEM上有才能的学生——我们的才艺备战页涵盖大多数类型",
       "偏好东区大型活跃男校、校际体育文化浓厚的男生",
     ],
     keySignalEn:

@@ -43,7 +43,7 @@ const TIMELINE_CARD: Card = {
 
 const TALENTS_CARD: Card = {
   icon: Compass,
-  title: { en: "16 talent paths", zh: "16 个才艺方向", ms: "16 laluan bakat", ta: "16 திறமைப் பாதைகள்" },
+  title: { en: "All talent paths", zh: "全部才艺方向", ms: "Semua laluan bakat", ta: "அனைத்து திறமைப் பாதைகள்" },
   body: {
     en: "Each trial's format, what coaches assess, school clusters per talent.",
     zh: "每个 trial 格式 · 教练评分维度 · 各才艺对应学校簇。",

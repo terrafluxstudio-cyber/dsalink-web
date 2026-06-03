@@ -5904,6 +5904,16 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   volleyball: ["basketball", "badminton"],
 };
 
+/**
+ * Total number of talent rich-content prep pages.
+ * Used across UI copy ("17 talent prep pages", trust strips, meta descriptions, etc.)
+ * Auto-updates whenever a new talent is added to TALENT_SLUGS.
+ *
+ * Note: this counts ALL talent pages live in the site, NOT the Hero grid's
+ * curated 14. Hero grid uses a hardcoded constant inside HeroTalentGrid.tsx.
+ */
+export const TALENT_COUNT: number = TALENT_SLUGS.length;
+
 export function getTalentPage(slug: string): TalentPage | null {
   if (!(slug in TALENT_DATA)) return null;
   return TALENT_DATA[slug as TalentSlug];

@@ -35,6 +35,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { STORIES } from "@/lib/parent-stories";
+import { TALENT_COUNT } from "@/lib/talentPages";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -59,15 +60,15 @@ const HERO_TITLE: LocaleStr = {
 };
 
 const HERO_SUB: LocaleStr = {
-  en: "From what DSA actually is, to which 147 schools take part, to the 16 talent areas with dedicated prep pages, the 2026 timeline, interview prep, and what each outcome means at result release. Every section links to the deeper page if you want to go further.",
-  zh: "从 DSA 到底是什么，到哪 147 所学校参与，到 16 个才艺方向各自的备战页，到 2026 时间线、面试准备、结果出来每种 outcome 意味着什么。每个 section 想深挖都有内链到详情页。",
-  ms: "Dari apa itu DSA, ke 147 sekolah yang menyertai, ke 16 bidang bakat dengan halaman persediaan khusus, garis masa 2026, persediaan temu duga, dan apa setiap keputusan bermakna apabila keputusan dilepaskan. Setiap bahagian memautkan ke halaman terperinci.",
-  ta: "DSA என்றால் என்ன என்பதிலிருந்து, பங்கேற்கும் 147 பள்ளிகள், தனிப்பட்ட தயாரிப்பு பக்கங்களுடன் 16 திறமைப் பகுதிகள், 2026 கால அட்டவணை, நேர்காணல் தயாரிப்பு, முடிவு வெளியிடப்படும்போது ஒவ்வொரு விளைவும் எதைக் குறிக்கிறது என்பது வரை. ஒவ்வொரு பகுதியும் ஆழமான பக்கத்திற்கு இணைக்கப்பட்டுள்ளது.",
+  en: "From what DSA actually is, to which 147 schools take part, to every talent area with a dedicated prep page, the 2026 timeline, interview prep, and what each outcome means at result release. Every section links to the deeper page if you want to go further.",
+  zh: "从 DSA 到底是什么，到哪 147 所学校参与，到每个才艺方向各自的备战页，到 2026 时间线、面试准备、结果出来每种 outcome 意味着什么。每个 section 想深挖都有内链到详情页。",
+  ms: "Dari apa itu DSA, ke 147 sekolah yang menyertai, ke setiap bidang bakat dengan halaman persediaan khusus, garis masa 2026, persediaan temu duga, dan apa setiap keputusan bermakna apabila keputusan dilepaskan. Setiap bahagian memautkan ke halaman terperinci.",
+  ta: "DSA என்றால் என்ன என்பதிலிருந்து, பங்கேற்கும் 147 பள்ளிகள், ஒவ்வொரு திறமைப் பகுதிக்கும் தனிப்பட்ட தயாரிப்பு பக்கம், 2026 கால அட்டவணை, நேர்காணல் தயாரிப்பு, முடிவு வெளியிடப்படும்போது ஒவ்வொரு விளைவும் எதைக் குறிக்கிறது என்பது வரை. ஒவ்வொரு பகுதியும் ஆழமான பக்கத்திற்கு இணைக்கப்பட்டுள்ளது.",
 };
 
 const STATS = [
   { num: "147", label: { en: "secondary schools", zh: "所中学", ms: "sekolah menengah", ta: "இடைநிலை பள்ளிகள்" } },
-  { num: "16", label: { en: "talent prep pages", zh: "才艺备战页", ms: "halaman bakat", ta: "திறமை பக்கங்கள்" } },
+  { num: String(TALENT_COUNT), label: { en: "talent prep pages", zh: "才艺备战页", ms: "halaman bakat", ta: "திறமை பக்கங்கள்" } },
   { num: "4", label: { en: "full-DSA schools", zh: "所纯 DSA 学校", ms: "sekolah DSA penuh", ta: "முழு DSA பள்ளிகள்" } },
   { num: "20%", label: { en: "S1 cap per school", zh: "学校 S1 名额上限", ms: "had S1 setiap sekolah", ta: "ஒரு பள்ளிக்கு S1 வரம்பு" } },
 ] as const;
@@ -302,16 +303,16 @@ const S3_KICKER: LocaleStr = {
   ta: "அத்தியாயம் 3",
 };
 const S3_TITLE: LocaleStr = {
-  en: "16 talent areas with dedicated prep pages",
-  zh: "16 个才艺方向 · 各有专属备战页",
-  ms: "16 bidang bakat dengan halaman persediaan khusus",
-  ta: "தனிப்பட்ட தயாரிப்பு பக்கங்களுடன் 16 திறமைப் பகுதிகள்",
+  en: "Talent areas with dedicated prep pages",
+  zh: "每个才艺方向 · 都有专属备战页",
+  ms: "Bidang bakat dengan halaman persediaan khusus",
+  ta: "தனிப்பட்ட தயாரிப்பு பக்கங்களுடன் திறமைப் பகுதிகள்",
 };
 const S3_INTRO: LocaleStr = {
-  en: "Across 147 schools, DSA talent areas span sports, performing arts, visual arts, language, STEM, and leadership. We've built one deep-prep page per talent — all 16 are live, each with trial format breakdown, sample interview questions, and the schools that accept that talent. Click any tile to open the prep page.",
-  zh: "147 所学校的 DSA 才艺涵盖体育、表演艺术、视觉艺术、语言、数理、领导力。每个 talent 一篇深度备战指南——全部 16 篇已上线，含 trial 格式拆解、面试样题、招生学校。点击任意卡片打开备战页。",
-  ms: "Merentas 147 sekolah, bidang bakat DSA merangkumi sukan, seni persembahan, seni visual, bahasa, STEM, dan kepimpinan. Kami telah membina satu halaman persediaan mendalam setiap bakat — kesemua 16 telah disiarkan.",
-  ta: "147 பள்ளிகளில், DSA திறமைப் பகுதிகள் விளையாட்டு, நிகழ்த்துக் கலைகள், காட்சிக் கலை, மொழி, STEM மற்றும் தலைமைத்துவம் ஆகியவற்றை உள்ளடக்கியது. ஒவ்வொரு திறமைக்கும் ஒரு ஆழமான தயாரிப்புப் பக்கம் — அனைத்து 16 பக்கங்களும் வெளியீடு.",
+  en: "Across 147 schools, DSA talent areas span sports, performing arts, visual arts, language, STEM, and leadership. We've built one deep-prep page per talent — every page is live, each with trial format breakdown, sample interview questions, and the schools that accept that talent. Click any tile to open the prep page.",
+  zh: "147 所学校的 DSA 才艺涵盖体育、表演艺术、视觉艺术、语言、数理、领导力。每个 talent 一篇深度备战指南——全部已上线，含 trial 格式拆解、面试样题、招生学校。点击任意卡片打开备战页。",
+  ms: "Merentas 147 sekolah, bidang bakat DSA merangkumi sukan, seni persembahan, seni visual, bahasa, STEM, dan kepimpinan. Kami telah membina satu halaman persediaan mendalam setiap bakat — semuanya telah disiarkan.",
+  ta: "147 பள்ளிகளில், DSA திறமைப் பகுதிகள் விளையாட்டு, நிகழ்த்துக் கலைகள், காட்சிக் கலை, மொழி, STEM மற்றும் தலைமைத்துவம் ஆகியவற்றை உள்ளடக்கியது. ஒவ்வொரு திறமைக்கும் ஒரு ஆழமான தயாரிப்புப் பக்கம் — அனைத்தும் வெளியீடு.",
 };
 
 const TALENTS = [
@@ -331,6 +332,7 @@ const TALENTS = [
   { slug: "math", icon: Calculator, label: { en: "Math & Sci", zh: "数理", ms: "Mat & Sains", ta: "கணிதம் & அறிவியல்" }, live: true },
   { slug: "chinese", icon: Languages, label: { en: "Chinese (CLE)", zh: "高级华文", ms: "Bahasa Cina", ta: "சீன மொழி" }, live: true },
   { slug: "leadership", icon: Crown, label: { en: "Leadership", zh: "领导力", ms: "Kepimpinan", ta: "தலைமைத்துவம்" }, live: true },
+  { slug: "volleyball", icon: CircleDot, label: { en: "Volleyball", zh: "排球", ms: "Bola Tampar", ta: "கைப்பந்து" }, live: true },
 ] as const;
 
 const LIVE_BADGE: LocaleStr = {

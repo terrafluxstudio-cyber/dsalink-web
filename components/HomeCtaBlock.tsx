@@ -6,6 +6,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SchoolFinderModal } from "@/components/SchoolFinderModal";
 import { getCyclePhase } from "@/lib/dsa-cycle";
+import { TALENT_COUNT } from "@/lib/talentPages";
 
 // Same grain tile used in SchoolFinderModal — consistent material language.
 const GRAIN_BG =
@@ -38,10 +39,10 @@ const AFTER_TITLE: LocaleStr = {
 };
 
 const AFTER_SUBTITLE: LocaleStr = {
-  en: "16 talent-specific interview pages, real sample questions, and what trial coaches actually look for — so the wait isn't wasted.",
-  zh: "16 个项目的面试备战页、真实样题、trial 教练真正看什么——把等待时间用对地方。",
-  ms: "16 halaman temu duga khusus bakat, soalan contoh sebenar, dan apa yang jurulatih trial nilai — jangan biarkan masa menunggu terbuang.",
-  ta: "16 திறமை சார்ந்த நேர்காணல் பக்கங்கள், உண்மையான மாதிரிக் கேள்விகள், சோதனை பயிற்சியாளர்கள் கவனிக்கும் விஷயங்கள் — காத்திருப்பு வீணாகாமல்.",
+  en: "Talent-specific interview pages, real sample questions, and what trial coaches actually look for — so the wait isn't wasted.",
+  zh: "每个项目的面试备战页、真实样题、trial 教练真正看什么——把等待时间用对地方。",
+  ms: "Halaman temu duga khusus bakat, soalan contoh sebenar, dan apa yang jurulatih trial nilai — jangan biarkan masa menunggu terbuang.",
+  ta: "திறமை சார்ந்த நேர்காணல் பக்கங்கள், உண்மையான மாதிரிக் கேள்விகள், சோதனை பயிற்சியாளர்கள் கவனிக்கும் விஷயங்கள் — காத்திருப்பு வீணாகாமல்.",
 };
 
 const AFTER_PRIMARY: LocaleStr = {
@@ -52,17 +53,17 @@ const AFTER_PRIMARY: LocaleStr = {
 };
 
 const AFTER_SECONDARY: LocaleStr = {
-  en: "Browse 16 talent pages",
-  zh: "浏览 16 个项目页",
-  ms: "Lihat 16 halaman bakat",
-  ta: "16 திறமை பக்கங்களைப் பார்க்கவும்",
+  en: "Browse all talent pages",
+  zh: "浏览全部项目页",
+  ms: "Lihat semua halaman bakat",
+  ta: "அனைத்து திறமை பக்கங்கள்",
 };
 
 const AFTER_KICKER_BADGE: LocaleStr = {
-  en: "Free reference · 16 talent pages",
-  zh: "免费参考 · 16 个项目页",
-  ms: "Rujukan percuma · 16 halaman bakat",
-  ta: "இலவச குறிப்பு · 16 திறமை பக்கங்கள்",
+  en: "Free reference · all talent pages",
+  zh: "免费参考 · 全部项目页",
+  ms: "Rujukan percuma · semua halaman bakat",
+  ta: "இலவச குறிப்பு · அனைத்து திறமை பக்கங்கள்",
 };
 
 function pick(s: LocaleStr, locale: "en" | "zh" | "ms" | "ta"): string {
@@ -210,7 +211,7 @@ export function HomeCtaBlock() {
                     { value: t.ctaTrustPersonalVal, label: t.ctaTrustPersonalLabel },
                   ]
                 : [
-                    { value: "16", label: locale === "zh" ? "项目页" : locale === "ms" ? "halaman bakat" : locale === "ta" ? "திறமை பக்கங்கள்" : "talent pages" },
+                    { value: String(TALENT_COUNT), label: locale === "zh" ? "项目页" : locale === "ms" ? "halaman bakat" : locale === "ta" ? "திறமை பக்கங்கள்" : "talent pages" },
                     { value: "35+", label: locale === "zh" ? "面试样题" : locale === "ms" ? "soalan contoh" : locale === "ta" ? "மாதிரிக் கேள்விகள்" : "sample questions" },
                     { value: locale === "zh" ? "免费" : locale === "ms" ? "Percuma" : locale === "ta" ? "இலவசம்" : "Free", label: locale === "zh" ? "4 种语言" : locale === "ms" ? "empat bahasa" : locale === "ta" ? "நான்கு மொழிகள்" : "four languages" },
                   ]

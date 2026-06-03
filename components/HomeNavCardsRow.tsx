@@ -72,10 +72,10 @@ const CARDS: Record<CardKey, QuickCard> = {
       ta: "நேர்காணல் & சோதனை",
     },
     blurb: {
-      en: "Sixteen talent-specific prep pages, sample interview questions, what trial coaches actually assess — the half-year between Submit and Results.",
-      zh: "16 个项目的备战页、面试样题、trial 教练真正看什么——从提交到出结果的半年怎么过。",
-      ms: "Enam belas halaman persediaan khusus bakat, soalan temu duga contoh, apa yang jurulatih trial nilai.",
-      ta: "பதினாறு திறமை சார்ந்த தயாரிப்பு பக்கங்கள், மாதிரி நேர்காணல் கேள்விகள், சோதனை பயிற்சியாளர்கள் மதிப்பிடுவது.",
+      en: "Talent-specific prep pages, sample interview questions, what trial coaches actually assess — the half-year between Submit and Results.",
+      zh: "每个项目的备战页、面试样题、trial 教练真正看什么——从提交到出结果的半年怎么过。",
+      ms: "Halaman persediaan khusus bakat, soalan temu duga contoh, apa yang jurulatih trial nilai.",
+      ta: "திறமை சார்ந்த தயாரிப்பு பக்கங்கள், மாதிரி நேர்காணல் கேள்விகள், சோதனை பயிற்சியாளர்கள் மதிப்பிடுவது.",
     },
   },
   coach: {

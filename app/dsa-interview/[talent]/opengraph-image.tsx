@@ -103,7 +103,7 @@ export default async function OG({ params }: { params: Params }) {
         >
           <span>147 schools</span>
           <span style={{ color: "#d4b86a" }}>·</span>
-          <span>16 talent paths</span>
+          <span>All talent paths</span>
           <span style={{ color: "#d4b86a" }}>·</span>
           <span>2026 timeline</span>
           <span style={{ color: "#d4b86a" }}>·</span>

@@ -40,7 +40,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* ── Right column: 16 talent grid (lg+ only) ── */}
+          {/* ── Right column: 14 talent grid + see-all (lg+ only) ── */}
           <HeroTalentGrid />
 
         </div>
