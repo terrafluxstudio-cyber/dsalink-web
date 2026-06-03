@@ -36,7 +36,8 @@ export type TalentSlug =
   | "water-polo"
   | "sailing"
   | "rugby"
-  | "symphonic-band";
+  | "symphonic-band"
+  | "mep";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -9561,6 +9562,328 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  mep: {
+    slug: "mep",
+    contentReadyBy: "2026-06-04",
+    navLabel: { en: "MEP (Music Elective)", zh: "音乐特选课程", ms: "Program Muzik Pilihan", ta: "MEP இசை சிறப்புத் திட்டம்" },
+    hook: {
+      en: "MEP DSA — entry into a 4-year music academic track at five MOE-designated schools, judged on the standardised audition: 2 contrasting pieces + sight-read + aural + interview.",
+      zh: "MEP DSA——进入 5 所 MOE 指定校的 4 年音乐学术轨道，标准化 audition：2 对比曲 + 视奏 + 听音 + 面试",
+      ms: "DSA MEP — kemasukan ke trek akademik muzik 4 tahun di lima sekolah yang ditetapkan MOE, dinilai berdasarkan uji bakat standard: 2 keping berbeza + baca-pandang + aural + temu duga.",
+      ta: "MEP DSA — MOE-நிர்ணயித்த ஐந்து பள்ளிகளில் 4 ஆண்டு இசை கல்வித் தடத்தில் சேர்க்கை, தரப்படுத்தப்பட்ட தேர்வு: 2 துண்டுகள் + பார்த்து வாசிக்கும் + aural + நேர்காணல்.",
+    },
+    intro: {
+      en: "The Music Elective Programme (MEP) is MOE's flagship secondary-school music academic track. It is offered at exactly five MOE-designated schools — Anglo-Chinese School (Independent), Dunman High School, Methodist Girls' School (Secondary), Nanyang Girls' High School, and Raffles Girls' School (Secondary). MEP students take Music as an examinable academic subject (alongside English, Math, Science) covering performance, composition, listening, and music history. The DSA audition is standardised across the five schools: two contrasting pieces from different periods or styles, sight-reading at approximately Grade 5 difficulty, an aural test, and an interview. ABRSM Grade 8 practical is widely treated as the working benchmark, but MOE does not publish a formal grade requirement — what matters is how the candidate plays in the room, sight-reads cleanly, and articulates why music in five sentences of interview.",
+      zh: "音乐特选课程（MEP）是 MOE 在中学阶段的旗舰音乐学术轨道。仅在 5 所 MOE 指定校开设——Anglo-Chinese School (Independent)、Dunman High、Methodist Girls'、Nanyang Girls' High、Raffles Girls'。MEP 学生把音乐作为可考的学术科目（与英文、数学、科学并列），涵盖演奏、作曲、聆听、音乐史。DSA audition 5 校统一格式：2 首对比曲（不同时期或风格）、约 Grade 5 难度视奏、听音测试、面试。家长圈把 ABRSM Grade 8 实奏视为参考线，但 MOE 并未公布正式段位要求——真正重要的是当场演奏、视奏干净、5 句话面试讲清楚为什么音乐。",
+      ms: "MEP adalah trek akademik muzik utama MOE di sekolah menengah. Ditawarkan di lima sekolah yang ditetapkan MOE. Uji bakat distandard: dua keping berbeza, baca-pandang Grade 5, ujian aural, temu duga.",
+      ta: "MEP MOE-இன் முதன்மை இடைநிலை பள்ளி இசை கல்வித் தடம். ஐந்து MOE-நிர்ணயித்த பள்ளிகளில் வழங்கப்படுகிறது. தேர்வு தரப்படுத்தப்பட்டுள்ளது: இரண்டு வேறுபட்ட துண்டுகள், பார்த்து வாசிக்கும், aural சோதனை, நேர்காணல்.",
+    },
+    summary: {
+      en: "The 5 MEP schools, standardised audition format, instrument profiles, interview questions, and how MEP differs from non-MEP music DSA.",
+      zh: "5 所 MEP 校、标准化 audition 格式、乐器分析、面试题、MEP 与非 MEP 音乐 DSA 区别。",
+      ms: "Lima sekolah MEP, format uji bakat standard, profil instrumen, soalan temu duga.",
+      ta: "ஐந்து MEP பள்ளிகள், தரப்படுத்தப்பட்ட தேர்வு வடிவம், கருவி வகைகள், கேள்விகள்.",
+    },
+    sampleSchools: [
+      "Anglo-Chinese School (Independent)",
+      "Dunman High School",
+      "Methodist Girls' School (Secondary)",
+      "Nanyang Girls' High School",
+      "Raffles Girls' School (Secondary)",
+    ],
+    metaDescription: {
+      en: "MEP (Music Elective Programme) DSA-Sec audition guide for Singapore P6 — the 5 designated schools, standardised 2-piece + sight-read + aural format, ABRSM context, sample interview questions.",
+      zh: "新加坡 P6 MEP 音乐特选课程 DSA-Sec audition 指南——5 所指定校、标准化 2 曲 + 视奏 + 听音格式、ABRSM 说明、面试题。",
+      ms: "Panduan uji bakat DSA-Sec MEP Singapura — 5 sekolah, format, soalan.",
+      ta: "சிங்கப்பூர் P6 MEP DSA-Sec வழிகாட்டி — 5 பள்ளிகள், வடிவம், கேள்விகள்.",
+    },
+    rich: {
+      preparedPiece: {
+        intro: {
+          en: "MEP DSA audition is the most standardised music DSA format in Singapore. The five designated schools share the same four-component structure: two contrasting prepared pieces from different periods or styles, sight-reading at approximately Grade 5 difficulty, an aural test (rhythm clap-back, melody echo, interval and chord identification), and an interview. Audition slots typically run 20-30 minutes per candidate. ABRSM Grade 8 practical is the working benchmark, but a confidently-played Grade 7 piece beats a struggling Grade 8.",
+        },
+        entries: [
+          {
+            variant: { en: "Solo instrument MEP audition (standard format across the 5 schools)" },
+            requirement: { en: "Two contrasting pieces from different musical periods or styles (e.g. Baroque + Romantic, or fast + lyrical) · plus sight-reading at approximately Grade 5 difficulty · plus aural test (clap-back, melody echo, interval/chord identification) · plus interview" },
+            source: { en: "MEP standardised audition framework across ACS(I), Dunman High, MGS, NYGH, RGS. Aligns with MOE's Music Elective Programme description and individual school MEP open house briefs." },
+          },
+          {
+            variant: { en: "Piano specialists (most competitive instrument)" },
+            requirement: { en: "Two contrasting pieces showing polyphonic clarity (Bach prelude-and-fugue or Mozart sonata) + Romantic / 20th-century piece showing colour and pedal · sight-reading on piano is harder than on a single-line instrument — practise daily for 6 months · aural · interview" },
+            source: { en: "MEP audition conventions; piano repertoire patterns across MEP school briefs." },
+          },
+          {
+            variant: { en: "Strings (violin, viola, cello)" },
+            requirement: { en: "Two contrasting pieces — slow sonata movement + faster Romantic miniature is a safe pairing · sight-read · aural · interview · tune carefully in front of the panel (an untuned A is a self-inflicted handicap)" },
+            source: { en: "MEP audition conventions for solo strings; aligns with ABRSM string syllabus expectations." },
+          },
+          {
+            variant: { en: "Voice (MEP vocal track at some schools)" },
+            requirement: { en: "Two contrasting songs (typically one art song + one contrasting genre — folk, musical theatre, or sacred) · sight-singing on solfège or numbers · aural · interview · confirm with each MEP school whether vocal is accepted as the primary instrument" },
+            source: { en: "MEP audition conventions for voice candidates; varies by school." },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A private music coach with MEP audition experience can verify the contrasting pair choice, polish the opening 30 seconds of each piece, run sight-read drills at Grade 5 difficulty, and rehearse the standard aural battery (interval identification, chord quality, melody echo). MEP-experienced coaches are the most valuable specialists for this audition because the format is so standardised. Browse our coach directory for MEP-experienced music coaches.",
+        },
+      },
+      trialDimensionsIntro: {
+        en: "MEP auditions are conducted by the school's MEP coordinator plus an external adjudicator (often a conservatory or Yong Siew Toh Conservatory of Music affiliate). The audition is standardised in format but evaluated on six dimensions that distinguish MEP candidates from strong non-MEP music candidates — academic music engagement on top of performance ability. Six dimensions emerge from MOE's MEP description and individual school MEP open house briefs.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Technical command on the two contrasting pieces" },
+          body: {
+            en: "Both pieces should be from genuinely different musical territories — Baroque + Romantic, or one fast and one lyrical. Adjudicators listen for accuracy at tempo, articulation, dynamic control, and whether the candidate shapes a long phrase rather than just plays through the notes. A confidently-played Grade 7 piece reads better than a struggling Grade 8 piece; choose pieces you can own.",
+          },
+        },
+        {
+          label: { en: "Musicality and interpretation" },
+          body: {
+            en: "What distinguishes a clean Grade 8 student from a future MEP candidate is interpretation — phrase shaping, rubato, the choice of when to take time and when to drive forward. Adjudicators are looking for a player who has an idea about the piece, not just one who has practised it. A P6 candidate who can articulate one specific interpretive choice (\"I take more time at this cadence because the harmony resolves there\") stands out immediately.",
+          },
+        },
+        {
+          label: { en: "Sight-reading at Grade 5 difficulty" },
+          body: {
+            en: "MEP sight-reading is consistently set at around Grade 5 difficulty — a passage the candidate has 30 seconds to look over, then plays through. Adjudicators watch not whether every note is right, but whether the candidate keeps tempo, gets the rhythmic structure, and recovers from a mistake without stopping. Stopping at the first wrong note is the most common P6 failure mode and is almost entirely a confidence issue, not a reading one.",
+          },
+        },
+        {
+          label: { en: "Aural skills — clap-back, melody echo, interval / chord identification" },
+          body: {
+            en: "MEP aural is more demanding than the ABRSM practical exam's aural component. Standard tests: clap back a rhythm, sing back a short melodic line, identify intervals (perfect / major / minor / augmented / diminished), sometimes identify chord quality (major / minor / diminished / augmented). Aural is the most under-trained component because ABRSM practical tests it too lightly — MEP schools weight it more heavily because aural ability predicts academic musicianship across the next four years.",
+          },
+        },
+        {
+          label: { en: "Academic music engagement at interview" },
+          body: {
+            en: "MEP interview separates strong performers from MEP-bound students. \"Who is your favourite composer?\" is not testing knowledge — it's testing whether the candidate can talk about music with specific vocabulary (phrase, voicing, articulation, harmonic colour, modulation, texture, form) rather than generic emotion. MEP candidates are signing up for music as an academic subject — adjudicators are listening for whether the P6 candidate already thinks about music academically.",
+          },
+        },
+        {
+          label: { en: "Stage presence and composure" },
+          body: {
+            en: "How the candidate walks in, bows, settles at the instrument, and recovers from a slip. Adjudicators remember the candidate who restarted a piece calmly more vividly than the one who played a flawless first half and crumbled. Confidence is taught — film a mock audition and watch the entrance and the first 15 seconds twice; that's where most marks are won or lost before a note is played.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Piano" },
+          body: {
+            en: "The most competitive instrument by a wide margin in MEP — adjudicators hear dozens of strong pianists in every cycle. Repertoire choice matters: play a piece that shows polyphonic clarity (a Bach prelude and fugue, or a Mozart sonata movement) alongside a Romantic or 20th-century piece that shows colour and pedal control. Avoid pieces every other candidate plays this cycle (overplayed Chopin nocturnes, Für Elise variants). Sight-reading on piano is harder than on a single-line instrument — practice it daily for six months before the audition.",
+          },
+        },
+        {
+          position: { en: "Strings — violin, viola, cello" },
+          body: {
+            en: "Adjudicators listen for intonation first (especially on the open-string-adjacent notes), then bow control, then vibrato consistency. A confident bow change and clean shifts read as professional. Choose contrasting pieces that show both lyrical line and technical agility — a slow movement from a sonata plus a faster Romantic miniature is a safe pairing. Tune carefully in front of the panel; an untuned A is a self-inflicted handicap.",
+          },
+        },
+        {
+          position: { en: "Woodwind and brass" },
+          body: {
+            en: "Tone production carries the most weight — adjudicators can tell within the first phrase whether the embouchure and air column are developed. For wind players, the school's existing MEP cohort balance also matters: a strong oboe or bassoon candidate is often more recruited than a fifth flute. If your child plays a less common wind instrument (oboe, bassoon, French horn, double bass), name it explicitly in the application — that information shapes which schools fast-track the file.",
+          },
+        },
+        {
+          position: { en: "Voice / Chinese instruments (MEP variants)" },
+          body: {
+            en: "Some MEP schools accept voice as the primary instrument; some accept Chinese instruments (erhu, pipa, guzheng) within the MEP framework. NYGH and Dunman High specifically have a Chinese-instrument MEP track given their SAP and Bicultural Studies environment. Confirm with each target MEP school's open house brief whether your child's primary instrument is supported — this is the single most important pre-application check.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "MEP candidates audition on one primary instrument. The chosen instrument remains the candidate's MEP-track instrument for the four years of secondary, so the choice should be the strongest instrument available — not the one the family thinks is most prestigious. Adjudicators see through repertoire choices that don't match the candidate's actual level.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love music?" },
+          subtext: {
+            en: "Panels want a specific moment plus an academic-engagement signal, not generic appreciation.",
+          },
+          approach: {
+            en: "Open with one concrete musical memory, then connect it to how you think about music academically.",
+          },
+          template: {
+            en: "We performed Brahms's Hungarian Dance No. 5 in primary school orchestra and I noticed how the strings moved from G minor to G major in the middle section. After that I started reading about how composers use mode changes to surprise the listener — that's when I realised I want music as a subject, not just as a hobby.",
+          },
+        },
+        {
+          question: { en: "Why MEP at our school specifically?" },
+          subtext: {
+            en: "Did the family research the MEP programme's distinct character at this school?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's MEP — the cohort size, the repertoire breadth, the academic music history exposure.",
+          },
+          template: {
+            en: "NYGH's MEP has a strong Chinese-instrument track within the programme, which aligns with my erhu background. Combining Chinese music academic study with Western music history is the breadth I want for the next four years.",
+          },
+        },
+        {
+          question: { en: "What is your primary instrument and why?" },
+          subtext: {
+            en: "Can the candidate articulate the instrument relationship?",
+          },
+          approach: {
+            en: "Name the instrument plus what playing it asks of you academically.",
+          },
+          template: {
+            en: "Piano. My primary instrument because I can play multiple voices simultaneously — which is what I find most academically interesting about music. Studying counterpoint and harmonic analysis on the piano lets me read scores in a way a single-line instrument doesn't allow.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a musical setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I failed Grade 5 ABRSM aural because I'd never practised interval identification systematically. I worked on aural every morning for ten minutes for four months. I passed Grade 5 the second time and started Grade 6 immediately — and my sight-reading improved too, because aural and sight-reading reinforce each other.",
+          },
+        },
+        {
+          question: { en: "Who is your favourite composer and why?" },
+          subtext: {
+            en: "Tests musical vocabulary and academic engagement, not just emotion.",
+          },
+          approach: {
+            en: "Name the composer plus one specific musical element (harmonic, structural, textural) you can describe.",
+          },
+          template: {
+            en: "Shostakovich, because of how his harmonic language sits between major and minor in a way that feels like neither. I asked my piano teacher why his preludes feel unstable; the answer was about modal mixture and that started me reading about 20th-century harmonic vocabulary.",
+          },
+        },
+        {
+          question: { en: "How do you manage time across academic subjects and music practice?" },
+          subtext: {
+            en: "MEP schools fear DSA kids who flame out academically — and MEP students carry an extra academic subject (music itself).",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I finish English and Math homework before practice because the focus needed for piano is too tired after. Science I do on weekends. My mother shows my report book to my piano teacher every term — if any subject drops a band, we cut one practice session. That's the rule we set together.",
+          },
+        },
+        {
+          question: { en: "If School A and our school both offer you MEP, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. Your MEP teacher's emphasis on Bach repertoire matches what I want to develop. If School A called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent)",
+          url: "https://www.acsindep.moe.edu.sg/admissions/direct-school-admission/",
+          talentArea: { en: "MEP (Boys), IP" },
+          context: {
+            en: "One of the 5 MOE-designated MEP schools. IP school. ACS(I) MEP has a long heritage and offers MEP through the IB Diploma pathway in upper years.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          url: "https://dhsopenhouse.com/wp-content/uploads/2026/05/2026-FAQ-for-DSA-Sec.pdf",
+          talentArea: { en: "MEP (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "One of the 5 MOE-designated MEP schools. SAP and Bicultural Studies school. MEP among Dunman's 2026 DSA FAQ talent areas, with strong Chinese instrument support given the SAP environment.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          url: "https://www.mgs.moe.edu.sg/secondary/admissions/dsa-sec1/",
+          talentArea: { en: "MEP (Girls), DSA-Sec" },
+          context: {
+            en: "One of the 5 MOE-designated MEP schools. Methodist heritage girls' school. MEP among MGS's published DSA talent areas.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          url: "https://www.nygh.moe.edu.sg/admissions/",
+          talentArea: { en: "MEP (Girls), IP" },
+          context: {
+            en: "One of the 5 MOE-designated MEP schools. SAP and Bicultural Studies school. NYGH's MEP has a Chinese-instrument track integrated within the programme.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          url: "https://form.gov.sg/69d49b0ec6b8769cabadd868",
+          talentArea: { en: "MEP (Girls), IP" },
+          context: {
+            en: "One of the 5 MOE-designated MEP schools. RGS publishes a dedicated 2026 RGS DSA Music Elective Programme additional-documents submission form, indicating distinct MEP audition logistics.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the audition is still weeks out" },
+          items: [
+            {
+              en: "Confirm each of the 5 MEP schools you are targeting is set up to accept your child's primary instrument. NYGH and Dunman accept Chinese instruments within MEP; others vary. This is the single most important pre-application check — find each school's MEP open house material online.",
+            },
+            {
+              en: "Choose the contrasting pair early. The pair should be from genuinely different musical territories (period, style, mood). Confirm the choice with your child's instrument teacher; pieces that expose intonation, articulation, or sight-reading weakness are the most common audition mistake.",
+            },
+            {
+              en: "Practise aural daily for ten minutes. Run interval-identification drills (perfect 4th vs 5th, major vs minor 3rd, etc.) and rhythm clap-back. MEP aural is more demanding than ABRSM practical aural; this is the easiest dimension to upgrade with daily practice.",
+            },
+            {
+              en: "Practise sight-reading at Grade 5 difficulty daily for ten minutes. Use ABRSM sight-reading books at one grade below your child's playing level as the working set.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity. Switch to 70%: opening 30 seconds of each piece, sight-read at audition difficulty, aural drills, no new repertoire. Final-week piece-changes almost never end well.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue (typically the school's music room or hall), attire (school uniform or smart casual; bring the instrument and required accessories). Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "For wind players: confirm the reed has been played in for at least 5-7 sessions before audition day. A new reed on audition day is the single most common P6 woodwind disaster.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of audition" },
+          items: [
+            {
+              en: "Arrive 60 minutes early. Warm up properly — long tones / scales / opening 16 bars of each piece. Do not over-rehearse the full pieces — the audition is the performance.",
+            },
+            {
+              en: "Eat 90 minutes before — not 30. Avoid foods that affect the embouchure for wind / brass players.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the panel said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, MEP audition coming up, no real prep — there are still real moves. Lock the contrasting pair tonight; don't change pieces this week. Prioritise daily aural drills and sight-reading at Grade 5 difficulty — these are the components where a few weeks of focused practice can still meaningfully change the audition outcome. Cancel anything that competes with sleep and embouchure recovery. Spend the freed time on interview prep, focusing on academic music vocabulary (phrase / voicing / articulation / harmonic colour / modulation / form). Some families bring in a private music coach with MEP experience at this stage. A MEP-experienced coach can polish the opening 30 seconds of each piece and rehearse the aural battery — but no coach produces, in three sessions, the academic music engagement of years of musical curiosity. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -9592,6 +9915,7 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "sailing",
   "rugby",
   "symphonic-band",
+  "mep",
 ];
 
 /**
@@ -9635,6 +9959,7 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   sailing: ["swimming", "track-field"],
   rugby: ["football", "track-field"],
   "symphonic-band": ["music", "chinese-orchestra"],
+  mep: ["music", "symphonic-band"],
 };
 
 /**
