@@ -58,6 +58,36 @@ const HERO_BADGE: LocaleStr = {
   ta: "சாத்தியமான வழிகள் · உத்தரவாதங்கள் அல்ல · 2026 விண்ணப்பங்கள் முடிந்துவிட்டன; இந்த பக்கம் 2027 திட்டமிடலுக்கானது",
 };
 
+/* ============================ LOCK-IN WARNING ============================ */
+
+const LOCKIN_KICKER: LocaleStr = {
+  en: "Read this before you commit",
+  zh: "下决定前先读这条",
+  ms: "Baca ini sebelum anda komited",
+  ta: "உறுதிசெய்வதற்கு முன் இதைப் படியுங்கள்",
+};
+
+const LOCKIN_TITLE: LocaleStr = {
+  en: "DSA students cannot change CCA — your child is locked in for 4 to 6 years",
+  zh: "DSA 学生不能换 CCA · 孩子被锁定 4 到 6 年",
+  ms: "Pelajar DSA tidak boleh tukar CCA — anak anda terkunci untuk 4 hingga 6 tahun",
+  ta: "DSA மாணவர்கள் CCA-ஐ மாற்ற முடியாது — உங்கள் குழந்தை 4 முதல் 6 ஆண்டுகள் வரை பூட்டப்படுகிறார்",
+};
+
+const LOCKIN_BODY: LocaleStr = {
+  en: "MOE and individual school DSA briefs require DSA-admitted students to honour their commitment and continue the talent CCA they were selected for — typically Years 1 to 4 in the O-Level stream, Years 1 to 6 in the IP stream. NYGH and similar schools have published this explicitly. A DSA student who abandons the talent CCA without valid reason can be required by MOE to transfer schools. The talent area chosen at P5 effectively becomes a 4-to-6-year decision for your child.",
+  zh: "MOE 与各校 DSA brief 都明确要求：DSA 录取学生必须坚持原 talent CCA——O-Level 通常 Year 1-4 · IP 通常 Year 1-6。NYGH 等校已公开说明此政策。DSA 学生无正当理由放弃 talent CCA · MOE 可强制转校。P5 时选的 talent 实际上是给孩子定了 4-6 年的承诺。",
+  ms: "MOE dan brief DSA sekolah individu mensyaratkan pelajar DSA mengekalkan komitmen dan meneruskan CCA bakat yang mereka dipilih — biasanya Tahun 1 hingga 4 dalam aliran O-Level, Tahun 1 hingga 6 dalam aliran IP.",
+  ta: "MOE மற்றும் தனிப்பட்ட பள்ளி DSA விளக்கங்கள் DSA-சேர்க்கப்பட்ட மாணவர்களை அவர்கள் தேர்ந்தெடுக்கப்பட்ட திறமை CCA-ஐ தொடரக் கட்டாயமாக்குகின்றன — பொதுவாக O-Level நீரோட்டத்தில் ஆண்டு 1 முதல் 4 வரை.",
+};
+
+const LOCKIN_IMPLICATION: LocaleStr = {
+  en: "What this means for choosing a niche path: don't pick the talent that gets your child into a good school. Pick the talent your child genuinely wants to spend 4-6 years on — and if a good school happens to recruit for it, that's the alignment. A child forced into lion dance or sheng because the parents calculated it as the easier DSA route will spend secondary school resenting the practice they cannot quit. The strongest predictor of a successful DSA journey is not the niche-supply gap; it's whether the child still wants to practise the talent in Year 3 when the schoolwork gets harder.",
+  zh: "这条规则对选冷门路径的真正含义：不要选\"能让孩子进好中学的 talent\"· 选\"孩子愿意花 4-6 年做的 talent\"——如果刚好一所好学校招这个 · 那是匹配 · 不是计算。家长把舞狮或笙算作\"DSA 较易路径\"硬推孩子上 · 孩子整个中学都会怨这门退不掉的训练。DSA 走得稳的最强预测变量不是冷门项目的供给差 · 是孩子在中三学业压力变大时是否还想训练。",
+  ms: "Apa yang ini bermakna untuk memilih laluan niche: jangan pilih bakat yang membawa anak anda ke sekolah yang baik. Pilih bakat yang anak anda benar-benar mahu habiskan 4-6 tahun.",
+  ta: "Niche பாதையை தேர்ந்தெடுப்பதற்கு இதன் அர்த்தம்: உங்கள் குழந்தையை நல்ல பள்ளியில் சேர்க்கும் திறமையைத் தேர்ந்தெடுக்காதீர்கள். உங்கள் குழந்தை 4-6 ஆண்டுகள் செலவிட விரும்பும் திறமையைத் தேர்ந்தெடுக்கவும்.",
+};
+
 /* ============================ TIMING CALLOUT (P5 opportunity) ============================ */
 
 const TIMING_TITLE: LocaleStr = {
@@ -458,6 +488,180 @@ const S2_TALENTS: ReadonlyArray<{
   },
 ];
 
+/* ============================ TRANSFER PATHS ============================ */
+
+const TRANSFER_KICKER: LocaleStr = {
+  en: "Chapter 2.5 · Build on what your child already trains",
+  zh: "第 2.5 章 · 在已有底子上做转项",
+  ms: "Bab 2.5 · Bina daripada apa yang anak anda sudah latih",
+  ta: "அத்தியாயம் 2.5 · உங்கள் குழந்தை ஏற்கனவே பயிற்சி செய்வதை அடிப்படையாகக் கொள்ளுங்கள்",
+};
+
+const TRANSFER_TITLE: LocaleStr = {
+  en: "Transfer paths — when a mainstream foundation opens a niche door",
+  zh: "转项路径——主流底子打开冷门的门",
+  ms: "Laluan peralihan — apabila asas arus perdana membuka pintu niche",
+  ta: "மாற்று பாதைகள் — முக்கிய அடிப்படை niche கதவைத் திறக்கும்போது",
+};
+
+const TRANSFER_INTRO: LocaleStr = {
+  en: "If your child has already trained a mainstream talent for 1-3 years but the DSA competition in that talent is brutal (think wushu, piano, badminton), an underrecruited adjacent talent can be a more realistic target. The transferable foundations — stances, footwork, breath control, hand-eye coordination, reading patterns — carry across. The new specific skills usually need 6-12 months to build. Below are five transfer combinations supported by physical-skill overlap and youth coaching literature.",
+  zh: "如果孩子已经训练某项主流 talent 1-3 年 · 但那个项目 DSA 竞争太激烈（武术、钢琴、羽毛球这种）· 转向一个相邻冷门 talent 可能是更现实的目标。可迁移的底子——桩功、步法、呼吸、手眼协调、读旋节奏——能直接搬过去 · 新项目特有技能通常 6-12 个月可建立。下面 5 种转项组合都有体育技能重合 + 青训文献支持。",
+  ms: "Jika anak anda telah melatih bakat arus perdana selama 1-3 tahun tetapi persaingan DSA dalam bakat itu sangat ketat, bakat bersebelahan yang kurang dipohon boleh menjadi sasaran yang lebih realistik.",
+  ta: "உங்கள் குழந்தை ஏற்கனவே ஒரு முக்கிய திறமையை 1-3 ஆண்டுகளாக பயிற்சி செய்திருந்தால் ஆனால் அந்த திறமையில் DSA போட்டி கடினமாக இருந்தால், குறைவாக விண்ணப்பிக்கப்படும் அண்டை திறமை மிகவும் யதார்த்தமான இலக்காக இருக்கலாம்.",
+};
+
+const TRANSFER_ROWS: ReadonlyArray<{
+  from: LocaleStr;
+  to: LocaleStr;
+  carries: LocaleStr;
+  needs: LocaleStr;
+  strength: "strong" | "good" | "partial";
+}> = [
+  {
+    from: {
+      en: "Wushu (武术)",
+      zh: "武术",
+      ms: "Wushu",
+      ta: "வுஷு",
+    },
+    to: {
+      en: "Lion dance",
+      zh: "舞狮",
+      ms: "Tarian singa",
+      ta: "சிங்க நடனம்",
+    },
+    carries: {
+      en: "Horse stance (马步), hip rotation, balance, body rhythm, kung-fu derived footwork — Singapore Southern-style lion dance traces its stance structure directly to wushu",
+      zh: "马步、髋部转动、平衡、身体节奏、源自功夫的步法——新加坡南派舞狮的桩功直接源于武术",
+      ms: "Kuda-kuda, putaran pinggul, keseimbangan, ritma badan, langkah kaki berasal dari kung-fu",
+      ta: "குதிரை நிலை, இடுப்பு சுழற்சி, சமநிலை, உடல் தாளம், kung-fu இலிருந்து வந்த கால் நகர்வுகள்",
+    },
+    needs: {
+      en: "Lion head (狮头) puppetry technique · 2-person coordination with tail · 鼓点 drum rhythm reading · cultural narratives",
+      zh: "狮头操控技巧 · 狮头狮尾双人配合 · 鼓点读谱 · 文化叙事",
+      ms: "Teknik kepala singa · koordinasi dua orang · membaca rentak drum",
+      ta: "சிங்க தலை நுட்பம் · இரு நபர் ஒருங்கிணைப்பு · டிரம் தாளம் படித்தல்",
+    },
+    strength: "strong",
+  },
+  {
+    from: {
+      en: "Swimming",
+      zh: "游泳",
+      ms: "Renang",
+      ta: "நீச்சல்",
+    },
+    to: {
+      en: "Water polo",
+      zh: "水球",
+      ms: "Polo air",
+      ta: "வாட்டர் போலோ",
+    },
+    carries: {
+      en: "Aerobic endurance, water feel, freestyle stroke at game pace — most national water polo programmes recruit from competitive swimmers",
+      zh: "有氧耐力、水感、自由泳跑动配速——多数国家级水球项目从竞泳手中招收",
+      ms: "Daya tahan aerobik, rasa air, gaya bebas pada kelajuan permainan",
+      ta: "ஏரோபிக் சகிப்புத்தன்மை, நீர் உணர்வு, விளையாட்டு வேகத்தில் ஃப்ரீஸ்டைல்",
+    },
+    needs: {
+      en: "Egg-beater treading (the unique water-polo demand) · one-handed ball control · passing under defensive pressure · 6-on-6 spatial reading",
+      zh: "蛋打腿踩水（水球独门技术）· 单手控球 · 防守压力下传球 · 6 对 6 空间阅读",
+      ms: "Kayuhan egg-beater · kawalan bola sebelah tangan · hantaran di bawah tekanan",
+      ta: "Egg-beater பயிற்சி · ஒரு கையால் பந்து கட்டுப்பாடு · அழுத்தத்தின் கீழ் பாஸ்",
+    },
+    strength: "strong",
+  },
+  {
+    from: {
+      en: "Track & field (sprints especially)",
+      zh: "田径（特别是短跑）",
+      ms: "Olahraga (terutamanya pecut)",
+      ta: "டிராக் & ஃபீல்ட்",
+    },
+    to: {
+      en: "Softball",
+      zh: "垒球",
+      ms: "Softball",
+      ta: "சாஃப்ட்பால்",
+    },
+    carries: {
+      en: "Base-running speed, sprint mechanics off explosive starts, shoulder rotation for throwing, fitness baseline",
+      zh: "跑垒速度、爆发起跑的冲刺力学、传球肩部转动、体能底子",
+      ms: "Kelajuan larian asas, mekanik pecut, putaran bahu",
+      ta: "ஓட்டத் திறன், ஸ்பிரிண்ட் இயக்கவியல், தோள் சுழற்சி",
+    },
+    needs: {
+      en: "Hitting technique (highest learning curve) · fielding glove work · pitch reading · base-running tactics · 6-9 months of focused softball-specific practice",
+      zh: "击球技术（学习曲线最陡）· 接球手套操作 · 读球路 · 跑垒战术 · 6-9 个月专项练习",
+      ms: "Teknik memukul · kerja sarung tangan · membaca bola",
+      ta: "அடிக்கும் நுட்பம் · கையுறை வேலை · பந்தைப் படித்தல்",
+    },
+    strength: "good",
+  },
+  {
+    from: {
+      en: "Badminton",
+      zh: "羽毛球",
+      ms: "Badminton",
+      ta: "இறகுப்பந்து",
+    },
+    to: {
+      en: "Squash",
+      zh: "壁球",
+      ms: "Skuasy",
+      ta: "ஸ்குவாஷ்",
+    },
+    carries: {
+      en: "Wrist control, racket grip transitions, reaction time, lunge footwork, court-coverage stamina",
+      zh: "腕力、握拍切换、反应时间、弓步脚法、覆盖球场的体能",
+      ms: "Kawalan pergelangan tangan, pertukaran pegangan raket, masa tindak balas",
+      ta: "மணிக்கட்டு கட்டுப்பாடு, ராக்கெட் பிடிப்பு மாற்றங்கள், எதிர்வினை நேரம்",
+    },
+    needs: {
+      en: "Reading bounce off walls (the defining new skill) · slower ball pace adjustment · tactical 'T' positioning · 9 months minimum",
+      zh: "读墙面回弹（核心新技能）· 适应较慢球速 · 战术 T 位 · 至少 9 个月",
+      ms: "Membaca pantulan dari dinding · pelarasan kelajuan bola lebih perlahan",
+      ta: "சுவர்களில் இருந்து குதிப்பதைப் படித்தல் · மெதுவான பந்து வேக சரிசெய்தல்",
+    },
+    strength: "good",
+  },
+  {
+    from: {
+      en: "Piano or strings (Grade 5+)",
+      zh: "钢琴或弦乐（Grade 5+）",
+      ms: "Piano atau alat bertali (Grade 5+)",
+      ta: "பியானோ அல்லது நரம்பு (Grade 5+)",
+    },
+    to: {
+      en: "Rare wind (oboe, bassoon, French horn) or rare Chinese instrument (sheng, suona, zhongruan)",
+      zh: "罕见管乐（双簧管、巴松、法国号）或罕见华乐（笙、唢呐、中阮）",
+      ms: "Tiup jarang atau instrumen Cina jarang",
+      ta: "அரிய காற்று அல்லது அரிய சீன கருவி",
+    },
+    carries: {
+      en: "Sight-reading, rhythmic precision, musicality, ABRSM/aural foundation, comfort with weekly individual lessons",
+      zh: "视奏、节奏精度、乐感、ABRSM / 听音基础、每周课程节奏",
+      ms: "Membaca pandang, ketepatan rentak, muzikaliti",
+      ta: "பார்த்து வாசித்தல், தாள துல்லியம், இசை திறன்",
+    },
+    needs: {
+      en: "Embouchure (the new physical skill that cannot be transferred from another instrument family) · breath support · 9-12 months to audition-credible Grade 5 level on the new instrument · access to a teacher (sheng / oboe teachers are scarce — confirm availability first)",
+      zh: "嘴型（无法从其他乐器家族迁移的物理技能）· 气息支持 · 新乐器达到 audition Grade 5 通常 9-12 个月 · 教师资源（笙 / 双簧管老师稀缺——先确认师资）",
+      ms: "Embouchure · sokongan pernafasan · 9-12 bulan ke tahap audition",
+      ta: "எம்பௌச்சர் · சுவாச ஆதரவு · ஆடிஷன் தரம் வரை 9-12 மாதங்கள்",
+    },
+    strength: "partial",
+  },
+];
+
+const TRANSFER_NOTE: LocaleStr = {
+  en: "These five are not the only transfer paths — they are the ones with the strongest published physical-skill or musical-foundation overlap. Other plausible transfers (taekwondo to fencing; basketball to softball outfield; gymnastics to dance or diving) are conceptually similar but less documented. Talk to a coach in the target talent before committing.",
+  zh: "这 5 个不是唯一的转项路径——只是体育技能或音乐基础重合证据最强的几条。其他合理转向（跆拳道转击剑；篮球转垒球外野；体操转舞蹈或跳水）逻辑相似但公开文献较少。转向前先跟目标项目的教练聊。",
+  ms: "Kelima-lima ini bukan satu-satunya laluan peralihan — mereka adalah yang mempunyai pertindihan kemahiran fizikal atau asas muzik terkuat yang diterbitkan.",
+  ta: "இந்த ஐந்து மட்டுமே மாற்று பாதைகள் அல்ல — வெளியிடப்பட்ட உடல் திறன் அல்லது இசை அடிப்படை ஒன்றுக்கொன்று மிகவும் வலுவாக உள்ளவை.",
+};
+
 /* ============================ DEEP-DIVE 1 — LION DANCE ============================ */
 
 const S3_KICKER: LocaleStr = {
@@ -556,10 +760,24 @@ const COACH_TITLE: LocaleStr = {
 };
 
 const COACH_BODY: LocaleStr = {
-  en: "Lion dance, sheng, archery, fencing — these are talents where one good coach matters more than for football or piano, because the candidate is still building the foundation rather than refining an existing skill. A coach with prior DSA-audition experience knows what the panel listens for, what a credible 11-month trajectory looks like, and how to film one training video that reads well in the application portfolio. The smallest signal here — picking a coach who has prepared a DSA candidate in the same talent before — can change the outcome more than the candidate's natural ability.",
-  zh: "舞狮、笙、射箭、击剑——这些项目里 · 一个对的教练比足球或钢琴重要得多 · 因为候选人是在打地基 · 不是在优化已有技能。有 DSA audition 经验的教练知道评审在听什么 · 知道 11 个月可信的轨迹长什么样 · 知道怎么录一段适合 DSA 申请材料的训练视频。这里最小但最关键的信号——选一个备过同项目 DSA 候选人的教练——比孩子的天赋影响更大。",
-  ms: "Tarian singa, sheng, memanah, pedang — ini adalah bakat di mana seorang jurulatih yang baik lebih penting daripada untuk bola sepak atau piano. Jurulatih dengan pengalaman audisi DSA terdahulu tahu apa yang panel mendengar.",
+  en: "Lion dance, sheng, archery, fencing — these are talents where one good coach matters more than for football or piano, because the candidate is still building the foundation rather than refining an existing skill. A coach with prior DSA-audition experience knows what the panel listens for, what a credible 11-month trajectory looks like, and how to film one training session that reads well in the application portfolio. Picking a coach who has prepared a DSA candidate in the same talent before can change the outcome more than the candidate's natural ability.",
+  zh: "舞狮、笙、射箭、击剑——这些项目里 · 一个对的教练比足球或钢琴重要得多 · 因为候选人是在打地基 · 不是在优化已有技能。有 DSA audition 经验的教练知道评审在听什么 · 知道 11 个月可信的轨迹长什么样 · 知道怎么录一段适合 DSA 申请材料的训练视频。选一个备过同项目 DSA 候选人的教练 · 比孩子的天赋影响更大。",
+  ms: "Tarian singa, sheng, memanah, pedang — ini adalah bakat di mana seorang jurulatih yang baik lebih penting daripada untuk bola sepak atau piano.",
   ta: "சிங்க நடனம், sheng, வில்வித்தை, வாள் வீச்சு — இவை ஒரு நல்ல பயிற்சியாளர் கால்பந்து அல்லது பியானோவை விட முக்கியமான திறமைகள்.",
+};
+
+const COACH_TRIAL_TITLE: LocaleStr = {
+  en: "Let the child try 1-2 months — then ask the coach honestly",
+  zh: "让孩子先练 1-2 个月 · 再让教练诚实评估",
+  ms: "Biarkan anak mencuba 1-2 bulan — kemudian tanya jurulatih dengan jujur",
+  ta: "குழந்தையை 1-2 மாதங்கள் முயற்சிக்க விடுங்கள் — பின்னர் பயிற்சியாளரிடம் நேர்மையாகக் கேளுங்கள்",
+};
+
+const COACH_TRIAL_BODY: LocaleStr = {
+  en: "Don't commit to an 11-month DSA preparation plan after one trial class. The honest sequence is: enrol the child in 1-2 months of weekly training, watch whether they look forward to the sessions or drag their feet, then sit down with the coach and ask directly — \"Based on what you've seen, how realistic is the DSA-Sec path for my child in this talent?\" Singapore youth-coaching research and international talent-identification studies converge on the same point: coaches predict youth potential at roughly 52-79% accuracy depending on sport, and a single trial is far too short a window for a credible read. A coach who has watched the child for 6-8 weekly sessions can tell you something useful; a coach who has watched the child once cannot.",
+  zh: "不要看一次试课就下决心走 11 个月 DSA 准备路线。诚实的顺序是：先报 1-2 个月每周训练 · 观察孩子是期待去训练还是拖着不想去 · 然后坐下来直接问教练——\"以你目前看到的情况 · 这孩子走 DSA-Sec 这条路 · 现实概率多少？\"国际青训文献的共识：教练对青少年长期潜力的预测准确度大约 52-79%（看运动）· 一次 trial 远远不够。看了孩子 6-8 周训练的教练能告诉你有用的判断 · 只看过一次的教练给不出。",
+  ms: "Jangan komited kepada pelan persediaan DSA 11 bulan selepas satu kelas percubaan. Urutan jujur ialah: daftarkan anak dalam 1-2 bulan latihan mingguan.",
+  ta: "ஒரு சோதனை வகுப்பிற்குப் பிறகு 11 மாத DSA தயாரிப்புத் திட்டத்திற்கு உறுதியளிக்க வேண்டாம். நேர்மையான வரிசை: 1-2 மாதங்கள் வாராந்திர பயிற்சியில் குழந்தையை சேர்க்கவும்.",
 };
 
 const COACH_CTA_TEXT: LocaleStr = {
@@ -819,7 +1037,7 @@ export function UnderRecruitedPathsPageBody() {
         </section>
 
         {/* ── TIMING CALLOUT (P5 opportunity) ── */}
-        <section className="mt-8 mb-12 rounded-2xl border-l-4 border-champagne bg-white p-5 shadow-soft sm:p-6">
+        <section className="mt-8 mb-8 rounded-2xl border-l-4 border-champagne bg-white p-5 shadow-soft sm:p-6">
           <h2
             style={{ textTransform: "none" }}
             className="font-display text-[17px] font-bold leading-snug text-intellectual sm:text-lg"
@@ -840,6 +1058,32 @@ export function UnderRecruitedPathsPageBody() {
               : "See the full DSA-Sec 2026 timeline"}
             <ArrowRight className="h-3.5 w-3.5" aria-hidden />
           </Link>
+        </section>
+
+        {/* ── LOCK-IN WARNING (4-6 year commitment) ── */}
+        <section className="mt-4 mb-12 rounded-2xl border-l-4 border-intellectual bg-champagne-subtle/50 p-5 shadow-soft sm:p-6">
+          <p className="text-[11px] font-bold tracking-[0.14em] text-intellectual normal-case">
+            {pick(LOCKIN_KICKER, locale)}
+          </p>
+          <h2
+            style={{ textTransform: "none" }}
+            className="mt-1.5 font-display text-[17px] font-bold leading-snug text-intellectual sm:text-lg"
+          >
+            {pick(LOCKIN_TITLE, locale)}
+          </h2>
+          <p className="mt-3 text-[14px] leading-relaxed text-slate-700">{pick(LOCKIN_BODY, locale)}</p>
+          <p className="mt-3 text-[14px] leading-relaxed text-slate-700">
+            <span className="font-semibold text-intellectual">
+              {locale === "zh"
+                ? "对选冷门路径的真正含义："
+                : locale === "ms"
+                ? "Apa makna ini untuk memilih laluan niche: "
+                : locale === "ta"
+                ? "Niche பாதையைத் தேர்வுசெய்தல்: "
+                : "What this means for choosing a niche path — "}
+            </span>
+            {pick(LOCKIN_IMPLICATION, locale)}
+          </p>
         </section>
 
         {/* ── SECTION 1: Why ── */}
@@ -938,6 +1182,93 @@ export function UnderRecruitedPathsPageBody() {
           </div>
         </section>
 
+        {/* ── TRANSFER PATHS section ── */}
+        <section className="mt-12 mb-12">
+          <p className="text-[11px] font-bold tracking-[0.14em] text-champagne-dark normal-case">
+            {pick(TRANSFER_KICKER, locale)}
+          </p>
+          <h2
+            style={{ textTransform: "none" }}
+            className="mt-2 font-display text-2xl font-extrabold leading-snug tracking-tight text-intellectual sm:text-3xl"
+          >
+            {pick(TRANSFER_TITLE, locale)}
+          </h2>
+          <p className="mt-3 text-[15px] leading-relaxed text-slate-600">{pick(TRANSFER_INTRO, locale)}</p>
+          <div className="mt-6 space-y-3">
+            {TRANSFER_ROWS.map((row, i) => (
+              <div key={i} className="rounded-xl border border-slate-200/80 bg-white p-5 shadow-soft">
+                <div className="flex flex-wrap items-baseline gap-2">
+                  <span className="font-display text-[15px] font-bold text-intellectual">
+                    {pick(row.from, locale)}
+                  </span>
+                  <ArrowRight className="h-4 w-4 text-champagne-dark" aria-hidden />
+                  <span className="font-display text-[15px] font-bold text-intellectual">
+                    {pick(row.to, locale)}
+                  </span>
+                  <span
+                    className={`ml-auto rounded-full px-2.5 py-0.5 text-[10.5px] font-bold tracking-[0.06em] normal-case ${
+                      row.strength === "strong"
+                        ? "bg-intellectual text-white"
+                        : row.strength === "good"
+                        ? "bg-champagne text-intellectual-dark"
+                        : "bg-slate-200 text-slate-700"
+                    }`}
+                  >
+                    {row.strength === "strong"
+                      ? locale === "zh"
+                        ? "强重合"
+                        : locale === "ms"
+                        ? "Pertindihan kuat"
+                        : locale === "ta"
+                        ? "வலுவான பொருத்தம்"
+                        : "Strong overlap"
+                      : row.strength === "good"
+                      ? locale === "zh"
+                        ? "良好重合"
+                        : locale === "ms"
+                        ? "Pertindihan baik"
+                        : locale === "ta"
+                        ? "நல்ல பொருத்தம்"
+                        : "Good overlap"
+                      : locale === "zh"
+                      ? "部分重合"
+                      : locale === "ms"
+                      ? "Sebahagian"
+                      : locale === "ta"
+                      ? "ஓரளவு"
+                      : "Partial overlap"}
+                  </span>
+                </div>
+                <p className="mt-3 text-[13px] leading-relaxed text-slate-600">
+                  <span className="font-semibold text-intellectual">
+                    {locale === "zh"
+                      ? "可迁移的底子："
+                      : locale === "ms"
+                      ? "Asas boleh dipindahkan: "
+                      : locale === "ta"
+                      ? "மாற்றக்கூடிய அடிப்படை: "
+                      : "Carries over: "}
+                  </span>
+                  {pick(row.carries, locale)}
+                </p>
+                <p className="mt-2 text-[13px] leading-relaxed text-slate-600">
+                  <span className="font-semibold text-intellectual">
+                    {locale === "zh"
+                      ? "新需要建立的："
+                      : locale === "ms"
+                      ? "Perlu dibina baharu: "
+                      : locale === "ta"
+                      ? "புதியதாக கட்டமைக்க: "
+                      : "Needs new: "}
+                  </span>
+                  {pick(row.needs, locale)}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-5 text-[12.5px] leading-relaxed text-slate-500">{pick(TRANSFER_NOTE, locale)}</p>
+        </section>
+
         {/* ── SECTION 3: Lion Dance deep-dive ── */}
         <section className="mt-12 mb-12 rounded-2xl border border-champagne/40 bg-white p-6 shadow-card sm:p-8">
           <p className="text-[11px] font-bold tracking-[0.14em] text-champagne-dark normal-case">
@@ -997,6 +1328,18 @@ export function UnderRecruitedPathsPageBody() {
             {pick(COACH_TITLE, locale)}
           </h2>
           <p className="mt-4 text-[14.5px] leading-relaxed text-white/85">{pick(COACH_BODY, locale)}</p>
+
+          {/* Trial-first subsection */}
+          <div className="mt-6 rounded-xl border border-champagne/30 bg-white/5 p-5">
+            <h3
+              style={{ textTransform: "none" }}
+              className="font-display text-[16px] font-bold text-champagne-light"
+            >
+              {pick(COACH_TRIAL_TITLE, locale)}
+            </h3>
+            <p className="mt-2 text-[14px] leading-relaxed text-white/85">{pick(COACH_TRIAL_BODY, locale)}</p>
+          </div>
+
           <Link
             href="/dsa-coaches"
             className="mt-6 inline-flex items-center gap-2 rounded-lg bg-champagne px-4 py-2.5 text-[13px] font-semibold text-intellectual-dark transition hover:bg-champagne-light"
