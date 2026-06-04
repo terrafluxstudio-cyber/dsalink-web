@@ -770,6 +770,75 @@ export function InterviewTalentPageBody({ talent }: { talent: TalentPage }) {
           </div>
         </section>
       </main>
+      {/* Hub-spoke cross-links — every talent page links to results & under-recruited paths */}
+      <section className="border-t border-slate-200/60 bg-surface-warm">
+        <div className="mx-auto grid max-w-5xl gap-3 px-4 py-8 sm:grid-cols-2 sm:px-6">
+          <Link
+            href="/dsa-results"
+            className="group flex items-start gap-3 rounded-xl border border-slate-200/80 bg-white p-4 shadow-soft transition hover:-translate-y-0.5 hover:border-intellectual/30 hover:shadow-card"
+          >
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-intellectual/8 text-intellectual">
+              <CalendarClock className="h-4 w-4" aria-hidden />
+            </div>
+            <div className="flex-1">
+              <p className="text-[11px] font-bold tracking-[0.10em] text-champagne-dark normal-case">
+                {locale === "zh"
+                  ? "下一阶段"
+                  : locale === "ms"
+                  ? "Fasa seterusnya"
+                  : locale === "ta"
+                  ? "அடுத்த கட்டம்"
+                  : "What comes next"}
+              </p>
+              <h3
+                style={{ textTransform: "none" }}
+                className="mt-0.5 font-display text-[14.5px] font-bold leading-snug text-intellectual"
+              >
+                {locale === "zh"
+                  ? "拿到 Confirmed Offer / Waitlist 后怎么办"
+                  : locale === "ms"
+                  ? "Selepas Tawaran Sah / Senarai Menunggu"
+                  : locale === "ta"
+                  ? "உறுதிசெய்யப்பட்ட சலுகை / காத்திருப்புக்குப் பிறகு"
+                  : "After a Confirmed Offer or Waitlist — what each binds you to"}
+              </h3>
+            </div>
+            <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-intellectual transition group-hover:translate-x-0.5" aria-hidden />
+          </Link>
+          <Link
+            href="/dsa-interview/under-recruited-paths"
+            className="group flex items-start gap-3 rounded-xl border border-slate-200/80 bg-white p-4 shadow-soft transition hover:-translate-y-0.5 hover:border-champagne/40 hover:shadow-card"
+          >
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-champagne-subtle text-champagne-dark">
+              <Sparkles className="h-4 w-4" aria-hidden />
+            </div>
+            <div className="flex-1">
+              <p className="text-[11px] font-bold tracking-[0.10em] text-champagne-dark normal-case">
+                {locale === "zh"
+                  ? "另一条路"
+                  : locale === "ms"
+                  ? "Laluan lain"
+                  : locale === "ta"
+                  ? "மற்றொரு பாதை"
+                  : "Another route"}
+              </p>
+              <h3
+                style={{ textTransform: "none" }}
+                className="mt-0.5 font-display text-[14.5px] font-bold leading-snug text-intellectual"
+              >
+                {locale === "zh"
+                  ? "竞争激烈 · 看看冷门路径（适合 P5）"
+                  : locale === "ms"
+                  ? "Terlalu kompetitif? Lihat laluan kurang sesak (P5)"
+                  : locale === "ta"
+                  ? "மிகவும் போட்டியா? குறைந்த நெரிசல் பாதைகள் (P5)"
+                  : "Too competitive here? See less-crowded paths (P5 planning)"}
+              </h3>
+            </div>
+            <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-champagne-dark transition group-hover:translate-x-0.5" aria-hidden />
+          </Link>
+        </div>
+      </section>
       <RelatedCardsRow
         kicker={pick(relatedKicker, locale)}
         heading={pick(relatedHeading, locale)}

@@ -909,6 +909,21 @@ export function DsaResultsPageBody() {
                   <ArrowRight className="h-4 w-4" aria-hidden />
                 </Link>
                 <Link
+                  href="/dsa-interview/talents"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/20"
+                >
+                  <span style={{ textTransform: "none" }}>
+                    {locale === "zh"
+                      ? "查看 32 个 talent 备战页"
+                      : locale === "ms"
+                      ? "32 halaman persediaan bakat"
+                      : locale === "ta"
+                      ? "32 திறமை தயாரிப்பு பக்கங்கள்"
+                      : "Browse all 32 talent prep pages"}
+                  </span>
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </Link>
+                <Link
                   href="/timeline"
                   className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/20"
                 >

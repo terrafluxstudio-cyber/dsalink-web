@@ -455,6 +455,141 @@ export function buildBlogPostStructuredData(opts: {
 }
 
 /**
+ * /what-is-dsa — Article schema for the DSA explainer page.
+ * Targets "what is DSA Singapore" / "how does DSA work" People Also Ask queries.
+ */
+export function buildWhatIsDsaStructuredData(): Record<string, unknown> {
+  const base = getSiteUrl();
+  const pageUrl = `${base}/what-is-dsa`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${pageUrl}#article`,
+    headline:
+      "What is DSA-Sec? Singapore's Direct School Admission explained",
+    description:
+      "Plain-English explainer of Singapore's Direct School Admission (DSA-Sec) for Primary 6 families — how it works, who it's for, how DSA interacts with PSLE, and what the 2019 reforms changed.",
+    url: pageUrl,
+    inLanguage: "en-SG",
+    publisher: {
+      "@type": "Organization",
+      name: "DSALink",
+      url: base,
+    },
+    about: {
+      "@type": "EducationalOccupationalProgram",
+      name: "Direct School Admission (DSA-Sec)",
+      description:
+        "Singapore MOE's talent-based admission route into Secondary One for Primary 6 students.",
+    },
+    isAccessibleForFree: true,
+  };
+}
+
+/**
+ * /timeline — Article schema with Event-like structure for the 2026 DSA timeline.
+ * Helps "DSA timeline 2026" / "when is DSA application" queries.
+ */
+export function buildTimelineStructuredData(): Record<string, unknown> {
+  const base = getSiteUrl();
+  const pageUrl = `${base}/timeline`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${pageUrl}#article`,
+        headline: "DSA-Sec 2026 Timeline — every key date from May to November",
+        description:
+          "The full DSA-Sec 2026 calendar for Singapore P6 families: application window May-June, interview & trial June-August, October Preference Exercise, November PSLE-day final placement, S1 Posting.",
+        url: pageUrl,
+        inLanguage: "en-SG",
+        publisher: { "@type": "Organization", name: "DSALink", url: base },
+        isAccessibleForFree: true,
+      },
+      {
+        "@type": "Event",
+        name: "DSA-Sec 2026 Application Window",
+        startDate: "2026-05-06",
+        endDate: "2026-06-02",
+        eventStatus: "https://schema.org/EventScheduled",
+        eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
+        location: {
+          "@type": "VirtualLocation",
+          url: "https://www.moe.gov.sg/secondary/dsa",
+        },
+        description:
+          "MOE DSA-Sec Portal application window for Singapore P6 students. Closes 4:30pm SGT on 2 June 2026.",
+        organizer: {
+          "@type": "GovernmentOrganization",
+          name: "Singapore Ministry of Education",
+          url: "https://www.moe.gov.sg",
+        },
+      },
+      {
+        "@type": "Event",
+        name: "DSA-Sec 2026 October Preference Exercise",
+        startDate: "2026-10-19",
+        endDate: "2026-10-23",
+        eventStatus: "https://schema.org/EventScheduled",
+        eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
+        location: {
+          "@type": "VirtualLocation",
+          url: "https://www.moe.gov.sg/secondary/dsa/preferences",
+        },
+        description:
+          "5-day window via the DSA-Sec Portal where families rank up to 3 schools that issued a Confirmed Offer or Waitlist. The ranking locks in the final school placement.",
+        organizer: {
+          "@type": "GovernmentOrganization",
+          name: "Singapore Ministry of Education",
+          url: "https://www.moe.gov.sg",
+        },
+      },
+    ],
+  };
+}
+
+/**
+ * /dsa-interview/talents — CollectionPage schema for the talent index hub.
+ * Each live talent is an ItemList entry, supporting talent-area discovery.
+ */
+export function buildTalentsIndexStructuredData(): Record<string, unknown> {
+  const base = getSiteUrl();
+  const pageUrl = `${base}/dsa-interview/talents`;
+
+  // Talents listed in display order (mirrors getAllTalentPages order).
+  const talents = [
+    "basketball", "football", "swimming", "track-field", "badminton", "martial-arts",
+    "music", "math", "robotics", "chinese", "dance", "drama", "art",
+    "hockey", "squash", "leadership", "volleyball", "table-tennis", "netball", "floorball",
+    "choir", "chinese-orchestra", "tennis", "wushu", "water-polo", "sailing",
+    "rugby", "symphonic-band", "mep", "aep", "bicultural", "humanities",
+  ];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${pageUrl}#collection`,
+    name: "DSA-Sec Talent Prep Pages — All Singapore DSA Talent Areas",
+    description:
+      "Comprehensive index of DSA-Sec talent prep pages for Singapore P6 families. Each talent page covers what trial coaches assess, sample interview questions, and participating Singapore secondary schools.",
+    url: pageUrl,
+    inLanguage: "en-SG",
+    publisher: { "@type": "Organization", name: "DSALink", url: base },
+    isAccessibleForFree: true,
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: talents.length,
+      itemListElement: talents.map((slug, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${base}/dsa-interview/${slug}`,
+      })),
+    },
+  };
+}
+
+/**
  * /open-house-guide — HowTo schema for the secondary school open house guide.
  */
 export function buildOpenHouseGuideStructuredData(): Record<string, unknown> {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { TimelinePageBody } from "@/components/TimelinePageBody";
+import { buildTimelineStructuredData } from "@/lib/seo";
 
 const PAGE_TITLE =
   "2026 DSA-Sec Application Timeline | Key Dates for Singapore Parents | DSALink";
@@ -43,5 +44,14 @@ export function generateMetadata(): Metadata {
 }
 
 export default function TimelinePage() {
-  return <TimelinePageBody />;
+  const jsonLd = buildTimelineStructuredData();
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <TimelinePageBody />
+    </>
+  );
 }

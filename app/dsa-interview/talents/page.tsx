@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { TalentsIndexPageBody } from "@/components/TalentsIndexPageBody";
+import { buildTalentsIndexStructuredData } from "@/lib/seo";
 
 const PAGE_TITLE =
   "DSA Interview Prep by Talent — Sports, Music, Math | DSALink Singapore";
@@ -56,5 +57,14 @@ export function generateMetadata(): Metadata {
 }
 
 export default function TalentsIndexPage() {
-  return <TalentsIndexPageBody />;
+  const jsonLd = buildTalentsIndexStructuredData();
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <TalentsIndexPageBody />
+    </>
+  );
 }

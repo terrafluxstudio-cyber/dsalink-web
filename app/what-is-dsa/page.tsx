@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { WhatIsDsaPageBody } from "@/components/WhatIsDsaPageBody";
+import { buildWhatIsDsaStructuredData } from "@/lib/seo";
 
 const PAGE_TITLE =
   "What Is DSA-Sec? The Singapore Direct School Admission Explained | DSALink";
@@ -45,5 +46,14 @@ export function generateMetadata(): Metadata {
 }
 
 export default function WhatIsDsaPage() {
-  return <WhatIsDsaPageBody />;
+  const jsonLd = buildWhatIsDsaStructuredData();
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <WhatIsDsaPageBody />
+    </>
+  );
 }
