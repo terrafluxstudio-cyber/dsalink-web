@@ -200,6 +200,7 @@ export function SiteHeader() {
   const interviewLinks: readonly NavLink[] = [
     { href: "/dsa-interview", label: t.navDsaInterview, gold: true },
     { href: "/dsa-interview/talents", label: t.navByTalent },
+    { href: "/dsa-interview/under-recruited-paths", label: t.navLessCrowded },
     { href: "/dsa-coaches", label: t.navCoach },
   ];
 

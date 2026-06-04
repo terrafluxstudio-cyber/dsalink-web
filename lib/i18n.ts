@@ -160,6 +160,7 @@ export type Copy = {
   navApplicationTimeline2026: string;
   navInterviewAndTrial: string;
   navByTalent: string;
+  navLessCrowded: string;
   navResults: string;
   ohMissedTakeawaysBtn: string;
   ohTakeawaysAbout: string;
@@ -572,6 +573,7 @@ export const copy: Record<Locale, Copy> = {
     navApplicationTimeline2026: "Timeline",
     navInterviewAndTrial: "Interview & Trial",
     navByTalent: "Prep by Talent",
+    navLessCrowded: "Less-crowded paths",
     navResults: "Results",
     ohMissedTakeawaysBtn: "Missed it? Everything's here →",
     ohTakeawaysAbout: "About the School",
@@ -949,6 +951,7 @@ export const copy: Record<Locale, Copy> = {
     navApplicationTimeline2026: "时间线",
     navInterviewAndTrial: "面试与试训",
     navByTalent: "按才艺备战",
+    navLessCrowded: "冷门路径",
     navResults: "DSA 结果",
     ohMissedTakeawaysBtn: "错过了？情报全在这里 →",
     ohTakeawaysAbout: "学校简介",
@@ -1319,6 +1322,7 @@ export const copy: Record<Locale, Copy> = {
     navApplicationTimeline2026: "Garis Masa",
     navInterviewAndTrial: "Temuduga & Percubaan",
     navByTalent: "Persediaan Mengikut Bakat",
+    navLessCrowded: "Laluan kurang sesak",
     navResults: "Keputusan",
     ohMissedTakeawaysBtn: "Terlepas? Semua ada di sini →",
     ohTakeawaysAbout: "Tentang Sekolah",
@@ -1713,6 +1717,7 @@ export const copy: Record<Locale, Copy> = {
     navApplicationTimeline2026: "கால அட்டவணை",
     navInterviewAndTrial: "நேர்காணல் & சோதனை",
     navByTalent: "திறமை வாரியாக தயாரிப்பு",
+    navLessCrowded: "குறைந்த நெரிசல்",
     navResults: "முடிவுகள்",
     ohMissedTakeawaysBtn: "தவறவிட்டீர்களா? எல்லாம் இங்கே →",
     ohTakeawaysAbout: "பள்ளியைப் பற்றி",

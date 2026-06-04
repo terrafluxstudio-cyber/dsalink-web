@@ -698,7 +698,7 @@ export function DsaInterviewPageBody() {
             </div>
 
             {/* Coach directory crosslink */}
-            <div className="mb-8 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[#e3ded5] bg-white px-5 py-3.5 shadow-card">
+            <div className="mb-3 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[#e3ded5] bg-white px-5 py-3.5 shadow-card">
               <p className="text-[0.875rem] text-slate-600">
                 {locale === "zh"
                   ? "正在寻找DSA辅导机构或个人老师？"
@@ -713,6 +713,31 @@ export function DsaInterviewPageBody() {
                 className="shrink-0 rounded-lg border border-intellectual/20 bg-intellectual/5 px-3 py-1.5 text-[0.8125rem] font-semibold text-intellectual transition hover:bg-intellectual hover:text-white"
               >
                 {t.dsaInterviewLinkCoaches}
+              </Link>
+            </div>
+
+            {/* Less-crowded paths crosslink — 2027 planning entry for P5 families */}
+            <div className="mb-8 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-champagne/40 bg-champagne-subtle/40 px-5 py-3.5 shadow-card">
+              <p className="text-[0.875rem] text-slate-700">
+                {locale === "zh"
+                  ? "孩子是 P5？为 2027 DSA 提前规划——看看冷门路径"
+                  : locale === "ms"
+                  ? "Anak P5? Merancang untuk DSA 2027 — lihat laluan kurang sesak"
+                  : locale === "ta"
+                  ? "உங்கள் குழந்தை P5? 2027 DSA-க்கு திட்டமிடுகிறீர்களா — குறைந்த நெரிசல் பாதைகள்"
+                  : "Child in P5? Planning for DSA 2027 — see less-crowded paths"}
+              </p>
+              <Link
+                href="/dsa-interview/under-recruited-paths"
+                className="shrink-0 rounded-lg border border-champagne/60 bg-white px-3 py-1.5 text-[0.8125rem] font-semibold text-intellectual transition hover:bg-champagne hover:text-intellectual-dark"
+              >
+                {locale === "zh"
+                  ? "查看冷门路径"
+                  : locale === "ms"
+                  ? "Lihat laluan"
+                  : locale === "ta"
+                  ? "பாதைகளைப் பாருங்கள்"
+                  : "See the paths"}
               </Link>
             </div>
 

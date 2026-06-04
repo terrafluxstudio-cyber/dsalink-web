@@ -204,6 +204,55 @@ export function TalentsIndexPageBody() {
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
             </div>
+
+            {/* Less-crowded paths callout (2027 planning entry point) */}
+            <div className="mt-6 rounded-2xl border border-champagne/40 bg-white p-6 shadow-card sm:p-8">
+              <p className="text-[11px] font-bold tracking-[0.10em] text-champagne-dark normal-case">
+                {locale === "zh"
+                  ? "DSA-Sec 2027 提前规划"
+                  : locale === "ms"
+                  ? "Perancangan DSA-Sec 2027"
+                  : locale === "ta"
+                  ? "DSA-Sec 2027 திட்டமிடல்"
+                  : "DSA-Sec 2027 planning"}
+              </p>
+              <h2
+                style={{ textTransform: "none" }}
+                className="mt-2 font-display text-lg font-semibold leading-snug text-intellectual sm:text-xl"
+              >
+                {locale === "zh"
+                  ? "孩子是 P5？看看冷门路径"
+                  : locale === "ms"
+                  ? "Anak P5? Lihat laluan kurang sesak"
+                  : locale === "ta"
+                  ? "உங்கள் குழந்தை P5? குறைந்த நெரிசல் கொண்ட பாதைகளைப் பாருங்கள்"
+                  : "Child in P5? Look at less-crowded paths"}
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                {locale === "zh"
+                  ? "10 个学校招但报名少的 talent · 6 个转项路径（武术 → 舞狮等）· P5 11 个月窗口的现实方案。"
+                  : locale === "ms"
+                  ? "10 bakat yang sekolah merekrut tetapi sedikit memohon · 6 laluan peralihan · tetingkap 11 bulan P5."
+                  : locale === "ta"
+                  ? "பள்ளிகள் சேர்க்கும் 10 திறமைகள் · 6 மாற்று பாதைகள் · P5-க்கு 11 மாத காலக்கெடு."
+                  : "10 talents where schools recruit but few apply · 6 transfer paths (e.g. wushu → lion dance) · realistic 11-month window for current P5."}
+              </p>
+              <Link
+                href="/dsa-interview/under-recruited-paths"
+                className="mt-5 inline-flex items-center gap-2 rounded-xl bg-intellectual px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-intellectual-dark"
+              >
+                <span style={{ textTransform: "none" }}>
+                  {locale === "zh"
+                    ? "打开冷门路径页"
+                    : locale === "ms"
+                    ? "Buka halaman laluan niche"
+                    : locale === "ta"
+                    ? "குறைந்த நெரிசல் பக்கம்"
+                    : "Open less-crowded paths"}
+                </span>
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </Link>
+            </div>
           </div>
         </section>
       </main>
