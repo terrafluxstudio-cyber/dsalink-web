@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BlogPostCard } from "@/components/BlogPostCard";
+
+// ISR revalidate every 6 hours so future-dated MDX posts auto-publish when their date passes.
+export const revalidate = 21600;
+
 import { BlogSubscribeBlock } from "@/components/BlogSubscribeBlock";
 import { StaticPageBreadcrumb, StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
 import { getAllPosts } from "@/lib/blog";

@@ -15,6 +15,7 @@ const CONTENT_DIR = path.join(process.cwd(), "content/blog");
 
 export function getAllPosts(): Omit<BlogPost, "content">[] {
   const files = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".mdx"));
+  const todayMs = Date.now();
   return files
     .map((file) => {
       const slug = file.replace(/\.mdx$/, "");
@@ -22,6 +23,10 @@ export function getAllPosts(): Omit<BlogPost, "content">[] {
       const { data } = matter(raw);
       return { slug, ...(data as Omit<BlogPost, "slug" | "content">) };
     })
+    // Scheduled-publish filter: hide posts dated in the future.
+    // Pairs with ISR revalidate on /blog and /blog/[slug] (6 hours) — when a future
+    // date passes, the next ISR rebuild surfaces the post automatically.
+    .filter((p) => new Date(p.date).getTime() <= todayMs)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 

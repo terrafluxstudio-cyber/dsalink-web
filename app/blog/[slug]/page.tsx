@@ -12,6 +12,12 @@ import Link from "next/link";
 
 type Props = { params: Promise<{ slug: string }> };
 
+// ISR revalidate every 6 hours so future-dated MDX posts auto-publish when date passes.
+export const revalidate = 21600;
+// Allow rendering of slugs not in initial generateStaticParams (i.e. future-dated posts
+// once their date arrives and ISR picks them up).
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
 }
@@ -20,6 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   try {
     const post = getPostBySlug(slug);
+    // Don't leak metadata for unpublished (future-dated) posts.
+    if (new Date(post.date).getTime() > Date.now()) return {};
     const canonical = `/blog/${slug}`;
     const ogImage = post.heroImage ?? "/opengraph-image";
     const fullTitle = `${post.title} | DSALink Blog`;
@@ -62,6 +70,12 @@ export default async function BlogPostPage({ params }: Props) {
   try {
     post = getPostBySlug(slug);
   } catch {
+    notFound();
+  }
+
+  // Scheduled-publish guard: 404 if the post's date is in the future.
+  // Once the date arrives, ISR (revalidate=21600) rebuilds and the post becomes accessible.
+  if (new Date(post.date).getTime() > Date.now()) {
     notFound();
   }
 
