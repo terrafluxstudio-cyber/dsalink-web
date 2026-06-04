@@ -505,161 +505,222 @@ const TRANSFER_TITLE: LocaleStr = {
 };
 
 const TRANSFER_INTRO: LocaleStr = {
-  en: "If your child has already trained a mainstream talent for 1-3 years but the DSA competition in that talent is brutal (think wushu, piano, badminton), an underrecruited adjacent talent can be a more realistic target. The transferable foundations — stances, footwork, breath control, hand-eye coordination, reading patterns — carry across. The new specific skills usually need 6-12 months to build. Below are five transfer combinations supported by physical-skill overlap and youth coaching literature.",
-  zh: "如果孩子已经训练某项主流 talent 1-3 年 · 但那个项目 DSA 竞争太激烈（武术、钢琴、羽毛球这种）· 转向一个相邻冷门 talent 可能是更现实的目标。可迁移的底子——桩功、步法、呼吸、手眼协调、读旋节奏——能直接搬过去 · 新项目特有技能通常 6-12 个月可建立。下面 5 种转项组合都有体育技能重合 + 青训文献支持。",
-  ms: "Jika anak anda telah melatih bakat arus perdana selama 1-3 tahun tetapi persaingan DSA dalam bakat itu sangat ketat, bakat bersebelahan yang kurang dipohon boleh menjadi sasaran yang lebih realistik.",
-  ta: "உங்கள் குழந்தை ஏற்கனவே ஒரு முக்கிய திறமையை 1-3 ஆண்டுகளாக பயிற்சி செய்திருந்தால் ஆனால் அந்த திறமையில் DSA போட்டி கடினமாக இருந்தால், குறைவாக விண்ணப்பிக்கப்படும் அண்டை திறமை மிகவும் யதார்த்தமான இலக்காக இருக்கலாம்.",
+  en: "If your child has already trained one or more mainstream talents for 1-3 years but the DSA competition there is brutal (wushu, piano, badminton, swimming), an underrecruited adjacent talent can be a more realistic target. For each niche talent below we list multiple mainstream backgrounds that map credibly. The structure to use this section: pick the niche talent your target school accepts, then check which of your child's existing skills carry over. The carried-over foundations move directly; the new skills usually need 6-12 months to build on top.",
+  zh: "如果孩子已经训练一种或多种主流 talent 1-3 年 · 但那些项目 DSA 竞争太激烈(武术、钢琴、羽毛球、游泳)· 转向相邻冷门 talent 可能是更现实的目标。下面每个冷门 talent 都列了多条主流背景的迁移路径。用法：先找你目标学校招的冷门项目 · 再看孩子已有底子里哪条能搬。可迁移的底子能直接搬 · 新项目特有技能通常 6-12 个月在上面叠加。",
+  ms: "Jika anak anda telah melatih satu atau lebih bakat arus perdana selama 1-3 tahun tetapi persaingan DSA di situ sangat ketat, bakat bersebelahan yang kurang dipohon boleh menjadi sasaran yang lebih realistik. Untuk setiap bakat niche di bawah, beberapa latar belakang arus perdana memetakan dengan boleh dipercayai.",
+  ta: "உங்கள் குழந்தை ஏற்கனவே ஒன்று அல்லது அதற்கு மேற்பட்ட முக்கிய திறமைகளை 1-3 ஆண்டுகளாக பயிற்சி செய்திருந்தால் ஆனால் அவற்றில் DSA போட்டி கடினமாக இருந்தால், குறைவாக விண்ணப்பிக்கப்படும் அண்டை திறமை மிகவும் யதார்த்தமான இலக்காக இருக்கலாம். ஒவ்வொரு niche திறமைக்கும் கீழே, பல முக்கிய பின்னணிகள் நம்பகமாக மேப் ஆகின்றன.",
 };
 
-const TRANSFER_ROWS: ReadonlyArray<{
-  from: LocaleStr;
-  to: LocaleStr;
-  carries: LocaleStr;
+const TRANSFER_TARGETS: ReadonlyArray<{
+  icon: typeof Activity;
+  target: LocaleStr;
+  sources: ReadonlyArray<{
+    from: LocaleStr;
+    why: LocaleStr;
+    strength: "strong" | "good" | "partial";
+  }>;
   needs: LocaleStr;
-  strength: "strong" | "good" | "partial";
 }> = [
   {
-    from: {
-      en: "Wushu (武术)",
-      zh: "武术",
-      ms: "Wushu",
-      ta: "வுஷு",
-    },
-    to: {
-      en: "Lion dance",
-      zh: "舞狮",
-      ms: "Tarian singa",
-      ta: "சிங்க நடனம்",
-    },
-    carries: {
-      en: "Horse stance (马步), hip rotation, balance, body rhythm, kung-fu derived footwork — Singapore Southern-style lion dance traces its stance structure directly to wushu",
-      zh: "马步、髋部转动、平衡、身体节奏、源自功夫的步法——新加坡南派舞狮的桩功直接源于武术",
-      ms: "Kuda-kuda, putaran pinggul, keseimbangan, ritma badan, langkah kaki berasal dari kung-fu",
-      ta: "குதிரை நிலை, இடுப்பு சுழற்சி, சமநிலை, உடல் தாளம், kung-fu இலிருந்து வந்த கால் நகர்வுகள்",
-    },
+    icon: Drum,
+    target: { en: "Lion dance (target)", zh: "舞狮(目标)", ms: "Tarian singa (sasaran)", ta: "சிங்க நடனம் (இலக்கு)" },
+    sources: [
+      {
+        from: { en: "Wushu (武术)", zh: "武术", ms: "Wushu", ta: "வுஷு" },
+        why: { en: "Horse stance, hip rotation, body rhythm — Singapore Southern-style lion dance traces its stance structure directly to wushu", zh: "马步、髋部转动、身体节奏——新加坡南派舞狮桩功直接源于武术", ms: "Kuda-kuda, putaran pinggul, ritma badan", ta: "குதிரை நிலை, இடுப்பு சுழற்சி, உடல் தாளம்" },
+        strength: "strong",
+      },
+      {
+        from: { en: "Taekwondo / Karate", zh: "跆拳道 / 空手道", ms: "Taekwondo / Karate", ta: "தைக்வாண்டோ / கராத்தே" },
+        why: { en: "Low stances, balance under quick weight shifts, body discipline, partner-coordination instinct", zh: "低位站桩、快速重心转移时的平衡、身体纪律、双人协调本能", ms: "Kuda-kuda rendah, keseimbangan, disiplin badan", ta: "தாழ்ந்த நிலைகள், சமநிலை, உடல் ஒழுக்கம்" },
+        strength: "good",
+      },
+      {
+        from: { en: "Chinese dance / contemporary dance", zh: "中国舞 / 现代舞", ms: "Tarian Cina / kontemporari", ta: "சீன / சமகால நடனம்" },
+        why: { en: "Rhythm reading from drums, body coordination across a long form, performative awareness of audience", zh: "鼓点节奏的读取、长段身体协调、面对观众的表演意识", ms: "Membaca rentak, koordinasi badan, kesedaran penonton", ta: "தாள வாசிப்பு, உடல் ஒருங்கிணைப்பு, பார்வையாளர் விழிப்புணர்வு" },
+        strength: "good",
+      },
+      {
+        from: { en: "Gymnastics", zh: "体操", ms: "Gimnastik", ta: "ஜிம்னாஸ்டிக்ஸ்" },
+        why: { en: "Strong core, balance, flexibility — helpful for lion-head puppetry that involves overhead lifts and sudden pose holds", zh: "强核心、平衡、柔韧——对狮头举高与突然定格姿势有帮助", ms: "Teras kuat, keseimbangan, kelenturan", ta: "வலுவான மையம், சமநிலை, நெகிழ்வுத்தன்மை" },
+        strength: "partial",
+      },
+      {
+        from: { en: "Chinese percussion (鼓乐)", zh: "华乐打击乐", ms: "Perkusi Cina", ta: "சீன தாள வாத்தியங்கள்" },
+        why: { en: "Drum rhythm fluency — important for synchronisation with the percussion ensemble that drives every routine", zh: "鼓点节奏熟练——对狮头狮尾跟随打击乐合奏同步至关重要", ms: "Kefasihan rentak drum", ta: "டிரம் தாளம் சரளம்" },
+        strength: "partial",
+      },
+    ],
     needs: {
-      en: "Lion head (狮头) puppetry technique · 2-person coordination with tail · 鼓点 drum rhythm reading · cultural narratives",
-      zh: "狮头操控技巧 · 狮头狮尾双人配合 · 鼓点读谱 · 文化叙事",
-      ms: "Teknik kepala singa · koordinasi dua orang · membaca rentak drum",
-      ta: "சிங்க தலை நுட்பம் · இரு நபர் ஒருங்கிணைப்பு · டிரம் தாளம் படித்தல்",
+      en: "All sources still need: lion-head puppetry, 2-person head-tail coordination, drum-pattern reading, cultural narratives. 9-12 months minimum at a Singapore lion dance club.",
+      zh: "无论从哪条转 · 都还要建立：狮头操控、狮头狮尾双人配合、鼓点谱读、文化叙事。在新加坡舞狮俱乐部至少 9-12 个月。",
+      ms: "Semua sumber masih perlukan: teknik kepala singa, koordinasi dua orang, membaca rentak drum.",
+      ta: "எல்லா மூலங்களும் இன்னும் தேவை: சிங்க தலை நுட்பம், இரு நபர் ஒருங்கிணைப்பு, டிரம் வாசிப்பு.",
     },
-    strength: "strong",
   },
   {
-    from: {
-      en: "Swimming",
-      zh: "游泳",
-      ms: "Renang",
-      ta: "நீச்சல்",
-    },
-    to: {
-      en: "Water polo",
-      zh: "水球",
-      ms: "Polo air",
-      ta: "வாட்டர் போலோ",
-    },
-    carries: {
-      en: "Aerobic endurance, water feel, freestyle stroke at game pace — most national water polo programmes recruit from competitive swimmers",
-      zh: "有氧耐力、水感、自由泳跑动配速——多数国家级水球项目从竞泳手中招收",
-      ms: "Daya tahan aerobik, rasa air, gaya bebas pada kelajuan permainan",
-      ta: "ஏரோபிக் சகிப்புத்தன்மை, நீர் உணர்வு, விளையாட்டு வேகத்தில் ஃப்ரீஸ்டைல்",
-    },
+    icon: Waves,
+    target: { en: "Water polo (target)", zh: "水球(目标)", ms: "Polo air (sasaran)", ta: "வாட்டர் போலோ (இலக்கு)" },
+    sources: [
+      {
+        from: { en: "Competitive swimming", zh: "竞技游泳", ms: "Renang kompetitif", ta: "போட்டி நீச்சல்" },
+        why: { en: "The standard recruitment pathway. Aerobic base, water feel, freestyle at game pace transfer directly", zh: "标准招生通道。有氧底子、水感、比赛级自由泳直接迁移", ms: "Asas aerobik, rasa air, gaya bebas pada kelajuan permainan", ta: "ஏரோபிக் அடிப்படை, நீர் உணர்வு, ஃப்ரீஸ்டைல்" },
+        strength: "strong",
+      },
+      {
+        from: { en: "Synchronised swimming", zh: "花样游泳", ms: "Renang segerak", ta: "ஒத்திசைவான நீச்சல்" },
+        why: { en: "Egg-beater treading already trained at a high level — the single hardest water-polo demand for swimmer-converts is already in place", zh: "蛋打腿踩水已高水平训练——游泳手转水球最难那关已经过了", ms: "Egg-beater telah dilatih pada tahap tinggi", ta: "Egg-beater ஏற்கனவே உயர் மட்டத்தில்" },
+        strength: "strong",
+      },
+      {
+        from: { en: "Basketball", zh: "篮球", ms: "Bola keranjang", ta: "கூடைப்பந்து" },
+        why: { en: "Court-aware 6-on-6 spatial thinking, shooting arm strength, recognising where the ball will be 2 seconds from now — all transfer to water polo's offensive structure", zh: "球场 6 对 6 空间意识、射门臂力、预读球往哪去 2 秒后位置——都迁移到水球进攻结构", ms: "Pemikiran ruang 6-lawan-6, kekuatan lengan, ramalan bola", ta: "6-மீது-6 இடம் சிந்தனை, கை வலிமை, பந்து கணிப்பு" },
+        strength: "good",
+      },
+      {
+        from: { en: "Rugby", zh: "橄榄球", ms: "Ragbi", ta: "ரக்பி" },
+        why: { en: "Physical contact tolerance, comfort under bodies — water polo at the centre-forward position involves substantial physical defending that surprises swim-only converts", zh: "身体对抗承受度、被压时的从容——水球中锋位有大量物理防守 · 只游过泳的转项者常被吓到", ms: "Toleransi sentuhan fizikal, keselesaan dalam tekanan", ta: "உடல் தொடர்பு சகிப்புத்தன்மை, அழுத்தத்தில் வசதி" },
+        strength: "partial",
+      },
+    ],
     needs: {
-      en: "Egg-beater treading (the unique water-polo demand) · one-handed ball control · passing under defensive pressure · 6-on-6 spatial reading",
-      zh: "蛋打腿踩水（水球独门技术）· 单手控球 · 防守压力下传球 · 6 对 6 空间阅读",
-      ms: "Kayuhan egg-beater · kawalan bola sebelah tangan · hantaran di bawah tekanan",
-      ta: "Egg-beater பயிற்சி · ஒரு கையால் பந்து கட்டுப்பாடு · அழுத்தத்தின் கீழ் பாஸ்",
+      en: "All sources still need: egg-beater stamina (if not synchro), one-handed ball control without two-hand lifts, passing under defensive pressure, FINA rule fluency. 6-9 months at a Singapore water polo programme.",
+      zh: "无论从哪条转 · 都还要建立：蛋打腿耐力(非花样游泳出身的话)、单手控球(不能两手抬)、防守压力下传球、FINA 规则。新加坡水球项目 6-9 个月。",
+      ms: "Semua sumber masih perlukan: stamina egg-beater, kawalan bola sebelah tangan, kefahaman FINA.",
+      ta: "எல்லா மூலங்களும் இன்னும் தேவை: egg-beater வலிமை, ஒரு கை பந்து கட்டுப்பாடு.",
     },
-    strength: "strong",
   },
   {
-    from: {
-      en: "Track & field (sprints especially)",
-      zh: "田径（特别是短跑）",
-      ms: "Olahraga (terutamanya pecut)",
-      ta: "டிராக் & ஃபீல்ட்",
-    },
-    to: {
-      en: "Softball",
-      zh: "垒球",
-      ms: "Softball",
-      ta: "சாஃப்ட்பால்",
-    },
-    carries: {
-      en: "Base-running speed, sprint mechanics off explosive starts, shoulder rotation for throwing, fitness baseline",
-      zh: "跑垒速度、爆发起跑的冲刺力学、传球肩部转动、体能底子",
-      ms: "Kelajuan larian asas, mekanik pecut, putaran bahu",
-      ta: "ஓட்டத் திறன், ஸ்பிரிண்ட் இயக்கவியல், தோள் சுழற்சி",
-    },
+    icon: Zap,
+    target: { en: "Squash (target)", zh: "壁球(目标)", ms: "Skuasy (sasaran)", ta: "ஸ்குவாஷ் (இலக்கு)" },
+    sources: [
+      {
+        from: { en: "Badminton", zh: "羽毛球", ms: "Badminton", ta: "இறகுப்பந்து" },
+        why: { en: "Wrist control, racket-grip transitions, lunge footwork, reaction time — Singapore squash coaches actively prefer badminton converters because the muscle memory transfers cleanly", zh: "腕力、握拍切换、弓步脚法、反应时间——新加坡壁球教练主动偏好羽毛球转项 · 因肌肉记忆迁移最干净", ms: "Kawalan pergelangan tangan, pertukaran pegangan raket, pergerakan menerjang", ta: "மணிக்கட்டு கட்டுப்பாடு, ராக்கெட் பிடிப்பு மாற்றம், கால் நகர்வு" },
+        strength: "strong",
+      },
+      {
+        from: { en: "Tennis", zh: "网球", ms: "Tenis", ta: "டென்னிஸ்" },
+        why: { en: "Most direct racket-sport mapping. Forehand and backhand mechanics translate; the swing length shortens but the shape is recognisable", zh: "球拍项目最直接的映射。正反手力学直接通用；挥拍长度变短但形状一致", ms: "Pemetaan sukan raket paling langsung", ta: "மிக நேரடியான ராக்கெட் விளையாட்டு" },
+        strength: "strong",
+      },
+      {
+        from: { en: "Table tennis", zh: "乒乓球", ms: "Ping pong", ta: "மேசை டென்னிஸ்" },
+        why: { en: "Reaction speed, reading spin, fast hand-eye decisions — though the grip and swing length differ substantially, the perceptual processing layer transfers", zh: "反应速度、读旋转、快速手眼决策——握拍和挥拍长度差别大 · 但感知处理层是通的", ms: "Kelajuan tindak balas, membaca spin, keputusan tangan-mata pantas", ta: "எதிர்வினை வேகம், ஸ்பின் படித்தல், வேகமான கை-கண் முடிவுகள்" },
+        strength: "good",
+      },
+    ],
     needs: {
-      en: "Hitting technique (highest learning curve) · fielding glove work · pitch reading · base-running tactics · 6-9 months of focused softball-specific practice",
-      zh: "击球技术（学习曲线最陡）· 接球手套操作 · 读球路 · 跑垒战术 · 6-9 个月专项练习",
-      ms: "Teknik memukul · kerja sarung tangan · membaca bola",
-      ta: "அடிக்கும் நுட்பம் · கையுறை வேலை · பந்தைப் படித்தல்",
+      en: "All sources still need: reading bounce off three walls (the defining new skill), tactical 'T' positioning, eye guard discipline (WSF rule). 9 months minimum on a real squash court.",
+      zh: "无论从哪条转 · 都还要建立：读三面墙的回弹(核心新技能)、战术 T 位、护目镜纪律(WSF 规则)。真正的壁球场至少 9 个月。",
+      ms: "Semua sumber masih perlukan: membaca pantulan tiga dinding, kedudukan 'T'.",
+      ta: "எல்லா மூலங்களும் இன்னும் தேவை: மூன்று சுவர் குதிப்புகளைப் படித்தல்.",
     },
-    strength: "good",
   },
   {
-    from: {
-      en: "Badminton",
-      zh: "羽毛球",
-      ms: "Badminton",
-      ta: "இறகுப்பந்து",
-    },
-    to: {
-      en: "Squash",
-      zh: "壁球",
-      ms: "Skuasy",
-      ta: "ஸ்குவாஷ்",
-    },
-    carries: {
-      en: "Wrist control, racket grip transitions, reaction time, lunge footwork, court-coverage stamina",
-      zh: "腕力、握拍切换、反应时间、弓步脚法、覆盖球场的体能",
-      ms: "Kawalan pergelangan tangan, pertukaran pegangan raket, masa tindak balas",
-      ta: "மணிக்கட்டு கட்டுப்பாடு, ராக்கெட் பிடிப்பு மாற்றங்கள், எதிர்வினை நேரம்",
-    },
+    icon: Bird,
+    target: { en: "Softball — girls (target)", zh: "垒球——女子(目标)", ms: "Softball — perempuan (sasaran)", ta: "சாஃப்ட்பால் — பெண்கள் (இலக்கு)" },
+    sources: [
+      {
+        from: { en: "Cricket", zh: "板球", ms: "Kriket", ta: "கிரிக்கெட்" },
+        why: { en: "Most direct transfer of all — bat mechanics, throwing motion, fielding instincts, game structure all parallel. Rare in Singapore but a major lever where it exists", zh: "迁移最直接的——挥棒力学、传球动作、外野直觉、比赛结构全部对应。新加坡少 · 但有就是大杠杆", ms: "Pemindahan paling langsung — mekanik bat, motion balingan", ta: "மிக நேரடியான மாற்றம் — பேட் இயக்கவியல், எறிதல்" },
+        strength: "strong",
+      },
+      {
+        from: { en: "Track sprints", zh: "田径短跑", ms: "Pecut olahraga", ta: "டிராக் ஸ்பிரிண்ட்" },
+        why: { en: "Base-running speed, explosive starts, fitness baseline — track sprinters are routinely recruited by school softball teams as outfielders and base runners", zh: "跑垒速度、爆发起跑、体能底子——田径短跑手常被中学软球队招为外野手或跑垒员", ms: "Kelajuan larian asas, permulaan letupan", ta: "ஓட்டத் திறன், வெடிப்பு தொடக்கம்" },
+        strength: "good",
+      },
+      {
+        from: { en: "Field hockey", zh: "曲棍球", ms: "Hoki padang", ta: "ஃபீல்ட் ஹாக்கி" },
+        why: { en: "Throwing motion, game-spatial reading, comfort with a fielding glove (transfers from hockey stick reach), team-defence patterns", zh: "传球动作、比赛空间读取、对接球手套的适应、团队防守模式", ms: "Motion balingan, membaca ruang permainan", ta: "எறிதல் இயக்கம், கள வாசிப்பு" },
+        strength: "good",
+      },
+      {
+        from: { en: "Netball", zh: "投球", ms: "Bola jaring", ta: "நெட்பால்" },
+        why: { en: "Strong throwing arm, two-handed catching technique, defensive positioning instincts — though softball requires bigger throws than netball passes", zh: "强传球臂、两手接球技术、防守站位本能——但软球的传球距离比投球大", ms: "Lengan balingan kuat, teknik tangkapan dua tangan", ta: "வலுவான கை, இரு கை பிடிப்பு நுட்பம்" },
+        strength: "partial",
+      },
+    ],
     needs: {
-      en: "Reading bounce off walls (the defining new skill) · slower ball pace adjustment · tactical 'T' positioning · 9 months minimum",
-      zh: "读墙面回弹（核心新技能）· 适应较慢球速 · 战术 T 位 · 至少 9 个月",
-      ms: "Membaca pantulan dari dinding · pelarasan kelajuan bola lebih perlahan",
-      ta: "சுவர்களில் இருந்து குதிப்பதைப் படித்தல் · மெதுவான பந்து வேக சரிசெய்தல்",
+      en: "All sources still need: hitting technique (the highest learning curve), pitch-reading, base-running tactics, position-specific fielding patterns. 6-9 months of focused softball-specific practice.",
+      zh: "无论从哪条转 · 都还要建立：击球技术(学习曲线最陡)、读球路、跑垒战术、各位置特定的接球模式。专项练习 6-9 个月。",
+      ms: "Semua sumber masih perlukan: teknik memukul, membaca bola, taktik larian asas.",
+      ta: "எல்லா மூலங்களும் இன்னும் தேவை: அடிக்கும் நுட்பம், பந்து வாசிப்பு.",
     },
-    strength: "good",
   },
   {
-    from: {
-      en: "Piano or strings (Grade 5+)",
-      zh: "钢琴或弦乐（Grade 5+）",
-      ms: "Piano atau alat bertali (Grade 5+)",
-      ta: "பியானோ அல்லது நரம்பு (Grade 5+)",
-    },
-    to: {
-      en: "Rare wind (oboe, bassoon, French horn) or rare Chinese instrument (sheng, suona, zhongruan)",
-      zh: "罕见管乐（双簧管、巴松、法国号）或罕见华乐（笙、唢呐、中阮）",
-      ms: "Tiup jarang atau instrumen Cina jarang",
-      ta: "அரிய காற்று அல்லது அரிய சீன கருவி",
-    },
-    carries: {
-      en: "Sight-reading, rhythmic precision, musicality, ABRSM/aural foundation, comfort with weekly individual lessons",
-      zh: "视奏、节奏精度、乐感、ABRSM / 听音基础、每周课程节奏",
-      ms: "Membaca pandang, ketepatan rentak, muzikaliti",
-      ta: "பார்த்து வாசித்தல், தாள துல்லியம், இசை திறன்",
-    },
+    icon: Music2,
+    target: { en: "Rare wind / rare Chinese instruments (target)", zh: "罕见管乐 / 罕见华乐(目标)", ms: "Tiup jarang / instrumen Cina jarang (sasaran)", ta: "அரிய காற்று / அரிய சீன கருவி (இலக்கு)" },
+    sources: [
+      {
+        from: { en: "Recorder (school music programme)", zh: "竖笛(学校音乐课)", ms: "Perakam", ta: "ரெக்கார்டர்" },
+        why: { en: "Closest wind-family relative. Basic embouchure exists, breath control habit is built, finger-coordination over holes transfers — the easiest transition to oboe, dizi, or hulusi", zh: "管乐家族最近亲。已具基本嘴型、气息控制习惯已建、按孔手指协调可迁移——转双簧管、笛子、葫芦丝最容易", ms: "Saudara keluarga tiup paling dekat", ta: "மிக நெருங்கிய காற்று குடும்ப உறவினர்" },
+        strength: "strong",
+      },
+      {
+        from: { en: "Existing band / orchestra instrument", zh: "已学的乐团乐器", ms: "Instrumen band / orkestra sedia ada", ta: "ஏற்கனவே இசைக்குழு கருவி" },
+        why: { en: "Clarinet to oboe / bassoon, trumpet to French horn, violin to erhu, dizi to sheng — within-family transitions are 6-9 months; across-family transitions are 9-12 months", zh: "单簧管转双簧管/巴松、小号转法国号、小提琴转二胡、笛子转笙——同族转 6-9 个月 · 跨族转 9-12 个月", ms: "Klarinet ke obo, trumpet ke French horn, biola ke erhu", ta: "க்ளாரினெட் முதல் ஓபோ, ட்ரம்பெட் முதல் French horn" },
+        strength: "strong",
+      },
+      {
+        from: { en: "Piano or strings (Grade 5+)", zh: "钢琴或弦乐(Grade 5+)", ms: "Piano atau bertali (Grade 5+)", ta: "பியானோ அல்லது நரம்பு (Grade 5+)" },
+        why: { en: "Sight-reading, rhythmic precision, ABRSM theory and aural foundation — the music brain transfers; the physical wind technique starts from zero", zh: "视奏、节奏精度、ABRSM 理论与听音底子——音乐脑可迁移 · 物理管乐技术从零开始", ms: "Membaca pandang, ketepatan rentak, ABRSM", ta: "பார்த்து வாசித்தல், தாள துல்லியம், ABRSM" },
+        strength: "good",
+      },
+      {
+        from: { en: "Choir / vocal training", zh: "合唱团 / 声乐", ms: "Koir / latihan vokal", ta: "பாடகர் / குரல் பயிற்சி" },
+        why: { en: "Breath support already trained (singers and wind players use the same diaphragm habit), aural and sight-singing skills carry to wind sight-reading", zh: "气息支持已训练好(歌手和管乐用同一套横膈膜习惯)、听音视唱可迁移到管乐视奏", ms: "Sokongan pernafasan, kemahiran aural", ta: "சுவாச ஆதரவு, கேள்வி திறன்" },
+        strength: "partial",
+      },
+    ],
     needs: {
-      en: "Embouchure (the new physical skill that cannot be transferred from another instrument family) · breath support · 9-12 months to audition-credible Grade 5 level on the new instrument · access to a teacher (sheng / oboe teachers are scarce — confirm availability first)",
-      zh: "嘴型（无法从其他乐器家族迁移的物理技能）· 气息支持 · 新乐器达到 audition Grade 5 通常 9-12 个月 · 教师资源（笙 / 双簧管老师稀缺——先确认师资）",
-      ms: "Embouchure · sokongan pernafasan · 9-12 bulan ke tahap audition",
-      ta: "எம்பௌச்சர் · சுவாச ஆதரவு · ஆடிஷன் தரம் வரை 9-12 மாதங்கள்",
+      en: "All sources still need: instrument-specific embouchure (cannot be fully transferred across families, though wind-to-wind is faster), audition repertoire on the new instrument, access to a teacher (sheng / oboe / bassoon teachers are scarce in Singapore — confirm availability before committing).",
+      zh: "无论从哪条转 · 都还要建立：新乐器特有的嘴型(无法完全跨家族迁移 · 同管乐家族内转较快)、新乐器的 audition 曲目、师资资源(笙 / 双簧管 / 巴松教师在新加坡稀缺——先确认师资)。",
+      ms: "Semua sumber masih perlukan: embouchure khusus instrumen, repertoire audisi, akses kepada guru.",
+      ta: "எல்லா மூலங்களும் இன்னும் தேவை: கருவி-குறிப்பிட்ட எம்பௌச்சர், தேர்வுக்கான பாடல்கள், ஆசிரியர் அணுகல்.",
     },
-    strength: "partial",
+  },
+  {
+    icon: Sparkles,
+    target: { en: "Fencing (target)", zh: "击剑(目标)", ms: "Pedang (sasaran)", ta: "வாள் வீச்சு (இலக்கு)" },
+    sources: [
+      {
+        from: { en: "Taekwondo / Karate", zh: "跆拳道 / 空手道", ms: "Taekwondo / Karate", ta: "தைக்வாண்டோ / கராத்தே" },
+        why: { en: "En garde stance maps directly to martial-arts ready stance, lunging mechanics, distance management, reading the opponent's tells — fencing coaches consider this a meaningful head start", zh: "En garde 备战式直接对应武术预备式、弓步力学、距离管理、读对手意图——击剑教练视此为明显起步优势", ms: "Kuda-kuda menerjang dipetakan terus, pengurusan jarak", ta: "என் கார்டே நிலை நேரடியாக மேப் ஆகும்" },
+        strength: "strong",
+      },
+      {
+        from: { en: "Wushu", zh: "武术", ms: "Wushu", ta: "வுஷு" },
+        why: { en: "Balance, agility, lunging stances, weapon-form familiarity (sword / spear practice transfers wrist and timing instinct to the fencing blade)", zh: "平衡、敏捷、弓步桩、器械套路熟悉感(剑 / 枪练习给击剑的腕和时机直觉)", ms: "Keseimbangan, kelincahan, kebiasaan senjata", ta: "சமநிலை, சுறுசுறுப்பு, ஆயுத பழக்கம்" },
+        strength: "good",
+      },
+      {
+        from: { en: "Tennis or badminton", zh: "网球或羽毛球", ms: "Tenis atau badminton", ta: "டென்னிஸ் அல்லது இறகுப்பந்து" },
+        why: { en: "Reaction speed under pressure, lateral footwork, anticipating opponent's next move — the perception layer transfers; weapon manipulation starts new", zh: "压力下反应速度、横向脚法、预判对手下一步——感知层迁移 · 武器操控从零开始", ms: "Kelajuan tindak balas, pergerakan kaki sisi", ta: "எதிர்வினை வேகம், பக்க கால் நகர்வு" },
+        strength: "good",
+      },
+      {
+        from: { en: "Ballet or rhythmic gymnastics", zh: "芭蕾或艺术体操", ms: "Balet atau gimnastik berirama", ta: "பாலே அல்லது தாள ஜிம்னாஸ்டிக்ஸ்" },
+        why: { en: "Footwork precision, posture, body control under sustained tension — fencing emphasises composed posture in a way few sports do", zh: "脚法精度、姿态、持续紧张下的身体控制——击剑对姿态从容的要求 · 少数运动能匹配", ms: "Ketepatan langkah kaki, postur", ta: "கால் நகர்வு துல்லியம், தோரணை" },
+        strength: "partial",
+      },
+    ],
+    needs: {
+      en: "All sources still need: blade-specific technique (foil / épée / sabre have distinct rules and target areas), Singapore Fencing Association ranking ideally, weapon and gear (expensive — budget consideration). 9-12 months minimum.",
+      zh: "无论从哪条转 · 都还要建立：剑种特有技术(花剑 / 重剑 / 佩剑各有独立规则和有效部位)、最好有 SFA 排名、装备成本(贵——预算考量)。至少 9-12 个月。",
+      ms: "Semua sumber masih perlukan: teknik khusus mata pedang, kedudukan SFA, peralatan.",
+      ta: "எல்லா மூலங்களும் இன்னும் தேவை: வாள் சார்ந்த நுட்பம், SFA தரவரிசை, உபகரணம்.",
+    },
   },
 ];
 
+
 const TRANSFER_NOTE: LocaleStr = {
-  en: "These five are not the only transfer paths — they are the ones with the strongest published physical-skill or musical-foundation overlap. Other plausible transfers (taekwondo to fencing; basketball to softball outfield; gymnastics to dance or diving) are conceptually similar but less documented. Talk to a coach in the target talent before committing.",
-  zh: "这 5 个不是唯一的转项路径——只是体育技能或音乐基础重合证据最强的几条。其他合理转向（跆拳道转击剑；篮球转垒球外野；体操转舞蹈或跳水）逻辑相似但公开文献较少。转向前先跟目标项目的教练聊。",
-  ms: "Kelima-lima ini bukan satu-satunya laluan peralihan — mereka adalah yang mempunyai pertindihan kemahiran fizikal atau asas muzik terkuat yang diterbitkan.",
-  ta: "இந்த ஐந்து மட்டுமே மாற்று பாதைகள் அல்ல — வெளியிடப்பட்ட உடல் திறன் அல்லது இசை அடிப்படை ஒன்றுக்கொன்று மிகவும் வலுவாக உள்ளவை.",
+  en: "These six target talents are not exhaustive — they are the ones where multiple mainstream backgrounds map credibly. Other plausible niche targets exist for archery (focus-heavy sports like rifle shooting or cross-country), dragon boat (rowing, kayak, swimming), and rare track events (general track training plus event-specific technical work). The same logic applies: identify the niche your target school recruits for, then map your child's existing skills onto it. The coach in the target talent is the most reliable source of an honest assessment of whether a specific transfer makes sense for your specific child.",
+  zh: "这 6 个目标 talent 不是穷举——只是多条主流背景能可信迁移的几个。其他合理冷门目标也存在：射箭可从射击 / 越野跑(专注力强的项目)迁移 · 龙舟可从划船 / 皮划艇 / 游泳迁移 · 罕见田径项目可从一般田径训练 + 单项技术工作转。逻辑相同：先确认目标学校招的冷门项目 · 再把孩子已有底子映射上去。目标项目的教练是评估具体转项是否适合具体孩子的最可靠来源。",
+  ms: "Keenam-enam talent sasaran ini bukan menyeluruh — mereka adalah yang beberapa latar belakang arus perdana memetakan dengan boleh dipercayai.",
+  ta: "இந்த ஆறு இலக்கு திறமைகள் முழுமையானவை அல்ல — பல முக்கிய பின்னணிகள் நம்பகமாக மேப் ஆகும் இடங்கள்.",
 };
 
 /* ============================ DEEP-DIVE 1 — LION DANCE ============================ */
@@ -1194,77 +1255,96 @@ export function UnderRecruitedPathsPageBody() {
             {pick(TRANSFER_TITLE, locale)}
           </h2>
           <p className="mt-3 text-[15px] leading-relaxed text-slate-600">{pick(TRANSFER_INTRO, locale)}</p>
-          <div className="mt-6 space-y-3">
-            {TRANSFER_ROWS.map((row, i) => (
-              <div key={i} className="rounded-xl border border-slate-200/80 bg-white p-5 shadow-soft">
-                <div className="flex flex-wrap items-baseline gap-2">
-                  <span className="font-display text-[15px] font-bold text-intellectual">
-                    {pick(row.from, locale)}
-                  </span>
-                  <ArrowRight className="h-4 w-4 text-champagne-dark" aria-hidden />
-                  <span className="font-display text-[15px] font-bold text-intellectual">
-                    {pick(row.to, locale)}
-                  </span>
-                  <span
-                    className={`ml-auto rounded-full px-2.5 py-0.5 text-[10.5px] font-bold tracking-[0.06em] normal-case ${
-                      row.strength === "strong"
-                        ? "bg-intellectual text-white"
-                        : row.strength === "good"
-                        ? "bg-champagne text-intellectual-dark"
-                        : "bg-slate-200 text-slate-700"
-                    }`}
-                  >
-                    {row.strength === "strong"
-                      ? locale === "zh"
-                        ? "强重合"
-                        : locale === "ms"
-                        ? "Pertindihan kuat"
-                        : locale === "ta"
-                        ? "வலுவான பொருத்தம்"
-                        : "Strong overlap"
-                      : row.strength === "good"
-                      ? locale === "zh"
-                        ? "良好重合"
-                        : locale === "ms"
-                        ? "Pertindihan baik"
-                        : locale === "ta"
-                        ? "நல்ல பொருத்தம்"
-                        : "Good overlap"
-                      : locale === "zh"
-                      ? "部分重合"
+          <div className="mt-6 space-y-5">
+            {TRANSFER_TARGETS.map((t, i) => {
+              const Icon = t.icon;
+              return (
+                <div key={i} className="rounded-xl border border-slate-200/80 bg-white p-5 shadow-soft">
+                  {/* Target header */}
+                  <div className="flex items-center gap-3 border-b border-slate-200/80 pb-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-champagne-subtle">
+                      <Icon className="h-5 w-5 text-champagne-dark" aria-hidden />
+                    </div>
+                    <h3
+                      style={{ textTransform: "none" }}
+                      className="font-display text-[16px] font-bold leading-snug text-intellectual"
+                    >
+                      {pick(t.target, locale)}
+                    </h3>
+                  </div>
+
+                  {/* Sources list */}
+                  <p className="mt-4 text-[12px] font-bold tracking-[0.10em] text-champagne-dark normal-case">
+                    {locale === "zh"
+                      ? "孩子从这些背景转过来"
                       : locale === "ms"
-                      ? "Sebahagian"
+                      ? "Anak boleh datang dari latar belakang ini"
                       : locale === "ta"
-                      ? "ஓரளவு"
-                      : "Partial overlap"}
-                  </span>
+                      ? "குழந்தை வரக்கூடிய பின்னணிகள்"
+                      : "Mainstream backgrounds that map here"}
+                  </p>
+                  <div className="mt-2 space-y-3">
+                    {t.sources.map((s, j) => (
+                      <div key={j} className="rounded-lg bg-surface-warm p-3">
+                        <div className="flex flex-wrap items-baseline gap-2">
+                          <span className="font-display text-[13.5px] font-bold text-intellectual">
+                            {pick(s.from, locale)}
+                          </span>
+                          <span
+                            className={`ml-auto rounded-full px-2 py-0.5 text-[10px] font-bold tracking-[0.06em] normal-case ${
+                              s.strength === "strong"
+                                ? "bg-intellectual text-white"
+                                : s.strength === "good"
+                                ? "bg-champagne text-intellectual-dark"
+                                : "bg-slate-200 text-slate-700"
+                            }`}
+                          >
+                            {s.strength === "strong"
+                              ? locale === "zh"
+                                ? "强重合"
+                                : locale === "ms"
+                                ? "Kuat"
+                                : locale === "ta"
+                                ? "வலுவான"
+                                : "Strong overlap"
+                              : s.strength === "good"
+                              ? locale === "zh"
+                                ? "良好"
+                                : locale === "ms"
+                                ? "Baik"
+                                : locale === "ta"
+                                ? "நல்ல"
+                                : "Good overlap"
+                              : locale === "zh"
+                              ? "部分"
+                              : locale === "ms"
+                              ? "Sebahagian"
+                              : locale === "ta"
+                              ? "ஓரளவு"
+                              : "Partial overlap"}
+                          </span>
+                        </div>
+                        <p className="mt-1.5 text-[12.5px] leading-relaxed text-slate-600">{pick(s.why, locale)}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Common gap */}
+                  <p className="mt-4 rounded-md bg-intellectual/5 p-3 text-[12.5px] leading-relaxed text-slate-700">
+                    <span className="font-semibold text-intellectual">
+                      {locale === "zh"
+                        ? "无论从哪条转 · 还要建立："
+                        : locale === "ms"
+                        ? "Tidak kira dari mana, masih perlu bina: "
+                        : locale === "ta"
+                        ? "எங்கிருந்து வந்தாலும் இன்னும் தேவை: "
+                        : "Regardless of source, you still need: "}
+                    </span>
+                    {pick(t.needs, locale)}
+                  </p>
                 </div>
-                <p className="mt-3 text-[13px] leading-relaxed text-slate-600">
-                  <span className="font-semibold text-intellectual">
-                    {locale === "zh"
-                      ? "可迁移的底子："
-                      : locale === "ms"
-                      ? "Asas boleh dipindahkan: "
-                      : locale === "ta"
-                      ? "மாற்றக்கூடிய அடிப்படை: "
-                      : "Carries over: "}
-                  </span>
-                  {pick(row.carries, locale)}
-                </p>
-                <p className="mt-2 text-[13px] leading-relaxed text-slate-600">
-                  <span className="font-semibold text-intellectual">
-                    {locale === "zh"
-                      ? "新需要建立的："
-                      : locale === "ms"
-                      ? "Perlu dibina baharu: "
-                      : locale === "ta"
-                      ? "புதியதாக கட்டமைக்க: "
-                      : "Needs new: "}
-                  </span>
-                  {pick(row.needs, locale)}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
           <p className="mt-5 text-[12.5px] leading-relaxed text-slate-500">{pick(TRANSFER_NOTE, locale)}</p>
         </section>
