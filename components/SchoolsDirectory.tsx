@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ExternalLink, GraduationCap, Search } from "lucide-react";
+import { BookOpen, ExternalLink, GraduationCap, Search } from "lucide-react";
+import Link from "next/link";
 import { GlossaryTooltip } from "@/components/GlossaryTooltip";
 import { GLOSSARY, type GlossaryTerm } from "@/src/data/glossary";
 import { SchoolLogo } from "@/components/SchoolLogo";
@@ -252,7 +253,7 @@ function FilterBar({ filters, onChange, total, shown }: {
 
 /* ── school card ─────────────────────────────────────────────────── */
 
-function SchoolCard({ entry }: { entry: SchoolDirectoryEntry }) {
+function SchoolCard({ entry, guideSlug }: { entry: SchoolDirectoryEntry; guideSlug?: string }) {
   const { t } = useLanguage();
   const cop = primaryCop(entry);
 
@@ -378,26 +379,39 @@ function SchoolCard({ entry }: { entry: SchoolDirectoryEntry }) {
       </div>
 
       {/* Footer links */}
-      <div className="mt-auto flex gap-2 border-t border-[#f0ece5] px-4 py-3">
-        <a
-          href={entry.dsaUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-intellectual px-3 py-2 text-[0.8125rem] font-semibold text-white transition hover:bg-intellectual-light"
-        >
-          <GraduationCap className="h-3.5 w-3.5 shrink-0" aria-hidden />
-          {t.schoolsDsaLink}
-          <ExternalLink className="h-3 w-3 shrink-0 opacity-60 transition group-hover:opacity-100" aria-hidden />
-        </a>
-        <a
-          href={entry.officialWebsite}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-[#e3ded5] bg-white px-3 py-2 text-[0.8125rem] font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-surface"
-        >
-          {t.schoolsWebsite}
-          <ExternalLink className="h-3 w-3 shrink-0 opacity-40 transition group-hover:opacity-70" aria-hidden />
-        </a>
+      <div className="mt-auto border-t border-[#f0ece5]">
+        {guideSlug && (
+          <div className="px-4 pt-3">
+            <Link
+              href={`/schools/${guideSlug}`}
+              className="group flex w-full items-center justify-center gap-1.5 rounded-lg border border-champagne/30 bg-champagne/8 px-3 py-2 text-[0.8125rem] font-semibold text-champagne-dark transition hover:bg-champagne/15"
+            >
+              <BookOpen className="h-3.5 w-3.5 shrink-0" aria-hidden />
+              Read Parent Guide →
+            </Link>
+          </div>
+        )}
+        <div className="flex gap-2 px-4 py-3">
+          <a
+            href={entry.dsaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-intellectual px-3 py-2 text-[0.8125rem] font-semibold text-white transition hover:bg-intellectual-light"
+          >
+            <GraduationCap className="h-3.5 w-3.5 shrink-0" aria-hidden />
+            {t.schoolsDsaLink}
+            <ExternalLink className="h-3 w-3 shrink-0 opacity-60 transition group-hover:opacity-100" aria-hidden />
+          </a>
+          <a
+            href={entry.officialWebsite}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-[#e3ded5] bg-white px-3 py-2 text-[0.8125rem] font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-surface"
+          >
+            {t.schoolsWebsite}
+            <ExternalLink className="h-3 w-3 shrink-0 opacity-40 transition group-hover:opacity-70" aria-hidden />
+          </a>
+        </div>
       </div>
     </article>
   );
@@ -405,9 +419,16 @@ function SchoolCard({ entry }: { entry: SchoolDirectoryEntry }) {
 
 /* ── main export ─────────────────────────────────────────────────── */
 
-export function SchoolsDirectory() {
+export function SchoolsDirectory({ publishedSlugs = [] }: { publishedSlugs?: string[] }) {
   const { locale, t } = useLanguage();
   const [filters, setFilters] = useState<FilterState>(INIT);
+  const publishedSet = useMemo(() => new Set(publishedSlugs), [publishedSlugs]);
+
+  function getGuideSlug(id: string): string | undefined {
+    if (publishedSet.has(id)) return id;
+    if (publishedSet.has(id + "-secondary")) return id + "-secondary";
+    return undefined;
+  }
 
   const filtered = useMemo(
     () => SCHOOL_DIRECTORY.filter((e) => matches(e, filters)),
@@ -458,7 +479,7 @@ export function SchoolsDirectory() {
       ) : (
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((entry) => (
-            <SchoolCard key={`${entry.id}-${entry.nameEn}`} entry={entry} />
+            <SchoolCard key={`${entry.id}-${entry.nameEn}`} entry={entry} guideSlug={getGuideSlug(entry.id)} />
           ))}
         </div>
       )}

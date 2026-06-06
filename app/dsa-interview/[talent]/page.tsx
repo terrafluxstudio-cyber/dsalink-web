@@ -5,6 +5,7 @@ import { DSALINK_LOCALE_KEY } from "@/lib/constants";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { InterviewTalentPageBody } from "@/components/InterviewTalentPageBody";
 import { getTalentPage, TALENT_SLUGS } from "@/lib/talentPages";
+import { getAllPublishedSchoolSlugs } from "@/lib/schoolPages";
 
 type Params = Promise<{ talent: string }>;
 
@@ -53,5 +54,6 @@ export default async function TalentInterviewPage({ params }: { params: Params }
   const { talent: slug } = await params;
   const talent = getTalentPage(slug);
   if (!talent) notFound();
-  return <InterviewTalentPageBody talent={talent} />;
+  const publishedSlugs = getAllPublishedSchoolSlugs();
+  return <InterviewTalentPageBody talent={talent} publishedSlugs={publishedSlugs} />;
 }

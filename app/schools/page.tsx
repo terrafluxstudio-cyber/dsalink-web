@@ -6,6 +6,9 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
 import { buildSchoolDirectoryStructuredData } from "@/lib/seo";
+import { getAllPublishedSchoolSlugs } from "@/lib/schoolPages";
+
+export const revalidate = 21600;
 
 export const metadata: Metadata = {
   title: { absolute: "School Directory 2026 | 147 Singapore Secondary Schools | DSALink" },
@@ -32,6 +35,7 @@ export const metadata: Metadata = {
 
 export default function SchoolsPage() {
   const jsonLd = buildSchoolDirectoryStructuredData();
+  const publishedSlugs = getAllPublishedSchoolSlugs();
   return (
     <>
       <script
@@ -42,7 +46,7 @@ export default function SchoolsPage() {
       <main>
         <SchoolsPageHeader />
         <div className="bg-surface">
-          <SchoolsDirectory />
+          <SchoolsDirectory publishedSlugs={publishedSlugs} />
         </div>
       </main>
       <StaticPageRelatedCards page="schools" />

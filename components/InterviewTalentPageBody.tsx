@@ -1,6 +1,8 @@
 "use client";
 
+import { useMemo } from "react";
 import Link from "next/link";
+import { schoolNameToSlug } from "@/lib/schoolUtils";
 import {
   ArrowRight,
   ArrowLeft,
@@ -562,14 +564,31 @@ function PlaceholderBody({ talent }: { talent: TalentPage }) {
               {pick(schoolsHint, locale)}
             </p>
             <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-              {talent.sampleSchools.map((school) => (
-                <li
-                  key={school}
-                  className="rounded-lg border border-intellectual/10 bg-surface px-3 py-2 text-sm text-intellectual"
-                >
-                  {school}
-                </li>
-              ))}
+              {talent.sampleSchools.map((school) => {
+                const base = schoolNameToSlug(school);
+                const guideSlug = schoolGuideSet.has(base)
+                  ? base
+                  : schoolGuideSet.has(base + "-secondary")
+                  ? base + "-secondary"
+                  : null;
+                return (
+                  <li
+                    key={school}
+                    className="rounded-lg border border-intellectual/10 bg-surface px-3 py-2 text-sm text-intellectual"
+                  >
+                    {guideSlug ? (
+                      <Link
+                        href={`/schools/${guideSlug}`}
+                        className="font-medium text-champagne-dark hover:underline"
+                      >
+                        {school}
+                      </Link>
+                    ) : (
+                      school
+                    )}
+                  </li>
+                );
+              })}
             </ul>
             <Link
               href="/dsa-finder"
@@ -587,7 +606,14 @@ function PlaceholderBody({ talent }: { talent: TalentPage }) {
 
 /* ===== Main body ===== */
 
-export function InterviewTalentPageBody({ talent }: { talent: TalentPage }) {
+export function InterviewTalentPageBody({
+  talent,
+  publishedSlugs = [],
+}: {
+  talent: TalentPage;
+  publishedSlugs?: string[];
+}) {
+  const schoolGuideSet = useMemo(() => new Set(publishedSlugs), [publishedSlugs]);
   const { locale } = useLanguage();
   const isRich = Boolean(talent.rich);
 

@@ -70,3 +70,11 @@ export function getAllPublishedSchools(): SchoolPage[] {
       (p): p is SchoolPage => p !== null && p.status === "published"
     );
 }
+
+/** Returns slugs of all published school guide pages. */
+export function getAllPublishedSchoolSlugs(): string[] {
+  return getAllPublishedSchools().map((s) => s.slug);
+}
+
+// Re-export client-safe utils for convenience
+export { schoolNameToSlug, resolveGuideSlug } from "@/lib/schoolUtils";
