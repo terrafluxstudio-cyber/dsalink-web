@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/seo";
 import { TALENT_SLUGS } from "@/lib/talentPages";
+import { getAllPublishedSchools } from "@/lib/schoolPages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl(); // https://dsalink.sg — no trailing slash
@@ -11,6 +12,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.7,
+  }));
+
+  const schoolEntries: MetadataRoute.Sitemap = getAllPublishedSchools().map((school) => ({
+    url: `${base}/schools/${school.slug}`,
+    lastModified: new Date(school.lastUpdated),
+    changeFrequency: "monthly" as const,
+    priority: 0.82,
   }));
 
   // Only list canonical URLs. Redirecting aliases (/dsa, /scores) are excluded.
@@ -130,5 +138,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     ...talentEntries,
+    ...schoolEntries,
   ];
 }
