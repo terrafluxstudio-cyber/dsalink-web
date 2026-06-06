@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import Link from "next/link";
-import { schoolNameToSlug } from "@/lib/schoolUtils";
+import { resolveGuideSlug } from "@/lib/schoolUtils";
 import {
   ArrowRight,
   ArrowLeft,
@@ -503,8 +503,15 @@ function SprintAdviceSection({
 
 /* ===== Placeholder body (used when talent.rich is undefined) ===== */
 
-function PlaceholderBody({ talent }: { talent: TalentPage }) {
+function PlaceholderBody({
+  talent,
+  publishedSlugs = [],
+}: {
+  talent: TalentPage;
+  publishedSlugs?: string[];
+}) {
   const { locale } = useLanguage();
+  const schoolGuideSet = useMemo(() => new Set(publishedSlugs), [publishedSlugs]);
   const placeholderTitle: LocaleStr = {
     en: "Why this page exists",
     zh: "为什么有这页",
@@ -565,12 +572,7 @@ function PlaceholderBody({ talent }: { talent: TalentPage }) {
             </p>
             <ul className="mt-4 grid gap-2 sm:grid-cols-2">
               {talent.sampleSchools.map((school) => {
-                const base = schoolNameToSlug(school);
-                const guideSlug = schoolGuideSet.has(base)
-                  ? base
-                  : schoolGuideSet.has(base + "-secondary")
-                  ? base + "-secondary"
-                  : null;
+                const guideSlug = resolveGuideSlug(school, schoolGuideSet);
                 return (
                   <li
                     key={school}
@@ -613,7 +615,6 @@ export function InterviewTalentPageBody({
   talent: TalentPage;
   publishedSlugs?: string[];
 }) {
-  const schoolGuideSet = useMemo(() => new Set(publishedSlugs), [publishedSlugs]);
   const { locale } = useLanguage();
   const isRich = Boolean(talent.rich);
 
@@ -759,7 +760,7 @@ export function InterviewTalentPageBody({
             <SprintAdviceSection rich={talent.rich} locale={locale} />
           </>
         ) : (
-          <PlaceholderBody talent={talent} />
+          <PlaceholderBody talent={talent} publishedSlugs={publishedSlugs} />
         )}
 
         {/* Subscribe CTA */}
