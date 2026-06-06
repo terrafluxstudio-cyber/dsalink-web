@@ -36,3 +36,6 @@ yarn-error.log*
 
 # build logs
 .build-log*.txt
+
+# temp: root-owned corrupted node_modules moved aside, delete with sudo
+node_modules_BROKEN_ROOT_delete_later/
