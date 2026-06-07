@@ -1,4 +1,5 @@
 # DSALink 项目协作准则
+> 🚧 **边界（强制）：只管本项目。** 不读、不写、不移动其他项目 / 桌面 / 大总管 的任何文件。**绝不碰桌面的 `我的项目总览.html`**（用户的进度表，归用户管，别顺手整理挪走它）。
 
 > 本文件由 Claude Code 自动加载。每个 session 启动后无需重复交代背景，规则即时生效。
 
@@ -11,6 +12,7 @@
 > **需求分流：** 用户说需求时，先判断复杂度。简单/明确的改动（调样式、改文案、加翻译）直接告诉用户"这个直接告诉 Cursor 就行"，不需要经过 Claude。只有跨文件、有架构影响、需要内容判断的才走完整流程。
 > **Cursor task 标准结尾：** 每个 task 文件必须包含以下完成步骤：`git add -A && git commit -m "简述改动"`。
 > **验证方式：** 用户说"cursor跑完了"后，Claude 运行 `git log --oneline -3` 和 `git diff HEAD~1 --stat` 查看实际改动，不靠截图或手动读文件。
+> **部署 = commit + push 一起做（2026-06-07 用户定）：** 每次部署必须把本地改动 `git add + commit` 后 **`git push origin main`** 一并完成——push 即触发 Vercel 生产部署。不留未 push 的 commit（远程 git 是源头，不能落后于生产）。若用了 `vercel --prod`，事后也要把 commit push 上去同步。
 
 > **自动 compact：** 每次 session 启动后，立即用 CronCreate 设置每5小时自动 `/compact`（cron: `17 */5 * * *`，recurring: true）。
 > **自动整理记忆：** 每次 session 启动后，同时用 CronCreate 设置每周一 10:23 自动 `/anthropic-skills:consolidate-memory`（cron: `23 10 * * 1`，recurring: true）。
