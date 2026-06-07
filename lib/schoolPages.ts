@@ -41,6 +41,55 @@ export type SchoolPage = SchoolPageMeta & {
 
 const SCHOOLS_DIR = path.join(process.cwd(), "content", "schools");
 
+// ─── Multilingual support ────────────────────────────────────────────────────
+
+/** Languages that have translated content (EN lives at root, not here). */
+export const TRANSLATED_LANGS = ["zh", "ms", "ta"] as const;
+export type TranslatedLang = (typeof TRANSLATED_LANGS)[number];
+
+function translatedDir(lang: TranslatedLang) {
+  return path.join(SCHOOLS_DIR, lang);
+}
+
+/**
+ * Load a translated school page for a given language.
+ * Falls back to null if the file doesn't exist yet.
+ */
+export function getTranslatedSchool(
+  slug: string,
+  lang: TranslatedLang,
+): SchoolPage | null {
+  try {
+    const filePath = path.join(translatedDir(lang), `${slug}.mdx`);
+    if (!fs.existsSync(filePath)) return null;
+    const raw = fs.readFileSync(filePath, "utf-8");
+    const { data, content } = matter(raw);
+    return { ...(data as SchoolPageMeta), slug, content };
+  } catch {
+    return null;
+  }
+}
+
+/** All slugs that have a translation for a given language (for sitemap/SSG). */
+export function getAllTranslatedSchoolSlugs(lang: TranslatedLang): string[] {
+  const dir = translatedDir(lang);
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".mdx") && !f.startsWith("_") && !f.startsWith("."))
+    .map((f) => f.replace(".mdx", ""));
+}
+
+/**
+ * Which translated languages have a file for this slug?
+ * Used to build hreflang alternates and lang-switcher UI.
+ */
+export function getAvailableTranslations(slug: string): TranslatedLang[] {
+  return TRANSLATED_LANGS.filter((lang) =>
+    fs.existsSync(path.join(translatedDir(lang), `${slug}.mdx`)),
+  );
+}
+
 // ─── Readers ────────────────────────────────────────────────────────────────
 
 export function getSchoolBySlug(slug: string): SchoolPage | null {

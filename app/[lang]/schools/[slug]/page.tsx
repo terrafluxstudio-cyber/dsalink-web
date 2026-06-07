@@ -1,3 +1,13 @@
+/**
+ * Translated school pages — /[lang]/schools/[slug]
+ *
+ * Handles ZH / MS / TA translations.
+ * EN lives at /schools/[slug] (unchanged for SEO continuity).
+ *
+ * Content lives in content/schools/[lang]/[slug].mdx.
+ * Returns notFound() if the translation file doesn't exist yet.
+ */
+
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -7,28 +17,47 @@ import { MapPin, BookOpen, GraduationCap, ExternalLink } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
-import { getSchoolBySlug, getAllPublishedSchools, getAvailableTranslations } from "@/lib/schoolPages";
 import { SchoolLangSwitcher } from "@/components/SchoolLangSwitcher";
+import {
+  getTranslatedSchool,
+  getSchoolBySlug,
+  getAllTranslatedSchoolSlugs,
+  getAvailableTranslations,
+  TRANSLATED_LANGS,
+  type TranslatedLang,
+} from "@/lib/schoolPages";
 import { getSiteUrl } from "@/lib/seo";
 
-type Props = { params: Promise<{ slug: string }> };
+type Props = { params: Promise<{ lang: string; slug: string }> };
 
 export const revalidate = 21600;
 export const dynamicParams = true;
 
+function isTranslatedLang(v: string): v is TranslatedLang {
+  return (TRANSLATED_LANGS as readonly string[]).includes(v);
+}
 
 export async function generateStaticParams() {
-  return getAllPublishedSchools().map((s) => ({ slug: s.slug }));
+  const pairs: { lang: string; slug: string }[] = [];
+  for (const lang of TRANSLATED_LANGS) {
+    for (const slug of getAllTranslatedSchoolSlugs(lang)) {
+      pairs.push({ lang, slug });
+    }
+  }
+  return pairs;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const school = getSchoolBySlug(slug);
+  const { lang, slug } = await params;
+  if (!isTranslatedLang(lang)) return {};
+
+  const school = getTranslatedSchool(slug, lang);
   if (!school || school.status !== "published") return {};
 
-  const canonical = `/schools/${slug}`;
   const siteUrl = getSiteUrl();
+  const canonical = `/${lang}/schools/${slug}`;
   const translations = getAvailableTranslations(slug);
+
   const hreflangAlternates: Record<string, string> = {
     "en-SG": `${siteUrl}/schools/${slug}`,
     "x-default": `${siteUrl}/schools/${slug}`,
@@ -56,17 +85,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function SchoolPage({ params }: Props) {
-  const { slug } = await params;
-  const school = getSchoolBySlug(slug);
+export default async function TranslatedSchoolPage({ params }: Props) {
+  const { lang, slug } = await params;
 
-  if (!school || school.status !== "published") {
-    notFound();
-  }
+  // Guard: only serve zh / ms / ta
+  if (!isTranslatedLang(lang)) notFound();
+
+  const school = getTranslatedSchool(slug, lang);
+
+  // If no translation exists yet → 404 (translation coming later)
+  if (!school || school.status !== "published") notFound();
+
+  // EN school must exist for sidebar data (title/address is from translated file)
+  const enSchool = getSchoolBySlug(slug);
+  const availableTranslations = getAvailableTranslations(slug);
 
   const siteUrl = getSiteUrl();
-  const canonical = `${siteUrl}/schools/${slug}`;
-  const availableTranslations = getAvailableTranslations(slug);
+  const canonical = `${siteUrl}/${lang}/schools/${slug}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -77,6 +112,7 @@ export default async function SchoolPage({ params }: Props) {
         headline: school.title,
         description: school.description,
         url: canonical,
+        inLanguage: lang === "zh" ? "zh-Hans-SG" : lang === "ms" ? "ms-SG" : "ta-SG",
         publisher: { "@type": "Organization", name: "DSALink", url: siteUrl },
       },
       {
@@ -89,6 +125,16 @@ export default async function SchoolPage({ params }: Props) {
         ],
       },
     ],
+  };
+
+  // Use translated data where available, fall back to EN for factual sidebar fields
+  const sidebar = {
+    academicTracks: school.academicTracks ?? enSchool?.academicTracks ?? [],
+    nearestMrt: school.nearestMrt ?? enSchool?.nearestMrt ?? "",
+    address: school.address ?? enSchool?.address ?? "",
+    officialWebsite: school.officialWebsite ?? enSchool?.officialWebsite ?? "",
+    moeUrl: school.moeUrl ?? enSchool?.moeUrl ?? "",
+    dsaAdmissionsUrl: school.dsaAdmissionsUrl ?? enSchool?.dsaAdmissionsUrl ?? "",
   };
 
   return (
@@ -109,7 +155,7 @@ export default async function SchoolPage({ params }: Props) {
               </Link>
               <SchoolLangSwitcher
                 slug={slug}
-                currentLang="en"
+                currentLang={lang}
                 availableTranslations={availableTranslations}
               />
             </div>
@@ -172,7 +218,7 @@ export default async function SchoolPage({ params }: Props) {
                 <div className="mb-4">
                   <p className="mb-1.5 text-[11px] font-semibold text-intellectual-muted/70">Academic Track</p>
                   <div className="flex flex-wrap gap-1.5">
-                    {school.academicTracks.map((t) => (
+                    {sidebar.academicTracks.map((t) => (
                       <span
                         key={t}
                         className="rounded-md bg-surface px-2 py-0.5 text-[11px] font-medium text-intellectual"
@@ -188,20 +234,20 @@ export default async function SchoolPage({ params }: Props) {
                   <p className="mb-1 text-[11px] font-semibold text-intellectual-muted/70">Nearest MRT</p>
                   <div className="flex items-start gap-1.5 text-sm text-intellectual-muted">
                     <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-champagne-dark" aria-hidden />
-                    <span>{school.nearestMrt}</span>
+                    <span>{sidebar.nearestMrt}</span>
                   </div>
                 </div>
 
                 {/* Address */}
                 <div className="mb-5 border-b border-champagne/15 pb-5">
                   <p className="mb-1 text-[11px] font-semibold text-intellectual-muted/70">Address</p>
-                  <p className="text-[0.8125rem] leading-snug text-intellectual-muted">{school.address}</p>
+                  <p className="text-[0.8125rem] leading-snug text-intellectual-muted">{sidebar.address}</p>
                 </div>
 
                 {/* Links */}
                 <div className="flex flex-col gap-2">
                   <a
-                    href={school.officialWebsite}
+                    href={sidebar.officialWebsite}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex items-center gap-2 rounded-lg border border-intellectual/15 px-3 py-2 text-[0.8125rem] font-semibold text-intellectual transition hover:border-intellectual/30 hover:bg-surface"
@@ -211,7 +257,7 @@ export default async function SchoolPage({ params }: Props) {
                     <ExternalLink className="ml-auto h-3 w-3 text-intellectual-muted/50 transition group-hover:text-intellectual-muted" aria-hidden />
                   </a>
                   <a
-                    href={school.moeUrl}
+                    href={sidebar.moeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex items-center gap-2 rounded-lg border border-intellectual/15 px-3 py-2 text-[0.8125rem] font-semibold text-intellectual transition hover:border-intellectual/30 hover:bg-surface"
@@ -220,9 +266,9 @@ export default async function SchoolPage({ params }: Props) {
                     MOE SchoolFinder
                     <ExternalLink className="ml-auto h-3 w-3 text-intellectual-muted/50 transition group-hover:text-intellectual-muted" aria-hidden />
                   </a>
-                  {school.dsaAdmissionsUrl && (
+                  {sidebar.dsaAdmissionsUrl && (
                     <a
-                      href={school.dsaAdmissionsUrl}
+                      href={sidebar.dsaAdmissionsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex items-center gap-2 rounded-lg bg-champagne px-3 py-2 text-[0.8125rem] font-semibold text-white transition hover:opacity-90"
