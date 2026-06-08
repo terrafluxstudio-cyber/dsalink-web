@@ -159,7 +159,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "anglo-chinese-school-barker-road",
     nameEn: "Anglo-Chinese School (Barker Road)",
-    nameZh: "英华中学（巴德路）",
+    nameZh: "英华学校（巴克路）",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/anglo-chinese-school-barker-road",
     officialWebsite: "http://www.acsbr.moe.edu.sg",
     address: "60 Barker Road, Singapore 309919",
@@ -185,7 +185,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "anglo-chinese-school-independent",
     nameEn: "Anglo-Chinese School (Independent)",
-    nameZh: "英华中学（自主）",
+    nameZh: "英华自主中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/anglo-chinese-school-independent-secondary",
     officialWebsite: "https://www.acsindep.moe.edu.sg",
     address: "121 Dover Road, Singapore 139650",
@@ -284,7 +284,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "beatty-secondary-school",
     nameEn: "Beatty Secondary School",
-    nameZh: "培德中学",
+    nameZh: "博理中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/beatty-secondary-school",
     officialWebsite: "http://www.beattysec.moe.edu.sg",
     address: "1 Toa Payoh North, Singapore 318990",
@@ -306,7 +306,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "bedok-green-secondary-school",
     nameEn: "Bedok Green Secondary School",
-    nameZh: "育青中学",
+    nameZh: "平仪中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/bedok-green-secondary-school",
     officialWebsite: "http://www.bedokgreensec.moe.edu.sg",
     address: "360 Bedok North Ave 3, Singapore 469722",
@@ -487,7 +487,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "bukit-merah-secondary-school",
     nameEn: "Bukit Merah Secondary School",
-    nameZh: "红山中学",
+    nameZh: "达善中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/bukit-merah-secondary-school",
     officialWebsite: "http://www.bukitmerahsec.moe.edu.sg",
     address: "10 Lengkok Bahru, Singapore 159050",
@@ -720,7 +720,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "chij-st-josephs-convent",
     nameEn: "CHIJ St Joseph's Convent",
-    nameZh: "圣婴女子中学（圣若瑟）",
+    nameZh: "圣若瑟修院学校",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/chij-st-josephs-convent",
     officialWebsite: "http://www.chijstjosephsconvent.moe.edu.sg",
     address: "62 Sengkang East Way, Singapore 548595",
@@ -774,7 +774,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "chij-st-theresas-convent",
     nameEn: "CHIJ St Theresa's Convent",
-    nameZh: "圣婴德兰女校",
+    nameZh: "圣婴德兰女中学校",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/chij-st-theresas-convent",
     officialWebsite: "http://www.chijsttheresasconvent.moe.edu.sg",
     address: "160 Lower Delta Road, Singapore 099138",
@@ -823,7 +823,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "chua-chu-kang-secondary-school",
     nameEn: "Chua Chu Kang Secondary School",
-    nameZh: "蔡厝港中学",
+    nameZh: "德惠中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/chua-chu-kang-secondary-school",
     officialWebsite: "http://www.chuachukangsec.moe.edu.sg",
     address: "31 Teck Whye Crescent, Singapore 688848",
@@ -845,7 +845,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "chung-cheng-high-school-main",
     nameEn: "Chung Cheng High School (Main)",
-    nameZh: "中正中学（主校）",
+    nameZh: "中正中学（总校）",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/chung-cheng-high-school-main",
     officialWebsite: "http://www.chungchenghighmain.moe.edu.sg",
     address: "50 Goodman Road, Singapore 439012",
@@ -1326,7 +1326,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "greenridge-secondary-school",
     nameEn: "Greenridge Secondary School",
-    nameZh: "群立中学",
+    nameZh: "励进中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/greenridge-secondary-school",
     officialWebsite: "http://www.greenridgesec.moe.edu.sg",
     address: "31 Gangsa Road, Singapore 678972",
@@ -1371,7 +1371,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "hai-sing-catholic-school",
     nameEn: "Hai Sing Catholic School",
-    nameZh: "海星天主教",
+    nameZh: "海星天主教中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/hai-sing-catholic-school",
     officialWebsite: "http://www.haisingcatholic.moe.edu.sg",
     address: "9 Pasir Ris Drive 6, Singapore 519421",
@@ -1583,7 +1583,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "jurongville-secondary-school",
     nameEn: "Jurongville Secondary School",
-    nameZh: "裕廊景中学",
+    nameZh: "丰嘉中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/jurongville-secondary-school",
     officialWebsite: "http://www.jurongvillesec.moe.edu.sg",
     address: "202 Jurong East Avenue 1, Singapore 609790",
@@ -1773,7 +1773,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "marsiling-secondary-school",
     nameEn: "Marsiling Secondary School",
-    nameZh: "马西岭中学",
+    nameZh: "士林中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/marsiling-secondary-school",
     officialWebsite: "http://www.marsilingsec.moe.edu.sg",
     address: "12 Marsiling Road, Singapore 739110",
@@ -1841,7 +1841,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "methodist-girls-school",
     nameEn: "Methodist Girls' School (Secondary)",
-    nameZh: "美以美中学",
+    nameZh: "美以美女校",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/methodist-girls-school-secondary",
     officialWebsite: "http://www.mgs.moe.edu.sg",
     address: "11 Blackmore Drive, Singapore 599986",
@@ -1949,7 +1949,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "nanyang-girls-high-school",
     nameEn: "Nanyang Girls' High School",
-    nameZh: "南洋女子中学",
+    nameZh: "南洋女子中学校",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/nanyang-girls-high-school",
     officialWebsite: "https://www.nygh.edu.sg",
     address: "2 Linden Drive, Singapore 288683",
@@ -2124,7 +2124,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "northland-secondary-school",
     nameEn: "Northland Secondary School",
-    nameZh: "德景中学",
+    nameZh: "德贤中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/northland-secondary-school",
     officialWebsite: "http://www.northlandsec.moe.edu.sg",
     address: "3 Yishun Street 22, Singapore 768578",
@@ -2170,7 +2170,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "nus-high-school-of-mathematics-and-science",
     nameEn: "NUS High School of Mathematics and Science",
-    nameZh: "国大数理中学",
+    nameZh: "新加坡国立大学附属数理中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/nus-high-school-of-mathematics-and-science",
     officialWebsite: "https://www.nushigh.edu.sg",
     address: "20 Clementi Avenue 1, Singapore 129957",
@@ -2285,7 +2285,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "paya-lebar-methodist-girls-school",
     nameEn: "Paya Lebar Methodist Girls' School (Secondary)",
-    nameZh: "巴耶利峇美以美女中",
+    nameZh: "巴耶利峇美以美女中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/paya-lebar-methodist-girls-school-secondary",
     officialWebsite: "http://www.plmgss.moe.edu.sg",
     address: "296 Lor Ah Soo, Singapore 536742",
@@ -2738,7 +2738,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "singapore-chinese-girls-school",
     nameEn: "Singapore Chinese Girls' School",
-    nameZh: "新加坡女子学校",
+    nameZh: "新加坡华侨女子中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/singapore-chinese-girls-school",
     officialWebsite: "http://www.scgs.moe.edu.sg",
     address: "190 Dunearn Road, Singapore 309437",
@@ -2858,7 +2858,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "st-anthonys-canossian-secondary-school",
     nameEn: "St Anthony's Canossian Secondary School",
-    nameZh: "圣安东尼女校（中学）",
+    nameZh: "圣安东尼女子中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/st-anthonys-canossian-secondary-school",
     officialWebsite: "https://stanthonyscanossiansec.moe.edu.sg",
     address: "1600 Bedok North Avenue 4, Singapore 469700",
@@ -2938,7 +2938,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "st-josephs-institution",
     nameEn: "St Joseph's Institution",
-    nameZh: "圣约瑟书院",
+    nameZh: "圣若瑟书院",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/st-josephs-institution-secondary",
     officialWebsite: "http://www.sji.edu.sg",
     address: "38 Malcolm Road, Singapore 308274",
@@ -2994,7 +2994,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "st-patricks-school",
     nameEn: "St Patrick's School",
-    nameZh: "圣伯特理中学",
+    nameZh: "圣伯特理中学校",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/st-patricks-school",
     officialWebsite: "http://www.stpatricks.moe.edu.sg",
     address: "490 East Coast Road, Singapore 429058",
@@ -3385,7 +3385,7 @@ export const SCHOOL_PROFILES: SchoolProfile[] = [
   {
     id: "yio-chu-kang-secondary-school",
     nameEn: "Yio Chu Kang Secondary School",
-    nameZh: "永康中学",
+    nameZh: "崇文中学",
     moeUrl: "https://www.moe.gov.sg/schoolfinder/schooldetail/yio-chu-kang-secondary-school",
     officialWebsite: "http://www.yiochukangsec.moe.edu.sg",
     address: "3063 Ang Mo Kio Avenue 5, Singapore 569868",

@@ -54,7 +54,7 @@ const SCHOOLS: SchoolTakeaway[] = [
   {
     id: "scgs",
     nameEn: "Singapore Chinese Girls' School",
-    nameZh: "新加坡女子学校",
+    nameZh: "新加坡华侨女子中学",
     nameShort: "SCGS",
     date: "16 May 2026",
     dateZh: "2026年5月16日",
@@ -112,7 +112,7 @@ const SCHOOLS: SchoolTakeaway[] = [
   {
     id: "nushigh",
     nameEn: "NUS High School of Maths and Science",
-    nameZh: "国大数理中学",
+    nameZh: "新加坡国立大学附属数理中学",
     nameShort: "NUS High",
     date: "16 May 2026",
     dateZh: "2026年5月16日",
@@ -266,7 +266,7 @@ const SCHOOLS: SchoolTakeaway[] = [
   {
     id: "plmgs",
     nameEn: "Paya Lebar Methodist Girls' School (Secondary)",
-    nameZh: "巴耶利峇美以美女中",
+    nameZh: "巴耶利峇美以美女中学",
     nameShort: "PLMGS",
     date: "9 May 2026",
     dateZh: "2026年5月9日",
@@ -395,7 +395,7 @@ const SCHOOLS: SchoolTakeaway[] = [
     aboutZh: [
       "1948年创立，位于碧山的仁爱女修会SAP女校",
       "联合IP网络（JIP）成员：IP学生完成四年后升读Eunoia初级学院",
-      "与公教中学（CHS）和新加坡女子学校（SCGS）同属同一JIP联合课程",
+      "与公教中学（CHS）和新加坡华侨女子中学（SCGS）同属同一JIP联合课程",
       "提供7个具体体育DSA项目——各SAP女校中最细化的体育名单",
       "双语才能方向：同时考查英文和华文的批判思维与演讲表达能力",
     ],
@@ -669,7 +669,7 @@ const SCHOOLS: SchoolTakeaway[] = [
   {
     id: "sji",
     nameEn: "St. Joseph's Institution",
-    nameZh: "圣约瑟书院",
+    nameZh: "圣若瑟书院",
     nameShort: "SJI",
     date: "23 May 2026",
     dateZh: "2026年5月23日",
@@ -705,7 +705,7 @@ const SCHOOLS: SchoolTakeaway[] = [
     keySignalEn:
       "SJI's STEM DSA splits into Coding, Robotics, and Programming & 3D Modelling — three portfolio-based tracks. International Chess and Sailing applicants skip sports trials (all others trial on 11 or 18 July). Shortlisted candidates face in-person interviews 15 July – 5 August. Choose IP (IB Diploma) or SEC (O-Level) upfront — no changing later.",
     keySignalZh:
-      "圣约瑟书院STEM DSA细分为编程、机器人、3D建模三条作品集路径。国际象棋与帆船申请者免于体育试训（其他项目试训在7月11日或18日）。入围者须于7月15日至8月5日参加现场面试。IP（IB文凭）与SEC（O水准）在报名时即须选定——之后不可更改。",
+      "圣若瑟书院STEM DSA细分为编程、机器人、3D建模三条作品集路径。国际象棋与帆船申请者免于体育试训（其他项目试训在7月11日或18日）。入围者须于7月15日至8月5日参加现场面试。IP（IB文凭）与SEC（O水准）在报名时即须选定——之后不可更改。",
     talentAreas: [
       "Coding",
       "Leadership",
@@ -793,7 +793,7 @@ const SCHOOLS: SchoolTakeaway[] = [
   {
     id: "sacss",
     nameEn: "St. Anthony's Canossian Secondary School",
-    nameZh: "圣安东尼女校（中学）",
+    nameZh: "圣安东尼女子中学",
     nameShort: "St. Anthony's Canossian",
     date: "23 May 2026",
     dateZh: "2026年5月23日",
@@ -827,7 +827,7 @@ const SCHOOLS: SchoolTakeaway[] = [
     keySignalEn:
       "SACSS has some of Singapore's most distinctive performing arts DSA areas: Angklung/Kulintang Ensemble, Guitar Ensemble, Percussion Ensemble, and Indian Dance. These are rare across all secondary schools — students with these specific talents have very few schools to apply to.",
     keySignalZh:
-      "圣安东尼女校提供全新加坡最具特色的表演艺术DSA方向之一：昂克隆/锣琴合奏、结他合奏、打击乐合奏、印度舞。这些项目在所有中学中极为少见——有这类才能的学生可选学校极少，这里是优先选项。",
+      "圣安东尼女子中学提供全新加坡最具特色的表演艺术DSA方向之一：昂克隆/锣琴合奏、结他合奏、打击乐合奏、印度舞。这些项目在所有中学中极为少见——有这类才能的学生可选学校极少，这里是优先选项。",
     talentAreas: [
       "Angklung/Kulintang Ensemble",
       "Choir",

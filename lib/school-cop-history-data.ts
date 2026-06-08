@@ -140,7 +140,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "beatty-secondary-school",
     nameEn: "Beatty Secondary School",
-    nameCn: "培德中学",
+    nameCn: "博理中学",
     region: "Central",
     gender: "coed",
     offersIp: false,
@@ -155,7 +155,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "bedok-green-secondary-school",
     nameEn: "Bedok Green Secondary School",
-    nameCn: "育青中学",
+    nameCn: "平仪中学",
     region: "East",
     gender: "coed",
     offersIp: false,
@@ -275,7 +275,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "bukit-merah-secondary-school",
     nameEn: "Bukit Merah Secondary School",
-    nameCn: "红山中学",
+    nameCn: "达善中学",
     region: "South",
     gender: "coed",
     offersIp: false,
@@ -410,7 +410,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "chij-st-josephs-convent",
     nameEn: "CHIJ St. Joseph's Convent",
-    nameCn: "圣婴女子中学（圣若瑟）",
+    nameCn: "圣若瑟修院学校",
     region: "North",
     gender: "girls",
     offersIp: false,
@@ -440,7 +440,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "chij-st-theresas-convent",
     nameEn: "CHIJ St. Theresa's Convent",
-    nameCn: "圣婴德兰女校",
+    nameCn: "圣婴德兰女中学校",
     region: "South",
     gender: "girls",
     offersIp: false,
@@ -470,7 +470,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "chua-chu-kang-secondary-school",
     nameEn: "Chua Chu Kang Secondary School",
-    nameCn: "蔡厝港中学",
+    nameCn: "德惠中学",
     region: "West",
     gender: "coed",
     offersIp: false,
@@ -500,7 +500,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "chung-cheng-high-school-yishun",
     nameEn: "Chung Cheng High School (Yishun)",
-    nameCn: "中正中学 (义顺）",
+    nameCn: "中正中学（义顺）",
     region: "North",
     gender: "coed",
     offersIp: false,
@@ -770,7 +770,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "greenridge-secondary-school",
     nameEn: "Greenridge Secondary School",
-    nameCn: "群立中学",
+    nameCn: "励进中学",
     region: "West",
     gender: "coed",
     offersIp: false,
@@ -800,7 +800,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "hai-sing-catholic-school",
     nameEn: "Hai Sing Catholic School",
-    nameCn: "海星天主教",
+    nameCn: "海星天主教中学",
     region: "East",
     gender: "coed",
     offersIp: false,
@@ -935,7 +935,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "jurongville-secondary-school",
     nameEn: "Jurongville Secondary School",
-    nameCn: "裕廊景中学",
+    nameCn: "丰嘉中学",
     region: "West",
     gender: "coed",
     offersIp: false,
@@ -1055,7 +1055,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "marsiling-secondary-school",
     nameEn: "Marsiling Secondary School",
-    nameCn: "马西岭中学",
+    nameCn: "士林中学",
     region: "North",
     gender: "coed",
     offersIp: false,
@@ -1160,7 +1160,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "nanyang-girls-high-school",
     nameEn: "Nanyang Girls' High School",
-    nameCn: "南洋女子中学",
+    nameCn: "南洋女子中学校",
     region: "Central",
     gender: "girls",
     offersIp: true,
@@ -1265,7 +1265,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "northland-secondary-school",
     nameEn: "Northland Secondary School",
-    nameCn: "德景中学",
+    nameCn: "德贤中学",
     region: "North",
     gender: "coed",
     offersIp: false,
@@ -1595,7 +1595,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "singapore-chinese-girls-school",
     nameEn: "Singapore Chinese Girls' School",
-    nameCn: "新加坡女子学校",
+    nameCn: "新加坡华侨女子中学",
     region: "Central",
     gender: "girls",
     offersIp: true,
@@ -1655,7 +1655,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "st-anthonys-canossian-secondary-school",
     nameEn: "St. Anthony's Canossian Secondary School",
-    nameCn: "圣安东尼女校（中学）",
+    nameCn: "圣安东尼女子中学",
     region: "East",
     gender: "girls",
     offersIp: false,
@@ -1700,7 +1700,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "st-josephs-institution-secondary",
     nameEn: "St. Joseph's Institution (Secondary)",
-    nameCn: "圣约瑟书院",
+    nameCn: "圣若瑟书院",
     region: "South",
     gender: "coed",
     offersIp: true,
@@ -1715,7 +1715,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "st-patricks-school",
     nameEn: "St. Patrick's School",
-    nameCn: "圣伯特理中学",
+    nameCn: "圣伯特理中学校",
     region: "East",
     gender: "boys",
     offersIp: false,
@@ -1955,7 +1955,7 @@ export const SCHOOL_COP_HISTORY_DATA: SchoolCopHistoryEntry[] = [
   {
     id: "yio-chu-kang-secondary-school",
     nameEn: "Yio Chu Kang Secondary School",
-    nameCn: "永康中学",
+    nameCn: "崇文中学",
     region: "Central",
     gender: "coed",
     offersIp: false,
