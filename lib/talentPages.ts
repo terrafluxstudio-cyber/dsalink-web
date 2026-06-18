@@ -46,7 +46,11 @@ export type TalentSlug =
   | "bowling"
   | "cross-country"
   | "canoeing"
-  | "tchoukball";
+  | "tchoukball"
+  | "uniformed-groups"
+  | "science"
+  | "debate"
+  | "malay-language";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -12781,6 +12785,1266 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  "uniformed-groups": {
+    slug: "uniformed-groups",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Uniformed Groups", zh: "制服团体", ms: "Pasukan Beruniform", ta: "சீருடைப் பயிற்சிக் குழுக்கள்" },
+    hook: {
+      en: "Uniformed Groups DSA — entry on a record of leadership, service, discipline, and values, judged on your CCA track record and an interview, not a physical trial.",
+      zh: "制服团体 DSA——凭领导力、服务、纪律与价值观的记录进入，看的是制服团体活动记录和面试，不是体能测试",
+      ms: "DSA Pasukan Beruniform — kemasukan berdasarkan rekod kepimpinan, khidmat, disiplin, dan nilai, dinilai melalui rekod aktiviti dan temu duga, bukan ujian fizikal.",
+      ta: "சீருடைப் பயிற்சிக் குழு DSA — தலைமைத்துவம், சேவை, ஒழுக்கம், விழுமியங்கள் பதிவின் அடிப்படையில் சேர்க்கை; உடல்திறன் தேர்வு அல்ல, பதிவும் நேர்காணலும் அடிப்படை.",
+    },
+    intro: {
+      en: "Uniformed Groups is one of MOE's DSA-Sec talent categories, alongside Sports, Arts, and Leadership. It admits P6 students who have shown sustained commitment in a primary-school uniformed group — Scouts, Brownies or Girl Guides, the Boys' or Girls' Brigade junior sections, Red Cross, St John, and related cadet pathways where the school runs them. Schools assess two things: your documented record (attendance, leadership roles, service hours, badges, conduct) and an interview that reads your values and fit. This is not a sport and there is usually no physical trial — the signal is character, responsibility, and service to a team over time.",
+      zh: "制服团体是教育部 DSA-Sec 才艺类别之一，和体育、艺术、领导力并列。它招收在小学制服团体里长期投入的 P6 学生——童军、女童军、男童军/女童军旅初级团、红十字会、圣约翰，以及有开办相关队伍的学校的学员路线。学校看两样东西：你的活动记录（出勤、领导岗位、服务时数、徽章、品行）和一场读你价值观与契合度的面试。这不是体育，通常没有体能测试——它看重的是品格、责任感，以及长期对团队的服务。",
+      ms: "Pasukan Beruniform ialah satu daripada kategori bakat DSA-Sec MOE, bersama Sukan, Seni, dan Kepimpinan. Ia menerima pelajar P6 yang menunjukkan komitmen berterusan dalam pasukan beruniform sekolah rendah — Pengakap, Pandu Puteri, bahagian junior Briged Lelaki atau Perempuan, Palang Merah, St John, atau laluan kadet berkaitan di sekolah yang menawarkannya. Sekolah menilai dua perkara: rekod anda (kehadiran, peranan kepimpinan, jam khidmat, lencana, kelakuan) dan temu duga yang membaca nilai serta kesesuaian anda. Ini bukan sukan dan biasanya tiada ujian fizikal — isyaratnya ialah sahsiah, tanggungjawab, dan khidmat kepada pasukan sepanjang masa.",
+      ta: "சீருடைப் பயிற்சிக் குழுக்கள் MOE-வின் DSA-Sec திறமை வகைகளில் ஒன்று; விளையாட்டு, கலை, தலைமைத்துவத்துடன் இணையாக உள்ளது. தொடக்கப்பள்ளி சீருடைக் குழுவில் — சாரணர், பெண் சாரணர், சிறுவர்/சிறுமியர் படை இளநிலைப் பிரிவு, செஞ்சிலுவை, செயின்ட் ஜான், அவற்றை நடத்தும் பள்ளிகளில் தொடர்புடைய பயிலுநர் வழிகள் — தொடர்ந்து ஈடுபட்ட P6 மாணவர்களை இது சேர்க்கிறது. பள்ளிகள் இரண்டை மதிப்பிடுகின்றன: உங்கள் பதிவு (வருகை, தலைமைப் பொறுப்புகள், சேவை நேரம், பேட்ஜ்கள், நடத்தை) மற்றும் உங்கள் விழுமியங்களையும் பொருத்தத்தையும் படிக்கும் நேர்காணல். இது விளையாட்டு அல்ல, பொதுவாக உடல்திறன் தேர்வு இல்லை — காலப்போக்கில் குணம், பொறுப்பு, அணிக்குச் செய்யும் சேவை ஆகியவையே சமிக்ஞை.",
+    },
+    summary: {
+      en: "Uniformed Groups DSA-Sec format (records review + interview), qualities schools value, sample interview questions, and schools that open a uniformed-group DSA route.",
+      zh: "制服团体 DSA-Sec 格式（记录审核 + 面试）、学校看重的素质、面试题、开设制服团体 DSA 通道的学校。",
+      ms: "Format DSA-Sec Pasukan Beruniform, kualiti yang dinilai sekolah, soalan temu duga, sekolah peserta.",
+      ta: "சீருடைப் பயிற்சிக் குழு DSA-Sec வடிவம், பள்ளிகள் மதிக்கும் பண்புகள், கேள்விகள், பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Maris Stella High School (Secondary)",
+      "St. Gabriel's Secondary School",
+      "St. Patrick's School",
+      "Holy Innocents' High School",
+      "Anglican High School",
+      "Hai Sing Catholic School",
+    ],
+    metaDescription: {
+      en: "Uniformed Groups DSA-Sec guide for Singapore P6 — records-and-interview format, the qualities schools assess (leadership, service, discipline, values), sample interview questions, and participating schools.",
+      zh: "新加坡 P6 制服团体 DSA-Sec 指南——记录加面试格式、学校评估的素质（领导力、服务、纪律、价值观）、面试题、参与学校。",
+      ms: "Panduan DSA-Sec Pasukan Beruniform Singapura — format rekod dan temu duga, kualiti yang dinilai, soalan temu duga, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 சீருடைப் பயிற்சிக் குழு DSA-Sec வழிகாட்டி — பதிவு-நேர்காணல் வடிவம், மதிப்பிடப்படும் பண்புகள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Uniformed Groups DSA-Sec selection is run by the school's uniformed-group teachers-in-charge, usually with the CCA head, and is unlike a sports trial. There is normally no physical assessment. Instead the panel reviews the candidate's primary-school records — which MOE shares with the school — and conducts an interview. The dimensions below are the qualities that uniformed groups objectively cultivate and value; they are not a published scoring rubric of any single school. Confirm each target school's exact format from its DSA brief, because some schools add a short situational task or group activity.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Sustained commitment and attendance" },
+          body: {
+            en: "The first thing panels read is whether the candidate stayed with one uniformed group across primary school, not whether they collected many CCAs. A multi-year record in Scouts, Brigade, Red Cross, or a cadet corps signals the reliability and follow-through that uniformed groups are built on. A long, unbroken attendance record — including camps and weekend service that many children quit — is itself strong evidence. Panels are wary of candidates who joined recently or whose involvement is thin, because the whole talent area rewards persistence.",
+          },
+        },
+        {
+          label: { en: "Leadership roles and responsibility held" },
+          body: {
+            en: "Panels look for a documented leadership position — patrol leader, sixer, squad or section leader, or an equivalent junior-command role appropriate to the primary-level group. The signal is not the title but the accountability: did the candidate lead a small team, plan part of an activity, or take responsibility for younger members? Bring the appointment record and one specific story of leading peers through something difficult. A candidate who can describe a decision they made, and what they learned when it went wrong, outscores one who only lists a rank.",
+          },
+        },
+        {
+          label: { en: "Service hours and community contribution" },
+          body: {
+            en: "Service is central to every uniformed group, so panels read Values in Action and community-service records closely. The strong signal is depth — a sustained involvement in one service effort the candidate can speak about with feeling — over a long list of one-off events. A candidate who helped run a recurring community project, and can explain who it served and why it mattered, demonstrates the civic-mindedness uniformed groups exist to build. Vague or padded service lists read poorly.",
+          },
+        },
+        {
+          label: { en: "Discipline, conduct, and bearing" },
+          body: {
+            en: "Uniformed groups place unusual weight on discipline and conduct, and many schools favour candidates with a strong conduct grade. Panels notice punctuality, smartness, how the candidate carries themselves in the interview, and whether teachers' records describe a dependable student. This is not about being rigid — it is about showing that the candidate can be trusted to uphold standards and represent the group well. Conduct issues are harder to offset here than in some other DSA tracks.",
+          },
+        },
+        {
+          label: { en: "Resilience and teamwork under pressure" },
+          body: {
+            en: "Camps, drills, and physical-training elements of uniformed groups test perseverance, and panels probe for it. The signal is a candidate who has pushed through a hard exercise — a tough camp, a difficult drill competition, a demanding service deployment — and put the team before themselves. Panels prefer the candidate who describes supporting a struggling teammate, or finishing what they started despite difficulty, over one who only talks about personal achievement. Uniformed groups reward people who hold a team together when things get hard.",
+          },
+        },
+        {
+          label: { en: "Values, motivation, and fit at interview" },
+          body: {
+            en: "The interview is where panels read character and alignment. They want to understand why the candidate chose this uniformed group, what its values mean to them, and whether those values fit the school — many uniformed-group DSA schools are mission or values-driven and listen for that. Generic answers (\"it teaches discipline\") read as rehearsed; a candidate who can connect a specific experience to a value they now hold reads as genuine. Self-awareness, honesty, and a clear sense of why they want to continue in the group are the strongest interview signals.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Cadet-corps profile (NPCC / NCC / NCDCC)" },
+          body: {
+            en: "Candidates aiming for cadet-corps uniformed groups at secondary level — National Police Cadet Corps, National Cadet Corps, or the National Civil Defence Cadet Corps. In primary school the directly comparable experience is limited, so panels weigh transferable signals: any junior cadet or affiliated programme, leadership in another uniformed group, strong conduct, physical readiness, and a clear interest in the discipline, drill, and service ethos these corps are known for. Articulate why the structured, rank-based, service-to-nation character of the corps appeals to you specifically.",
+          },
+        },
+        {
+          position: { en: "Scouts / Guides profile" },
+          body: {
+            en: "Candidates from Cub Scouts, Scouts, Brownies, or Girl Guides. The strong record here shows outdoor and skills progression (badges, proficiency awards), campcraft, and patrol leadership. Panels look for the self-reliance, initiative, and small-team leadership the Scouting and Guiding method builds — a patrol leader who organised peers, or a candidate who earned advancement awards through sustained effort. Be ready to describe a camp or expedition where you took responsibility for others.",
+          },
+        },
+        {
+          position: { en: "Uniformed brigade profile (Boys' / Girls' Brigade, Red Cross, St John)" },
+          body: {
+            en: "Candidates from the Boys' Brigade or Girls' Brigade junior sections, Red Cross, or St John. These groups pair drill and discipline with strong service and, for Red Cross and St John, first-aid and humanitarian values. Panels look for service depth, the values orientation of the group, and leadership of younger members. For the mission-affiliated brigades especially, schools listen for whether the candidate connects with the values the group is founded on, not just the activities.",
+          },
+        },
+        {
+          position: { en: "Leadership-and-service record profile" },
+          body: {
+            en: "Candidates whose strongest evidence is a leadership appointment plus a substantial service record, regardless of which group they came from. This profile overlaps with the Leadership talent area, so be deliberate about why you are applying through Uniformed Groups: the answer is that your leadership and service were forged inside a disciplined uniformed-group structure. Bring the appointment record, service-hour log, and one story that shows you leading service, not just attending it.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "These are focus areas, not rigid tracks. Most primary-level uniformed groups are not the same body as the secondary cadet corps a school runs, so a Scout or Brigade member regularly enters an NPCC or NCC unit at Sec 1 — what carries over is the record of discipline, leadership, and service, not the specific badge. State honestly which group you came from and what you learned; panels recruit for the underlying character, and they see through a profile reverse-engineered to match a target unit.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why this uniformed group, and why a uniformed-group DSA rather than another talent area?" },
+          subtext: {
+            en: "Tests genuine motivation — panels fear candidates who applied here as a backup.",
+          },
+          approach: {
+            en: "Name what this group asks of you that others don't, and connect it to a specific experience.",
+          },
+          template: {
+            en: "I've been in Scouts since Primary 3, and what kept me there was the responsibility — by Primary 5 I was a patrol leader planning part of our campcraft. I considered a sports DSA, but what I value most isn't competing, it's being trusted to lead a small team and serve. That's a uniformed-group habit, and it's what I want to carry into secondary school.",
+          },
+        },
+        {
+          question: { en: "Tell us about a leadership role you held and a hard decision you had to make." },
+          subtext: {
+            en: "Tests real accountability, not just the title on record.",
+          },
+          approach: {
+            en: "Situation, the decision you made, what changed, what you learned — keep it to one specific story.",
+          },
+          template: {
+            en: "As patrol leader at a camp, one member wanted to quit a night hike halfway. I had to decide between pushing the group's pace and staying back with him. I split the patrol — sent the confident ones ahead with my assistant and walked with him myself. We finished last but we finished together. I learned that leading sometimes means slowing down for the person who needs it.",
+          },
+        },
+        {
+          question: { en: "Tell us about your service to the community through your group." },
+          subtext: {
+            en: "Tests depth of service, not a padded list of one-off events.",
+          },
+          approach: {
+            en: "Pick one sustained effort. Say who it served, what you did, and why it mattered to you.",
+          },
+          template: {
+            en: "Our Brigade company visited the same eldercare home every month for two years. At first I just helped set up, but later I was put in charge of the activity rotation. One resident remembered my name each visit — that's when service stopped being hours to log and became people I'd let down if I didn't show up.",
+          },
+        },
+        {
+          question: { en: "Describe a time you wanted to give up at a camp or training but didn't." },
+          subtext: {
+            en: "Tests resilience and whether the candidate put the team first.",
+          },
+          approach: {
+            en: "Be honest about the difficulty, then show perseverance and care for the team.",
+          },
+          template: {
+            en: "On the second day of a wet camp I was exhausted and my boots were soaked. What kept me going was that two younger cadets in my section were watching how I handled it. If I complained, they would too. So I kept my bearing, helped them dry their gear, and we got through it. I was prouder of holding the section together than of finishing.",
+          },
+        },
+        {
+          question: { en: "What do the values of your uniformed group mean to you?" },
+          subtext: {
+            en: "Tests whether values are genuinely held or just recited.",
+          },
+          approach: {
+            en: "Name one value and tie it to a real moment, rather than listing all of them.",
+          },
+          template: {
+            en: "Our motto talks about putting others first. It sounded like words until a younger member panicked during a high-element activity. I realised I could either get my own turn done or talk her through hers. I stayed with her. Putting others first isn't a slogan to me now — it's a choice I've actually made.",
+          },
+        },
+        {
+          question: { en: "How do you balance your CCA commitment with your studies?" },
+          subtext: {
+            en: "Schools fear DSA students who flame out academically.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "Camps and weekend service mean I lose some study time, so I plan around them. The week before a camp I finish homework early. After camp I have a fixed catch-up evening. My parents check my results each term — if a subject drops, we cut back on extra activities until it recovers. We agreed that rule together.",
+          },
+        },
+        {
+          question: { en: "If our school and another both offer you a uniformed-group place, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure and whether the candidate researched the school.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school and give one specific reason tied to its uniformed group.",
+          },
+          template: {
+            en: "Honestly, your school. I read that your NPCC unit has a strong service-leadership tradition and runs its National Service programme well, and the school's values match what my group taught me about discipline and service. If the other school replied first I'd still wait for yours.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Maris Stella High School (Secondary)",
+          talentArea: { en: "NPCC, DSA-Sec" },
+          context: {
+            en: "SAP boys' school offering a uniformed-group DSA route; selection is typically an interview and/or task in the talent area, with details sent to shortlisted applicants.",
+          },
+        },
+        {
+          name: "St. Gabriel's Secondary School",
+          talentArea: { en: "Uniformed Group, DSA-Sec" },
+          context: {
+            en: "Lasallian boys' school with a strong uniformed-group and service-leadership tradition; opens a uniformed-group DSA-Sec talent route.",
+          },
+        },
+        {
+          name: "St. Patrick's School",
+          talentArea: { en: "Uniformed Group, DSA-Sec" },
+          context: {
+            en: "Catholic boys' school by the sea; offers a uniformed-group DSA-Sec route assessed on records and an interview.",
+          },
+        },
+        {
+          name: "Holy Innocents' High School",
+          talentArea: { en: "Uniformed Group, DSA-Sec" },
+          context: {
+            en: "Catholic mission school offering a uniformed-group DSA-Sec talent route with an emphasis on character and service.",
+          },
+        },
+        {
+          name: "Anglican High School",
+          talentArea: { en: "Uniformed Group, DSA-Sec" },
+          context: {
+            en: "SAP school with a values-driven heritage; offers a uniformed-group DSA-Sec route for candidates with strong leadership and service records.",
+          },
+        },
+        {
+          name: "Hai Sing Catholic School",
+          talentArea: { en: "NPCC, DSA-Sec" },
+          context: {
+            en: "Catholic school offering a uniformed-group DSA-Sec route; selection favours candidates with strong conduct and demonstrated commitment.",
+          },
+        },
+        {
+          name: "Xinmin Secondary School",
+          talentArea: { en: "Uniformed Group, DSA-Sec" },
+          context: {
+            en: "Neighbourhood school with established uniformed-group CCAs; opens a uniformed-group DSA-Sec talent route.",
+          },
+        },
+        {
+          name: "Admiralty Secondary School",
+          talentArea: { en: "Uniformed Group, DSA-Sec" },
+          context: {
+            en: "Neighbourhood school offering a uniformed-group DSA-Sec route; assessment is records-based with an interview.",
+          },
+        },
+        {
+          name: "Deyi Secondary School",
+          talentArea: { en: "Uniformed Group, DSA-Sec" },
+          context: {
+            en: "Neighbourhood school with active uniformed-group CCAs; offers a uniformed-group DSA-Sec talent route.",
+          },
+        },
+        {
+          name: "Fuhua Secondary School",
+          talentArea: { en: "Uniformed Group, DSA-Sec" },
+          context: {
+            en: "Neighbourhood school offering a uniformed-group DSA-Sec route for candidates with sustained leadership and service records.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the application is still weeks out" },
+          items: [
+            {
+              en: "Verify the primary-school records first. MOE shares P4-P6 CCA participation, uniformed-group appointments, leadership positions, Values in Action and service hours, conduct grade, and awards with the DSA school. Ask the CCA teacher or year-head to confirm everything logged is accurate and complete — for uniformed-group candidates, a missing leadership appointment or under-counted service hours is especially costly.",
+            },
+            {
+              en: "Gather the evidence file. Appointment or rank certificates, badge and proficiency records, camp and service photos in uniform, and a one-line log of each major service effort. The school may request a personal statement or CCA record from shortlisted applicants — having this ready makes that easy.",
+            },
+            {
+              en: "Help your child write three short stories from their actual experience: a leadership decision, a sustained service effort, and a time they persevered at a camp or drill. Four sentences each — situation, what they did, what changed, what they learned. These become the backbone of the interview.",
+            },
+            {
+              en: "Research each target school's values and uniformed-group tradition. Many of these schools are mission or values-driven; the interview probes fit. Confirm each school's exact DSA format too — some add a short situational task or group activity to the records-and-interview default.",
+            },
+          ],
+        },
+        {
+          label: { en: "Final preparation — the last week" },
+          items: [
+            {
+              en: "Run a mock interview using the questions above. Record it on a phone and watch it back together. Flag any answer that ran long or used a rehearsed phrase like \"it teaches discipline\" with nothing specific behind it — replace it with one concrete moment.",
+            },
+            {
+              en: "Tidy and check the uniform and grooming. Bearing and smartness are read in uniformed-group interviews. If the school asks the candidate to attend in uniform, make sure it is complete, correctly worn, and the appointment insignia is in place.",
+            },
+            {
+              en: "Confirm logistics in writing — time, venue, and what to bring (evidence file, certificates, identification). Email the teacher-in-charge if anything in the shortlist instructions is ambiguous.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of the interview" },
+          items: [
+            {
+              en: "Arrive 20-30 minutes early, in complete uniform if requested, with the evidence file. Punctuality is itself a signal in this talent area.",
+            },
+            {
+              en: "Remind your child to speak in specific stories, not labels — name the camp, the role, the person they served. Honesty and self-awareness read better than polish.",
+            },
+            {
+              en: "Let them carry their own file and certificates into the room. Panels notice a candidate who owns their record rather than a parent who manages it.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, interview coming up, no clear preparation plan — there are still real moves, but be clear-eyed about what they are. You cannot manufacture years of uniformed-group service in a week, and you shouldn't try; panels are built to detect it. What you can do is make the real record legible. First, verify the records MOE will share are accurate — a missing leadership appointment or under-logged service hours is the most common avoidable loss, and one email to the CCA teacher can fix it. Second, take the commitments your child has actually held — the appointment, the recurring service, the hard camp — and turn each into a four-sentence story: situation, action, result, lesson. The highest-leverage prep is converting titles and hours into specific moments, and that's editing, not new experience. Third, rehearse three of the questions above out loud, including \"why this uniformed group\" and the choose-a-school question, until the answers are honest and concrete rather than rehearsed-sounding. Some families consider an interview coach at this stage; a good one can sharpen story specificity and remove generic phrasing, but no coach produces the years of actual service and leadership that a uniformed-group portfolio is built on. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  science: {
+    slug: "science",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Science", zh: "科学", ms: "Sains", ta: "அறிவியல்" },
+    hook: {
+      en: "Science DSA — entry into a school's science-research pipeline, judged on inquiry instinct, reasoning, and genuine curiosity rather than memorised facts.",
+      zh: "科学 DSA——进入学校科研路线，按探究本能、推理能力、真实好奇心综合评估，而非记诵事实",
+      ms: "DSA Sains — kemasukan ke saluran penyelidikan sains sekolah, dinilai berdasarkan naluri inkuiri, penaakulan, dan rasa ingin tahu yang tulen, bukan fakta yang dihafal.",
+      ta: "அறிவியல் DSA — பள்ளியின் அறிவியல் ஆராய்ச்சி வழியில் சேர்க்கை, மனப்பாடம் செய்த உண்மைகளை விட ஆய்வு உள்ளுணர்வு, பகுத்தறிவு, உண்மையான ஆர்வம் அடிப்படையில் மதிப்பிடப்படுகிறது.",
+    },
+    intro: {
+      en: "Science DSA-Sec admits candidates into schools where the science-research pipeline runs strongly — natural sciences (biology, chemistry, physics), applied science, and the environmental and sustainability tracks that have grown across Singapore secondary schools. It is distinct from a pure Mathematics DSA (which tests abstract problem-solving) and from a Robotics or engineering DSA (which tests build-and-code judgment). What science panels read for is the instinct to investigate: how a candidate frames a question, designs a fair test, reasons from evidence, and stays curious past the textbook. This is the right route for the P6 student who keeps a why-does-this-happen running commentary, tinkers with experiments at home, and follows science news for fun. Selection criteria vary by school — each school sets its own trials, interviews, and weighting — so confirm each target school's format before locking preparation.",
+      zh: "科学 DSA-Sec 招收进入科研路线强的学校——自然科学（生物、化学、物理）、应用科学，以及近年在新加坡中学普遍兴起的环境与可持续发展方向。它区别于纯数学 DSA（考抽象解题），也区别于机器人或工程 DSA（考组装与编程判断）。科学考官看的是探究本能：如何提出问题、设计公平实验、依据证据推理、并保持超越课本的好奇。适合那种总爱追问「为什么会这样」、在家动手做实验、把科学新闻当乐趣的 P6 学生。各校招生标准不同——trial、面试、权重各校自定——报名前先核实每所目标学校的形式。",
+      ms: "DSA-Sec Sains menerima calon ke sekolah yang mempunyai saluran penyelidikan sains yang kukuh — sains tulen (biologi, kimia, fizik), sains gunaan, serta trek alam sekitar dan kelestarian yang semakin berkembang di sekolah menengah Singapura. Ia berbeza daripada DSA Matematik tulen dan daripada DSA Robotik atau kejuruteraan. Panel sains menilai naluri menyiasat: cara calon merangka soalan, mereka bentuk ujian adil, menaakul daripada bukti, dan kekal ingin tahu melampaui buku teks. Kriteria pemilihan berbeza mengikut sekolah.",
+      ta: "அறிவியல் DSA-Sec அறிவியல் ஆராய்ச்சி வழி வலுவாக இயங்கும் பள்ளிகளில் வேட்பாளர்களைச் சேர்க்கிறது — இயற்கை அறிவியல் (உயிரியல், வேதியியல், இயற்பியல்), பயன்பாட்டு அறிவியல், சிங்கப்பூர் இடைநிலைப் பள்ளிகளில் வளர்ந்துவரும் சுற்றுச்சூழல் மற்றும் நிலைத்தன்மை வழிகள். இது தூய கணித DSA மற்றும் ரோபோடிக்ஸ் DSA இலிருந்து வேறுபட்டது. அறிவியல் குழுக்கள் விசாரணை உள்ளுணர்வை மதிப்பிடுகின்றன: வேட்பாளர் கேள்வியை எவ்வாறு வடிவமைக்கிறார், நியாயமான சோதனையை வடிவமைக்கிறார், சான்றுகளிலிருந்து நியாயப்படுத்துகிறார். தேர்வு அளவுகோல்கள் பள்ளிக்குப் பள்ளி வேறுபடும்.",
+    },
+    summary: {
+      en: "Science DSA-Sec trial dimensions, focus areas (inquiry / Olympiad / research projects / sustainability), sample interview questions, and schools with science pipelines.",
+      zh: "科学 DSA-Sec trial 维度、重点领域（探究 / 竞赛 / 研究项目 / 可持续）、面试题、科研通道学校。",
+      ms: "Dimensi trial DSA-Sec Sains, bidang fokus, soalan temu duga, sekolah dengan saluran sains.",
+      ta: "அறிவியல் DSA-Sec சோதனை பரிமாணங்கள், கவன பகுதிகள், நேர்காணல் கேள்விகள், அறிவியல் வழிகள் கொண்ட பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Hwa Chong Institution",
+      "Raffles Institution",
+      "National Junior College",
+      "River Valley High School",
+      "Anglo-Chinese School (Independent)",
+      "Victoria School",
+    ],
+    metaDescription: {
+      en: "Science DSA-Sec guide for Singapore P6 — how schools assess science talent through inquiry, reasoning, competitions and research projects, sample interview questions, and participating schools.",
+      zh: "新加坡 P6 科学 DSA-Sec 指南——学校如何通过探究、推理、竞赛、研究项目评核科学才能、面试题、招生学校。",
+      ms: "Panduan DSA-Sec Sains Singapura untuk P6 — cara sekolah menilai bakat sains, soalan temu duga, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 அறிவியல் DSA-Sec வழிகாட்டி — பள்ளிகள் அறிவியல் திறமையை எவ்வாறு மதிப்பிடுகின்றன, நேர்காணல் கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Science DSA-Sec assessments are usually run by the school's Science Department head together with a senior subject teacher (biology, chemistry, or physics). Singapore schools do not publish marking rubrics, and criteria differ by school — but the components converge on some combination of a written or practical reasoning task, a hands-on or thought-experiment investigation, a discussion of the candidate's own project or competition record, and an interview. MOE shortlisting draws on primary-school academic results (particularly Science and Mathematics), participation and achievement in science competitions and programmes, and related CCA records, before any trial. The six dimensions below are the abilities that science talent objectively rewards across these formats — they are a synthesis of how science inquiry and the upper-school science-research pipeline are assessed, not any single school's published scoring sheet.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Scientific inquiry — framing a testable question" },
+          body: {
+            en: "The single highest-signal habit is the move from a vague wondering to a question that can actually be tested. Assessors give candidates an everyday observation — why does cut apple brown, why does ice melt faster in water than in air — and watch whether the candidate jumps to a memorised answer or first asks \"what would I need to measure to find out?\" A P6 who instinctively narrows a big curiosity into one variable they could isolate is signalling research readiness. Reciting the correct textbook explanation scores lower than framing a good investigation.",
+          },
+        },
+        {
+          label: { en: "Experimental design and fair-test reasoning" },
+          body: {
+            en: "Can the candidate design a fair test? Assessors probe whether a child knows to change one variable at a time, keep the others controlled, repeat for reliability, and identify what could go wrong. A common trial task hands the candidate a flawed experiment and asks them to find the problem — uncontrolled variables, no repeats, a confounding factor. Spotting the flaw and proposing a fix is worth more than producing a slick hypothesis. This is the backbone of every science-fair and research-track curriculum the school is recruiting for.",
+          },
+        },
+        {
+          label: { en: "Reasoning from evidence to conclusion" },
+          body: {
+            en: "Given a small data table or a described result, can the candidate read the pattern and reason to a conclusion — and, crucially, say what the data does not let them conclude? Assessors look for candidates who distinguish correlation from cause, who notice when a sample is too small, who say \"the trend suggests X, but I'd want to test Y before I'm sure.\" That hedging is not weakness; it is exactly the scientific caution panels recruit for. Over-claiming from thin evidence is the most common reasoning error they flag.",
+          },
+        },
+        {
+          label: { en: "Competition or project record" },
+          body: {
+            en: "A documented track record carries real weight at the shortlisting stage and as a talking point in the trial. For P6 candidates the relevant entries are primary-level: the Singapore Primary Science Olympiad (P5), Singapore Science Buskers, the Science Centre's competitions, or a self-directed science-fair or investigative project. Subject Olympiads in Physics, Chemistry, and Biology are secondary-level and not expected at P6. What assessors want is not a wall of certificates but one project the candidate can talk about with genuine ownership — what they tried, what failed, what they changed.",
+          },
+        },
+        {
+          label: { en: "Curiosity and self-directed learning" },
+          body: {
+            en: "What has the candidate explored on their own, outside the science syllabus? A kitchen-chemistry experiment, a backyard nature log, a documentary that sent them down a rabbit hole, a question they kept chasing on their own. Specialised and research-track schools weight this heavily because the long-term grit of a science researcher is driven by curiosity, not by being pushed. A candidate who lights up describing something they investigated for no reason except that they wanted to know stands out sharply from one who only knows what was taught.",
+          },
+        },
+        {
+          label: { en: "Science communication" },
+          body: {
+            en: "Can the candidate explain a science idea clearly to someone who doesn't already know it — in plain words, with an analogy, without hiding behind jargon? Assessors may ask a candidate to explain a concept they understand well, or to walk through their own project. The signal is clarity and structure, not vocabulary. Singapore Science Buskers exists precisely to reward this skill. A candidate who can make a panel of teachers genuinely understand something new in ninety seconds demonstrates a maturity that pure exam scores never reveal.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Experimental inquiry" },
+          body: {
+            en: "The core science-DSA profile: a candidate whose strength is hands-on investigation — designing fair tests, running experiments, troubleshooting when results don't match expectation. Strong indicators are a home-experiment habit, a science-fair or investigative project the candidate ran largely themselves, and the instinct to control variables without being prompted. Adjudicators look for the child who treats a surprising result as the interesting part, not a failure to be hidden.",
+          },
+        },
+        {
+          position: { en: "Competition / Olympiad track" },
+          body: {
+            en: "For candidates with a documented competition record at primary level — Singapore Primary Science Olympiad, Science Buskers, Science Centre competitions, or comparable. The signal here is depth on the science content and the reasoning speed that competition trains, plus the ability to talk about one event with real ownership. Note that the subject-based Junior Science Olympiads (SJPO, SJChO, SJBO) are secondary-school competitions, so a P6 candidate's competition story will sit at the primary level — that is entirely normal and assessors know it.",
+          },
+        },
+        {
+          position: { en: "Research project track" },
+          body: {
+            en: "For candidates who have carried a sustained, self-directed investigation — a multi-week project with a question, a method, data, and a conclusion, ideally documented. This profile maps most directly onto the school's upper-school science-research pipeline (Science Mentorship, attachments, the Singapore Science and Engineering Fair down the line). Adjudicators look for evidence of follow-through over weeks, not a one-afternoon demonstration, and for honest reflection on what didn't work.",
+          },
+        },
+        {
+          position: { en: "Environment and sustainability" },
+          body: {
+            en: "A fast-growing focus area as Singapore schools build environmental-science, ecology, and sustainability tracks. Suits candidates curious about climate, biodiversity, water, energy, or waste — able to connect a science concept to a real Singapore issue and discuss it with some specificity. Adjudicators look for a candidate who has actually done something (a recycling audit, a planting log, a local water-quality observation) rather than one who only voices general environmental concern.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "These are emphases, not rigid streams. Most strong P6 science candidates straddle two — an experimental-inquiry child who also competes, or a research-project child whose work happens to be environmental. Schools do not expect a Sec 1 candidate to commit to a single track; the focus areas exist to help families recognise which of their child's strengths to put forward most clearly.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why science? What first made you curious about it?" },
+          subtext: {
+            en: "Panels open here to separate genuine curiosity from a coached answer. They want a specific origin, not \"I've always loved science.\"",
+          },
+          approach: {
+            en: "Name one concrete moment or recurring question. Tie it to something you actually did about it.",
+          },
+          template: {
+            en: "I started wondering why my mum's bread rose but mine didn't. I tried changing the water temperature each time and kept notes — turns out my water was killing the yeast. That's when I realised you could actually test why things happen instead of just asking.",
+          },
+        },
+        {
+          question: { en: "Walk us through a science project or experiment you've done." },
+          subtext: {
+            en: "The panel wants method and reasoning, not a list of competitions or a polished result.",
+          },
+          approach: {
+            en: "Pick one. Question, what you measured, what surprised you, what you changed. Spend most of the time on the surprise and the fix.",
+          },
+          template: {
+            en: "I tested which fruit browns fastest after cutting. I expected apple, but pear was faster. My first test wasn't fair — I'd left them in different spots — so I redid it with all of them in the same place and same light. Pear still browned faster, so it was real, not the setup.",
+          },
+        },
+        {
+          question: { en: "Here's an experiment. Tell us what's wrong with it." },
+          subtext: {
+            en: "Tests fair-test reasoning directly — the ability to spot uncontrolled variables, missing repeats, or a confounding factor.",
+          },
+          approach: {
+            en: "Name the specific flaw, explain why it matters, propose the fix. Don't just say \"it's not fair.\"",
+          },
+          template: {
+            en: "They changed the plant's water and its sunlight at the same time, so if it grows better you can't tell which one caused it. I'd keep sunlight the same for both plants and only change the water — and run it twice to be sure it wasn't luck.",
+          },
+        },
+        {
+          question: { en: "You're interested in science, math, and robotics — how do you know science is your DSA route?" },
+          subtext: {
+            en: "STEM-leaning families often apply across all three. The panel wants to know the candidate understands the difference, not just that they like STEM.",
+          },
+          approach: {
+            en: "Distinguish the three honestly. Math is abstract problem-solving; robotics is building and coding; science is investigating why the real world behaves as it does. Say which pulls you and why.",
+          },
+          template: {
+            en: "I like math, but for me it's a tool. Robotics I enjoy, but I care more about the why than the build. What I actually lose track of time on is testing why something in the real world happens — that's science. The other two help me do it, but the question always comes first.",
+          },
+        },
+        {
+          question: { en: "Explain a science idea you understand well to someone who's never heard of it." },
+          subtext: {
+            en: "Tests science communication — clarity and analogy over jargon.",
+          },
+          approach: {
+            en: "Pick something you genuinely understand. Use one everyday analogy. Check yourself: would a younger sibling follow it?",
+          },
+          template: {
+            en: "Density is like a crowded lift versus an empty one — same size box, but one's packed and heavier. That's why oil floats on water: the oil's particles are more spread out, so the same amount of space weighs less, and the lighter one sits on top.",
+          },
+        },
+        {
+          question: { en: "What science have you explored on your own, outside school?" },
+          subtext: {
+            en: "Curiosity and self-direction. Generic answers (\"I watch science videos\") fail; one specific rabbit hole succeeds.",
+          },
+          approach: {
+            en: "Name one specific thing you chased on your own and what you found or still wonder.",
+          },
+          template: {
+            en: "After a documentary on coral bleaching I wanted to see temperature effects myself, so I left two cups of water with food colouring at different temperatures and timed how fast the colour spread. The warm one mixed way faster. I still want to know if that's why warm seas stress coral.",
+          },
+        },
+        {
+          question: { en: "If our school and another school both offer you a science place, how would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure and whether the family has researched this school's actual science pipeline.",
+          },
+          approach: {
+            en: "Don't dodge. Name one specific thing about this school's science program and commit to a reason.",
+          },
+          template: {
+            en: "Honestly, your school — your Science Mentorship attachment with research labs is the part I want most, and I read about a student project on local water quality on your site. That's the kind of work I'd want to do, so I'd choose here.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Hwa Chong Institution (Secondary)",
+          talentArea: { en: "Science / STEM, IP" },
+          context: {
+            en: "Science listed among HCI's DSA talent areas. Strong science-research pipeline feeding the upper-school and JC science streams. Trial typically combines a reasoning task with a project or interview component.",
+          },
+        },
+        {
+          name: "Raffles Institution (Secondary)",
+          talentArea: { en: "Science / STEM, IP" },
+          context: {
+            en: "Science among RI's DSA talent areas. Established science-research and mentorship tracks; assessors weight inquiry reasoning and a candidate's own project record.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          talentArea: { en: "Science / STEM, IP" },
+          context: {
+            en: "Offers DSA in science-related talent areas. Strong research culture; trial and interview probe experimental reasoning and self-directed curiosity.",
+          },
+        },
+        {
+          name: "National Junior College (Secondary)",
+          talentArea: { en: "Science, IP" },
+          context: {
+            en: "Science among NJC's DSA talent areas at the integrated-programme secondary level. Science-research and mentorship pipeline runs through to JC.",
+          },
+        },
+        {
+          name: "River Valley High School (Secondary)",
+          talentArea: { en: "Science / STEM, IP" },
+          context: {
+            en: "Listed in RV High's DSA talent areas. SAP school — Higher Chinese or Chinese Language as Mother Tongue typically required. Strong STEM-research orientation.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent) (Secondary)",
+          talentArea: { en: "Science / STEM, IP" },
+          context: {
+            en: "Science listed among ACS(I)'s DSA talent areas; selection considers Primary 5 and 6 academic results alongside the talent area. Trial format published in the annual DSA brief and varies by year.",
+          },
+        },
+        {
+          name: "Catholic High School (Secondary)",
+          talentArea: { en: "Science, DSA-Sec" },
+          context: {
+            en: "Offers science among its DSA talent areas. SAP school — Higher Chinese or Chinese Language as Mother Tongue typically required.",
+          },
+        },
+        {
+          name: "Victoria School",
+          talentArea: { en: "Science / STEM, DSA-Sec" },
+          context: {
+            en: "Science among Victoria School's DSA talent areas. Active STEM and research-project culture; trial typically pairs a reasoning task with an interview.",
+          },
+        },
+        {
+          name: "Commonwealth Secondary School",
+          talentArea: { en: "Science / STEM, DSA-Sec" },
+          context: {
+            en: "Offers DSA in science / STEM talent areas. Applied-science and project-based orientation; welcomes candidates with a documented science-project or competition record.",
+          },
+        },
+        {
+          name: "NUS High School of Math and Science",
+          talentArea: { en: "Science (independent admission route)" },
+          context: {
+            en: "Important: NUS High admits through its own DSA exercise and does NOT take part in the S1 Posting Exercise — a distinct route from the standard DSA-Sec trial-and-interview model of the other schools above. Applicants register once under either Math or Science (not both). Selection is two-phase: all applicants sit Selection Tests; only shortlisted candidates attend a Selection Camp that assesses understanding and application of math and science, breadth of reading, problem-solving, creativity, motivation, and communication. Shortlisting also draws on primary-school results and science/math competition and CCA records. If NUS High is a target, prepare for its own selection format rather than a typical school trial.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Help your child write up one science project as a single artefact: the question, what they measured, what surprised them, what they changed, what they concluded. One well-documented investigation outweighs a list of competitions on the application form, and it becomes the thing they talk about at interview.",
+            },
+            {
+              en: "Drill fair-test reasoning, not facts. Hand your child everyday experiments with a flaw built in (\"I watered one plant more AND moved it to the window\") and have them find what's wrong. This is the most common trial task and the one tuition rarely covers.",
+            },
+            {
+              en: "Confirm your child's primary-school records are accurate. MOE shortlisting pulls Science and Mathematics results, science-competition results (Singapore Primary Science Olympiad, Science Buskers, Science Centre competitions), and CCA records directly from the primary school. Ask the relevant teacher to verify what's logged — gaps hurt the application.",
+            },
+            {
+              en: "Run a mock interview using the questions above, especially \"Why science?\" and the math-vs-robotics-vs-science question. Record it. Flag any answer that lists achievements instead of describing a real investigation, and any answer that can't say what curiosity actually drives the child.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Stop adding new content. Cancel any last-minute science enrichment workshop — final-week load rarely helps and usually adds nerves. The trial rewards reasoning your child already has, not facts crammed this week.",
+            },
+            {
+              en: "Rehearse the one-project walk-through until it lands in about 90 seconds — smooth, with the surprise-and-fix at the centre. Print any project notes or photos so there's a physical artefact to point at.",
+            },
+            {
+              en: "Confirm logistics in writing: time, venue, attire, whether to bring a project portfolio or own materials. Email the teacher-in-charge if anything is ambiguous — the email itself signals an attentive family.",
+            },
+            {
+              en: "One practice explanation to a stranger. Have your child explain a science idea to an adult who knows nothing about it (a neighbour, a family friend). Science communication under unfamiliar eyes is exactly what freezes kids on trial day — force the awkwardness early.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat about 90 minutes before — protein, not sugar. Reasoning tasks and a discussion reward steady, patient thinking; a sugar crash mid-trial is visible to a panel.",
+            },
+            {
+              en: "Bring the project artefact and any notes, even if not asked. Materials on the table signal preparation and give your child something concrete to anchor a nervous answer.",
+            },
+            {
+              en: "Drop off, don't hover. Greet the teacher-in-charge, leave. Over-involved parents are visible and the child absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing you'd do differently?\" Anything else waits 24 hours. Replaying a fumbled answer during the wait only corrodes the next trial.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no clear plan — there are still real moves. Don't try to cram science content; the trial rewards reasoning, not recall, and a week of facts won't move it. Instead, take the most genuine piece of investigating your child has ever done — a home experiment, a science-fair project, even a question they chased on their own — and turn it into a tight 90-second walk-through: the question, what they measured, what surprised them, what they changed. Rehearse it five or six times until it's smooth and specific. Then drill the one skill panels test that tuition skips: hand them flawed experiments and have them find the unfair variable. Those two moves buy composure and sharpen the reasoning your child already has. Some families bring in a private science coach at this stage; a good one can stabilise nerves and tighten the explanation, but no coach manufactures, in three sessions, the curiosity and inquiry instinct that years of asking \"why\" build. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  debate: {
+    slug: "debate",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Debate & Public Speaking", zh: "辩论与演讲", ms: "Debat & Ucapan Awam", ta: "விவாதம் & பொதுப் பேச்சு" },
+    hook: {
+      en: "Debate & Public Speaking DSA — trials reward clear thinking under pressure, not rehearsed eloquence.",
+      zh: "辩论与演讲 DSA——trial 看的是压力下能否清晰思考，不是背稿的口才",
+      ms: "DSA Debat & Ucapan Awam — saringan menilai pemikiran jelas di bawah tekanan, bukan kefasihan yang dihafal.",
+      ta: "விவாதம் & பொதுப் பேச்சு DSA — தேர்வுகள் அழுத்தத்தின் கீழ் தெளிவான சிந்தனையை மதிக்கின்றன, மனப்பாடம் செய்த சொல்வன்மையை அல்ல.",
+    },
+    intro: {
+      en: "Debate & Public Speaking DSA-Sec trials are mostly impromptu — schools hand the candidate a motion or a topic with short preparation time, then watch how they build a case, listen to an opponent, and respond on their feet. Unlike a music audition, there is rarely a polished prepared piece to fall back on. Panels are reading raw thinking: can this twelve-year-old structure an argument, support it with reasons, hear a counter-point and answer it without panicking? This is the route for the P6 student who follows the news, enjoys arguing a position at the dinner table, and can stay composed when challenged. The criteria are spoken, reasoned, and entirely live.",
+      zh: "辩论与演讲 DSA-Sec trial 多为即兴——学校给一个辩题或话题，留很短的准备时间，然后看学生怎么构建论点、听对手发言、临场回应。不像音乐 audition 有打磨好的预备曲目可依靠。考官看的是真实的思维：这个十二岁的孩子能不能搭起论证结构、用理由支撑、听到反驳还能不慌地回应？适合关注新闻、喜欢在饭桌上为一个立场争辩、被质疑也能保持镇定的 P6 学生。评分靠的是口头表达、推理，全程现场进行。",
+      ms: "Saringan DSA-Sec Debat & Ucapan Awam kebanyakannya bersifat spontan — sekolah memberikan calon satu usul atau topik dengan masa persediaan yang singkat, kemudian memerhati bagaimana mereka membina hujah, mendengar lawan, dan bertindak balas secara langsung. Tidak seperti audisi muzik, jarang ada karya tersedia yang dipoles untuk dijadikan sandaran. Panel menilai pemikiran sebenar: bolehkah kanak-kanak ini menstruktur hujah, menyokongnya dengan alasan, mendengar bantahan dan menjawabnya tanpa panik? Ini laluan untuk pelajar P6 yang mengikuti berita, gemar mempertahankan pendirian, dan tenang apabila dicabar.",
+      ta: "விவாதம் & பொதுப் பேச்சு DSA-Sec தேர்வுகள் பெரும்பாலும் முன்தயாரிப்பின்றி நடக்கின்றன — பள்ளி வேட்பாளருக்கு ஒரு கருத்து அல்லது தலைப்பை குறுகிய தயாரிப்பு நேரத்துடன் தருகிறது, பின்னர் அவர் எப்படி வாதத்தை கட்டமைக்கிறார், எதிராளியைக் கேட்கிறார், உடனடியாக பதிலளிக்கிறார் என்பதைப் பார்க்கிறது. இசை ஆடிஷனைப் போலல்லாமல், சார்ந்திருக்க முன்கூட்டியே தயாரித்த துண்டு அரிதாகவே இருக்கும். குழுக்கள் உண்மையான சிந்தனையை மதிப்பிடுகின்றன: இந்த பன்னிரண்டு வயது குழந்தை வாதத்தை கட்டமைக்க முடியுமா, காரணங்களுடன் ஆதரிக்க முடியுமா, எதிர்க்கருத்தைக் கேட்டு பதற்றமின்றி பதிலளிக்க முடியுமா? செய்தியைப் பின்தொடரும், ஒரு நிலைப்பாட்டை வாதிட விரும்பும் P6 மாணவருக்கான வழி இது.",
+    },
+    summary: {
+      en: "Impromptu trial structure, what panels assess in argument-building and rebuttal, focus areas (debate vs speech, language, style), sample interview questions, participating schools.",
+      zh: "即兴 trial 流程、考官在论点构建与反驳上看什么、重点领域（辩论 vs 演讲、语言、风格）、面试题、招生学校。",
+      ms: "Struktur saringan spontan, penilaian pembinaan hujah dan bantahan, bidang fokus, soalan temu duga, sekolah peserta.",
+      ta: "முன்தயாரிப்பற்ற தேர்வு கட்டமைப்பு, வாதம் கட்டமைப்பு மற்றும் மறுப்பு மதிப்பீடு, கவன பகுதிகள், கேள்விகள், பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Nan Hua High School",
+      "Anglo-Chinese School (Barker Road)",
+      "Maris Stella High School (Secondary)",
+      "CHIJ St. Joseph's Convent",
+      "Mayflower Secondary School",
+      "Assumption English School",
+    ],
+    metaDescription: {
+      en: "Debate & Public Speaking DSA-Sec trial guide for Singapore P6 — what panels assess in impromptu argument, rebuttal, and delivery, sample interview questions, participating schools.",
+      zh: "新加坡 P6 辩论与演讲 DSA-Sec trial 指南——即兴论证、反驳、表达各环节考察重点、面试题、招生学校。",
+      ms: "Panduan saringan DSA-Sec Debat & Ucapan Awam Singapura — penilaian hujah spontan, bantahan, penyampaian, soalan temu duga, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 விவாதம் & பொதுப் பேச்சு DSA-Sec வழிகாட்டி — முன்தயாரிப்பற்ற வாதம், மறுப்பு, வழங்கல் மதிப்பீடு, கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Debate & Public Speaking DSA-Sec trials are run by the school's English Language department or its debate / oratory CCA teachers, sometimes with a senior student debater observing. The format is overwhelmingly impromptu: candidates are given a motion or speaking topic and short preparation time (commonly 10-15 minutes), then speak, take a counter-point, and respond. Some schools run a one-on-one or panel impromptu speech; others stage a short mock-debate with other candidates. There is rarely a prepared set-piece — assuming you can rehearse a polished speech in advance is the most common P6 misread of this talent area. The dimensions below describe what debate and public-speaking trials objectively reward (argument construction, rebuttal and on-the-spot response, use of evidence, delivery and stage presence, listening and teamwork, impromptu composure). They are general to the talent area and are not any single school's published scoring rubric.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Argument construction" },
+          body: {
+            en: "The highest-signal dimension. Panels watch whether the candidate builds a case — a clear stand, two or three distinct reasons, and a line of logic connecting them — or simply asserts an opinion loudly. A twelve-year-old who says \"I support this for three reasons: first... second... and the strongest is...\" and develops each one is signalling debate-track readiness. Repeating the same point in different words, or listing feelings instead of reasons, reads as raw and untrained. The structure matters more than the vocabulary.",
+          },
+        },
+        {
+          label: { en: "Rebuttal and on-the-spot response" },
+          body: {
+            en: "The single most under-prepared component, and the one that separates a speaker from a debater. After the candidate speaks, the panel or an opposing candidate raises a counter-point. Does the child actually engage it — name the objection, then answer it — or do they ignore it and return to their script? A candidate who says \"You said the policy is too expensive, but the cost is one-off while the benefit is permanent\" outscores one who repeats their opening. Responding to what was just said, not to what they prepared, is the skill panels prize most.",
+          },
+        },
+        {
+          label: { en: "Use of evidence and examples" },
+          body: {
+            en: "Strong candidates support claims with something concrete — a real example, a comparison, a consequence traced step by step. \"Plastic is bad for the environment\" is an assertion; \"single-use plastic takes centuries to break down, so a bag I throw away today outlives me\" is an argument with evidence. P6 candidates rarely reach for specifics under time pressure; those who do — even one well-chosen example — stand out sharply. Evidence need not be statistics; a vivid, logical illustration counts.",
+          },
+        },
+        {
+          label: { en: "Delivery and stage presence" },
+          body: {
+            en: "Panels read voice and body: does the candidate project to the room, vary their pace, pause for emphasis, and hold eye contact, or do they rush through staring at the floor? Composure under nerves matters more than theatrical polish. A clear, measured speaker who occasionally stumbles but recovers calmly outscores a fast, fluent one who never connects with the room. Confidence that listens beats confidence that performs.",
+          },
+        },
+        {
+          label: { en: "Listening and teamwork" },
+          body: {
+            en: "Where the trial involves other candidates — a paired speech, a mock-debate, or a group discussion — panels watch whether the candidate listens and works with others or steamrolls them. Debate is a four-year CCA built on teams; a candidate who talks over peers, ignores their points, or hoards speaking time is a coachability red flag. One who references a teammate's argument, hands off cleanly, and lets others finish a thought signals the temperament debate coaches want.",
+          },
+        },
+        {
+          label: { en: "Impromptu composure" },
+          body: {
+            en: "The defining test of this talent area. Given an unfamiliar topic and ten minutes, can the candidate organise a coherent response and deliver it without freezing? Panels are not expecting a finished argument — they are watching how the child handles not knowing. A candidate who takes a breath, picks a clear stand, and reasons aloud — even imperfectly — outscores one who has memorised a speech but falls apart when the topic is not the one they rehearsed. The most common reason a strong-on-paper applicant underperforms is freezing here.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Debate vs public speaking" },
+          body: {
+            en: "Some schools run their DSA around competitive debate (structured motions, rebuttal, team rounds), others around public speaking and oratory (individual prepared or impromptu speeches, no opponent). The skills overlap but the emphasis differs: debate weights clash and rebuttal heavily, while public speaking weights structure, delivery, and audience connection. Check whether the target school's CCA is a Debating Society, a Public Speaking / Oratorical club, or both — and prepare for the format the school actually assesses. Preparing for a polished solo speech when the trial is a live mock-debate is a common and costly mismatch.",
+          },
+        },
+        {
+          position: { en: "Impromptu vs prepared" },
+          body: {
+            en: "The trial is most often impromptu, but a few schools ask for a short prepared speech as a warm-up or interview opener. Even where a prepared element exists, the impromptu segment carries the weight — it is where panels see whether the thinking is the child's own. The highest-leverage preparation is not writing one perfect speech; it is training the habit of taking any topic, picking a stand within thirty seconds, and reasoning aloud. A candidate fluent only in their one rehearsed piece is exposed the moment the topic changes.",
+          },
+        },
+        {
+          position: { en: "English vs mother-tongue debate" },
+          body: {
+            en: "Most debate DSA trials run in English, but several SAP and Chinese-stream schools may also recruit for Chinese-language debate and oratory. The reasoning skills transfer across languages, but the vocabulary of argument, idiom, and register do not — a strong English debater is not automatically a strong Mandarin debater. Decide early which language the child will compete in, confirm the school offers a DSA route in that language, and prepare in that language specifically.",
+          },
+        },
+        {
+          position: { en: "Delivery style — persuasion vs precision" },
+          body: {
+            en: "Panels see two recognisable styles: the persuasive speaker who moves a room with warmth and conviction, and the precise speaker who wins on tight logic and clean structure. Neither is correct; the strongest candidates know which is their natural mode and lean into it rather than imitating a style they have seen rewarded online. A child forcing aggressive, hand-chopping delivery they have copied from a debate-final clip usually reads as performed. Authentic conviction, in whatever register suits the child, outscores borrowed intensity.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Schools differ in which of these they emphasise, and the labels above are focus areas, not fixed audition tracks. Confirm three things from each target school's 2026 DSA brief before locking preparation: (1) whether the CCA and trial centre on competitive debate, public speaking / oratory, or both; (2) the language of assessment — English, Mandarin, or a choice; (3) whether any prepared element is required alongside the impromptu segment. Where a school recruits for Chinese-language debate, Higher Chinese expectations may also apply. When in doubt, email the school's DSA coordinator — the format is rarely as standardised as music or sport DSA, and a wrong assumption costs the most preparation time here.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why debate?" },
+          subtext: {
+            en: "Panels want a specific reason this child is drawn to argument and speaking — not \"because I'm good at talking.\"",
+          },
+          approach: {
+            en: "Open with one concrete moment — a discussion, an argument you changed your mind in, a speech you watched — then connect it to why you want to do this.",
+          },
+          template: {
+            en: "In P5 I argued in class that our recycling drive wasn't working, and a friend changed my mind with one point I hadn't thought of. I realised I liked being wrong if it meant getting closer to the truth — that's what debate is, and that's why I want it.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the school's debate or speaking programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific item — the school's debating society, a competition record you read about, a teacher or showcase you encountered at the open house.",
+          },
+          template: {
+            en: "I went to your open house and sat in on the debating society's demo round. The seniors weren't just loud — they listened and answered each other precisely. That's the kind of debating I want to learn, not the shouting kind.",
+          },
+        },
+        {
+          question: { en: "Tell us about a topic you've changed your mind on." },
+          subtext: {
+            en: "Tests intellectual honesty and whether the candidate reasons rather than defends positions blindly.",
+          },
+          approach: {
+            en: "Pick a real example, explain what you used to think, what shifted it, and what you think now.",
+          },
+          template: {
+            en: "I used to think homework should be banned. Then I read why spaced practice helps memory, and I realised the problem isn't homework — it's badly designed homework. Now I'd argue for less but better, which is a harder position to defend, and that's why it's more honest.",
+          },
+        },
+        {
+          question: { en: "What's a current issue you've been following, and where do you stand?" },
+          subtext: {
+            en: "Panels want depth on one issue — the actors, the tensions, the candidate's developing view — not a list of headlines.",
+          },
+          approach: {
+            en: "Name one issue you genuinely follow, show you understand both sides, then state your own reasoned view.",
+          },
+          template: {
+            en: "I've been following the debate over AI in schools. One side says it helps students learn faster; the other worries they stop thinking for themselves. I lean towards allowing it but teaching students to check its answers — because the skill we'll need isn't avoiding AI, it's not trusting it blindly.",
+          },
+        },
+        {
+          question: { en: "If someone gave you a strong point you couldn't answer, what would you do?" },
+          subtext: {
+            en: "Tests composure and honesty under pressure — debate panels fear candidates who bluff or freeze.",
+          },
+          approach: {
+            en: "Be honest. Show you'd acknowledge it, find the best response you can, and not pretend.",
+          },
+          template: {
+            en: "I'd admit it's a strong point — pretending it isn't only makes me look worse. Then I'd look for the part of my case it doesn't actually touch, and argue from there. Even in a real round, conceding one point honestly is better than defending everything badly.",
+          },
+        },
+        {
+          question: { en: "How do you balance debate training with your schoolwork?" },
+          subtext: {
+            en: "Schools fear DSA debaters who flame out academically.",
+          },
+          approach: {
+            en: "Describe a real routine, not a promise.",
+          },
+          template: {
+            en: "I read the news at breakfast and finish homework before training so I'm not rushing it later. Following current affairs feels like study to me anyway — it's where half my debate examples come from.",
+          },
+        },
+        {
+          question: { en: "If our school and another both offer you a place, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually accept.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one, justify it with one specific reason about the debate or speaking programme.",
+          },
+          template: {
+            en: "Honestly, your school — your debating society competes in the national rounds every year and trains four days a week. That's more competition exposure than I'd get anywhere else, and exposure is how debaters actually improve.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Nan Hua High School",
+          talentArea: { en: "Debate & Public Speaking (incl. Chinese-language), DSA-Sec" },
+          context: {
+            en: "SAP school with a strong bilingual debate and oratory tradition, and may also offer a Chinese-language debate route (confirm in the brief). Trial commonly impromptu — motion or topic with short preparation, then speak and respond. Confirm language option in the school brief.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          talentArea: { en: "Debate & Public Speaking (Boys), DSA-Sec" },
+          context: {
+            en: "Established debating and public-speaking CCA tradition. Trial typically includes an impromptu speaking component plus interview; pipeline continues into the ACS family's strong upper-school debate culture.",
+          },
+        },
+        {
+          name: "Maris Stella High School (Secondary)",
+          talentArea: { en: "Debate & Public Speaking (Boys, incl. Chinese-language), DSA-Sec" },
+          context: {
+            en: "SAP school. Recruits for debate and speech, and may also offer a Chinese-language route (confirm in the brief). Higher Chinese expectations may apply for the Chinese-language route. Trial is impromptu-led.",
+          },
+        },
+        {
+          name: "St. Gabriel's Secondary School",
+          talentArea: { en: "Public Speaking & Debate (Boys), DSA-Sec" },
+          context: {
+            en: "Lasallian boys' school with a public-speaking and debate CCA. Trial typically an impromptu speech or mock-debate with interview.",
+          },
+        },
+        {
+          name: "CHIJ St. Joseph's Convent",
+          talentArea: { en: "Debate & Public Speaking (Girls), DSA-Sec" },
+          context: {
+            en: "CHIJ girls' school with debate and oratory CCA. Trial commonly impromptu — motion or topic with short prep, then speak and field a counter-point.",
+          },
+        },
+        {
+          name: "CHIJ Katong Convent",
+          talentArea: { en: "Debate & Public Speaking (Girls), DSA-Sec" },
+          context: {
+            en: "CHIJ girls' school. Debate and public-speaking CCA with impromptu-led trial and interview component.",
+          },
+        },
+        {
+          name: "CHIJ Secondary (Toa Payoh)",
+          talentArea: { en: "Debate & Public Speaking (Girls), DSA-Sec" },
+          context: {
+            en: "CHIJ girls' school. Recruits for debate and public speaking; trial typically impromptu speaking with response to a counter-point.",
+          },
+        },
+        {
+          name: "Mayflower Secondary School",
+          talentArea: { en: "Debate & Public Speaking, DSA-Sec" },
+          context: {
+            en: "Neighbourhood school with an active debate and public-speaking CCA. Trial commonly impromptu — short preparation, then speak and respond. A strong route for the neighbourhood-school candidate without prior competition record.",
+          },
+        },
+        {
+          name: "Hougang Secondary School",
+          talentArea: { en: "Debate & Public Speaking, DSA-Sec" },
+          context: {
+            en: "Neighbourhood school recruiting for debate and oratory. Trial is impromptu-led; potential is assessed even without prior experience.",
+          },
+        },
+        {
+          name: "Whitley Secondary School",
+          talentArea: { en: "Debate & Public Speaking, DSA-Sec" },
+          context: {
+            en: "Neighbourhood school with a public-speaking and debate CCA. Trial typically an impromptu speech or short mock-debate plus interview.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Build the impromptu habit, not a single speech. Each evening, hand the child a random topic (\"should phones be allowed in primary school?\") and give ten minutes to prepare a one-minute stand-with-three-reasons response, then deliver it. The trainable skill is taking any topic and reasoning aloud — not memorising one polished piece. Vary topics across school, sport, environment, technology, and everyday fairness.",
+            },
+            {
+              en: "Confirm the format and language from each target school's 2026 DSA brief. Check whether the CCA and trial centre on competitive debate, public speaking, or both, and whether assessment is in English, Mandarin, or a choice. Email the DSA coordinator if the brief is unclear — debate DSA is far less standardised than music or sport, and a wrong assumption wastes the most preparation time. Confirm any CCA records, external competition results, or oratory programme participation are correctly logged for the portal.",
+            },
+            {
+              en: "Train rebuttal specifically. After the child speaks, raise one counter-point and require them to name it and answer it — \"you said X, but...\" — before continuing. Rebuttal is the most under-practised and highest-signal skill, and most children default to ignoring the counter-point and repeating their script. Do this until engaging the objection becomes automatic.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Stop drilling new content; rehearse composure. In the final week, the gain is in handling nerves and unfamiliar topics calmly, not in learning more arguments. Run a few relaxed impromptu rounds on topics the child has never seen, and praise the calm recovery, not the polish.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire, and whether anything (a prepared speech, an ID, current-affairs notes) is required. Some trials open with a short prepared element before the impromptu segment — check the brief twice and email to confirm anything ambiguous.",
+            },
+            {
+              en: "One round in front of an unfamiliar adult. Have the child deliver one impromptu response to someone they've never spoken in front of. The unfamiliar listener simulates the panel far better than a parent and surfaces nerves while there's still time to settle them.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Light breakfast and warm water. Cold drinks tighten the voice; a warm drink and a light meal 90 minutes before help. Skim a news headline or two on the way — a fresh current-affairs example can be the difference in an impromptu round.",
+            },
+            {
+              en: "Drop off, don't coach at the door. Last-minute instructions raise anxiety. A simple \"pick a clear stand and back it with reasons\" is enough; over-briefing in the lobby reads as pressure and shows in the room.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What topic did they give you?\" — let the child talk. Reconstructing every point waits 24 hours, and the impromptu nature means there was no perfect answer to miss.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no clear plan — there are still real moves, because debate DSA rewards a trainable habit more than accumulated polish. Do not try to write and memorise speeches; in an impromptu trial that backfires the moment the topic isn't yours. Instead, run the same drill twice a day: hand the child a random topic, give two minutes, and have them deliver a stand plus three reasons aloud. The single highest-leverage skill is picking a clear position fast and reasoning out loud without freezing, and that muscle moves measurably in a week. Add one rebuttal rep each round — raise a counter-point and make them name it and answer it. For current affairs, pick one issue the child already cares about and go deep on that one rather than skimming many. Some families bring in a debate coach at this stage; a good one can sharpen structure and rebuttal habits quickly, but no coach installs in three sessions the composure that comes from repeated reps at home. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  "malay-language": {
+    slug: "malay-language",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Malay Language", zh: "马来文", ms: "Bahasa Melayu", ta: "மலாய் மொழி" },
+    hook: {
+      en: "Malay Language DSA — what schools (and MLEP centres) actually look for in a young Malay-language talent.",
+      zh: "马来文 DSA——学校与 MLEP 中心校究竟在挑什么样的马来文苗子",
+      ms: "DSA Bahasa Melayu — apa yang sekolah (dan pusat MLEP) sebenarnya cari pada bakat muda bahasa Melayu.",
+      ta: "மலாய் மொழி DSA — பள்ளிகளும் MLEP மையங்களும் இளம் மலாய் மொழித் திறமையில் உண்மையில் எதைத் தேடுகின்றன.",
+    },
+    intro: {
+      en: "Malay Language DSA-Sec covers two related but distinct situations. The first is general Malay-language talent — a candidate who speaks and writes Malay with unusual fluency, loves Malay literature and culture, and applies to a school that recognises Malay Language as a DSA talent area. The second is the Malay Language Elective Programme (MLEP-Sec), a two-year mother-tongue elective that, at secondary level, runs at three centre schools — Anderson Secondary, Bukit Panjang Government High, and Tanjong Katong Secondary. MLEP-Sec itself is entered in Secondary 3 on the strength of Sec 2 Malay results, not at P6 — but families aiming for that pathway often choose a centre school early, and the DSA-Sec assessment for Malay talent reads for the same qualities the programme nurtures: oral fluency, written expression, and genuine interest in Malay literature and culture. This page covers both.",
+      zh: "马来文 DSA-Sec 包含两种相关但不同的情形。一是一般马来文才能——口语书写格外流利、热爱马来文学与文化、申请把马来文列为 DSA 才艺的学校。二是马来文特选课程 MLEP-Sec，这是为期两年的母语选修课，中学阶段在三所中心校开设：Anderson Secondary、Bukit Panjang Government High、Tanjong Katong Secondary。MLEP-Sec 本身在中三入读、依据中二马来文成绩，并非小六——但志在此路线的家庭常会提早选中心校，而马来文才能的 DSA-Sec 评估，看重的正是这门课程所培养的素质：口语流利、书面表达、对马来文学与文化的真兴趣。本页两种情形都涵盖。",
+      ms: "DSA-Sec Bahasa Melayu merangkumi dua keadaan yang berkaitan tetapi berbeza. Pertama, bakat bahasa Melayu am — calon yang bertutur dan menulis dalam bahasa Melayu dengan kefasihan luar biasa, mencintai kesusasteraan dan budaya Melayu, serta memohon ke sekolah yang mengiktiraf Bahasa Melayu sebagai bidang bakat DSA. Kedua, Program Elektif Bahasa Melayu (MLEP-Sec), sebuah elektif bahasa ibunda dua tahun yang, di peringkat menengah, dijalankan di tiga sekolah pusat — Anderson Secondary, Bukit Panjang Government High, dan Tanjong Katong Secondary. MLEP-Sec sendiri dimasuki pada Menengah 3 berdasarkan keputusan Bahasa Melayu Menengah 2, bukan pada darjah 6 — tetapi keluarga yang menyasarkan laluan itu sering memilih sekolah pusat lebih awal, dan penilaian DSA-Sec untuk bakat Melayu menilai kualiti yang sama yang dipupuk oleh program ini: kefasihan lisan, ekspresi penulisan, dan minat tulen terhadap kesusasteraan serta budaya Melayu. Halaman ini merangkumi kedua-duanya.",
+      ta: "மலாய் மொழி DSA-Sec தொடர்புடைய ஆனால் வேறுபட்ட இரு சூழ்நிலைகளை உள்ளடக்கியது. முதலாவது பொது மலாய் மொழித் திறமை — மலாய் மொழியை அசாதாரண சரளத்துடன் பேசி எழுதி, மலாய் இலக்கியத்தையும் பண்பாட்டையும் விரும்பி, மலாய் மொழியை DSA திறமைப் பகுதியாக அங்கீகரிக்கும் பள்ளியில் விண்ணப்பிக்கும் மாணவர். இரண்டாவது மலாய் மொழி தேர்வுத் திட்டம் (MLEP-Sec), இது மூன்று மைய பள்ளிகளில் நடத்தப்படும் இரண்டாண்டு தாய்மொழித் தேர்வுப் பாடம் — Anderson Secondary, Bukit Panjang Government High, Tanjong Katong Secondary. MLEP-Sec ஆறாம் ஆண்டில் (P6) அல்ல, இடைநிலை 2 (Sec 2) மலாய் முடிவுகளின் அடிப்படையில் இடைநிலை 3 (Sec 3)-இல் சேரப்படுகிறது — ஆனால் அந்தப் பாதையை இலக்காகக் கொண்ட குடும்பங்கள் பெரும்பாலும் முன்கூட்டியே ஒரு மைய பள்ளியைத் தேர்வு செய்கின்றன, மேலும் மலாய் திறமைக்கான DSA-Sec மதிப்பீடு இந்தத் திட்டம் வளர்க்கும் அதே குணங்களை மதிப்பிடுகிறது: வாய்மொழி சரளம், எழுத்து வெளிப்பாடு, மலாய் இலக்கியம் மற்றும் பண்பாட்டில் உண்மையான ஆர்வம். இந்தப் பக்கம் இரண்டையும் உள்ளடக்கியது.",
+    },
+    summary: {
+      en: "Two Malay-language DSA situations (general talent + MLEP-Sec centres), what the oral and written assessments read for, sample interview questions, and the eight schools offering Malay Language as a DSA talent area.",
+      zh: "两种马来文 DSA 情形（一般才能 + MLEP-Sec 中心校）、口试与笔试的评估重点、面试题样、以及把马来文列为 DSA 才艺的八所学校。",
+      ms: "Dua situasi DSA bahasa Melayu (bakat am + pusat MLEP-Sec), apa yang dinilai oleh penilaian lisan dan bertulis, contoh soalan temu duga, dan lapan sekolah yang menawarkan Bahasa Melayu sebagai bidang bakat DSA.",
+      ta: "இரு மலாய் மொழி DSA சூழ்நிலைகள் (பொது திறமை + MLEP-Sec மையங்கள்), வாய்மொழி மற்றும் எழுத்து மதிப்பீடுகள் எதை மதிப்பிடுகின்றன, மாதிரி நேர்காணல் கேள்விகள், மலாய் மொழியை DSA திறமைப் பகுதியாக வழங்கும் எட்டு பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Tanjong Katong Secondary School",
+      "Bukit Panjang Government High School",
+      "Anderson Secondary School",
+      "Raffles Institution (Secondary)",
+      "Raffles Girls' School (Secondary)",
+      "Mayflower Secondary School",
+    ],
+    metaDescription: {
+      en: "Malay Language DSA-Sec guide for Singapore P6 — general Malay talent vs the Malay Language Elective Programme (MLEP-Sec) centres, oral and written assessment focus, interview questions, participating schools.",
+      zh: "新加坡 P6 马来文 DSA-Sec 指南——一般马来文才能与马来文特选课程 MLEP-Sec 中心校、口试与笔试重点、面试题、招生学校。",
+      ms: "Panduan DSA-Sec Bahasa Melayu Singapura — bakat Melayu am berbanding pusat Program Elektif Bahasa Melayu (MLEP-Sec), fokus penilaian lisan dan bertulis, soalan temu duga, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 மலாய் மொழி DSA-Sec வழிகாட்டி — பொது மலாய் திறமை vs மலாய் மொழி தேர்வுத் திட்டம் (MLEP-Sec) மையங்கள், வாய்மொழி மற்றும் எழுத்து மதிப்பீட்டு கவனம், நேர்காணல் கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Two situations sit under Malay Language DSA-Sec, and it helps to separate them. The first is the general case: a school recognises Malay Language as a DSA talent area and assesses a candidate's oral fluency, written expression, and interest in Malay literature and culture, usually through an oral interview in Malay plus a short written task. The second is the Malay Language Elective Programme route. MLEP-Sec is a two-year mother-tongue elective offered at three secondary centre schools — Anderson Secondary School, Bukit Panjang Government High School, and Tanjong Katong Secondary School — and is formally entered in Secondary 3 based on Sec 2 Malay results, not via P6 DSA. Families aiming for that pathway often use DSA-Sec to enter a centre school early. No school publishes a Malay-language DSA scoring rubric; the six dimensions below describe the qualities a Malay-language assessment objectively reads for, drawn from the published aims of MLEP-Sec and the general nature of mother-tongue talent assessment — they are not any single school's rubric.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Oral fluency and natural expression" },
+          body: {
+            en: "The first thing any Malay-language panel reads is whether the candidate speaks Malay naturally — not translated-from-English Malay, not classroom-formula Malay, but the rhythm of a child who actually uses the language at home and in life. Panels notice pronunciation, the unforced use of idiom and peribahasa where they fit, and the ability to keep a conversation going when the topic shifts. A candidate who answers in full, connected sentences and recovers smoothly from an unexpected question outscores one who gives short, correct, but mechanical replies.",
+          },
+        },
+        {
+          label: { en: "Written expression and command of register" },
+          body: {
+            en: "The written task — a short essay or response — is read for voice and control, not just spelling and grammar. Panels look for a candidate who can hold a single line of thought across a paragraph, choose words with some precision, and shift register appropriately (a formal letter sounds different from a personal reflection). Templated, tuition-centre essays read as a coaching project; writing that sounds like a real twelve-year-old with something to say reads as talent.",
+          },
+        },
+        {
+          label: { en: "Interest in Malay literature and culture" },
+          body: {
+            en: "Malay-language talent is inseparable from interest in Malay literature (sastera) and culture. Panels ask what the candidate reads — a sajak, a cerpen, a novel, a pantun they remember — and listen for a genuine, specific reaction rather than a recited summary. A candidate who can name one work and say why a line or character stayed with them signals the literary curiosity that MLEP-Sec is built to develop. Generic praise (\"it was meaningful\") underperforms one specific, honest reaction.",
+          },
+        },
+        {
+          label: { en: "Passion for the mother tongue" },
+          body: {
+            en: "Schools recruiting Malay-language talent — and especially the MLEP centre schools — look for candidates who treat Malay as something they want to grow in, not a subject they happen to score in. Panels read for this in how a candidate talks about the language itself: whether they notice how a word works, enjoy a turn of phrase, or have a view on why keeping the language strong matters. This motivation is what predicts a student who will thrive in a higher-level Malay programme.",
+          },
+        },
+        {
+          label: { en: "Bilingual communication" },
+          body: {
+            en: "A core aim of MLEP-Sec is to develop students who are effectively bilingual. Panels value a candidate who is strong in Malay without being weak in English — someone who can move between the two languages, explain a Malay concept to an English speaker, or discuss why something reads differently in each language. Bilingual ease signals a student who can carry Malay into wider settings, which is exactly the profile these schools are trying to build.",
+          },
+        },
+        {
+          label: { en: "Spontaneous response under follow-up" },
+          body: {
+            en: "The hardest part of any oral assessment is the second and third question — when the panel pushes past the rehearsed answer. Panels deliberately ask an unscripted follow-up to see whether the candidate can think aloud in Malay, hold a view, and adjust it when challenged. A candidate who can say \"saya tak pernah terfikir begitu, tetapi...\" and continue reasoning signals real command. Practising not the first answer but how to extend it under pressure is what separates DSA candidates from PSLE-oral preparation.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "MLEP centre-school pathway" },
+          body: {
+            en: "MLEP-Sec — the Malay Language Elective Programme at secondary level — runs at three centre schools: Anderson Secondary School, Bukit Panjang Government High School, and Tanjong Katong Secondary School. It is a two-year programme, formally entered in Secondary 3 on the strength of Sec 2 Malay results (typically a strong grade in Malay or Higher Malay), and students offer Literature in Malay. It is not a P6 DSA programme. What P6 families can do is use DSA-Sec to enter one of these centre schools early, where the Malay-language environment, literature exposure, and teacher expertise build the foundation MLEP-Sec later draws on. Treat the centre-school choice as a long-game decision, and verify each school's current DSA talent areas and the MLEP entry criteria directly before committing.",
+          },
+        },
+        {
+          position: { en: "Oral interview focus" },
+          body: {
+            en: "For general Malay-language DSA, the oral interview in Malay carries the most signal. Expect a live conversation: an opener (introduce yourself, a book you've read, something about your family or community), then follow-up questions that probe how you think, not just what you know. Preparation should build the ability to speak in connected, natural Malay for several minutes, hold an opinion, and recover from an unexpected question — far more than memorising set answers, which panels detect quickly.",
+          },
+        },
+        {
+          position: { en: "Written and literature focus" },
+          body: {
+            en: "Some schools include a short written component — an essay or a response to a passage — alongside the oral. This reads for written voice, control of register, and the ability to sustain one idea across a paragraph. Candidates aiming at the MLEP pathway benefit from genuine reading of Malay literature (sastera): poems (sajak), short stories (cerpen), and novels, with a habit of forming a personal reaction. Reading breadth beyond the textbook is the highest-leverage long-game investment for a Malay-language DSA family.",
+          },
+        },
+        {
+          position: { en: "Cultural knowledge focus" },
+          body: {
+            en: "Malay-language talent is bound up with cultural fluency. Panels may ask about Malay customs (adat), festivals, proverbs (peribahasa), or how a tradition connects to modern life. The signal is specificity: a candidate who picks one custom or one peribahasa and explains why it matters outscores vague appreciation. This is not a memory test — it is whether the candidate lives inside the culture enough to have a view on it.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "P6 candidates are not expected to commit to a specialism — but the interests they show in the interview shape how a school develops them. The MLEP pathway in particular is a Secondary 3 decision made at one of three centre schools, so a P6 family's real choice is which environment to enter, not which programme to enrol in yet. State your interests honestly; panels see through over-rehearsed answers, and the qualities that matter — fluency, written voice, literary curiosity, and love of the language — cannot be faked in a single interview.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you want to study Malay at a higher level?" },
+          subtext: {
+            en: "Tests genuine motivation — the central question for any Malay-language or MLEP candidate.",
+          },
+          approach: {
+            en: "Say what the language gives you that a regular subject doesn't — connection, identity, enjoyment — with one concrete example.",
+          },
+          template: {
+            en: "Di rumah, kami bertutur dalam bahasa Melayu setiap hari, dan saya suka cara satu peribahasa boleh menyimpan satu pengajaran penuh dalam beberapa patah perkataan. Saya mahu belajar bahasa Melayu pada tahap yang lebih tinggi supaya saya boleh membaca sastera Melayu dengan lebih mendalam, bukan sekadar untuk peperiksaan.",
+          },
+        },
+        {
+          question: { en: "Tell us about a Malay book, poem, or story you've read recently." },
+          subtext: {
+            en: "Tests literary interest — a recited summary fails; a personal reaction succeeds.",
+          },
+          approach: {
+            en: "Name the work, then say what one line or character did to you, and why.",
+          },
+          template: {
+            en: "Saya baru membaca cerpen tentang seorang nenek yang menunggu cucunya pulang. Satu ayat tentang tangannya yang masih menyimpan bau dapur terus melekat dalam fikiran saya — ia mengingatkan saya pada nenek saya sendiri. Selepas itu saya mula perasan bagaimana penulis memilih butiran kecil untuk menyentuh perasaan.",
+          },
+        },
+        {
+          question: { en: "Speak to us in Malay for a minute about your family or your weekend." },
+          subtext: {
+            en: "Tests oral fluency and natural expression under a relaxed, open prompt.",
+          },
+          approach: {
+            en: "Speak in connected, natural sentences — tell a small real story rather than listing facts.",
+          },
+          template: {
+            en: "Hujung minggu lepas, saya dan keluarga balik ke rumah datuk di Geylang. Datuk saya suka bercerita tentang zaman dahulu, dan kali ini dia cerita pasal pasar lama yang sudah tiada. Saya banyak belajar bahasa Melayu lama daripada dia — perkataan yang tak ada dalam buku teks.",
+          },
+        },
+        {
+          question: { en: "Can you explain a Malay proverb (peribahasa) and what it means in real life?" },
+          subtext: {
+            en: "Tests cultural knowledge and the ability to connect tradition to modern life.",
+          },
+          approach: {
+            en: "Pick one peribahasa, explain its literal image, then apply it to a real situation.",
+          },
+          template: {
+            en: "\"Sedikit-sedikit, lama-lama menjadi bukit.\" Maksudnya, perkara kecil yang dibuat berterusan akhirnya menjadi besar. Saya guna prinsip ini untuk membaca — setiap malam saya baca sedikit dalam bahasa Melayu, dan selepas setahun, perbendaharaan kata saya jauh lebih luas.",
+          },
+        },
+        {
+          question: { en: "How do you use both Malay and English in your daily life?" },
+          subtext: {
+            en: "Tests bilingual communication — a core aim of the MLEP pathway.",
+          },
+          approach: {
+            en: "Describe how you move between languages, and show comfort in both rather than choosing a side.",
+          },
+          template: {
+            en: "Di rumah saya bercakap bahasa Melayu, di sekolah kebanyakannya bahasa Inggeris. Kadang-kadang saya terjemah cerita Melayu kepada kawan yang tak faham, dan saya perasan ada perkataan yang susah diterjemah — perasaan dalam bahasa Melayu kadang lebih halus. Saya rasa itu yang buat saya minat kedua-dua bahasa.",
+          },
+        },
+        {
+          question: { en: "If we gave you a topic now and one minute to think, could you speak about it?" },
+          subtext: {
+            en: "Tests spontaneous response and thinking aloud in Malay under pressure.",
+          },
+          approach: {
+            en: "Don't freeze — take the minute, structure two or three points, and speak naturally even if imperfect.",
+          },
+          template: {
+            en: "(Topik: kepentingan menjaga bahasa ibunda) Saya rasa menjaga bahasa ibunda penting kerana ia menyimpan budaya kita. Pertama, banyak nilai dan cerita keluarga hanya wujud dalam bahasa Melayu. Kedua, jika kita hilang bahasa, kita hilang sebahagian daripada identiti. Sebab itu saya rasa belajar bahasa Melayu bukan sekadar subjek.",
+          },
+        },
+        {
+          question: { en: "If both this school and another school offer you a place, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure and how seriously the candidate has thought about the choice.",
+          },
+          approach: {
+            en: "Pick one school and give one specific, true reason — don't dodge.",
+          },
+          template: {
+            en: "Jujurnya, sekolah ini. Saya tahu sekolah ini ada persekitaran bahasa Melayu yang kuat dan menawarkan program elektif Bahasa Melayu, dan itulah yang saya cari untuk masa depan saya. Kalau sekolah lain panggil dahulu, saya tetap akan tunggu jawapan daripada sekolah ini.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Tanjong Katong Secondary School",
+          talentArea: { en: "Malay Language; MLEP-Sec centre" },
+          context: {
+            en: "One of the three MLEP-Sec centre schools. Hosts the Malay Language Elective Programme (a two-year mother-tongue elective entered in Sec 3), making it a strong long-game environment for a Malay-language-strong candidate. Verify current DSA talent areas and MLEP entry criteria directly with the school.",
+          },
+        },
+        {
+          name: "Bukit Panjang Government High School",
+          talentArea: { en: "Malay Language; MLEP-Sec centre" },
+          context: {
+            en: "One of the three MLEP-Sec centre schools. Runs the Malay Language Elective Programme alongside its broader mother-tongue offerings. A natural choice for families aiming at the higher-level Malay pathway. Confirm the school's current DSA talent areas before applying.",
+          },
+        },
+        {
+          name: "Anderson Secondary School",
+          talentArea: { en: "Malay Language; MLEP-Sec centre" },
+          context: {
+            en: "One of the three MLEP-Sec centre schools. Hosts the Malay Language Elective Programme at secondary level. Verify the school's current DSA talent areas and the MLEP entry route directly.",
+          },
+        },
+        {
+          name: "Raffles Institution (Secondary)",
+          talentArea: { en: "Malay Language, IP" },
+          context: {
+            en: "IP school. Recognises Malay Language among its DSA talent areas. Not an MLEP centre — entry here is on general Malay-language talent. Confirm the current talent list and assessment format on RI's DSA-Sec page.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          talentArea: { en: "Malay Language (Girls), IP" },
+          context: {
+            en: "IP school. Recognises Malay Language as a DSA talent area. Not an MLEP centre — entry is on general Malay-language talent. Verify the current talent areas and format on RGS's DSA page.",
+          },
+        },
+        {
+          name: "Mayflower Secondary School",
+          talentArea: { en: "Malay Language" },
+          context: {
+            en: "Recognises Malay Language as a DSA talent area. Not an MLEP centre. Confirm the current talent list and the oral / written assessment format directly with the school.",
+          },
+        },
+        {
+          name: "Evergreen Secondary School",
+          talentArea: { en: "Malay Language" },
+          context: {
+            en: "Recognises Malay Language as a DSA talent area. Not an MLEP centre. Verify the current DSA talent areas and assessment format directly with the school.",
+          },
+        },
+        {
+          name: "Pasir Ris Crest Secondary School",
+          talentArea: { en: "Malay Language" },
+          context: {
+            en: "Recognises Malay Language as a DSA talent area. Not an MLEP centre. Confirm the current talent list and the assessment format directly with the school before applying.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the assessment is still weeks out" },
+          items: [
+            {
+              en: "Build a daily Malay reading habit. Mix sastera (sajak, cerpen, a novel) with Malay news or a quality Malay magazine. Keep a small notebook for words, peribahasa, and lines worth remembering.",
+            },
+            {
+              en: "Practise speaking Malay for a few minutes at a time on open topics — family, weekend, a book, a current issue. The goal is connected, natural speech that survives a follow-up question, not memorised answers.",
+            },
+            {
+              en: "Have your child form a personal reaction to one or two Malay works they can talk about with specifics — a line, a character, why it mattered. This is the single strongest literature signal.",
+            },
+            {
+              en: "If aiming at the MLEP pathway, confirm which of the three centre schools (Anderson, Bukit Panjang Govt High, Tanjong Katong Sec) fits your family, and read the MLEP-Sec entry criteria — remember it is a Sec 3 entry, not a P6 one.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Stop adding new content. Re-read one or two Malay works your child knows well and lightly rehearse the open-conversation prompts — family, a book, why higher-level Malay.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, whether there's a written component and whether materials are provided. Email the teacher-in-charge if anything is unclear.",
+            },
+            {
+              en: "Run one relaxed mock oral in Malay. Record it, watch it back together, and flag any answer that ran long or sounded recited. Natural beats polished.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of assessment" },
+          items: [
+            {
+              en: "Arrive 30-45 minutes early. Let your child read a short Malay passage on the phone to warm up the language before the oral.",
+            },
+            {
+              en: "Eat well beforehand — the oral plus any written task is mentally demanding, and energy loss shows up first in spoken fluency.",
+            },
+            {
+              en: "Drop off, don't hover. Greet the teacher-in-charge, then leave. Over-involved parents are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing they asked you in Malay?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, the Malay-language assessment coming up, no real preparation — there are still real moves. Prioritise three things: (1) speak Malay daily, in connected sentences, on open topics, until natural fluency returns; (2) read one Malay work — a cerpen, a few sajak, or a chapter — closely enough to have a personal reaction you can voice; (3) rehearse the open-conversation questions, focusing on extending an answer under follow-up rather than memorising. Cancel anything that competes with this and with sleep. Some families bring in a Malay-language tutor at this stage to run mock orals and sharpen written expression — useful, but no tutor produces in three sessions the fluency and reading habit that come from years of living in the language. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -12822,6 +14086,10 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "cross-country",
   "canoeing",
   "tchoukball",
+  "uniformed-groups",
+  "science",
+  "debate",
+  "malay-language",
 ];
 
 /**
@@ -12875,6 +14143,10 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   "cross-country": ["track-field", "swimming"],
   canoeing: ["sailing", "swimming"],
   tchoukball: ["netball", "floorball"],
+  "uniformed-groups": ["leadership", "humanities"],
+  science: ["math", "robotics"],
+  debate: ["humanities", "drama"],
+  "malay-language": ["chinese", "humanities"],
 };
 
 /**
