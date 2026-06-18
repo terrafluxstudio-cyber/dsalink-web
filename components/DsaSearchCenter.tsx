@@ -364,7 +364,7 @@ export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }
             <div className="flex flex-wrap items-center justify-around gap-y-2 rounded-2xl border border-slate-200 bg-slate-50/80 px-3 py-7 text-center text-slate-500 shadow-sm sm:flex-nowrap sm:px-5">
               <Stat label={t("ui_stat_schools")} value="147" />
               <VerticalDivider className="hidden sm:block" />
-              <Stat label={t("ui_stat_talents")} value="1,315" />
+              <Stat label={t("ui_stat_talents")} value="1,300+" />
               <VerticalDivider className="hidden sm:block" />
               <Stat label={t("ui_stat_categories")} value="5" />
             </div>
