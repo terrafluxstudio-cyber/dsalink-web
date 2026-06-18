@@ -50,7 +50,10 @@ export type TalentSlug =
   | "uniformed-groups"
   | "science"
   | "debate"
-  | "malay-language";
+  | "malay-language"
+  | "guzheng"
+  | "instrumental-ensembles"
+  | "tamil-language";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -3549,7 +3552,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     ],
     metaDescription: {
       en: "Dance DSA-Sec audition guide for Singapore P6 — what panels assess across Chinese, Indian, Malay, Ballet, and Modern Dance, sample interview questions, participating schools.",
-      zh: "新加坡 P6 舞蹈 DSA-Sec audition 指南——华族/印度/马来/芭蕾/现代舞各舞种考察重点、面试题、招生学校。",
+      zh: "新加坡 P6 舞蹈 DSA-Sec 甄选指南——华族/印度/马来/芭蕾/现代舞各舞种考察重点、面试题、招生学校。",
       ms: "Panduan audisi DSA-Sec Tarian Singapura — apa panel nilai, soalan temu duga, sekolah peserta.",
       ta: "சிங்கப்பூர் P6 நடன DSA-Sec வழிகாட்டி — பல்வேறு வகைகளில் குழு என்ன மதிப்பிடுகிறது, கேள்விகள், பள்ளிகள்.",
     },
@@ -3903,7 +3906,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     ],
     metaDescription: {
       en: "Drama DSA-Sec audition guide for Singapore P6 — what panels assess in monologue, ensemble, and improvisation work, interview questions, participating schools.",
-      zh: "新加坡 P6 戏剧 DSA-Sec audition 指南——独白、群戏、即兴各环节考察重点、面试题、招生学校。",
+      zh: "新加坡 P6 戏剧 DSA-Sec 甄选指南——独白、群戏、即兴各环节考察重点、面试题、招生学校。",
       ms: "Panduan audisi DSA-Sec Drama Singapura — penilaian monolog, ensemble, improvisasi, soalan temu duga, sekolah peserta.",
       ta: "சிங்கப்பூர் P6 நாடக DSA-Sec வழிகாட்டி — மோனோலாக், ensemble, இம்ப்ரோவ் மதிப்பீடு, கேள்விகள், பள்ளிகள்.",
     },
@@ -4257,7 +4260,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     ],
     metaDescription: {
       en: "Visual Arts DSA-Sec audition guide for Singapore P6 — what panels look for in portfolios, on-spot drawing tasks, interview questions, participating schools.",
-      zh: "新加坡 P6 美术 DSA-Sec audition 指南——作品集要求、现场写生、面试题、招生学校。",
+      zh: "新加坡 P6 美术 DSA-Sec 甄选指南——作品集要求、现场写生、面试题、招生学校。",
       ms: "Panduan audisi DSA-Sec Seni Visual Singapura — penilaian portfolio, tugas lukisan, soalan temu duga, sekolah peserta.",
       ta: "சிங்கப்பூர் P6 காட்சிக் கலை DSA-Sec வழிகாட்டி — பணித்தொகுப்பு, வரைதல் பணி, கேள்விகள், பள்ளிகள்.",
     },
@@ -6882,7 +6885,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     ],
     metaDescription: {
       en: "Choir DSA-Sec audition guide for Singapore P6 — prepared-song vs vocal-test-only formats, what coaches assess, sample interview questions, SYF-active participating schools.",
-      zh: "新加坡 P6 合唱团 DSA-Sec audition 指南——备曲 vs 声乐测试格式、评分维度、面试题、SYF 活跃学校。",
+      zh: "新加坡 P6 合唱团 DSA-Sec 甄选指南——备曲 vs 声乐测试格式、评分维度、面试题、SYF 活跃学校。",
       ms: "Panduan uji bakat DSA-Sec Koir Singapura — format, kriteria, soalan, sekolah peserta.",
       ta: "சிங்கப்பூர் P6 பாடகர் குழு DSA-Sec வழிகாட்டி — வடிவம், அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
     },
@@ -7242,7 +7245,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     ],
     metaDescription: {
       en: "Chinese Orchestra DSA-Sec audition guide for Singapore P6 — 2-piece + 5-minute format, sight-reading, instrument-specific advice, SAP and IP participating schools.",
-      zh: "新加坡 P6 华乐 DSA-Sec audition 指南——2 对比曲 + 5 分钟 + 视奏格式、各乐器细节、SAP/IP 招生学校。",
+      zh: "新加坡 P6 华乐 DSA-Sec 甄选指南——2 对比曲 + 5 分钟 + 视奏格式、各乐器细节、SAP/IP 招生学校。",
       ms: "Panduan uji bakat DSA-Sec Orkestra Cina Singapura — format, kriteria, soalan, sekolah peserta.",
       ta: "சிங்கப்பூர் P6 சீன இசைக்குழு DSA-Sec வழிகாட்டி — வடிவம், அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
     },
@@ -9244,7 +9247,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     ],
     metaDescription: {
       en: "Symphonic Band DSA-Sec audition guide for Singapore P6 — 2-piece + scales + sight-read format, instrument-specific advice, SYF-active participating schools.",
-      zh: "新加坡 P6 管乐团 DSA-Sec audition 指南——2 曲 + 音阶 + 视奏格式、各乐器细节、SYF 活跃学校。",
+      zh: "新加坡 P6 管乐团 DSA-Sec 甄选指南——2 曲 + 音阶 + 视奏格式、各乐器细节、SYF 活跃学校。",
       ms: "Panduan uji bakat DSA-Sec Pancaragam Simfoni Singapura — format, kriteria, soalan, sekolah peserta.",
       ta: "சிங்கப்பூர் P6 சிம்போனிக் இசைக்குழு DSA-Sec வழிகாட்டி — வடிவம், அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
     },
@@ -9606,7 +9609,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     ],
     metaDescription: {
       en: "MEP (Music Elective Programme) DSA-Sec audition guide for Singapore P6 — the 5 designated schools, standardised 2-piece + sight-read + aural format, ABRSM context, sample interview questions.",
-      zh: "新加坡 P6 MEP 音乐特选课程 DSA-Sec audition 指南——5 所指定校、标准化 2 曲 + 视奏 + 听音格式、ABRSM 说明、面试题。",
+      zh: "新加坡 P6 MEP 音乐特选课程 DSA-Sec 甄选指南——5 所指定校、标准化 2 曲 + 视奏 + 听音格式、ABRSM 说明、面试题。",
       ms: "Panduan uji bakat DSA-Sec MEP Singapura — 5 sekolah, format, soalan.",
       ta: "சிங்கப்பூர் P6 MEP DSA-Sec வழிகாட்டி — 5 பள்ளிகள், வடிவம், கேள்விகள்.",
     },
@@ -9929,7 +9932,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     ],
     metaDescription: {
       en: "AEP (Art Elective Programme) DSA-Sec audition guide for Singapore P6 — portfolio + on-spot drawing + written reflection + interview format, AEP-designated schools.",
-      zh: "新加坡 P6 AEP 美术特选课程 DSA-Sec audition 指南——作品集 + 现场绘画 + 书面反思 + 面试格式、AEP 指定学校。",
+      zh: "新加坡 P6 AEP 美术特选课程 DSA-Sec 甄选指南——作品集 + 现场绘画 + 书面反思 + 面试格式、AEP 指定学校。",
       ms: "Panduan uji bakat DSA-Sec AEP Singapura — komponen, sekolah peserta.",
       ta: "சிங்கப்பூர் P6 AEP DSA-Sec வழிகாட்டி — வடிவம், பள்ளிகள்.",
     },
@@ -10291,7 +10294,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     ],
     metaDescription: {
       en: "Bicultural Studies DSA-Sec audition guide for Singapore P6 — entry into SAP school BSP pipeline, Higher Chinese / writing / interview format, the 5 MOE-designated schools.",
-      zh: "新加坡 P6 双文化 DSA-Sec audition 指南——进入 SAP 校 BSP 通道、高级华文/写作/面试格式、5 所 MOE 指定校。",
+      zh: "新加坡 P6 双文化 DSA-Sec 甄选指南——进入 SAP 校 BSP 通道、高级华文/写作/面试格式、5 所 MOE 指定校。",
       ms: "Panduan uji bakat DSA-Sec Dwibudaya Singapura — saluran BSP, format, sekolah.",
       ta: "சிங்கப்பூர் P6 இரு கலாச்சார DSA-Sec வழிகாட்டி — BSP வழி, வடிவம், பள்ளிகள்.",
     },
@@ -10606,7 +10609,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     ],
     metaDescription: {
       en: "Humanities DSA-Sec audition guide for Singapore P6 — essay-based format, current-affairs preparation, sample interview questions, schools with humanities and Humanities Programme pipelines.",
-      zh: "新加坡 P6 人文学科 DSA-Sec audition 指南——论文格式、时事准备、面试题、人文通道学校。",
+      zh: "新加坡 P6 人文学科 DSA-Sec 甄选指南——论文格式、时事准备、面试题、人文通道学校。",
       ms: "Panduan uji bakat DSA-Sec Kemanusiaan Singapura — format, sekolah peserta.",
       ta: "சிங்கப்பூர் P6 மனிதவியல் DSA-Sec வழிகாட்டி — வடிவம், பள்ளிகள்.",
     },
@@ -13753,7 +13756,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       en: "Malay Language DSA-Sec covers two related but distinct situations. The first is general Malay-language talent — a candidate who speaks and writes Malay with unusual fluency, loves Malay literature and culture, and applies to a school that recognises Malay Language as a DSA talent area. The second is the Malay Language Elective Programme (MLEP-Sec), a two-year mother-tongue elective that, at secondary level, runs at three centre schools — Anderson Secondary, Bukit Panjang Government High, and Tanjong Katong Secondary. MLEP-Sec itself is entered in Secondary 3 on the strength of Sec 2 Malay results, not at P6 — but families aiming for that pathway often choose a centre school early, and the DSA-Sec assessment for Malay talent reads for the same qualities the programme nurtures: oral fluency, written expression, and genuine interest in Malay literature and culture. This page covers both.",
       zh: "马来文 DSA-Sec 包含两种相关但不同的情形。一是一般马来文才能——口语书写格外流利、热爱马来文学与文化、申请把马来文列为 DSA 才艺的学校。二是马来文特选课程 MLEP-Sec，这是为期两年的母语选修课，中学阶段在三所中心校开设：Anderson Secondary、Bukit Panjang Government High、Tanjong Katong Secondary。MLEP-Sec 本身在中三入读、依据中二马来文成绩，并非小六——但志在此路线的家庭常会提早选中心校，而马来文才能的 DSA-Sec 评估，看重的正是这门课程所培养的素质：口语流利、书面表达、对马来文学与文化的真兴趣。本页两种情形都涵盖。",
       ms: "DSA-Sec Bahasa Melayu merangkumi dua keadaan yang berkaitan tetapi berbeza. Pertama, bakat bahasa Melayu am — calon yang bertutur dan menulis dalam bahasa Melayu dengan kefasihan luar biasa, mencintai kesusasteraan dan budaya Melayu, serta memohon ke sekolah yang mengiktiraf Bahasa Melayu sebagai bidang bakat DSA. Kedua, Program Elektif Bahasa Melayu (MLEP-Sec), sebuah elektif bahasa ibunda dua tahun yang, di peringkat menengah, dijalankan di tiga sekolah pusat — Anderson Secondary, Bukit Panjang Government High, dan Tanjong Katong Secondary. MLEP-Sec sendiri dimasuki pada Menengah 3 berdasarkan keputusan Bahasa Melayu Menengah 2, bukan pada darjah 6 — tetapi keluarga yang menyasarkan laluan itu sering memilih sekolah pusat lebih awal, dan penilaian DSA-Sec untuk bakat Melayu menilai kualiti yang sama yang dipupuk oleh program ini: kefasihan lisan, ekspresi penulisan, dan minat tulen terhadap kesusasteraan serta budaya Melayu. Halaman ini merangkumi kedua-duanya.",
-      ta: "மலாய் மொழி DSA-Sec தொடர்புடைய ஆனால் வேறுபட்ட இரு சூழ்நிலைகளை உள்ளடக்கியது. முதலாவது பொது மலாய் மொழித் திறமை — மலாய் மொழியை அசாதாரண சரளத்துடன் பேசி எழுதி, மலாய் இலக்கியத்தையும் பண்பாட்டையும் விரும்பி, மலாய் மொழியை DSA திறமைப் பகுதியாக அங்கீகரிக்கும் பள்ளியில் விண்ணப்பிக்கும் மாணவர். இரண்டாவது மலாய் மொழி தேர்வுத் திட்டம் (MLEP-Sec), இது மூன்று மைய பள்ளிகளில் நடத்தப்படும் இரண்டாண்டு தாய்மொழித் தேர்வுப் பாடம் — Anderson Secondary, Bukit Panjang Government High, Tanjong Katong Secondary. MLEP-Sec ஆறாம் ஆண்டில் (P6) அல்ல, இடைநிலை 2 (Sec 2) மலாய் முடிவுகளின் அடிப்படையில் இடைநிலை 3 (Sec 3)-இல் சேரப்படுகிறது — ஆனால் அந்தப் பாதையை இலக்காகக் கொண்ட குடும்பங்கள் பெரும்பாலும் முன்கூட்டியே ஒரு மைய பள்ளியைத் தேர்வு செய்கின்றன, மேலும் மலாய் திறமைக்கான DSA-Sec மதிப்பீடு இந்தத் திட்டம் வளர்க்கும் அதே குணங்களை மதிப்பிடுகிறது: வாய்மொழி சரளம், எழுத்து வெளிப்பாடு, மலாய் இலக்கியம் மற்றும் பண்பாட்டில் உண்மையான ஆர்வம். இந்தப் பக்கம் இரண்டையும் உள்ளடக்கியது.",
+      ta: "மலாய் மொழி DSA-Sec தொடர்புடைய ஆனால் வேறுபட்ட இரு சூழ்நிலைகளை உள்ளடக்கியது. முதலாவது பொது மலாய் மொழித் திறமை — மலாய் மொழியை அசாதாரண சரளத்துடன் பேசி எழுதி, மலாய் இலக்கியத்தையும் பண்பாட்டையும் விரும்பி, மலாய் மொழியை DSA திறமைப் பகுதியாக அங்கீகரிக்கும் பள்ளியில் விண்ணப்பிக்கும் மாணவர். இரண்டாவது மலாய் மொழி சிறப்புத் திட்டம் (MLEP-Sec), இது மூன்று மைய பள்ளிகளில் நடத்தப்படும் இரண்டாண்டு தாய்மொழித் தேர்வுப் பாடம் — Anderson Secondary, Bukit Panjang Government High, Tanjong Katong Secondary. MLEP-Sec ஆறாம் ஆண்டில் (P6) அல்ல, இடைநிலை 2 (Sec 2) மலாய் முடிவுகளின் அடிப்படையில் இடைநிலை 3 (Sec 3)-இல் சேரப்படுகிறது — ஆனால் அந்தப் பாதையை இலக்காகக் கொண்ட குடும்பங்கள் பெரும்பாலும் முன்கூட்டியே ஒரு மைய பள்ளியைத் தேர்வு செய்கின்றன, மேலும் மலாய் திறமைக்கான DSA-Sec மதிப்பீடு இந்தத் திட்டம் வளர்க்கும் அதே குணங்களை மதிப்பிடுகிறது: வாய்மொழி சரளம், எழுத்து வெளிப்பாடு, மலாய் இலக்கியம் மற்றும் பண்பாட்டில் உண்மையான ஆர்வம். இந்தப் பக்கம் இரண்டையும் உள்ளடக்கியது.",
     },
     summary: {
       en: "Two Malay-language DSA situations (general talent + MLEP-Sec centres), what the oral and written assessments read for, sample interview questions, and the eight schools offering Malay Language as a DSA talent area.",
@@ -13773,7 +13776,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       en: "Malay Language DSA-Sec guide for Singapore P6 — general Malay talent vs the Malay Language Elective Programme (MLEP-Sec) centres, oral and written assessment focus, interview questions, participating schools.",
       zh: "新加坡 P6 马来文 DSA-Sec 指南——一般马来文才能与马来文特选课程 MLEP-Sec 中心校、口试与笔试重点、面试题、招生学校。",
       ms: "Panduan DSA-Sec Bahasa Melayu Singapura — bakat Melayu am berbanding pusat Program Elektif Bahasa Melayu (MLEP-Sec), fokus penilaian lisan dan bertulis, soalan temu duga, sekolah peserta.",
-      ta: "சிங்கப்பூர் P6 மலாய் மொழி DSA-Sec வழிகாட்டி — பொது மலாய் திறமை vs மலாய் மொழி தேர்வுத் திட்டம் (MLEP-Sec) மையங்கள், வாய்மொழி மற்றும் எழுத்து மதிப்பீட்டு கவனம், நேர்காணல் கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
+      ta: "சிங்கப்பூர் P6 மலாய் மொழி DSA-Sec வழிகாட்டி — பொது மலாய் திறமை vs மலாய் மொழி சிறப்புத் திட்டம் (MLEP-Sec) மையங்கள், வாய்மொழி மற்றும் எழுத்து மதிப்பீட்டு கவனம், நேர்காணல் கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
     },
     rich: {
       trialDimensionsIntro: {
@@ -14045,6 +14048,993 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  guzheng: {
+    slug: "guzheng",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Guzheng", zh: "古筝", ms: "Guzheng", ta: "குஜெங்" },
+    hook: {
+      en: "Guzheng DSA — auditions reward right-hand tonal clarity, left-hand bending technique, and clean cipher-notation sight-reading far more than how many grades the candidate has cleared.",
+      zh: "古筝 DSA——招生看右手音色、左手按滑技巧、简谱视奏的干净程度，远超考过几级",
+      ms: "DSA Guzheng — uji bakat menilai kejelasan ton tangan kanan, teknik lenturan tangan kiri, dan pembacaan pandang notasi nombor — jauh melebihi bilangan gred yang dicapai.",
+      ta: "குஜெங் DSA — வலது கை ஒலித் தெளிவு, இடது கை வளைப்பு நுட்பம், எண் குறியீடு பார்த்து வாசிக்கும் திறனை — எத்தனை கிரேடு முடித்தார் என்பதைவிட அதிகமாக மதிக்கிறது.",
+    },
+    intro: {
+      en: "Guzheng is one of the most competitive instruments in the Chinese Orchestra DSA pool because so many primary-school children begin on it — which means panels can afford to be selective about tone and musicality, not just accuracy. Most schools run guzheng auditions inside their Chinese Orchestra DSA stream: shortlisted P6 applicants perform two prepared pieces (often capped at about four to five minutes total), then sight-read a short passage in cipher notation (简谱 / jianpu) provided on the day. Schools usually provide a guzheng for the audition, though candidates may bring their own. Formal certification (e.g. graded exams) is treated as useful supporting evidence by most schools but is rarely a hard requirement. This page covers what panels actually listen for, how to choose two contrasting pieces, and how to drill jianpu sight-reading to audition standard.",
+      zh: "古筝是华乐 DSA 里最热门、竞争最激烈的乐器之一——太多小学生从古筝入门，考官因此能在音色和音乐性上挑得很细，不只看弹对。多数学校把古筝放在华乐团 DSA 这条线里招生：入围的 P6 申请者弹两首准备好的曲目（多数学校把总时长压在约四到五分钟内），再视奏一段当天提供的简谱。学校一般会备琴，申请者也可自带。多数学校把考级证书当作有用的辅助材料，但很少作为硬性门槛。本页讲考官真正在听什么、如何选两首对比曲、如何把简谱视奏练到甄选水平。",
+      ms: "Guzheng antara instrumen paling kompetitif dalam kumpulan DSA Orkestra Cina kerana ramai kanak-kanak sekolah rendah bermula dengannya — jadi panel boleh memilih dari segi ton dan muzikaliti, bukan sekadar ketepatan. Kebanyakan sekolah menjalankan uji bakat guzheng dalam aliran DSA Orkestra Cina: calon P6 yang disenarai pendek mempersembahkan dua keping yang disediakan (biasanya dihadkan kira-kira empat hingga lima minit), kemudian membaca pandang petikan pendek dalam notasi nombor (简谱) yang diberi pada hari itu. Sekolah biasanya menyediakan guzheng, walaupun calon boleh membawa sendiri. Pensijilan formal berguna tetapi jarang menjadi syarat wajib.",
+      ta: "சீன இசைக்குழு DSA-வில் குஜெங் மிகவும் போட்டி நிறைந்த கருவிகளில் ஒன்று, ஏனெனில் பல தொடக்கப்பள்ளி குழந்தைகள் இதிலேயே தொடங்குகிறார்கள் — எனவே குழுக்கள் துல்லியத்தை மட்டுமல்ல, ஒலி மற்றும் இசைத்திறனையும் தேர்ந்தெடுக்க முடியும். பெரும்பாலான பள்ளிகள் குஜெங் தேர்வை சீன இசைக்குழு DSA பிரிவுக்குள் நடத்துகின்றன: தேர்ந்தெடுக்கப்பட்ட P6 விண்ணப்பதாரர்கள் இரண்டு தயாரிக்கப்பட்ட துண்டுகளை வாசிக்கிறார்கள் (பெரும்பாலும் மொத்தம் நான்கு முதல் ஐந்து நிமிடம்), பின்னர் அன்று வழங்கப்படும் எண் குறியீட்டில் (简谱) ஒரு குறுகிய பகுதியைப் பார்த்து வாசிக்கிறார்கள். பள்ளிகள் பொதுவாக குஜெங் வழங்குகின்றன, விண்ணப்பதாரர்கள் சொந்தமாகவும் கொண்டுவரலாம்.",
+    },
+    summary: {
+      en: "Audition format (two contrasting pieces + cipher-notation sight-read), what panels weigh, interview questions, and Chinese Orchestra schools that recognise guzheng for DSA-Sec.",
+      zh: "招生格式（两首对比曲 + 简谱视奏）、考官评分维度、面试题、承认古筝 DSA-Sec 的华乐团学校。",
+      ms: "Format uji bakat, kriteria penilaian, soalan temu duga, sekolah Orkestra Cina yang mengiktiraf guzheng untuk DSA-Sec.",
+      ta: "தேர்வு வடிவம், மதிப்பீட்டு அளவுகோல்கள், கேள்விகள், குஜெங்கை DSA-Sec-க்கு அங்கீகரிக்கும் சீன இசைக்குழு பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Nanyang Girls' High School",
+      "Nan Hua High School",
+      "Chung Cheng High School (Yishun)",
+      "Xinmin Secondary School",
+      "Paya Lebar Methodist Girls' School (Secondary)",
+      "Pei Hwa Secondary School",
+    ],
+    metaDescription: {
+      en: "Guzheng DSA-Sec audition guide for Singapore P6 — two-piece format, cipher-notation (简谱) sight-reading, what panels assess, sample interview questions, and participating Chinese Orchestra schools.",
+      zh: "新加坡 P6 古筝 DSA-Sec 甄选指南——两首曲目格式、简谱视奏、考官评分维度、面试题、招生华乐团学校。",
+      ms: "Panduan uji bakat DSA-Sec Guzheng Singapura — format dua keping, pembacaan pandang notasi nombor, kriteria penilaian, soalan, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 குஜெங் DSA-Sec வழிகாட்டி — இரண்டு துண்டு வடிவம், எண் குறியீடு பார்த்து வாசித்தல், அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      preparedPiece: {
+        intro: {
+          en: "Guzheng auditions follow the same broad shape across most Singapore schools: two prepared pieces of the candidate's own choice, total time usually capped (about four to five minutes, varying by school), plus a sight-read passage given on the day in cipher notation (简谱). The two-piece choice is the strategic decision — one lyrical, tonal piece that shows control of the right-hand attack and left-hand bending (按音 / 滑音), plus one faster, more virtuosic piece that shows technical command, is the safest contrasting pairing. Bring two copies of each score; schools that ask for scores collect them at the start and return them after. A guzheng is usually provided, but confirm tuning and string setup expectations with each school.",
+        },
+        entries: [
+          {
+            variant: { en: "Standard two-piece format — most schools" },
+            requirement: { en: "Two prepared pieces or movements of the candidate's choice, total duration typically capped around 4-5 minutes (confirm per school), plus a sight-read passage in cipher notation (简谱) provided on the day. Schools usually provide a guzheng; candidates may bring their own." },
+            source: { en: "Pei Hwa Secondary School public DSA guzheng page (two prepared pieces, total within about four minutes, sight-read a simple cipher-notation piece provided on the day); aligns with the broader Chinese Orchestra DSA format used across Singapore schools." },
+          },
+          {
+            variant: { en: "Contrasting-pair recommendation (general best practice)" },
+            requirement: { en: "Choose one lyrical / tonal piece (demonstrating right-hand tone and left-hand 按滑 control) and one faster / technical piece (demonstrating command). This is recommended practice, not a published rule — verify each target school's exact brief, as some specify duration or tempo and others leave the choice open." },
+            source: { en: "General coaching guidance for Chinese Orchestra / guzheng DSA auditions; not a single school's published rubric." },
+          },
+          {
+            variant: { en: "Sight-reading — cipher notation (简谱)" },
+            requirement: { en: "A short passage in jianpu (numbered notation) provided on the day, typically with a brief review window before playing. Confirm with each school whether the audition uses jianpu only or also staff notation — most guzheng audition material in Singapore is in jianpu." },
+            source: { en: "Pei Hwa Secondary School DSA guzheng page specifies a simple cipher-notation (简谱) sight-read; jianpu is the standard guzheng notation in Singapore." },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A private guzheng coach can verify the contrasting-pair choice, polish the opening 30 seconds of each piece (where panels judge most heavily), and run jianpu sight-read drills at audition difficulty — the single most under-practised component for guzheng candidates who learned mainly by memorising repertoire. Coaches who play guzheng and have prepared students for Chinese-Orchestra-stream auditions are especially valuable. Browse our coach directory for guzheng specialists.",
+        },
+      },
+      trialDimensionsIntro: {
+        en: "Singapore guzheng auditions usually run inside the school's Chinese Orchestra DSA stream and are led by the CO conductor (often a Singapore Chinese Orchestra-affiliated musician) plus the teacher-in-charge of CCAs. The format is consistent across schools: two contrasting prepared pieces, a cipher-notation (简谱) sight-read on the day, and a short interview about the candidate's musical journey. The six dimensions below describe what guzheng panels objectively listen for, drawn from a public school DSA guzheng brief (Pei Hwa Secondary) and the broader Chinese Orchestra audition format — they are not a reproduction of any single school's internal scoring sheet.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Right-hand tone production and attack" },
+          body: {
+            en: "The single most-listened-for element on guzheng. Panels listen for fingertip-versus-fingernail (假指甲) clarity, the evenness of the plucking attack (托 / 抹 / 勾), and whether the tone stays clean and full at speed rather than turning thin or scratchy. A beautiful, consistent tone on a slightly easier piece reads better than a struggling tone on a harder one — choose repertoire the candidate can produce a genuinely good sound on, end to end.",
+          },
+        },
+        {
+          label: { en: "Pitch accuracy and rhythm — including left-hand bending" },
+          body: {
+            en: "Guzheng pitch lives in the left hand: the bent and slid notes (按音 / 滑音 / 颤音) that fall between the open strings. Panels listen for whether those bends land on the correct pitch (not approximately), whether vibrato is controlled rather than wobbly, and whether the candidate holds steady tempo through technical passages. Rushing the fast sections and dragging the slow ones is the most common P6 tell — internal pulse is what separates a coached player from a self-taught one.",
+          },
+        },
+        {
+          label: { en: "Musical expression and interpretation" },
+          body: {
+            en: "What distinguishes a clean player from a future CO principal is interpretation — phrase shaping, dynamic contrast, and the cultural idiom appropriate to the piece (a Shandong-style piece bends differently from a Chaozhou or a modern conservatory work). A candidate who can articulate one specific interpretive choice (\"I take more time here because the bend imitates a singer's sigh\") stands out immediately. Knowing the regional style of the chosen piece is a strong signal.",
+          },
+        },
+        {
+          label: { en: "Sight-reading in cipher notation (简谱)" },
+          body: {
+            en: "Most guzheng auditions include a short jianpu passage given on the day with a brief review window. Panels watch not whether every note is perfect but whether the candidate keeps tempo, gets the rhythmic structure right, and recovers from a slip without stopping. This is the most under-practised component — many primary-school guzheng students learn by memorising repertoire and freeze when handed unfamiliar notation. Daily ten-minute jianpu drills at audition difficulty close this gap faster than any other single prep.",
+          },
+        },
+        {
+          label: { en: "Repertoire difficulty matched to a clean delivery" },
+          body: {
+            en: "Panels do read the difficulty of the chosen pieces — a candidate playing genuinely advanced repertoire cleanly signals more ceiling than one playing easy pieces flawlessly. But the order of priority is clean-first, then hard: an over-ambitious piece that collapses in the fast section costs more than a slightly easier piece delivered with control and tone. Choose the hardest pair the candidate can perform with a beautiful sound under audition pressure, not the hardest pair they have ever attempted.",
+          },
+        },
+        {
+          label: { en: "Stage presence, composure, and audition etiquette" },
+          body: {
+            en: "How the candidate walks in, greets the panel, settles at the instrument (checking tuning calmly, adjusting the stand), and recovers from a slip. Chinese Orchestra culture is attentive to conductor-respect etiquette — a candidate who greets the panel appropriately and recovers from a mistake without visible panic signals the temperament panels want in a section player.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Solo performance — the two prepared pieces" },
+          body: {
+            en: "The core of every guzheng audition. This is the candidate's only fully-controlled segment, so the contrasting-pair choice and the polish of the opening 30 seconds of each piece carry the most weight. Panels judge tone, left-hand bending accuracy, and whether the candidate sustains musical line across the whole piece rather than fading after the showpiece opening. Memorise both pieces; reading from a score during the prepared portion reads as under-prepared.",
+          },
+        },
+        {
+          position: { en: "Chinese Orchestra ensemble fit" },
+          body: {
+            en: "Guzheng in a school CO is a plucked-string colour instrument, not always a frontline melody voice — so conductors also listen for whether the candidate can play in time with a steady internal pulse and follow a beat, since much of CO playing is sectional and conducted. A candidate who can demonstrate (or describe) ensemble experience — playing with others, watching a conductor, holding a part against a competing line — signals they will integrate into the CO quickly rather than only ever having played solo.",
+          },
+        },
+        {
+          position: { en: "Graded-exam repertoire and certification" },
+          body: {
+            en: "Many guzheng candidates arrive with graded-exam pieces (e.g. central-conservatory or local examination-board grades). Most Singapore schools treat certification as useful supporting evidence rather than a hard gate — Pei Hwa, for example, states formal certification is useful but not compulsory. Use graded pieces as audition repertoire only if they show the candidate at their best; a well-chosen non-exam piece that suits the candidate's strengths can outscore a high-grade piece played mechanically.",
+          },
+        },
+        {
+          position: { en: "Cipher-notation sight-reading" },
+          body: {
+            en: "Treated as a distinct skill, not an afterthought. Because guzheng requires the player to know which string sits under each number and to set left-hand bends quickly, jianpu sight-reading on guzheng is genuinely harder than on a fixed-pitch instrument. Candidates who can scan a phrase, find the strings, and keep going at tempo stand out sharply from those who can only play memorised pieces. Drill this separately from repertoire practice.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Singapore school Chinese Orchestra usually runs guzheng auditions inside the broader CO DSA stream rather than as a standalone instrument exercise — so confirm with each target school whether guzheng is recognised this cycle and what the exact format is. The instrument the candidate auditions on is the section they join in Sec 1. If the candidate also plays a second Chinese instrument, audition on the stronger one but mention the second in the interview — section flexibility is a meaningful tiebreaker between equally-strong guzheng candidates.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why guzheng?" },
+          subtext: {
+            en: "Panels want a specific moment that hooked the candidate, not a generic appreciation of Chinese culture.",
+          },
+          approach: {
+            en: "Open with one concrete memory — a piece, a performance, a teacher moment — then connect it to what playing guzheng asks of you.",
+          },
+          template: {
+            en: "I started guzheng at seven because my mother loved the sound, but the moment I knew it was mine was learning my first bent-note piece — realising the most important notes aren't the ones I pluck, they're the ones my left hand bends into. That's the only instrument where the silence between strings does half the work.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the Chinese Orchestra programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's CO — a conductor, an SYF result, the SAP / Higher Chinese environment.",
+          },
+          template: {
+            en: "Your Chinese Orchestra rehearses several times a week and the school environment lets me keep Higher Chinese alongside it. I want to play guzheng in a real ensemble, not just as a solo instrument, and that combination is what I came here for.",
+          },
+        },
+        {
+          question: { en: "What do you find hardest about the guzheng, and how do you work on it?" },
+          subtext: {
+            en: "Tests self-awareness and whether the candidate has a real practice method.",
+          },
+          approach: {
+            en: "Name one genuine technical weakness plus the specific drill you use, not a humble-brag.",
+          },
+          template: {
+            en: "My left-hand bends used to land flat in fast passages. My teacher had me practise just the bend — no right hand — against a tuner until the pitch was exact, then add the pluck back one note at a time. It's slow, but it's the only thing that fixed the intonation.",
+          },
+        },
+        {
+          question: { en: "Tell us about a piece you love and one specific thing about it." },
+          subtext: {
+            en: "Tests musical vocabulary in the Chinese-music tradition specifically.",
+          },
+          approach: {
+            en: "Name the piece plus one concrete musical element — a regional style, an ornament, a rhythmic feature — you can describe.",
+          },
+          template: {
+            en: "Yu Zhou Chang Wan, because of how the slides and tremolo (摇指) paint the water and the boat. The piece taught me that on guzheng the left hand carries the feeling and the right hand only sets it up — that changed how I practise everything else.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just the outcome or feelings.",
+          },
+          approach: {
+            en: "Situation, then action, then result, in two sentences.",
+          },
+          template: {
+            en: "Two weeks before a school concert I kept freezing in the fast section of my piece. Instead of running the whole piece over and over, I isolated the four hardest bars, looped them slowly with a metronome each night, and only then put the piece back together. I got through the concert without the freeze.",
+          },
+        },
+        {
+          question: { en: "How will you manage practice and schoolwork with frequent CO rehearsals?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I do homework before practice because I'm too tired after. My parents and I agreed a rule: if my grades slip a band, practice drops from 90 minutes to 60 until they recover. We set it together so it's not a fight later.",
+          },
+        },
+        {
+          question: { en: "If another school and ours both offer you a place, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether the candidate would actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school and justify it with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school. The way your Chinese Orchestra uses guzheng — and the Higher Chinese environment — matches what I want. If the other school called first, I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Nanyang Girls' High School",
+          talentArea: { en: "Guzheng / Chinese Orchestra (Girls), IP" },
+          context: {
+            en: "SAP and Bicultural Studies school with a strong Chinese Orchestra tradition; guzheng recognised within the CO DSA stream. Higher Chinese environment. Confirm guzheng is open this cycle on the school's DSA page.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          talentArea: { en: "Guzheng / Chinese Orchestra, DSA-Sec" },
+          context: {
+            en: "SAP school. Chinese Orchestra among Nan Hua's published DSA talent areas; guzheng recognised within the CO stream. Higher Chinese / Chinese as Mother Tongue environment.",
+          },
+        },
+        {
+          name: "Paya Lebar Methodist Girls' School (Secondary)",
+          talentArea: { en: "Guzheng / Chinese Orchestra (Girls), DSA-Sec" },
+          context: {
+            en: "Chinese Orchestra among the school's DSA talent areas, with guzheng recognised in the CO stream. Confirm the current-cycle audition format on the school's DSA page.",
+          },
+        },
+        {
+          name: "Kuo Chuan Presbyterian Secondary School",
+          talentArea: { en: "Guzheng / Chinese Orchestra, DSA-Sec" },
+          context: {
+            en: "Chinese Orchestra among the school's DSA talent areas; guzheng recognised within the CO stream. Verify guzheng is open this cycle on the school's DSA page.",
+          },
+        },
+        {
+          name: "Presbyterian High School",
+          talentArea: { en: "Guzheng / Chinese Orchestra, DSA-Sec" },
+          context: {
+            en: "Chinese Orchestra among the school's DSA talent areas, with guzheng recognised in the CO stream. Confirm audition specifics on the school's DSA page.",
+          },
+        },
+        {
+          name: "Chung Cheng High School (Yishun)",
+          talentArea: { en: "Guzheng / Chinese Orchestra, DSA-Sec" },
+          context: {
+            en: "SAP school with a strong Chinese cultural tradition; Chinese Orchestra among its DSA talent areas, guzheng recognised in the CO stream. Higher Chinese / Chinese as Mother Tongue environment.",
+          },
+        },
+        {
+          name: "Xinmin Secondary School",
+          talentArea: { en: "Guzheng / Chinese Orchestra, DSA-Sec" },
+          context: {
+            en: "Chinese Orchestra among Xinmin's DSA talent areas, with guzheng recognised in the CO stream. Confirm current-cycle format on the school's DSA page.",
+          },
+        },
+        {
+          name: "Zhonghua Secondary School",
+          talentArea: { en: "Guzheng / Chinese Orchestra, DSA-Sec" },
+          context: {
+            en: "Chinese Orchestra among Zhonghua's DSA talent areas; guzheng recognised within the CO stream. Verify guzheng is open this cycle on the school's DSA page.",
+          },
+        },
+        {
+          name: "Hua Yi Secondary School",
+          talentArea: { en: "Guzheng / Chinese Orchestra, DSA-Sec" },
+          context: {
+            en: "Chinese Orchestra among Hua Yi's DSA talent areas, with guzheng recognised in the CO stream. Confirm audition specifics on the school's DSA page.",
+          },
+        },
+        {
+          name: "Pei Hwa Secondary School",
+          talentArea: { en: "Guzheng, DSA-Sec" },
+          context: {
+            en: "Publishes a dedicated guzheng DSA page with an explicit audition format: two prepared pieces (total within about four minutes) plus a sight-read in cipher notation (简谱) provided on the day. States that guzheng experience is expected and formal certification is useful but not compulsory; a guzheng is provided, though candidates may bring their own.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the audition is still weeks out" },
+          items: [
+            {
+              en: "Confirm, school by school, that guzheng is open this DSA cycle and download each target school's audition brief. Most schools run guzheng inside the Chinese Orchestra stream; only some (e.g. Pei Hwa) publish a guzheng-specific format. Note each school's duration cap and whether the sight-read is jianpu only.",
+            },
+            {
+              en: "Choose the contrasting pair early. The strongest pairing is one lyrical / tonal piece (showing right-hand tone and left-hand 按滑 control) plus one faster / technical piece (showing command). Confirm the choice with the child's teacher — repertoire that feels comfortable but exposes weaknesses is the most common audition mistake.",
+            },
+            {
+              en: "Practise jianpu (简谱) sight-reading ten minutes daily at audition difficulty. This is the most under-practised component for guzheng candidates because primary-school programmes lean on memorising repertoire — drill it separately from prepared-piece practice.",
+            },
+            {
+              en: "Confirm primary-school CCA records are accurate. MOE pulls CCA participation, school awards, SYF results, and recognised external results (e.g. Singapore Chinese Music Competition, NUS Chinese Music Festival) into the DSA portal directly. Ask the CCA teacher to verify what's logged.",
+            },
+            {
+              en: "Run a mock interview using the questions above, including \"Why guzheng?\" and the choose-between-schools question. Record on a phone, watch back together, and flag any answer that ran past thirty seconds or leaned on the word \"passionate.\"",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity to about 70%: warm-up scales and patterns, the opening 30 seconds of each piece, daily jianpu sight-read practice, and no new technical work. Final-week piece changes almost never end well.",
+            },
+            {
+              en: "Confirm logistics in writing — time, venue, attire (most auditions expect school uniform or smart casual), and whether to bring your own guzheng or use the school's. Email the teacher-in-charge if anything is ambiguous, including which notation the sight-read uses.",
+            },
+            {
+              en: "Prepare two clean copies of each prepared-piece score in case the school collects them at the start of the audition. Check the candidate's false nails (假指甲) and tape, and pack spares.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of audition" },
+          items: [
+            {
+              en: "Arrive 60 minutes early. Warm up quietly — scales and patterns, the opening 16 bars of each piece, a couple of minutes of jianpu sight-reading from any printed material. Don't over-rehearse the full pieces; the audition is the performance.",
+            },
+            {
+              en: "If using the school's guzheng, ask to check the tuning and string spacing before starting — an unfamiliar instrument's setup is the most common day-of surprise for guzheng candidates.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the panel said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, audition coming up, no real prep — there are still real moves. Lock in the contrasting pair tonight and don't change pieces this week. Focus practice on the opening 30 seconds of each piece and on jianpu sight-read drills — those are the highest-leverage minutes for guzheng, since sight-reading is the component most candidates neglect. Confirm each target school's exact format (duration cap, jianpu-only sight-read, whether to bring your own instrument) tonight. Cancel anything that competes with sleep and false-nail / string care. Spend the freed time on jianpu drills and the interview prep above. Some families bring in a private guzheng coach at this stage; a good one can steady audition-day nerves, polish the opening phrase of each piece, and run sight-read drills at the right difficulty — but no coach produces, in three sessions, the tone of a year of daily practice. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  "instrumental-ensembles": {
+    slug: "instrumental-ensembles",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Instrumental Ensembles", zh: "器乐合奏", ms: "Ensembel Instrumental", ta: "இசைக்கருவி குழுமங்கள்" },
+    hook: {
+      en: "Instrumental Ensembles DSA — string, guitar, harp, percussion, handbell and angklung-kulintang ensembles audition on a self-selected piece plus sight-reading and a short interview, judged on technique, ensemble blend and musical expression.",
+      zh: "器乐合奏 DSA——弦乐、吉他、竖琴、打击、手钟、昂格隆库林堂等合奏，以自选乐曲加视奏和简短面试招生，看重演奏技巧、合奏融合与音乐表现",
+      ms: "DSA Ensembel Instrumental — ensembel tali, gitar, kecapi, perkusi, loceng tangan dan angklung-kulintang menjalani uji bakat dengan keping pilihan sendiri serta baca-pandang dan temu duga, dinilai dari segi teknik, paduan ensembel dan ekspresi muzik.",
+      ta: "இசைக்கருவி குழும DSA — நரம்புக் கருவி, கிட்டார், யாழ், தாள, கைமணி மற்றும் அங்க்ளுங்-குலின்தாங் குழுமங்கள் தாமே தேர்ந்தெடுத்த துண்டு, பார்த்து வாசித்தல் மற்றும் சுருக்கமான நேர்காணலுடன் தேர்வு செய்யப்படுகின்றன; நுட்பம், குழும இணைவு மற்றும் இசை வெளிப்பாடு மதிக்கப்படுகின்றன.",
+    },
+    intro: {
+      en: "Beyond the big three school music DSAs (Symphonic / Concert Band, Chinese Orchestra, and Guzheng), Singapore secondary schools run a varied family of instrumental ensembles through DSA-Sec — string ensemble (violin, viola, cello, double bass), guitar ensemble, harp, percussion ensemble, handbell ensemble, and the Malay-heritage angklung and kulintang ensembles. These are Performing Arts talent areas: applicants must show talent beyond their age-group or a record of SYF / national-level performance, and successful candidates join the specific CCA they were accepted into. The audition format varies by school but converges on a common core — a self-selected piece on the candidate's instrument, a sight-reading or aural / rhythm test, a basic technique check, and a short interview. Because these ensembles recruit for blend and section balance, ensemble-readiness and a reliable, in-tune tone often matter more than raw virtuosity.",
+      zh: "除了三大中学音乐 DSA（管乐团、华乐团、古筝）之外，新加坡中学还透过 DSA-Sec 招收多种器乐合奏——弦乐团（小提琴、中提琴、大提琴、低音提琴）、吉他合奏、竖琴、打击乐合奏、手钟合奏，以及马来传统的昂格隆与库林堂合奏。这些属于表演艺术才艺类：申请者须展现超越同龄的才能或具备 SYF、国家级演出记录，录取后须加入所申请的对应 CCA。各校招生格式不一，但共同核心相近——本乐器自选曲、视奏或听音节奏测试、基本技巧检查、简短面试。由于这类合奏看重融合与声部平衡，合奏适应力和稳定准确的音色，往往比单纯炫技更受重视。",
+      ms: "Selain tiga DSA muzik sekolah utama (Pancaragam, Orkestra Cina, dan Guzheng), sekolah menengah Singapura menjalankan pelbagai ensembel instrumental melalui DSA-Sec — ensembel tali (biola, viola, cello, bass berganda), ensembel gitar, kecapi, ensembel perkusi, ensembel loceng tangan, serta ensembel angklung dan kulintang warisan Melayu. Ini adalah bidang bakat Seni Persembahan: pemohon mesti menunjukkan bakat melebihi kumpulan umur mereka atau rekod persembahan peringkat SYF / kebangsaan, dan calon yang berjaya menyertai CCA khusus yang mereka diterima masuk. Format uji bakat berbeza mengikut sekolah tetapi mempunyai teras yang sama — sebuah keping pilihan sendiri pada instrumen calon, ujian baca-pandang atau aural / rentak, semakan teknik asas, dan temu duga ringkas. Kerana ensembel ini merekrut untuk paduan dan keseimbangan seksyen, kesediaan ensembel dan ton yang stabil serta bernada tepat sering lebih penting daripada kebolehan semata-mata.",
+      ta: "மூன்று முக்கிய பள்ளி இசை DSA-களைத் தாண்டி (சிம்போனிக் / கச்சேரி இசைக்குழு, சீன இசைக்குழு, மற்றும் குஜெங்), சிங்கப்பூர் இடைநிலைப் பள்ளிகள் DSA-Sec வழியாக பல்வேறு இசைக்கருவி குழுமங்களை நடத்துகின்றன — நரம்புக் குழுமம் (வயலின், வயோலா, செலோ, Double Bass), கிட்டார் குழுமம், யாழ், தாளக் குழுமம், கைமணி குழுமம், மற்றும் மலாய் பாரம்பரிய அங்க்ளுங் மற்றும் குலின்தாங் குழுமங்கள். இவை நிகழ்த்து கலை திறமைப் பகுதிகள்: விண்ணப்பதாரர்கள் தங்கள் வயதுக்கு மேற்பட்ட திறமை அல்லது SYF / தேசிய அளவிலான நிகழ்ச்சிப் பதிவைக் காட்ட வேண்டும், தேர்வு பெற்றவர்கள் தாங்கள் ஏற்றுக்கொள்ளப்பட்ட குறிப்பிட்ட CCA-வில் சேர வேண்டும். தேர்வு வடிவம் பள்ளிக்குப் பள்ளி மாறுபடும் ஆனால் பொதுவான மையத்தை நோக்கி ஒன்றிணைகிறது — கருவியில் தாமே தேர்ந்தெடுத்த துண்டு, பார்த்து வாசித்தல் அல்லது செவிப்புலன் / தாள சோதனை, அடிப்படை நுட்ப சோதனை, மற்றும் சுருக்கமான நேர்காணல். இந்தக் குழுமங்கள் இணைவுக்காகவும் பிரிவு சமநிலைக்காகவும் தேர்வு செய்வதால், குழும தயார்நிலையும் நம்பகமான, சரியான சுருதியில் உள்ள ஒலியும் பெரும்பாலும் வெறும் திறமையை விட முக்கியமானவை.",
+    },
+    summary: {
+      en: "Audition format (self-selected piece + sight-read + technique + interview), per-instrument profiles, interview questions, and schools running string / guitar / percussion / handbell / angklung-kulintang ensembles.",
+      zh: "招生格式（自选曲 + 视奏 + 技巧 + 面试）、各乐器分析、面试题、开设弦乐/吉他/打击/手钟/昂格隆库林堂合奏的学校。",
+      ms: "Format uji bakat, profil setiap instrumen, soalan temu duga, sekolah ensembel tali / gitar / perkusi / loceng tangan / angklung-kulintang.",
+      ta: "தேர்வு வடிவம், ஒவ்வொரு கருவி வகை, கேள்விகள், குழுமப் பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Raffles Institution (Secondary)",
+      "Dunman High School (Secondary)",
+      "Nanyang Girls' High School",
+      "Nan Hua High School",
+      "Tanjong Katong Girls' School",
+      "St. Anthony's Canossian Secondary School",
+    ],
+    metaDescription: {
+      en: "Instrumental Ensembles DSA-Sec audition guide for Singapore P6 — string, guitar, harp, percussion, handbell and angklung-kulintang ensembles, self-selected piece + sight-read format, participating schools.",
+      zh: "新加坡 P6 器乐合奏 DSA-Sec 甄选指南——弦乐/吉他/竖琴/打击/手钟/昂格隆库林堂合奏、自选曲+视奏格式、开设学校。",
+      ms: "Panduan uji bakat DSA-Sec Ensembel Instrumental Singapura — ensembel tali, gitar, perkusi, loceng tangan, angklung-kulintang, format, soalan, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 இசைக்கருவி குழும DSA-Sec வழிகாட்டி — நரம்புக் கருவி, கிட்டார், தாள, கைமணி, அங்க்ளுங்-குலின்தாங் குழுமங்கள், வடிவம், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Instrumental ensemble auditions are conducted by the CCA's conductor or instructor (often a conservatory-trained instrumentalist or an experienced ensemble director) together with the teacher-in-charge of the CCA. Unlike the highly structured Symphonic Band scale battery, these auditions are usually shorter and centre on one self-selected piece plus a sight-reading or rhythm test and a brief interview. The dimensions below are the abilities instrumental ensembles objectively value — they are not the scoring rubric of any single named school, and exact requirements differ by school and instrument; always confirm each target school's published criteria.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Instrumental technique and control" },
+          body: {
+            en: "The foundation the panel listens for first: clean execution appropriate to the instrument — bowing control and left-hand position on strings, clear fretting and right-hand articulation on guitar, even mallet strokes and stick control on percussion, controlled striking and damping on handbells, coordinated shaking and ringing technique on angklung. A clean, well-controlled piece at a comfortable level reads better than a struggling piece above the candidate's grade. Choose repertoire your child can play securely.",
+          },
+        },
+        {
+          label: { en: "Intonation and rhythmic accuracy" },
+          body: {
+            en: "For pitched instruments (strings, guitar, harp, mallet percussion, handbells, angklung), accurate intonation is decisive — an out-of-tune note in an ensemble context disrupts the whole blend. For all ensembles, steady tempo and precise rhythm are essential because ensemble playing demands every player lock to a shared pulse. Panels often test this directly with a clap-back or play-back rhythm exercise. Practising with a metronome daily is the highest-leverage prep for this dimension.",
+          },
+        },
+        {
+          label: { en: "Ensemble awareness and collaboration" },
+          body: {
+            en: "These CCAs recruit players who can blend, not just soloists. The panel watches for signals that a candidate can listen outward — matching dynamics, following a conductor's gesture, keeping a steady inner pulse rather than rushing. Candidates with prior ensemble, orchestra, or group-class experience have a real edge; if your child has played in a primary-school string group, guitar club, or angklung ensemble, surface that in the application and interview.",
+          },
+        },
+        {
+          label: { en: "Sight-reading or aural response" },
+          body: {
+            en: "Most schools include a short sight-reading passage or, for ensembles where notation literacy varies (handbell, angklung, some guitar), an aural / rhythm-echo test instead. What the panel watches is not flawless first-time accuracy but whether the candidate keeps going, holds the pulse, and recovers from a slip without stopping. Regular sight-reading or rhythm-echo practice in the months before the audition converts uncertain candidates into confident ones.",
+          },
+        },
+        {
+          label: { en: "Musical expression and phrasing" },
+          body: {
+            en: "Beyond hitting the right notes, the panel listens for musicality — shaping a phrase, observing dynamics, bringing character to the self-selected piece. A candidate who plays musically on a simpler piece often outscores one who plays a harder piece mechanically. Encourage your child to choose a piece they genuinely connect with and can perform expressively, not just the most technically impressive option.",
+          },
+        },
+        {
+          label: { en: "Stage presence and composure" },
+          body: {
+            en: "How the candidate enters, greets the panel, sets up the instrument calmly, and recovers from a slip. For ensemble instruments that need setup (tuning a string, positioning handbells, settling an angklung), a composed, unhurried setup signals readiness. Panels remember the candidate who restarted calmly after a mistake more than the one who played a flawless first half and crumbled. A filmed mock run, watched back twice, fixes most of this before audition day.",
+          },
+        },
+      ],
+      preparedPiece: {
+        intro: {
+          en: "Instrumental ensemble auditions almost always centre on one self-selected piece on the candidate's instrument, supplemented by a sight-reading or aural / rhythm test and a short interview. There is no single published scale-and-key requirement across these ensembles the way Symphonic Band has — requirements are set per school and per instrument. The entries below describe what each instrument family typically prepares; always download and confirm each target school's own 2026 DSA criteria, as ensembles, instruments accepted, and exact format vary widely.",
+        },
+        entries: [
+          {
+            variant: { en: "String ensemble — violin, viola, cello, double bass" },
+            requirement: { en: "One self-selected solo piece on the candidate's string instrument (a graded ABRSM / conservatory piece is a useful benchmark), plus sight-reading, plus a short technique / scales check and interview. Schools recruit across all four sections; under-represented instruments (viola, double bass) are often welcome." },
+            source: { en: "Performing-Arts DSA convention; e.g. NYGH's String Ensemble accepts violin, viola, cello and double bass. Not a single uniform published rubric — confirm each school's criteria." },
+          },
+          {
+            variant: { en: "Guitar ensemble — classical guitar" },
+            requirement: { en: "One self-selected piece on classical guitar showing right-hand articulation and clean fretting, plus sight-reading or an aural / rhythm test, plus interview. Strong interest and willingness to learn count alongside current ability, as some schools train beginners up within the ensemble." },
+            source: { en: "Performing-Arts DSA convention for guitar ensembles in Singapore secondary schools; exact format varies by school." },
+          },
+          {
+            variant: { en: "Harp" },
+            requirement: { en: "One self-selected piece on harp (a less common DSA instrument, so confirm the school actually runs a harp position before applying), plus sight-reading, plus interview. Harpists are scarce and can be a high-leverage profile where a school's ensemble has a vacancy." },
+            source: { en: "General instrumental-ensemble audition practice; harp availability is school-specific and must be confirmed directly." },
+          },
+          {
+            variant: { en: "Percussion ensemble — mallet, snare, auxiliary" },
+            requirement: { en: "A mallet piece (marimba / xylophone) and / or a snare / rudimental piece showing stick control, plus a rhythm / sight-read test, plus interview. Versatility across percussion families is valued, as percussion ensembles need players who can cover multiple instruments." },
+            source: { en: "Convention across Singapore school percussion ensembles; aligns with rudimental and mallet examination practice. Format varies by school." },
+          },
+          {
+            variant: { en: "Handbell ensemble" },
+            requirement: { en: "Notation literacy and rhythm are central; some schools assess via a rhythm / aural test and a short trial of striking and damping technique rather than a solo piece, and may accept candidates with a music background (e.g. piano) who can read and count reliably. Confirm each school's exact format." },
+            source: { en: "Handbell ensembles are offered as a CCA in a handful of Singapore secondary schools; audition format is school-specific and often rhythm / aural based." },
+          },
+          {
+            variant: { en: "Angklung and kulintang ensemble" },
+            requirement: { en: "Often assessed on rhythmic accuracy, aural response, and coordination rather than a prepared solo, since these Malay-heritage ensembles frequently train students from the ground up. A clap-back rhythm test, a basic sense of pitch, and genuine interest in the art form carry weight. Confirm the school's format." },
+            source: { en: "Angklung / kulintang are offered as DSA Performing-Arts talent areas at some schools (e.g. St. Anthony's Canossian Secondary); audition is typically rhythm / aptitude based, not a solo-piece audition." },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A private instrumental coach on the same instrument can help choose a self-selected piece pitched at the right level, polish the opening of the piece (where the panel listens most carefully), run sight-reading or rhythm-echo drills at audition difficulty, and rehearse ensemble habits like following a beat and matching dynamics. For rhythm / aptitude-based ensembles (handbell, angklung-kulintang), a coach can drill clap-back accuracy and counting. Browse our coach directory for string, guitar, percussion and ensemble specialists.",
+        },
+      },
+      positionFocus: [
+        {
+          position: { en: "String ensemble — violin, viola, cello, double bass" },
+          body: {
+            en: "The most widely offered instrumental ensemble beyond band and Chinese orchestra. Panels assess bowing control, left-hand intonation, and shifting accuracy on the self-selected piece, plus sight-reading. Violin is the most-applied section, so a clean, in-tune violin piece must compete on musicality and intonation; the lower and inner voices (viola, cello, double bass) are often less crowded and can be a stronger route in. If your child plays viola or double bass, name it explicitly — ensembles need those sections for balance.",
+          },
+        },
+        {
+          position: { en: "Guitar ensemble — classical guitar" },
+          body: {
+            en: "Guitar ensembles assess right-hand articulation (rest-stroke and free-stroke clarity), clean fretting, and rhythmic steadiness on the self-selected piece. Several school guitar ensembles have strong SYF Instrumental Ensemble records, and some are open to training motivated beginners, so demonstrated interest and reliable rhythm can matter as much as advanced repertoire. Choose a piece that shows clean tone and steady tempo over one that overreaches technically.",
+          },
+        },
+        {
+          position: { en: "Ethnic ensembles — angklung and kulintang" },
+          body: {
+            en: "These Malay-heritage ensembles are usually rhythm- and coordination-led rather than solo-virtuosity-led, and many schools train students from scratch within the CCA. Panels look for a steady sense of pulse, accurate clap-back / echo responses, basic pitch sense, and genuine enthusiasm for the art form. This makes them an accessible, high-interest entry point for musically inclined children who do not yet have years of formal instrumental grades.",
+          },
+        },
+        {
+          position: { en: "Percussion and handbell ensembles" },
+          body: {
+            en: "Percussion ensembles value versatility — mallet (marimba / xylophone), snare / rudimental, and auxiliary — and assess stick control and rhythmic precision. Handbell ensembles lean on notation literacy, counting, and clean striking / damping; some schools assess via rhythm and aural tests and welcome candidates with a music background (such as piano) rather than requiring a prepared solo. For both, reliable rhythm and the ability to lock to a shared pulse are decisive.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Instrumental ensemble DSA at P6 audition level recruits the candidate into the specific ensemble CCA they audition for — the instrument and ensemble chosen at application is the CCA they will join in Sec 1. Where a child plays a less common instrument (viola, double bass, harp) or is willing to take up a heritage ensemble (angklung, kulintang) or a notation-led ensemble (handbell), naming that explicitly can be an advantage, because these sections are recruited for balance and are often less crowded than the most popular instruments.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why this ensemble / instrument?" },
+          subtext: {
+            en: "Panels want a specific reason for choosing this particular ensemble, not a generic love of music.",
+          },
+          approach: {
+            en: "Open with one concrete memory of playing or hearing the ensemble, then connect it to what draws you to ensemble playing specifically.",
+          },
+          template: {
+            en: "I started cello in Primary 3 and the first time I played in my school's string group I realised I liked being one voice inside a bigger sound more than playing alone. The cello carries the harmony underneath, and I want to keep doing that in a full string ensemble rather than only solo work.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research this school's ensemble specifically, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's ensemble — its instruments, an SYF result, or its repertoire focus.",
+          },
+          template: {
+            en: "Your string ensemble takes violin, viola, cello and double bass and has a strong SYF record, and I want to play in a group that performs full four-part repertoire rather than just a small group. That's exactly the ensemble experience I'm looking for.",
+          },
+        },
+        {
+          question: { en: "What piece did you choose to play today, and why?" },
+          subtext: {
+            en: "Tests whether the candidate can talk about their music, not just perform it.",
+          },
+          approach: {
+            en: "Name the piece, one musical element you like in it, and one thing it lets you show.",
+          },
+          template: {
+            en: "I chose a Baroque movement because I like its clear phrasing and it lets me show my bowing control and even tone. The slower middle section is where I can shape the dynamics, which is the part I enjoy most.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you played in a group and something went wrong." },
+          subtext: {
+            en: "Tests ensemble awareness and how the candidate recovers — central to ensemble playing.",
+          },
+          approach: {
+            en: "Situation, then what you did to recover, then result, in two or three sentences.",
+          },
+          template: {
+            en: "At our school concert another player came in early and I nearly followed them. I kept my eyes on the conductor and held the beat I knew was right, and the group came back together within two bars. After that I realised keeping a steady inner pulse is my real job in an ensemble.",
+          },
+        },
+        {
+          question: { en: "How do you practise, and how would you manage practice with schoolwork?" },
+          subtext: {
+            en: "Schools worry DSA students may flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real, specific routine, not platitudes about discipline.",
+          },
+          template: {
+            en: "I practise thirty minutes on weekdays after homework and longer on weekends, and I use a metronome for the tricky passages. If a subject drops, my parents and I agreed I cut weekend practice first, not study time. That's the rule we set together.",
+          },
+        },
+        {
+          question: { en: "What does playing in an ensemble require that playing alone does not?" },
+          subtext: {
+            en: "Tests genuine understanding of ensemble musicianship, not just solo skill.",
+          },
+          approach: {
+            en: "Name one or two concrete ensemble skills and why they matter.",
+          },
+          template: {
+            en: "You have to listen outwards all the time — match the volume of the section next to you, follow the conductor instead of your own tempo, and never rush even when you're nervous. Alone you can do what you want; in an ensemble the blend matters more than any single line.",
+          },
+        },
+        {
+          question: { en: "If our school and another school both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one school and give one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school — because your ensemble plays the full four-part string repertoire I most want to be part of. If the other school replied first I would still wait for yours.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Raffles Institution (Secondary)",
+          talentArea: { en: "String Ensemble (Boys), IP / DSA-Sec" },
+          context: {
+            en: "IP school. The Raffles Institution String Ensemble (RISE) unites violinists, violists, cellists and double bassists. String Ensemble is among RI's published Performing Arts DSA CCAs.",
+          },
+        },
+        {
+          name: "Dunman High School (Secondary)",
+          talentArea: { en: "String / Instrumental Ensemble (Boys and Girls), IP / DSA-Sec" },
+          context: {
+            en: "SAP / IP school. Instrumental ensemble among Dunman's Performing Arts DSA talent areas. Confirm the specific ensemble and audition format in the school's 2026 DSA brief.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          talentArea: { en: "String Ensemble (Girls), IP" },
+          context: {
+            en: "SAP / IP girls' school. Nanyang String Ensemble (NYSE) accepts DSA applicants on violin, viola, cello and double bass. Aesthetics DSA students join a fortnightly Talent Development programme.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          talentArea: { en: "Instrumental Ensemble (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "SAP school. Instrumental ensemble among Nan Hua's recognised Performing Arts DSA talent areas. Confirm the specific ensemble and audition requirements in the school's DSA materials.",
+          },
+        },
+        {
+          name: "National Junior College (Secondary)",
+          talentArea: { en: "String / Instrumental Ensemble (Boys and Girls), IP" },
+          context: {
+            en: "IP school. Instrumental ensemble among NJC's Performing Arts DSA talent areas. Confirm the specific ensemble and format in the school's 2026 DSA information.",
+          },
+        },
+        {
+          name: "Tanjong Katong Girls' School",
+          talentArea: { en: "String / Instrumental Ensemble (Girls), DSA-Sec" },
+          context: {
+            en: "Heritage girls' school. Instrumental ensemble among TKGS's Performing Arts DSA talent areas. Confirm the specific ensemble (e.g. guitar / string) and audition format in the school's DSA brief.",
+          },
+        },
+        {
+          name: "St. Anthony's Canossian Secondary School",
+          talentArea: { en: "Angklung / Kulintang Ensemble (Girls), DSA-Sec" },
+          context: {
+            en: "Canossian girls' school. Offers Angklung / Kulintang Ensemble as a Performing Arts DSA talent area; this Malay-heritage ensemble is typically assessed on rhythm and aptitude rather than a prepared solo.",
+          },
+        },
+        {
+          name: "St. Margaret's School (Secondary)",
+          talentArea: { en: "String / Instrumental Ensemble (Girls), DSA-Sec" },
+          context: {
+            en: "Heritage girls' school. Instrumental ensemble among St. Margaret's Performing Arts DSA talent areas. Confirm the specific ensemble and audition format in the school's DSA materials.",
+          },
+        },
+        {
+          name: "St. Patrick's School",
+          talentArea: { en: "Guitar / Instrumental Ensemble (Boys), DSA-Sec" },
+          context: {
+            en: "Heritage boys' school. Instrumental ensemble among St. Patrick's Performing Arts DSA talent areas. Confirm the specific ensemble and format in the school's DSA brief.",
+          },
+        },
+        {
+          name: "Meridian Secondary School",
+          talentArea: { en: "Instrumental Ensemble (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "Neighbourhood school. Instrumental ensemble among Meridian's Performing Arts DSA talent areas — an accessible route for families exploring ensemble DSA outside the IP schools. Confirm the specific ensemble and format.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the audition is still weeks out" },
+          items: [
+            {
+              en: "Confirm exactly which ensemble and instrument each target school offers and accepts. These ensembles vary widely (string, guitar, harp, percussion, handbell, angklung-kulintang) and not every school runs every one. Download each target school's 2026 DSA Performing Arts criteria and confirm the instrument, format, and whether beginners are accepted before locking your plan.",
+            },
+            {
+              en: "Choose the self-selected piece early, pitched at a level your child can play securely and musically. A clean, expressive piece at a comfortable grade outscores a struggling piece above their level. Confirm the choice with your child's instrument teacher.",
+            },
+            {
+              en: "Practise sight-reading or rhythm-echo daily for ten minutes at audition difficulty. For rhythm / aptitude-based ensembles (handbell, angklung-kulintang), drill clap-back accuracy and steady counting with a metronome instead.",
+            },
+            {
+              en: "Surface any ensemble experience. If your child has played in a primary-school string group, guitar club, percussion or angklung ensemble, make sure that is mentioned in the application and the interview — ensemble readiness is a real recruiting signal.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds or leaned on the word \"passionate\" — both weaken the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity to about 70%: the opening of the piece, light sight-read or rhythm practice, no new technical work. Final-week changes to the piece almost never end well.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue (often the CCA room or a music room), attire (school uniform or smart casual), and whether to bring the instrument (strings, guitar) or whether the school provides it (handbells, angklung, large percussion). Email the teacher-in-charge if anything is unclear.",
+            },
+            {
+              en: "For string and guitar players: check the instrument is in good condition and freshly tuned, strings are not about to break, and any accessories (rosin, spare strings, a footstool for guitar) are packed the night before.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of audition" },
+          items: [
+            {
+              en: "Arrive 45-60 minutes early. Warm up gently — tuning, a slow run of the opening, light scales or rhythm. Do not over-rehearse the full piece; the audition is the performance.",
+            },
+            {
+              en: "Eat a proper meal about 90 minutes before, not right before. Hydrate, but not in the final minutes.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, then leave. Over-involved parents are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the conductor said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, audition coming up, no real prep — there are still real moves. Lock in one self-selected piece your child can play securely and don't change it this week. Run two short daily sessions: ten minutes polishing the opening of the piece, ten minutes of sight-reading or, for rhythm-based ensembles, clap-back and counting drills with a metronome. Cancel anything competing with sleep. Spend the freed time on the interview prep above, because that's the part where a few hours can still meaningfully change the outcome. Some families bring in a private instrumental coach at this stage — a good one can pitch the piece right, polish the opening, and drill sight-reading or rhythm at the correct difficulty, but no coach builds, in three sessions, the in-tune tone and ensemble instinct of years of playing. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  "tamil-language": {
+    slug: "tamil-language",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Tamil Language", zh: "泰米尔文", ms: "Bahasa Tamil", ta: "தமிழ் மொழி" },
+    hook: {
+      en: "Tamil Language DSA — what schools (and TLEP centres) actually look for in a young Tamil-language talent.",
+      zh: "泰米尔文 DSA——学校与 TLEP 中心校究竟在挑什么样的泰米尔文苗子",
+      ms: "DSA Bahasa Tamil — apa yang sekolah (dan pusat TLEP) sebenarnya cari pada bakat muda bahasa Tamil.",
+      ta: "தமிழ் மொழி DSA — பள்ளிகளும் TLEP மையங்களும் இளம் தமிழ் மொழித் திறமையில் உண்மையில் எதைத் தேடுகின்றன.",
+    },
+    intro: {
+      en: "Tamil Language DSA-Sec covers two related but distinct situations. The first is general Tamil-language talent — a candidate who speaks and writes Tamil with unusual fluency, loves Tamil literature and culture, and applies to a school that recognises Tamil Language as a DSA talent area. The second is the Tamil Language Elective Programme (TLEP-Sec), a two-year mother-tongue elective that, at secondary level, runs at three centre schools — Commonwealth Secondary, Riverside Secondary, and Yishun Town Secondary. TLEP-Sec itself is entered in Secondary 3 on the strength of Sec 2 Tamil results (a strong grade in Higher Tamil or Tamil Language), not at P6 — and students must offer Literature in Tamil at O-Level. Families aiming for that pathway often choose a centre school early, and the DSA-Sec assessment for Tamil talent reads for the same qualities the programme nurtures: oral fluency, written expression, and genuine interest in Tamil literature and culture. This page covers both.",
+      zh: "泰米尔文 DSA-Sec 包含两种相关但不同的情形。一是一般泰米尔文才能——口语书写格外流利、热爱泰米尔文学与文化、申请把泰米尔文列为 DSA 才艺的学校。二是泰米尔文特选课程 TLEP-Sec，这是为期两年的母语选修课，中学阶段在三所中心校开设：Commonwealth Secondary、Riverside Secondary、Yishun Town Secondary。TLEP-Sec 本身在中三入读、依据中二泰米尔文成绩（高级泰米尔文或泰米尔文须达优良），并非小六——入读后须在 O 水准修读泰米尔文学。志在此路线的家庭常会提早选中心校，而泰米尔文才能的 DSA-Sec 评估，看重的正是这门课程所培养的素质：口语流利、书面表达、对泰米尔文学与文化的真兴趣。本页两种情形都涵盖。",
+      ms: "DSA-Sec Bahasa Tamil merangkumi dua keadaan yang berkaitan tetapi berbeza. Pertama, bakat bahasa Tamil am — calon yang bertutur dan menulis dalam bahasa Tamil dengan kefasihan luar biasa, mencintai kesusasteraan dan budaya Tamil, serta memohon ke sekolah yang mengiktiraf Bahasa Tamil sebagai bidang bakat DSA. Kedua, Program Elektif Bahasa Tamil (TLEP-Sec), sebuah elektif bahasa ibunda dua tahun yang, di peringkat menengah, dijalankan di tiga sekolah pusat — Commonwealth Secondary, Riverside Secondary, dan Yishun Town Secondary. TLEP-Sec sendiri dimasuki pada Menengah 3 berdasarkan keputusan Bahasa Tamil Menengah 2 (gred cemerlang dalam Bahasa Tamil Tinggi atau Bahasa Tamil), bukan pada darjah 6 — dan pelajar mesti menawarkan Kesusasteraan Tamil di peringkat O-Level. Keluarga yang menyasarkan laluan itu sering memilih sekolah pusat lebih awal, dan penilaian DSA-Sec untuk bakat Tamil menilai kualiti yang sama yang dipupuk oleh program ini: kefasihan lisan, ekspresi penulisan, dan minat tulen terhadap kesusasteraan serta budaya Tamil. Halaman ini merangkumi kedua-duanya.",
+      ta: "தமிழ் மொழி DSA-Sec தொடர்புடைய ஆனால் வேறுபட்ட இரு சூழ்நிலைகளை உள்ளடக்கியது. முதலாவது பொதுவான தமிழ் மொழித் திறமை — தமிழை அசாதாரண சரளத்துடன் பேசி எழுதி, தமிழ் இலக்கியத்தையும் பண்பாட்டையும் நேசித்து, தமிழை DSA திறமைப் பகுதியாக அங்கீகரிக்கும் பள்ளியில் விண்ணப்பிக்கும் மாணவர். இரண்டாவது தமிழ்மொழிச் சிறப்புத் திட்டம் (TLEP-Sec), இது இடைநிலைப் பள்ளி மட்டத்தில் மூன்று மைய பள்ளிகளில் நடத்தப்படும் இரண்டாண்டு தாய்மொழித் தேர்வுப் பாடம் — Commonwealth Secondary, Riverside Secondary, Yishun Town Secondary. TLEP-Sec ஆறாம் ஆண்டில் (P6) அல்ல, இடைநிலை 2 தமிழ் முடிவுகளின் (உயர்தரத் தமிழ் அல்லது தமிழ்மொழியில் சிறந்த மதிப்பெண்) அடிப்படையில் இடைநிலை 3-இல் சேரப்படுகிறது — மேலும் மாணவர்கள் O-Level தேர்வில் தமிழ் இலக்கியத்தை எடுக்க வேண்டும். அந்தப் பாதையை இலக்காகக் கொண்ட குடும்பங்கள் பெரும்பாலும் முன்கூட்டியே ஒரு மைய பள்ளியைத் தேர்ந்தெடுக்கின்றனர், மேலும் தமிழ்த் திறமைக்கான DSA-Sec மதிப்பீடு இந்தத் திட்டம் வளர்க்கும் அதே குணங்களையே மதிப்பிடுகிறது: பேச்சுச் சரளம், எழுத்து வெளிப்பாடு, தமிழ் இலக்கியம் மற்றும் பண்பாட்டில் உண்மையான ஆர்வம். இந்தப் பக்கம் இரண்டையும் உள்ளடக்குகிறது.",
+    },
+    summary: {
+      en: "Two Tamil-language DSA situations (general talent + TLEP-Sec centres), what the oral and written assessments read for, sample interview questions, and the schools offering Tamil Language as a DSA talent area.",
+      zh: "两种泰米尔文 DSA 情形（一般才能 + TLEP-Sec 中心校）、口试与笔试的评估重点、面试题样、以及把泰米尔文列为 DSA 才艺的学校。",
+      ms: "Dua situasi DSA bahasa Tamil (bakat am + pusat TLEP-Sec), apa yang dinilai oleh penilaian lisan dan bertulis, contoh soalan temu duga, dan sekolah yang menawarkan Bahasa Tamil sebagai bidang bakat DSA.",
+      ta: "இரு தமிழ் மொழி DSA சூழ்நிலைகள் (பொதுத் திறமை + TLEP-Sec மையங்கள்), பேச்சு மற்றும் எழுத்து மதிப்பீடுகள் எதை மதிப்பிடுகின்றன, மாதிரி நேர்காணல் கேள்விகள், தமிழை DSA திறமைப் பகுதியாக வழங்கும் பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Raffles Girls' School (Secondary)",
+      "Commonwealth Secondary School",
+      "Riverside Secondary School",
+      "Pasir Ris Crest Secondary School",
+    ],
+    metaDescription: {
+      en: "Tamil Language DSA-Sec guide for Singapore P6 — general Tamil talent vs the Tamil Language Elective Programme (TLEP-Sec) centres, oral and written assessment focus, interview questions, participating schools.",
+      zh: "新加坡 P6 泰米尔文 DSA-Sec 指南——一般泰米尔文才能与泰米尔文特选课程 TLEP-Sec 中心校、口试与笔试重点、面试题、招生学校。",
+      ms: "Panduan DSA-Sec Bahasa Tamil Singapura — bakat Tamil am berbanding pusat Program Elektif Bahasa Tamil (TLEP-Sec), fokus penilaian lisan dan bertulis, soalan temu duga, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 தமிழ் மொழி DSA-Sec வழிகாட்டி — பொதுத் தமிழ்த் திறமை மற்றும் தமிழ்மொழிச் சிறப்புத் திட்டம் (TLEP-Sec) மையங்கள், பேச்சு மற்றும் எழுத்து மதிப்பீட்டுக் கவனம், நேர்காணல் கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Two situations sit under Tamil Language DSA-Sec, and it helps to separate them. The first is the general case: a school recognises Tamil Language as a DSA talent area and assesses a candidate's oral fluency, written expression, and interest in Tamil literature and culture, usually through an oral interview in Tamil plus a short written task. The second is the Tamil Language Elective Programme route. TLEP-Sec is a two-year mother-tongue elective offered at three secondary centre schools — Commonwealth Secondary School, Riverside Secondary School, and Yishun Town Secondary School — and is formally entered in Secondary 3 based on Sec 2 Tamil results (typically a strong grade in Higher Tamil or Tamil Language), with students offering Literature in Tamil at O-Level. It is not a P6 DSA programme. Families aiming for that pathway often use DSA-Sec to enter a centre school early. No school publishes a Tamil-language DSA scoring rubric; the six dimensions below describe the qualities a Tamil-language assessment objectively reads for, drawn from the published aims of TLEP-Sec and the general nature of mother-tongue talent assessment — they are not any single school's rubric.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Oral fluency and natural expression" },
+          body: {
+            en: "The first thing any Tamil-language panel reads is whether the candidate speaks Tamil naturally — not translated-from-English Tamil, not classroom-formula Tamil, but the rhythm of a child who actually uses the language at home and in life. Panels notice pronunciation, the unforced use of idiom and proverb (பழமொழி) where they fit, and the ability to keep a conversation going when the topic shifts. A candidate who answers in full, connected sentences and recovers smoothly from an unexpected question outscores one who gives short, correct, but mechanical replies.",
+          },
+        },
+        {
+          label: { en: "Written expression and command of register" },
+          body: {
+            en: "The written task — a short essay or response — is read for voice and control, not just spelling and grammar. Panels look for a candidate who can hold a single line of thought across a paragraph, choose words with some precision, and shift register appropriately (a formal letter sounds different from a personal reflection). Tamil's literary register sits some distance from spoken Tamil, and panels notice a candidate who can move toward written form without sounding stilted. Templated, tuition-centre essays read as a coaching project; writing that sounds like a real twelve-year-old with something to say reads as talent.",
+          },
+        },
+        {
+          label: { en: "Interest in Tamil literature and culture" },
+          body: {
+            en: "Tamil-language talent is inseparable from interest in Tamil literature (இலக்கியம்) and culture. Panels ask what the candidate reads — a poem (கவிதை), a short story (சிறுகதை), a Thirukkural couplet they remember, a novel — and listen for a genuine, specific reaction rather than a recited summary. A candidate who can name one work and say why a line or character stayed with them signals the literary curiosity that TLEP-Sec is built to develop. Generic praise (\"it was meaningful\") underperforms one specific, honest reaction.",
+          },
+        },
+        {
+          label: { en: "Passion for the mother tongue" },
+          body: {
+            en: "Schools recruiting Tamil-language talent — and especially the TLEP centre schools — look for candidates who treat Tamil as something they want to grow in, not a subject they happen to score in. Panels read for this in how a candidate talks about the language itself: whether they notice how a word works, enjoy a turn of phrase, or have a view on why keeping the language strong matters within Singapore's Tamil community. This motivation is what predicts a student who will thrive in a higher-level Tamil programme.",
+          },
+        },
+        {
+          label: { en: "Bilingual communication" },
+          body: {
+            en: "A core aim of TLEP-Sec is to develop students who are effectively bilingual. Panels value a candidate who is strong in Tamil without being weak in English — someone who can move between the two languages, explain a Tamil concept to an English speaker, or discuss why something reads differently in each language. Bilingual ease signals a student who can carry Tamil into wider settings, which is exactly the profile these schools are trying to build.",
+          },
+        },
+        {
+          label: { en: "Spontaneous response under follow-up" },
+          body: {
+            en: "The hardest part of any oral assessment is the second and third question — when the panel pushes past the rehearsed answer. Panels deliberately ask an unscripted follow-up to see whether the candidate can think aloud in Tamil, hold a view, and adjust it when challenged. A candidate who can say, in Tamil, \"I hadn't thought of it that way, but...\" and continue reasoning signals real command. Practising not the first answer but how to extend it under pressure is what separates DSA candidates from PSLE-oral preparation.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "TLEP centre-school pathway" },
+          body: {
+            en: "TLEP-Sec — the Tamil Language Elective Programme at secondary level — runs at three centre schools: Commonwealth Secondary School, Riverside Secondary School, and Yishun Town Secondary School. It is a two-year programme, formally entered in Secondary 3 on the strength of Sec 2 Tamil results (typically a strong grade in Higher Tamil or Tamil Language), and students offer Literature in Tamil at O-Level. It is not a P6 DSA programme. What P6 families can do is use DSA-Sec to enter one of these centre schools early, where the Tamil-language environment, literature exposure, and teacher expertise build the foundation TLEP-Sec later draws on. Treat the centre-school choice as a long-game decision, and verify each school's current DSA talent areas and the TLEP entry criteria directly before committing.",
+          },
+        },
+        {
+          position: { en: "Oral interview focus" },
+          body: {
+            en: "For general Tamil-language DSA, the oral interview in Tamil carries the most signal. Expect a live conversation: an opener (introduce yourself, a book you've read, something about your family or community), then follow-up questions that probe how you think, not just what you know. Preparation should build the ability to speak in connected, natural Tamil for several minutes, hold an opinion, and recover from an unexpected question — far more than memorising set answers, which panels detect quickly.",
+          },
+        },
+        {
+          position: { en: "Written component and literature focus" },
+          body: {
+            en: "Some schools include a short written component — an essay or a response to a passage — alongside the oral. This reads for written voice, control of register, and the ability to sustain one idea across a paragraph. Candidates aiming at the TLEP pathway benefit from genuine reading of Tamil literature (இலக்கியம்): poems (கவிதை), short stories (சிறுகதை), classical couplets such as the Thirukkural, and novels, with a habit of forming a personal reaction. Reading breadth beyond the textbook is the highest-leverage long-game investment for a Tamil-language DSA family.",
+          },
+        },
+        {
+          position: { en: "Cultural knowledge focus" },
+          body: {
+            en: "Tamil-language talent is bound up with cultural fluency. Panels may ask about Tamil customs, festivals (Pongal, Deepavali, Thai Pusam), proverbs (பழமொழி), or how a tradition connects to modern life in Singapore. The signal is specificity: a candidate who picks one custom or one proverb and explains why it matters outscores vague appreciation. This is not a memory test — it is whether the candidate lives inside the culture enough to have a view on it.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "P6 candidates are not expected to commit to a specialism — but the interests they show in the interview shape how a school develops them. The TLEP pathway in particular is a Secondary 3 decision made at one of three centre schools, so a P6 family's real choice is which environment to enter, not which programme to enrol in yet. State your interests honestly; panels see through over-rehearsed answers, and the qualities that matter — fluency, written voice, literary curiosity, and love of the language — cannot be faked in a single interview.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you want to study Tamil at a higher level?" },
+          subtext: {
+            en: "Tests genuine motivation — the central question for any Tamil-language or TLEP candidate.",
+          },
+          approach: {
+            en: "Say what the language gives you that a regular subject doesn't — connection, identity, enjoyment — with one concrete example. Deliver in Tamil.",
+          },
+          template: {
+            en: "At home we speak Tamil every day, and I love how a single Thirukkural couplet can hold a whole lesson in just a few words. I want to learn Tamil at a higher level so I can read Tamil literature more deeply, not just for exams. (Deliver in Tamil, leading with the home example.)",
+          },
+        },
+        {
+          question: { en: "Tell us about a Tamil book, poem, or story you've read recently." },
+          subtext: {
+            en: "Tests literary interest — a recited summary fails; a personal reaction succeeds.",
+          },
+          approach: {
+            en: "Name the work, then say what one line or character did to you, and why. Deliver in Tamil.",
+          },
+          template: {
+            en: "I recently read a short story about a grandmother waiting for her grandchild to come home. One line about her hands still carrying the smell of the kitchen stayed with me — it reminded me of my own grandmother. After that I started noticing how a writer picks small details to reach your feelings. (Deliver in Tamil.)",
+          },
+        },
+        {
+          question: { en: "Speak to us in Tamil for a minute about your family or your weekend." },
+          subtext: {
+            en: "Tests oral fluency and natural expression under a relaxed, open prompt.",
+          },
+          approach: {
+            en: "Speak in connected, natural sentences — tell a small real story rather than listing facts.",
+          },
+          template: {
+            en: "Last weekend my family visited my grandfather. He loves telling stories about the old days, and this time he talked about a market that no longer exists. I learn a lot of older Tamil words from him — words that aren't in the textbook. (Deliver in Tamil, as a small connected story.)",
+          },
+        },
+        {
+          question: { en: "Can you explain a Tamil proverb (பழமொழி) and what it means in real life?" },
+          subtext: {
+            en: "Tests cultural knowledge and the ability to connect tradition to modern life.",
+          },
+          approach: {
+            en: "Pick one proverb, explain its literal image, then apply it to a real situation. Deliver in Tamil.",
+          },
+          template: {
+            en: "\"Siru thuli peru vellam\" — small drops make a great flood. It means small things done consistently eventually become large. I use this for reading — every night I read a little in Tamil, and after a year my vocabulary is much wider. (Deliver in Tamil.)",
+          },
+        },
+        {
+          question: { en: "How do you use both Tamil and English in your daily life?" },
+          subtext: {
+            en: "Tests bilingual communication — a core aim of the TLEP pathway.",
+          },
+          approach: {
+            en: "Describe how you move between languages, and show comfort in both rather than choosing a side. Deliver in Tamil.",
+          },
+          template: {
+            en: "At home I speak Tamil, at school mostly English. Sometimes I translate a Tamil story for a friend who doesn't understand it, and I notice some words are hard to translate — the feeling in Tamil is sometimes more delicate. I think that's what makes me interested in both languages. (Deliver in Tamil.)",
+          },
+        },
+        {
+          question: { en: "If we gave you a topic now and one minute to think, could you speak about it?" },
+          subtext: {
+            en: "Tests spontaneous response and thinking aloud in Tamil under pressure.",
+          },
+          approach: {
+            en: "Don't freeze — take the minute, structure two or three points, and speak naturally even if imperfect. Deliver in Tamil.",
+          },
+          template: {
+            en: "(Topic: the importance of preserving the mother tongue) I think preserving the mother tongue matters because it holds our culture. First, many family values and stories exist only in Tamil. Second, if we lose the language, we lose part of our identity. That's why learning Tamil is more than just a subject to me. (Deliver in Tamil, two or three clear points.)",
+          },
+        },
+        {
+          question: { en: "If both this school and another school offer you a place, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure and how seriously the candidate has thought about the choice.",
+          },
+          approach: {
+            en: "Pick one school and give one specific, true reason — don't dodge. Deliver in Tamil.",
+          },
+          template: {
+            en: "Honestly, this school. I know it has a strong Tamil-language environment and offers the Tamil Language Elective Programme, and that's what I'm looking for in my future. Even if another school called first, I would still wait for this school's answer. (Deliver in Tamil; if the school is not a TLEP centre, swap the reason for its real Tamil-language strength.)",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Commonwealth Secondary School",
+          talentArea: { en: "Tamil Language; TLEP-Sec centre" },
+          context: {
+            en: "One of the three TLEP-Sec centre schools. Hosts the Tamil Language Elective Programme (a two-year mother-tongue elective entered in Sec 3, with Literature in Tamil at O-Level), making it a strong long-game environment for a Tamil-language-strong candidate. Verify current DSA talent areas and TLEP entry criteria directly with the school.",
+          },
+        },
+        {
+          name: "Riverside Secondary School",
+          talentArea: { en: "Tamil Language; TLEP-Sec centre" },
+          context: {
+            en: "One of the three TLEP-Sec centre schools and a recognised Tamil Language DSA school. Runs the Tamil Language Elective Programme; TLEP-Sec entry is at Sec 3 on Sec 2 Tamil results (a strong grade in Higher Tamil or Tamil Language). A natural choice for families aiming at the higher-level Tamil pathway. Confirm the school's current DSA talent areas and assessment format before applying.",
+          },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          talentArea: { en: "Tamil Language (Girls), IP" },
+          context: {
+            en: "IP school. Recognises Tamil Language as a DSA talent area. Not a TLEP centre — entry here is on general Tamil-language talent. Confirm the current talent list and the assessment format on RGS's DSA page.",
+          },
+        },
+        {
+          name: "Pasir Ris Crest Secondary School",
+          talentArea: { en: "Tamil Language" },
+          context: {
+            en: "Recognises Tamil Language as a DSA talent area. Not a TLEP centre. Confirm the current talent list and the oral / written assessment format directly with the school before applying.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the assessment is still weeks out" },
+          items: [
+            {
+              en: "Build a daily Tamil reading habit. Mix literature (கவிதை, சிறுகதை, a few Thirukkural couplets, a novel) with Tamil news or a quality Tamil magazine. Keep a small notebook for words, proverbs (பழமொழி), and lines worth remembering.",
+            },
+            {
+              en: "Practise speaking Tamil for a few minutes at a time on open topics — family, weekend, a book, a current issue. The goal is connected, natural speech that survives a follow-up question, not memorised answers.",
+            },
+            {
+              en: "Have your child form a personal reaction to one or two Tamil works they can talk about with specifics — a line, a character, why it mattered. This is the single strongest literature signal.",
+            },
+            {
+              en: "If aiming at the TLEP pathway, confirm which of the three centre schools (Commonwealth Sec, Riverside Sec, Yishun Town Sec) fits your family, and read the TLEP-Sec entry criteria — remember it is a Sec 3 entry on Sec 2 results, not a P6 one, and requires Literature in Tamil at O-Level.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Stop adding new content. Re-read one or two Tamil works your child knows well and lightly rehearse the open-conversation prompts — family, a book, why higher-level Tamil.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, whether there's a written component and whether materials are provided. Email the teacher-in-charge if anything is unclear.",
+            },
+            {
+              en: "Run one relaxed mock oral in Tamil. Record it, watch it back together, and flag any answer that ran long or sounded recited. Natural beats polished.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of assessment" },
+          items: [
+            {
+              en: "Arrive 30-45 minutes early. Let your child read a short Tamil passage on the phone to warm up the language before the oral.",
+            },
+            {
+              en: "Eat well beforehand — the oral plus any written task is mentally demanding, and energy loss shows up first in spoken fluency.",
+            },
+            {
+              en: "Drop off, don't hover. Greet the teacher-in-charge, then leave. Over-involved parents are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing they asked you in Tamil?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, the Tamil-language assessment coming up, no real preparation — there are still real moves. Prioritise three things: (1) speak Tamil daily, in connected sentences, on open topics, until natural fluency returns; (2) read one Tamil work — a few கவிதை, a சிறுகதை, or a chapter — closely enough to have a personal reaction you can voice; (3) rehearse the open-conversation questions, focusing on extending an answer under follow-up rather than memorising. Cancel anything that competes with this and with sleep. Some families bring in a Tamil-language tutor at this stage to run mock orals and sharpen written expression — useful, but no tutor produces in three sessions the fluency and reading habit that come from years of living in the language. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -14090,6 +15080,9 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "science",
   "debate",
   "malay-language",
+  "guzheng",
+  "instrumental-ensembles",
+  "tamil-language",
 ];
 
 /**
@@ -14147,6 +15140,9 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   science: ["math", "robotics"],
   debate: ["humanities", "drama"],
   "malay-language": ["chinese", "humanities"],
+  guzheng: ["chinese-orchestra", "chinese"],
+  "instrumental-ensembles": ["symphonic-band", "music"],
+  "tamil-language": ["malay-language", "chinese"],
 };
 
 /**
