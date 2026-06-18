@@ -53,7 +53,16 @@ export type TalentSlug =
   | "malay-language"
   | "guzheng"
   | "instrumental-ensembles"
-  | "tamil-language";
+  | "tamil-language"
+  | "media-arts"
+  | "computing"
+  | "gymnastics"
+  | "chinese-brush-arts"
+  | "chess-mind"
+  | "golf"
+  | "climbing"
+  | "outdoor-adventure"
+  | "cricket";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -15035,6 +15044,1814 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  "media-arts": {
+    slug: "media-arts",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Media Arts", zh: "媒体艺术", ms: "Seni Media", ta: "ஊடகக் கலை" },
+    hook: {
+      en: "Media Arts DSA — film, photography, digital media, and journalism, judged on a portfolio or showreel plus interview, not exam grades.",
+      zh: "媒体艺术 DSA——影视、摄影、数码媒体、新闻，按作品集或 showreel 加面试评估，不看考试成绩",
+      ms: "DSA Seni Media — filem, fotografi, media digital, dan kewartawanan, dinilai berdasarkan portfolio atau showreel serta temu duga, bukan gred peperiksaan.",
+      ta: "ஊடகக் கலை DSA — திரைப்படம், புகைப்படக்கலை, டிஜிட்டல் ஊடகம், செய்தியியல், தேர்வு மதிப்பெண்கள் அல்ல, போர்ட்ஃபோலியோ அல்லது ஷோரீல் மற்றும் நேர்காணல் அடிப்படையில் மதிப்பிடப்படுகிறது.",
+    },
+    intro: {
+      en: "Media Arts DSA-Sec covers the schools that recruit P6 students with a talent for visual storytelling — film and video production, photography, digital media (design, animation, motion graphics), and journalism. Unlike a sport with a clear time or a music instrument with a graded syllabus, media arts is judged on the work itself: a portfolio of photographs, a short film or showreel, a digital-media folio, or news writing, almost always paired with an interview and sometimes an on-the-spot task (a shooting brief, a photo-editing exercise, or a writing prompt). The schools below run media arts under varied programme names — some call it Visual Arts with a media strand, some Media & Design, some pair it with an Infocomm or Photography CCA. The constant is that the panel wants to see how the candidate sees, frames, and tells a story, not how many devices they own.",
+      zh: "媒体艺术 DSA-Sec 涵盖招收有视觉叙事天赋 P6 学生的学校——影视制作、摄影、数码媒体（设计、动画、动态图形）、新闻。它不像体育有明确成绩、不像乐器有考级大纲，媒体艺术看的是作品本身：一组摄影、一部短片或 showreel、一份数码媒体作品集，或新闻写作，几乎都会配一场面试，有时加当场命题（拍摄简报、修图练习、写作题）。以下学校的媒体艺术项目名称各异——有的归在含媒体方向的视觉艺术，有的叫媒体与设计，有的配资讯通信或摄影 CCA。不变的是：考官想看孩子怎么观察、怎么构图、怎么讲故事，而不是孩子有几台设备。",
+      ms: "DSA-Sec Seni Media merangkumi sekolah yang merekrut pelajar P6 berbakat dalam penceritaan visual — penerbitan filem dan video, fotografi, media digital (reka bentuk, animasi, grafik gerakan), dan kewartawanan. Tidak seperti sukan yang ada masa jelas atau alat muzik yang ada sukatan bergred, seni media dinilai berdasarkan karya itu sendiri: portfolio foto, filem pendek atau showreel, folio media digital, atau penulisan berita, hampir selalu digandingkan dengan temu duga dan kadangkala tugasan di tempat. Sekolah di bawah menjalankan seni media di bawah nama program yang berbeza. Yang tetap ialah panel mahu melihat cara calon melihat, membingkai, dan menceritakan kisah, bukan berapa banyak peranti yang dimiliki.",
+      ta: "ஊடகக் கலை DSA-Sec, காட்சி கதைசொல்லலில் திறமை கொண்ட P6 மாணவர்களை சேர்க்கும் பள்ளிகளை உள்ளடக்கியது — திரைப்படம் மற்றும் வீடியோ தயாரிப்பு, புகைப்படக்கலை, டிஜிட்டல் ஊடகம் (வடிவமைப்பு, அனிமேஷன், மோஷன் கிராபிக்ஸ்), மற்றும் செய்தியியல். தெளிவான நேரம் கொண்ட விளையாட்டு போலவோ, தரப்படுத்தப்பட்ட பாடத்திட்டம் கொண்ட இசைக்கருவி போலவோ அல்லாமல், ஊடகக் கலை படைப்பின் அடிப்படையில் மதிப்பிடப்படுகிறது: புகைப்படத் தொகுப்பு, குறும்படம் அல்லது ஷோரீல், டிஜிட்டல் ஊடகத் தொகுப்பு, அல்லது செய்தி எழுத்து, கிட்டத்தட்ட எப்போதும் நேர்காணலுடன் இணைக்கப்படுகிறது, சில நேரங்களில் இடத்திலேயே ஒரு பணியும் சேர்க்கப்படுகிறது. கீழே உள்ள பள்ளிகள் வெவ்வேறு திட்டப் பெயர்களில் ஊடகக் கலையை நடத்துகின்றன. மாறாதது என்னவென்றால், விண்ணப்பதாரர் எப்படிப் பார்க்கிறார், காட்சியை எப்படி அமைக்கிறார், கதையை எப்படிச் சொல்கிறார் என்பதைக் குழு பார்க்க விரும்புகிறது, எத்தனை சாதனங்கள் வைத்திருக்கிறார் என்பதை அல்ல.",
+    },
+    summary: {
+      en: "How media arts DSA-Sec works (portfolio / showreel / photo folio + interview), what panels assess, the four specialisations (film, photography, digital media, journalism), sample interview questions, participating schools.",
+      zh: "媒体艺术 DSA-Sec 怎么走（作品集 / showreel / 摄影集 + 面试）、考官考察重点、四个方向（影视、摄影、数码媒体、新闻）、面试题、招生学校。",
+      ms: "Cara DSA-Sec seni media berfungsi, apa yang dinilai panel, empat pengkhususan, soalan temu duga, sekolah peserta.",
+      ta: "ஊடகக் கலை DSA-Sec எப்படி வேலை செய்கிறது, குழு எதை மதிப்பிடுகிறது, நான்கு சிறப்புத் துறைகள், நேர்காணல் கேள்விகள், பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Kuo Chuan Presbyterian Secondary School",
+      "Anglo-Chinese School (Barker Road)",
+      "Deyi Secondary School",
+      "Riverside Secondary School",
+      "St. Patrick's School",
+      "Maris Stella High School (Secondary)",
+    ],
+    metaDescription: {
+      en: "Media Arts DSA-Sec guide for Singapore P6 — film, photography, digital media, journalism — portfolio / showreel + interview format, what panels assess, participating schools.",
+      zh: "新加坡 P6 媒体艺术 DSA-Sec 指南——影视、摄影、数码媒体、新闻——作品集 / showreel + 面试格式、考察重点、招生学校。",
+      ms: "Panduan DSA-Sec Seni Media Singapura — filem, fotografi, media digital, kewartawanan — format portfolio, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 ஊடகக் கலை DSA-Sec வழிகாட்டி — திரைப்படம், புகைப்படம், டிஜிட்டல் ஊடகம், செய்தியியல் — வடிவம், பள்ளிகள்.",
+    },
+    rich: {
+      preparedPiece: {
+        intro: {
+          en: "Media arts is a portfolio talent area: most schools ask candidates to submit a body of work in advance — photographs, a short film or showreel, a digital-media folio, or news/feature writing — then assess it alongside an interview, and sometimes an on-the-spot task. Format and exact requirements vary widely by school and by year because media arts sits under different programme names (Visual Arts with a media strand, Media & Design, or an Infocomm / Photography CCA pairing). Confirm each target school's 2026 brief before deciding what to submit; the items below are the common shapes, not a single school's rubric.",
+        },
+        entries: [
+          {
+            variant: { en: "Photography portfolio" },
+            requirement: { en: "10-15 of your strongest photographs, presented as a sequence rather than a dump · show range (portrait, landscape, street, still life, documentary) and intent (a themed set or short photo-essay reads stronger than unrelated images) · include 1-2 lines per image explaining the decision behind it" },
+            source: { en: "Common media/visual-arts portfolio convention across DSA-Sec schools; confirm exact count and submission format with each target school." },
+          },
+          {
+            variant: { en: "Film / video showreel or short film" },
+            requirement: { en: "A short film (typically 2-5 minutes) or a showreel of edited clips · the panel looks for a clear story or idea, deliberate shot choices, and competent editing — not expensive gear · be ready to say what you shot, what you directed, and what you edited if the work was a group project" },
+            source: { en: "General film/video portfolio convention; SOTA's Film talent area runs separately through its own Talent Academy, not this DSA-Sec route. Confirm length and format per school." },
+          },
+          {
+            variant: { en: "Digital-media folio (design / animation / motion)" },
+            requirement: { en: "A curated folio of digital work — graphic design, illustration, simple animation, or motion graphics · include process (early sketches, drafts, iterations), not just final exports · name the tools used, but lead with the idea, not the software" },
+            source: { en: "Digital-media portfolio convention; confirm whether digital-only folios are accepted at each target school." },
+          },
+          {
+            variant: { en: "Journalism / news-writing samples" },
+            requirement: { en: "2-4 pieces of writing — a news report, a feature, a review, or a school-newsletter article · show range of format and a sense of audience · clean, accurate, well-structured writing matters more than length; a tight 300-word report beats a rambling 800-word one" },
+            source: { en: "Journalism / media-writing convention; some schools assess this through an on-the-spot writing task instead of pre-submitted samples — confirm per school." },
+          },
+        ],
+        coachCtaBlurb: {
+          en: "A coach or mentor with media-production experience can help curate the portfolio (selecting and sequencing the strongest work), tighten an edit, and rehearse the interview — especially the part most P6 candidates underprepare: explaining the thinking behind each piece. Browse our coach directory for photography, film, and design mentors.",
+        },
+      },
+      trialDimensionsIntro: {
+        en: "Media arts panels are usually made up of the school's art / media teacher-in-charge, the CCA teacher (Photography, Infocomm, or Media Club), and sometimes an external practitioner. Because there is no single national rubric and each school frames media arts differently, the dimensions below describe the objective media-arts abilities panels look for — visual storytelling, composition, technical control, creative concept, portfolio quality, and communication — rather than any one school's scoring sheet.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Visual storytelling" },
+          body: { en: "The dimension that separates media arts from technical skill alone. A photograph, a film, or a designed page should carry an idea — a mood, a point of view, a small narrative. Panels look for candidates who make images that mean something, not just images that are technically clean. A simple photo of an empty void deck at dusk that says something about home outscores a sharp, well-exposed photo of nothing in particular." },
+        },
+        {
+          label: { en: "Composition and framing" },
+          body: { en: "How the candidate arranges what's inside the frame — use of foreground and background, leading lines, balance, negative space, and where the subject sits. This is the most teachable fundamental and the fastest one to assess. Panels can tell within a few images whether a candidate frames deliberately or just points and shoots. The same applies to film (shot composition) and design (layout, hierarchy)." },
+        },
+        {
+          label: { en: "Technical control" },
+          body: { en: "Competent handling of the medium's basics: exposure, focus, and light in photography; stable footage, audio, and editing rhythm in film; type, colour, and alignment in design; accuracy and structure in journalism. Panels don't expect professional polish from a 12-year-old — they look for evidence the candidate understands their tools well enough to make deliberate choices, and can explain them." },
+        },
+        {
+          label: { en: "Creative concept and originality" },
+          body: { en: "Whether the work shows the candidate's own ideas rather than copied trends. Panels notice when a portfolio is built around a personal theme, an unusual angle, or a question the candidate is genuinely curious about. A folio that documents the candidate's grandmother's wet-market routine reads as authored; a folio of imitated influencer shots reads as borrowed." },
+        },
+        {
+          label: { en: "Portfolio quality — selection and sequencing" },
+          body: { en: "Curation is itself a skill panels assess. Twenty images of uneven quality read weaker than ten strong ones. The strongest portfolios are edited down ruthlessly and ordered so the work builds — a clear opening image, a coherent middle, a strong close. Including a weak piece because it took effort is a common P6 mistake; panels judge the floor, not just the ceiling." },
+        },
+        {
+          label: { en: "Communication at interview" },
+          body: { en: "Whether the candidate can talk about their own work — why they made it, what choices they made, what they'd change. The interview is where the panel checks that the portfolio is genuinely the candidate's and that there's real thinking behind it. A candidate who can articulate the decision behind one photograph signals more than one who presents a polished folio but goes blank when asked why." },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Film and video" },
+          body: { en: "Candidates submit a short film or showreel and are assessed on storytelling, shot choices, and editing. Panels value a clear idea executed simply over an ambitious project that falls apart technically. If the work was made with friends, be precise about your role — directing, shooting, editing, or scripting. A focused 2-minute film with one strong idea beats a sprawling 10-minute one. Many schools run film/video through a Media or Infocomm CCA rather than a standalone film programme." },
+        },
+        {
+          position: { en: "Photography" },
+          body: { en: "The most common media-arts entry point and the easiest to build a portfolio for. Candidates present a sequence of photographs showing range and intent. Panels assess composition, light, and whether the images carry a point of view. A themed set or short photo-essay (10-15 images around one subject) reads stronger than scattered single shots. A phone camera used thoughtfully outscores an expensive camera used carelessly — schools care about the eye, not the equipment." },
+        },
+        {
+          position: { en: "Digital media (design / animation / motion)" },
+          body: { en: "Covers graphic design, illustration, animation, and motion graphics. Candidates present a digital folio and are assessed on visual concept, craft, and process. Including drafts and iterations — not just final exports — signals genuine design thinking. Confirm with each target school whether a digital-only folio is accepted; some media programmes still want traditional drawing fundamentals alongside digital work." },
+        },
+        {
+          position: { en: "Journalism" },
+          body: { en: "The least common and most text-based media-arts strand. Candidates submit news or feature writing, or complete an on-the-spot writing task. Panels assess clarity, accuracy, structure, and a sense of audience. Evidence of involvement in a school newsletter, blog, or writing competition strengthens the case. This strand suits the P6 student who reads news, writes well, and is curious about how stories get told — and it overlaps with the school's English / Humanities staff as much as its media staff." },
+        },
+      ],
+      positionFocusNote: {
+        en: "Few schools offer all four strands, and many fold media arts into a broader Visual Arts or Media & Design programme rather than splitting it by specialisation. Lead with the strand where the candidate's work is strongest, but check each target school's 2026 brief for which media areas it actually recruits — a school with a strong Photography CCA may not assess film or journalism at all.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why media arts?" },
+          subtext: { en: "Panels want a specific origin, not a generic love of 'being creative.'" },
+          approach: { en: "Open with one concrete moment you made something, then connect it to why telling stories with images matters to you." },
+          template: { en: "I started taking photos of my neighbourhood during the school holidays because the old shops near my flat were closing one by one. I wanted to keep them somehow. That's when I realised a photo isn't just a record — it's a way of saying this mattered. That's why media arts, not just art." },
+        },
+        {
+          question: { en: "Walk us through one piece in your portfolio." },
+          subtext: { en: "Can the candidate articulate the thinking, or only present the result?" },
+          approach: { en: "Name the idea, name one specific choice you made (framing, light, edit), and name what you'd change." },
+          template: { en: "This is a photo of my grandmother folding dumplings, shot from above so you only see her hands and the table. I wanted the focus on what she does, not her face. I used the kitchen window light instead of flash to keep it soft. If I reshot it, I'd clear the clutter on the left — it pulls the eye away from her hands." },
+        },
+        {
+          question: { en: "Why our school's media programme specifically?" },
+          subtext: { en: "Did the family research this school's media strand, or is the application generic?" },
+          approach: { en: "Cite one specific thing — the school's Photography or Media CCA, its facilities, a showcase you saw." },
+          template: { en: "I went to your open house and saw the student film screening — the documentary about hawker stalls was the kind of work I want to make. Your Media CCA having its own editing setup is exactly the support I don't have at home." },
+        },
+        {
+          question: { en: "What equipment do you use, and does it matter?" },
+          subtext: { en: "Tests whether the candidate values the eye over the gear — and whether they're honest about resources." },
+          approach: { en: "Be honest about what you have, then make clear you know the thinking matters more than the tool." },
+          template: { en: "Mostly my mother's phone, and a borrowed camera from my uncle a few times. I'd love better gear, but I've learnt that where I stand and when I shoot changes a photo more than the camera does. Good light on a phone beats bad light on a DSLR." },
+        },
+        {
+          question: { en: "Whose work do you admire, and why?" },
+          subtext: { en: "Tests awareness beyond the candidate's own bubble and ability to describe, not just name." },
+          approach: { en: "Name one photographer, filmmaker, or creator plus one specific thing about how they work." },
+          template: { en: "I follow a Singapore street photographer who shoots HDB corridors in the early morning. What I admire is the patience — he'll wait for one person to walk into the frame at the right spot. It taught me that a good photo is often about waiting, not just looking." },
+        },
+        {
+          question: { en: "Tell us about a piece that didn't work out." },
+          subtext: { en: "Tests honesty and the ability to learn from failure constructively." },
+          approach: { en: "Name the project, name what went wrong, name what you'd do differently." },
+          template: { en: "I tried to make a short film about my morning commute but the audio was unusable — wind noise drowned out everything. I should have tested the sound before shooting the whole thing. Now I always do a 10-second sound check first, even for a quick clip." },
+        },
+        {
+          question: { en: "If School A and our school both offer you a place, which would you choose?" },
+          subtext: { en: "Tests honesty under pressure — and whether you'd actually come." },
+          approach: { en: "Don't dodge. Pick one school, justify with one specific reason." },
+          template: { en: "Honestly, your school. Your Media CCA's focus on documentary work matches what I most want to do. If School A called first, I'd still wait for your reply." },
+        },
+      ],
+      schools: [
+        {
+          name: "Kuo Chuan Presbyterian Secondary School",
+          talentArea: { en: "Visual Arts, Design & Media (film / photography), DSA-Sec" },
+          context: { en: "Runs a Visual Arts, Design & Media DSA programme supported by Infocomm Technology and Photography CCAs, with training in media and film production as well as photography. Among the schools that most explicitly recruit media-arts talent at P6." },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          talentArea: { en: "Media arts strand, DSA-Sec" },
+          context: { en: "Lists media arts among its DSA-Sec talent areas. Confirm the specific media strand (film, photography, or digital media) and submission requirements in the school's 2026 DSA brief." },
+        },
+        {
+          name: "Boon Lay Secondary School",
+          talentArea: { en: "Media arts strand, DSA-Sec" },
+          context: { en: "Recruits media-arts talent through DSA-Sec. Confirm which media areas are assessed and the audition format with the school directly." },
+        },
+        {
+          name: "Canberra Secondary School",
+          talentArea: { en: "Media arts strand, DSA-Sec" },
+          context: { en: "Offers a media-arts DSA-Sec pathway. Confirm the strand and portfolio requirements in the school's 2026 brief." },
+        },
+        {
+          name: "Deyi Secondary School",
+          talentArea: { en: "Media arts strand, DSA-Sec" },
+          context: { en: "Recruits media-arts talent via DSA-Sec. Confirm whether film, photography, or digital media is assessed, and the submission format, with the school." },
+        },
+        {
+          name: "Evergreen Secondary School",
+          talentArea: { en: "Media arts strand, DSA-Sec" },
+          context: { en: "Lists media arts among its DSA-Sec talent areas. Confirm the specific media strand and audition requirements in the 2026 brief." },
+        },
+        {
+          name: "Greenridge Secondary School",
+          talentArea: { en: "Media arts strand, DSA-Sec" },
+          context: { en: "Offers a media-arts DSA-Sec pathway. Confirm the media areas assessed and portfolio format with the school directly." },
+        },
+        {
+          name: "Holy Innocents' High School",
+          talentArea: { en: "Media arts strand, DSA-Sec" },
+          context: { en: "Recruits media-arts talent through DSA-Sec. Confirm the strand and submission requirements in the school's 2026 brief." },
+        },
+        {
+          name: "Pasir Ris Secondary School",
+          talentArea: { en: "Media arts strand, DSA-Sec" },
+          context: { en: "Offers media arts among its DSA-Sec talent areas. Confirm which media areas are assessed and the audition format with the school." },
+        },
+        {
+          name: "St. Patrick's School",
+          talentArea: { en: "Media arts strand, DSA-Sec" },
+          context: { en: "Recruits media-arts talent via DSA-Sec. Confirm the specific media strand and portfolio requirements in the 2026 brief." },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the application is still weeks out" },
+          items: [
+            { en: "Build and curate the portfolio. Choose the strand where the work is strongest (photography is the most accessible to build for). Edit down ruthlessly — 10-15 strong pieces beat 25 uneven ones. Sequence them so the work builds, with a strong opening and close. Write 1-2 lines per piece explaining the decision behind it." },
+            { en: "Confirm each target school's actual requirements. Media arts sits under different programme names and not every school assesses every strand. Read the 2026 DSA brief or email the teacher-in-charge: which media areas they recruit, what to submit (portfolio / showreel / writing), file format and length, and whether there's an on-the-spot task." },
+            { en: "Shoot or make new work with intent. If there's time, build one themed set — a short photo-essay, a 2-minute film with one clear idea, or a small design series around a single subject. Authored, personal work outscores imitated trends." },
+            { en: "Run a mock interview using the questions above. Record on phone. Watch back together. The part most P6 candidates underprepare is explaining the thinking behind each piece — drill that specifically. Flag any answer that ran over thirty seconds or used the word \"passionate.\"" },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            { en: "Lock the portfolio. Stop adding new pieces; late additions rarely improve a folio and often weaken its consistency. Do a final pass on sequencing and the one-line descriptions instead." },
+            { en: "Confirm submission logistics in writing. File format (PDF, link, USB), naming convention, deadline, and whether work is submitted in advance or brought on the day. Email the teacher-in-charge if anything is ambiguous." },
+            { en: "Rehearse talking through three pieces out loud. For each: the idea, one specific choice, one thing you'd change. This is the single highest-return final-week drill for a media-arts interview." },
+          ],
+        },
+        {
+          label: { en: "Day of audition / interview" },
+          items: [
+            { en: "Arrive early with backups. Bring the portfolio in the required format plus a backup (second USB, or works also accessible by link). Charge any device. Technical failure on the day is avoidable and stressful." },
+            { en: "Let the work speak, then explain it simply. Don't over-narrate every image — present the work, and answer the panel's questions about specific pieces clearly and honestly." },
+            { en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the candidate absorbs the cost." },
+            { en: "No post-mortem in the car. One question only: \"What's one thing the panel said today?\" Anything else waits 24 hours." },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, audition coming up, no portfolio ready — there are still real moves. Don't try to learn a new medium this week; work with what the candidate already shoots or makes. Prioritise three things: (1) curate hard — pull the 10-15 strongest existing pieces and sequence them, rather than making new work in a rush; (2) confirm exactly what each target school wants to see, because media arts requirements vary widely; (3) rehearse talking through three pieces — the idea, one choice, one thing you'd change — because the interview is where a thin portfolio can still be saved by clear thinking. Cancel anything that competes with sleep. Some families bring in a photography or film mentor at this stage to help curate and tighten an edit — useful, but no mentor produces, in three sessions, the eye that comes from years of looking. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  computing: {
+    slug: "computing",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Computing", zh: "计算", ms: "Pengkomputeran", ta: "கணினியியல்" },
+    hook: {
+      en: "Computing DSA — coding, computational thinking, and infocomm: judged on how a candidate reasons through a problem, not how many languages they list.",
+      zh: "计算 DSA——编程、计算思维、资讯通信：看的是怎么推理解决问题，不是会几种语言",
+      ms: "DSA Pengkomputeran — pengekodan, pemikiran komputasional, dan infokom: dinilai berdasarkan cara calon menaakul sesuatu masalah, bukan bilangan bahasa yang disenaraikan.",
+      ta: "கணினியியல் DSA — நிரலாக்கம், கணக்கீட்டுச் சிந்தனை, தகவல்-தொடர்பு: வேட்பாளர் ஒரு சிக்கலை எவ்வாறு பகுத்தறிகிறார் என்பதன் அடிப்படையில் மதிப்பிடப்படுகிறது, எத்தனை மொழிகளை பட்டியலிடுகிறார் என்பதல்ல.",
+    },
+    intro: {
+      en: "Computing DSA-Sec admits candidates into schools with a strong software, coding, and infocomm pipeline — distinct from a Robotics DSA, which centres on hardware, sensors, and physical build-and-test. Computing is about the logic that runs on the machine, not the machine itself: writing and debugging code, breaking a hard problem into steps, recognising patterns, and designing an algorithm. Schools assess this through some combination of a written or on-screen computational-thinking task, a hands-on coding or debugging exercise, a walk-through of the candidate's own apps, games, or projects, and an interview. A documented competition record — the National Olympiad in Informatics (NOI), app or game development showcases, or a Capture-the-Flag (CTF) cyber event — strengthens an application, though the headline programming olympiads sit at secondary and JC level, so a P6 candidate's record will usually be app, game, or project work rather than NOI. Selection criteria vary by school — each school sets its own tasks, interviews, and weighting — so confirm each target school's format and whether it offers a computing or infocomm talent area before locking preparation.",
+      zh: "计算 DSA-Sec 招收进入软件、编程、资讯通信路线强的学校——区别于机器人 DSA（以硬件、传感器、实体组装与测试为核心）。计算讲的是在机器上运行的逻辑，而非机器本身：编写与调试代码、把难题拆成步骤、识别规律、设计算法。学校通过书面或屏幕上的计算思维任务、动手编程或调试练习、讲解自己做的应用或游戏或项目、加面试等组合来评核。有据可查的竞赛记录——全国信息学奥林匹克（NOI）、应用或游戏开发展示、夺旗（CTF）网络安全赛——能加强申请，不过主要的编程奥赛设在中学与初级学院层级，所以 P6 学生的记录通常是应用、游戏或项目作品而非 NOI。各校招生标准不同——任务、面试、权重各校自定——报名前先核实每所目标学校的形式，以及它是否设有计算或资讯通信才艺方向。",
+      ms: "DSA-Sec Pengkomputeran menerima calon ke sekolah dengan saluran perisian, pengekodan, dan infokom yang kukuh — berbeza daripada DSA Robotik yang berpusat pada perkakasan, penderia, serta pembinaan dan ujian fizikal. Pengkomputeran adalah tentang logik yang berjalan pada mesin, bukan mesin itu sendiri: menulis dan menyahpepijat kod, memecahkan masalah sukar kepada langkah-langkah, mengenal pasti corak, dan mereka bentuk algoritma. Sekolah menilai ini melalui gabungan tugasan pemikiran komputasional bertulis atau atas skrin, latihan pengekodan atau penyahpepijatan secara langsung, penerangan tentang aplikasi, permainan, atau projek calon sendiri, dan temu duga. Rekod pertandingan yang didokumenkan — National Olympiad in Informatics (NOI), pameran pembangunan aplikasi atau permainan, atau acara siber Capture-the-Flag (CTF) — mengukuhkan permohonan, walaupun olimpiad pengaturcaraan utama berada di peringkat menengah dan kolej, jadi rekod calon P6 biasanya kerja aplikasi, permainan, atau projek. Kriteria pemilihan berbeza mengikut sekolah — sahkan format setiap sekolah sasaran dan sama ada ia menawarkan bidang bakat pengkomputeran atau infokom sebelum membuat persediaan.",
+      ta: "கணினியியல் DSA-Sec வலுவான மென்பொருள், நிரலாக்கம், தகவல்-தொடர்பு வழி கொண்ட பள்ளிகளில் வேட்பாளர்களைச் சேர்க்கிறது — வன்பொருள், உணரிகள், நேரடி கட்டமைப்பு-சோதனையை மையமாகக் கொண்ட ரோபோடிக்ஸ் DSA இலிருந்து வேறுபட்டது. கணினியியல் என்பது இயந்திரத்தில் இயங்கும் தர்க்கம் பற்றியது, இயந்திரத்தைப் பற்றியதல்ல: குறியீடு எழுதுதல் மற்றும் பிழைதிருத்தம், கடினமான சிக்கலை படிநிலைகளாகப் பிரித்தல், வடிவங்களை அடையாளம் காணுதல், படிமுறையை வடிவமைத்தல். பள்ளிகள் இதை எழுத்து அல்லது திரை கணக்கீட்டுச் சிந்தனை பணி, நேரடி நிரலாக்க அல்லது பிழைதிருத்த பயிற்சி, வேட்பாளரின் சொந்த செயலிகள்/விளையாட்டுகள்/திட்டங்கள் பற்றிய விளக்கம், நேர்காணல் ஆகியவற்றின் கலவையால் மதிப்பிடுகின்றன. ஆவணப்படுத்தப்பட்ட போட்டி பதிவு விண்ணப்பத்தை வலுப்படுத்துகிறது, இருப்பினும் முக்கிய நிரலாக்க ஒலிம்பியாட்கள் இடைநிலை மற்றும் கல்லூரி அளவில் இருப்பதால், P6 வேட்பாளரின் பதிவு பொதுவாக செயலி, விளையாட்டு அல்லது திட்டப் பணியாக இருக்கும். தேர்வு அளவுகோல்கள் பள்ளிக்குப் பள்ளி வேறுபடும்.",
+    },
+    summary: {
+      en: "Computing DSA-Sec trial dimensions, focus areas (competitive programming / app & game dev / computational thinking / infocomm projects), sample interview questions, and schools with computing pipelines.",
+      zh: "计算 DSA-Sec trial 维度、重点领域（竞赛编程 / 应用与游戏开发 / 计算思维 / 资讯通信项目）、面试题、计算通道学校。",
+      ms: "Dimensi trial DSA-Sec Pengkomputeran, bidang fokus, soalan temu duga, sekolah dengan saluran pengkomputeran.",
+      ta: "கணினியியல் DSA-Sec சோதனை பரிமாணங்கள், கவன பகுதிகள், நேர்காணல் கேள்விகள், கணினியியல் வழிகள் கொண்ட பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Hwa Chong Institution (Secondary)",
+      "St. Joseph's Institution (Secondary)",
+      "Ngee Ann Secondary School",
+      "Commonwealth Secondary School",
+      "Bukit View Secondary School",
+      "Methodist Girls' School (Secondary)",
+    ],
+    metaDescription: {
+      en: "Computing DSA-Sec guide for Singapore P6 — how schools assess coding, computational thinking and infocomm talent, how it differs from robotics, sample interview questions, and participating schools.",
+      zh: "新加坡 P6 计算 DSA-Sec 指南——学校如何评核编程、计算思维、资讯通信才能、与机器人有何不同、面试题、招生学校。",
+      ms: "Panduan DSA-Sec Pengkomputeran Singapura untuk P6 — cara sekolah menilai pengekodan, pemikiran komputasional dan bakat infokom, soalan temu duga, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 கணினியியல் DSA-Sec வழிகாட்டி — பள்ளிகள் நிரலாக்கம், கணக்கீட்டுச் சிந்தனை, தகவல்-தொடர்பு திறமையை எவ்வாறு மதிப்பிடுகின்றன, நேர்காணல் கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Computing DSA-Sec assessments are usually run by the school's Computing or Infocomm department head together with a teacher who coaches the coding CCA. Singapore schools do not publish marking rubrics, and criteria differ by school — but the components converge on some combination of a computational-thinking task (often paper-based or on-screen, language-neutral), a hands-on coding or debugging exercise, a walk-through of the candidate's own projects, and an interview. MOE shortlisting draws on primary-school academic results (particularly Mathematics), participation and achievement in coding or infocomm competitions and programmes, and related CCA records, before any task. The six dimensions below are the abilities that computing talent objectively rewards across these formats — they are a synthesis of how coding aptitude and computational thinking are assessed, not any single school's published scoring sheet.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Algorithmic logic — breaking a problem into steps" },
+          body: { en: "The highest-signal habit is decomposition: taking a vague, hard problem and breaking it into a clear sequence of steps before touching any code. Assessors give a candidate a puzzle — sort these cards, find the duplicate, get the robot out of the maze — and watch whether they leap to a guess or first lay out the logic. A P6 who can explain a plan in plain steps, spot which case breaks it, and refine it is signalling exactly the reasoning that competitive programming and computer science are built on. Producing working code matters less than showing the logic underneath it." },
+        },
+        {
+          label: { en: "Programming implementation" },
+          body: { en: "Most P6 computing candidates know Scratch or another block language; a meaningful minority can write Python or basic JavaScript. Assessors don't expect production code — they expect clean logic, sensibly named variables, loops and conditions used correctly, and the ability to talk through what each part does. A common task is reading someone else's short program and predicting its output, or extending it by one feature. Coaches watch naming and structure: a variable called \"score\" beats \"x\", and a loop beats ten copy-pasted lines." },
+        },
+        {
+          label: { en: "Computational thinking — patterns and abstraction" },
+          body: { en: "Beyond any one language, can the candidate recognise a pattern, generalise it, and ignore the irrelevant detail? Assessors probe this with language-neutral tasks: spot the rule in a sequence, describe how you'd give precise instructions to someone who follows them literally, find the most efficient route. This is the part of the assessment that tuition rarely drills and that separates a child who has memorised syntax from one who actually thinks computationally. It is also the most transferable signal — it predicts how the candidate will handle topics the school hasn't taught yet." },
+        },
+        {
+          label: { en: "Project portfolio — apps, games, and things built" },
+          body: { en: "What has the candidate actually built? A Scratch game, a simple Python tool, a small app or website, a micro:bit project — anything finished enough to demonstrate and talk about. Assessors don't want a list of courses attended; they want one project the candidate owns, can demo, and can explain honestly: what it does, what was hard, what they'd change. A modest project the child can speak about with real ownership beats an ambitious one they clearly had heavy help on." },
+        },
+        {
+          label: { en: "Debugging resilience" },
+          body: { en: "Code rarely works the first time, and how a candidate behaves when it breaks is one of the clearest signals in the whole assessment. A common task hands the candidate a program with a bug and asks them to find it. Assessors watch the method: do they read the error, form a hypothesis, test it, and narrow down — or do they panic and randomly change things? Calm, systematic debugging under a watching adult shows the temperament that long-term computing work demands. Frustration tolerance here matters more than raw speed." },
+        },
+        {
+          label: { en: "Communication — explaining technical thinking" },
+          body: { en: "Can the candidate explain how their code or algorithm works to someone who isn't a programmer — in plain words, without hiding behind jargon? Assessors may ask a candidate to walk through their own project or to describe how they'd solve a problem out loud. The signal is clarity and structure, not vocabulary. Much computing work is collaborative, so the ability to make a non-technical panel genuinely follow a logical idea in ninety seconds demonstrates a maturity that a working program alone never reveals." },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Competitive programming" },
+          body: { en: "For candidates whose strength is algorithmic problem-solving under time pressure — the profile that maps onto the National Olympiad in Informatics (NOI) pathway in the upper school. The signal is speed and rigour in turning a problem into a correct, efficient algorithm, usually in Python or C++. Note that NOI itself is a secondary-school and JC competition, so a P6 candidate's record here will be informal — strong performance on coding-puzzle platforms or junior contests — and that is entirely normal; assessors look for the reasoning, not a medal a P6 couldn't yet have won." },
+        },
+        {
+          position: { en: "App & game development" },
+          body: { en: "The most common P6 computing profile: a candidate who builds things people can use — a Scratch or Unity game, a simple mobile or web app, an interactive tool. The signal here is finishing something, iterating on it, and being able to demo and explain it with ownership. Adjudicators look for evidence of real iteration (version two fixed what version one got wrong) over a single polished-looking demo, and for genuine understanding of the code rather than a template the child assembled with heavy adult help." },
+        },
+        {
+          position: { en: "Computational thinking" },
+          body: { en: "For candidates whose strength is the underlying reasoning rather than any one tool or language — decomposition, pattern recognition, abstraction, and precise step-by-step logic. This profile suits the child who is strong at Math and logic puzzles and picks up new coding concepts fast, even without a long portfolio. Adjudicators value this highly because it is the most transferable signal: it predicts how the candidate will cope with the school's curriculum, including topics and languages they have not yet met." },
+        },
+        {
+          position: { en: "Infocomm projects" },
+          body: { en: "For candidates drawn to the applied infocomm side — using technology to solve a real problem, basic cybersecurity (Capture-the-Flag style puzzles), data, or digital media projects. This maps onto the Infocomm Club and applied-technology tracks many schools run. Adjudicators look for a candidate who has actually done something with a purpose behind it — a tool that solved a problem they noticed, a CTF puzzle they cracked — rather than one who only voices general interest in technology." },
+        },
+      ],
+      positionFocusNote: {
+        en: "These are emphases, not rigid streams. Most strong P6 computing candidates straddle two — a game-builder whose real strength is the algorithmic thinking underneath, or a computational-thinking child who happens to have built an infocomm project. Schools do not expect a Sec 1 candidate to commit to a single track; the focus areas exist to help families recognise which of their child's strengths to put forward most clearly.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why computing, and not robotics?" },
+          subtext: { en: "STEM-leaning families often apply to both. The panel wants to know the candidate understands the difference, not just that they like technology." },
+          approach: { en: "Distinguish the two honestly. Robotics centres on hardware — sensors, motors, physical build-and-test. Computing centres on the logic and code that runs on the machine. Say which actually pulls you and why." },
+          template: { en: "I've built robots, but the part I lost track of time on was always the code — figuring out why the line-follower drifted, not wiring the sensor. With robotics the hardware limits what I can try; with pure code I can build a whole game or tool with just a laptop. The logic is the part I actually enjoy, so computing is the honest fit." },
+        },
+        {
+          question: { en: "Walk us through something you've built." },
+          subtext: { en: "The panel wants method, iteration, and genuine ownership — not a list of courses or a demo the child clearly didn't write." },
+          approach: { en: "Pick one project. What it does, what was hard, what broke, what you changed. Spend most of the time on the hard part and the fix, not the features." },
+          template: { en: "I made a Scratch game where you dodge falling blocks. The first version let the player walk through walls — my collision check only looked at the centre, not the edges. I fixed it by checking all four corners. That bug taught me more than the rest of the game; now I test edge cases first." },
+        },
+        {
+          question: { en: "Here's a short program. What will it print — and there's a bug, can you find it?" },
+          subtext: { en: "Tests reading code and systematic debugging directly — the method matters more than getting it instantly." },
+          approach: { en: "Trace it line by line out loud. State what each step does, predict the output, then locate the bug and explain why it's wrong before fixing it." },
+          template: { en: "Let me trace it. The loop counts up, but it starts at 1 and stops before the last item — so it skips the final element. That's an off-by-one error. I'd change the start to 0, or the condition to include the last index, and run it again to check." },
+        },
+        {
+          question: { en: "Explain how one of your programs works to someone who can't code." },
+          subtext: { en: "Tests technical communication — clarity and structure over jargon." },
+          approach: { en: "Pick something you genuinely understand. Use one everyday analogy. Check yourself: would a parent who's never coded follow it?" },
+          template: { en: "A loop is like telling someone \"keep stamping passports until the queue is empty\" instead of writing out the same instruction a hundred times. My game uses one to move every falling block down a step, over and over, so I write the rule once and the computer repeats it." },
+        },
+        {
+          question: { en: "You're given a problem you don't immediately know how to solve. What do you do?" },
+          subtext: { en: "Computational thinking under uncertainty. The panel wants a method, not 'I'd search it up' or 'I'd ask the teacher.'" },
+          approach: { en: "Describe decomposition: break it into smaller parts, solve the easy part first, try a small case, look for a pattern. Show you have a process when you're stuck." },
+          template: { en: "I start small. If the problem is for a hundred things, I try it for two or three on paper first and look for a pattern. I break it into parts and solve the part I do understand, then build out. Usually the small case shows me the rule for the big one." },
+        },
+        {
+          question: { en: "What coding or tech have you explored on your own, outside class?" },
+          subtext: { en: "Self-direction and genuine interest. Generic answers ('I watch coding videos') fail; one specific thing chased on the child's own initiative succeeds." },
+          approach: { en: "Name one specific thing you taught yourself or kept tinkering with, and what you made or learned from it." },
+          template: { en: "Nobody taught me Python, but I wanted my Scratch ideas to run faster, so I followed free tutorials and rewrote my dice game in it. I got stuck on random numbers for days before it clicked. Now I prototype small tools in Python whenever an idea won't fit in Scratch." },
+        },
+        {
+          question: { en: "If our school and another both offer you a computing place, how would you choose?" },
+          subtext: { en: "Tests honesty under pressure and whether the family has researched this school's actual computing or infocomm pipeline." },
+          approach: { en: "Don't dodge. Name one specific thing about this school's computing or infocomm program and commit to a reason." },
+          template: { en: "Honestly, your school — your students compete in the National Olympiad in Informatics every year and your Infocomm CCA runs an app-building showcase. That competitive coding track is exactly what I want to push myself on, so I'd choose here even if the other called first." },
+        },
+      ],
+      schools: [
+        {
+          name: "Hwa Chong Institution (Secondary)",
+          talentArea: { en: "Computing / Infocomm, IP" },
+          context: { en: "Computing and Infocomm listed among HCI's DSA talent areas, covering computational thinking, coding, and algorithmic problem-solving through the six-year Integrated Programme. As a SAP school, HCI weights bilingual (Chinese-English) capability and Chinese cultural engagement alongside technical merit. Confirm the current-year talent-area list and selection format in HCI's DSA brief." },
+        },
+        {
+          name: "St. Joseph's Institution (Secondary)",
+          talentArea: { en: "Computing / Coding, DSA-Sec" },
+          context: { en: "Listed among schools offering a coding / computing DSA talent area. Confirm the current-year talent-area list, task format, and weighting directly with the school's DSA brief." },
+        },
+        {
+          name: "Ngee Ann Secondary School",
+          talentArea: { en: "Computing / Coding, DSA-Sec" },
+          context: { en: "Listed among schools offering a coding / computing DSA talent area. Confirm the current-year talent-area list and selection format directly with the school." },
+        },
+        {
+          name: "Commonwealth Secondary School",
+          talentArea: { en: "Computing / Infocomm, DSA-Sec" },
+          context: { en: "Offers DSA in computing- and infocomm-related talent areas, with an applied and project-based orientation. Welcomes candidates with a documented coding or app/game project record. Confirm the current-year talent-area list with the school." },
+        },
+        {
+          name: "Bukit View Secondary School",
+          talentArea: { en: "Computing / Coding, DSA-Sec" },
+          context: { en: "Listed among schools offering a coding / computing DSA talent area. Confirm the current-year talent-area list and selection format directly with the school." },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          talentArea: { en: "Computing / Infocomm, IP" },
+          context: { en: "Computing-related talent areas sit within MGS's IP, which leads to the IB Diploma in senior years. Confirm whether a computing or infocomm talent area is offered in the current year, along with the selection format, in the school's DSA brief." },
+        },
+        {
+          name: "Serangoon Secondary School",
+          talentArea: { en: "Computing / Infocomm, DSA-Sec" },
+          context: { en: "Confirm with the school whether a computing or infocomm talent area is offered in the current DSA year — talent-area lists change annually and not every school runs a computing track each year. Request the task format and weighting before preparing." },
+        },
+        {
+          name: "Yuan Ching Secondary School",
+          talentArea: { en: "Computing / Infocomm, DSA-Sec" },
+          context: { en: "Confirm with the school whether a computing or infocomm talent area is offered in the current DSA year. Where offered, request the task format and weighting directly before preparing." },
+        },
+        {
+          name: "St. Patrick's School",
+          talentArea: { en: "Computing / Coding, DSA-Sec" },
+          context: { en: "Confirm with the school whether a coding or computing talent area is offered in the current DSA year. Where offered, request the task format and weighting directly before preparing." },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the task is still weeks out" },
+          items: [
+            { en: "Help your child finish and document one project as a single artefact: what it does, the hardest part, what broke, what they changed. One project they can demo and explain with real ownership outweighs a list of coding courses on the application form, and it becomes the thing they talk about at interview." },
+            { en: "Drill computational thinking, not syntax. Hand your child unplugged logic puzzles — give precise instructions to someone who follows them literally, find the rule in a sequence, plan the most efficient route. This is the part schools test that most coding tuition skips." },
+            { en: "Practise reading and debugging code, not just writing it. Show your child a short program with a bug and have them trace it line by line and find the error. Schools test calm, systematic debugging far more than they test how fast a child can type fresh code." },
+            { en: "Confirm two things directly with each target school: that it offers a computing or infocomm talent area this year (the lists change annually), and what the selection task looks like. Then run a mock interview using the questions above, especially \"Why computing, not robotics?\" and the school-choice question." },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            { en: "Stop learning new languages or frameworks. Cancel any last-minute coding bootcamp — final-week load rarely helps and usually adds nerves. The task rewards reasoning your child already has, not syntax crammed this week." },
+            { en: "Rehearse the one-project walk-through until it lands in about 90 seconds — smooth, with the hard-part-and-fix at the centre. Make sure the project actually runs on the device they'll bring, and have a backup (screenshots or a recording) in case it won't load." },
+            { en: "Confirm logistics in writing: time, venue, attire, whether to bring a laptop or the school provides machines, and which language(s) the coding task expects. Email the teacher-in-charge if anything is ambiguous — the email itself signals an attentive family." },
+            { en: "One practice explanation to a non-coder. Have your child explain how a program works to an adult who can't code (a neighbour, a relative). Explaining technical logic under unfamiliar eyes is exactly what freezes kids on the day — force the awkwardness early." },
+          ],
+        },
+        {
+          label: { en: "Day of the task" },
+          items: [
+            { en: "Eat about 90 minutes before — protein, not sugar. Debugging and a computational-thinking task reward steady, patient thinking; a sugar crash mid-task is visible to a panel." },
+            { en: "Bring the project on a charged device, plus a charger and a backup (screenshots or a short recording). Tech fails on the day; a child who shrugs and shows the backup looks more capable than one whose demo crashes and panics." },
+            { en: "Drop off, don't hover. Greet the teacher-in-charge, leave. Over-involved parents are visible and the child absorbs the cost." },
+            { en: "No post-mortem in the car. One question only: \"What's one thing you'd do differently?\" Anything else waits 24 hours. Replaying a bug they couldn't fix during the wait only corrodes the next task." },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, task coming up, no clear plan — there are still real moves. Don't try to learn a new language this week; the task rewards reasoning, not fresh syntax, and a crammed framework won't hold under pressure. Instead, take the most genuine thing your child has ever built — a Scratch game, a small Python tool, even a half-finished app — and turn it into a tight 90-second walk-through: what it does, the hardest part, what broke, what they changed. Rehearse it five or six times until it's smooth and specific. Then drill the two skills schools test that tuition skips: tracing and debugging a short program with a bug in it, and unplugged computational-thinking puzzles (find the rule, give literal instructions, plan the efficient route). Those moves buy composure and sharpen the logic your child already has. Some families bring in a private coding coach at this stage; a good one can stabilise nerves and tighten the explanation, but no coach manufactures, in three sessions, the algorithmic instinct that months of building and debugging build. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  gymnastics: {
+    slug: "gymnastics",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Gymnastics", zh: "体操", ms: "Gimnastik", ta: "சிம்னாஸ்டிக்ஸ்" },
+    hook: {
+      en: "Gymnastics DSA — artistic, rhythmic, and related disciplines, judged on a skills demonstration or trial plus competition record, not exam grades.",
+      zh: "体操 DSA——竞技体操、艺术体操等项目，按技术示范或选拔加比赛成绩评估，不看考试成绩",
+      ms: "DSA Gimnastik — artistik, ritmik, dan disiplin berkaitan, dinilai berdasarkan demonstrasi kemahiran atau ujian serta rekod pertandingan, bukan gred peperiksaan.",
+      ta: "சிம்னாஸ்டிக்ஸ் DSA — கலை, தாள, மற்றும் தொடர்புடைய பிரிவுகள், தேர்வு மதிப்பெண்கள் அல்ல, திறன் நிகழ்த்துதல் அல்லது தேர்வு மற்றும் போட்டிப் பதிவு அடிப்படையில் மதிப்பிடப்படுகிறது.",
+    },
+    intro: {
+      en: "Gymnastics DSA-Sec covers schools that recruit P6 students with a competitive gymnastics background — most commonly artistic gymnastics (the apparatus disciplines) and rhythmic gymnastics (apparatus-with-music, performed by girls), and at some schools related movement disciplines. Because gymnastics is a graded, competition-structured sport, a documented record matters: results from Singapore Gymnastics (the national body) competitions, school nationals, or recognised club events, together with the candidate's competitive level. Assessment usually combines that record with a physical trial or skills demonstration — the panel watches strength, flexibility, body control, and the candidate's repertoire of skills live — plus an interview about training history, goals, and resilience. The schools below run gymnastics under varied programme and CCA structures, and not every school offers every discipline. Confirm each target school's 2026 DSA brief — talent-area lists, the disciplines recruited, and the trial format all change year to year.",
+      zh: "体操 DSA-Sec 涵盖招收有竞技体操背景 P6 学生的学校——最常见的是竞技体操（器械项目）和艺术体操（持器械配乐、女子项目），部分学校还有相关的运动项目。因体操是有考级、有比赛体系的运动，有据可查的记录很重要：新加坡体操总会（国家机构）赛事、全国学校赛、或受认可俱乐部赛事的成绩，连同孩子的竞技级别。评核通常是这份记录加体能测试或技术示范——考官现场观察力量、柔韧、身体控制、孩子掌握的技术动作——再加面试，谈训练经历、目标、抗压。以下学校的体操项目与 CCA 架构各异，并非每校都开所有分项。报名前先核实每所目标学校的 2026 DSA 简章——才艺方向、招收分项、测试形式逐年不同。",
+      ms: "DSA-Sec Gimnastik merangkumi sekolah yang merekrut pelajar P6 dengan latar belakang gimnastik kompetitif — paling lazim gimnastik artistik (disiplin alatan) dan gimnastik ritmik (alatan dengan muzik, dipersembahkan oleh perempuan), serta di sesetengah sekolah disiplin pergerakan berkaitan. Kerana gimnastik ialah sukan bergred dan berstruktur pertandingan, rekod yang didokumenkan penting: keputusan daripada pertandingan Singapore Gymnastics (badan kebangsaan), kebangsaan sekolah, atau acara kelab yang diiktiraf, bersama tahap kompetitif calon. Penilaian biasanya menggabungkan rekod itu dengan ujian fizikal atau demonstrasi kemahiran — panel memerhati kekuatan, kelenturan, kawalan badan, dan repertoir kemahiran calon secara langsung — serta temu duga tentang sejarah latihan, matlamat, dan daya tahan. Sahkan taklimat DSA 2026 setiap sekolah sasaran — senarai bidang bakat, disiplin yang direkrut, dan format ujian berubah dari tahun ke tahun.",
+      ta: "சிம்னாஸ்டிக்ஸ் DSA-Sec, போட்டி சிம்னாஸ்டிக்ஸ் பின்னணி கொண்ட P6 மாணவர்களை சேர்க்கும் பள்ளிகளை உள்ளடக்கியது — மிகவும் பொதுவாக கலை சிம்னாஸ்டிக்ஸ் (கருவிப் பிரிவுகள்) மற்றும் தாள சிம்னாஸ்டிக்ஸ் (இசையுடன் கருவி, பெண்களால் நிகழ்த்தப்படுவது), சில பள்ளிகளில் தொடர்புடைய அசைவுப் பிரிவுகள். சிம்னாஸ்டிக்ஸ் தரப்படுத்தப்பட்ட, போட்டி-கட்டமைப்புள்ள விளையாட்டு என்பதால், ஆவணப்படுத்தப்பட்ட பதிவு முக்கியம்: Singapore Gymnastics (தேசிய அமைப்பு) போட்டிகள், பள்ளி தேசியப் போட்டிகள், அல்லது அங்கீகரிக்கப்பட்ட கிளப் நிகழ்வுகளின் முடிவுகள், விண்ணப்பதாரரின் போட்டி நிலையுடன். மதிப்பீடு பொதுவாக அந்தப் பதிவை உடல் தேர்வு அல்லது திறன் நிகழ்த்துதலுடன் இணைக்கிறது — குழு வலிமை, நெகிழ்வுத்தன்மை, உடல் கட்டுப்பாடு, விண்ணப்பதாரரின் திறன் தொகுப்பை நேரடியாகப் பார்க்கிறது — மேலும் பயிற்சி வரலாறு, இலக்குகள், மீள்திறன் பற்றிய நேர்காணல். ஒவ்வொரு பள்ளியின் 2026 DSA விவரத்தை உறுதிப்படுத்தவும் — பட்டியல்களும் பிரிவுகளும் தேர்வு வடிவமும் ஆண்டுதோறும் மாறும்.",
+    },
+    summary: {
+      en: "How gymnastics DSA-Sec works (competition record + physical trial / skills demonstration + interview), what panels assess, artistic vs rhythmic, sample interview questions, participating schools.",
+      zh: "体操 DSA-Sec 怎么走（比赛记录 + 体能测试 / 技术示范 + 面试）、考官考察重点、竞技与艺术体操之别、面试题、招生学校。",
+      ms: "Cara DSA-Sec gimnastik berfungsi, apa yang dinilai panel, artistik vs ritmik, soalan temu duga, sekolah peserta.",
+      ta: "சிம்னாஸ்டிக்ஸ் DSA-Sec எப்படி வேலை செய்கிறது, குழு எதை மதிப்பிடுகிறது, கலை vs தாளம், நேர்காணல் கேள்விகள், பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Cedar Girls' Secondary School",
+      "Nanyang Girls' High School",
+      "Raffles Girls' School (Secondary)",
+      "Hwa Chong Institution (Secondary)",
+      "Anglican High School",
+      "Dunman High School",
+    ],
+    metaDescription: {
+      en: "Gymnastics DSA-Sec guide for Singapore P6 — artistic and rhythmic gymnastics — competition record + physical trial format, what panels assess, participating schools.",
+      zh: "新加坡 P6 体操 DSA-Sec 指南——竞技与艺术体操——比赛记录 + 体能测试格式、考察重点、招生学校。",
+      ms: "Panduan DSA-Sec gimnastik Singapura untuk P6 — gimnastik artistik dan ritmik — format rekod pertandingan dan ujian, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 சிம்னாஸ்டிக்ஸ் DSA-Sec வழிகாட்டி — கலை மற்றும் தாள சிம்னாஸ்டிக்ஸ் — வடிவம், பங்கேற்கும் பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Gymnastics trials are usually run by the school's gymnastics coach and the PE/CCA teacher-in-charge, sometimes with an external technical official. Singapore schools do not publish marking rubrics, and the disciplines differ — but assessment converges on strength and power, flexibility, body control and technique, skill repertoire, the competition record, and trainability/temperament. MOE shortlisting draws on the candidate's competition results and level before any trial. The dimensions below describe the objective abilities gymnastics rewards across artistic and rhythmic disciplines — a synthesis, not any one school's scoring sheet.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Strength and power" },
+          body: { en: "Gymnastics is built on relative strength — strength for the body's own weight. Panels assess this directly: holds, push and pull strength, explosive power for jumps and tumbling. A candidate who can hold a controlled position, jump with height, and support their own bodyweight cleanly signals the physical base every gymnastics discipline depends on. This is one of the fastest things a trained eye reads in a trial, and one of the hardest to fake without real training behind it." },
+        },
+        {
+          label: { en: "Flexibility and mobility" },
+          body: { en: "Range of motion through the shoulders, spine, hips, and ankles — central to both artistic and rhythmic gymnastics. Panels look at splits, bridges, and the line a candidate can achieve, but also at controlled, active flexibility rather than passive looseness. Good flexibility under control signals years of consistent training; it cannot be developed in a sprint and is therefore a strong indicator of a genuine gymnastics background." },
+        },
+        {
+          label: { en: "Body control and technique" },
+          body: { en: "How precisely the candidate controls their body in motion — clean lines, pointed toes, controlled landings, balance, and spatial awareness. This is the dimension that separates a gymnast from a generally athletic child. Panels watch for the trained habits that show even in basic movements: the way a candidate holds a shape, sticks a landing, or keeps form through a skill. Sloppy form on easy skills outweighs an impressive but uncontrolled hard one." },
+        },
+        {
+          label: { en: "Skill repertoire and difficulty" },
+          body: { en: "The range and level of skills the candidate can perform reliably — on apparatus (artistic) or with apparatus and choreography (rhythmic). Panels weigh executed difficulty: a difficult skill performed cleanly and consistently signals more than an advanced skill attempted and missed. The competitive level the candidate trains and competes at gives the panel a reference point, but the live demonstration confirms what they can actually do under observation." },
+        },
+        {
+          label: { en: "Competition record and level" },
+          body: { en: "A documented record from Singapore Gymnastics competitions, school nationals, or recognised club events, together with the level the candidate competes at. This is the part MOE shortlisting leans on before the trial. Panels treat genuine, verifiable results as evidence of both ability and competitive experience. As with all record-based talents, the record opens the door; the trial and interview confirm the candidate behind it." },
+        },
+        {
+          label: { en: "Trainability and temperament" },
+          body: { en: "Gymnastics is a high-discipline, high-repetition, fear-managing sport, and coaches recruit for temperament as much as current skill. Panels watch how a candidate takes correction during the trial, whether they commit to a skill or hesitate, and how they respond after a fall or a missed element. A coachable, resilient candidate with sound fundamentals is often preferred over a more skilled one who is fragile under pressure — the school is selecting someone they will train for years." },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Artistic gymnastics" },
+          body: { en: "The apparatus disciplines — for boys (floor, pommel horse, rings, vault, parallel bars, horizontal bar) and for girls (vault, uneven bars, balance beam, floor). Panels assess strength, technique, and executed difficulty across apparatus, and look at the candidate's competitive level. A candidate strong on two or three apparatus with clean execution presents better than one who attempts everything roughly. Lead with the apparatus where execution is most reliable." },
+        },
+        {
+          position: { en: "Rhythmic gymnastics" },
+          body: { en: "An apparatus-with-music discipline performed by girls, combining dance, flexibility, and the handling of apparatus (rope, hoop, ball, clubs, ribbon). Panels assess flexibility, body control, artistry, and apparatus mastery together with the competition record. This profile suits the candidate whose strength is the blend of movement quality and apparatus skill set to music, and overlaps in temperament with dance talent." },
+        },
+        {
+          position: { en: "Foundational athleticism" },
+          body: { en: "Some candidates come with strong gymnastics fundamentals — excellent strength, flexibility, and body control — without a long competition record, perhaps from a recreational or development programme. Where a school is willing to develop talent, panels may weight raw physical aptitude and trainability heavily. This profile depends entirely on the school's appetite to coach from a lower base; confirm whether a target school recruits developing gymnasts or only competition-proven ones." },
+        },
+      ],
+      positionFocusNote: {
+        en: "Not every school offers both artistic and rhythmic gymnastics, and some recruit only one, or fold gymnastics into a broader sports or movement programme. Lead with the candidate's actual discipline and strongest apparatus, and confirm in each target school's 2026 brief which gymnastics disciplines it recruits and whether it accepts developing gymnasts or only those with an established competition record.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why gymnastics, and what keeps you in it?" },
+          subtext: { en: "Gymnastics is demanding and many quit; panels want to know what sustains the candidate through hard, repetitive training." },
+          approach: { en: "Open with one concrete moment, then name what keeps you training despite how hard it is." },
+          template: { en: "I started because I loved being upside down, but what keeps me is the day a skill finally clicks. I spent months on my back handspring, falling over and over. The day I landed it clean, I understood why I train. That feeling of finally getting something hard is why I keep going." },
+        },
+        {
+          question: { en: "Tell us about your training and competition history." },
+          subtext: { en: "Tests the genuineness of the record and the candidate's competitive level." },
+          approach: { en: "State your club, how long and how often you train, your discipline, and your highest competitive level honestly." },
+          template: { en: "I train artistic gymnastics at my club four times a week, about three hours each session, and I've trained for five years. I compete at the level my coach has entered me for in Singapore Gymnastics events, and my best result was a top-eight finish on beam last year." },
+        },
+        {
+          question: { en: "Show us your best skills." },
+          subtext: { en: "The physical trial is the core of the assessment. Clean execution of reliable skills beats risky attempts at hard ones." },
+          approach: { en: "Warm up properly. Lead with skills you can perform consistently and cleanly. Commit fully — hesitation on a skill reads worse than choosing an easier one." },
+          template: { en: "(No spoken script — prepare by selecting a set of skills you can execute reliably under observation, on your strongest apparatus or with your apparatus, and rehearsing them to clean, consistent form. Warm up flexibility and the specific skills beforehand so the trial starts with your body ready.)" },
+        },
+        {
+          question: { en: "Tell us about a time you were afraid of a skill. What did you do?" },
+          subtext: { en: "Fear management is central to gymnastics; panels want resilience and method, not bravado." },
+          approach: { en: "Name a real skill you feared, the steps you took, and what you learnt about managing fear." },
+          template: { en: "I was scared of my backward giant on bars for a long time — falling backwards is frightening. My coach broke it into drills and used a spot until I trusted it. I learnt that fear shrinks when you break the skill down; rushing it just makes the fear bigger." },
+        },
+        {
+          question: { en: "How do you handle a bad training day or a fall in competition?" },
+          subtext: { en: "Tests temperament and recovery — exactly what coaches recruit for." },
+          approach: { en: "Describe your actual reset method honestly — what you do in the moment and after." },
+          template: { en: "If I fall in competition, I have a few seconds before the next element, so I breathe and reset rather than carry the mistake into the next skill. After a bad training day, I tell myself one bad day isn't the trend. My coach says how you respond to a fall matters more than the fall." },
+        },
+        {
+          question: { en: "How do you balance gymnastics training with school?" },
+          subtext: { en: "Gymnastics has a heavy training load; panels check the candidate can manage both." },
+          approach: { en: "Be specific about your routine — when you train, when you study, how you cope with tired days." },
+          template: { en: "Training takes most evenings, so I do homework right after school before training and finish off after dinner. On competition weekends I plan ahead and do schoolwork in advance. It's tight, but managing my time is part of being a gymnast — the discipline carries over." },
+        },
+        {
+          question: { en: "If another school also offers you a gymnastics place, how would you choose?" },
+          subtext: { en: "Tests honesty under pressure and whether the family has researched this school's gymnastics programme." },
+          approach: { en: "Don't dodge. Name one specific thing about this school's gymnastics setup and commit to a reason." },
+          template: { en: "Honestly, your school — your gymnastics CCA has its own training facility and a coach who develops gymnasts to national level, which is exactly the support I need to keep improving. If the other school called first, I'd still wait for your reply." },
+        },
+      ],
+      schools: [
+        {
+          name: "Cedar Girls' Secondary School",
+          talentArea: { en: "Gymnastics, DSA-Sec" },
+          context: { en: "Girls' school listed among those recruiting gymnastics talent through DSA-Sec. Confirm the disciplines offered (artistic and/or rhythmic) and the trial format in the school's 2026 DSA brief." },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          talentArea: { en: "Gymnastics, DSA-Sec (SAP)" },
+          context: { en: "SAP girls' school running a six-year Integrated Programme; recruits for a range of sports including gymnastics. Weights bilingual ability alongside athletic merit. Confirm the gymnastics disciplines and trial format in the 2026 brief." },
+        },
+        {
+          name: "Raffles Girls' School (Secondary)",
+          talentArea: { en: "Gymnastics, DSA-Sec" },
+          context: { en: "Girls' school with a strong sports programme; recruits gymnastics talent through DSA-Sec. Confirm which disciplines are offered and the trial requirements with the school directly." },
+        },
+        {
+          name: "Hwa Chong Institution (Secondary)",
+          talentArea: { en: "Gymnastics, DSA-Sec (IP, SAP)" },
+          context: { en: "SAP school with a six-year Integrated Programme; recruits for a wide range of sports. Confirm whether gymnastics is among the current-year talent areas, the disciplines offered, and the trial format in HCI's DSA brief." },
+        },
+        {
+          name: "Anglican High School",
+          talentArea: { en: "Gymnastics, DSA-Sec (SAP)" },
+          context: { en: "SAP school recruiting across several sports. Confirm whether gymnastics is offered in the current DSA year and the trial format with the school directly." },
+        },
+        {
+          name: "Dunman High School",
+          talentArea: { en: "Gymnastics, DSA-Sec (SAP)" },
+          context: { en: "SAP school with an Integrated Programme; recruits for several sports. Confirm whether gymnastics is among the current-year talent areas and the trial requirements in the 2026 brief." },
+        },
+        {
+          name: "Bukit Panjang Government High School",
+          talentArea: { en: "Gymnastics, DSA-Sec" },
+          context: { en: "Confirm with the school whether a gymnastics talent area is offered in the current DSA year — talent-area lists change annually and not every school runs gymnastics each year — along with the disciplines and trial format." },
+        },
+        {
+          name: "Tanjong Katong Girls' School",
+          talentArea: { en: "Gymnastics, DSA-Sec" },
+          context: { en: "Confirm directly with the school whether a gymnastics talent area is offered in the current DSA year, and the trial format and disciplines where it is." },
+        },
+        {
+          name: "Yishun Town Secondary School",
+          talentArea: { en: "Gymnastics, DSA-Sec" },
+          context: { en: "Confirm directly with the school whether a gymnastics talent area is offered in the current DSA year, and the trial requirements where it is. Talent-area lists change annually." },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            { en: "Assemble the competition record. Gather verifiable results from Singapore Gymnastics events, school nationals, or recognised club competitions, with dates, the discipline, and the level competed at. This is what MOE shortlisting leans on before the trial — present it cleanly." },
+            { en: "Work with the candidate's club coach on trial selection. Decide which apparatus or routines to show, prioritising skills the child can execute cleanly and reliably under observation over the hardest skills in their repertoire. The coach knows what holds up under pressure." },
+            { en: "Maintain conditioning, don't peak early. Keep strength, flexibility, and skill work on the candidate's normal training rhythm. The goal is to arrive at the trial healthy and sharp, not exhausted from a sudden ramp-up that risks injury." },
+            { en: "Confirm each target school's 2026 brief and run a mock interview. Check which gymnastics disciplines the school recruits, whether it accepts developing gymnasts or only competition-proven ones, and the trial format. Then rehearse the interview questions above — especially fear-management and the school-choice question." },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            { en: "Reduce load, protect against injury. Final-week conditioning gains are minimal and injury risk is real. Trust the training already done; a tweaked ankle the week before a trial ends the application." },
+            { en: "Rehearse the trial set, lightly and cleanly. Run the chosen skills at a manageable intensity to keep them automatic, focusing on clean execution and confident commitment rather than pushing difficulty." },
+            { en: "Confirm logistics in writing: trial date, venue, attire (leotard/training gear), whether the candidate brings their own apparatus (for rhythmic), warm-up arrangements, and whether music is provided or brought. Email the teacher-in-charge if anything is unclear." },
+          ],
+        },
+        {
+          label: { en: "Day of the trial" },
+          items: [
+            { en: "Warm up thoroughly and specifically. Gymnastics demands the body be properly prepared — flexibility and the specific skills warmed up — both for performance and to avoid injury. Arrive early enough to complete a full warm-up calmly." },
+            { en: "Bring the right kit and a backup. Correct attire, any required apparatus (and a spare), grips/tape if used, water, and the music file plus a backup copy if a routine needs it. Equipment failure on the day is avoidable." },
+            { en: "Drop off, don't hover. Greet the teacher-in-charge, leave. Over-involved parents are visible and the candidate absorbs the cost; gymnasts perform better without a parent watching from the side." },
+            { en: "No post-mortem in the car. One question only: \"What's one thing you'd do differently?\" Anything else waits 24 hours. Replaying a missed skill during the wait only corrodes the next trial." },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no clear plan — the honest truth is gymnastics rewards years of training more than almost any talent area, and a sprint cannot manufacture strength, flexibility, or skills. But there are still real moves. Work with the candidate's club coach to select a trial set built entirely on skills the child can execute cleanly and reliably — a confident, well-controlled basic set reads far better to a panel than missed attempts at hard skills. Protect against injury: do not ramp up training this week; a tweak ends the application outright. Assemble the competition record cleanly, because MOE shortlisting leans on it. And rehearse the interview — especially how the candidate handles fear and falls, which coaches recruit for as much as skill. A good coach can sharpen the trial selection and steady nerves, but no one builds, in a week, the body control that years of training produce. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  "chinese-brush-arts": {
+    slug: "chinese-brush-arts",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Chinese Brush Arts", zh: "书法国画", ms: "Seni Berus Cina", ta: "சீன தூரிகைக் கலை" },
+    hook: {
+      en: "Chinese calligraphy and ink-painting DSA — a portfolio-and-demonstration talent area, most common at SAP and Special Assistance Plan schools.",
+      zh: "书法国画 DSA——作品集加现场示范的才艺方向，特选（SAP）学校最常见",
+      ms: "DSA kaligrafi dan lukisan dakwat Cina — bidang bakat portfolio dan demonstrasi, paling lazim di sekolah SAP.",
+      ta: "சீன கையெழுத்துக் கலை மற்றும் மை-ஓவியம் DSA — போர்ட்ஃபோலியோ மற்றும் நேரடி நிகழ்த்துதல் சார்ந்த திறமைப் பகுதி, SAP பள்ளிகளில் மிகவும் பொதுவானது.",
+    },
+    intro: {
+      en: "Chinese brush arts DSA-Sec covers Chinese calligraphy (书法) and Chinese ink painting (国画 / 水墨画) — a traditional-arts talent area offered mainly by Special Assistance Plan (SAP) schools and schools with a strong Chinese-culture programme. It is a niche route compared with mainstream visual art, and the schools that recruit for it tend to weight bilingual ability and engagement with Chinese culture alongside the artwork itself. Assessment usually combines a submitted portfolio of brush works with a live demonstration — the candidate writes or paints in front of the panel, who watch brush control, posture, and ink handling in real time — plus an interview, often partly in Mandarin, about the candidate's practice, the scripts or styles they work in, and their familiarity with the tradition. Because programme names and requirements vary by school and change year to year, confirm each target school's 2026 DSA brief before preparing.",
+      zh: "书法国画 DSA-Sec 涵盖中国书法（书法）与中国水墨画（国画 / 水墨画）——主要由特选（SAP）学校和华文文化课程强的学校开设的传统艺术才艺方向。相比主流视觉艺术，这是个小众通道，招收的学校往往在作品之外也看重双语能力和对华族文化的投入。评核通常是提交的书法/国画作品集加现场示范——孩子当场书写或作画，考官实时观察运笔、姿势、用墨——再加面试，常部分用华语进行，谈孩子的练习、所写书体或所学画风、对传统的了解。因各校项目名称与要求逐年不同，报名前先核实每所目标学校的 2026 DSA 简章。",
+      ms: "DSA-Sec seni berus Cina merangkumi kaligrafi Cina (书法) dan lukisan dakwat Cina (国画 / 水墨画) — bidang bakat seni tradisional yang ditawarkan terutamanya oleh sekolah Special Assistance Plan (SAP) dan sekolah dengan program budaya Cina yang kukuh. Ia laluan khusus berbanding seni visual arus perdana, dan sekolah yang merekrut untuknya cenderung mementingkan kebolehan dwibahasa serta penglibatan dengan budaya Cina di samping karya seni itu sendiri. Penilaian biasanya menggabungkan portfolio karya berus yang dihantar dengan demonstrasi langsung — calon menulis atau melukis di hadapan panel, yang memerhati kawalan berus, postur, dan pengendalian dakwat secara langsung — serta temu duga, selalunya sebahagiannya dalam bahasa Mandarin. Kerana nama program dan keperluan berbeza mengikut sekolah dan berubah dari tahun ke tahun, sahkan taklimat DSA 2026 setiap sekolah sasaran sebelum membuat persediaan.",
+      ta: "சீன தூரிகைக் கலை DSA-Sec, சீன கையெழுத்துக் கலை (书法) மற்றும் சீன மை-ஓவியம் (国画 / 水墨画) ஆகியவற்றை உள்ளடக்கியது — முக்கியமாக Special Assistance Plan (SAP) பள்ளிகளும், வலுவான சீன-கலாச்சாரத் திட்டம் கொண்ட பள்ளிகளும் வழங்கும் பாரம்பரியக் கலைத் திறமைப் பகுதி. பிரதான காட்சிக் கலையுடன் ஒப்பிடும்போது இது ஒரு சிறப்புப் பாதை, இதற்காக சேர்க்கும் பள்ளிகள் கலைப் படைப்புடன் இருமொழித் திறன் மற்றும் சீன கலாச்சார ஈடுபாட்டையும் முக்கியமாகக் கருதுகின்றன. மதிப்பீடு பொதுவாக சமர்ப்பிக்கப்பட்ட தூரிகைப் படைப்புத் தொகுப்பையும் நேரடி நிகழ்த்துதலையும் இணைக்கிறது — விண்ணப்பதாரர் குழுவின் முன் எழுதுகிறார் அல்லது வரைகிறார், அவர்கள் தூரிகைக் கட்டுப்பாடு, தோரணை, மை கையாளுதலை நேரடியாகப் பார்க்கிறார்கள் — மேலும் நேர்காணல், பெரும்பாலும் ஓரளவு மாண்டரின் மொழியில். திட்டப் பெயர்களும் தேவைகளும் பள்ளிக்குப் பள்ளி வேறுபடுவதால், தயாரிப்பதற்கு முன் ஒவ்வொரு பள்ளியின் 2026 DSA விவரத்தை உறுதிப்படுத்தவும்.",
+    },
+    summary: {
+      en: "How Chinese brush arts DSA-Sec works (portfolio + live demonstration + interview), what panels assess, calligraphy vs ink painting, sample interview questions, participating SAP and Chinese-culture schools.",
+      zh: "书法国画 DSA-Sec 怎么走（作品集 + 现场示范 + 面试）、考官考察重点、书法与国画之别、面试题、招生的特选与华文文化学校。",
+      ms: "Cara DSA-Sec seni berus Cina berfungsi, apa yang dinilai panel, kaligrafi vs lukisan dakwat, soalan temu duga, sekolah peserta.",
+      ta: "சீன தூரிகைக் கலை DSA-Sec எப்படி வேலை செய்கிறது, குழு எதை மதிப்பிடுகிறது, கையெழுத்து vs மை-ஓவியம், நேர்காணல் கேள்விகள், பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Nan Hua High School",
+      "Dunman High School",
+      "Chung Cheng High School (Main)",
+      "Maris Stella High School (Secondary)",
+      "Catholic High School (Secondary)",
+      "River Valley High School",
+    ],
+    metaDescription: {
+      en: "Chinese brush arts DSA-Sec guide for Singapore P6 — calligraphy and ink painting — portfolio + live demonstration + interview format, what panels assess, SAP and Chinese-culture schools.",
+      zh: "新加坡 P6 书法国画 DSA-Sec 指南——书法与国画——作品集 + 现场示范 + 面试格式、考察重点、特选与华文文化学校。",
+      ms: "Panduan DSA-Sec seni berus Cina Singapura — kaligrafi dan lukisan dakwat — format portfolio dan demonstrasi, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 சீன தூரிகைக் கலை DSA-Sec வழிகாட்டி — கையெழுத்து மற்றும் மை-ஓவியம் — வடிவம், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Chinese brush arts panels are usually led by the school's Chinese department or art teacher with a calligraphy / ink-painting background, sometimes with an external master. There is no national rubric, and SAP schools frame the talent area differently — but assessment converges on brush control, structure and composition, ink and water handling, knowledge of the tradition, the submitted portfolio, and the interview (often partly in Mandarin). The dimensions below describe the objective abilities panels reward, not any one school's scoring sheet.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Brush control (笔法)" },
+          body: { en: "The foundation of both calligraphy and ink painting: how the candidate holds and moves the brush. Panels watch the live demonstration for steady, controlled strokes, correct pressure and lift, and clean starts and finishes. A trained hand shows in the confidence of a single line — the way a stroke begins, carries weight, and ends — far more than in a finished piece that could have been laboured over at home. This is why the live demonstration matters: it reveals technique a polished portfolio can hide." },
+        },
+        {
+          label: { en: "Structure and composition (结构 / 章法)" },
+          body: { en: "In calligraphy, how well-proportioned each character is and how the characters sit together on the page (字形 and 章法). In ink painting, how the elements are arranged — balance, use of empty space (留白), and overall composition. Panels assess whether the candidate understands that brush arts are as much about what is left empty as what is filled. Cramped, crowded work signals a beginner; confident use of space signals training." },
+        },
+        {
+          label: { en: "Ink and water control (墨法)" },
+          body: { en: "Particularly central to ink painting, where the gradation of ink from dark to light and the handling of water create depth and texture (浓淡干湿). In calligraphy, consistent ink loading keeps strokes even. Panels look for deliberate control of tone rather than accidental blots — evidence the candidate understands how ink and water behave on paper, a skill that takes sustained practice and cannot be faked on the day." },
+        },
+        {
+          label: { en: "Knowledge of the tradition" },
+          body: { en: "Familiarity with scripts and styles — the main calligraphy scripts (楷书 regular, 行书 running, 隶书 clerical, and others) or ink-painting genres (花鸟 birds-and-flowers, 山水 landscape) — and an ability to name what the candidate practises and who they have studied. Panels at SAP schools value a candidate who is genuinely embedded in the tradition, not just technically able. Being able to discuss this, often in Mandarin, signals authentic engagement." },
+        },
+        {
+          label: { en: "Portfolio quality" },
+          body: { en: "A submitted body of brush works — calligraphy sheets, ink paintings, or both. Panels assess range (more than one script or subject), consistency, and the level the candidate works at. As with all portfolio talents, a tightly curated set of strong pieces reads better than a large, uneven one. Competition certificates or grading from a recognised calligraphy / art body, where genuine, support the portfolio." },
+        },
+        {
+          label: { en: "Communication and cultural engagement" },
+          body: { en: "Whether the candidate can talk about their practice — why they were drawn to brush arts, what they find hard, whose work they admire — often partly in Mandarin. At SAP schools especially, the interview tests bilingual ability and genuine connection to Chinese culture alongside artistic skill. A candidate who can speak with real feeling about a piece they made, in Mandarin, signals exactly the profile these schools recruit for." },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Chinese calligraphy (书法)" },
+          body: { en: "The more common of the two strands. Candidates present calligraphy in one or more scripts and demonstrate live. Panels assess brush control, character structure, and the consistency of a full piece. A candidate who works confidently in regular script (楷书) and is beginning running script (行书) presents a clear developmental arc. Being able to name the script, the model copybook (字帖) studied, and the master or style behind it signals depth beyond technique." },
+        },
+        {
+          position: { en: "Chinese ink painting (国画 / 水墨画)" },
+          body: { en: "Candidates present ink paintings — commonly birds-and-flowers (花鸟) or landscape (山水) — and demonstrate brush and ink handling live. Panels assess composition, ink gradation, and the candidate's control of water and tone. Ink painting rewards a candidate who understands restraint: a few confident, well-placed strokes with deliberate use of empty space reads as far more accomplished than a busy, over-worked page." },
+        },
+        {
+          position: { en: "Combined practice" },
+          body: { en: "Many candidates work in both calligraphy and ink painting, which historically share brush technique and are often taught together. A portfolio showing both, with genuine competence in each, signals a well-rounded brush-arts foundation. Lead with the stronger strand, but a candidate able to demonstrate both gives the panel a fuller picture — provided neither is thin." },
+        },
+      ],
+      positionFocusNote: {
+        en: "Not every school that offers Chinese brush arts assesses both calligraphy and ink painting, and some fold the talent area into a broader Chinese-culture or visual-arts programme. Lead with the candidate's strongest strand, and confirm in each target school's 2026 brief which forms it actually recruits and whether the interview is conducted partly or wholly in Mandarin.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "为什么喜欢书法 / 国画？(Why do you love calligraphy / ink painting?)" },
+          subtext: { en: "Often asked in Mandarin. Panels want genuine feeling and a specific origin, not a rehearsed line." },
+          approach: { en: "Answer in Mandarin if you can. Open with one concrete moment, then say what the practice gives you." },
+          template: { en: "我开始学书法是因为爷爷写春联，我觉得很美，想自己也会写。练久了才发现，写字的时候心会静下来，再烦的事都放下了。这是我最喜欢书法的地方。" },
+        },
+        {
+          question: { en: "What script or style do you practise, and whose work do you study?" },
+          subtext: { en: "Tests genuine embeddedness in the tradition versus surface technique." },
+          approach: { en: "Name your main script or genre, the copybook (字帖) or model you study, and one thing you've learnt from it." },
+          template: { en: "我主要写楷书，临颜真卿的《多宝塔碑》。颜体的字很端正、很有力，老师说我起笔太轻，所以我现在特别练起笔的力度。最近也开始尝试行书。" },
+        },
+        {
+          question: { en: "Demonstrate a piece for us now." },
+          subtext: { en: "The live demonstration is the core of the assessment — technique a portfolio can hide shows here." },
+          approach: { en: "Settle your posture and breathing first. Work at your trained pace — don't rush. Choose a piece you can execute confidently, not your most ambitious." },
+          template: { en: "(No spoken script — prepare by rehearsing one calligraphy piece or one ink-painting subject until it is reliable under observation. Practise setting up the paper, grinding or loading ink, and steadying your posture as part of the routine, so the demonstration starts calm.)" },
+        },
+        {
+          question: { en: "What do you find hardest about brush arts?" },
+          subtext: { en: "Tests honest self-awareness and a real practice, not a polished image." },
+          approach: { en: "Name one genuine difficulty and what you do about it." },
+          template: { en: "最难的是控制墨的浓淡。水多了会晕开，水少了又太干。我现在每次画之前会先在废纸上试墨，找到刚好的浓度才下笔。还是常常出错，但比以前好多了。" },
+        },
+        {
+          question: { en: "How much do you practise, and how?" },
+          subtext: { en: "Brush arts reward sustained discipline; panels want evidence of a real routine." },
+          approach: { en: "Describe your actual routine honestly — frequency, what you work on, with whom." },
+          template: { en: "我每个星期上一次书法课，平时在家差不多每两天练一次，一次大概半个小时。最近在临帖，老师让我同一个字写很多遍,直到结构稳了为止。" },
+        },
+        {
+          question: { en: "Why our school for Chinese brush arts?" },
+          subtext: { en: "Tests whether the family researched this SAP school's Chinese-culture programme specifically." },
+          approach: { en: "Cite one specific thing — the school's calligraphy CCA, a Chinese-culture event, its SAP heritage." },
+          template: { en: "贵校是特选学校，华族文化的氛围很浓，书法 CCA 也常常参加比赛和展览。我希望在一个真正重视书法的环境里继续学下去，所以我很想来贵校。" },
+        },
+        {
+          question: { en: "If another school also offers you a place, how would you choose?" },
+          subtext: { en: "Tests honesty under pressure and genuine commitment." },
+          approach: { en: "Don't dodge. Pick one school and give one specific reason." },
+          template: { en: "说实话，我会选贵校。贵校的书法传统和华文环境是我最看重的。如果另一所学校先联系我，我还是会等贵校的消息。" },
+        },
+      ],
+      schools: [
+        {
+          name: "Nan Hua High School",
+          talentArea: { en: "Chinese calligraphy / ink painting, DSA-Sec (SAP)" },
+          context: { en: "SAP school with a strong Chinese-culture programme; recruits for Chinese arts including calligraphy. Weights bilingual ability and Chinese-cultural engagement alongside artistic skill. Confirm the exact talent-area name and audition format in the 2026 DSA brief." },
+        },
+        {
+          name: "Dunman High School",
+          talentArea: { en: "Chinese calligraphy / ink painting, DSA-Sec (SAP)" },
+          context: { en: "SAP school running a six-year Integrated Programme with a strong bicultural emphasis. Recruits for Chinese-culture talents including brush arts. Confirm which forms (calligraphy, ink painting) are assessed and the format with the school." },
+        },
+        {
+          name: "Chung Cheng High School (Main)",
+          talentArea: { en: "Chinese calligraphy / ink painting, DSA-Sec (SAP)" },
+          context: { en: "SAP school with a long-established Chinese-arts tradition and a campus known for its cultural heritage. A natural home for calligraphy and ink-painting talent. Confirm the talent-area name and audition format in the 2026 brief." },
+        },
+        {
+          name: "Maris Stella High School (Secondary)",
+          talentArea: { en: "Chinese calligraphy / ink painting, DSA-Sec (SAP)" },
+          context: { en: "SAP boys' school with a strong Chinese-culture programme. Recruits for Chinese arts. Confirm whether calligraphy and/or ink painting is assessed, and the format, with the school directly." },
+        },
+        {
+          name: "Catholic High School (Secondary)",
+          talentArea: { en: "Chinese calligraphy / ink painting, DSA-Sec (SAP)" },
+          context: { en: "SAP school with an Integrated Programme and a strong bicultural ethos. Recruits for Chinese-culture talents. Confirm the specific brush-arts forms assessed and the audition format in the 2026 DSA brief." },
+        },
+        {
+          name: "River Valley High School",
+          talentArea: { en: "Chinese calligraphy / ink painting, DSA-Sec (SAP)" },
+          context: { en: "SAP school running a bicultural Integrated Programme. Recruits for Chinese-culture talents including brush arts. Confirm which forms are assessed and the format with the school." },
+        },
+        {
+          name: "Anderson Secondary School",
+          talentArea: { en: "Chinese calligraphy / ink painting, DSA-Sec" },
+          context: { en: "Confirm with the school whether a Chinese brush-arts talent area (calligraphy or ink painting) is offered in the current DSA year — not every non-SAP school runs this track each year — along with the audition format." },
+        },
+        {
+          name: "CHIJ St. Theresa's Convent",
+          talentArea: { en: "Chinese calligraphy / ink painting, DSA-Sec" },
+          context: { en: "Confirm directly with the school whether a Chinese brush-arts talent area is offered in the current DSA year, and the submission and audition requirements where it is." },
+        },
+        {
+          name: "Bedok View Secondary School",
+          talentArea: { en: "Chinese calligraphy / ink painting, DSA-Sec" },
+          context: { en: "Confirm directly with the school whether a Chinese brush-arts talent area is offered in the current DSA year, and the audition format where it is. Talent-area lists change annually." },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the application is still weeks out" },
+          items: [
+            { en: "Curate the portfolio. Select a tight set of the candidate's strongest brush works showing range (more than one script, or both calligraphy and ink painting where genuine) and consistency. A small, strong, well-presented set beats a large uneven one. Mount or present pieces cleanly." },
+            { en: "Prepare the live demonstration. This is where untrained candidates are exposed. Have the child rehearse one calligraphy piece or one ink-painting subject until it is reliable under observation — including the setup routine (paper, ink, posture), so the demonstration starts calm rather than scrambled." },
+            { en: "Confirm each target school's 2026 brief. Which brush-arts forms it recruits (calligraphy, ink painting, or both), whether a portfolio is submitted in advance, and whether the interview is conducted partly or wholly in Mandarin. Most schools offering this are SAP schools that weight bilingual ability." },
+            { en: "Rehearse the interview in Mandarin. Drill the questions above — especially \"why brush arts,\" \"what script/style you practise,\" and \"why our school\" — in Mandarin, since the interview at SAP schools often is. Practise naming the copybook (字帖) and master the child studies." },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            { en: "Lock the portfolio; don't add rushed new pieces. Late work made under pressure rarely matches the candidate's best and can dilute a consistent set." },
+            { en: "Rehearse the demonstration daily, but lightly. Run the chosen piece once or twice a day to keep the hand warm and the routine automatic — not for hours, which tires the hand and adds nerves." },
+            { en: "Confirm logistics in writing. Whether the school provides brushes, ink, paper, and felt mat or the candidate brings their own; venue, time, attire; and whether the portfolio is brought or was submitted online. Email the teacher-in-charge if unclear." },
+          ],
+        },
+        {
+          label: { en: "Day of audition" },
+          items: [
+            { en: "Bring familiar tools if allowed. A candidate works best with their own brushes and inkstone; confirm beforehand whether this is permitted. Pack spares — a spare brush, extra paper." },
+            { en: "Arrive early enough to set up calmly. Brush arts demand a settled hand; a rushed, flustered start shows immediately in the first stroke. Build in time to set up the paper and steady the posture before the panel watches." },
+            { en: "Drop off, don't hover. Greet the teacher-in-charge, leave. Over-involved parents are visible and the candidate absorbs the cost." },
+            { en: "No post-mortem in the car. One question only: \"What's one thing you'd do differently?\" Anything else waits 24 hours." },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, audition coming up, no clear plan — there are still real moves, though brush arts reward years of practice more than most talent areas. Don't try to learn a new script or genre this week; consolidate what the child already does reliably. Prioritise three things: (1) curate a tight portfolio from existing work rather than making new pieces in a rush; (2) rehearse one demonstration piece — calligraphy or ink painting — until the hand is steady under observation, including the calm setup routine, because the live demonstration is where technique can't be faked; (3) prepare to talk about the practice in Mandarin, since most schools offering this are SAP schools and the interview often is. A coach or calligraphy teacher can help select the portfolio and steady the demonstration, but no coach builds, in a week, the brush control that years of 临帖 produce. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  "chess-mind": {
+    slug: "chess-mind",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Chess & Mind Sports", zh: "棋类", ms: "Catur & Sukan Minda", ta: "சதுரங்கம் & மனப் போட்டிகள்" },
+    hook: {
+      en: "Chess & Mind Sports DSA — many schools select on MOE portal records and rating, not a trial day, so logged results and titles carry the application.",
+      zh: "棋类 DSA——不少学校用 MOE 系统记录和等级分选才，没有 trial 当天，可查的比赛成绩与名次才是申请的分量",
+      ms: "DSA Catur & Sukan Minda — banyak sekolah memilih berdasarkan rekod portal MOE dan rating, bukan hari trial, jadi keputusan dan gelaran yang direkodkan membawa permohonan",
+      ta: "சதுரங்கம் & மனப் போட்டிகள் DSA — பல பள்ளிகள் சோதனை நாளை அல்ல, MOE போர்ட்டல் பதிவுகளையும் ரேட்டிங்கையும் வைத்தே தேர்வு செய்கின்றன, எனவே பதிவான முடிவுகளும் பட்டங்களுமே விண்ணப்பத்தை சுமக்கின்றன",
+    },
+    intro: {
+      en: "International Chess and Weiqi (Go) sit among the DSA talent areas that are selected by record rather than by a trial day. For International Chess — listed by ACS(I) alongside Canoeing, Sailing and Swimming — the school does not conduct selection trials, and records from the MOE DSA-Sec Portal are used for consideration instead. Weiqi sits under the Sports and Games domain and is read the same way: documented competition results carry the case. That makes verifiable evidence the centre of the application: national age-group rankings, results from MOE-sanctioned and federation competitions, a published rating where the discipline keeps one (the Singapore Chess Federation maintains national ratings), and any titled achievement. Where a school does test in person, it is typically a short over-the-board session — a few rated or timed games, or a tactics/problem set — rather than a competitive trial. So the right preparation is not a single trial day; it is a documented record of playing strength, tournament history, and a child who can talk about their own games analytically.",
+      zh: "国际象棋和围棋（Weiqi/Go）属于按记录而非按 trial 当天选才的 DSA 才艺方向。国际象棋——ACS(I) 把它和皮划艇、帆船、游泳列在一起——学校不设选拔 trial，改用 MOE DSA-Sec 系统里的记录来考量。围棋归在 Sports and Games 范畴，看法一样：可查的比赛成绩才是关键。所以申请的核心是能被核实的证据：全国年龄组排名、MOE 认可与协会赛事的成绩、有等级分制度的项目里公布的等级分（新加坡象棋总会维护全国等级分）、以及任何头衔类成就。少数会当面考的学校，通常是一小段棋盘对弈——几局计时或计分的对局，或一套战术题——而不是竞争性 trial。因此真正的准备不是某一天的 trial，而是一份能被核查的棋力记录、参赛历史，以及一个能分析自己对局的孩子。",
+      ms: "Catur Antarabangsa dan Weiqi (Go) tergolong dalam bidang bakat DSA yang dipilih melalui rekod, bukan hari trial. Untuk Catur Antarabangsa — disenaraikan oleh ACS(I) bersama Berkanu, Pelayaran dan Renang — sekolah tidak menjalankan trial pemilihan, dan rekod dari Portal DSA-Sec MOE digunakan sebagai pertimbangan. Weiqi berada di bawah domain Sukan dan Permainan dan dibaca dengan cara yang sama: keputusan pertandingan berdokumen yang membawa permohonan. Maka bukti yang boleh disahkan menjadi teras permohonan: kedudukan kebangsaan mengikut kumpulan umur, keputusan dari pertandingan yang diiktiraf MOE dan persekutuan, rating yang diterbitkan di mana disiplin itu menyimpannya (Singapore Chess Federation menyelenggara rating kebangsaan), dan sebarang pencapaian bergelar. Di sekolah yang menilai secara bersemuka, biasanya sesi pendek di papan — beberapa permainan berating atau bermasa, atau set masalah taktik.",
+      ta: "சர்வதேச சதுரங்கமும் வெய்கி (Go) யும் சோதனை நாளை வைத்து அல்ல, பதிவை வைத்து தேர்வு செய்யப்படும் DSA திறன் பகுதிகளில் இடம்பெறுகின்றன. சர்வதேச சதுரங்கத்திற்கு — ACS(I) அதை கனோயிங், பாய்மரப் படகோட்டம், நீச்சல் ஆகியவற்றுடன் பட்டியலிடுகிறது —பள்ளி தேர்வுச் சோதனை நடத்துவதில்லை, அதற்குப் பதிலாக MOE DSA-Sec போர்ட்டல் பதிவுகளே கருதப்படுகின்றன. வெய்கி Sports and Games பிரிவில் வந்து அதே வழியில் பார்க்கப்படுகிறது: ஆவணப்படுத்தப்பட்ட போட்டி முடிவுகளே விண்ணப்பத்தைச் சுமக்கின்றன. எனவே சரிபார்க்கக்கூடிய சான்றுகளே மையம்: தேசிய வயதுக் குழு தரவரிசைகள், MOE அங்கீகரித்த மற்றும் கூட்டமைப்புப் போட்டிகளின் முடிவுகள், ரேட்டிங் வைத்திருக்கும் பிரிவுகளில் வெளியிடப்பட்ட ரேட்டிங் (Singapore Chess Federation தேசிய ரேட்டிங்கைப் பராமரிக்கிறது), மற்றும் எந்தவொரு பட்டச் சாதனையும். நேரில் சோதிக்கும் பள்ளிகளில் பொதுவாக ஒரு குறுகிய over-the-board அமர்வு இருக்கும்.",
+    },
+    summary: {
+      en: "How record-and-rating selection works, what chess and Weiqi ability schools weigh, sample interview questions, and the secondary schools that offer chess DSA.",
+      zh: "记录与等级分选才怎么运作、学校看重哪些国际象棋与围棋能力、面试样题、招生棋类 DSA 的中学。",
+      ms: "Cara pemilihan rekod dan rating, kebolehan catur dan Weiqi yang dinilai sekolah, soalan temu duga contoh, dan sekolah menengah yang menawarkan DSA catur.",
+      ta: "பதிவு-ரேட்டிங் தேர்வு எப்படி, பள்ளிகள் எடைபோடும் சதுரங்க மற்றும் வெய்கித் திறன்கள், மாதிரி நேர்காணல் கேள்விகள், சதுரங்க DSA வழங்கும் பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Anglo-Chinese School (Independent) (Secondary)",
+      "Hwa Chong Institution (Secondary)",
+      "St. Joseph's Institution (Secondary)",
+      "Crescent Girls' School",
+      "Peirce Secondary School",
+    ],
+    metaDescription: {
+      en: "Chess & Mind Sports DSA-Sec guide for Singapore P6 — why many schools select on MOE portal records and rating not a trial, International Chess and Weiqi context, what ability counts, interview questions, participating schools.",
+      zh: "新加坡 P6 棋类 DSA-Sec 指南——为何不少学校用 MOE 记录和等级分而非 trial 选才、国际象棋与围棋说明、看重的能力、面试题、招生学校。",
+      ms: "Panduan DSA-Sec Catur & Sukan Minda Singapura untuk P6 — mengapa banyak sekolah memilih rekod portal MOE dan rating bukan trial, konteks Catur Antarabangsa dan Weiqi, kebolehan yang dikira, soalan, sekolah.",
+      ta: "சிங்கப்பூர் P6 சதுரங்கம் & மனப் போட்டிகள் DSA-Sec வழிகாட்டி — பல பள்ளிகள் ஏன் MOE பதிவுகளையும் ரேட்டிங்கையும் வைத்து தேர்வு செய்கின்றன, சர்வதேச சதுரங்கம் மற்றும் வெய்கி, தேவையான திறன்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Chess and mind-sport DSA selection is record-and-rating-led. For International Chess (which ACS(I) lists alongside Canoeing, Sailing and Swimming), many schools do not run a selection trial — they read the MOE DSA-Sec Portal: national age-group rankings, MOE-sanctioned and federation competition results, published rating, and titled achievements. Weiqi (Go) sits under Sports and Games and is read the same way, by documented competition record. Where a school does assess in person, it is typically a short over-the-board test — a few rated or timed games, or a tactics/problem set — rather than a competitive trial. The six dimensions below are the objective playing abilities those records and any over-the-board check are reading for — derived from the structure of competitive chess and Weiqi, federation rating systems, and the way coaches assess playing strength. This is not a school-specific rubric: there is no published per-school scoresheet for chess, and we do not invent one.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Calculation depth and accuracy" },
+          body: { en: "The headline ability. Strong players see further down a line and read the consequences without error — they calculate three, four, five moves ahead and arrive at the right evaluation, not just a long sequence. In an over-the-board check a coach reads this directly from how a candidate handles a tactical position; in the portal record it shows up as rating and as results against stronger opposition. Calculation is the most measurable chess skill and the one a competitive squad is built around." },
+        },
+        {
+          label: { en: "Tactical sharpness — pattern recognition" },
+          body: { en: "Tactics are the trained-eye part of the game: forks, pins, skewers, discovered attacks, mating nets — seen instantly because the pattern has been met thousands of times. A child who solves tactics fast and accurately has put in the puzzle hours, and it is the single clearest tell of accumulated coached study. In Weiqi the equivalent is reading life-and-death and capturing races. A timed problem set is the cleanest way a school can check this in person." },
+        },
+        {
+          label: { en: "Strategic and positional planning" },
+          body: { en: "Beyond tactics is the slower judgement: pawn structure, piece activity, weak squares, when to trade and when to keep tension — in Weiqi, territory, influence, and whole-board balance. This is the dimension that separates a tactician who wins scrappy games from a player with a plan. It matures with study and strong-opposition games, and it is what a four-year competitive programme is most able to develop, so coaches value evidence that the foundation is there." },
+        },
+        {
+          label: { en: "Competition record and rating" },
+          body: { en: "The record is the selection. National age-group rankings, results from MOE-sanctioned and federation competitions, and a published rating (the Singapore Chess Federation maintains national ratings; Weiqi grades by kyu/dan and competition placing) are the objective evidence a school reads from the portal. A logged, ranked result against real opposition is worth more than any self-reported strength. Where there is no over-the-board test, these records are the entire case." },
+        },
+        {
+          label: { en: "Psychological resilience under the clock" },
+          body: { en: "Competitive chess and Weiqi are played against a clock, often over long sessions and multiple rounds in a day. The player who stays calm after a blunder, manages time pressure without panic, and recovers in the next round outperforms an equally strong player who tilts. Schools read resilience from results across a full tournament — not one game — and from how a candidate talks about their losses. It is a character signal as much as a skill." },
+        },
+        {
+          label: { en: "Post-game analysis and learning" },
+          body: { en: "The strongest junior players review their own games — they can say where a game turned, what they misjudged, and what they changed afterwards. This is the clearest evidence of a coachable, self-improving player, and it is exactly what an over-the-board panel or interview probes. A candidate who quotes a rating but cannot analyse a loss has a lower ceiling than one who calmly explains the mistake that cost the game." },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "International Chess" },
+          body: { en: "The discipline ACS(I) lists alongside Canoeing, Sailing and Swimming as selected by portal record rather than a trial. Strength is read from the Singapore Chess Federation rating, national age-group rankings, and results in MOE-sanctioned and federation tournaments. A documented rating plus ranked results against real opposition is the single most useful evidence in a chess DSA application." },
+        },
+        {
+          position: { en: "Weiqi (Go)" },
+          body: { en: "A mind sport under the Sports and Games domain, read the same way as chess — by documented competition record. Strength is shown through kyu/dan grade, national age-group placings, and results in recognised Weiqi competitions. List the grade and the competition results together so the school can read both the level and the form behind it." },
+        },
+        {
+          position: { en: "Rating and competition-record pathway" },
+          body: { en: "Not a board position but the dimension that decides most chess and Weiqi DSA applications — and the one a school is most likely to rely on, because many do not test in person. A published rating (chess) or grade (Weiqi) plus ranked results from MOE-sanctioned and federation competitions is hard evidence that survives whatever happened in any single game. Make sure every result and the current rating/grade is logged in the portal." },
+        },
+        {
+          position: { en: "Over-the-board test" },
+          body: { en: "Where a school does assess in person, it is typically a short over-the-board session rather than a competitive trial — a few rated or timed games, or a tactics/problem set under the clock. It reads calculation, tactical speed, and composure directly. Treat it as a check on the record, not a separate audition: a candidate whose play matches their logged rating confirms the application, while a gap raises questions." },
+        },
+      ],
+      positionFocusNote: {
+        en: "Chess and mind-sport DSA does not assess by playing position the way a team sport does — it reads dimensions. The four above (International Chess, Weiqi, the rating/competition-record pathway, and any over-the-board test) are the angles a school weighs from your portal record and any in-person check. Because many schools select on records and rating rather than a trial, the practical priority is to have it all documented: the current rating or grade, national age-group rankings, and results from MOE-sanctioned and federation competitions. Where there is no over-the-board test, these records are the entire case.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why chess?" },
+          subtext: { en: "Panels want a specific reason, not \"I like thinking.\" Chess is slow, solitary, and full of losing — they want to know you chose it knowingly." },
+          approach: { en: "Open with one concrete moment — a game, a tournament, a loss that changed how you played — then connect it to character." },
+          template: { en: "I started chess because my grandfather taught me and I kept losing to him. The first time I beat him I realised it wasn't luck — I'd seen a fork he didn't. After that I wanted to understand why every move worked. Chess taught me that being beaten is just information about what to study next." },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: { en: "Did the family research this school's chess programme, or is the application generic?" },
+          approach: { en: "Cite one specific thing — the CCA's tournament record, a coach, the training culture — and tie it to your goal." },
+          template: { en: "Your chess CCA fields a team in the national inter-school championships and trains with a coach who runs analysis sessions, not just play. My rating has plateaued because I play more than I study. I want a programme that pushes me to review games, not just rack up tournaments." },
+        },
+        {
+          question: { en: "Walk us through how you study and train." },
+          subtext: { en: "Tests whether the candidate works seriously and can self-manage — and whether the record matches the routine." },
+          approach: { en: "Describe a real week: tactics, game review, openings, and tournament play, and how it fits around school." },
+          template: { en: "Tactics puzzles most days, twenty minutes. I play a longer game each weekend and review it move by move with the engine afterwards, writing down where I went wrong. Before a tournament I prepare my main openings. I keep it short on school days so my homework still gets done." },
+        },
+        {
+          question: { en: "What's your rating, and what's holding it back?" },
+          subtext: { en: "Can the candidate talk about their own play honestly and analytically, not just quote a number?" },
+          approach: { en: "Give the rating, then one specific weakness you're working on — calculation, time management, an opening." },
+          template: { en: "My national rating is around 1500. My tactics are sharp but I lose on the clock in long games — I overthink the middlegame and then rush the ending. I'm training endgames so I trust standard positions faster and keep time for when it actually matters." },
+        },
+        {
+          question: { en: "Tell us about a loss that taught you something." },
+          subtext: { en: "Specific actions, not just the feeling. Schools want resilience and a self-correcting player they can see." },
+          approach: { en: "Situation, then what you did about it, then result, in two or three sentences." },
+          template: { en: "I was winning a tournament game, got overconfident, and hung a piece in one careless move. I lost the round and dropped down the standings. I went home, found the exact move, and made a rule to double-check every capture before I play it. That habit has saved me more games than any opening I've learned." },
+        },
+        {
+          question: { en: "How do you balance chess with schoolwork?" },
+          subtext: { en: "Schools fear DSA kids who flame out academically by Sec 2." },
+          approach: { en: "Describe a real system, not a promise to \"work hard.\"" },
+          template: { en: "Tactics and game review are short, so they fit on school days after homework. The long games and tournament prep go on weekends. My parents check my report book with me each term — that's the rule we agreed before I started playing competitively. If grades slip, the tournament load comes down first." },
+        },
+        {
+          question: { en: "If two schools both offer you a place, how do you decide?" },
+          subtext: { en: "Tests honesty under pressure — and whether you'd actually enrol." },
+          approach: { en: "Don't dodge. Name one school and justify it with one specific, chess-related reason." },
+          template: { en: "Honestly, your school — your chess CCA runs analysis sessions and competes at national level, which is the part of my game I most need to grow. If another school called first I'd still wait for your reply, because that coaching is the reason I applied." },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent) (Secondary)",
+          talentArea: { en: "International Chess (Boys), IP" },
+          context: { en: "IP school with an established chess programme. ACS(I)'s DSA-Sec FAQ states that for International Chess (with Canoeing, Sailing and Swimming) the school does not conduct selection trials and uses MOE DSA-Sec Portal records — so a documented rating and ranked competition results are decisive." },
+        },
+        {
+          name: "Hwa Chong Institution (Secondary)",
+          talentArea: { en: "Chess / Mind Sports (Boys), IP" },
+          context: { en: "IP school. Chess and mind sports among HCI's published DSA talent areas, with a competitively active CCA. Selection leans on documented competition records and rating." },
+        },
+        {
+          name: "St. Joseph's Institution (Secondary)",
+          talentArea: { en: "International Chess (Boys), IP / DSA-Sec" },
+          context: { en: "Lasallian boys' school. Chess among SJI's published DSA talent areas. Record-led selection consistent with the chess/canoeing/sailing/swimming pathway — rating and ranked results carry the application." },
+        },
+        {
+          name: "Crescent Girls' School",
+          talentArea: { en: "Chess (Girls), DSA-Sec" },
+          context: { en: "Girls' school with a strong games culture. Chess among Crescent's recognised DSA talent areas; selection reads documented competition records and rating rather than a trial." },
+        },
+        {
+          name: "Peirce Secondary School",
+          talentArea: { en: "Chess (Boys and Girls), DSA-Sec" },
+          context: { en: "Neighbourhood school with chess among its recognised DSA talent areas and a competitively active CCA. Record-led selection reads portal results and rating — a strong fit for a player with documented results from a non-IP background." },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — weeks before the application closes" },
+          items: [
+            { en: "Verify the portal record first — it is the selection. Because many schools do not run a chess trial and read the MOE DSA-Sec Portal instead, confirm that CCA participation, national age-group rankings, and results from MOE-sanctioned and federation competitions are all logged correctly. A missing or wrong result is a missing application, not a missing trial." },
+            { en: "Confirm the current rating or grade is documented and up to date. For chess, check the Singapore Chess Federation national rating; for Weiqi, the kyu/dan grade and recent competition placings. A stale or unlisted rating undersells a strong player — make sure the most recent number is the one the school sees." },
+            { en: "Get one ranked result against real opposition if you can. A logged placing in an MOE-sanctioned or federation competition is worth more than a stack of casual-game wins. If your child has only school-level results, see whether one rated open tournament can still be played and recorded before the deadline." },
+            { en: "Run a mock interview using the questions above, and have the child analyse one of their own recent losses out loud. Record it on a phone and watch it back together. Flag any answer that runs over thirty seconds or leans on the word \"passionate\" — both weaken the read." },
+          ],
+        },
+        {
+          label: { en: "If the school does run an over-the-board test — final week" },
+          items: [
+            { en: "Sharpen tactics, not theory. If the school uses a timed problem set or rated games, do short daily tactics sessions at speed rather than cramming new openings. Pattern recognition is what a quick over-the-board test reads, and it is the part you can still sharpen in a week." },
+            { en: "Play a few timed games at the format the school will use. If it is rapid or blitz, practise the clock — strong players lose over-the-board tests on time, not on ideas. The goal is composure under the clock, not a new repertoire." },
+            { en: "Confirm logistics in writing. Time, venue, and format — over-the-board or online, time control, whether notation is required. Email the teacher-in-charge if anything is unclear so the child is not surprised on the day." },
+          ],
+        },
+        {
+          label: { en: "Day of any over-the-board test or interview" },
+          items: [
+            { en: "Eat about 90 minutes before, not 30, and pack water and a light snack. A multi-round session or a long interview wait drains focus, and a tired player blunders." },
+            { en: "Arrive early enough to settle. Rushing in raises the heart rate before the first move — ten quiet minutes beforehand steadies the calculation more than any last-minute puzzle." },
+            { en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. A parent watching at the board only adds pressure the child absorbs into their clock." },
+            { en: "No post-mortem in the car. One question only: \"What's one position you were happy with today?\" Anything else waits 24 hours." },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application due, no real prep — start with the part that actually decides chess and mind-sport DSA: the record and the rating, not a study session. Most schools select on the MOE DSA-Sec Portal, so spend your first hour confirming that national rankings, MOE-sanctioned and federation results, CCA participation, and the current rating or grade are all logged correctly. A correctly entered result you already own beats any cramming you could do now. If a ranked result is missing and one rated tournament can still be played before the deadline, prioritise that over extra puzzles. Then put the remaining hours into interview prep above and into being able to analyse one of your own losses out loud, because that is the only piece a few focused hours can still move. Some families bring in a private coach at this stage; a good one can tighten time management or sharpen tactics in a session or two, but no coach builds, in three sessions, the rating and tournament history that a logged record already proves. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  golf: {
+    slug: "golf",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Golf", zh: "高尔夫", ms: "Golf", ta: "கோல்ஃப்" },
+    hook: {
+      en: "Golf DSA — trials reward a documented handicap and on-course shot-making far more than how far you drive.",
+      zh: "高尔夫 DSA——trial 看的是 handicap 记录和球场实战，远超开球距离",
+      ms: "DSA Golf — trial menghargai handikap berdokumen dan pukulan di padang jauh lebih daripada jarak pukulan tee.",
+      ta: "கோல்ஃப் DSA — சோதனை ஆவணப்படுத்தப்பட்ட ஹேண்டிகேப்பையும் மைதான விளையாட்டையும் டிரைவ் தூரத்தை விட அதிகமாக மதிக்கிறது.",
+    },
+    intro: {
+      en: "Golf is one of Singapore's lowest-volume, higher-cost DSA sports — offered at a small number of schools rather than across the system, and concentrated where a golf CCA and access to a course exist (ACS(I), St. Patrick's). A documented handicap is the single most important credential: schools commonly set a handicap ceiling for golf DSA applicants, and a verifiable handicap plus a competition record carries more weight than trial-day distance. Shortlisted applicants are typically invited to a selection trial — usually one or two rounds plus a short interview — where coaches watch swing mechanics, the short game and putting, course management, composure, and etiquette. This page describes golf's objective ability areas; it is not any single school's published scoring rubric.",
+      zh: "高尔夫是新加坡 DSA 项目中开办校最少、成本最高的体育之一——只有少数学校开设，集中在有高尔夫 CCA、能接触球场的学校（ACS(I)、St. Patrick's）。handicap 记录是最重要的资历：学校通常给高尔夫 DSA 申请者设 handicap 上限，可核实的 handicap 加比赛记录比 trial 当天的开球距离更有分量。入围者一般受邀参加选拔 trial——通常一到两轮加一段简短面试——教练看挥杆机制、短杆与推杆、球场管理、心理稳定、礼仪。本页讲的是高尔夫客观能力维度，不是任何单一学校公布的评分表。",
+      ms: "Golf adalah antara sukan DSA paling sedikit ditawarkan dan paling tinggi kosnya di Singapura — hanya di beberapa sekolah yang mempunyai CCA golf dan akses ke padang (ACS(I), St. Patrick's). Handikap berdokumen ialah kelayakan paling penting: sekolah lazimnya menetapkan had handikap, dan handikap yang boleh disahkan serta rekod pertandingan lebih bernilai daripada jarak pukulan pada hari trial. Pemohon yang disenarai pendek biasanya dijemput ke trial pemilihan — biasanya satu atau dua pusingan ditambah temu duga ringkas — di mana jurulatih memerhati mekanik hayunan, permainan pendek dan putting, pengurusan padang, ketenangan, dan etika. Halaman ini menerangkan keupayaan objektif golf, bukan rubrik pemarkahan mana-mana sekolah.",
+      ta: "சிங்கப்பூரில் கோல்ஃப் மிகக் குறைவான பள்ளிகளில் வழங்கப்படும், அதிக செலவு கொண்ட DSA விளையாட்டு — கோல்ஃப் CCA-வும் மைதான அணுகலும் உள்ள சில பள்ளிகளில் மட்டுமே (ACS(I), St. Patrick's). ஆவணப்படுத்தப்பட்ட ஹேண்டிகேப்பே மிக முக்கியமான தகுதி: பள்ளிகள் பொதுவாக ஹேண்டிகேப் வரம்பு நிர்ணயிக்கின்றன, சரிபார்க்கக்கூடிய ஹேண்டிகேப்பும் போட்டி பதிவும் சோதனை நாள் தூரத்தை விட அதிக மதிப்பு பெறுகிறது. சோதனை பொதுவாக ஒன்று அல்லது இரண்டு சுற்றுகள் மற்றும் சிறு நேர்காணல். இந்தப் பக்கம் கோல்ஃப்பின் புறநிலை திறன்களை விளக்குகிறது, எந்தப் பள்ளியின் மதிப்பெண் அட்டவணையும் அல்ல.",
+    },
+    summary: {
+      en: "Trial structure, on-course skill profiles, interview questions, schools that offer golf as a DSA talent area.",
+      zh: "Trial 流程、球场技能分析、面试题、开设高尔夫 DSA 才艺方向的学校。",
+      ms: "Struktur trial, profil kemahiran di padang, soalan temu duga, sekolah yang menawarkan golf sebagai bidang DSA.",
+      ta: "சோதனை அமைப்பு, மைதான திறன் வகைகள், கேள்விகள், கோல்ஃப் DSA வழங்கும் பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Anglo-Chinese School (Independent)",
+      "St. Patrick's School",
+      "St. Gabriel's Secondary School",
+      "North Vista Secondary School",
+    ],
+    metaDescription: {
+      en: "Golf DSA-Sec trial guide for Singapore P6 — handicap context, what coaches assess across swing, short game, course management and etiquette, sample interview questions, participating schools.",
+      zh: "新加坡 P6 高尔夫 DSA-Sec trial 指南——handicap 说明、挥杆/短杆/球场管理/礼仪评分维度、面试题、招生学校。",
+      ms: "Panduan trial DSA-Sec Golf Singapura — konteks handikap, apa jurulatih nilai, soalan temu duga, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 கோல்ஃப் DSA-Sec வழிகாட்டி — ஹேண்டிகேப், அளவுகோல்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Golf DSA trials in Singapore are not standardised across schools — golf is offered by only a small number of schools, and each runs its own format. A typical trial is one or two rounds (a skills/range assessment and an on-course or short-course playing assessment) plus a short interview, led by the golf CCA teacher-in-charge and an external golf coach or PGA-affiliated professional the school works with. A documented handicap and competition record are checked beforehand; many schools will not invite a candidate without a verifiable handicap within the school's ceiling. The six dimensions below are golf's objective ability areas — swing mechanics, short game and putting, course management, handicap and competition record, mental composure, and etiquette and rules — not any single school's published scoring sheet.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Swing mechanics and ball-striking consistency" },
+          body: { en: "Coaches watch the full swing for repeatable mechanics — grip, setup, posture, a connected backswing and a balanced finish — far more than peak distance. The signal is whether the candidate strikes the ball cleanly and on a predictable start-line shot after shot, not whether one drive carries far. A P6 player who can hit eight of ten mid-irons solidly with a consistent shape outscores a longer hitter who sprays the ball, because a repeatable swing is what a coach can build on over four years. Process over outcome: how the player swings matters more at this age than exactly where one ball lands." },
+        },
+        {
+          label: { en: "Short game and putting" },
+          body: { en: "This is where scores are actually saved, and a disproportionately strong signal at junior level. Coaches assess chipping, pitching, bunker contact, and putting from a range of distances, looking for clean contact, distance control, and a repeatable putting stroke. A young player who two-putts reliably from distance and gets up-and-down from around the green is more valuable to a school team than one with a long drive and a loose short game — dropping putts lowers a handicap faster than adding yards. Watch this dimension closely; it is the cheapest place for a committed P6 to gain ground before a trial." },
+        },
+        {
+          label: { en: "Course management and shot selection" },
+          body: { en: "On the playing assessment, coaches watch decision-making, not just execution — whether the candidate picks a sensible target, lays up when the smart play is to lay up, accounts for wind and lie, and avoids compounding one bad shot with a low-percentage recovery. A P6 who plays within their ability and manages a hole to a bogey reads better than one who attempts a hero shot, finds trouble, and runs up a big number. Course management is a thinking skill coaches can see immediately, and it scales directly to competitive golf." },
+        },
+        {
+          label: { en: "Handicap and competition record" },
+          body: { en: "The single most-cited credential in golf DSA. A documented handicap — and ideally a record in age-group or junior tournaments — is checked before the trial, and schools commonly apply a handicap ceiling for applicants. A verifiable, current handicap from a recognised system carries far more weight than a self-reported number or a single good practice round. Confirm the handicap is properly logged and up to date well before applying; an undocumented handicap, however good, is hard for a school to act on." },
+        },
+        {
+          label: { en: "Mental composure and recovery after a bad shot" },
+          body: { en: "Golf is a long-format sport where one poor shot can derail a round, so coaches watch closely how a candidate responds to a missed putt, a topped iron, or a bad lie. The signal is whether the player resets, commits to the next shot, and keeps a steady tempo — or visibly tilts, rushes, and lets one mistake become three. A P6 who stays composed and finishes the hole calmly is signalling the temperament competitive golf demands; one who unravels after a single error is read as a four-year coaching project." },
+        },
+        {
+          label: { en: "Etiquette, rules awareness, and conduct" },
+          body: { en: "Golf is governed by self-policed etiquette and rules to an unusual degree, and at junior level coaches weight this heavily. Coaches watch pace of play, care for the course (replacing divots, raking bunkers), honesty in counting strokes, quiet and stillness while others play, and basic rules awareness. A candidate who knows and follows etiquette without prompting signals readiness to represent the school; one who is careless with the course or loose with the score count is a flag regardless of ball-striking, because golf relies on the player's own integrity." },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Long game (driving and approach play)" },
+          body: { en: "The full-swing player whose strength is off the tee and into greens. Coaches assess whether the distance comes with a repeatable, controllable shape rather than raw power that sprays — a long drive that finds the rough every other hole is a liability, not an asset. A P6 with solid mid-iron contact and a predictable ball flight is recruitable because that foundation scales; one who hits it far but can't find the fairway is a project until the swing is grooved." },
+        },
+        {
+          position: { en: "Short game and putting specialist" },
+          body: { en: "The player who saves par from off the green and rarely three-putts. Coaches value this highly because the short game is where handicaps drop and where a junior can contribute to a school team quickly. A P6 with reliable chipping, distance control, and a repeatable putting stroke is a real asset even with modest length, because up-and-down ability is the hardest part of the game to teach in a hurry." },
+        },
+        {
+          position: { en: "Course manager (strategic player)" },
+          body: { en: "The player whose scores come from good decisions rather than spectacular shots — picking smart targets, playing to strengths, and avoiding blow-up holes. Coaches fast-track this profile because strategic discipline is rare at P6 and translates directly into lower competitive scores. A player who consistently turns a poor drive into a bogey instead of a triple shows the on-course maturity coaches build teams around." },
+        },
+        {
+          position: { en: "Tournament competitor (proven record)" },
+          body: { en: "The player whose case rests on a documented handicap and results in junior or age-group competition. Coaches weight a verifiable record heavily because it is evidence of performance under pressure that a single trial round cannot fully show. A P6 with a current handicap inside the school's ceiling and a string of competitive rounds is the most straightforward recruit, provided the trial confirms the record reflects real, repeatable play." },
+        },
+      ],
+      positionFocusNote: {
+        en: "Golf at P6 trial level does not lock a player to one profile — coaches assess the whole game and weight the documented handicap heavily alongside what they see on the day. If your child's strength is the short game or course management rather than length, make that explicit, and ensure the handicap and any competition results are properly logged before applying; an undocumented record is the most common avoidable weakness in golf DSA applications.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love golf?" },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"I like winning\" reads as untrained motivation." },
+          approach: { en: "Open with one concrete memory — a round, a coach moment, a turning point — then connect it to character." },
+          template: { en: "I once tripled the last hole of a junior round because I went for a green I couldn't reach. My coach asked why I hadn't laid up. I didn't have an answer. That was the day I learned golf is about the shot you should play, not the shot you wish you could." },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: { en: "Did the family research the golf programme, or is the application generic?" },
+          approach: { en: "Cite one specific thing about the school's golf — a CCA detail, a coach arrangement, a competition result." },
+          template: { en: "Your school runs golf as a CCA with a regular coaching arrangement and has been a steady presence at the National School Games. That structure — regular coaching plus real competition — is exactly what I need to bring my handicap down from Sec 1." },
+        },
+        {
+          question: { en: "What is the strongest part of your game, and why?" },
+          subtext: { en: "Can the kid articulate their game honestly, not just claim length?" },
+          approach: { en: "Name the strength plus what it lets you do on the course." },
+          template: { en: "My short game. I'm not the longest off the tee, so I save shots around the green — I get up-and-down more often than the players I lose distance to. That's how I keep my scores down, and it's the part of my game I can rely on under pressure." },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: { en: "Specific actions, not just outcome or feelings." },
+          approach: { en: "Situation, then action, then result, in two sentences." },
+          template: { en: "My handicap stalled for half a year because my putting fell apart. I spent eight weeks doing nothing but distance-control drills on the practice green before every round. My three-putts dropped to almost none and my handicap moved for the first time in months." },
+        },
+        {
+          question: { en: "How do you handle yourself after a bad shot?" },
+          subtext: { en: "Golf is a long format — composure is a recruited trait." },
+          approach: { en: "Describe a concrete reset routine, not \"I stay positive.\"" },
+          template: { en: "I give myself one breath to be annoyed, then I commit fully to the next shot — same pre-shot routine, same tempo. One bad swing is one stroke; letting it bother me is how one stroke becomes three. I learned that the hard way after blowing up rounds early on." },
+        },
+        {
+          question: { en: "How do you manage time with frequent trainings?" },
+          subtext: { en: "Schools fear DSA kids who flame out academically by Sec 2." },
+          approach: { en: "Describe a real system, not platitudes about discipline." },
+          template: { en: "I finish English and Math homework on the way to the range and complete Science before dinner. Sunday is for revision. My mother reviews my report book with my coach each term — if any subject drops a band, we cut one practice session. That's the rule we set together." },
+        },
+        {
+          question: { en: "If School A and our school both offer you, which would you choose?" },
+          subtext: { en: "Tests honesty under pressure — and whether you'd actually come." },
+          approach: { en: "Don't dodge. Pick one school, justify with one specific reason." },
+          template: { en: "Honestly, your school. The way your golf CCA is coached matches how I want to develop my game. If School A called first I'd still wait for your reply." },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent)",
+          talentArea: { en: "Golf (Boys), IP / DSA-Sec" },
+          context: { en: "IP school that offers golf among its DSA talent areas. Golf DSA applicants are typically assessed via selection trials, with a documented handicap and competition record forming a core part of the case." },
+        },
+        {
+          name: "St. Patrick's School",
+          talentArea: { en: "Golf (Boys), DSA-Sec" },
+          context: { en: "Lasallian boys' school on the East Coast that offers golf as both a DSA talent area and a CCA. Its golf team has been a regular presence at the National School Games." },
+        },
+        {
+          name: "St. Gabriel's Secondary School",
+          talentArea: { en: "Golf, DSA-Sec" },
+          context: { en: "Lasallian school that lists golf among its DSA talent areas. Confirm the current year's golf DSA criteria, handicap ceiling, and trial format directly with the school before applying." },
+        },
+        {
+          name: "North Vista Secondary School",
+          talentArea: { en: "Golf, DSA-Sec" },
+          context: { en: "Neighbourhood school that lists golf among its DSA talent areas. Confirm the current year's golf DSA criteria, handicap requirement, and selection format directly with the school before applying." },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            { en: "Confirm the handicap is documented, current, and within the school's ceiling. This is the single most-cited credential in golf DSA — a verifiable handicap and any junior or age-group competition results matter more than trial-day distance. An undocumented handicap, however good, is hard for a school to act on, so log it well before applying." },
+            { en: "Bias practice toward the short game. Chipping, distance-control putting, and bunker contact are where a committed P6 can gain the most ground before a trial — dropping putts lowers a score faster than adding yards. Spend at least half of each practice session inside 50 metres of the hole." },
+            { en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read." },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            { en: "Drop intensity. Switch to short-game touch, putting feel, and easy swings — no new swing changes and no chasing distance. Last-minute technical tinkering before a trial almost always backfires; the goal is a settled, repeatable swing on the day." },
+            { en: "Confirm logistics in writing. Time, venue (range and/or course), attire (most golf trials expect proper golf attire and soft-spike or appropriate golf shoes), and whether clubs are provided or must be brought. Email the teacher-in-charge if anything is ambiguous." },
+            { en: "Play one round with an unfamiliar group. Kids often play their best only with familiar partners; a round with strangers before the trial removes the surprise of being watched and judged by people they don't know." },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            { en: "Eat before, hydrate, and bring sun protection. Golf trials run long and outdoors in Singapore heat — fatigue and dehydration show up first in the short game and decision-making, which are exactly what coaches are watching." },
+            { en: "Check the bag the night before. Clubs, enough balls, tees, glove, marker, and a rangefinder only if the format allows it. Bring a spare glove and a towel — a sweat-soaked grip is an avoidable cause of loose shots in the heat." },
+            { en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents on the range or course fence are visible, and the trialist absorbs the cost." },
+            { en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours." },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no real prep — there are still real moves. First, make sure the handicap is documented and current; an unlogged handicap is the most common avoidable weakness, and it can sometimes be sorted in days. Shorten practice to two things only: distance-control putting and chipping around the green, because the short game is where a few focused sessions can still change a score. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because that's the only part where a few hours can still meaningfully change the outcome. Some families bring in a private golf coach at this stage. A good coach can sharpen a pre-shot routine and tidy short-game contact quickly — but no coach lowers a handicap built over years in three sessions. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  climbing: {
+    slug: "climbing",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Sport Climbing", zh: "攀岩", ms: "Panjat Tebing", ta: "விளையாட்டு ஏறுதல்" },
+    hook: {
+      en: "Sport Climbing DSA — bouldering, lead, speed. The wall shows your grade in ten minutes.",
+      zh: "攀岩 DSA——抱石、难度、速度，岩壁十分钟看出你的水平",
+      ms: "DSA Panjat Tebing — boulder, lead, laju. Dinding tunjuk tahap anda.",
+      ta: "விளையாட்டு ஏறுதல் DSA — பவுல்டரிங், லீட், வேகம். சுவர் உங்கள் தரத்தைக் காட்டும்.",
+    },
+    intro: {
+      en: "Climbing trials put you on a wall, not in a queue. Finger strength, footwork, and how you read a route show in the first few problems. Here's what coaches watch.",
+      zh: "攀岩 trial 让你上墙，不是排队。指力、脚法、读线能力在头几条线就显出来。这是教练看的重点。",
+      ms: "Trial panjat tebing letak anda di dinding. Kekuatan jari, kerja kaki, cara baca laluan terus nampak. Inilah yang jurulatih perhati.",
+      ta: "ஏறுதல் சோதனை உங்களை சுவரில் ஏற்றும். விரல் வலிமை, கால் வேலை, பாதை வாசிப்பு உடனே தெரியும். பயிற்சியாளர்கள் கவனிப்பது இதோ.",
+    },
+    summary: {
+      en: "Six trial dimensions, four discipline focuses, interview questions, Singapore schools, and a last-week plan.",
+      zh: "六个 trial 维度、四个项目方向、面试题样、新加坡学校，外加最后一周计划。",
+      ms: "Enam dimensi trial, empat fokus disiplin, soalan temu duga, sekolah Singapura, dan pelan minggu akhir.",
+      ta: "ஆறு சோதனை பரிமாணங்கள், நான்கு பிரிவு கவனம், நேர்காணல் கேள்விகள், சிங்கப்பூர் பள்ளிகள், இறுதி வார திட்டம்.",
+    },
+    sampleSchools: [
+      "Loyang View Secondary School",
+      "Maris Stella High School (Secondary)",
+      "Springfield Secondary School",
+      "Xinmin Secondary School",
+    ],
+    metaDescription: {
+      en: "Sport Climbing DSA-Sec guide — bouldering, lead, and speed trial expectations, finger strength and footwork, interview questions, and Singapore schools recruiting climbers.",
+      zh: "攀岩 DSA-Sec 指南——抱石、难度、速度 trial 要求，指力与脚法，面试题样，招收攀岩生的新加坡学校。",
+      ms: "Panduan DSA-Sec Panjat Tebing — jangkaan trial boulder, lead, laju, kekuatan jari dan kerja kaki, soalan temu duga, sekolah Singapura.",
+      ta: "விளையாட்டு ஏறுதல் DSA-Sec வழிகாட்டி — பவுல்டரிங், லீட், வேக சோதனை, விரல் வலிமை, கால் வேலை, நேர்காணல் கேள்விகள், சிங்கப்பூர் பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Sport climbing is one of the most physically self-revealing DSA-Sec trials in Singapore. There is nowhere to hide on a wall — a candidate's grade in finger strength, footwork, route reading, and composure shows within the first few problems. Singapore secondary schools that recruit climbers typically run trials at their own rock wall or bouldering facility, asking candidates to attempt a graded set of boulder problems and, at some schools, a top-rope (lead) route or a speed-wall run. The three competition disciplines — bouldering, lead, and speed — each reward a slightly different physical profile, and most school CCAs train all three across the four secondary years. The dimensions below describe the objective climbing abilities coaches assess; they are not a published rubric from any single school. Every school sets its own standard, weights the disciplines differently, and reads competition history (National Schools Sport Climbing Championships, National Schools Bouldering Championship, Inter-Schools Bouldering League, Singapore Sport Climbing and Mountaineering Federation events) alongside the live trial. Confirm each school's exact trial format and required experience on its DSA page before applying.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Finger strength and upper-body power" },
+          body: { en: "Climbing is gravity arithmetic: the smaller the hold, the more it asks of your fingers and pulling muscles. Coaches watch how a candidate manages small crimps, slopers, and pinches without their feet cutting loose, and whether they can hold a body position long enough to make the next move. Power shows on overhanging terrain and dynamic moves (dynos) where the candidate must generate momentum and catch a hold under load. They are not looking for a finished athlete at P6 — they are looking for the strength base that a year or more of consistent climbing builds, plus the obvious headroom to get much stronger through structured training." },
+        },
+        {
+          label: { en: "Technique and footwork" },
+          body: { en: "Strong climbers climb with their feet. Coaches watch precise foot placement — toeing in on small footholds rather than smearing vaguely, weighting the feet to take load off the arms, and using the hips to bring the centre of gravity over the holds. Quiet, deliberate feet read as trained; noisy, scrabbling feet read as a candidate who muscles through problems and will plateau fast. Edging, smearing, heel hooks, toe hooks, and flagging for balance are all watched. A technically clean candidate who climbs an easier grade can outscore a stronger candidate who climbs sloppily, because technique is the harder thing to teach." },
+        },
+        {
+          label: { en: "Route reading" },
+          body: { en: "Before touching the wall, strong candidates read the problem from the ground — identifying the holds, planning the sequence, spotting the crux, and deciding which hand goes where. Coaches watch whether a candidate previews and commits to a plan, or simply jumps on and improvises. On a flash or on-sight attempt (climbing a problem first try with no prior practice), reading is most of the score. Equally telling is what happens after a fall: does the candidate diagnose why the move failed and adjust the sequence, or repeat the same mistake? Reading and re-reading is the visible sign of a thinking climber." },
+        },
+        {
+          label: { en: "Flexibility and balance" },
+          body: { en: "Many climbing moves demand high steps, wide bridges (stemming), and reaches that only open up with hip flexibility and balance. Coaches watch whether a candidate can place a foot at hip height and stand up on it, hold a balance position on slabby terrain without over-gripping, and recover when momentum carries them off line. Slab climbing in particular strips away brute strength and exposes balance and trust in the feet. Candidates with a movement background (gymnastics, dance, martial arts) often show this dimension early, but it is trainable for anyone with consistent practice." },
+        },
+        {
+          label: { en: "Psychology and risk management" },
+          body: { en: "Climbing rewards calm under exposure. Coaches watch how a candidate behaves when high on a lead wall or committing to a dynamic move with a real chance of falling — do they hesitate and pump out, or breathe, commit, and execute? Equally important is safety discipline: checking the harness and knot, communicating with the belayer, falling cleanly rather than grabbing the wall, and respecting the gym's safety calls. A candidate who is bold but careless reads as a liability the school cannot send to competitions; a candidate who manages fear and follows safety protocol reads as someone a coach can trust on a rope." },
+        },
+        {
+          label: { en: "Trainability and potential" },
+          body: { en: "Because most candidates arrive with only one or two years of climbing, coaches weight ceiling heavily — how much better can this candidate get with four years of structured CCA training? Signals include a clean movement base that hard training can build on, fast learning within the trial itself (improving a problem across attempts), good body awareness, and the conditioning headroom of a young, uninjured athlete. A candidate climbing a moderate grade with obvious room to grow can outscore one already near their ceiling. Schools are recruiting for the climber the candidate will become, not only the one who shows up to trial." },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Bouldering" },
+          body: { en: "Bouldering is short, powerful problems climbed without a rope over safety mats, with each problem typically four to eight hard moves. It is the discipline most school trials lead with because it needs the least setup and reveals power, technique, and reading fast. Coaches watch maximal power on small holds and steep terrain, problem-solving across attempts, and the willingness to throw for a dynamic move and commit. The Inter-Schools Bouldering League and National Schools Bouldering Championship are the main competition outlets, so candidates with bouldering competition history have a directly relevant record." },
+        },
+        {
+          position: { en: "Lead (difficulty)" },
+          body: { en: "Lead climbing is longer routes climbed on a rope, clipping the rope into protection while ascending, where the goal is to climb as high or as far as possible. It rewards endurance, pacing, and the mental composure to keep moving while high off the ground and pumped. Coaches watch whether a candidate can manage forearm fatigue across a long route, find rests, and keep reading while tired. Safety and belay communication matter more here than in bouldering. Candidates strong in lead often have an endurance and composure profile that complements pure-power boulderers on a school team." },
+        },
+        {
+          position: { en: "Speed" },
+          body: { en: "Speed climbing is a sprint up a standardised route, scored purely on time, and it rewards explosive power, a memorised optimal sequence, and clean repeatable execution under pressure. Fewer school programmes emphasise speed, but those with a dedicated speed wall recruit for it specifically. Coaches watch raw quickness, the precision to hit holds at pace without slipping, and the discipline to run the same beta identically every time. A candidate with a track or sprint background sometimes converts well to speed." },
+        },
+        {
+          position: { en: "Technique-first all-rounder" },
+          body: { en: "Some candidates do not yet have standout power but move beautifully — clean feet, smart reading, calm balance. Coaches value these candidates because technique is the slowest thing to coach and the foundation power is built on. A technique-first all-rounder is recruited on ceiling: give this candidate four years of strength training on an already-clean movement base, and the trajectory is steep. This is often the realistic profile for a neighbourhood-school P6 candidate who climbs well but has limited competition exposure." },
+        },
+      ],
+      positionFocusNote: {
+        en: "Most Singapore school climbing CCAs train all three competition disciplines (bouldering, lead, speed) across the four secondary years rather than specialising early, so a candidate need not commit to one discipline before applying. What matters at trial is a clean movement base and obvious trainability. Confirm with each target school which disciplines its CCA emphasises and whether the trial uses a bouldering wall, a top-rope/lead wall, a speed wall, or a combination.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why climbing?" },
+          subtext: { en: "Panels want a specific moment, not \"it's fun and keeps me fit.\" That answer reads as a parent's, not the candidate's." },
+          approach: { en: "Open with one concrete moment on the wall — a problem that took weeks, a fall you learned from — then connect it to something about how the candidate thinks." },
+          template: { en: "There was a boulder problem at my gym I failed for two months. Every session I tried it and fell at the same move. The day I finally read it differently — turned my hip in instead of reaching straight — it suddenly went. That's why I climb: it punishes brute force and rewards you the moment you stop and actually think." },
+        },
+        {
+          question: { en: "Which discipline are you strongest at, and why?" },
+          subtext: { en: "Tests self-awareness and whether the candidate understands the sport beyond \"I like climbing.\"" },
+          approach: { en: "Name the discipline, give one honest reason rooted in the candidate's physical or mental profile, and acknowledge what they're still building." },
+          template: { en: "Bouldering, because I'm explosive and I like the problem-solving — short, hard, figure it out. Lead is my weaker one; my forearms pump out on long routes. That's actually why I want a school with a proper lead wall, so I can build the endurance I don't have yet." },
+        },
+        {
+          question: { en: "Tell us about a fall or a failure on the wall and what you did next." },
+          subtext: { en: "Climbing is mostly falling. Schools want a candidate who diagnoses and adjusts, not one who gets discouraged." },
+          approach: { en: "Situation, the specific reason you fell, the specific change you made, the result." },
+          template: { en: "At a bouldering comp I kept falling off a sloper because I was over-gripping and pumping out. My coach pointed out I wasn't trusting my feet. I went back, weighted my feet properly, relaxed my hands — and held the sloper next try. Now over-gripping is the first thing I check when a move feels impossible." },
+        },
+        {
+          question: { en: "How do you handle the fear of being high on the wall?" },
+          subtext: { en: "Lead and tall walls expose nerve. Schools want composure and respect for safety, not recklessness." },
+          approach: { en: "Be honest that fear exists, then describe the concrete routine — breathing, trusting the rope, checking the system — that lets the candidate climb anyway." },
+          template: { en: "I do get scared near the top of a lead route. What helps is the routine: I check my knot and tell my belayer before I start, so I know the system's safe. Then I breathe out before each hard move and trust the rope to catch me. Falling cleanly is a skill too — I've practised it, so a fall doesn't surprise me anymore." },
+        },
+        {
+          question: { en: "How do you balance training, competitions, and schoolwork?" },
+          subtext: { en: "Schools fear DSA climbers whose grades slide, especially around competition season." },
+          approach: { en: "Describe a real weekly schedule and how academic time is protected when competitions cluster." },
+          template: { en: "I climb three evenings a week plus a weekend session. On climbing days I finish homework before training, not after, because I'm too tired after. The week before a competition I cut one session so I'm rested and my schoolwork doesn't pile up. Sundays I keep for revision no matter what." },
+        },
+        {
+          question: { en: "What does climbing safety mean to you?" },
+          subtext: { en: "Schools send DSA climbers to external venues and competitions. They need to trust the candidate's safety habits." },
+          approach: { en: "Don't recite rules. Give one specific moment where safety discipline mattered." },
+          template: { en: "Once my climbing partner started up a route before I'd finished checking my belay device. I stopped her — felt awkward, but I'd rather be the annoying one than the reason someone gets hurt. Safety isn't a checklist to me, it's looking out for the person on the other end of the rope. I always check the knot and the device, every climb." },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: { en: "Did the family research this school's climbing CCA, or is this a scatter-shot application?" },
+          approach: { en: "Cite a climbing-specific reason — the school's wall or bouldering facility, its competition record, the disciplines its CCA trains, the coach." },
+          template: { en: "Your school has a proper rock wall on campus and trains all three disciplines, not just bouldering, which is rare. Your climbing team has been a regular at the National Schools championships. I want to train lead and speed seriously, not just boulder, and this is one of the few schools where I can do that." },
+        },
+      ],
+      schools: [
+        {
+          name: "Loyang View Secondary School",
+          talentArea: { en: "Rock-Climbing / Rockwall Climbing (Boys & Girls)" },
+          context: { en: "Loyang View lists Rock-Climbing among its DSA-Sec talent areas for both boys and girls, supported by an on-campus rock wall facility and an active Rock Climbing Club CCA. Candidates are assessed on a live wall trial alongside any competition history. Confirm the exact trial format, disciplines tested, and required experience on the school's DSA-Sec page before applying." },
+        },
+        {
+          name: "Maris Stella High School (Secondary)",
+          talentArea: { en: "Sports Climbing (Boys)" },
+          context: { en: "Maris Stella offers sport climbing — including a primary-section rockwall programme — and lists climbing among its co-curricular activities. As a SAP boys' school, Higher Chinese or Chinese Language requirements typically apply. Confirm whether climbing is actively recruited via DSA-Sec in the current cycle and what the trial involves, on the school's admissions page." },
+        },
+        {
+          name: "Springfield Secondary School",
+          talentArea: { en: "Rockwall Climbing" },
+          context: { en: "Springfield accepts DSA-Sec applicants with achievement or potential in Rockwall Climbing and runs an established climbing programme that hosts its own climbing events. Selection combines the live trial with any competition record. Confirm the current cycle's trial format and required experience on the school's DSA-Sec page." },
+        },
+        {
+          name: "Xinmin Secondary School",
+          talentArea: { en: "Rock Climbing" },
+          context: { en: "Xinmin runs one of the more established secondary-school climbing CCAs, training bouldering, top-rope (lead), and speed across the four years, with a competitive Rock Climbing Team. Candidates are assessed on a live wall trial; competition history at National Schools events strengthens the application. Confirm the disciplines tested and required experience on the school's DSA-Sec page." },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            { en: "Compile competition results with full event name, date, discipline (bouldering / lead / speed), category, and placing. Include National Schools Sport Climbing Championships, National Schools Bouldering Championship, Inter-Schools Bouldering League, or Singapore Sport Climbing and Mountaineering Federation events. Scan certificates and have them ready to upload. Schools give zero weight to claimed-but-unverified results." },
+            { en: "Confirm CCA records and any climbing-related primary school achievements are accurate on the DSA portal entry — MOE pulls these from the primary school, and missing entries undercut the application. If the candidate climbs only at an external gym (common, since few primary schools offer climbing), make sure the external club's competition record is documented." },
+            { en: "Get the candidate climbing on varied terrain in the final weeks — slab, vertical, and overhang — and on unfamiliar problems, so the trial isn't the first time they climb on-sight. Many trials test flash or on-sight ability, which rewards route reading more than memorised projects." },
+            { en: "Run a mock interview using the questions above. Record it on a phone and watch it back together. Flag any answer over 30 seconds or that uses the word \"passionate.\" Climbing candidates especially need to talk concretely about technique, falls, and safety rather than generic enthusiasm." },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            { en: "Drop volume and intensity. Switch to light technique climbing on easy grades. No projecting at limit, no new max attempts, no fingerboard or campus-board training. Finger and pulley injuries from final-week overload are the classic way to lose a trial before it starts — climbers' fingers are fragile and slow to heal." },
+            { en: "Confirm logistics in writing — trial date, time, venue, whether the school supplies climbing shoes and harness or the candidate brings their own, and which disciplines will be tested (bouldering only, or lead/speed too). Email the CCA teacher-in-charge if anything is ambiguous." },
+            { en: "Check and pack gear the night before — climbing shoes (broken in, not brand new), chalk bag, harness if required, and tape for fingers. Brand-new shoes at trial guarantee blisters and slipping; a forgotten chalk bag is a sweaty-handed disaster a two-minute pack-check prevents." },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            { en: "Eat a real meal about 90 minutes before, not a sugar snack. Climbing trials past the first 30 minutes get steadily more tiring as forearms fatigue; low energy mid-trial is a self-inflicted handicap." },
+            { en: "Warm up properly before climbing hard — light cardio, then easy problems, then progressively harder, with finger and shoulder mobility. Cold fingers thrown straight at a hard crimp is how pulleys tear. Arriving warm means the first real problem isn't the first effort of the day." },
+            { en: "Drop off, don't hover. Greet the CCA teacher if you meet them, then leave. A climbing wall is a small, visible space and an over-involved parent is obvious; the candidate absorbs the cost. Let the coach see the climber, not the family." },
+            { en: "No post-mortem in the car. One question only: \"What's one thing you learned today?\" Anything else waits 24 hours. Replaying a fallen problem or a missed flash between trial and offer helps no one." },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no clear plan — there are still real moves, but be honest about what a sprint can and can't do. Stop projecting at your limit immediately; the last thing you want is a tweaked finger pulley in the final week, because climbing injuries heal slowly and end trials before they start. Shorten the work to two things only: clean footwork drilled on easy-to-moderate problems until quiet feet are automatic, and route reading — practise previewing problems from the ground and committing to a plan, because flash and on-sight ability is most of what an unfamiliar trial tests. Both are low-injury, high-signal, and visible in the first ten minutes of any trial. Protect sleep above all — tired fingers and a tired head both fail on the wall. Spend the freed time on the interview prep above, because climbing panels reward candidates who can talk concretely about technique, falls, and safety. A few sessions with a good climbing coach can sharpen reading and calm nerves, but no coach builds, in three sessions, the finger strength and movement base that years of climbing produce — and the trial is testing exactly that. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  "outdoor-adventure": {
+    slug: "outdoor-adventure",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Outdoor Adventure", zh: "户外探险", ms: "Pengembaraan Luar", ta: "வெளிப்புற சாகசம்" },
+    hook: {
+      en: "Outdoor Adventure DSA — entry on outdoor and adventure ability, judged through your record, an interview, and usually a physical or scenario-based task that tests skills, fitness, leadership, and grit.",
+      zh: "户外探险 DSA——凭户外与探险能力进入，通过你的记录、面试，以及通常的体能或情境任务来评估技能、体能、领导力和坚毅",
+      ms: "DSA Pengembaraan Luar — kemasukan berdasarkan kebolehan luar dan pengembaraan, dinilai melalui rekod, temu duga, dan biasanya tugasan fizikal atau berasaskan senario yang menguji kemahiran, kecergasan, kepimpinan, dan kegigihan.",
+      ta: "வெளிப்புற சாகச DSA — வெளிப்புற, சாகசத் திறனின் அடிப்படையில் சேர்க்கை; உங்கள் பதிவு, நேர்காணல், மற்றும் பொதுவாக திறன், உடல்தகுதி, தலைமை, விடாமுயற்சியைச் சோதிக்கும் உடல் அல்லது சூழல் சார்ந்த பணி வழியாக மதிப்பிடப்படுகிறது.",
+    },
+    intro: {
+      en: "Outdoor Adventure is a DSA-Sec talent route that several schools run, usually under the Sports talent area or their outdoor-education programme. It admits P6 students with an aptitude for the outdoors — hiking and trekking, campcraft and wilderness skills, expeditions, and the leadership and resilience that adventure activities build. Selection typically reviews the candidate's conduct, character, and any outdoor experience (school camps, cycling, climbing, canoeing, or related enrichment), then puts shortlisted applicants through an interview and a physical or scenario-based activity. Importantly, several schools state that applicants without prior experience may still apply — the panels are assessing potential, not just a finished resume. The signal is physical readiness, outdoor skill or trainability, sound judgement, teamwork, and the grit to keep going when conditions get hard.",
+      zh: "户外探险是若干学校开设的 DSA-Sec 才艺通道，通常归在体育才艺类别或学校的户外教育课程下。它招收对户外有天赋的 P6 学生——远足与徒步、露营与野外技能、探险远征，以及探险活动锻炼出的领导力和韧性。选拔通常先看学生的品行、品格，以及任何户外经历（学校露营、骑行、攀岩、皮划艇或相关充实活动），再让入围者参加面试和一项体能或情境活动。值得注意的是，多所学校声明没有相关经历的申请者也可以报名——评委看的是潜质，不只是一份完整的履历。它看重的是体能准备、户外技能或可培养性、稳健判断、团队合作，以及条件变艰难时坚持下去的坚毅。",
+      ms: "Pengembaraan Luar ialah laluan bakat DSA-Sec yang ditawarkan beberapa sekolah, biasanya di bawah kategori bakat Sukan atau program pendidikan luar mereka. Ia menerima pelajar P6 yang berbakat dalam aktiviti luar — mendaki dan trek, kemahiran berkhemah dan hutan belantara, ekspedisi, serta kepimpinan dan kegigihan yang dibina oleh aktiviti pengembaraan. Pemilihan biasanya menilai kelakuan, sahsiah, dan sebarang pengalaman luar calon (kem sekolah, berbasikal, mendaki, berkayak, atau pengayaan berkaitan), kemudian calon yang disenarai pendek akan menjalani temu duga dan aktiviti fizikal atau berasaskan senario. Yang penting, beberapa sekolah menyatakan pemohon tanpa pengalaman terdahulu masih boleh memohon — panel menilai potensi, bukan sekadar rekod yang lengkap. Isyaratnya ialah kesediaan fizikal, kemahiran luar atau kebolehlatihan, pertimbangan yang waras, kerja berpasukan, dan kegigihan untuk terus bergerak apabila keadaan menjadi sukar.",
+      ta: "வெளிப்புற சாகசம் என்பது பல பள்ளிகள் நடத்தும் DSA-Sec திறமை வழி; பொதுவாக விளையாட்டுத் திறமை வகையின் கீழ் அல்லது அவற்றின் வெளிப்புறக் கல்வித் திட்டத்தின் கீழ் உள்ளது. வெளிப்புற ஆர்வம் கொண்ட P6 மாணவர்களை இது சேர்க்கிறது — நடைபயணமும் மலையேற்றமும், முகாம் திறனும் காட்டுவாழ் திறன்களும், பயணங்கள், சாகச நடவடிக்கைகள் வளர்க்கும் தலைமையும் விடாமுயற்சியும். தேர்வு பொதுவாக மாணவரின் நடத்தை, குணம், மற்றும் ஏதேனும் வெளிப்புற அனுபவத்தை (பள்ளி முகாம்கள், சைக்கிள் ஓட்டுதல், பாறை ஏறுதல், படகோட்டம், அல்லது தொடர்புடைய செறிவூட்டல்) மதிப்பிடுகிறது; பின்னர் பட்டியலிடப்பட்டவர்கள் நேர்காணலுக்கும் ஒரு உடல் அல்லது சூழல் சார்ந்த நடவடிக்கைக்கும் உட்படுத்தப்படுவர். முக்கியமாக, முன் அனுபவம் இல்லாதவர்களும் விண்ணப்பிக்கலாம் என்று பல பள்ளிகள் கூறுகின்றன — குழுக்கள் முடிந்த விண்ணப்பத்தை அல்ல, திறனை மதிப்பிடுகின்றன. உடல் தயார்நிலை, வெளிப்புறத் திறன் அல்லது பயிற்றுவிக்கக்கூடிய தன்மை, சரியான முடிவு, அணிப்பணி, கடினமான சூழலிலும் தொடரும் விடாமுயற்சி ஆகியவையே சமிக்ஞை.",
+    },
+    summary: {
+      en: "Outdoor Adventure DSA-Sec format (record + interview + physical/scenario task), the abilities schools value, sample interview questions, and schools that open an outdoor-adventure DSA route.",
+      zh: "户外探险 DSA-Sec 格式（记录 + 面试 + 体能/情境任务）、学校看重的能力、面试题、开设户外探险 DSA 通道的学校。",
+      ms: "Format DSA-Sec Pengembaraan Luar, kebolehan yang dinilai sekolah, soalan temu duga, sekolah peserta.",
+      ta: "வெளிப்புற சாகச DSA-Sec வடிவம், பள்ளிகள் மதிக்கும் திறன்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Bedok South Secondary School",
+      "Christ Church Secondary School",
+      "Greendale Secondary School",
+      "Northbrooks Secondary School",
+    ],
+    metaDescription: {
+      en: "Outdoor Adventure DSA-Sec guide for Singapore P6 — record, interview and physical/scenario-task format, the abilities schools assess (fitness, wilderness skills, leadership, grit, judgement, environmental care), sample interview questions, and participating schools.",
+      zh: "新加坡 P6 户外探险 DSA-Sec 指南——记录、面试加体能/情境任务格式、学校评估的能力（体能、野外技能、领导力、坚毅、判断、环保意识）、面试题、参与学校。",
+      ms: "Panduan DSA-Sec Pengembaraan Luar Singapura — format rekod, temu duga dan tugasan fizikal/senario, kebolehan yang dinilai, soalan temu duga, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 வெளிப்புற சாகச DSA-Sec வழிகாட்டி — பதிவு, நேர்காணல், உடல்/சூழல் பணி வடிவம், மதிப்பிடப்படும் திறன்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Outdoor Adventure DSA-Sec selection is run by the school's outdoor-education or sports teachers, and it usually combines a records review with an interview and a physical or scenario-based activity — some schools state shortlisted candidates take part in a scenario-based task as part of selection. Several schools also accept applicants without prior outdoor experience, because the panel is reading potential and trainability as much as track record. The dimensions below are the objective abilities outdoor adventure cultivates and that schools value; they are not a published scoring rubric of any single school. Confirm each target school's exact format and conduct-grade expectations from its DSA brief, as these vary.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Physical fitness and endurance" },
+          body: { en: "Outdoor adventure is physically demanding — long hikes, load-carrying, climbing, and multi-day expeditions — so panels read general fitness and stamina closely, and a physical activity often forms part of selection. The signal is a candidate who can sustain effort over time, recover, and keep pace with a group, not raw athletic peak performance. You don't need to be the fastest; you need the base endurance to do a full day in the field and still function. Steady aerobic conditioning and the habit of finishing physically hard activities are what panels look for." },
+        },
+        {
+          label: { en: "Outdoor and wilderness skills" },
+          body: { en: "This is the technical heart of the talent area: campcraft, navigation and orienteering, knots and ropework, basic climbing or abseiling, and being able to look after yourself and your kit in the outdoors. Schools value demonstrated skill — a candidate who has done orienteering, climbing, canoeing, or sustained camping — but several explicitly welcome applicants without it, assessing trainability instead. If you have skills, show them concretely; if you don't, show that you learn outdoor skills fast and take to the environment naturally." },
+        },
+        {
+          label: { en: "Teamwork and leadership in the field" },
+          body: { en: "Adventure activities are rarely solo; they run on small teams that depend on each other when tired and far from help. Panels look for a candidate who contributes to a team under real conditions — carrying a fair share, helping a struggling member, communicating clearly, and stepping up to lead when needed. A documented leadership role helps, but the stronger signal is a specific story of holding a team together on a hard expedition or activity. Outdoor adventure rewards people others can rely on in the field, not just in the classroom." },
+        },
+        {
+          label: { en: "Grit, resilience, and perseverance" },
+          body: { en: "Several outdoor-adventure programmes name grit and resilience as core aims, and panels probe for them directly. The outdoors is uncomfortable — wet, tired, hungry, cold — and the signal is a candidate who keeps going and keeps their bearing when conditions turn. Panels prefer the candidate who finished a hard trek or a wet camp, supported others through it, and learned from the difficulty, over one who only describes easy wins. This is the quality the whole talent area is built to develop, so a real story of pushing through hardship is among the strongest evidence you can bring." },
+        },
+        {
+          label: { en: "Risk awareness and sound judgement" },
+          body: { en: "The outdoors carries real hazards, so schools value candidates who show sense — who assess risk, follow safety procedures, and make sound decisions under uncertainty rather than acting recklessly for thrills. This is often where a scenario-based task comes in: panels watch how a candidate thinks through a problem, weighs safety against the goal, and decides for the group. Show that you respect the environment's dangers, plan ahead, and would rather turn back than endanger the team. Maturity and judgement reassure panels that you can be trusted on real expeditions." },
+        },
+        {
+          label: { en: "Environmental awareness and attitude" },
+          body: { en: "Outdoor-adventure programmes consistently include appreciation and care for the natural environment among their aims, so panels listen for genuine interest in the outdoors and a leave-no-trace attitude. The signal is a candidate who is drawn to nature, treats the environment with respect, and can articulate why protecting it matters — not someone who sees the outdoors only as a place to test themselves. A candidate who connects their love of the outdoors to caring for it reads as a natural fit for these programmes." },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Hiking and camping focus" },
+          body: { en: "The core outdoor-adventure profile: trekking, navigation, campcraft, and multi-day field skills. The strong record here shows sustained outdoor experience — school camps taken seriously, hikes, orienteering, or sustained camping — and the self-reliance to look after yourself and your kit in the field. Be ready to describe a real hike or camp where you navigated, managed your gear, and contributed to the group. If you lack experience, show fitness, an appetite for the outdoors, and how quickly you pick up field skills." },
+        },
+        {
+          position: { en: "Expedition and adventure-skills focus" },
+          body: { en: "Candidates whose strength is in adventure skills — orienteering, rock climbing, abseiling, canoeing, or similar — and who are drawn to expeditions and higher-challenge activities. Some programmes give students who excel at these skills the chance to compete at a higher challenge level, so panels look for genuine skill, a head for heights or water, and the discipline to train. Bring evidence of any climbing, paddling, or orienteering experience, and be specific about the skills you have built and want to develop." },
+        },
+        {
+          position: { en: "Leadership-and-character focus" },
+          body: { en: "Several outdoor-adventure programmes are explicitly built to develop character, values, and leadership through the outdoors. This profile suits candidates whose strongest evidence is leadership and resilience shown in outdoor or team settings — a camp leader, a peer who others rely on in the field. Be deliberate about why outdoor adventure rather than a pure leadership route: the answer is that your character and leadership were forged outdoors, under physical and environmental pressure. Bring one story of leading a team through a genuinely hard outdoor situation." },
+        },
+        {
+          position: { en: "Physical-readiness focus" },
+          body: { en: "Candidates whose clearest strength is fitness, endurance, and physical resilience, even without much technical outdoor experience. Because several schools welcome applicants without prior experience and assess potential, a fit, trainable candidate with the right attitude is viable. Demonstrate that you can sustain a full day of physical effort, recover well, and keep going when tired — and pair it with genuine interest in the outdoors and willingness to learn the skills, so the panel sees a complete outdoor-adventure prospect rather than only an athlete." },
+        },
+      ],
+      positionFocusNote: {
+        en: "These are focus areas, not rigid tracks. Outdoor adventure draws on fitness, technical skill, leadership, and judgement together, and most candidates are stronger in some than others — present yourself honestly. Because several schools accept applicants without prior outdoor experience and assess potential and trainability, a candidate who is fit, mature, and genuinely keen on the outdoors is a real prospect even with a thin skills record. State plainly what you have done and what you want to learn; panels recruit for the underlying aptitude and attitude, and they see through a profile reverse-engineered to look more experienced than it is.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why outdoor adventure, and why this rather than another talent area?" },
+          subtext: { en: "Tests genuine motivation — panels fear candidates who applied here as a backup." },
+          approach: { en: "Name what the outdoors asks of you that other areas don't, and tie it to a specific experience." },
+          template: { en: "I've loved being outdoors since my Primary 5 camp — the navigation, the campcraft, the feeling of finishing a hard hike with my group. I considered a sports DSA, but what draws me isn't competing, it's the mix of physical challenge, skill, and looking after a team in the field. Outdoor adventure is where all of that comes together, and I want to keep building it." },
+        },
+        {
+          question: { en: "Tell us about the hardest outdoor activity you've done and how you got through it." },
+          subtext: { en: "Tests grit and resilience, which are core aims of these programmes." },
+          approach: { en: "Be honest about the difficulty, then show perseverance and care for the team." },
+          template: { en: "On a school camp our night hike turned wet and one of my friends wanted to stop. I was tired too, but I knew if I complained the group would unravel. I helped carry part of his load, kept us talking, and we finished together — soaked and last, but together. I learned that getting through hard conditions is as much about holding the group up as pushing yourself." },
+        },
+        {
+          question: { en: "How would you handle a situation where part of your team is struggling far from help?" },
+          subtext: { en: "Tests judgement and risk awareness — often probed through a scenario task." },
+          approach: { en: "Show that you weigh safety against the goal and decide for the whole group." },
+          template: { en: "First I'd check how serious it is — is someone hurt, exhausted, or just discouraged? Safety comes before finishing. I'd rest the team, share water and load, and reassess. If continuing was unsafe I'd turn us back, even if it meant not completing the route. The goal isn't worth putting the team at risk, and a good decision is one everyone comes home from." },
+        },
+        {
+          question: { en: "What outdoor skills do you have, and what do you most want to learn?" },
+          subtext: { en: "Tests both current skill and trainability — schools assess potential, not just experience." },
+          approach: { en: "Be specific about what you can do, and honest and eager about what you can't yet." },
+          template: { en: "I can set up a tent, read a basic map, and I've done some climbing at a wall. What I most want to learn is real orienteering and abseiling — navigating without a path, and the rope skills. I pick things up fast outdoors; at my last camp I learned to pitch a shelter in one go after watching once. I'm coming to learn, not because I already know everything." },
+        },
+        {
+          question: { en: "How do you think about safety and the environment when you're outdoors?" },
+          subtext: { en: "Tests risk awareness and the environmental attitude these programmes value." },
+          approach: { en: "Show respect for both hazards and nature, with one concrete habit each." },
+          template: { en: "Outdoors I assume conditions can change, so I check the plan, the weather, and that everyone has what they need before we go. For the environment, I follow leave-no-trace — we pack out everything we bring, stay on trails, and don't disturb wildlife. Being outdoors a lot has made me want to protect these places, not just use them. Respecting the risks and respecting nature feel like the same kind of care to me." },
+        },
+        {
+          question: { en: "How do you balance a demanding outdoor CCA with your studies?" },
+          subtext: { en: "Schools fear DSA students who flame out academically." },
+          approach: { en: "Describe a real system, not platitudes about discipline." },
+          template: { en: "Camps and expeditions take whole weekends, so I plan around them. The week before a camp I finish homework early, and I keep a fixed catch-up evening afterwards. My parents check my results each term — if a subject slips, we cut back on extra activities until it recovers. We agreed that rule together so it's not a fight." },
+        },
+        {
+          question: { en: "If our school and another both offer you an outdoor-adventure place, which would you choose?" },
+          subtext: { en: "Tests honesty under pressure and whether the candidate researched the school." },
+          approach: { en: "Don't dodge. Pick one school and give one specific reason tied to its outdoor programme." },
+          template: { en: "Honestly, your school. I read about your outdoor-education programme and how it builds adventure skills alongside character and care for the environment, and that's exactly the mix I want. The expedition and challenge opportunities you offer are stronger for me than the other school's. If the other replied first I'd still wait for yours." },
+        },
+      ],
+      schools: [
+        {
+          name: "Bedok South Secondary School",
+          talentArea: { en: "Outdoor Adventure, DSA-Sec" },
+          context: { en: "Offers an outdoor-adventure DSA-Sec route; selection is assessed against the school's stated criteria, with shortlisted applicants attending the school's DSA selection process. Confirm the exact format from the school's DSA page." },
+        },
+        {
+          name: "Christ Church Secondary School",
+          talentArea: { en: "Outdoor Adventure, DSA-Sec" },
+          context: { en: "Offers an outdoor-adventure DSA-Sec talent route. Assessment follows the school's selection criteria for shortlisted candidates; check the school's DSA brief for the specific selection activities." },
+        },
+        {
+          name: "Greendale Secondary School",
+          talentArea: { en: "Outdoor Adventure Education, DSA-Sec" },
+          context: { en: "Runs an Outdoor Adventure Education DSA route; the school states applicants should ideally have good conduct and character and some outdoor experience, but those without prior experience may also apply. Shortlisted candidates attend an interview and take part in a scenario-based activity." },
+        },
+        {
+          name: "Northbrooks Secondary School",
+          talentArea: { en: "Outdoor Adventure, DSA-Sec" },
+          context: { en: "Offers an outdoor-adventure DSA route linked to its Outdoor Education programme; the programme develops character, grit and resilience, and leadership through adventure skills such as orienteering, rock climbing, and abseiling, with an appreciation for the environment." },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the application is still weeks out" },
+          items: [
+            { en: "Check each target school's exact outdoor-adventure requirements first. Some publish a preferred conduct grade (for example, at least Very Good) and the selection format — interview plus a physical or scenario-based task. Several also accept applicants without prior outdoor experience, so confirm whether your child needs a track record or whether potential is assessed; this changes how you prepare." },
+            { en: "Build a base of fitness now. Outdoor selection often includes a physical activity, and the programmes are demanding, so steady aerobic conditioning — running, cycling, swimming — in the weeks before is the single most useful preparation. The aim is endurance to last a full day in the field, not peak speed." },
+            { en: "Gather any outdoor evidence and help your child write three short stories: the hardest outdoor activity they've done, a time they helped a team in the field, and a moment they made a safety or judgement call. Four sentences each — situation, what they did, what changed, what they learned. These anchor both the interview and any scenario task." },
+            { en: "If your child has little outdoor experience, that may be fine — but lean into trainability and genuine interest. A weekend hike, a trip to a climbing wall, or a navigation walk before the interview gives them real, recent experience to speak about and signals that they take to the outdoors." },
+          ],
+        },
+        {
+          label: { en: "Final preparation — the last week" },
+          items: [
+            { en: "Run a mock interview using the questions above, including \"why outdoor adventure\" and the choose-a-school question. Record it and watch it back; replace any rehearsed-sounding line (\"I like nature\") with one concrete outdoor moment." },
+            { en: "Talk through scenario thinking. If a school uses a scenario-based task, practise reasoning out loud about a problem — a struggling teammate, changing weather — weighing safety against the goal and deciding for the group. The panel wants to hear sound judgement, not bravado." },
+            { en: "Confirm logistics in writing — time, venue, what to bring, and whether to come in sports attire for a physical component. Make sure your child arrives rested and hydrated if any physical activity is involved." },
+          ],
+        },
+        {
+          label: { en: "Day of the selection" },
+          items: [
+            { en: "Arrive early, in appropriate attire for any physical activity, with water and any evidence requested. Being prepared and self-sufficient is itself an outdoor-adventure signal." },
+            { en: "Remind your child to speak in specific stories — name the camp, the hike, the teammate they helped — and to show respect for safety and the environment, not just enthusiasm for thrills." },
+            { en: "In any physical or group task, encourage steady effort and helping others over showing off. Panels watch how a candidate treats the team under pressure, not only how fit or fast they are." },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, selection coming up, no clear plan — there are still real moves, but be clear-eyed about them. You cannot build years of outdoor experience in a week, and several of these schools don't expect it; they assess potential, so don't fake a portfolio. What you can do is make your child a credible, trainable prospect. First, build fitness now — steady running, cycling, or swimming in the remaining time directly helps with any physical component and is the highest-leverage thing you can do late. Second, get one or two genuine recent outdoor experiences on the board: a real hike, a climbing-wall session, a navigation walk — enough to speak about concretely and to show they take to the environment. Third, turn whatever outdoor moments your child does have into four-sentence stories — the hardest activity, a time they helped a team, a safety call — and rehearse the interview, including \"why outdoor adventure\" and a scenario or two, so the answers are honest and specific rather than rehearsed-sounding. Some families consider a coach, but for outdoor adventure the best preparation is real time outdoors and real fitness, not polish. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  cricket: {
+    slug: "cricket",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Cricket", zh: "板球", ms: "Kriket", ta: "கிரிக்கெட்" },
+    hook: {
+      en: "Cricket DSA — what the trial actually tests.",
+      zh: "板球 DSA——trial 到底在看什么",
+      ms: "DSA Kriket — apa yang trial sebenarnya nilai.",
+      ta: "கிரிக்கெட் DSA — சோதனை உண்மையில் என்ன சோதிக்கிறது.",
+    },
+    intro: {
+      en: "Trial coaches look at more than how far your child can hit. We break down batting technique, bowling control, fielding and throwing, and the game sense that gets P6 players noticed.",
+      zh: "trial 教练看的不止能把球打多远。我们拆解击球技术、投球控制、守备与传球，以及让小六球员被注意到的比赛意识。",
+      ms: "Jurulatih trial menilai lebih daripada sejauh mana anak anda boleh memukul. Kami pecahkan teknik memukul, kawalan membaling, menahan bola dan membaling, serta naluri permainan.",
+      ta: "சோதனை பயிற்சியாளர்கள் உங்கள் குழந்தை எவ்வளவு தூரம் அடிக்க முடியும் என்பதை மட்டும் பார்ப்பதில்லை. மட்டையடிப்பு நுட்பம், பந்துவீச்சு கட்டுப்பாடு, பந்து பிடித்தல் மற்றும் வீசுதல், விளையாட்டு உணர்வை விளக்குகிறோம்.",
+    },
+    summary: {
+      en: "Trial criteria, role-specific skills, sample interview questions, participating schools.",
+      zh: "Trial 评分维度、角色专项技术、面试题样、招生学校。",
+      ms: "Kriteria trial, kemahiran khusus peranan, soalan temu duga contoh, sekolah peserta.",
+      ta: "சோதனை அளவுகோல்கள், பங்கு சார்ந்த திறன்கள், மாதிரி நேர்காணல் கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Anglo-Chinese School (Independent) (Secondary)",
+      "Raffles Institution (Secondary)",
+      "St. Patrick's School",
+    ],
+    metaDescription: {
+      en: "How cricket DSA-Sec interviews and trials work in Singapore — what coaches assess in batting, bowling and fielding, sample questions, and a list of participating secondary schools.",
+      zh: "新加坡板球 DSA-Sec 面试与 trial 全解析——教练在击球、投球、守备上考察什么、面试样题、招生中学清单。",
+      ms: "Bagaimana temu duga dan trial DSA-Sec kriket di Singapura — apa yang jurulatih nilai dalam memukul, membaling dan menahan bola, soalan contoh, sekolah peserta.",
+      ta: "சிங்கப்பூரில் கிரிக்கெட் DSA-Sec நேர்காணல் மற்றும் சோதனை எவ்வாறு செயல்படுகிறது — பயிற்சியாளர்கள் மட்டையடிப்பு, பந்துவீச்சு, பந்து பிடித்தலில் என்ன மதிப்பிடுகிறார்கள், மாதிரி கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Cricket is contested in the National School Games at C, B and A Division level, so most trials are run by the school's cricket coach plus a teacher-in-charge. A trial typically rotates a candidate through stations: batting in the nets against throwdowns or a bowling machine, a bowling spell to test action and control, fielding ground balls and high catches, and a throwing-accuracy check — with batsmen, bowlers, all-rounders and wicketkeepers given role-specific tests. Most schools do not publish a rubric, and MOE's own guidance is that applicants without prior experience may apply because schools assess potential. The dimensions below are the objective skills cricket requires; they are what any coach is watching for whether or not they write it down.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Batting technique over raw power" },
+          body: {
+            en: "For a 12-year-old still growing, a balanced stance, a still head, and consistent timing score higher than the occasional big slog with poor footwork. Coaches watch for getting to the pitch of the ball, playing straight, and a sound defensive technique against good-length deliveries. Soft hands and the ability to leave a ball outside off stump tell a coach the batter has been properly taught — the power follows once the base is sound.",
+          },
+        },
+        {
+          label: { en: "Bowling action and control" },
+          body: {
+            en: "Accuracy and a repeatable, injury-safe action matter far more than pace at this age. Coaches look for whether the trialist lands the ball on a consistent line and length, can bowl to a target, and has a smooth run-up and clean release. A spinner who actually turns the ball or a seamer who hits the same spot ball after ball reads stronger than a fast but wayward bowler — and a legal, side-on action protects the child long term.",
+          },
+        },
+        {
+          label: { en: "Fielding and throwing" },
+          body: {
+            en: "How the trialist moves to the ball matters more than whether they cling to one easy catch. Coaches watch the approach to a ground ball, soft hands, getting the body behind it, and a clean pick-up and throw over the stumps. High catching under a steepling ball, an attacking charge at a slow roller, and an accurate flat throw to the keeper are the habits that separate a trained fielder from an athletic one.",
+          },
+        },
+        {
+          label: { en: "Game sense and decision-making" },
+          body: {
+            en: "Cricket is a thinking game, and coaches read it in the small choices: a batter who rotates the strike rather than chasing boundaries, a bowler who sets a field and bowls to it, a fielder who backs up the throw without being told. A P6 player who understands when to attack and when to defend signals years of real match play, not just net practice.",
+          },
+        },
+        {
+          label: { en: "Fitness and concentration" },
+          body: {
+            en: "A cricket trial can run for hours, and matches longer still. Coaches watch who holds their technique and attention through a long session — the batter still watching the ball after an hour, the fielder still alert at the end. Sustained concentration, quick singles run hard, and steady ground-fielding when tired are honest signals that surface late in a trial.",
+          },
+        },
+        {
+          label: { en: "Attitude and coachability" },
+          body: {
+            en: "How the trialist behaves between stations — backing up teammates, walking when they nick it, listening to instruction the first time, thanking the coach at the end — is read closely. Cricket leans heavily on the spirit of the game, so coaches recruit players they can develop over four to six years: a coachable, hard-working candidate often edges out a more talented one who sulks after getting out.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Batsman" },
+          body: {
+            en: "The role tested most on technique and temperament. Coaches look for a still head, balanced footwork forward and back, and the judgement to leave or defend the good ball and punish the loose one. At P6 level, a sound defensive base and consistent contact matter far more than how hard the trialist can hit — schools would rather develop a batter with proper technique than rebuild a slogger with no defence.",
+          },
+        },
+        {
+          position: { en: "Bowler" },
+          body: {
+            en: "The role that most controls the game, and the one trials test most directly for control. Whether a seamer or a spinner, coaches want a repeatable action, a consistent line and length, and the ability to bowl to a plan rather than just bowl fast. An injury-safe, legal action is non-negotiable at this age — schools would rather coach a bowler who lands it on a length than fix a quick but wild one.",
+          },
+        },
+        {
+          position: { en: "All-rounder" },
+          body: {
+            en: "The most flexible profile and a strong card to play at trial, because it gives a coach two ways to use the player. Coaches will test both disciplines, so declare all-rounder only if the batting and bowling are both genuinely usable — a competent bat who can also bowl a tidy few overs is more valuable to a developing squad than a one-skill specialist who fades when out of form.",
+          },
+        },
+        {
+          position: { en: "Wicketkeeper" },
+          body: {
+            en: "The field general behind the stumps and the only player facing the whole game. Coaches want quick, soft hands, good footwork to take the ball cleanly standing up or back, the agility to dive and the composure to take catches and run-outs under pressure. A vocal keeper who directs the field and lifts the bowlers signals leadership, which schools value highly in a DSA candidate.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Many P6 players have only filled one or two roles in a small school CCA. Declare what you can actually demonstrate and say you are happy to be tried elsewhere — versatility is a plus at trial, and coaches often move newcomers around to find the best fit.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love cricket?" },
+          subtext: { en: "The panel wants a specific moment, not a feeling. \"It's fun\" reads as weak motivation." },
+          approach: { en: "Open with one concrete memory, then connect it to character." },
+          template: { en: "When I had to bat out the last few overs to save a tight P5 match, I realised I wanted to be the player my team trusts to hold an innings together — not the one hoping to get out and leave it to someone else." },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: { en: "Did the family research the program, or are they applying everywhere?" },
+          approach: { en: "Cite one specific thing about the school's cricket — a training pattern, an NSG showing, the coach's emphasis." },
+          template: { en: "Your school has a long cricket tradition and plays at National Division level — I want to be pushed by that standard and that coaching from Sec 1, not wait to catch up." },
+        },
+        {
+          question: { en: "What role do you play, and why?" },
+          subtext: { en: "Can the kid articulate the role, not just label it?" },
+          approach: { en: "Name the role plus the job it does for the team." },
+          template: { en: "Opening batsman — my job is seeing off the new ball and giving the middle order a platform, so I work hardest on a tight defence and judging which balls to leave." },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a challenge." },
+          subtext: { en: "Specific actions, not just outcome or feelings." },
+          approach: { en: "Situation, then action, then result, in two sentences." },
+          template: { en: "I kept getting bowled because my footwork was poor against spin. I spent a few weeks on shadow batting and facing throwdowns from a teammate, and by our last games I was using my feet and scoring off the spinners instead." },
+        },
+        {
+          question: { en: "Is there a teammate or coach you remember most?" },
+          subtext: { en: "Whether the kid sees teammates as people or as background." },
+          approach: { en: "Name someone specific by role + what you learned from them." },
+          template: { en: "Our captain always set my field before I bowled and told me where to aim — he taught me that cricket is a thinking game, not just bowling as fast as you can." },
+        },
+        {
+          question: { en: "How will you manage time with frequent trainings?" },
+          subtext: { en: "Schools fear DSA kids who flame out academically by Sec 2." },
+          approach: { en: "Describe a real system, not platitudes about discipline." },
+          template: { en: "I do my English and Math homework on the bus to training and finish the rest before dinner, and I keep Sundays for revision so a long training week never piles up." },
+        },
+        {
+          question: { en: "If School A and School B both offer you, which would you choose?" },
+          subtext: { en: "Tests honesty under pressure — and whether you'd actually come." },
+          approach: { en: "Don't dodge. Pick one, justify with one specific reason." },
+          template: { en: "Honestly, your school — your coach's focus on batting technique fits how I want to develop. If the other school replied first I'd still wait to hear from you." },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent) (Secondary)",
+          talentArea: { en: "Cricket (Boys)" },
+          context: { en: "Cricket has been part of ACS (Independent) since 1934 and is one of the school's longest-running sports, competing strongly in the National School Games across divisions. Official position is that applicants without prior experience may apply, as the school assesses potential." },
+        },
+        {
+          name: "Raffles Institution (Secondary)",
+          talentArea: { en: "Cricket (Boys), IP" },
+          context: { en: "One of the schools that has played cricket actively in Singapore over the years, with the sport part of RI's broad IP sports portfolio. Applicants are assessed on potential as well as current ability." },
+        },
+        {
+          name: "St. Patrick's School",
+          talentArea: { en: "Cricket (Boys)" },
+          context: { en: "Offers cricket as a boys' CCA and competes in the National School Games. The school's cricket programme emphasises teamwork, discipline and the spirit of the game; DSA applicants are welcome to its cricket CCA." },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            { en: "Video-record your child facing 20 throwdowns or net balls, bowling one full over, and taking 10 ground balls and 5 high catches. Watch together, scoring just two things: (1) does the head stay still and the defence stay straight when batting? (2) does the ball land on a consistent line and length when bowling? These two habits separate trained players from athletic ones and are exactly what coaches watch in the nets." },
+            { en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and competition results, NAPFA, and JSA data from the primary school directly into the DSA portal. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged." },
+            { en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read." },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            { en: "Drop intensity to about 80%: light net batting for feel, easy bowling reps, no new academy session and no max-effort bowling spells. Final-week added load rarely pays off and frequently produces a sore shoulder or side strain right before the trial." },
+            { en: "Confirm logistics in writing. Time, venue, attire, and whether to bring own bat, pads and whites. Email the teacher-in-charge if anything is ambiguous — the email itself is a data point on parent attentiveness." },
+            { en: "Do one batting-and-fielding session with someone unfamiliar. Kids often tense up batting against a bowler they don't know; force that awkwardness out of the way before the trial, not during it." },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            { en: "Eat 90 minutes before — not 30. A cricket trial can run for hours, and the fielding and throwing stations often come when kids are already tired." },
+            { en: "Check the gear is ready and fits — bat grip, pads, gloves, and broken-in boots. Stiff new kit or blisters from fresh boots can cost reps the trialist cannot get back." },
+            { en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. No post-mortem in the car — one question only: \"What's one thing the coach said today?\" Anything else waits 24 hours." },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. Cut the practice down to the two highest-signal skills: a still-headed, straight defence in the nets, and landing the ball on a consistent line and length. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because that's the only part where a few hours of work can still meaningfully change the outcome. Some families bring in a private coach at this stage to compress the learning curve. A good private coach can speed up specific habit changes — but no coach produces, in three sessions, the muscle memory of a year of practice. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -15083,6 +16900,15 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "guzheng",
   "instrumental-ensembles",
   "tamil-language",
+  "media-arts",
+  "computing",
+  "gymnastics",
+  "chinese-brush-arts",
+  "chess-mind",
+  "golf",
+  "climbing",
+  "outdoor-adventure",
+  "cricket",
 ];
 
 /**
@@ -15143,6 +16969,15 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   guzheng: ["chinese-orchestra", "chinese"],
   "instrumental-ensembles": ["symphonic-band", "music"],
   "tamil-language": ["malay-language", "chinese"],
+  "media-arts": ["art", "drama"],
+  "computing": ["robotics", "math"],
+  "gymnastics": ["dance", "track-field"],
+  "chinese-brush-arts": ["art", "chinese"],
+  "chess-mind": ["math", "chinese"],
+  "golf": ["tennis", "bowling"],
+  "climbing": ["wushu", "track-field"],
+  "outdoor-adventure": ["uniformed-groups", "leadership"],
+  "cricket": ["softball", "basketball"],
 };
 
 /**
