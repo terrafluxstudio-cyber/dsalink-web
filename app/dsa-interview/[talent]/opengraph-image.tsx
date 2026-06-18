@@ -1,7 +1,11 @@
 import { ImageResponse } from "next/og";
 import { getTalentPage, TALENT_SLUGS } from "@/lib/talentPages";
 
-export const runtime = "edge";
+// Node.js runtime (not edge): this OG image imports the full talent data
+// module, which pushes the bundle past Vercel's 1 MB edge-function limit once
+// enough talents exist. Images are generated at build time, so nodejs runtime
+// has no perf downside and removes the size ceiling.
+export const runtime = "nodejs";
 export const contentType = "image/png";
 export const size = { width: 1200, height: 630 } as const;
 export const alt = "DSA Interview Prep — DSALink Singapore";
