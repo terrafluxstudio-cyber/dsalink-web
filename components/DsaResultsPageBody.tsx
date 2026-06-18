@@ -22,6 +22,7 @@ import { PillarBackLink } from "@/components/PillarBackLink";
 import { RelatedCardsRow } from "@/components/RelatedCardsRow";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { TALENT_COUNT } from "@/lib/talentPages";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -914,12 +915,12 @@ export function DsaResultsPageBody() {
                 >
                   <span style={{ textTransform: "none" }}>
                     {locale === "zh"
-                      ? "查看 32 个 talent 备战页"
+                      ? `查看 ${TALENT_COUNT} 个才艺备战页`
                       : locale === "ms"
-                      ? "32 halaman persediaan bakat"
+                      ? `${TALENT_COUNT} halaman persediaan bakat`
                       : locale === "ta"
-                      ? "32 திறமை தயாரிப்பு பக்கங்கள்"
-                      : "Browse all 32 talent prep pages"}
+                      ? `${TALENT_COUNT} திறமை தயாரிப்பு பக்கங்கள்`
+                      : `Browse all ${TALENT_COUNT} talent prep pages`}
                   </span>
                   <ArrowRight className="h-4 w-4" aria-hidden />
                 </Link>

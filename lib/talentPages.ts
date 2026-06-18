@@ -40,7 +40,13 @@ export type TalentSlug =
   | "mep"
   | "aep"
   | "bicultural"
-  | "humanities";
+  | "humanities"
+  | "softball"
+  | "shooting"
+  | "bowling"
+  | "cross-country"
+  | "canoeing"
+  | "tchoukball";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -497,7 +503,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       "Victoria School",
       "Anglo-Chinese School (Barker Road)",
       "Hwa Chong Institution",
-      "Saint Joseph's Institution",
+      "St. Joseph's Institution",
       "Catholic High School",
     ],
     metaDescription: {
@@ -689,7 +695,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           },
         },
         {
-          name: "Saint Joseph's Institution",
+          name: "St. Joseph's Institution",
           url: "https://www.sji.edu.sg/admissions/direct-school-admission/",
           talentArea: { en: "Football (Boys)" },
           context: {
@@ -1155,7 +1161,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       "Raffles Institution",
       "Hwa Chong Institution",
       "Victoria School",
-      "Saint Joseph's Institution",
+      "St. Joseph's Institution",
       "Dunman High School",
     ],
     metaDescription: {
@@ -1355,7 +1361,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           },
         },
         {
-          name: "Saint Joseph's Institution",
+          name: "St. Joseph's Institution",
           url: "https://www.sji.edu.sg/admissions/direct-school-admission/",
           talentArea: { en: "Track & Field (Boys)" },
           context: {
@@ -1814,7 +1820,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       "Nan Hua High School",
       "Dunman High School",
       "Anglo-Chinese School (Independent)",
-      "Saint Joseph's Institution",
+      "St. Joseph's Institution",
     ],
     metaDescription: {
       en: "Martial Arts DSA-Sec — wushu, taekwondo, judo, fencing. Discipline-specific paths, trial format, interview questions, Singapore schools.",
@@ -2029,7 +2035,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           },
         },
         {
-          name: "Saint Joseph's Institution",
+          name: "St. Joseph's Institution",
           url: "https://www.sji.edu.sg/admissions/direct-school-admission/",
           talentArea: { en: "Fencing, Judo (Boys)" },
           context: {
@@ -4597,7 +4603,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       "Anglo-Chinese School (Barker Road)",
       "Raffles Institution",
       "Raffles Girls' School (Secondary)",
-      "Saint Joseph's Institution",
+      "St. Joseph's Institution",
     ],
     metaDescription: {
       en: "Hockey DSA-Sec trial guide for Singapore P6 — what trials measure, position-specific stick work, sample interview questions, SSP and IP participating schools.",
@@ -4607,7 +4613,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     },
     rich: {
       trialDimensionsIntro: {
-        en: "Singapore hockey trials run 90–120 minutes and are typically led by the school's head hockey coach (often SHF-registered) alongside the teacher-in-charge. Expect a warm-up, technical stations (push pass, hit, reception, 1v1), and small-sided games (5v5 or 7v7) on a half pitch. The strongest school programmes — particularly under the Schools' Special Programme (SSP) for Hockey at Anglo-Chinese School (Independent), Anglo-Chinese School (Barker Road), Saint Joseph's Institution, and Victoria School — recruit aggressively at P6. No school publishes a rubric, but the FIH-aligned youth coaching framework and parent reports converge on the six dimensions below.",
+        en: "Singapore hockey trials run 90–120 minutes and are typically led by the school's head hockey coach (often SHF-registered) alongside the teacher-in-charge. Expect a warm-up, technical stations (push pass, hit, reception, 1v1), and small-sided games (5v5 or 7v7) on a half pitch. The strongest school programmes — particularly under the Schools' Special Programme (SSP) for Hockey at Anglo-Chinese School (Independent), Anglo-Chinese School (Barker Road), St. Joseph's Institution, and Victoria School — recruit aggressively at P6. No school publishes a rubric, but the FIH-aligned youth coaching framework and parent reports converge on the six dimensions below.",
       },
       trialDimensions: [
         {
@@ -4780,7 +4786,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           },
         },
         {
-          name: "Saint Joseph's Institution",
+          name: "St. Joseph's Institution",
           url: "https://www.sji.edu.sg/admissions/",
           talentArea: { en: "Hockey (Boys), DSA-Sec" },
           context: {
@@ -4919,7 +4925,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       "Anglo-Chinese School (Independent)",
       "Raffles Girls' School (Secondary)",
       "Raffles Institution",
-      "Saint Joseph's Institution",
+      "St. Joseph's Institution",
       "Hwa Chong Institution",
       "Methodist Girls' School (Secondary)",
     ],
@@ -5112,7 +5118,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           },
         },
         {
-          name: "Saint Joseph's Institution",
+          name: "St. Joseph's Institution",
           url: "https://www.sji.edu.sg/admissions/",
           talentArea: { en: "Squash (Boys), DSA-Sec" },
           context: {
@@ -5476,7 +5482,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           },
         },
         {
-          name: "Saint Joseph's Institution",
+          name: "St. Joseph's Institution",
           url: "https://www.sji.edu.sg/admissions/",
           talentArea: { en: "Leadership (Boys), DSA-Sec" },
           context: {
@@ -10919,6 +10925,1862 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
     },
   },
+  softball: {
+    slug: "softball",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Softball", zh: "垒球", ms: "Sofbol", ta: "சாஃப்ட்பால்" },
+    hook: {
+      en: "Softball DSA — what the trial actually tests.",
+      zh: "垒球 DSA——trial 到底在看什么",
+      ms: "DSA Sofbol — apa yang trial sebenarnya nilai.",
+      ta: "சாஃப்ட்பால் DSA — சோதனை உண்மையில் என்ன சோதிக்கிறது.",
+    },
+    intro: {
+      en: "Trial coaches look at more than how hard your child throws. We break down batting mechanics, fielding footwork, throwing accuracy, and the baserunning reads that get P6 players noticed.",
+      zh: "trial 教练看的不止扔得有多远。我们拆解打击动作、守备脚步、传球准度，以及让小六球员被注意到的跑垒判断。",
+      ms: "Jurulatih trial menilai lebih daripada sekuat mana anak anda membaling. Kami pecahkan mekanik memukul, pergerakan kaki menahan bola, ketepatan balingan, dan bacaan berlari di pangkalan.",
+      ta: "சோதனை பயிற்சியாளர்கள் உங்கள் குழந்தை எவ்வளவு வேகமாக எறிகிறது என்பதை மட்டும் பார்ப்பதில்லை. மட்டையடிப்பு நுட்பம், பந்து பிடிக்கும் கால் நகர்வு, எறியும் துல்லியம், மற்றும் ஓடும் முடிவுகளை விளக்குகிறோம்.",
+    },
+    summary: {
+      en: "Trial criteria, position-specific skills, sample interview questions, participating schools.",
+      zh: "Trial 评分维度、位置专项技术、面试题样、招生学校。",
+      ms: "Kriteria trial, kemahiran khusus posisi, soalan temu duga contoh, sekolah peserta.",
+      ta: "சோதனை அளவுகோல்கள், நிலை சார்ந்த திறன்கள், மாதிரி நேர்காணல் கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Raffles Girls' School (Secondary)",
+      "Nanyang Girls' High School",
+      "Anglo-Chinese School (Independent)",
+      "Dunman High School",
+      "Catholic High School",
+      "St. Gabriel's Secondary School",
+    ],
+    metaDescription: {
+      en: "How softball DSA-Sec interviews and trials work in Singapore — what coaches assess in batting, fielding and baserunning, sample questions, and a list of participating secondary schools.",
+      zh: "新加坡垒球 DSA-Sec 面试与 trial 全解析——教练在打击、守备、跑垒上考察什么、面试样题、招生中学清单。",
+      ms: "Bagaimana temu duga dan trial DSA-Sec sofbol di Singapura — apa yang jurulatih nilai dalam memukul, menahan bola dan berlari, soalan contoh, sekolah peserta.",
+      ta: "சிங்கப்பூரில் சாஃப்ட்பால் DSA-Sec நேர்காணல் மற்றும் சோதனை எவ்வாறு செயல்படுகிறது — பயிற்சியாளர்கள் மட்டையடிப்பு, பந்து பிடித்தல், ஓடுதலில் என்ன மதிப்பிடுகிறார்கள், மாதிரி கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Softball is contested in the National School Games at C and B Division level, so most trials are run by the school's softball coach plus a teacher-in-charge. A trial typically rotates a candidate through stations: batting off a tee or front toss, fielding ground balls and fly balls, a throwing-accuracy check, a short timed baserunning leg, and — for those who declare it — a position-specific test such as pitching or catching. Most schools do not publish a rubric, and MOE's own guidance is that applicants without prior experience may apply because schools assess potential. The dimensions below are the objective skills softball requires; they are what any coach is watching for whether or not they write it down.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Batting mechanics over raw power" },
+          body: {
+            en: "For a 12-year-old still growing, a balanced stance, level swing path, and consistent contact score higher than the occasional big hit with a long, looping swing. Coaches who have seen growth spurts know the power follows once the mechanics are repeatable. Bat speed and the ability to track the ball all the way to contact are what get noticed.",
+          },
+        },
+        {
+          label: { en: "Fielding footwork and glove work" },
+          body: {
+            en: "How the trialist moves to the ball matters more than whether they catch the one easy grounder. Coaches watch for getting in front of the ball, soft hands, staying low through a ground ball, and reading the flight of a fly ball early. Charging a slow roller and fielding on the correct foot to throw are habits that separate trained players from athletic ones.",
+          },
+        },
+        {
+          label: { en: "Throwing accuracy and footwork" },
+          body: {
+            en: "Arm strength helps, but accuracy and a quick, clean release decide outs. Coaches look for the crow-hop or shuffle into the throw, a proper grip across the seams, and whether the throw arrives chest-high to the receiver. A strong arm that sails over the cut-off costs runs; a controlled throw on a line is the higher-signal skill.",
+          },
+        },
+        {
+          label: { en: "Baserunning reads and speed" },
+          body: {
+            en: "Pure speed is timed, but the read is judged. Coaches watch how the trialist rounds first, whether they pick up the situation rather than just sprinting, and how decisively they commit. A player who runs hard out of the box on every contact — even routine grounders — signals the kind of effort coaches build a team around.",
+          },
+        },
+        {
+          label: { en: "Position-specific technique" },
+          body: {
+            en: "If your child declares as a pitcher, expect the windmill delivery and control to be tested directly; catchers are checked on receiving, blocking, and the throw to second. Infielders are watched on range and the double-play pivot, outfielders on tracking deep balls and the throw back in. Declaring a position you can actually demonstrate is stronger than claiming the glamour spot.",
+          },
+        },
+        {
+          label: { en: "Attitude and coachability" },
+          body: {
+            en: "How the trialist behaves between stations — hustling to retrieve loose balls, encouraging others, listening to instruction the first time, thanking the coach at the end — is read closely. Coaches recruit players they can develop over four to six years, so a coachable, hard-working candidate often edges out a more talented one who sulks after a strikeout.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Pitcher" },
+          body: {
+            en: "The position that most controls the game's tempo, and the one trials test most directly. Coaches look for a repeatable windmill delivery, control over raw speed, and the composure to throw strikes under watching eyes. At P6 level, accuracy and a clean, injury-safe motion matter far more than velocity — schools would rather develop a pitcher who throws strikes than fix a fast but wild one.",
+          },
+        },
+        {
+          position: { en: "Catcher" },
+          body: {
+            en: "The field general — calling the defence and the only player facing the whole diamond. Coaches want strong legs for constant squatting, soft receiving hands, the ability to block balls in the dirt, and a quick, accurate throw to second. A vocal catcher who directs teammates signals leadership, which schools value highly in a DSA candidate.",
+          },
+        },
+        {
+          position: { en: "Infield (1B / 2B / SS / 3B)" },
+          body: {
+            en: "Shortstop and second base are usually the most athletic infielders; coaches watch range, quick hands, and the second-base pivot on a double play. Third base needs quick reactions and a strong arm across the diamond; first base needs reliable receiving and footwork around the bag. Across the infield, getting in front of the ball and fielding on the throwing foot are the higher-signal habits.",
+          },
+        },
+        {
+          position: { en: "Outfield (LF / CF / RF)" },
+          body: {
+            en: "Center field covers the most ground and often captains the outfield — coaches look for speed, early reads off the bat, and clear communication to avoid collisions. Right field is typically asked for the strongest outfield arm to reach third base. The shared skill across all three is tracking a fly ball early and getting behind it to throw, not drifting under it flat-footed.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Many P6 players have only played a couple of positions in a small school CCA. Declare what you can actually demonstrate and say you are happy to be tried elsewhere — versatility is a plus at trial, and coaches often move newcomers around to find the best fit.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why do you love softball?" },
+          subtext: {
+            en: "The panel wants a specific moment, not a feeling. \"It's fun\" reads as weak motivation.",
+          },
+          approach: {
+            en: "Open with one concrete memory, then connect it to character.",
+          },
+          template: {
+            en: "When I came up to bat with two outs and runners on in our P5 inter-class final, I realised I wanted to be the player my team trusts in that spot — not the one hoping someone else bats.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the program, or are they applying everywhere?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's softball — a training pattern, an NSG showing, the coach's emphasis.",
+          },
+          template: {
+            en: "Your school plays in the National B Division and trains its DSA players with the competition team — I want to be pushed at that level from Sec 1, not wait to catch up.",
+          },
+        },
+        {
+          question: { en: "What position do you play, and why?" },
+          subtext: {
+            en: "Can the kid articulate the role, not just label it?",
+          },
+          approach: {
+            en: "Name the position plus the job it does for the team.",
+          },
+          template: {
+            en: "Shortstop — my job is covering the most ground in the infield and turning double plays, so I work hardest on quick hands and reading the batter early.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a challenge." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I kept getting picked off at first because I read the pitcher late. I spent two weeks practising my lead and reaction with a teammate, and by our last games I was stealing bases instead of getting caught.",
+          },
+        },
+        {
+          question: { en: "Is there a teammate or coach you remember most?" },
+          subtext: {
+            en: "Whether the kid sees teammates as people or as background.",
+          },
+          approach: {
+            en: "Name someone specific by role + what you learned from them.",
+          },
+          template: {
+            en: "Our catcher always told me where to throw before the play even started — she taught me that softball is a thinking game, not just a throwing one.",
+          },
+        },
+        {
+          question: { en: "How will you manage time with frequent trainings?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I do my English and Math homework on the bus to training and finish the rest before dinner, and I keep Sundays for revision so a long training week never piles up.",
+          },
+        },
+        {
+          question: { en: "If School A and School B both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school — your coach's focus on fielding fundamentals fits how I want to develop. If the other school replied first I'd still wait to hear from you.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Raffles Girls' School (Secondary)",
+          talentArea: { en: "Softball (Girls), IP" },
+          context: {
+            en: "Established girls' softball program with National B Division participation. Applicants without prior experience may apply, as the school assesses potential.",
+          },
+        },
+        {
+          name: "Nanyang Girls' High School",
+          talentArea: { en: "Softball (Girls), IP" },
+          context: {
+            en: "SAP school — applicants offer Higher Chinese. Long-running girls' softball CCA with NSG competition experience.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Independent)",
+          talentArea: { en: "Softball, DSA-Sec" },
+          context: {
+            en: "Lists softball among its DSA talent areas alongside other sports. Official position is that applicants without prior experience may apply.",
+          },
+        },
+        {
+          name: "Dunman High School",
+          talentArea: { en: "Softball, DSA-Sec" },
+          context: {
+            en: "SAP school offering softball through DSA-Sec. NSG zone and national competition experience is a consideration.",
+          },
+        },
+        {
+          name: "Catholic High School (Secondary)",
+          talentArea: { en: "Softball (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school — applicants offer Chinese Language or Higher Chinese in primary school. Established boys' softball CCA.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          talentArea: { en: "Softball, DSA-Sec" },
+          context: {
+            en: "SAP school requiring Higher Chinese or Chinese Language as Mother Tongue. Offers softball among its DSA talent areas.",
+          },
+        },
+        {
+          name: "National Junior College (Secondary)",
+          talentArea: { en: "Softball, IP" },
+          context: {
+            en: "Integrated Programme school with softball in its sports CCA portfolio and NSG competition participation.",
+          },
+        },
+        {
+          name: "Raffles Institution (Secondary)",
+          talentArea: { en: "Softball (Boys), IP" },
+          context: {
+            en: "Part of RI's broad IP sports portfolio. Applicants are assessed on potential as well as current ability.",
+          },
+        },
+        {
+          name: "Maris Stella High School (Secondary)",
+          talentArea: { en: "Softball (Boys), DSA-Sec" },
+          context: {
+            en: "SAP school with an established boys' softball CCA competing in the National School Games.",
+          },
+        },
+        {
+          name: "St. Gabriel's Secondary School",
+          talentArea: { en: "Softball (Boys), DSA-Sec" },
+          context: {
+            en: "Competes in the National School C and B Division softball. Welcomes DSA applicants to its softball CCA.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Video-record your child taking 20 swings off a tee or front toss, and 10 ground balls and 10 fly balls. Watch together, scoring just two things: (1) is the swing path level and balanced, or long and looping? (2) does she get in front of the ball and field on the throwing foot? These two habits separate trained players from athletic ones and are exactly what coaches watch at a station-based trial.",
+            },
+            {
+              en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and competition results, NAPFA, and JSA data from the primary school directly into the DSA portal. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity to about 80%: tee work and soft toss for feel, light fielding reps, no new academy session and no max-effort throwing. Final-week added load rarely pays off and frequently produces a sore arm right before the trial.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire, and whether to bring own glove and cleats. Email the teacher-in-charge if anything is ambiguous — the email itself is a data point on parent attentiveness.",
+            },
+            {
+              en: "Do one fielding-and-throwing session with someone unfamiliar. Kids often tense up throwing to a stranger; force that awkwardness out of the way before the trial, not during it.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat 90 minutes before — not 30. Trials run through multiple stations and the throwing-accuracy and baserunning legs come when kids are already tired.",
+            },
+            {
+              en: "Check the glove is broken in and cleats fit. A stiff new glove or blisters from fresh cleats can cost reps the trialist cannot get back.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. No post-mortem in the car — one question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — applications in, trial coming up, no real prep — there are still real moves. Cut the practice down to the two highest-signal skills: a clean, level swing off a tee, and getting in front of ground balls to field on the throwing foot. Cancel anything that competes with sleep. Spend the freed time on interview prep above, because that's the only part where a few hours of work can still meaningfully change the outcome. Some families bring in a private coach at this stage to compress the learning curve. A good private coach can speed up specific habit changes — but no coach produces, in three sessions, the muscle memory of a year of practice. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  shooting: {
+    slug: "shooting",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Shooting", zh: "射击", ms: "Menembak", ta: "துப்பாக்கி சுடுதல்" },
+    hook: {
+      en: "Shooting DSA — trials reward stillness, breathing, and trigger control, not just a high score sheet.",
+      zh: "射击 DSA——trial 看稳定、呼吸和扳机控制，不只是看成绩单上的分数",
+      ms: "DSA Menembak — trial menghargai ketenangan, pernafasan, dan kawalan picu, bukan sekadar skor tinggi.",
+      ta: "துப்பாக்கி சுடுதல் DSA — சோதனை அமைதி, மூச்சுக்கட்டுப்பாடு, விசைக்கட்டுப்பாட்டை மதிக்கிறது, அதிக மதிப்பெண்ணை மட்டுமல்ல.",
+    },
+    intro: {
+      en: "Shooting is a precision sport — air rifle and air pistol over 10 metres, contested in the National School Games B and C Divisions. Trials look past raw scores at the things that produce consistency under pressure: a still hold, controlled breathing, clean trigger release, and the mental steadiness to repeat one good shot fifty times.",
+      zh: "射击是精准类项目——10 米气步枪和气手枪，在全国校际运动会 B、C 组进行。Trial 看的不只是分数，而是稳定发挥背后的东西：稳的持枪、可控的呼吸、干净的扳机释放，以及把一发好枪重复五十遍的心理稳定。",
+      ms: "Menembak ialah sukan ketepatan — raifal angin dan pistol angin pada jarak 10 meter, dipertandingkan dalam Bahagian B dan C Sukan Sekolah Kebangsaan. Trial menilai ketenangan pegangan, kawalan pernafasan, pelepasan picu, dan kestabilan mental.",
+      ta: "துப்பாக்கி சுடுதல் ஒரு துல்லிய விளையாட்டு — 10 மீட்டர் காற்று ரைபிள் மற்றும் காற்று பிஸ்டல், தேசிய பள்ளி விளையாட்டு B மற்றும் C பிரிவுகளில் போட்டியிடப்படுகிறது. சோதனை அசையாத பிடி, மூச்சுக்கட்டுப்பாடு, விசை விடுதல், மன உறுதியை மதிப்பிடுகிறது.",
+    },
+    summary: {
+      en: "Trial structure, air rifle / air pistol focus profiles, interview questions, participating secondary schools.",
+      zh: "Trial 流程、气步枪/气手枪分项分析、面试题、招生中学。",
+      ms: "Struktur trial, profil raifal / pistol angin, soalan temu duga, sekolah peserta.",
+      ta: "சோதனை அமைப்பு, காற்று ரைபிள்/பிஸ்டல் வகைகள், கேள்விகள், பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Hwa Chong Institution",
+      "Raffles Institution",
+      "National Junior College",
+      "Anglo-Chinese School (Independent)",
+      "Temasek Secondary School",
+      "Xinmin Secondary School",
+    ],
+    metaDescription: {
+      en: "Shooting DSA-Sec trial guide for Singapore P6 — what coaches assess across air rifle and air pistol, sample interview questions, and a list of participating secondary schools.",
+      zh: "新加坡 P6 射击 DSA-Sec trial 指南——气步枪与气手枪考察什么、面试样题、招生中学清单。",
+      ms: "Panduan trial DSA-Sec Menembak Singapura — apa jurulatih nilai, soalan contoh, sekolah peserta.",
+      ta: "சிங்கப்பூர் P6 துப்பாக்கி சுடுதல் DSA-Sec வழிகாட்டி — அளவுகோல்கள், மாதிரி கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Singapore shooting trials are usually run by the school's shooting coach plus the teacher-in-charge of CCAs, and most candidates are asked to bring their own gear if they have it. Because shooting is new to many P6 applicants, several schools run trials that test trainable raw qualities — stillness, hand steadiness, ability to follow instruction precisely — rather than assuming prior competition scores. Schools do not publish a trial rubric, so the six dimensions below are drawn from what air rifle and air pistol shooting objectively requires, not from any one school's scoring sheet.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Hold and stability" },
+          body: {
+            en: "The foundation of every shot. Coaches watch how still the candidate can keep the rifle or pistol on aim — whether the muzzle drifts, wobbles, or settles. Good hold comes from balance and relaxed-but-controlled muscle, not from gripping hard. A P6 who can settle into a steady hold for a few seconds outscores one with a high one-off score and a shaky platform, because the steady platform is what produces repeatable groups.",
+          },
+        },
+        {
+          label: { en: "Breathing control" },
+          body: {
+            en: "In a standing position the muzzle rises on the inhale and drops on the exhale, so the shot is released during a brief natural pause at the bottom of the breath. Coaches look for whether the candidate breathes smoothly and times the release to that pause — not whether they hold their breath rigidly. Holding too long starves the muscles and the hold breaks down, so controlled, unhurried breathing is itself a scored signal.",
+          },
+        },
+        {
+          label: { en: "Trigger control" },
+          body: {
+            en: "The single most common fault is jerking or snatching the trigger, which throws the shot off even from a perfect aim. Coaches watch for an independent index finger that squeezes straight back, smoothly, without disturbing the rest of the hand or the gun. A clean, gradual release that the shooter almost doesn't anticipate is the goal — and it shows even in dry-fire, before a single pellet is loaded.",
+          },
+        },
+        {
+          label: { en: "Position and posture consistency" },
+          body: {
+            en: "Precision shooting depends on building the same position every time so the body returns to natural point of aim without muscling the gun onto the target. Coaches watch foot placement, the line of the body to the target, and whether the candidate's position looks settled and repeatable rather than forced. Consistency of setup matters more than how stylish the stance looks.",
+          },
+        },
+        {
+          label: { en: "Concentration and mental steadiness" },
+          body: {
+            en: "Shooting is largely a mental sport — a still hold depends on a calm, focused mind. Coaches notice whether the candidate stays composed between shots, doesn't rush after a bad shot, and can re-focus rather than spiral. Stress, anxiety, and impatience all show up directly as rushed, inaccurate shots, so a P6 who can stay quiet and deliberate under watching eyes is signalling exactly the temperament the sport rewards.",
+          },
+        },
+        {
+          label: { en: "Coachability and safety discipline" },
+          body: {
+            en: "Shooting is a safety-critical sport, and the first thing coaches assess is whether a candidate handles the gun responsibly, follows range instructions immediately, and treats the equipment with care. Beyond safety, how the candidate accepts a correction and tries it on the very next shot is read as the strongest predictor of four years of improvement — and coaches who'll spend that time with the child weight it heavily.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Air Rifle" },
+          body: {
+            en: "Shot standing at a 10m target, the rifle is supported by the body and a sling-free standing hold, so balance and a stable platform dominate. Coaches assess how quietly the candidate can hold the rifle on aim and whether they can settle into natural point of aim rather than forcing the muzzle onto the target. Air rifle is the more commonly offered discipline across schools and is often where newcomers are first assessed.",
+          },
+        },
+        {
+          position: { en: "Air Pistol" },
+          body: {
+            en: "Shot one-handed at a 10m target, which makes hold stability and arm steadiness far harder — small tremors are magnified. Coaches look for a relaxed but stable extended-arm hold, a settled grip, and clean trigger release without disturbing the arm. Air pistol typically rewards candidates with naturally steady hands and the patience to let the shot break on its own.",
+          },
+        },
+        {
+          position: { en: "Mental and temperament profile" },
+          body: {
+            en: "Because so much of shooting is between the ears, some trials weigh disposition as heavily as technique. Coaches favour candidates who are patient, deliberate, and unflustered — who can sit with a routine, reset after a poor shot, and not chase scores. A calm, methodical P6 with modest technique is often preferred over a jumpy one with a higher number, because temperament is the slowest thing to train.",
+          },
+        },
+        {
+          position: { en: "Position and routine" },
+          body: {
+            en: "Strong shooters build a repeatable pre-shot routine — the same setup, the same breathing pattern, the same release every time. Coaches watch whether a candidate already shows the beginnings of a consistent routine or whether each shot looks different. A repeatable routine signals that the candidate understands consistency is the whole game, which is the single biggest predictor of progress in a precision sport.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Most schools offer air rifle, with fewer offering air pistol — check each school's CCA before assuming both are available. If your child has never handled either, that is normal for DSA shooting trials; most schools assess trainable steadiness and discipline rather than prior scores.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why shooting?" },
+          subtext: {
+            en: "The panel wants to hear genuine fit for a quiet, patient sport — not a borrowed answer. Many candidates are new to it, so a thoughtful reason matters more than a backstory.",
+          },
+          approach: {
+            en: "Connect the sport's nature — stillness, focus, self-control — to something real about your child.",
+          },
+          template: {
+            en: "I like that it's calm and it's all on me — I can shut everything out and just focus on one shot at a time. I'm the kind of person who'd rather get one thing exactly right than rush.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the programme, or are they applying everywhere?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's shooting — its NSG record, training pattern, or facilities.",
+          },
+          template: {
+            en: "Your school has a strong NSG shooting record and trains seriously from Sec 1 — I want to start in a programme that takes the sport that far.",
+          },
+        },
+        {
+          question: { en: "Have you shot before? If not, why do you think you'd be good at it?" },
+          subtext: {
+            en: "Tests honesty and self-awareness — schools expect many candidates to be beginners.",
+          },
+          approach: {
+            en: "If new, name a trait that transfers — steady hands, patience, focus — without over-claiming.",
+          },
+          template: {
+            en: "I haven't competed yet, but I'm patient and I don't rattle easily — when I do model-building I can sit still and focus for an hour. I think that fits shooting.",
+          },
+        },
+        {
+          question: { en: "What do you do after a bad shot?" },
+          subtext: {
+            en: "Mental reset is the heart of the sport — the panel wants to see composure, not frustration.",
+          },
+          approach: {
+            en: "Describe a concrete reset action, not a feeling.",
+          },
+          template: {
+            en: "I put the gun down, take one slow breath, and forget the last shot completely — the next shot is the only one I can change.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a challenge." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I kept losing focus halfway through my P5 music exam pieces. I started practising slowly with a metronome every day, and by the exam I could hold concentration the whole way through.",
+          },
+        },
+        {
+          question: { en: "How will you manage shooting with your studies?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I finish my homework before training days and keep Sunday for revision — shooting trains twice a week, so I plan around those two evenings.",
+          },
+        },
+        {
+          question: { en: "If two schools both offer you, how would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school — the coaching here matches how I want to train. If another school called first, I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent) (Secondary)",
+          talentArea: { en: "Shooting, IP" },
+          context: {
+            en: "Shooting is listed among ACS(I)'s DSA-Sec talent areas. Strong, well-resourced sports portfolio with established CCA programmes.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution (Secondary)",
+          talentArea: { en: "Shooting, IP" },
+          context: {
+            en: "Shooting offered as a DSA talent area within HCI's broad IP sports portfolio. Official position is that applicants without prior experience may apply.",
+          },
+        },
+        {
+          name: "Raffles Institution (Secondary)",
+          talentArea: { en: "Shooting, IP" },
+          context: {
+            en: "Listed among RI's DSA talent areas. Part of RI's wider IP sports programme.",
+          },
+        },
+        {
+          name: "National Junior College (Secondary)",
+          talentArea: { en: "Shooting, IP" },
+          context: {
+            en: "Shooting offered under NJC's DSA-Sec talent areas as part of its IP sports CCAs.",
+          },
+        },
+        {
+          name: "Temasek Secondary School",
+          talentArea: { en: "Shooting, DSA-Sec" },
+          context: {
+            en: "Runs a dedicated Shooting DSA pathway with its own write-up and trial process published on the school's DSA pages.",
+          },
+        },
+        {
+          name: "Xinmin Secondary School",
+          talentArea: { en: "Shooting, DSA-Sec" },
+          context: {
+            en: "Offers shooting as a DSA-Sec talent area with an established CCA programme.",
+          },
+        },
+        {
+          name: "Ahmad Ibrahim Secondary School",
+          talentArea: { en: "Shooting, DSA-Sec" },
+          context: {
+            en: "Established shooting CCA. Trainings build consistency in technique twice a week, with safety handling taught from the start.",
+          },
+        },
+        {
+          name: "Fuhua Secondary School",
+          talentArea: { en: "Shooting, DSA-Sec" },
+          context: {
+            en: "Offers shooting as a DSA-Sec talent area with a school CCA programme.",
+          },
+        },
+        {
+          name: "Loyang View Secondary School",
+          talentArea: { en: "Shooting, DSA-Sec" },
+          context: {
+            en: "Shooting available under the school's DSA-Sec sports talent areas.",
+          },
+        },
+        {
+          name: "West Spring Secondary School",
+          talentArea: { en: "Shooting, DSA-Sec" },
+          context: {
+            en: "Offers shooting as a DSA-Sec talent area with an established school CCA.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "If your child has any access to a range — through a primary-school CCA, ActiveSG, or a club — get steady supervised time on air rifle or pistol. If not, that is genuinely fine for DSA shooting; most schools assess trainable steadiness, not prior scores. Focus instead on building still, patient focus: any activity that trains sitting still and concentrating (model-building, archery, even careful drawing) transfers.",
+            },
+            {
+              en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and competition results, NAPFA, and JSA data from the primary school directly into the DSA portal. If your child has any shooting club or competition record, make sure it is logged. Ask the CCA teacher or year-head to check.",
+            },
+            {
+              en: "Run a mock interview using the questions above, especially \"Why shooting?\" and \"What do you do after a bad shot?\" Record on phone, watch back together. Flag any answer that ran over thirty seconds or used the word \"passionate\" — both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Don't cram new technique. In the final week, reinforce calm routine and dry-fire trigger control rather than chasing scores — last-minute changes usually add tension, which is the enemy of a still hold.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, attire, and whether to bring own gear. Schools commonly advise wearing the CCA T-shirt and bringing your own equipment if you have it — email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "Practise being watched. Shooting under observation feels different from shooting alone. Have your child run their routine while you sit and watch quietly, so the trial setting isn't the first time they perform with eyes on them.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat a normal meal beforehand and avoid anything that spikes the heart rate — caffeine, sugar, or a rushed sprint to the venue. A steady resting heart rate steadies the hold.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no real prep — there are still real moves. Stop chasing scores; in the time left you can't build a year of hold stability, and trying usually adds tension that makes the hold worse. Spend the freed time on two things: calm, repeatable trigger control through dry-fire practice, and the interview prep above, especially \"Why shooting?\" and the reset-after-a-bad-shot answer — that's the part where a few hours genuinely move the outcome. Make sure your child can handle the gun safely and follow range instructions on the first try, because that's assessed before anything else. Some families bring in a private coach at this stage; a good one can speed up a specific habit like trigger release, but no coach produces a year of steady holds in three sessions. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  bowling: {
+    slug: "bowling",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Bowling", zh: "保龄球", ms: "Boling", ta: "பந்துவீச்சு" },
+    hook: {
+      en: "Bowling DSA — what the trial actually scores.",
+      zh: "保龄球 DSA——trial 到底在评什么",
+      ms: "DSA Boling — apa yang trial sebenarnya nilai.",
+      ta: "பந்துவீச்சு DSA — சோதனை உண்மையில் எதை மதிப்பிடுகிறது.",
+    },
+    intro: {
+      en: "All bowling DSA applicants must attend a talent selection trial. Coaches look past one lucky high game — they want repeatable release, spare conversion, and a player who reads the lane and stays calm when the oil changes.",
+      zh: "所有保龄球 DSA 申请者都必须参加选拔 trial。教练看的不是某一局的高分，而是稳定的出手、补中能力，以及读得懂球道、油位变化时仍能稳住的选手。",
+      ms: "Semua pemohon DSA boling wajib menghadiri trial pemilihan bakat. Jurulatih tidak terpengaruh dengan satu permainan bertuah — mereka mahu lepasan bola yang konsisten, penukaran spare, dan pemain yang membaca lorong serta tenang apabila minyak berubah.",
+      ta: "அனைத்து பந்துவீச்சு DSA விண்ணப்பதாரர்களும் திறமை தேர்வுச் சோதனைக்கு வர வேண்டும். ஒரு அதிர்ஷ்டமான உயர் மதிப்பெண்ணை பயிற்சியாளர்கள் பார்ப்பதில்லை — மீண்டும் மீண்டும் சீரான வீச்சு, ஸ்பேர் மாற்றம், லேனைப் படித்து எண்ணெய் மாறும்போது அமைதியாக இருக்கும் வீரரையே அவர்கள் விரும்புகிறார்கள்.",
+    },
+    summary: {
+      en: "Trial criteria, playing dimensions, sample interview questions, participating schools.",
+      zh: "Trial 评分维度、打法维度、面试题样、招生学校。",
+      ms: "Kriteria trial, dimensi permainan, soalan temu duga contoh, sekolah peserta.",
+      ta: "சோதனை அளவுகோல்கள், விளையாட்டுப் பரிமாணங்கள், மாதிரி நேர்காணல் கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Anglo-Chinese School (Independent) (Secondary)",
+      "Anglo-Chinese School (Barker Road)",
+      "Methodist Girls' School (Secondary)",
+      "Tanjong Katong Girls' School",
+      "Maris Stella High School (Secondary)",
+      "CHIJ Katong Convent",
+    ],
+    metaDescription: {
+      en: "How ten-pin bowling DSA-Sec trials and interviews work in Singapore — what coaches assess, spare and lane-reading skills, sample questions, and participating secondary schools.",
+      zh: "新加坡保龄球 DSA-Sec trial 与面试全解析——教练考察什么、补中与读道能力、面试样题、招生中学清单。",
+      ms: "Bagaimana trial dan temu duga DSA-Sec boling sepuluh pin di Singapura — apa yang jurulatih nilai, kemahiran spare dan membaca lorong, soalan contoh, sekolah peserta.",
+      ta: "சிங்கப்பூரில் டென்-பின் பந்துவீச்சு DSA-Sec சோதனை மற்றும் நேர்காணல் எவ்வாறு செயல்படுகிறது — பயிற்சியாளர்கள் என்ன மதிப்பிடுகிறார்கள், ஸ்பேர் மற்றும் லேன் வாசிப்புத் திறன், மாதிரி கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "MOE confirms that bowling is one of the sports where every DSA applicant must attend a talent selection trial — there is no paper-only route. Schools run their own format, but bowling is unusually objective: scores, spare percentages, and release mechanics are all directly observable on the lane. No Singapore school publishes a bowling rubric, so the six dimensions below are drawn from what is objectively measurable in ten-pin bowling, not from any school's internal scoring sheet.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Release and timing consistency" },
+          body: {
+            en: "The single most repeatable signal a 12-year-old can show. Coaches watch whether footwork, swing, and release repeat shot after shot — not whether one ball struck. A balanced finish position held for a beat after release is a stronger marker of trainability than raw pin count.",
+          },
+        },
+        {
+          label: { en: "Spare conversion" },
+          body: {
+            en: "Strikes draw the eye; spares win the trial. A player who consistently picks up single-pin spares posts a higher, more stable score than a streaky striker. Systems like 3-6-9 board adjustment show a coach that the player thinks about angle rather than just throwing harder at the corner pin.",
+          },
+        },
+        {
+          label: { en: "Line and angle control" },
+          body: {
+            en: "Can the player put the ball over a chosen board at the arrows and hit a target down-lane? Coaches set up corner-pin and cross-lane shots to see whether the player adjusts feet and target deliberately, or just aims at the pins and hopes.",
+          },
+        },
+        {
+          label: { en: "Ball speed and accuracy under control" },
+          body: {
+            en: "A common error is throwing faster to feel more accurate, which loses control. Coaches look for repeatable speed matched to the player's stroke. Hitting the same board at the arrows three times in a row reads better than one fast strike followed by two gutters.",
+          },
+        },
+        {
+          label: { en: "Lane reading and adjustment" },
+          body: {
+            en: "Oil moves down-lane as more balls roll over it, shifting where the ball hooks. The standout trialist notices their ball reacting differently after a few frames and moves their feet or target in response — even a small, correct adjustment signals a bowler who reads the lane rather than fighting it.",
+          },
+        },
+        {
+          label: { en: "Composure and routine" },
+          body: {
+            en: "Bowling is a between-shots sport: the gap before each delivery is where nerves leak in. A steady pre-shot routine and an unchanged tempo after an open frame tell a coach the player can self-manage. Visible frustration after a missed spare is the most common thing that costs a trialist.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Strike consistency" },
+          body: {
+            en: "Not a position but a playing strength. The player whose ball enters the pocket on the same line repeatedly — rather than crossing over once and missing wide twice — is showing the most coachable foundation. At P6 level, a clean, repeatable pocket hit beats a higher one-off score with chaotic ball paths.",
+          },
+        },
+        {
+          position: { en: "Spare conversion" },
+          body: {
+            en: "The dimension that most separates trial scores. A player who reliably converts single-pin and easier multi-pin spares can post a respectable game without a single strike. Demonstrate a deliberate method — moving feet a set number of boards for corner pins — rather than re-aiming by feel each time.",
+          },
+        },
+        {
+          position: { en: "Lane reading" },
+          body: {
+            en: "The strength coaches credit most as players mature. Watch your own ball reaction across a few frames and adjust feet or target as the oil breaks down. Even one correct mid-game move tells the coach you understand that the lane changes — most trialists never adjust at all.",
+          },
+        },
+        {
+          position: { en: "Mental game" },
+          body: {
+            en: "Composure between shots. A fixed pre-shot routine, even breathing, and an unchanged tempo after an open frame are visible and scored informally by every coach. The player who looks the same after a gutter as after a strike is the one a coach can build on.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Bowling has no fixed playing positions like a team sport — these are the four dimensions a trial coach can actually see. Strong applicants show at least two of them clearly rather than one spectacular high game.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why bowling?" },
+          subtext: {
+            en: "The panel wants a specific reason this sport, not a generic love of sport. \"It's fun\" reads as weak motivation.",
+          },
+          approach: {
+            en: "Open with one concrete moment, then connect it to what bowling demands of you.",
+          },
+          template: {
+            en: "I liked that bowling is on me alone — when I converted my first 10-pin spare to win a frame, I knew it was my adjustment, not luck, that did it.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the bowling program, or are they applying everywhere?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's bowling — an NSG result, a training pattern, a coach.",
+          },
+          template: {
+            en: "Your bowling team has a strong NSG record and trains DSA candidates alongside the competition squad — I want that standard from Sec 1.",
+          },
+        },
+        {
+          question: { en: "What part of your game is strongest, and what are you working on?" },
+          subtext: {
+            en: "Can the player assess themselves honestly instead of claiming everything is good?",
+          },
+          approach: {
+            en: "Name one real strength and one real weakness, with what you're doing about the weakness.",
+          },
+          template: {
+            en: "My spare shooting is consistent, but my speed control wobbles when I get nervous — so I've added a fixed pre-shot breath to steady my tempo.",
+          },
+        },
+        {
+          question: { en: "What do you do when your ball stops hitting the pocket mid-game?" },
+          subtext: {
+            en: "Tests whether the player understands lane changes or just throws the same shot harder.",
+          },
+          approach: {
+            en: "Show that you read the ball reaction and adjust, rather than blaming the lane.",
+          },
+          template: {
+            en: "If it starts hooking early I move my feet a couple of boards left and keep the same target — usually the oil has moved, not my swing.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a setback." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation → action → result, in two sentences.",
+          },
+          template: {
+            en: "I bowled an open frame in the last frame of a tournament and dropped two places. I started keeping a spare log after every session and converted far more single pins by the next meet.",
+          },
+        },
+        {
+          question: { en: "How will you balance frequent training with schoolwork?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I finish Math and English homework before training on weekdays and keep Sunday mornings for revision — bowling is evenings, so it doesn't eat my study time.",
+          },
+        },
+        {
+          question: { en: "If two schools both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school — the way your coach builds spare consistency matches how I want to improve. If the other school called first I'd still wait for your reply.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent) (Secondary)",
+          talentArea: { en: "Bowling, DSA-Sec" },
+          context: {
+            en: "Lists bowling among its DSA talent areas. All bowling applicants attend a talent selection trial.",
+          },
+        },
+        {
+          name: "Anglo-Chinese School (Barker Road)",
+          talentArea: { en: "Bowling, DSA-Sec" },
+          context: {
+            en: "Offers bowling under DSA-Sec. Trial-based selection for all applicants.",
+          },
+        },
+        {
+          name: "Methodist Girls' School (Secondary)",
+          talentArea: { en: "Bowling (Girls), DSA-Sec" },
+          context: {
+            en: "Girls' school offering bowling as a DSA talent area through a selection trial.",
+          },
+        },
+        {
+          name: "Tanjong Katong Girls' School",
+          talentArea: { en: "Bowling (Girls), DSA-Sec" },
+          context: {
+            en: "Lists bowling among its DSA-Sec talent areas. Applicants attend a trial.",
+          },
+        },
+        {
+          name: "Maris Stella High School (Secondary)",
+          talentArea: { en: "Bowling (Boys), DSA-Sec" },
+          context: {
+            en: "SAP boys' school offering bowling under DSA-Sec. Chinese Language or Higher Chinese applies as a SAP school.",
+          },
+        },
+        {
+          name: "CHIJ Katong Convent",
+          talentArea: { en: "Bowling (Girls), DSA-Sec" },
+          context: {
+            en: "Girls' school offering bowling as a DSA talent area via selection trial.",
+          },
+        },
+        {
+          name: "CHIJ Secondary (Toa Payoh)",
+          talentArea: { en: "Bowling (Girls), DSA-Sec" },
+          context: {
+            en: "Lists bowling among its DSA-Sec talent areas. Trial-based selection.",
+          },
+        },
+        {
+          name: "Hai Sing Catholic School",
+          talentArea: { en: "Bowling, DSA-Sec" },
+          context: {
+            en: "Offers bowling as a DSA talent area through a talent selection trial.",
+          },
+        },
+        {
+          name: "St. Margaret's School (Secondary)",
+          talentArea: { en: "Bowling (Girls), DSA-Sec" },
+          context: {
+            en: "Girls' school offering bowling under DSA-Sec via selection trial.",
+          },
+        },
+        {
+          name: "Swiss Cottage Secondary School",
+          talentArea: { en: "Bowling, DSA-Sec" },
+          context: {
+            en: "Lists bowling among its DSA-Sec talent areas. All applicants attend a trial.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Keep a spare log for two weeks. After each session, write down which single-pin and corner-pin spares your child missed. Spares — not strikes — are what separate trial scores, and a written log turns a vague \"I keep missing the 10-pin\" into a fixable pattern. Bring the improvement, not the excuse.",
+            },
+            {
+              en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and competition results, and NAPFA data from the primary school directly into the DSA portal. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged.",
+            },
+            {
+              en: "Run a mock interview using the questions above, especially \"Why bowling?\" and \"What do you do when your ball stops hitting the pocket?\" Record on phone, watch back together. Flag any answer that ran over thirty seconds or used the word \"passionate.\" Both kill the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop volume, keep the routine. Fewer games, but every shot with the full pre-shot routine. Bowling rewards groove, not grind — a tired arm in the final week changes timing and undoes weeks of consistency.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue, whether the child brings their own ball and shoes or uses house equipment. Email the teacher-in-charge if anything is ambiguous — the email itself is a data point on parent attentiveness.",
+            },
+            {
+              en: "Bowl one session at an unfamiliar alley if you can. Trials are often on lanes and oil patterns the child has never seen — practising adjustment on a strange lane is worth more in the final week than another high game at the home alley.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Arrive early enough to warm up the swing, not cold. A few practice frames to find the line beat rushing in and bowling the first real frame cold.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no real prep — there are still real moves. Stop chasing strikes and drill single-pin spares, because spare conversion is the fastest score gain available in a short window. Cancel anything that competes with sleep. Spend the freed time on interview prep above, especially \"Why bowling?\", because that's the only part where a few hours of work can still meaningfully change the outcome. Some families bring in a private coach at this stage to compress the learning curve. A good coach can fix one specific habit — a drifting approach, an inconsistent release — but no coach builds, in three sessions, the lane-reading instinct of a year on the lanes. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  "cross-country": {
+    slug: "cross-country",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Cross Country", zh: "越野跑", ms: "Lari Desa", ta: "குறுக்கு நாட்டு ஓட்டம்" },
+    hook: {
+      en: "Cross Country DSA — the team's fifth runner matters as much as the first.",
+      zh: "越野跑 DSA——团队第五名和第一名一样重要",
+      ms: "DSA Lari Desa — pelari kelima pasukan sama penting dengan yang pertama.",
+      ta: "குறுக்கு நாட்டு ஓட்ட DSA — அணியின் ஐந்தாவது ஓட்டக்காரர் முதலாமவர் அளவுக்கு முக்கியம்",
+    },
+    intro: {
+      en: "Cross country is not track moved onto grass. It scores by team depth, runs over hills and trails, and rewards pacing judgement over raw speed. Here's what trials and interviews actually check.",
+      zh: "越野跑不是把田径搬到草地上。它按团队整体计分，跑在山坡和野道上，看重配速判断而非纯速度。这里讲 trial 和面试真正考什么。",
+      ms: "Lari desa bukan olahraga trek di atas rumput. Ia dimarkah ikut kedalaman pasukan, berlari di bukit dan denai, dan menghargai pertimbangan rentak berbanding kelajuan semata. Ini yang trial dan temu duga sebenarnya nilai.",
+      ta: "குறுக்கு நாட்டு ஓட்டம் என்பது புல்வெளியில் நகர்த்தப்பட்ட தடகளம் அல்ல. இது அணியின் ஆழத்தால் மதிப்பெண் பெறுகிறது, மலைகள் மற்றும் பாதைகளில் ஓடுகிறது, வேகத்தை விட வேக நிர்வாகத் தீர்மானத்திற்கு மதிப்பளிக்கிறது. சோதனைகளும் நேர்காணல்களும் உண்மையில் என்ன பார்க்கின்றன என்பது இங்கே.",
+    },
+    summary: {
+      en: "Endurance vs track, team scoring, terrain & pacing, trial dimensions, interview questions, participating schools.",
+      zh: "耐力与田径之别、团队计分、地形与配速、trial 维度、面试题、招生学校。",
+      ms: "Daya tahan lwn trek, pemarkahan pasukan, rupa bumi & rentak, dimensi trial, soalan temu duga, sekolah.",
+      ta: "சகிப்புத்தன்மை vs தடகளம், அணி மதிப்பெண், நிலப்பரப்பு & வேகம், சோதனை பரிமாணங்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Anglo-Chinese School (Independent)",
+      "Hwa Chong Institution",
+      "Raffles Institution",
+      "National Junior College",
+      "Nan Hua High School",
+      "St. Joseph's Institution",
+    ],
+    metaDescription: {
+      en: "Cross Country DSA-Sec guide for Singapore P6 — how it differs from track, NSG team scoring, trial dimensions, interview questions, participating secondary schools.",
+      zh: "新加坡越野跑 DSA-Sec 指南——与田径的区别、NSG 团队计分、trial 维度、面试题、招生中学。",
+      ms: "Panduan DSA-Sec Lari Desa Singapura — beza dengan trek, pemarkahan pasukan NSG, dimensi trial, soalan, sekolah menengah.",
+      ta: "சிங்கப்பூர் குறுக்கு நாட்டு ஓட்ட DSA-Sec வழிகாட்டி — தடகளத்திலிருந்து வேறுபாடு, NSG அணி மதிப்பெண், சோதனை பரிமாணங்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Cross country sits next to track and field on a results sheet but recruits on a different logic. NSG cross country runs in A, B, and C Divisions for both boys and girls over off-road courses — the B and A Division Boys race roughly 4.75km and the C Division Boys plus all Girls divisions race roughly 3.80km, over open ground, slopes, and trail rather than a synthetic 400m oval. Crucially, NSG cross country is scored as a team event: each runner earns points equal to their finishing position, the top finishers from each school are added up, and the lowest team total wins. That single rule reshapes what schools recruit for. A track 1500m programme can be built around one or two exceptional individuals; a cross country squad needs a compressed pack of five-to-seven runners finishing close together, because the team's fifth scorer often decides the result more than its first. Schools therefore weight aerobic durability, pack-running maturity, and pacing judgement on undulating terrain — not just a fast flat time. There are no published national cut-off times; each school runs its own trial and, per MOE guidance, may assess and offer candidates without prior competitive experience if the trial and interview show potential. Below, the dimensions are what coaches watch on the day; the focus section breaks the role down by the qualities that distinguish a cross country runner from a track distance runner.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Aerobic durability over the trial distance, not flat-track speed" },
+          body: {
+            en: "Cross country trials typically involve a timed run over a grass, trail, or park-connector loop rather than a track time. Coaches are reading whether the candidate can hold honest effort over a sustained distance on uneven ground — the back half of the run tells them more than the first kilometre. A candidate with a modest 2.4km time but a steady, controlled finish over rough terrain frequently reads stronger than a faster track runner who fades the moment the surface turns to grass and incline.",
+          },
+        },
+        {
+          label: { en: "Pacing judgement on undulating terrain" },
+          body: {
+            en: "Unlike a track race, a cross country course does not reward a single even pace — hills, soft ground, and tight turns mean effort must be redistributed, not split evenly. Coaches watch whether the candidate eases the legs on the climbs and presses on the descents and flats, or whether they run the whole loop at one undifferentiated speed and blow up on the first slope. Pacing maturity at P6 is a strong signal the runner already understands the sport rather than just running hard.",
+          },
+        },
+        {
+          label: { en: "Hill and terrain technique" },
+          body: {
+            en: "Off-road running is a skill: shortening the stride and driving the arms uphill, controlling rather than braking downhill, and reading footing on grass, mud, or wood-chip. Coaches log whether the candidate looks comfortable when the surface stops being flat and predictable. This is the clearest live difference between a track-only runner and a true cross country prospect, and it is often what separates two candidates with similar timed results.",
+          },
+        },
+        {
+          label: { en: "Pack-running awareness and team-scoring sense" },
+          body: {
+            en: "Because NSG cross country is scored by team position, coaches value runners who understand how to work within a pack — sitting on a competitor's shoulder, moving up as a group, and racing positions rather than only the clock. A candidate who can articulate that their job might be to be the team's reliable fourth or fifth scorer, not necessarily the front-runner, shows a grasp of the sport that pure individualists lack.",
+          },
+        },
+        {
+          label: { en: "Mental resilience and finish under fatigue" },
+          body: {
+            en: "Cross country is an endurance event run largely alone in discomfort, far from a cheering home straight. Coaches watch the last 400 to 600 metres closely: does the candidate hold form and push when it hurts, or visibly give up positions once the effort bites? Willingness to suffer and keep racing for places — even outside medal contention — is a core cross country trait and reads clearly on the day.",
+          },
+        },
+        {
+          label: { en: "Training consistency and recovery habits" },
+          body: {
+            en: "Endurance is built over years of steady mileage, so coaches probe training history and recovery behaviour. They notice whether the candidate recovers deliberately after the timed effort, hydrates without being told, and can describe a realistic weekly run pattern. The four-year improvement curve in distance running is reliably steep, so a candidate with consistent base mileage and sensible habits is often recruited ahead of a faster but lightly-trained runner.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Pacing strategy — the cross country runner's core skill" },
+          body: {
+            en: "Where a track distance runner can rehearse near-even lap splits, the cross country runner must judge effort against terrain in real time. The dimension coaches probe is whether the candidate runs by perceived effort and position rather than by a fixed pace — going out controlled, conserving on climbs, and committing on the final descent and flat. A candidate who can explain how they would pace a hilly 3.8km loop differently from a flat 2.4km run signals genuine cross country literacy. At interview, be ready to describe a pacing plan for a specific course profile, not a single goal time: \"I'd hold back on the first hill and use the downhill after halfway to move up\" reads far stronger than \"I'd aim to run X minutes.\"",
+          },
+        },
+        {
+          position: { en: "Hill & terrain adaptation" },
+          body: {
+            en: "This is the role quality that most sharply separates cross country from track. The focus is technical comfort off the oval: uphill form, downhill control, footing on grass and trail, and the calf and ankle strength that uneven ground demands. A track-fast runner who has only ever raced on synthetic surface is a project; a runner who already looks at home on slopes and soft ground is closer to being a contributing squad member from Sec 1. If the candidate trains on park connectors, MacRitchie-style trails, or hilly routes rather than only the track, say so — terrain exposure is a concrete, verifiable advantage coaches value.",
+          },
+        },
+        {
+          position: { en: "Team scoring role — knowing your job in the pack" },
+          body: {
+            en: "Cross country's team-position scoring means every squad needs not just a star but a tight, reliable scoring pack. The focus here is whether the candidate understands team racing: closing gaps to the runner ahead, not letting a rival slip a place, and valuing being a dependable third-to-fifth scorer. This collective mindset is largely absent from individual track events and is something cross country coaches actively recruit for. A candidate who says \"I want to be the runner the team can count on to never finish low\" shows they understand how cross country is actually won.",
+          },
+        },
+        {
+          position: { en: "Mental resilience — racing places when it hurts" },
+          body: {
+            en: "The defining cross country quality is the willingness to keep racing for positions deep into an endurance effort, alone and uncomfortable, with no finishing straight crowd. The focus is competitive grit under sustained fatigue: holding form in the last kilometre, chasing down one more place, and treating every position as points for the team. Coaches weight this heavily because it cannot be coached quickly and it directly affects team score. A concrete story — \"I was overtaken near the end but fought back to take one place because I knew it mattered for the team\" — demonstrates this far better than claiming to be \"mentally strong.\"",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Cross country is not assessed by playing position — these four are the qualities coaches read in a runner. The strongest candidates show terrain comfort and pacing judgement, not just a fast flat time, and can talk about their role in the team's scoring pack.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why cross country, and not track?" },
+          subtext: {
+            en: "Panels want a candidate who chose the sport for what it is — endurance, terrain, team scoring — not one who landed in it by default.",
+          },
+          approach: {
+            en: "Name a specific thing about cross country that track doesn't offer: the terrain, the team-scoring dynamic, or the endurance challenge. Tie it to a real moment.",
+          },
+          template: {
+            en: "I tried the 1500m on track, but what hooked me was my first cross country race over the hills at our school field. On the track you only race the clock; in cross country I was racing the runners around me and the course itself, and my time still counted for the team. That mix of endurance and teamwork is why I picked it.",
+          },
+        },
+        {
+          question: { en: "Cross country and track distance both came up — how would you choose between them?" },
+          subtext: {
+            en: "Tests whether the candidate actually understands the difference between the two sports rather than treating them as interchangeable.",
+          },
+          approach: {
+            en: "Show you understand the real distinctions — terrain, pacing, team scoring, endurance versus speed — and then make a clear choice with a reason.",
+          },
+          template: {
+            en: "They overlap in fitness but they're different sports. Track distance rewards even pacing and a fast finish on a flat oval; cross country is about endurance over hills and trails, judging effort by terrain, and scoring as a team. I'm choosing cross country because I'm stronger over longer, rougher ground than over a fast flat lap, and I like that my place helps the whole squad's score.",
+          },
+        },
+        {
+          question: { en: "Cross country is scored as a team — what does that change about how you race?" },
+          subtext: {
+            en: "Checks whether the candidate grasps team-position scoring, the single most distinctive feature of the sport.",
+          },
+          approach: {
+            en: "Explain that team scoring sums finishing positions and the lowest total wins, then say what that means for how you run.",
+          },
+          template: {
+            en: "In cross country the team score is the sum of our finishing positions, so every place counts and the lowest total wins. That means I can't ease off just because I'm not winning — if I move from twelfth to tenth, that's two points saved for the team. So I race every position to the line, even when a medal is out of reach.",
+          },
+        },
+        {
+          question: { en: "Walk us through how you'd pace a hilly course." },
+          subtext: {
+            en: "Tests terrain-specific pacing judgement, the core skill that separates cross country from track.",
+          },
+          approach: {
+            en: "Describe redistributing effort by terrain rather than holding one pace — controlled start, easing on climbs, pressing on descents and flats.",
+          },
+          template: {
+            en: "I wouldn't run one fixed pace. I'd start controlled so I'm not in oxygen debt at the first hill, shorten my stride and use my arms going up, then control the downhill without slamming the brakes and use the flats after halfway to move up. I'd save a real push for the last few hundred metres to take any places I can.",
+          },
+        },
+        {
+          question: { en: "Tell us about a race that went badly." },
+          subtext: {
+            en: "Tests resilience and self-awareness; schools are wary of candidates who only present clean wins.",
+          },
+          approach: {
+            en: "Situation → specific cause → specific change → result. A genuine setback reads more honestly than a polished story.",
+          },
+          template: {
+            en: "At a school cross country race I went out too fast with the lead group and died on the second hill, dropping from fourth to eleventh. I rebuilt my plan with my coach — hold back for the first kilometre and trust my endurance to come back at people late. At the next race I started ninth and finished fifth by passing runners in the last loop. Pacing isn't optional in this sport.",
+          },
+        },
+        {
+          question: { en: "Why our school?" },
+          subtext: {
+            en: "Did the family research the cross country programme, or is this a scatter-shot application?",
+          },
+          approach: {
+            en: "Cite something specific — the squad's NSG results, the coach's training approach, the terrain the team trains on, or the strength of the scoring pack.",
+          },
+          template: {
+            en: "Your cross country squad has consistent depth at NSG, not just one fast runner — your fourth and fifth scorers finish close to your first, which is how teams actually win cross country. The way your coach builds base mileage before sharpening speed matches how I think I'll improve over four years. I want to earn a place in that scoring pack by Sec 3.",
+          },
+        },
+        {
+          question: { en: "How will you balance morning training with schoolwork?" },
+          subtext: {
+            en: "Distance training is high-volume and often early; schools fear runners whose grades slide by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real, specific weekly schedule rather than a vague promise to manage time.",
+          },
+          template: {
+            en: "I run before school three mornings a week and do a longer run on Saturday. I finish my homework before evening so I'm not doing it tired after a run, and I use the bus ride for revision. Sunday is recovery — light or rest — because in distance running rest is part of the training, not time off from it.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent) (Secondary)",
+          talentArea: { en: "Cross Country (Boys), IP" },
+          context: {
+            en: "Cross country is among ACS(I)'s DSA-Sec talent areas, with strong NSG distance-running heritage across divisions. Runs DSA candidates alongside the competition squad during trial windows.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution (Secondary)",
+          talentArea: { en: "Cross Country (Boys), IP" },
+          context: {
+            en: "Cross country is a listed DSA talent area at HCI with consistent NSG presence across A, B, and C Divisions. The school's stated position is that applicants without national-meet experience may still apply if the trial and interview support the case.",
+          },
+        },
+        {
+          name: "Raffles Institution (Secondary)",
+          talentArea: { en: "Cross Country (Boys), IP" },
+          context: {
+            en: "Cross country is listed under RI's DSA talent areas. Long-standing distance-running programme that weights training history, pacing judgement, and race psychology at interview.",
+          },
+        },
+        {
+          name: "National Junior College (Secondary)",
+          talentArea: { en: "Cross Country, IP" },
+          context: {
+            en: "Cross country is among NJC's DSA-Sec talent areas. Strong cross country and distance tradition with structured trial and interview; a key IP route for endurance runners.",
+          },
+        },
+        {
+          name: "St. Joseph's Institution",
+          talentArea: { en: "Cross Country (Boys)" },
+          context: {
+            en: "Cross country sits among SJI's long-standing sports programmes and is listed under DSA-Sec talent areas. One of the more accessible non-IP routes for distance runners.",
+          },
+        },
+        {
+          name: "Nan Hua High School",
+          talentArea: { en: "Cross Country" },
+          context: {
+            en: "Cross country is listed under Nan Hua's DSA-Sec talent areas. SAP school — Higher Chinese or Chinese Language requirement applies. Consistent zonal and NSG distance-running participation.",
+          },
+        },
+        {
+          name: "Commonwealth Secondary School",
+          talentArea: { en: "Cross Country" },
+          context: {
+            en: "Cross country is among Commonwealth Secondary's DSA-Sec talent areas. A neighbourhood-school route with structured trial and interview for endurance runners.",
+          },
+        },
+        {
+          name: "Gan Eng Seng School",
+          talentArea: { en: "Cross Country" },
+          context: {
+            en: "Cross country is listed under Gan Eng Seng School's DSA-Sec talent areas. Accessible route for runners with a consistent training base rather than only top times.",
+          },
+        },
+        {
+          name: "Evergreen Secondary School",
+          talentArea: { en: "Cross Country" },
+          context: {
+            en: "Cross country is among Evergreen Secondary's DSA-Sec talent areas, with the school running its own trial and interview. A neighbourhood-school pathway for endurance-oriented applicants.",
+          },
+        },
+        {
+          name: "Guangyang Secondary School",
+          talentArea: { en: "Cross Country" },
+          context: {
+            en: "Cross country is listed under Guangyang Secondary's DSA-Sec talent areas. Recruits on training consistency and potential as well as competition results.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Compile the candidate's cross country and distance results — NSG cross country, zonal cross country, school distance races, and any SAA-ranked road or 2.4km/3000m times — with meet name, date, course, and finishing position (positions matter in a team-scored sport, not just times). Confirm these are accurately logged on the primary school's DSA portal entry, as MOE pulls records directly.",
+            },
+            {
+              en: "Build, or verify, a base of off-road running. If the candidate has only ever trained on a track or treadmill, get them onto grass fields, park connectors, and hilly routes now — terrain comfort is a live trial signal and cannot be faked on the day.",
+            },
+            {
+              en: "Run a mock interview using the questions above, recording it on a phone. Watch the first 30 seconds back and flag any answer that confuses cross country with track or that leans on \"I'm passionate about running.\" The strongest candidates can explain team scoring and terrain pacing in their own words.",
+            },
+            {
+              en: "Time one honest run over a hilly or trail loop and review pacing together, with one thing to work on — usually starting too fast or running the whole loop at one undifferentiated effort. Coming to interview with a current working-on item reads as professional.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop volume and keep only short, easy runs with a few light strides. No new long runs, no extra time trial, no sudden hill sessions. Final-week added mileage rarely helps and frequently produces a calf or shin niggle that ends the trial before it starts.",
+            },
+            {
+              en: "Confirm logistics in writing: trial date, time, venue (field, park, or course name and address), attire (school PE kit or all-white per school policy), and what to bring — trail-suitable running shoes, water, a snack, a towel, and a race number if issued. Email the teacher-in-charge if anything is ambiguous.",
+            },
+            {
+              en: "Check footwear against the likely surface. Worn-flat soles on wet grass are a self-inflicted handicap; the candidate should run the trial in shoes already broken in on similar terrain, never a brand-new pair.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat a real meal with complex carbs about 90 minutes before. Endurance effort late in the run is sensitive to blood sugar, and an empty stomach by the back half of the course is a self-inflicted handicap.",
+            },
+            {
+              en: "Warm up properly — easy jogging, dynamic stretching, and a few strides over the trial surface so the legs and ankles are ready for uneven ground. Cold-starting an endurance run on grass or trail invites a strain in the first hundred metres.",
+            },
+            {
+              en: "Drop off, don't hover. Greet the teacher-in-charge if you meet them, then leave. Over-involved parents on the course edge are visible and the candidate absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours. Replaying placings and split times between trial and offer is corrosive at any age.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no clear plan — there are still real moves, but be honest about what a few weeks can and cannot do. Endurance is built over months and years; it cannot be manufactured in the final fortnight, and trying to cram mileage now mostly buys injury. So cut all new training load and protect the fitness already in the legs. Narrow the work to three low-risk, high-signal things: easy runs over the kind of terrain the trial will use so the body remembers off-road footing, a couple of short pacing rehearsals on a hilly loop so the candidate practises starting controlled and finishing strong, and a repeatable warm-up routine that holds up under nerves. Protect sleep above all — recovery is where endurance fitness actually consolidates. Spend the freed-up time on the interview prep above, because for a team-scored sport the interview is where a candidate can still move the needle quickly: a clear answer on pacing, terrain, and team scoring shows coaches a runner who understands the sport, even if the timed result is only solid rather than spectacular. A private coach at this stage can refine pacing cues and steady nerves, but no one builds a year of aerobic base in three sessions. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  canoeing: {
+    slug: "canoeing",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Canoeing", zh: "皮划艇", ms: "Berkanu", ta: "படகோட்டம் (கனோயிங்)" },
+    hook: {
+      en: "Canoeing DSA — many schools select on MOE portal records, not a trial day, so documented NSG times and SCF awards carry the application.",
+      zh: "皮划艇 DSA——不少学校用 MOE 系统记录选才，没有 trial 当天，NSG 成绩和 SCF 星级证书才是申请的分量",
+      ms: "DSA Berkanu — banyak sekolah memilih berdasarkan rekod portal MOE, bukan hari trial, jadi masa NSG dan anugerah SCF yang membawa permohonan.",
+      ta: "படகோட்டம் DSA — பல பள்ளிகள் சோதனை நாளை அல்ல, MOE போர்ட்டல் பதிவுகளை வைத்தே தேர்வு செய்கின்றன, எனவே NSG நேரங்களும் SCF விருதுகளுமே விண்ணப்பத்தை சுமக்கின்றன",
+    },
+    intro: {
+      en: "Canoeing (sprint kayak/canoe) is unusual among DSA sports: for Canoeing, International Chess, Sailing and Swimming, many schools — including ACS(I) — do not conduct selection trials, and records from the MOE DSA-Sec Portal are used for consideration instead. That makes documented evidence the centre of the application: National School Games (NSG) sprint results (K1/K2/K4 over 500m and 1000m, raced at MacRitchie Reservoir), Singapore Canoe Federation (SCF) Star Award proficiency (1-Star and above), and the candidate's competition and time-trial history. Where a school does assess in person, it is typically through an ergometer (paddle erg) test plus a short on-water session — many CCA programmes use ergometers and kayak simulators rather than a competitive trial. So the right preparation is not a single trial day; it is a verifiable record of paddling speed, endurance, and water competence.",
+      zh: "皮划艇（sprint kayak/canoe）在 DSA 运动里很特别：皮划艇、国际象棋、帆船、游泳这几项，不少学校（包括 ACS(I)）不设选拔 trial，改用 MOE DSA-Sec 系统里的记录来考量。所以申请的核心是可查的证据：National School Games（NSG）短距离成绩（K1/K2/K4，500 米和 1000 米，在麦里芝蓄水池比赛）、新加坡皮划艇联合会（SCF）星级证书（1 星及以上）、以及参赛和计时记录。少数会当面评估的学校，通常是测功仪（paddle erg）加一小段水上观察——很多 CCA 用测功仪和模拟器，而不是竞争性 trial。因此真正的准备不是某一天的 trial，而是一份能被核查的速度、耐力、水感记录。",
+      ms: "Berkanu (kayak/kanu pecut) luar biasa antara sukan DSA: untuk Berkanu, Catur Antarabangsa, Pelayaran dan Renang, banyak sekolah — termasuk ACS(I) — tidak menjalankan trial pemilihan, dan rekod dari Portal DSA-Sec MOE digunakan sebagai pertimbangan. Maka bukti berdokumen menjadi teras permohonan: keputusan pecut National School Games (NSG) (K1/K2/K4 jarak 500m dan 1000m di Takungan MacRitchie), Anugerah Bintang SCF (1-Bintang ke atas), dan rekod pertandingan serta ujian masa. Di sekolah yang menilai secara bersemuka, biasanya melalui ujian ergometer (erg pendayung) dan sesi pendek di atas air.",
+      ta: "படகோட்டம் (sprint kayak/canoe) DSA விளையாட்டுகளில் வித்தியாசமானது: படகோட்டம், சர்வதேச சதுரங்கம், படகோட்டம் (sailing), நீச்சல் ஆகியவற்றுக்கு பல பள்ளிகள் — ACS(I) உட்பட — தேர்வுச் சோதனை நடத்துவதில்லை, அதற்குப் பதிலாக MOE DSA-Sec போர்ட்டல் பதிவுகளே கருதப்படுகின்றன. எனவே ஆவணப்படுத்தப்பட்ட சான்றுகளே விண்ணப்பத்தின் மையம்: National School Games (NSG) sprint முடிவுகள் (K1/K2/K4, 500மீ மற்றும் 1000மீ, MacRitchie நீர்த்தேக்கத்தில்), Singapore Canoe Federation (SCF) ஸ்டார் விருது (1-ஸ்டார் மற்றும் மேல்), மற்றும் போட்டி வரலாறு. நேரில் மதிப்பிடும் பள்ளிகளில் பொதுவாக ஒரு ergometer (paddle erg) சோதனை பயன்படுத்தப்படுகிறது.",
+    },
+    summary: {
+      en: "How portal-record selection works, what canoeing ability schools weigh, sample interview questions, and the secondary schools that offer canoeing DSA.",
+      zh: "系统记录选才怎么运作、学校看重哪些皮划艇能力、面试样题、招生皮划艇 DSA 的中学。",
+      ms: "Cara pemilihan rekod portal, kebolehan berkanu yang dinilai sekolah, soalan temu duga contoh, dan sekolah menengah yang menawarkan DSA berkanu.",
+      ta: "போர்ட்டல் பதிவு தேர்வு எப்படி, பள்ளிகள் எடைபோடும் படகோட்டத் திறன்கள், மாதிரி நேர்காணல் கேள்விகள், படகோட்டம் DSA வழங்கும் பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Anglo-Chinese School (Independent) (Secondary)",
+      "Hwa Chong Institution (Secondary)",
+      "National Junior College (Secondary)",
+      "St. Joseph's Institution (Secondary)",
+      "Crescent Girls' School",
+      "Beatty Secondary School",
+    ],
+    metaDescription: {
+      en: "Canoeing DSA-Sec guide for Singapore P6 — why many schools select on MOE portal records not a trial, NSG sprint and SCF Star Award context, what ability counts, interview questions, participating schools.",
+      zh: "新加坡 P6 皮划艇 DSA-Sec 指南——为何不少学校用 MOE 记录而非 trial 选才、NSG 短距离与 SCF 星级证书说明、看重的能力、面试题、招生学校。",
+      ms: "Panduan DSA-Sec Berkanu Singapura untuk P6 — mengapa banyak sekolah memilih rekod portal MOE bukan trial, konteks pecut NSG dan Anugerah Bintang SCF, kebolehan yang dikira, soalan, sekolah.",
+      ta: "சிங்கப்பூர் P6 படகோட்டம் DSA-Sec வழிகாட்டி — பல பள்ளிகள் ஏன் MOE பதிவுகளை வைத்து தேர்வு செய்கின்றன, NSG sprint மற்றும் SCF விருது, தேவையான திறன்கள், கேள்விகள், பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Canoeing DSA selection is record-led. For Canoeing (alongside International Chess, Sailing and Swimming), many schools do not run a selection trial — they read the MOE DSA-Sec Portal: CCA records, school awards, NSG sprint results, and any SCF Star Award proficiency. Where a school does assess in person, the standard tools are an ergometer (paddle erg) test for power and aerobic output plus a short on-water session for technique and balance; several CCA programmes deliberately use ergometers and kayak simulators rather than a competitive trial. The six dimensions below are the objective canoeing abilities those records and any in-person check are reading for — derived from the Singapore Schools Sports Council canoeing rules, the national canoe-academy time-trial framework, and SCF Star Award course content. There is no published school-specific rubric for canoeing, and we do not invent one.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Sprint speed over the race distances (K1, 200m–1000m)" },
+          body: {
+            en: "The headline signal. NSG sprint canoeing is raced over set distances — K1/K2/K4 at 500m and 1000m at MacRitchie Reservoir, with shorter sprints at junior level. A documented competitive time over a standard distance is the cleanest evidence a school can read from the portal. The national canoe-academy pathway publishes reference times, so a candidate with a logged, ranked race result has already cleared the highest-value box.",
+          },
+        },
+        {
+          label: { en: "Ergometer power and aerobic engine" },
+          body: {
+            en: "Where a school assesses in person, the paddle ergometer is the default tool — it isolates pulling power and aerobic capacity without the noise of water conditions or boat handling. It is also how many CCA programmes screen newcomers. A strong, repeatable erg score signals the trainable engine a four-year sprint programme is built on, and unlike a race result it cannot be inflated by a favourable lane or current.",
+          },
+        },
+        {
+          label: { en: "Core strength and the pulling stroke" },
+          body: {
+            en: "Sprint paddling power comes from the torso and legs rotating through the stroke, not from the arms. Coaches reading a candidate — on the erg or on water — look for trunk rotation, leg drive, and a catch that locks the blade early in the water. A P6 who pulls with the arms alone has a lower ceiling than one with weaker arms but a rotational stroke, because rotation is the part that scales with strength training over four years.",
+          },
+        },
+        {
+          label: { en: "Aerobic endurance and pacing" },
+          body: {
+            en: "The 1000m event is an endurance sprint: the paddler who fades in the back half loses places that a faster start cannot recover. Schools value a candidate who can hold stroke rate and power over a full distance and who paces rather than blows up early. A logged time over the full race distance — not just a fast 200m — is the stronger endurance signal in the portal record.",
+          },
+        },
+        {
+          label: { en: "Balance and water feel" },
+          body: {
+            en: "Sprint kayaks are narrow and tippy; staying upright at speed and in another boat's wash is a skill that only accumulates with water hours. SCF Star Award proficiency (1-Star and above is the baseline for competitive paddling) documents this water competence directly. In any on-water check, a candidate who is relaxed and balanced at racing cadence scores above one who is faster but unstable, because instability caps the speed they can ever safely hold.",
+          },
+        },
+        {
+          label: { en: "Technical efficiency — stroke per metre" },
+          body: {
+            en: "Two paddlers with the same fitness finish far apart if one wastes effort. Coaches read stroke length, clean entry and exit, run between strokes (boat glide), and minimal splash. Efficiency is the dimension that separates a strong athlete from a fast paddler, and it is the clearest tell of accumulated coached water hours — which is exactly what a school recruiting for a four-year sprint squad is buying.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Sprint kayak — K1 (single)" },
+          body: {
+            en: "The individual benchmark event and the cleanest record for the portal. K1 strips away crew effects, so a ranked K1 time is read as the candidate's own speed, endurance, and technique. A documented K1 result over a standard NSG distance (500m or 1000m) is the single most useful line in a canoeing DSA application.",
+          },
+        },
+        {
+          position: { en: "Crew boats — K2 / K4 (double and four)" },
+          body: {
+            en: "Team sprint events where timing and synchronisation with crewmates matter as much as raw power. A strong K2/K4 result shows a candidate can match cadence and contribute to boat run, but schools read it alongside an individual time because crew results can be carried by a stronger partner. Mention both your K1 and crew results so the school can separate individual speed from crew effect.",
+          },
+        },
+        {
+          position: { en: "Ergometer and land fitness" },
+          body: {
+            en: "Not a race position but a distinct assessment dimension — and the one a school is most likely to test directly if it assesses at all. A strong paddle-erg score plus general land conditioning (core, pulling strength) is the trainable base coaches recruit for. List any erg benchmarks alongside on-water times; an erg number is hard evidence that survives whatever the water conditions were on race day.",
+          },
+        },
+        {
+          position: { en: "Water feel, balance and technical efficiency" },
+          body: {
+            en: "The competence layer that SCF Star Award proficiency documents and that any on-water check reads first. A candidate who is stable, efficient, and relaxed at racing cadence has a higher ceiling than a raw-fit candidate who fights the boat. This is the dimension that takes the longest to build, so evidence of accumulated coached water hours (Star Award level, club training history) carries real weight.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Canoeing DSA does not assess by playing position the way a team sport does — it reads dimensions. The four above (K1, crew boats, ergometer/land fitness, water feel/efficiency) are the angles a school weighs from your portal record and any in-person check. Because many schools select on records rather than a trial, the practical priority is to have all four documented: a ranked K1 time, a crew result, an erg benchmark if you have one, and SCF Star Award proficiency. Where there is no in-person assessment, these records are the entire case.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why canoeing?" },
+          subtext: {
+            en: "Panels want a specific reason, not \"I like the water.\" Canoeing is hard, repetitive, and early-morning — they want to know you chose it knowingly.",
+          },
+          approach: {
+            en: "Open with one concrete moment — a race, a time you broke, a training morning — then connect it to character.",
+          },
+          template: {
+            en: "I started canoeing because my cousin paddled and I thought it looked easy. My first 200m time trial wrecked me — I finished last. I went back every weekend until I cut 40 seconds off it. Canoeing taught me that the boring repeated mornings are what actually move the time.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research this school's canoeing programme, or is the application generic?",
+          },
+          approach: {
+            en: "Cite one specific thing — the CCA's NSG record, training venue, or a coach — and tie it to your goal.",
+          },
+          template: {
+            en: "Your canoeing CCA has been NSG-active for years and trains on the reservoir twice a week. I want that volume from Sec 1 because my K1 1000m time has plateaued and I need a programme that pushes endurance, not just sprints.",
+          },
+        },
+        {
+          question: { en: "Walk us through your training week." },
+          subtext: {
+            en: "Tests whether the candidate trains seriously and can self-manage — and whether the record matches the routine.",
+          },
+          approach: {
+            en: "Describe a real week: water sessions, land/erg work, and how it fits around school.",
+          },
+          template: {
+            en: "Two water sessions on the reservoir on weekends, erg and core twice a week after school, and I log every time trial. Nearer competitions my coach adds a third water session. I do homework on the bus to and from training so the schedule holds.",
+          },
+        },
+        {
+          question: { en: "What's your best time, and what's holding it back?" },
+          subtext: {
+            en: "Can the candidate talk about their own performance honestly and analytically, not just quote a number?",
+          },
+          approach: {
+            en: "Give the time, the distance, and one specific limiter you're working on.",
+          },
+          template: {
+            en: "My K1 500m is around 2:50. My start is strong but I fade in the last 150m — my stroke rate drops. I'm working on aerobic endurance on the erg and on holding stroke length when I'm tired, because that's where I lose places.",
+          },
+        },
+        {
+          question: { en: "Tell us about a setback in your paddling." },
+          subtext: {
+            en: "Specific actions, not just the feeling. Schools want resilience they can see.",
+          },
+          approach: {
+            en: "Situation → what you did → result, in two or three sentences.",
+          },
+          template: {
+            en: "I capsized at the start of an NSG heat and finished out of the final. I spent the next two months drilling balance and starts until I could hold the boat steady in another paddler's wash. The next season I made the final. The fix was water hours, not luck.",
+          },
+        },
+        {
+          question: { en: "How do you balance training with schoolwork?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not a promise to \"work hard.\"",
+          },
+          template: {
+            en: "Training is fixed in my week, so school has to fit around it. I finish most homework on training days before dinner and keep weekends for the long water sessions and revision on Sunday. My parents check my report book with me each term — that's the rule we agreed before I committed to competitive canoeing.",
+          },
+        },
+        {
+          question: { en: "If two schools both offer you a place, how do you decide?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually enrol.",
+          },
+          approach: {
+            en: "Don't dodge. Name one school and justify it with one specific, canoeing-related reason.",
+          },
+          template: {
+            en: "Honestly, your school — your canoeing CCA trains on the water twice a week and has the NSG record I want to be part of. If another school called first I'd still wait for your reply, because the programme is the reason I applied.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Anglo-Chinese School (Independent) (Secondary)",
+          talentArea: { en: "Canoeing (Boys), IP" },
+          context: {
+            en: "IP school with an established canoeing programme. ACS(I)'s DSA-Sec FAQ states that for Canoeing (with Chess, Sailing and Swimming) the school does not conduct selection trials and uses MOE DSA-Sec Portal records — so documented NSG and SCF evidence is decisive.",
+          },
+        },
+        {
+          name: "Hwa Chong Institution (Secondary)",
+          talentArea: { en: "Canoeing (Boys), IP" },
+          context: {
+            en: "IP school. Canoeing among HCI's published DSA talent areas, with a sustained NSG-active CCA. Selection for canoeing leans on documented competition records.",
+          },
+        },
+        {
+          name: "National Junior College (Secondary)",
+          talentArea: { en: "Canoeing (Boys and Girls), IP" },
+          context: {
+            en: "IP school with a six-year programme. Canoeing among NJC's recognised DSA talent areas; an NSG-active paddling CCA across both divisions.",
+          },
+        },
+        {
+          name: "St. Joseph's Institution (Secondary)",
+          talentArea: { en: "Canoeing (Boys), IP / DSA-Sec" },
+          context: {
+            en: "Lasallian boys' school. Canoeing among SJI's published DSA talent areas. Record-led selection consistent with the canoeing/sailing/swimming/chess pathway.",
+          },
+        },
+        {
+          name: "Crescent Girls' School",
+          talentArea: { en: "Canoeing (Girls), DSA-Sec" },
+          context: {
+            en: "Girls' school with a strong sports culture. Canoeing among Crescent's recognised DSA talent areas; sustained NSG presence in girls' sprint canoeing.",
+          },
+        },
+        {
+          name: "Beatty Secondary School",
+          talentArea: { en: "Canoeing (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "Neighbourhood school with an active, NSG-competitive canoeing CCA. Canoeing among Beatty's recognised DSA talent areas — a strong fit for a paddler with documented results from a non-IP background.",
+          },
+        },
+        {
+          name: "Damai Secondary School",
+          talentArea: { en: "Canoeing (Boys and Girls), DSA-Sec" },
+          context: {
+            en: "Neighbourhood school with canoeing among its recognised DSA talent areas and an NSG-active CCA. Selection reads portal records — NSG times and SCF Star Award proficiency carry the application.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — weeks before the application closes" },
+          items: [
+            {
+              en: "Verify the portal record first — it is the selection. Because many schools do not run a canoeing trial and read the MOE DSA-Sec Portal instead, confirm that CCA participation, school awards, and NSG sprint results (K1/K2/K4 times and placings) are all logged correctly. A missing or wrong time is a missing application, not a missing trial.",
+            },
+            {
+              en: "Confirm SCF Star Award proficiency is documented. 1-Star is the baseline expectation for competitive paddling; 2-Star and above strengthens the water-competence signal. Attach or reference the certificate where the application allows.",
+            },
+            {
+              en: "Get one ranked time over a standard distance if you can. A logged, comparable K1 time (500m or 1000m) is worth more than a stack of training notes. If your child has only crew (K2/K4) results, see whether a K1 time trial can be recorded before the deadline.",
+            },
+            {
+              en: "Run a mock interview using the questions above. Record it on a phone and watch it back together. Flag any answer that runs over thirty seconds or leans on the word \"passionate\" — both weaken the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "If the school does assess in person — final week" },
+          items: [
+            {
+              en: "Sharpen the ergometer, not the body. If the school uses a paddle-erg test, do short technique-focused erg sessions at race rate, then back off. Drop overall intensity to about 70% — final-week heavy loads risk a back or shoulder tweak and rarely raise the score.",
+            },
+            {
+              en: "Keep the boat under you. A few short, easy water sessions to hold balance and feel at racing cadence beat any new heavy training block. The goal in the last week is freshness and water feel, not fitness gains that won't arrive in time.",
+            },
+            {
+              en: "Confirm logistics in writing. Time, venue (reservoir or the school's erg/training space), and kit — quick-dry clothing, water shoes, a change of clothes, sunscreen, water. Email the teacher-in-charge if anything is unclear.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of any assessment" },
+          items: [
+            {
+              en: "Eat about 90 minutes before, not 30, and pack a banana or sandwich for between efforts. Erg-plus-water sessions can run long and energy drops mid-session.",
+            },
+            {
+              en: "Hydrate hard the day before and the morning of. Sun and reservoir heat make dehydration the most underestimated risk for a young paddler.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. A visible parent at the water's edge only adds pressure the child absorbs.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application due, no real prep — start with the part that actually decides canoeing DSA: the record, not a workout. Most schools select on the MOE DSA-Sec Portal, so spend your first hour confirming that NSG times, placings, and CCA participation are logged correctly, and that any SCF Star Award certificate is attached or referenced. A correctly entered time you already own beats any training you could cram now. If a ranked K1 time is missing and a time trial can still be recorded before the deadline, prioritise that over extra mileage. Then put the remaining hours into interview prep above, because that is the only piece a few focused hours can still move. Some families bring in a private coach at this stage; a good one can clean up an erg stroke or a start in a session or two, but no coach builds, in three sessions, the water hours and aerobic base that a logged race time already proves. Treat it as triage, not a fix.",
+      },
+    },
+  },
+  tchoukball: {
+    slug: "tchoukball",
+    contentReadyBy: "2026-06-18",
+    navLabel: { en: "Tchoukball", zh: "巧固球", ms: "Tchoukball", ta: "சுக்பால்" },
+    hook: {
+      en: "Tchoukball DSA — what the trial actually tests.",
+      zh: "巧固球 DSA——trial 到底在看什么",
+      ms: "DSA Tchoukball — apa yang trial sebenarnya nilai.",
+      ta: "சுக்பால் DSA — சோதனை உண்மையில் என்ன சோதிக்கிறது.",
+    },
+    intro: {
+      en: "Tchoukball is a no-contact rebound sport, so trial coaches can't hide behind size or aggression — they watch shooting accuracy, catching under movement, court positioning, and how you read a rebound. We break down what gets a P6 player noticed.",
+      zh: "巧固球是无身体接触的回弹运动，trial 教练无法靠身材或凶悍取胜——他们看投射准度、移动中接球、场上跑位，以及你怎么阅读回弹球。我们拆解让小六球员被注意到的关键。",
+      ms: "Tchoukball ialah sukan lantunan tanpa sentuhan, jadi jurulatih trial menilai ketepatan tembakan, menyambut ketika bergerak, kedudukan di gelanggang, dan cara anda membaca lantunan bola. Kami pecahkan apa yang membuat pemain darjah 6 diperhatikan.",
+      ta: "சுக்பால் என்பது உடல் தொடர்பு இல்லாத மீள்-தெறிப்பு விளையாட்டு, எனவே சோதனை பயிற்சியாளர்கள் ஷூட்டிங் துல்லியம், நகர்வில் பந்தைப் பிடித்தல், மைதான நிலைப்படுத்தல், மீள்தெறிப்பை எவ்வாறு வாசிக்கிறீர்கள் என்பதைப் பார்க்கிறார்கள். ஆறாம் ஆண்டு மாணவர் கவனிக்கப்படுவதற்கான முக்கியக் காரணிகளை விளக்குகிறோம்.",
+    },
+    summary: {
+      en: "Trial criteria, role-specific focus, sample interview questions, participating schools.",
+      zh: "Trial 评分维度、角色专项重点、面试题样、招生学校。",
+      ms: "Kriteria trial, fokus khusus peranan, soalan temu duga contoh, sekolah peserta.",
+      ta: "சோதனை அளவுகோல்கள், பங்கு சார்ந்த கவனம், மாதிரி நேர்காணல் கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
+    },
+    sampleSchools: [
+      "Bedok Green Secondary School",
+      "Bendemeer Secondary School",
+      "Broadrick Secondary School",
+      "Bukit Merah Secondary School",
+      "Fuhua Secondary School",
+      "Jurongville Secondary School",
+    ],
+    metaDescription: {
+      en: "How tchoukball DSA-Sec interviews and trials work in Singapore — what coaches assess, sample questions, and a list of participating secondary schools.",
+      zh: "新加坡巧固球 DSA-Sec 面试与 trial 全解析——教练考察什么、面试样题、招生中学清单。",
+      ms: "Bagaimana temu duga dan trial DSA-Sec tchoukball di Singapura — apa yang jurulatih nilai, soalan contoh, sekolah peserta.",
+      ta: "சிங்கப்பூரில் சுக்பால் DSA-Sec நேர்காணல் மற்றும் சோதனை எவ்வாறு செயல்படுகிறது — பயிற்சியாளர்கள் என்ன மதிப்பிடுகிறார்கள், மாதிரி கேள்விகள், பங்கேற்கும் பள்ளிகள்.",
+    },
+    rich: {
+      trialDimensionsIntro: {
+        en: "Tchoukball is a non-contact invasion-style game: you score by throwing the ball at a sprung rebound frame so it bounces back to the floor before a defender can catch it, with no physical contact and a three-pass, three-step, three-second limit. That ruleset means trials reward control, timing, and reading more than raw athleticism. Singapore schools rarely publish a tchoukball rubric, so the dimensions below are built from the objective demands of the game rather than any school's internal scoresheet — verify each school's exact format on its own DSA page.",
+      },
+      trialDimensions: [
+        {
+          label: { en: "Shooting accuracy and power" },
+          body: {
+            en: "The whole game funnels into the shot at the frame. Coaches watch whether a trialist can place the rebound away from defenders — into open floor or at angles that are hard to catch — and whether they can vary power, not just throw hard. A controlled, well-aimed shot scores higher than a fast one that defenders read easily.",
+          },
+        },
+        {
+          label: { en: "Catching under movement" },
+          body: {
+            en: "Because the defending team's job is to catch the rebound cleanly, secure two-handed catching while moving and off-balance is a core skill. Coaches set up rebound-catching reps to see whether a trialist tracks the ball off the frame, gets the body behind it, and holds it without bobbling.",
+          },
+        },
+        {
+          label: { en: "Spatial positioning and court movement" },
+          body: {
+            en: "With a three-second hold and no dribbling, the player without the ball matters as much as the one with it. Coaches watch whether a trialist moves into passing lanes, spreads the floor, and times runs toward the frame — standing still is the most common P6 mistake.",
+          },
+        },
+        {
+          label: { en: "No-contact defensive reading" },
+          body: {
+            en: "Defenders cannot block, obstruct, or touch the attacker — they can only anticipate where the rebound will land and get there first. Trials test whether a player reads the shooter's body and arm angle early and breaks toward the likely landing spot, rather than reacting late.",
+          },
+        },
+        {
+          label: { en: "Decision-making within the three-pass limit" },
+          body: {
+            en: "A team can make at most three passes before it must shoot. Coaches watch whether a trialist makes the simple, correct pass that advances the attack rather than forcing a low-percentage one, and whether they recognise the right moment to take the shot themselves.",
+          },
+        },
+        {
+          label: { en: "Teamwork, communication and coachability" },
+          body: {
+            en: "Tchoukball cannot be carried by one player — possession turns over constantly and roles rotate. Coaches watch whether a trialist calls for the ball, supports teammates after a turnover, and adjusts when corrected between drills. How a player behaves between reps is itself a scored signal.",
+          },
+        },
+      ],
+      positionFocus: [
+        {
+          position: { en: "Shooter / Wing" },
+          body: {
+            en: "Usually the right and left wings who take most shots at the frame. Coaches want repeatable throwing mechanics, the ability to aim the rebound into space rather than just hard, and composure when the three-second clock is running. A wing who can shoot accurately off a moving catch stands out.",
+          },
+        },
+        {
+          position: { en: "Pivot / Forward" },
+          body: {
+            en: "Works closest to the frame, often finishing the attack and linking passes in tight space. Coaches look for quick hands, good timing on runs toward the frame, and the ability to catch and release within the step and second limits without losing control.",
+          },
+        },
+        {
+          position: { en: "Defender / Catcher" },
+          body: {
+            en: "The defenders coordinate the first line of defence and aim to catch the rebound cleanly off the frame. Coaches want anticipation, secure two-handed catching, and fast positioning toward the likely landing zone — since contact and blocking are illegal, reading beats reach.",
+          },
+        },
+        {
+          position: { en: "Centre / Centre Pivot" },
+          body: {
+            en: "Often the second line of defence and a connector in attack, the centre links both ends of the court. Coaches look for all-round catching and passing, court vision to switch the point of attack within three passes, and the communication to organise teammates around them.",
+          },
+        },
+      ],
+      positionFocusNote: {
+        en: "Tchoukball positions are fluid — possession changes constantly and players defend and attack in the same rally, so most trialists are assessed on all-round ability rather than one fixed role. If your child has a preferred position, name it, but be ready to show catching, shooting and movement across the court.",
+      },
+      interviewQuestions: [
+        {
+          question: { en: "Why tchoukball?" },
+          subtext: {
+            en: "The panel wants a specific reason, not \"it's fun.\" Tchoukball is a niche choice, so a thoughtful answer stands out.",
+          },
+          approach: {
+            en: "Open with one concrete moment, then connect it to what the no-contact game rewards.",
+          },
+          template: {
+            en: "I started in P4 and what hooked me is that you can't bully your way to a point — you win by reading the rebound faster than the other team. That's the part I'm best at.",
+          },
+        },
+        {
+          question: { en: "Why did you choose our school?" },
+          subtext: {
+            en: "Did the family research the program, or are they applying everywhere?",
+          },
+          approach: {
+            en: "Cite one specific thing about the school's tchoukball — its CCA history, a championship it plays in, or a training pattern.",
+          },
+          template: {
+            en: "Your girls' team has played the TBAS inter-school championships for several years — I want to train somewhere tchoukball is taken seriously, not treated as a side CCA.",
+          },
+        },
+        {
+          question: { en: "What is your role on the team?" },
+          subtext: {
+            en: "Can the kid articulate the job, not just label a position?",
+          },
+          approach: {
+            en: "Name the role plus what it actually requires in a no-contact game.",
+          },
+          template: {
+            en: "I play wing, so my job is finishing the attack — placing the rebound where their defenders can't reach it within three passes.",
+          },
+        },
+        {
+          question: { en: "Tell us about a time you had to overcome a challenge." },
+          subtext: {
+            en: "Specific actions, not just outcome or feelings.",
+          },
+          approach: {
+            en: "Situation, then action, then result — in two sentences.",
+          },
+          template: {
+            en: "My catching was unreliable and I kept dropping rebounds in matches. I did wall-catch drills every day before training for a month, and by our last tournament I wasn't the one giving away possession.",
+          },
+        },
+        {
+          question: { en: "How do you handle losing possession or making a mistake mid-game?" },
+          subtext: {
+            en: "Possession turns over constantly in tchoukball — the panel wants to see composure, not frustration.",
+          },
+          approach: {
+            en: "Show that you reset fast and stay useful for the team.",
+          },
+          template: {
+            en: "Possession changes so often that one dropped catch isn't the end — I tell myself to get into position for the next rebound instead of replaying the mistake.",
+          },
+        },
+        {
+          question: { en: "How do you manage time with frequent trainings?" },
+          subtext: {
+            en: "Schools fear DSA kids who flame out academically by Sec 2.",
+          },
+          approach: {
+            en: "Describe a real system, not platitudes about discipline.",
+          },
+          template: {
+            en: "I finish English and Math homework on training days before I leave, and I keep one weekend afternoon for revision so trainings don't push everything to the last minute.",
+          },
+        },
+        {
+          question: { en: "If School A and School B both offer you, which would you choose?" },
+          subtext: {
+            en: "Tests honesty under pressure — and whether you'd actually come.",
+          },
+          approach: {
+            en: "Don't dodge. Pick one, justify with one specific reason.",
+          },
+          template: {
+            en: "Honestly, your school — your tchoukball CCA has a longer competition record and I want that level of training. If the other school replied first I'd still wait to hear from you.",
+          },
+        },
+      ],
+      schools: [
+        {
+          name: "Bedok Green Secondary School",
+          talentArea: { en: "Tchoukball, DSA-Sec" },
+          context: {
+            en: "Offers tchoukball as a DSA-Sec talent area. Confirm the current trial format and selection criteria on the school's own DSA page, which is updated from early May each year.",
+          },
+        },
+        {
+          name: "Bendemeer Secondary School",
+          talentArea: { en: "Tchoukball, DSA-Sec" },
+          context: {
+            en: "Offers tchoukball as a DSA-Sec talent area. Check the school's DSA write-up for the exact trial structure and whether prior CCA experience is expected.",
+          },
+        },
+        {
+          name: "Broadrick Secondary School",
+          talentArea: { en: "Tchoukball, DSA-Sec" },
+          context: {
+            en: "Offers tchoukball as a DSA-Sec talent area. Selection details and trial dates are published on the school's DSA page from early May.",
+          },
+        },
+        {
+          name: "Bukit Merah Secondary School",
+          talentArea: { en: "Tchoukball, DSA-Sec" },
+          context: {
+            en: "An established tchoukball CCA with both girls' and boys' teams, active in the TBAS inter-school championships. One of the more established tchoukball programs.",
+          },
+        },
+        {
+          name: "Fuhua Secondary School",
+          talentArea: { en: "Tchoukball, DSA-Sec" },
+          context: {
+            en: "Offers tchoukball as a DSA-Sec talent area. Verify the current selection criteria and trial format on the school's own DSA page.",
+          },
+        },
+        {
+          name: "Jurongville Secondary School",
+          url: "https://www.jurongvillesec.moe.edu.sg/cca/Sports-and-Games/tchoukball/",
+          talentArea: { en: "Tchoukball, DSA-Sec" },
+          context: {
+            en: "Runs tchoukball as a Sports & Games CCA and offers it as a DSA talent area. Check the school's DSA page for the current trial structure.",
+          },
+        },
+        {
+          name: "Westwood Secondary School",
+          url: "https://www.westwoodsec.moe.edu.sg/cca/sports/tchoukball/",
+          talentArea: { en: "Tchoukball, DSA-Sec" },
+          context: {
+            en: "Runs tchoukball as a sports CCA and offers it as a DSA talent area. Selection details are published on the school's DSA page from early May.",
+          },
+        },
+      ],
+      parentChecklist: [
+        {
+          label: { en: "Lead time — when the trial is still weeks out" },
+          items: [
+            {
+              en: "Video-record one full game and watch it with your child, scoring just two things: (1) what they do without the ball — do they move into open space and time runs toward the frame, or stand still? (2) how cleanly do they catch rebounds under movement? Standing still and dropped catches are the two most common P6 weaknesses, and both are visible in any tchoukball trial.",
+            },
+            {
+              en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, competition results, NAPFA and other data from the primary school directly into the DSA portal. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged.",
+            },
+            {
+              en: "Run a mock interview using the questions above, starting with \"Why tchoukball?\" Record it on a phone and watch it back together. Flag any answer that ran over thirty seconds or leaned on the word \"passionate\" — both weaken the read.",
+            },
+          ],
+        },
+        {
+          label: { en: "Tapering — final week" },
+          items: [
+            {
+              en: "Drop intensity to about 80%: wall-catch reps and aimed shooting at a frame or marked target, no new heavy sessions. Final-week added load rarely pays off and often produces a tweak.",
+            },
+            {
+              en: "Confirm logistics in writing — time, venue, attire. Email the teacher-in-charge if anything is ambiguous; the email itself is a small data point on parent attentiveness.",
+            },
+            {
+              en: "Play one session with unfamiliar teammates. Trialists often underperform because they only pass to people they know — and in a three-pass game, hesitation about who to pass to is costly. Force that awkwardness early.",
+            },
+          ],
+        },
+        {
+          label: { en: "Day of trial" },
+          items: [
+            {
+              en: "Eat about 90 minutes before, not 30. Trials often run long and tired catching is the first thing to slip.",
+            },
+            {
+              en: "Drop off, don't hover. Walk in, greet the teacher-in-charge by name, leave. Over-involved parents are visible and the trialist absorbs the cost.",
+            },
+            {
+              en: "No post-mortem in the car. One question only: \"What's one thing the coach said today?\" Anything else waits 24 hours.",
+            },
+          ],
+        },
+      ],
+      sprintAdvice: {
+        en: "If you came to this page late — application in, trial coming up, no real prep — there are still real moves. Shorten the drill cycle to two things only: clean two-handed catching off a wall, and aimed shooting at a target, since those carry the most weight in a no-contact game. Cancel anything that competes with sleep. Spend the freed time on interview prep above, starting with \"Why tchoukball?\", because that's the only part where a few hours of work can still meaningfully change the outcome. A private coach can speed up specific habit changes, but no coach produces in three sessions the catching instinct of a year of play. Treat it as triage, not a fix.",
+      },
+    },
+  },
 };
 
 export const TALENT_SLUGS: TalentSlug[] = [
@@ -10954,6 +12816,12 @@ export const TALENT_SLUGS: TalentSlug[] = [
   "aep",
   "bicultural",
   "humanities",
+  "softball",
+  "shooting",
+  "bowling",
+  "cross-country",
+  "canoeing",
+  "tchoukball",
 ];
 
 /**
@@ -11001,11 +12869,17 @@ export const ADJACENT_TALENTS: Record<TalentSlug, [TalentSlug, TalentSlug]> = {
   aep: ["art", "drama"],
   bicultural: ["chinese", "chinese-orchestra"],
   humanities: ["bicultural", "drama"],
+  softball: ["basketball", "track-field"],
+  shooting: ["martial-arts", "math"],
+  bowling: ["shooting", "table-tennis"],
+  "cross-country": ["track-field", "swimming"],
+  canoeing: ["sailing", "swimming"],
+  tchoukball: ["netball", "floorball"],
 };
 
 /**
  * Total number of talent rich-content prep pages.
- * Used across UI copy ("17 talent prep pages", trust strips, meta descriptions, etc.)
+ * Used across UI copy ("N talent prep pages", trust strips, meta descriptions, etc.)
  * Auto-updates whenever a new talent is added to TALENT_SLUGS.
  *
  * Note: this counts ALL talent pages live in the site, NOT the Hero grid's
