@@ -26,12 +26,13 @@ import { SchoolLogo } from "@/components/SchoolLogo";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SubsectionAnchor } from "@/components/SubsectionAnchor";
+import { InterviewFlashcards } from "@/components/InterviewFlashcards";
+import { buildDeck } from "@/lib/interviewCommon";
 import {
   ADJACENT_TALENTS,
   getTalentPage,
   type ChecklistGroup,
   type DimensionEntry,
-  type InterviewQuestion,
   type LocaleStrFlex,
   type PositionEntry,
   type PreparedPieceEntry,
@@ -289,6 +290,12 @@ function InterviewQuestionsSection({
     ms: "Templat",
     ta: "வார்ப்புரு",
   };
+  const pitfallLabel: LocaleStr = {
+    en: "Pitfalls",
+    zh: "雷区",
+    ms: "Perangkap",
+    ta: "தவிர்க்க வேண்டியவை",
+  };
   return (
     <section className="pb-12 sm:pb-16">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
@@ -298,7 +305,7 @@ function InterviewQuestionsSection({
           className="mb-6"
         />
         <ol className="space-y-5">
-          {rich.interviewQuestions.map((q: InterviewQuestion, i: number) => (
+          {buildDeck(rich.interviewQuestions).map((q, i: number) => (
             <li
               key={i}
               className="rounded-2xl border border-intellectual/12 bg-white p-5 shadow-soft sm:p-6"
@@ -326,6 +333,16 @@ function InterviewQuestionsSection({
                     {pickFlex(q.approach, locale)}
                   </dd>
                 </div>
+                {q.pitfall && (
+                  <div>
+                    <dt className="inline font-semibold text-intellectual">
+                      {pick(pitfallLabel, locale)}:
+                    </dt>{" "}
+                    <dd className="inline text-intellectual-muted">
+                      {pickFlex(q.pitfall, locale)}
+                    </dd>
+                  </div>
+                )}
                 <div className="rounded-lg bg-surface px-3 py-2">
                   <dt className="inline text-[11px] font-bold tracking-wider text-champagne-dark">
                     {pick(templateLabel, locale)}
@@ -754,6 +771,27 @@ export function InterviewTalentPageBody({
             <TrialDimensionsSection rich={talent.rich} locale={locale} />
             <PreparedPieceSection rich={talent.rich} locale={locale} />
             <PositionFocusSection rich={talent.rich} locale={locale} />
+            <section className="pb-12 sm:pb-16">
+              <div className="mx-auto max-w-4xl px-4 sm:px-6">
+                <SubsectionAnchor
+                  icon={MessageSquareText}
+                  title={
+                    locale === "zh"
+                      ? "面试卡片练习"
+                      : locale === "ms"
+                        ? "Latihan kad temu duga"
+                        : locale === "ta"
+                          ? "நேர்காணல் அட்டை பயிற்சி"
+                          : "Mock-interview flashcards"
+                  }
+                  className="mb-6"
+                />
+                <InterviewFlashcards
+                  talentLabel={talent.navLabel}
+                  questions={talent.rich.interviewQuestions}
+                />
+              </div>
+            </section>
             <InterviewQuestionsSection rich={talent.rich} locale={locale} />
             <RichSchoolsSection rich={talent.rich} locale={locale} />
             <ParentChecklistSection rich={talent.rich} locale={locale} />

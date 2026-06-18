@@ -64,7 +64,7 @@ export type TalentSlug =
   | "outdoor-adventure"
   | "cricket";
 
-type LocaleStr = { en: string; zh: string; ms: string; ta: string };
+export type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
 /**
  * Rich content fields use LocaleStrFlex — EN required, ZH/MS/TA optional.
@@ -95,6 +95,8 @@ export type InterviewQuestion = {
   subtext: LocaleStrFlex;
   approach: LocaleStrFlex;
   template: LocaleStrFlex;
+  /** 雷区 — what to avoid / how a weak answer goes wrong. Optional; cards hide it when absent. */
+  pitfall?: LocaleStrFlex;
 };
 
 export type RichSchoolEntry = {
@@ -279,87 +281,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love basketball?" },
-          subtext: {
-            en: "The panel wants a specific moment, not a feeling. \"It's fun\" reads as weak motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory, then connect it to character.",
-          },
-          template: {
-            en: "When my P5 team lost the zonals semi by two points, I realised I wanted to be the player who takes that shot — not avoids it.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the program, or are they applying everywhere?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's basketball — a coach's name, an NSG result, a training pattern.",
-          },
-          template: {
-            en: "ACS(I) was National B-Div third in 2023/24 and trains DSA candidates with the competition team — I want that pace from Sec 1.",
-          },
+          subtext: { en: "The panel wants a specific moment, not a feeling. \"It's fun\" reads as weak motivation." },
+          approach: { en: "Open with one concrete memory, then connect it to character." },
+          template: { en: "When my P5 team lost the zonals semi by two points, I realised I wanted to be the player who takes that shot — not the one who avoids it." },
+          pitfall: { en: "Don't answer with a generic feeling like \"it's fun\" or \"I like winning\". Don't recite a highlight reel with no link to who you are." },
         },
         {
           question: { en: "What position do you play?" },
-          subtext: {
-            en: "Can the kid articulate the role, not just label it?",
-          },
-          approach: {
-            en: "Name the position plus the job.",
-          },
-          template: {
-            en: "Point guard — my job is getting our shooters open looks and slowing the game down when we're rattled.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a challenge." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I missed my P5 school team after the first trial. I joined ActiveSG twice a week, made the team the next round, started by NSG.",
-          },
+          subtext: { en: "Can the kid articulate the role, not just label it?" },
+          approach: { en: "Name the position plus the job it does." },
+          template: { en: "Point guard — my job is getting our shooters open looks and slowing the game down when we're rattled." },
+          pitfall: { en: "Don't just state the position and stop. Avoid claiming you can play every position — it reads as not understanding any of them." },
         },
         {
           question: { en: "Is there a teammate or coach you remember most?" },
-          subtext: {
-            en: "Whether the kid sees teammates as people or as background.",
-          },
-          approach: {
-            en: "Name someone specific by role + what you learned from them.",
-          },
-          template: {
-            en: "My captain made me run lines with him after every practice — I didn't want to but I jumped three inches by year-end.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent trainings?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I do English and Math homework on the bus to training and finish Science before dinner — I keep Sundays for revision.",
-          },
-        },
-        {
-          question: { en: "If School A and School B both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school — your coach's emphasis on defence matches how I play. If the other school called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Whether the kid sees teammates as people or as background." },
+          approach: { en: "Name someone specific by role, plus what you learned from them." },
+          template: { en: "My captain made me run lines with him after every practice — I didn't want to, but I jumped three inches by year-end." },
+          pitfall: { en: "Don't name a famous NBA player you've never met. Keep it someone real you trained with, and say what changed in you." },
         },
       ],
       schools: [
@@ -602,87 +541,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love football?" },
-          subtext: {
-            en: "The panel wants a specific moment, not a feeling. \"It's fun\" reads as weak motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory — a match, a player, a turning point — then connect it to character.",
-          },
-          template: {
-            en: "We lost the P5 inter-class final on penalties and I took the last one and missed. That night I decided I wanted to be the player who takes the next one, not the one who avoids it.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the football programme, or are they applying everywhere?",
-          },
-          approach: {
-            en: "Cite one specific thing about the football set-up — a coach's name, an NSG result you watched, the training pattern.",
-          },
-          template: {
-            en: "I watched your B-Division side play in the West Zone last year and the way the team kept passing under pressure was different from the other zone games I'd seen. I want to learn that style from Sec 1.",
-          },
+          subtext: { en: "The panel wants a specific moment, not a feeling. \"It's fun\" reads as weak motivation." },
+          approach: { en: "Open with one concrete memory — a match, a player, a turning point — then connect it to character." },
+          template: { en: "We lost the P5 inter-class final on penalties and I took the last one and missed. That night I decided I wanted to be the player who takes the next one, not the one who avoids it." },
+          pitfall: { en: "Don't answer with a generic feeling like \"it's fun\". Don't list favourite pro clubs or players instead of your own story." },
         },
         {
           question: { en: "What position do you play?" },
-          subtext: {
-            en: "Can the kid articulate the role and its job — not just a label?",
-          },
-          approach: {
-            en: "Name the position plus the job, and add a position you can cover.",
-          },
-          template: {
-            en: "Central midfielder — my job is link the defenders and the forwards and protect the back four when we lose the ball. I've also played right-back when my school team needed cover, so I'm comfortable defending wide.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a challenge." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two or three sentences. A real low point reads more honestly than a polished story.",
-          },
-          template: {
-            en: "I was cut from the P5 school team after the first round of trials. I joined an ActiveSG academy twice a week and ran 5km on Saturdays for three months. I made the team in the second-round trial and started in the inter-school cup.",
-          },
+          subtext: { en: "Can the kid articulate the role and its job — not just a label?" },
+          approach: { en: "Name the position plus the job, and add a position you can cover." },
+          template: { en: "Central midfielder — my job is to link the defenders and forwards and protect the back four when we lose the ball. I've also played right-back when my school team needed cover, so I'm comfortable defending wide." },
+          pitfall: { en: "Don't just state the position and stop. Avoid claiming you can play everywhere — pick one role you genuinely own and one you can cover." },
         },
         {
           question: { en: "Is there a teammate or coach you remember most?" },
-          subtext: {
-            en: "Whether the kid sees the people around them, or just themselves.",
-          },
-          approach: {
-            en: "Name someone specific by role, plus what you actually learned from them.",
-          },
-          template: {
-            en: "My P5 coach made us watch the previous match together every Monday before training. I'd never watched my own play before — once I started, I noticed I was ball-watching when we lost possession. That habit was the first thing I fixed.",
-          },
-        },
-        {
-          question: { en: "How will you manage time with frequent training?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system you already use, not promises about discipline.",
-          },
-          template: {
-            en: "On training days I finish English and Math homework on the bus home and do Science before dinner. I keep Sundays for revision and review one of my matches. Friday is my day off from football and I use that evening for harder homework.",
-          },
-        },
-        {
-          question: { en: "If two schools both offer you, how will you decide?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick this school, justify with one specific reason — programme, coach, or fit.",
-          },
-          template: {
-            en: "Honestly, your school. The way your B-Division side keeps building out from the goalkeeper is how I want to play, and your coach's emphasis on tracking back is what my current coach has been pushing me on. If the other school called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Whether the kid sees the people around them, or just themselves." },
+          approach: { en: "Name someone specific by role, plus what you actually learned from them." },
+          template: { en: "My P5 coach made us watch the previous match together every Monday before training. I'd never watched my own play before — once I started, I noticed I was ball-watching when we lost possession. That habit was the first thing I fixed." },
+          pitfall: { en: "Don't name a pro footballer you've never met. Keep it someone real you trained with, and say what concretely changed in you." },
         },
       ],
       schools: [
@@ -931,87 +807,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love swimming?" },
-          subtext: {
-            en: "Panels want a specific moment, not a generic feeling. \"It clears my head\" reads as weak motivation.",
-          },
-          approach: {
-            en: "Open with one concrete race or training memory, then connect it to character.",
-          },
-          template: {
-            en: "At my first 13-and-under meet, I finished second in the 200 free by 0.4 seconds. The kid who beat me had a faster last 50. That night I decided I wanted to be the swimmer who closes races, not the one who fades. I've been working on negative splits ever since.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the swim programme, or is the application a scatter-shot?",
-          },
-          approach: {
-            en: "Cite one specific thing about the swim set-up — the coach, recent NSG results, training pattern, or facility.",
-          },
-          template: {
-            en: "I watched your B-Division 4x100m free relay at last year's NSG finals. The way your second leg held the lead under pressure is the kind of race I want to learn from. Your coach's emphasis on closing speed is also what I've been working on this year.",
-          },
+          subtext: { en: "Panels want a specific moment, not a generic feeling. \"It clears my head\" reads as weak motivation." },
+          approach: { en: "Open with one concrete race or training memory, then connect it to character." },
+          template: { en: "At my first 13-and-under meet, I finished second in the 200 free by 0.4 seconds. The kid who beat me had a faster last 50. That night I decided I wanted to be the swimmer who closes races, not the one who fades. I've been working on negative splits ever since." },
+          pitfall: { en: "Don't fall back on \"I love the water\" or \"it keeps me fit\" — lines that fit any swimmer. Anchor it to one race or training memory you can actually describe." },
         },
         {
           question: { en: "What's your strongest event, and what are you working to improve?" },
-          subtext: {
-            en: "Tests self-awareness — can the swimmer name a real weakness and a real fix?",
-          },
-          approach: {
-            en: "Name the event, name the specific technical issue, and describe the drill or workout you use.",
-          },
-          template: {
-            en: "Strongest is 100m breaststroke — my underwater pullouts are clean and my timing holds in the last 25. I'm working on my backstroke flag-turn count; I currently take five strokes from the flag and I want to consistently take six so I time the flip without slowing.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you didn't reach a goal and how you responded." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → specific change you made → result. Schools want resilience, not perfection.",
-          },
-          template: {
-            en: "I missed my target 200 IM time at the second qualifier last year. My butterfly turn was the problem — I was breaking my streamline too early. I spent six weeks doing only butterfly-into-backstroke transition sets and dropped two seconds at the next meet.",
-          },
+          subtext: { en: "Tests self-awareness — can the swimmer name a real weakness and a real fix?" },
+          approach: { en: "Name the event, name the specific technical issue, and describe the drill or workout you use." },
+          template: { en: "Strongest is 100m breaststroke — my underwater pullouts are clean and my timing holds in the last 25. I'm working on my backstroke flag-turn count; I currently take five strokes from the flag and I want to consistently take six so I time the flip without slowing." },
+          pitfall: { en: "Don't name a fake weakness like \"I just need to train harder.\" Give a real technical flaw and the specific drill you use to fix it." },
         },
         {
           question: { en: "How do you handle a bad race?" },
-          subtext: {
-            en: "Race psychology at 12 predicts race psychology at 16. Schools fear swimmers who collapse after one bad swim.",
-          },
-          approach: {
-            en: "Describe a real protocol — what you do in the 30 minutes after a disappointing swim.",
-          },
-          template: {
-            en: "I do my swim down and then write down two specific things I'll change at the next meet — not feelings, just technique. I don't talk about the race with my parents until after the meet. The next event needs my head where the next race is.",
-          },
-        },
-        {
-          question: { en: "How will you manage academics with morning training?" },
-          subtext: {
-            en: "Schools fear DSA swimmers whose grades collapse by Sec 2 — morning training plus afternoon school is the typical pattern.",
-          },
-          approach: {
-            en: "Describe a real schedule, not promises about discipline.",
-          },
-          template: {
-            en: "I currently train 4:30-6:30am four mornings a week. I finish English and Math homework before training so my brain isn't tired afterwards. Bus ride to school is for review notes. I keep Friday evening light because Saturday morning practice is the hardest of the week.",
-          },
-        },
-        {
-          question: { en: "If two schools both offer you, how will you decide?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether the family has actually thought about fit.",
-          },
-          approach: {
-            en: "Don't dodge. Pick this school, justify with one specific reason — programme, coach, or fit.",
-          },
-          template: {
-            en: "Honestly, your school. Your morning training session pattern and the way your coach builds aerobic base before sprint work matches how I improve best. If the other school called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Race psychology at 12 predicts race psychology at 16. Schools fear swimmers who collapse after one bad swim." },
+          approach: { en: "Describe a real protocol — what you do in the 30 minutes after a disappointing swim." },
+          template: { en: "I do my swim down and then write down two specific things I'll change at the next meet — not feelings, just technique. I don't talk about the race with my parents until after the meet. The next event needs my head where the next race is." },
+          pitfall: { en: "Don't say you \"just shake it off\" or never get upset — that reads as unaware. Describe a concrete reset routine, not a feeling." },
         },
       ],
       schools: [
@@ -1260,87 +1073,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love track and field?" },
-          subtext: {
-            en: "Panels want a specific moment, not a feeling. \"It clears my head\" reads as untrained motivation.",
-          },
-          approach: {
-            en: "Open with one concrete race or event memory, then connect it to character.",
-          },
-          template: {
-            en: "At the East Zone 200m, I was in lane two and got out badly. I came back in the last 50 to take third. That race taught me that what matters is who you are with 50m left, not who you are at the gun. It's why I keep coming back to the track.",
-          },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"It clears my head\" reads as untrained motivation." },
+          approach: { en: "Open with one concrete race or event memory, then connect it to character." },
+          template: { en: "At the East Zone 200m, I was in lane two and got out badly. I came back in the last 50 to take third. That race taught me that what matters is who you are with 50m left, not who you are at the gun. It's why I keep coming back to the track." },
+          pitfall: { en: "Don't reach for \"I'm fast\" or \"I like winning\" — generic and forgettable. Tie it to one race or training moment that actually shaped how you think." },
         },
         {
-          question: { en: "What's your primary event, and what's your training week look like?" },
-          subtext: {
-            en: "Tests whether the candidate understands their own training, or is following a programme by rote.",
-          },
-          approach: {
-            en: "Name the event and outline the actual training pattern across the week — different sessions, recovery, and what each session targets.",
-          },
-          template: {
-            en: "100m and 200m. Monday is acceleration work — short sprints out of blocks with full recovery. Wednesday is top-speed work — flying 30s and 60s. Friday is tempo — longer reps at sub-maximal pace for conditioning. Saturday is a long run for general aerobic base. I don't train Sunday — recovery is the work I do that day.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the athletics programme, or is the application a scatter-shot?",
-          },
-          approach: {
-            en: "Cite something specific — a coach's reputation, the squad's NSG results, the training facility, the way the school programmes multi-event athletes.",
-          },
-          template: {
-            en: "Your B-Division 4x400m relay placed second at last year's NSG nationals. The way your coach builds the long-to-short sprint progression across Term 1 to Term 3 matches my own training philosophy. I want to be the third leg in that relay by Sec 3.",
-          },
-        },
-        {
-          question: { en: "Tell us about a race that didn't go to plan." },
-          subtext: {
-            en: "Tests resilience and self-awareness. Schools fear candidates who only present polished wins.",
-          },
-          approach: {
-            en: "Situation → specific cause → specific change you made → result. A real low point reads more honestly than a polished story.",
-          },
-          template: {
-            en: "At the P5 zonals 800m, I went out at PB pace for the first 200 and blew up by the 600 mark. I finished sixth in a race I could have won. I rebuilt my pacing plan with my coach — first 200m only 95% of target pace — and finished second at the next inter-school meet. Lesson: race plans aren't optional.",
-          },
+          question: { en: "What's your primary event, and what does your training week look like?" },
+          subtext: { en: "Tests whether the candidate understands their own training, or is following a programme by rote." },
+          approach: { en: "Name the event and outline the actual training pattern across the week — different sessions, recovery, and what each session targets." },
+          template: { en: "100m and 200m. Monday is acceleration work — short sprints out of blocks with full recovery. Wednesday is top-speed work — flying 30s and 60s. Friday is tempo — longer reps at sub-maximal pace for conditioning. Saturday is a long run for general aerobic base. I don't train Sunday — recovery is the work I do that day." },
+          pitfall: { en: "Don't just list days without saying what each session is for. If you can't explain why a session exists, the panel sees a kid following a plan blindly." },
         },
         {
           question: { en: "Do you have a secondary event you'd train if asked?" },
-          subtext: {
-            en: "Schools value versatility for team scoring. Tests whether the candidate sees themselves as a single-event athlete or a team asset.",
-          },
-          approach: {
-            en: "Name a real second event the candidate has tried — even informally — and one specific thing about it that suits the candidate.",
-          },
-          template: {
-            en: "Long jump. I jumped 4.85m at our school sports day last year on a runup I'd barely practised — the technique is rough but my approach speed is there. If your jumps coach can fit me in, I'd add it as a second event.",
-          },
-        },
-        {
-          question: { en: "How will you manage academics with morning training?" },
-          subtext: {
-            en: "Schools fear DSA-T&F kids whose grades collapse by Sec 2 — morning training is a typical pattern.",
-          },
-          approach: {
-            en: "Describe a real schedule.",
-          },
-          template: {
-            en: "I run at 5:30am four mornings a week before school. I finish English and Math homework before training so my brain isn't tired afterwards. Bus ride to school is for review notes. Saturday long run starts at 7am; the rest of Saturday is school work. Sunday I read and rest — recovery time matters.",
-          },
-        },
-        {
-          question: { en: "If two schools both offer you, how will you decide?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether the family has actually thought about fit.",
-          },
-          approach: {
-            en: "Don't dodge. Pick this school, justify with one specific reason about programme or coach fit.",
-          },
-          template: {
-            en: "Honestly, your school. Your sprint coach's emphasis on technique before volume is how I think the next two years should go for me — I'm still adding muscle and I don't want to burn out chasing volume too early. If the other school called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Schools value versatility for team scoring. Tests whether the candidate sees themselves as a single-event athlete or a team asset." },
+          approach: { en: "Name a real second event the candidate has tried — even informally — and one specific thing about it that suits the candidate." },
+          template: { en: "Long jump. I jumped 4.85m at our school sports day last year on a runup I'd barely practised — the technique is rough but my approach speed is there. If your jumps coach can fit me in, I'd add it as a second event." },
+          pitfall: { en: "Don't claim a second event you've never tried, or refuse outright. Name something you've actually done and be honest about how raw it is." },
         },
       ],
       schools: [
@@ -1589,87 +1339,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love badminton?" },
-          subtext: {
-            en: "Panels want a specific moment, not a feeling. \"It's fun\" reads as weak motivation.",
-          },
-          approach: {
-            en: "Open with one concrete match or training memory, then connect it to character.",
-          },
-          template: {
-            en: "In the P5 zonals, I was down 14-19 and pulled it back to 21-19 — but only because I stopped smashing and started using drops. That match taught me that badminton isn't about the strongest shot; it's about the right shot at the right moment. That's why I love it.",
-          },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"It's fun\" reads as weak motivation." },
+          approach: { en: "Open with one concrete match or training memory, then connect it to character." },
+          template: { en: "In the P5 zonals, I was down 14-19 and pulled it back to 21-19 — but only because I stopped smashing and started using drops. That match taught me that badminton isn't about the strongest shot; it's about the right shot at the right moment. That's why I love it." },
+          pitfall: { en: "Don't say \"it's fun\" or \"I'm good at it\" — that fits any player. Anchor it to one match or rally that changed how you see the game." },
         },
         {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the badminton programme, or is the application a scatter-shot?",
-          },
-          approach: {
-            en: "Cite one specific thing — a coach, a recent NSG result, a training pattern, an opportunity for both singles and doubles.",
-          },
-          template: {
-            en: "I watched your B-Division team play in the last zonals and noticed how your back-court doubles players varied their smash angles instead of always going flat. That shot selection is exactly what I want to learn from Sec 1.",
-          },
-        },
-        {
-          question: { en: "What's your strongest shot and what are you working to improve?" },
-          subtext: {
-            en: "Tests self-awareness — can the candidate name a real weakness and a real fix?",
-          },
-          approach: {
-            en: "Name the strength concretely, then name a specific shot or footwork pattern you're working on with the drill you use.",
-          },
-          template: {
-            en: "Strongest is my backhand clear — I can land it within 30cm of the back line under pressure. I'm working on my forehand net kill; I'm too tense at the wrist on the kill so I'm doing slow-tempo net drills with a coach twice a week.",
-          },
-        },
-        {
-          question: { en: "Tell us about a match you lost and what you took from it." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → specific change you made afterwards → result. Schools want resilience, not perfection.",
-          },
-          template: {
-            en: "I lost the P5 zone semis to a player who returned every smash with a clean block. After the match I realised my game had been one-dimensional. I spent six weeks doing only drop-shot and net-play drills, and at the inter-school cup the next term I beat him in three sets.",
-          },
+          question: { en: "What's your strongest shot, and what are you working to improve?" },
+          subtext: { en: "Tests self-awareness — can the candidate name a real weakness and a real fix?" },
+          approach: { en: "Name the strength concretely, then name a specific shot or footwork pattern you're working on with the drill you use." },
+          template: { en: "Strongest is my backhand clear — I can land it within 30cm of the back line under pressure. I'm working on my forehand net kill; I'm too tense at the wrist on the kill so I'm doing slow-tempo net drills with a coach twice a week." },
+          pitfall: { en: "Don't claim every shot is solid, and don't give a vague weakness like \"my consistency.\" Name one concrete shot and the drill fixing it." },
         },
         {
           question: { en: "Singles or doubles — which suits you better, and why?" },
-          subtext: {
-            en: "Most schools want both. Tests whether the candidate has thought about their own game.",
-          },
-          approach: {
-            en: "Pick one but acknowledge willingness to play the other — and explain what you bring to the chosen format.",
-          },
-          template: {
-            en: "Singles right now — my footwork holds up well across full court and I like making my own tactical choices. But I'd like to play doubles too; I think my net play is good enough to learn the front-court role in Sec 1.",
-          },
-        },
-        {
-          question: { en: "How will you manage academics with frequent training?" },
-          subtext: {
-            en: "Schools fear DSA-Badminton kids whose grades collapse by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real schedule, not promises about discipline.",
-          },
-          template: {
-            en: "On training days I finish English and Math homework on the bus and do Science before dinner. Friday is my off-day from badminton and I use that evening for harder homework. Sundays I do longer revision sessions. Training is non-negotiable, but it's not unlimited.",
-          },
-        },
-        {
-          question: { en: "If two schools both offer you, how will you decide?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether the family has actually thought about fit.",
-          },
-          approach: {
-            en: "Don't dodge. Pick this school, justify with one specific reason — programme, coach, or fit.",
-          },
-          template: {
-            en: "Honestly, your school. The way your coach develops doubles play from Sec 1 is what I want — the other school focuses more on singles and I want to be a two-discipline player. If the other school called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Most schools want both. Tests whether the candidate has thought about their own game." },
+          approach: { en: "Pick one but acknowledge willingness to play the other — and explain what you bring to the chosen format." },
+          template: { en: "Singles right now — my footwork holds up well across full court and I like making my own tactical choices. But I'd like to play doubles too; I think my net play is good enough to learn the front-court role in Sec 1." },
+          pitfall: { en: "Don't refuse one format outright — schools want both. Pick one with a reason, but show you'll train the other too." },
         },
       ],
       schools: [
@@ -1918,87 +1605,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love your martial art?" },
-          subtext: {
-            en: "Panels want a specific moment or principle, not a feeling. \"It teaches discipline\" reads as a parent's answer, not the candidate's.",
-          },
-          approach: {
-            en: "Open with one concrete training memory or competition moment, then connect it to the candidate's character or philosophy.",
-          },
-          template: {
-            en: "Last year my coach made me lose a sparring match on purpose by giving away my best technique. He wanted me to learn that depending on one strength is a trap. That session changed how I train — I started working on my weak side until it stopped being weak. That's what I love about my art: the lessons stack.",
-          },
+          subtext: { en: "Panels want a specific moment or principle, not a feeling. \"It teaches discipline\" reads as a parent's answer, not the candidate's." },
+          approach: { en: "Open with one concrete training memory or competition moment, then connect it to the candidate's character or philosophy." },
+          template: { en: "Last year my coach made me lose a sparring match on purpose by giving away my best technique. He wanted me to learn that depending on one strength is a trap. That session changed how I train — I started working on my weak side until it stopped being weak. That's what I love about my art: the lessons stack." },
+          pitfall: { en: "Don't recite \"it teaches discipline and respect\" — that's the parent's line, not yours. Give a specific moment that shows what the art means to you." },
         },
         {
           question: { en: "What grade or belt are you, and how did you earn it?" },
-          subtext: {
-            en: "Tests whether the candidate can articulate the work behind the credential, not just name it.",
-          },
-          approach: {
-            en: "Name the grade, the date awarded, the examining body, and one specific technique or test that was hardest.",
-          },
-          template: {
-            en: "Black belt 1st dan, awarded last September by Kukkiwon. The hardest part was breaking — three boards on a spinning back kick. I'd never broken three boards on a spinning technique before; I trained the pivot for three months before the test. Belt's a date on a certificate; what mattered was the three months.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the martial arts CCA, or is this a scatter-shot application?",
-          },
-          approach: {
-            en: "Cite the discipline-specific reason — the school's coach, recent National Schools championship results, the training facility, training frequency.",
-          },
-          template: {
-            en: "Your school's wushu team placed top three at the National School Games taolu finals last year, and your coach has trained two of the current Singapore national junior squad members. The way your team integrates SAP Chinese-language enrichment with wushu training is the exact pathway I want.",
-          },
-        },
-        {
-          question: { en: "Tell us about a competition you didn't win and what you took from it." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → specific cause → specific change you made afterwards → result.",
-          },
-          template: {
-            en: "At the national taolu championships last year, I rushed the difficulty element in my changquan and stepped out of the carpet. I lost points I couldn't recover. After that, my coach added a final-set rehearsal where I had to land the difficulty element five times in a row under fatigue before I went home. At the next competition the element was clean.",
-          },
-        },
-        {
-          question: { en: "How do you balance training, competition, and academics?" },
-          subtext: {
-            en: "Schools fear DSA-Martial-Arts candidates whose grades collapse, especially before major competitions.",
-          },
-          approach: {
-            en: "Describe a real schedule and how you protect academic time during competition season.",
-          },
-          template: {
-            en: "Three weekday sessions plus one Saturday — two hours each. On training days I finish English and Math homework on the bus and do Science before dinner. Two weeks before a competition, I drop volume to one weekday session plus the Saturday so I'm rested and academics don't slip. Sundays are always for revision.",
-          },
+          subtext: { en: "Tests whether the candidate can articulate the work behind the credential, not just name it." },
+          approach: { en: "Name the grade, the date awarded, the examining body, and one specific technique or test that was hardest." },
+          template: { en: "Black belt 1st dan, awarded last September by Kukkiwon. The hardest part was breaking — three boards on a spinning back kick. I'd never broken three boards on a spinning technique before; I trained the pivot for three months before the test. Belt's a date on a certificate; what mattered was the three months." },
+          pitfall: { en: "Don't just state the rank and stop. Inflating a grade or skipping the work behind it both read badly — name the body and the hardest part of earning it." },
         },
         {
           question: { en: "What does martial arts etiquette mean to you?" },
-          subtext: {
-            en: "Schools weight this heavily because they trust DSA-Martial-Arts candidates to represent the school at external competitions.",
-          },
-          approach: {
-            en: "Don't list rules. Give one specific incident where etiquette mattered to you personally.",
-          },
-          template: {
-            en: "At my first competition, I won a close match and didn't bow properly to my opponent because I was excited. My coach didn't congratulate me — he just walked away. That silence taught me more than any lecture about etiquette. I bow first to opponents now, before they bow to me.",
-          },
-        },
-        {
-          question: { en: "If two schools both offer you, how will you decide?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether the family has actually thought about fit.",
-          },
-          approach: {
-            en: "Don't dodge. Pick this school, justify with one specific reason about programme or coach fit.",
-          },
-          template: {
-            en: "Honestly, your school. Your coach's record with competition taolu and the way your CCA structures weekly training around peaking for nationals matches what I want. If the other school called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Schools weight this heavily because they trust DSA-Martial-Arts candidates to represent the school at external competitions." },
+          approach: { en: "Don't list rules. Give one specific incident where etiquette mattered to you personally." },
+          template: { en: "At my first competition, I won a close match and didn't bow properly to my opponent because I was excited. My coach didn't congratulate me — he just walked away. That silence taught me more than any lecture about etiquette. I bow first to opponents now, before they bow to me." },
+          pitfall: { en: "Don't recite a list of dojo rules. Tell one real incident where etiquette mattered to you — abstract answers sound rehearsed." },
         },
       ],
       schools: [
@@ -2293,87 +1917,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love music?" },
-          subtext: {
-            en: "Panels want a specific moment or musical idea, not a feeling. \"It makes me happy\" reads as untrained motivation.",
-          },
-          approach: {
-            en: "Open with one concrete piece or performance memory, then connect it to a musical observation — not just emotion.",
-          },
-          template: {
-            en: "The first time I played a Bach prelude all the way through, I noticed three voices moving at once — and I realised piano isn't one line, it's a conversation. That's when I stopped practising to finish pieces and started practising to listen.",
-          },
+          subtext: { en: "Panels want a specific moment or musical idea, not a feeling. \"It makes me happy\" reads as untrained motivation." },
+          approach: { en: "Open with one concrete piece or performance memory, then connect it to a musical observation — not just emotion." },
+          template: { en: "The first time I played a Bach prelude all the way through, I noticed three voices moving at once — and I realised piano isn't one line, it's a conversation. That's when I stopped practising to finish pieces and started practising to listen." },
+          pitfall: { en: "Don't reduce it to \"it makes me happy\" or \"I've done it since I was little.\" Avoid generic emotion with no piece, moment, or musical detail behind it." },
         },
         {
           question: { en: "Who is your favourite composer, and why?" },
-          subtext: {
-            en: "Tests whether the candidate can talk about music with specific vocabulary or only generic praise.",
-          },
-          approach: {
-            en: "Name one composer plus one specific musical reason — harmonic language, form, a particular work — not biography.",
-          },
-          template: {
-            en: "Debussy — because his harmony moves by colour rather than function. In Clair de Lune the chord changes don't feel like they're going anywhere, and that's the point. It taught me that not every phrase needs to resolve.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the music programme, or is the application a scatter-shot?",
-          },
-          approach: {
-            en: "Cite something specific — the MEP teacher's reputation, the orchestra's repertoire, a recent concert, the rehearsal pattern.",
-          },
-          template: {
-            en: "I went to your symphonic band's annual concert last September and the programme included a contemporary commission — that mix of standard repertoire and new music is what I want to study under. Most schools play safe; yours doesn't.",
-          },
-        },
-        {
-          question: { en: "Tell us about a piece you found difficult and how you worked through it." },
-          subtext: {
-            en: "Tests practice discipline and self-awareness, not just talent.",
-          },
-          approach: {
-            en: "Situation → specific technique you used → result. Name the exact bar or technique that was the obstacle.",
-          },
-          template: {
-            en: "The cross-hand passage in the third movement of my Mozart sonata kept tripping me up at tempo. I broke it down by practising hands separately at half tempo with a metronome, then layered the hands together one bar at a time. Two weeks of slow practice fixed what fast practice couldn't.",
-          },
+          subtext: { en: "Tests whether the candidate can talk about music with specific vocabulary or only generic praise." },
+          approach: { en: "Name one composer plus one specific musical reason — harmonic language, form, a particular work — not biography." },
+          template: { en: "Debussy — because his harmony moves by colour rather than function. In Clair de Lune the chord changes don't feel like they're going anywhere, and that's the point. It taught me that not every phrase needs to resolve." },
+          pitfall: { en: "Don't name a famous composer and praise them in vague terms (\"a genius,\" \"so beautiful\"). If you can't point to one concrete musical feature, the panel sees a name you borrowed, not music you know." },
         },
         {
           question: { en: "What ensemble experience do you have?" },
-          subtext: {
-            en: "Music programmes need players who can listen and adjust, not just soloists.",
-          },
-          approach: {
-            en: "Name the ensemble, your role, and one specific thing you learned from playing with others.",
-          },
-          template: {
-            en: "I've played second violin in my primary school string ensemble for two years. The biggest lesson was that my intonation has to bend toward the first violin, not be technically correct — and that I have to listen to the cello to know when to lean into a phrase.",
-          },
-        },
-        {
-          question: { en: "How will you manage practice with secondary school workload?" },
-          subtext: {
-            en: "Schools fear DSA-Music kids whose grades collapse by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real practice schedule and how you'll protect academic time.",
-          },
-          template: {
-            en: "I practise 90 minutes on weekdays — 30 minutes scales and sight-reading before school, 60 minutes repertoire after dinner. Weekends I do two hours. I finish homework on the bus and in the period right after school, so practice doesn't compete with assignments.",
-          },
-        },
-        {
-          question: { en: "If two MEP schools both offer you, how will you decide?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether the candidate has actually thought about fit.",
-          },
-          approach: {
-            en: "Don't dodge. Pick this school, justify with one specific reason about programme or teacher fit.",
-          },
-          template: {
-            en: "Honestly, your school. Your MEP teacher's emphasis on chamber music is what I want — I've spent most of my P6 year playing solo, and the next four years I want to play with others. If the other school called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Music programmes need players who can listen and adjust, not just soloists." },
+          approach: { en: "Name the ensemble, your role, and one specific thing you learned from playing with others." },
+          template: { en: "I've played second violin in my primary school string ensemble for two years. The biggest lesson was that my intonation has to bend toward the first violin, not be technically correct — and that I have to listen to the cello to know when to lean into a phrase." },
+          pitfall: { en: "Don't just list groups you've joined. If you can't name one thing playing with others taught you, you sound like a soloist who happened to sit in a room with other players." },
         },
       ],
       schools: [
@@ -2622,87 +2183,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love math?" },
-          subtext: {
-            en: "Panels want a specific mathematical experience, not a feeling. \"It's logical\" reads as untrained motivation.",
-          },
-          approach: {
-            en: "Open with one concrete problem or idea you found beautiful, then connect it to how you think.",
-          },
-          template: {
-            en: "The first time I proved that there are infinitely many primes, I realised math isn't about getting answers — it's about being certain something is true forever. That contrast with school math, where you check answers against a key, changed how I work on problems.",
-          },
+          subtext: { en: "Panels want a specific mathematical experience, not a feeling. \"It's logical\" reads as untrained motivation." },
+          approach: { en: "Open with one concrete problem or idea you found beautiful, then connect it to how you think." },
+          template: { en: "The first time I proved there are infinitely many primes, I realised math isn't about getting answers — it's about being certain something is true forever. That contrast with school math, where you just check answers against a key, changed how I work on problems." },
+          pitfall: { en: "Don't fall back on \"it's logical\" or \"I'm good at it\" — that's untrained motivation any student could say. Anchor it to one specific idea or proof that actually moved you." },
         },
         {
           question: { en: "Show me a problem you've worked on recently — walk me through your solution." },
-          subtext: {
-            en: "The interview's most common opening question at the strongest schools. Tests whether the candidate can explain reasoning to another person.",
-          },
-          approach: {
-            en: "Pick a problem you've genuinely solved (from SMOPS, NMOS, a past paper) — not a problem you've memorised. Walk through the key insight, the case split or technique, and what made it click.",
-          },
-          template: {
-            en: "A problem from last year's SMOPS Round 2 — six dots on a circle, count the triangles whose interior contains the centre. I tried small cases first (4 dots, then 5) and noticed the answer was related to how many ways to pick three dots that don't all lie on the same semicircle. The insight was the complementary count.",
-          },
+          subtext: { en: "The most common opening question at the strongest schools. Tests whether the candidate can explain reasoning to another person." },
+          approach: { en: "Pick a problem you've genuinely solved (from SMOPS, NMOS, a past paper) — not one you've memorised. Walk through the key insight, the case split or technique, and what made it click." },
+          template: { en: "A problem from last year's SMOPS Round 2 — six dots on a circle, count the triangles whose interior contains the centre. I tried small cases first (4 dots, then 5) and noticed the answer related to how many ways to pick three dots that don't all lie on the same semicircle. The insight was the complementary count." },
+          pitfall: { en: "Don't pick a problem you've only memorised the answer to — a single follow-up exposes it. Choose one you genuinely solved so you can explain the insight, not just recite the steps." },
         },
         {
           question: { en: "Here's a problem I'd like you to try — think out loud as you go." },
-          subtext: {
-            en: "The thinking-out-loud question. Panels score the process, not the answer.",
-          },
-          approach: {
-            en: "Restate the problem in your own words. Try a small case. Name your strategy out loud (\"let me try parity\"). If stuck, say so and propose an alternative. Do not stay silent.",
-          },
-          template: {
-            en: "Let me make sure I have it right — you want the smallest N such that... Okay. Let me try N = 5 first — that gives... So 5 doesn't work because... Let me try parity — the sum of an odd count of odd numbers is odd...",
-          },
-        },
-        {
-          question: { en: "Tell me about a problem you couldn't solve." },
-          subtext: {
-            en: "Tests honesty and resilience. Schools fear candidates who present a polished image of always being right.",
-          },
-          approach: {
-            en: "Name a real problem, the approaches you tried, why they failed, and what you learned from being stuck.",
-          },
-          template: {
-            en: "A problem from RIPMWC 2024 — I had a counting argument that gave the wrong answer because I was double-counting one configuration. I couldn't see the double-count for a week. When my teacher pointed it out, I realised I'd skipped the small-case sanity check. Now I always check N = 1 and N = 2 against my formula before I trust it.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the math programme, or is this a scatter-shot application?",
-          },
-          approach: {
-            en: "Cite something specific about the school's math culture — a teacher, an olympiad team result, a research mentorship, a specific course in the senior years.",
-          },
-          template: {
-            en: "Your school sends students to the SMO Senior Round annually and has the strongest IMO Singapore selection record over the past decade. The way your math department runs the olympiad training as a regular CCA, not an extracurricular, is what I want from Sec 1 onwards.",
-          },
-        },
-        {
-          question: { en: "How will you balance math training with the rest of the curriculum?" },
-          subtext: {
-            en: "Schools fear DSA-Math kids whose grades elsewhere collapse — and especially fear narrow specialists.",
-          },
-          approach: {
-            en: "Describe a real schedule and name interests outside math.",
-          },
-          template: {
-            en: "I do olympiad problems for an hour on weekday evenings after homework and longer sessions on weekends. I also read history — outside math, that's my favourite subject — and play badminton on Saturdays. Math is my main thing but it's not my only thing.",
-          },
-        },
-        {
-          question: { en: "If two schools both offer you, how will you decide?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether the family has actually thought about fit.",
-          },
-          approach: {
-            en: "Don't dodge. Pick this school, justify with one specific reason about programme or teacher fit.",
-          },
-          template: {
-            en: "Honestly, your school. The way your school structures the IP curriculum's research track from Year 3 means I can move toward research mathematics earlier than at the other school. If the other school called first I'd still wait for your reply.",
-          },
+          subtext: { en: "The thinking-out-loud question. Panels score the process, not the answer." },
+          approach: { en: "Restate the problem in your own words. Try a small case. Name your strategy out loud (\"let me try parity\"). If stuck, say so and propose an alternative. Don't stay silent." },
+          template: { en: "Let me make sure I have it right — you want the smallest N such that... Okay. Let me try N = 5 first — that gives... So 5 doesn't work because... Let me try parity — the sum of an odd count of odd numbers is odd..." },
+          pitfall: { en: "Don't go silent and work it in your head, or freeze when stuck. The panel scores how you think, so narrate your strategy and name an alternative when one approach stalls." },
         },
       ],
       schools: [
@@ -2982,87 +2480,31 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Walk us through a robotics project you built." },
-          subtext: {
-            en: "The panel wants concrete engineering reasoning, not a list of competitions.",
-          },
-          approach: {
-            en: "Pick one project. Describe the problem, your first design, what failed, what you changed. Spend 70% on the failure-and-iteration part.",
-          },
-          template: {
-            en: "Our P5 FLL robot kept missing the loading station because our line sensor read black on the printed mat seam. I tested three sensor heights, then switched from threshold detection to gradient detection — that fixed it. We placed third in the regional.",
-          },
+          subtext: { en: "The panel wants concrete engineering reasoning, not a list of competitions." },
+          approach: { en: "Pick one project. Describe the problem, your first design, what failed, what you changed. Spend most of the time on the failure-and-iteration part." },
+          template: { en: "Our P5 FLL robot kept missing the loading station because the line sensor read black on the printed mat seam. I tested three sensor heights, then switched from threshold detection to gradient detection — that fixed it. We placed third in the regional." },
+          pitfall: { en: "Don't recite trophies and competition names. Without the failure and the fix, the panel can't see your engineering reasoning or whether you really did the work." },
         },
         {
           question: { en: "What programming languages or platforms do you use?" },
-          subtext: {
-            en: "Honesty matters more than range. The panel can spot a kid who's read about Python but never actually written it.",
-          },
-          approach: {
-            en: "Name the platform plus one specific thing you can do in it.",
-          },
-          template: {
-            en: "VEXcode Blocks for our school team — I write the autonomous routines. I started learning Python last year and can do basic loops and conditionals, but I haven't built a full project in it yet.",
-          },
+          subtext: { en: "Honesty matters more than range. The panel can spot a kid who's read about Python but never actually written it." },
+          approach: { en: "Name the platform plus one specific thing you can do in it." },
+          template: { en: "VEXcode Blocks for our school team — I write the autonomous routines. I started learning Python last year and can do basic loops and conditionals, but I haven't built a full project in it yet." },
+          pitfall: { en: "Don't pad the list with languages you've only read about. Claiming Python you can't actually write collapses the moment the panel asks a follow-up; honest range beats an inflated one." },
         },
         {
           question: { en: "Tell us about a time your robot didn't work. What did you do?" },
-          subtext: {
-            en: "Tests systematic debugging instinct vs random poking.",
-          },
-          approach: {
-            en: "Describe the symptom, the hypothesis, the test, the fix. Show ordered thinking.",
-          },
-          template: {
-            en: "Our gripper kept dropping the cube halfway through the lift. I first thought the motor was underpowered, but I measured the current and it was fine. Then I checked the grip surface — the rubber band had stretched. Replaced it and tightened the calibration. Took twenty minutes.",
-          },
-        },
-        {
-          question: { en: "Why our school's robotics program?" },
-          subtext: {
-            en: "Did the family research the actual lab and competition record, or are they applying everywhere with STEM?",
-          },
-          approach: {
-            en: "Name one specific thing about the school's robotics — a coach, a competition track, a piece of equipment, an alumnus project.",
-          },
-          template: {
-            en: "NUS High's research-based robotics tracks — the Year 3 project showcase your school published online featured underwater ROV builds, which is what I want to work on. Most schools stop at competition robotics; yours goes further.",
-          },
+          subtext: { en: "Tests systematic debugging instinct vs. random poking." },
+          approach: { en: "Describe the symptom, the hypothesis, the test, the fix. Show ordered thinking." },
+          template: { en: "Our gripper kept dropping the cube halfway through the lift. I first thought the motor was underpowered, but I measured the current and it was fine. Then I checked the grip surface — the rubber band had stretched. I replaced it and tightened the calibration. Took twenty minutes." },
+          pitfall: { en: "Don't describe random fiddling until it worked, or blame a teammate or the kit. The panel wants to see symptom → hypothesis → test → fix, not luck." },
         },
         {
           question: { en: "Describe a time you disagreed with a teammate on a design decision." },
-          subtext: {
-            en: "Tests collaboration maturity, not whether they always win arguments.",
-          },
-          approach: {
-            en: "Situation → both sides → how it was resolved → what you learned.",
-          },
-          template: {
-            en: "My teammate wanted a larger gear for more torque on our arm. I thought it would slow us down too much in the match. We built both and tested — the smaller gear was 0.6 seconds faster per cycle. He was right that we'd lose grip strength, so we added a second motor instead. I learned to test first, argue second.",
-          },
-        },
-        {
-          question: { en: "How do you balance robotics with academic work?" },
-          subtext: {
-            en: "Schools fear DSA STEM kids who flame out in Sec 2 because robotics swallows their evenings.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I do most of my homework during the school day in short breaks. CCA training nights, I revise on the bus home and only do Math problem sets after dinner — those are the ones that benefit from focus time. Sundays are robotics build day, no homework.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether the candidate would actually enrol.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school — the cross-discipline focus between robotics and biology in your Year 3 modules matches what I want to learn. If the other school called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Tests collaboration maturity, not whether you always win arguments." },
+          approach: { en: "Situation, both sides, how it was resolved, what you learned." },
+          template: { en: "My teammate wanted a larger gear for more torque on our arm. I thought it would slow us down too much in the match. We built both and tested — the smaller gear was 0.6 seconds faster per cycle. He was right that we'd lose grip strength, so we added a second motor instead. I learned to test first, argue second." },
+          pitfall: { en: "Don't tell a story where you were simply right and your teammate was wrong. The panel is watching how you handle disagreement, not whether you won — show you took the other side seriously." },
         },
       ],
       schools: [
@@ -3314,88 +2756,25 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
       interviewQuestions: [
         {
-          question: { en: "Why do you love Chinese?" },
-          subtext: {
-            en: "The panel wants a specific book, author, or scene — not \"because my parents speak Chinese at home.\"",
-          },
-          approach: {
-            en: "Open with one concrete reading memory, then connect to your character.",
-          },
-          template: {
-            en: "Last year I read 龙应台 《目送》, and the line about watching her son walk away made me cry — that was the first time I realised Chinese could capture something English I had read couldn't.",
-          },
+          question: { en: "Why do you love Chinese?", zh: "你为什么喜欢华文" },
+          subtext: { en: "The panel wants a specific book, author, or scene — not \"because my parents speak Chinese at home.\"", zh: "评审想听到具体的一本书、一位作者或一个画面，而不是「因为父母在家讲华语」。" },
+          approach: { en: "Open with one concrete reading memory, then connect it to your character.", zh: "先讲一个具体的阅读记忆，再连到你的性格。" },
+          template: { en: "Last year I read 龙应台 《目送》, and the line about watching her son walk away made me cry — that was the first time I realised Chinese could capture something the English I had read couldn't.", zh: "去年我读了龙应台的《目送》，那段写她目送儿子背影离去的文字让我哭了——那是我第一次意识到，华文能写出我读过的英文写不出的东西。" },
+          pitfall: { en: "Don't fall back on \"my parents speak it at home\" or \"it's my mother tongue\" — that shows habit, not love. Name a real work you can actually talk about.", zh: "别只说「父母在家讲华语」或「这是我的母语」——那说明的是习惯，不是热爱。要点出一部你真能聊下去的作品。" },
         },
         {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the Chinese department, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific feature of the school's Chinese programme — Bicultural Studies, a known competition record, a teacher mentioned at open house.",
-          },
-          template: {
-            en: "Dunman's Bicultural Studies Programme — I read your alumni article on the Beijing immersion trip and I want to be in the cohort that goes through that.",
-          },
+          question: { en: "What's the last Chinese book you read?", zh: "你最近读的一本华文书是什么" },
+          subtext: { en: "Can the candidate go beyond textbook titles and speak honestly about a personal response?", zh: "考生能不能跳出课本书目，老实说出自己真正的感受？" },
+          approach: { en: "Pick a real book, name one specific scene or line, and say what you actually thought — including what you disliked.", zh: "选一本真读过的书，点出一个具体的场景或句子，说出你真实的想法——包括你不喜欢的地方。" },
+          template: { en: "余华 《活着》. I didn't like it the first time because everyone keeps dying. On the re-read I understood 福贵 is not the victim — the book is asking what 活 means when everything is taken away.", zh: "余华的《活着》。第一次读我不喜欢，因为里面的人一个接一个死去。重读时我才明白，福贵不是受害者——这本书其实在问：当一切都被夺走，活着还意味着什么。" },
+          pitfall: { en: "Don't recite a textbook title you can't discuss, and don't summarise the plot like a book report. The panel will probe one scene — be ready to go deep, not wide.", zh: "别报一本你聊不下去的课本书目，也别像写读书报告那样复述情节。评审会就某个场景追问——要能往深里谈，而不是泛泛而谈。" },
         },
         {
-          question: { en: "What's the last Chinese book you read?" },
-          subtext: {
-            en: "Can the candidate go beyond textbook titles and speak honestly about a personal response?",
-          },
-          approach: {
-            en: "Pick a real book, name one specific scene or line, and say what you actually thought — including what you disliked.",
-          },
-          template: {
-            en: "余华 《活着》. I didn't like it the first time because everyone keeps dying. On the re-read I understood 福贵 is not the victim — the book is asking what 活 means when everything is taken away.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time Chinese was difficult for you." },
-          subtext: {
-            en: "Schools want growth narratives, not natural-talent claims.",
-          },
-          approach: {
-            en: "Pick a real struggle, describe what you did, share the result.",
-          },
-          template: {
-            en: "My P5 composition was returned with red ink on every paragraph. I started keeping a notebook of phrases I copied from books I liked, and by P6 SA2 my essay scored 38 / 40.",
-          },
-        },
-        {
-          question: { en: "How is Chinese different from English for you?" },
-          subtext: {
-            en: "Tests whether the candidate has thought about language at a level beyond translation.",
-          },
-          approach: {
-            en: "Name one specific feature — tone, character images, classical roots — and give one example.",
-          },
-          template: {
-            en: "Chinese characters carry pictures inside them. 休 is a person resting against a tree. English never does that — once I noticed it, I started reading Chinese slower because every character is a small image.",
-          },
-        },
-        {
-          question: { en: "How do you keep up Chinese alongside English-medium subjects?" },
-          subtext: {
-            en: "Schools fear DSA candidates who flame out in Higher Chinese by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real routine, not platitudes about discipline.",
-          },
-          template: {
-            en: "I read a Chinese book for 20 minutes before bed every night — usually a chapter. On weekends my mother and I watch one episode of a Chinese documentary together. It's not extra work, it's how I unwind.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason — Bicultural Studies fit, teacher rapport, programme depth.",
-          },
-          template: {
-            en: "Honestly, your school. Hwa Chong's Bicultural Studies takes Chinese further than any other programme I researched, and that's the future I want.",
-          },
+          question: { en: "How is Chinese different from English for you?", zh: "对你来说，华文跟英文有什么不一样" },
+          subtext: { en: "Tests whether the candidate has thought about language at a level beyond translation.", zh: "考的是考生有没有在翻译之上思考过语言本身。" },
+          approach: { en: "Name one specific feature — tone, character images, classical roots — and give one example.", zh: "点出一个具体的特点——声调、字里的图像、古典渊源——再举一个例子。" },
+          template: { en: "Chinese characters carry pictures inside them. 休 is a person resting against a tree. English never does that — once I noticed it, I started reading Chinese slower because every character is a small image.", zh: "华文的字里藏着图像。「休」就是一个人靠在树旁歇息。英文没有这一点——发现之后，我读华文读得更慢了，因为每个字都是一幅小小的画。" },
+          pitfall: { en: "\"Chinese is harder\" or \"English is more useful\" is not an answer — both are clichés that say nothing about the language. Give a concrete linguistic feature you can show with one example.", zh: "「华文比较难」或「英文比较有用」不算回答——这两句套话对语言本身什么也没说。要给出一个能用例子展示的具体语言特点。" },
         },
       ],
       schools: [
@@ -3669,87 +3048,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love dance?" },
-          subtext: {
-            en: "Panels want a specific moment — first performance, breakthrough class, a piece you couldn't stop watching — not \"because it makes me happy.\"",
-          },
-          approach: {
-            en: "Open with one concrete memory, then connect to your character.",
-          },
-          template: {
-            en: "The first time I did a Mongolian shoulder shake on stage and saw my mother in the front row tearing up — that's when I knew dance wasn't just an after-school activity for me.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the dance programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific item — SYF Distinction, a piece you watched on YouTube, the artistic director's training.",
-          },
-          template: {
-            en: "Your Chinese Dance group's SYF Arts Presentation Distinction in 2025 — I watched the showcase clip three times. The Tibetan piece's transitions are exactly the kind of technical work I want to grow into.",
-          },
+          subtext: { en: "Panels want a specific moment — first performance, breakthrough class, a piece you couldn't stop watching — not \"because it makes me happy.\"" },
+          approach: { en: "Open with one concrete memory, then connect to your character." },
+          template: { en: "The first time I did a Mongolian shoulder shake on stage and saw my mother in the front row tearing up — that's when I knew dance wasn't just an after-school activity for me." },
+          pitfall: { en: "Don't say \"it makes me happy\" or \"I've danced since I was three\" and stop there. Without a specific moment, style, or piece, it reads as a hobby, not a calling." },
         },
         {
           question: { en: "What's the hardest dance piece you've worked on?" },
-          subtext: {
-            en: "Can the dancer articulate technical or emotional difficulty beyond \"the steps were hard\"?",
-          },
-          approach: {
-            en: "Name the piece, the specific moment, what you had to change in your body or mind.",
-          },
-          template: {
-            en: "Last year's Dai folk dance — the slow leg extensions on one foot. I kept losing balance. My teacher made me hold the tendu for 60 seconds every morning. By performance day I held the line.",
-          },
-        },
-        {
-          question: { en: "Tell us about an injury or setback in dance." },
-          subtext: {
-            en: "Schools want growth narratives, not natural-talent claims.",
-          },
-          approach: {
-            en: "Describe a real setback, what you did, what changed.",
-          },
-          template: {
-            en: "I sprained my ankle six weeks before SYF in P5. I sat out floor work but kept doing upper-body and core daily. I performed but my teacher said it taught me what every dancer needs to learn — how to stay in the room when you can't be on the floor.",
-          },
+          subtext: { en: "Can the dancer articulate technical or emotional difficulty beyond \"the steps were hard\"?" },
+          approach: { en: "Name the piece, the specific moment, and what you had to change in your body or your mind." },
+          template: { en: "Last year's Dai folk dance — the slow leg extensions on one foot. I kept losing balance. My teacher made me hold the tendu for 60 seconds every morning. By performance day I held the line." },
+          pitfall: { en: "Don't just say \"the steps were hard\" — name the exact technical or emotional demand. Don't pick a piece you can't speak about in detail, and don't claim it came easily; the panel wants to hear how you worked at it." },
         },
         {
           question: { en: "Who is a dancer or choreographer you admire?" },
-          subtext: {
-            en: "Tests whether the candidate watches dance outside their own class.",
-          },
-          approach: {
-            en: "Name someone specific — and be ready to discuss one specific piece.",
-          },
-          template: {
-            en: "Yang Liping. Her peacock dance solo — the way she holds the arms is the technical aspiration I think about every time I run through my own arm work.",
-          },
-        },
-        {
-          question: { en: "How do you balance dance training with school?" },
-          subtext: {
-            en: "Schools fear DSA dancers who fall behind academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real routine, not platitudes.",
-          },
-          template: {
-            en: "I do English homework on the way to studio, finish Math before dinner, and revise on weekends. I don't dance on Sundays — that's my study and rest day, and my teacher agreed it was the right call.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. SOTA's programme structure dedicates more studio hours per week and gives me the genre depth I want — and that matters more to me than a shorter commute.",
-          },
+          subtext: { en: "Tests whether the candidate watches dance outside their own class." },
+          approach: { en: "Name someone specific — and be ready to discuss one specific piece." },
+          template: { en: "Yang Liping. Her peacock dance solo — the way she holds the arms is the technical aspiration I think about every time I run through my own arm work." },
+          pitfall: { en: "Don't name someone famous you can't actually discuss. If you can't point to one specific piece and what you take from it, the panel sees a name you Googled, not a dancer you watch." },
         },
       ],
       schools: [
@@ -4023,87 +3339,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love drama?" },
-          subtext: {
-            en: "Panels want a specific moment — first performance, a play you watched, a moment on stage — not \"because it lets me be someone else.\"",
-          },
-          approach: {
-            en: "Open with one concrete memory, then connect to your character.",
-          },
-          template: {
-            en: "The first time I made an audience laugh on a line I didn't think was funny — I realised then that what's on the page is only half of it. The other half is what happens between you and the room.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the drama programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific item — a recent production, a director's name, the school's drama showcase you attended.",
-          },
-          template: {
-            en: "I watched your school's 2025 SYF Distinction piece on YouTube — the staging was unusually still for a school production, and that's the kind of theatre I want to learn from.",
-          },
+          subtext: { en: "Panels want a specific moment — first performance, a play you watched, a moment on stage — not \"because it lets me be someone else.\"" },
+          approach: { en: "Open with one concrete memory, then connect to your character." },
+          template: { en: "The first time I made an audience laugh on a line I didn't think was funny — I realised then that what's on the page is only half of it. The other half is what happens between you and the room." },
+          pitfall: { en: "Don't say \"it lets me be someone else\" or \"I like attention.\" Without a real moment on stage or in the audience, it reads as a cliché the panel has heard many times." },
         },
         {
           question: { en: "What's a play or film that changed how you think about acting?" },
-          subtext: {
-            en: "Tests whether the candidate watches theatre seriously, not just performs.",
-          },
-          approach: {
-            en: "Name something specific — and be ready to discuss one specific moment.",
-          },
-          template: {
-            en: "Watching Wild Rice's production of Emily of Emerald Hill — the way the actress played all the family members herself, just by changing posture. I realised acting was about specificity, not impression.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time something went wrong on stage." },
-          subtext: {
-            en: "Schools want recovery stories, not perfection claims.",
-          },
-          approach: {
-            en: "Describe a real moment, what you did, what you learned.",
-          },
-          template: {
-            en: "My scene partner forgot a cue in our P5 showcase. I improvised a line in character to give her a way back in. She found it. After that, I stopped fearing the gaps — they're where the listening happens.",
-          },
+          subtext: { en: "Tests whether the candidate watches theatre seriously, not just performs." },
+          approach: { en: "Name something specific — and be ready to discuss one specific moment." },
+          template: { en: "Watching Wild Rice's production of Emily of Emerald Hill — the way the actress played all the family members herself, just by changing posture. I realised acting was about specificity, not impression." },
+          pitfall: { en: "Don't name a blockbuster and praise the actor in general terms. If you can't point to one specific moment and what it taught you, it shows you watch as a fan, not as a student of the craft." },
         },
         {
           question: { en: "What's the difference between performing and acting?" },
-          subtext: {
-            en: "Tests whether the candidate has thought about craft at a level beyond \"being on stage.\"",
-          },
-          approach: {
-            en: "Give a specific distinction with a concrete example.",
-          },
-          template: {
-            en: "Performing is showing the audience what you feel. Acting is being in the situation, and trusting the audience to see what's there. When I played Ali Baba last year, the night I stopped performing him and just let him be scared was the night the audience finally laughed at the right moments.",
-          },
-        },
-        {
-          question: { en: "How do you balance drama training with school?" },
-          subtext: {
-            en: "Schools fear DSA actors who flame out academically.",
-          },
-          approach: {
-            en: "Describe a real routine, not platitudes.",
-          },
-          template: {
-            en: "I do homework on the way to rehearsal and revise on weekends. Friday nights I read plays instead of phone — it's the same thing for me, but it counts as study because it builds my craft.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. SOTA's Theatre programme runs five days a week of studio time — that's more than any other school can offer, and that's what I want.",
-          },
+          subtext: { en: "Tests whether the candidate has thought about craft at a level beyond \"being on stage.\"" },
+          approach: { en: "Give a specific distinction with a concrete example." },
+          template: { en: "Performing is showing the audience what you feel. Acting is being in the situation, and trusting the audience to see what's there. When I played Ali Baba last year, the night I stopped performing him and just let him be scared was the night the audience finally laughed at the right moments." },
+          pitfall: { en: "Don't give a dictionary-style distinction with no example. Without a real role where you felt the difference yourself, it sounds like a line you memorised rather than craft you understand." },
         },
       ],
       schools: [
@@ -4377,87 +3630,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love drawing or making art?" },
-          subtext: {
-            en: "Panels want a specific moment — a piece you couldn't stop working on, an artist you discovered — not \"because I'm good at it.\"",
-          },
-          approach: {
-            en: "Open with one concrete memory, then connect to your character.",
-          },
-          template: {
-            en: "The first time I drew my grandmother's hands while she peeled garlic — I started over six times because each time I looked back at her hands, they had moved. That was when I realised drawing was about seeing, not copying.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the art programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific item — a school showcase, an exhibition, an alumni artist, the studio facilities.",
-          },
-          template: {
-            en: "I visited your school's Year-End Showcase last December. The way your Sec 4 student handled charcoal — those marks were doing work I want to learn to make. That's why your school.",
-          },
+          subtext: { en: "Panels want a specific moment — a piece you couldn't stop working on, an artist you discovered — not \"because I'm good at it.\"" },
+          approach: { en: "Open with one concrete memory, then connect it to your character." },
+          template: { en: "The first time I drew my grandmother's hands while she peeled garlic, I started over six times because each time I looked back her hands had moved. That was when I realised drawing is about seeing, not copying." },
+          pitfall: { en: "Don't say \"I've loved art since I was small\" or \"because I'm creative\" — those fit any applicant. Anchor it to one real moment a panel can picture." },
         },
         {
           question: { en: "Walk us through this piece — why did you make it?" },
-          subtext: {
-            en: "Can the candidate narrate process, choices, and what they'd change next time?",
-          },
-          approach: {
-            en: "Talk about what you were trying to see, what you tried, what didn't work, what surprised you.",
-          },
-          template: {
-            en: "This is my grandfather's chair after he passed. I started with photographs but the chair looked staged. I went back and drew it three times from where I usually sit in the living room — the third version finally felt like the chair, not a portrait of the chair.",
-          },
+          subtext: { en: "Can the candidate narrate process, choices, and what they'd change next time?" },
+          approach: { en: "Talk about what you were trying to see, what you tried, what didn't work, what surprised you." },
+          template: { en: "This is my grandfather's chair after he passed. I started from photographs but the chair looked staged. I went back and drew it three times from where I usually sit in the living room — the third version finally felt like the chair, not a portrait of the chair." },
+          pitfall: { en: "Don't just describe what the piece shows or call it \"my best work.\" If you can't name a choice you made or something you'd change, the panel assumes you didn't really drive the work." },
         },
         {
           question: { en: "Which artist or artwork has changed how you see?" },
-          subtext: {
-            en: "Tests whether the candidate looks at art seriously, not just makes it.",
-          },
-          approach: {
-            en: "Name someone specific. Singapore artists, Asian masters, or Western canon are all fine — be ready to discuss one specific work.",
-          },
-          template: {
-            en: "Georgette Chen's still lifes at the National Gallery. The first time I noticed how she painted lychee skin — the bumpy texture coming through with just three or four marks — I rethought how much detail I was putting into my own still lifes.",
-          },
-        },
-        {
-          question: { en: "Tell us about a piece that didn't work." },
-          subtext: {
-            en: "Schools want process honesty, not perfection claims.",
-          },
-          approach: {
-            en: "Describe a real piece, what failed, what you understood.",
-          },
-          template: {
-            en: "I spent three weeks on a self-portrait that never resolved. The face kept looking like someone else. I gave up and started drawing my hands instead. The hand drawings became my strongest pieces — because I let go of the face, not in spite of it.",
-          },
-        },
-        {
-          question: { en: "How do you balance art-making with school?" },
-          subtext: {
-            en: "Schools fear DSA artists who fall behind academically.",
-          },
-          approach: {
-            en: "Describe a real routine, not platitudes.",
-          },
-          template: {
-            en: "I sketch on the bus and during recess — small studies, 5 minutes each. Weekends I do longer pieces. I don't draw on Sunday nights — that's revision and rest. Drawing every day, just briefly, is more sustainable than long sessions on weekends only.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. SOTA's six-year IB Visual Arts pathway gives me studio time no other school can. That structure is the future I want.",
-          },
+          subtext: { en: "Tests whether the candidate looks at art seriously, not just makes it." },
+          approach: { en: "Name someone specific. Singapore artists, Asian masters, or the Western canon are all fine — be ready to discuss one specific work." },
+          template: { en: "Georgette Chen's still lifes at the National Gallery. The first time I noticed how she painted lychee skin — the bumpy texture coming through in just three or four marks — I rethought how much detail I was forcing into my own still lifes." },
+          pitfall: { en: "Don't name a famous artist you can't actually talk about (\"Van Gogh, because his work is amazing\"). Pick one whose specific work you can describe and that genuinely changed something in your own practice." },
         },
       ],
       schools: [
@@ -4701,87 +3891,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love hockey?" },
-          subtext: {
-            en: "Panels want a specific moment, not a feeling. \"I like running with the stick\" reads as weak motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory, then connect it to character.",
-          },
-          template: {
-            en: "We lost the inter-school zonal in P5 on a short corner in the last minute. That night I asked my mother for a goalkeeper kit. I'm a midfielder, but I wanted to know what the keeper saw.",
-          },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"I like running with the stick\" reads as weak motivation." },
+          approach: { en: "Open with one concrete memory, then connect it to character." },
+          template: { en: "We lost the inter-school zonal in P5 on a short corner in the last minute. That night I asked my mother for a goalkeeper kit. I'm a midfielder, but I wanted to know what the keeper saw." },
+          pitfall: { en: "Don't answer with a generic feeling like \"it's fun\". Don't recite a highlight with no link to who you are." },
         },
         {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the hockey programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing — SSP status, a coach's name, an NSG result, a training pattern.",
-          },
-          template: {
-            en: "Anglo-Chinese School (Independent) — your hockey programme is under SSP and the senior team trains four times a week. That's the volume I want from Sec 1.",
-          },
-        },
-        {
-          question: { en: "What position do you play and why?" },
-          subtext: {
-            en: "Can the kid articulate the role, not just label it?",
-          },
-          approach: {
-            en: "Name the position plus the job.",
-          },
-          template: {
-            en: "Centre midfielder — my job is connecting defence to attack and being available for the press break. I like the position because the field is in front of you.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I missed my P5 school team after first trial. I joined Saturday morning club sessions and worked on my reverse-stick reception. I made the team next round and played zonal by NSG.",
-          },
+          question: { en: "What position do you play, and why?" },
+          subtext: { en: "Can the kid articulate the role, not just label it?" },
+          approach: { en: "Name the position plus the job it does." },
+          template: { en: "Centre midfielder — my job is connecting defence to attack and being available for the press break. I like the position because the field is in front of you." },
+          pitfall: { en: "Don't just name the position and stop. Avoid saying you can play anywhere — it reads as not understanding any single role well." },
         },
         {
           question: { en: "Who is a teammate or coach you remember most?" },
-          subtext: {
-            en: "Whether the kid sees teammates as people or background.",
-          },
-          approach: {
-            en: "Name someone specific by role + what you learned.",
-          },
-          template: {
-            en: "My P6 captain made me do extra push passes after every training. I didn't enjoy it but my pass weight became reliable. He's now in a Sec 1 SSP school and I want to be in that pipeline too.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent trainings?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes.",
-          },
-          template: {
-            en: "I do English and Math on the bus to training and finish Science before dinner. Sundays are for revision and rest. My coach checks in with my mother on academic balance — that's a system, not just discipline.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your SSP status gives me four sessions a week from Sec 1 — no other school can match that volume, and that's the volume I need to keep growing.",
-          },
+          subtext: { en: "Whether the kid sees teammates as people or background." },
+          approach: { en: "Name someone specific by role, plus what you learned." },
+          template: { en: "My P6 captain made me do extra push passes after every training. I didn't enjoy it, but my pass weight became reliable. He's now in a Sec 1 SSP school and I want to be in that pipeline too." },
+          pitfall: { en: "Don't name a national or pro player you've never met. Keep it someone real you trained with, and say what concretely improved." },
         },
       ],
       schools: [
@@ -5025,87 +4152,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love squash?" },
-          subtext: {
-            en: "Panels want a specific moment, not a feeling. \"I like hitting hard\" reads as weak motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory, then connect it to character.",
-          },
-          template: {
-            en: "I lost my P5 zonal semi-final 2-3 to a player who hit nothing but length and drops. He never tried to hit through me — he made me run myself out. That night I asked my coach to teach me drops.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the squash programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing — SSP status, a senior player you watched, the training pattern.",
-          },
-          template: {
-            en: "Anglo-Chinese School (Independent) — your squash programme is under SSP and trains four times a week with court time built into the curriculum. That volume is what I want from Sec 1.",
-          },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"I like hitting hard\" reads as weak motivation." },
+          approach: { en: "Open with one concrete memory, then connect it to character." },
+          template: { en: "I lost my P5 zonal semi-final 2-3 to a player who hit nothing but length and drops. He never tried to hit through me — he made me run myself out. That night I asked my coach to teach me drops." },
+          pitfall: { en: "Don't answer with a generic feeling like \"I like hitting hard\". Don't equate loving the sport with simply enjoying winning." },
         },
         {
           question: { en: "What's the strongest part of your game?" },
-          subtext: {
-            en: "Can the kid articulate their game honestly?",
-          },
-          approach: {
-            en: "Name one strength specifically; do not list everything.",
-          },
-          template: {
-            en: "Length — I can drive length on my backhand for ten balls in a row in practice. My weakness is volley work, which I'm building this year.",
-          },
-        },
-        {
-          question: { en: "Tell us about a match you lost and what you learned." },
-          subtext: {
-            en: "Schools want growth narratives, not natural-talent claims.",
-          },
-          approach: {
-            en: "Describe a real loss, what you changed afterward, what improved.",
-          },
-          template: {
-            en: "I lost a tournament match 0-3 because I kept hitting hard and short. My coach made me play three matches the next week where I wasn't allowed to hit anything past the service box. After that, my length under pressure became consistent.",
-          },
+          subtext: { en: "Can the kid articulate their game honestly?" },
+          approach: { en: "Name one strength specifically; do not list everything." },
+          template: { en: "Length — I can drive length on my backhand for ten balls in a row in practice. My weakness is volley work, which I'm building this year." },
+          pitfall: { en: "Don't list every shot as a strength — it reads as no self-awareness. Naming a weakness you're actively fixing is fine; claiming you have none is not." },
         },
         {
           question: { en: "Who is a coach or training partner you remember most?" },
-          subtext: {
-            en: "Whether the kid sees teammates as people or background.",
-          },
-          approach: {
-            en: "Name someone specific by role + what you learned.",
-          },
-          template: {
-            en: "My P6 coach made me solo-hit for fifteen minutes before every session. I didn't want to, but my rallies extended from five shots to twenty-five shots in six months. That habit changed my whole game.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent court sessions?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes.",
-          },
-          template: {
-            en: "I do English and Math homework on the bus to court and finish Science before dinner. Sundays are for revision and rest. My academic teacher reviews my marks with my mother every report book — that's a system, not just discipline.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your SSP gives me four sessions a week from Sec 1 and a coach pipeline to NSG A-Division — no other school can match that volume, and that's what I need.",
-          },
+          subtext: { en: "Whether the kid sees teammates as people or background." },
+          approach: { en: "Name someone specific by role, plus what you learned." },
+          template: { en: "My P6 coach made me solo-hit for fifteen minutes before every session. I didn't want to, but my rallies extended from five shots to twenty-five in six months. That habit changed my whole game." },
+          pitfall: { en: "Don't name a pro player you've never met. Keep it someone real you trained with, and say what concretely changed in your game." },
         },
       ],
       schools: [
@@ -5349,87 +4413,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Tell us about a time you led a team." },
-          subtext: {
-            en: "Panels want a specific situation, action, and result — not a job description.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "Our P6 Scout patrol failed our first night-hike checkpoint because we didn't agree on a navigator. I asked everyone to take 30 seconds to vote, then took accountability for the route myself. We cleared every checkpoint after.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the leadership programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific item — the Prefectorial Board structure, a specific service or community programme, an alumni leader.",
-          },
-          template: {
-            en: "Raffles Institution's Student Council elections involve manifesto presentations and Sec 1 students can submit candidacy with senior endorsement. That structure forces real leadership thinking from day one — and that's what I want.",
-          },
+          subtext: { en: "Panels want a specific situation, action, and result — not a job description." },
+          approach: { en: "Situation, action, result — in two sentences." },
+          template: { en: "Our P6 Scout patrol failed our first night-hike checkpoint because we didn't agree on a navigator. I asked everyone to take 30 seconds to vote, then took accountability for the route myself. We cleared every checkpoint after." },
+          pitfall: { en: "Don't describe your title or duties instead of one concrete moment. Don't claim sole credit for a team result — name what others did too." },
         },
         {
           question: { en: "Tell us about a time you disagreed with a teacher or coach." },
-          subtext: {
-            en: "Tests whether the candidate can hold their ground respectfully — and whether they can be wrong gracefully.",
-          },
-          approach: {
-            en: "Describe a real moment, what you did, what you learned — including if you were wrong.",
-          },
-          template: {
-            en: "My CCA teacher wanted to cancel a planned community drive after only six sign-ups. I asked if we could try once more with a different message. We got nineteen sign-ups on the second poster. But I also learned later that her concern about exhausting the team was right — we did three drives that term and the last one was thin.",
-          },
+          subtext: { en: "Tests whether the candidate can hold their ground respectfully — and whether they can be wrong gracefully." },
+          approach: { en: "Describe a real moment, what you did, and what you learned — including if you were wrong." },
+          template: { en: "My CCA teacher wanted to cancel a planned community drive after only six sign-ups. I asked if we could try once more with a different message. We got nineteen sign-ups on the second poster. But I also learned later that her concern about exhausting the team was right — we did three drives that term and the last one was thin." },
+          pitfall: { en: "Don't tell a story where you were right and the adult was simply wrong — that shows ego, not judgement. Don't pick a disagreement so trivial it took no courage." },
         },
         {
           question: { en: "Describe a teammate or peer you've learned the most from." },
-          subtext: {
-            en: "Whether the candidate sees teammates as people they study, or just background.",
-          },
-          approach: {
-            en: "Name someone specific by role plus what you took away.",
-          },
-          template: {
-            en: "Our Scouts deputy patrol leader didn't speak much but always volunteered first for the tasks no one wanted. I started doing the same in Class Committee work — sign-off, cleanup, the after-event report nobody else wanted to write. The teachers noticed who actually closed loops.",
-          },
-        },
-        {
-          question: { en: "What's a project that didn't work, and why?" },
-          subtext: {
-            en: "Schools want growth narratives, not perfection claims.",
-          },
-          approach: {
-            en: "Describe a real project, what failed, what you understood.",
-          },
-          template: {
-            en: "I tried to start a P5 reading buddy programme for P1 students. It collapsed after three weeks because I planned the sessions but didn't plan how to recruit P1 teachers' help. The lesson: leadership isn't designing the activity, it's getting the people who matter to commit before you announce.",
-          },
-        },
-        {
-          question: { en: "How do you decide what to commit to?" },
-          subtext: {
-            en: "Schools fear DSA-Leadership candidates who over-commit and fail academically.",
-          },
-          approach: {
-            en: "Describe a real filter, not platitudes about prioritising.",
-          },
-          template: {
-            en: "I do three things long-term — Scouts, Class Committee, and a Saturday morning reading session at the community library. I say no to one-off events that compete with those three because depth is what I want, not a wider list.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. The Student Leadership Council structure here lets Sec 1 students propose initiatives directly to the Principal — that's the leadership pipeline I'm committing to.",
-          },
+          subtext: { en: "Tests whether the candidate sees teammates as people they study, or just background." },
+          approach: { en: "Name someone specific by role, plus what you took away." },
+          template: { en: "Our Scouts deputy patrol leader didn't speak much but always volunteered first for the tasks no one wanted. I started doing the same in Class Committee work — sign-off, cleanup, the after-event report nobody else wanted to write. The teachers noticed who actually closed loops." },
+          pitfall: { en: "Don't pick the obvious star and praise their talent — show what habit of theirs you copied. Don't make the story really about yourself; the lesson should come from them." },
         },
       ],
       schools: [
@@ -5673,87 +4674,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love volleyball?" },
-          subtext: {
-            en: "Panels want a specific moment, not a feeling. \"I like spiking\" reads as untrained motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character.",
-          },
-          template: {
-            en: "We lost the inter-class final in P5 because I shanked the last serve receive. That night I asked my coach what I should have done differently — that was the first time I cared more about the platform than the kill.",
-          },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"I like spiking\" reads as untrained motivation." },
+          approach: { en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character." },
+          template: { en: "We lost the inter-class final in P5 because I shanked the last serve receive. That night I asked my coach what I should have done differently — that was the first time I cared more about the platform than the kill." },
+          pitfall: { en: "Don't answer with a generic feeling like \"I like spiking\". Don't reduce a team sport to your own highlight moments." },
         },
         {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the volleyball programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's volleyball — a coach's name, an NSG result, a training pattern.",
-          },
-          template: {
-            en: "Dunman High's volleyball programme trains four times a week and has produced national-team players. That's the volume I want from Sec 1.",
-          },
-        },
-        {
-          question: { en: "What position do you play and why?" },
-          subtext: {
-            en: "Can the kid articulate the role, not just label it?",
-          },
-          approach: {
-            en: "Name the position plus the job.",
-          },
-          template: {
-            en: "Outside hitter — my job is converting the high ball when the setter is in trouble and digging in the back row when we're not on offence. I like the position because you're always in the play.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I missed my P5 school team after the first trial. I went to a Saturday morning club, drilled platforms for ten weeks straight, and made the team next round. I played setter at zonals.",
-          },
+          question: { en: "What position do you play, and why?" },
+          subtext: { en: "Can the kid articulate the role, not just label it?" },
+          approach: { en: "Name the position plus the job it does." },
+          template: { en: "Outside hitter — my job is converting the high ball when the setter is in trouble and digging in the back row when we're not on offence. I like the position because you're always in the play." },
+          pitfall: { en: "Don't just name the position and stop. Avoid claiming you can play every position — it reads as not understanding any one of them." },
         },
         {
           question: { en: "Is there a teammate or coach you remember most?" },
-          subtext: {
-            en: "Whether the kid sees teammates as people or background.",
-          },
-          approach: {
-            en: "Name someone specific by role + what you learned from them.",
-          },
-          template: {
-            en: "Our P6 captain made me serve 50 times after every practice — overhand, into a 1-square-metre zone. I missed most of them at first. By NSG my serve was the most reliable in the team. He taught me that a habit beats a highlight.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent trainings?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I do English and Math homework on the bus to training and finish Science before dinner. I keep Sundays for revision. My coach asks for my report book every term — that's a real system, not just willpower.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your coach's emphasis on serve-receive matches how I think about the game. If the other school called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Whether the kid sees teammates as people or background." },
+          approach: { en: "Name someone specific by role, plus what you learned from them." },
+          template: { en: "Our P6 captain made me serve 50 times after every practice — overhand, into a one-square-metre zone. I missed most of them at first. By NSG my serve was the most reliable in the team. He taught me that a habit beats a highlight." },
+          pitfall: { en: "Don't name a national or pro player you've never met. Keep it someone real you trained with, and say what concretely changed in you." },
         },
       ],
       schools: [
@@ -5997,87 +4935,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love table tennis?" },
-          subtext: {
-            en: "Panels want a specific moment, not a feeling. \"I like winning\" reads as untrained motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory — a match, a coach moment, a specific stroke — then connect it to character.",
-          },
-          template: {
-            en: "I lost the inter-school P5 quarter-final 11-9 in the deciding game because I missed a short push receive. That night I asked my coach to feed me short backspin for an hour. The next month I won the same opponent 3-1. That was when I learned the small skills win the big points.",
-          },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"I like winning\" reads as untrained motivation." },
+          approach: { en: "Open with one concrete memory — a match, a coach moment, a specific stroke — then connect it to character." },
+          template: { en: "I lost the inter-school P5 quarter-final 11-9 in the deciding game because I missed a short push receive. That night I asked my coach to feed me short backspin for an hour. The next month I beat the same opponent 3-1 — that was when I learned the small skills win the big points." },
+          pitfall: { en: "Don't answer with a generic feeling like \"I like winning\". Don't recite results with no link to what you learned about yourself." },
         },
         {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the table-tennis programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's table tennis — a coach's name, a recent NSG result, a training pattern.",
-          },
-          template: {
-            en: "Dunman High's table tennis trains four times a week and the SAP environment means I can keep my Higher Chinese alongside competitive training. That combination is rare.",
-          },
-        },
-        {
-          question: { en: "What is your playing style and why?" },
-          subtext: {
-            en: "Can the kid articulate the style, not just label it?",
-          },
-          approach: {
-            en: "Name the style plus what it requires from you.",
-          },
-          template: {
-            en: "Shakehand two-winged attacker. My job is to open with a forehand loop off any push and stay in the rally with backhand counters. I picked it because my coach said my legs are stronger than my wrist, and the style rewards leg drive more than wrist flick.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I was knocked out in the first round of STTA Age Group last year because I couldn't read sidespin serves. I spent eight Saturdays at the club only practising serve receive against three different sidespin players. At the next tournament I made the round of 16.",
-          },
+          question: { en: "What is your playing style, and why?" },
+          subtext: { en: "Can the kid articulate the style, not just label it?" },
+          approach: { en: "Name the style plus what it requires from you." },
+          template: { en: "Shakehand two-winged attacker — my job is to open with a forehand loop off any push and stay in the rally with backhand counters. I picked it because my coach said my legs are stronger than my wrist, and the style rewards leg drive more than wrist flick." },
+          pitfall: { en: "Don't name a style as a buzzword without explaining what it demands of you. Avoid copying a famous player's label if it doesn't match how you actually play." },
         },
         {
           question: { en: "Is there a coach or training partner you remember most?" },
-          subtext: {
-            en: "Whether the kid sees coaching as a relationship or a transaction.",
-          },
-          approach: {
-            en: "Name someone specific by role + what you learned from them.",
-          },
-          template: {
-            en: "My P5 club coach made me serve 100 short backspins every session before any rally drill. I hated it at first because I wanted to play games. Now my short-backspin serve is the most consistent part of my game. He taught me that the boring repetition is where the matches are actually won.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent trainings?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I finish English and Math homework before training because I'm too tired after. Science I do on weekends. My mother holds the report book and shows my coach every term — if my grades slip, I miss training that week. That's the rule we set together.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your head coach's emphasis on backhand opening matches how I want to develop. If School A called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Whether the kid sees coaching as a relationship or a transaction." },
+          approach: { en: "Name someone specific by role, plus what you learned from them." },
+          template: { en: "My P5 club coach made me serve 100 short backspins every session before any rally drill. I hated it at first because I wanted to play games. Now my short-backspin serve is the most consistent part of my game. He taught me that boring repetition is where matches are actually won." },
+          pitfall: { en: "Don't name a world-ranked player you've never met. Keep it someone real you trained with, and say what concretely changed in your game." },
         },
       ],
       schools: [
@@ -6324,87 +5199,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love netball?" },
-          subtext: {
-            en: "Panels want a specific moment, not a feeling. \"I like sports\" reads as untrained motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character.",
-          },
-          template: {
-            en: "We lost the zonals semi-final by one goal because I missed a centre pass cut. That night I asked my coach what I should have done differently — that was the first time I cared more about the timing of my cut than whether I scored.",
-          },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"I like sports\" reads as untrained motivation." },
+          approach: { en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character." },
+          template: { en: "We lost the zonals semi-final by one goal because I missed a centre pass cut. That night I asked my coach what I should have done differently — that was the first time I cared more about the timing of my cut than whether I scored." },
+          pitfall: { en: "Don't answer with a generic line like \"I like sports\". Don't reduce a team game to your own scoring moments." },
         },
         {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the netball programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's netball — a coach's name, an NSG result, a training pattern.",
-          },
-          template: {
-            en: "MGS has been an A-Division top school for years and trains four times a week from Sec 1. That's the volume I want from the start. The Methodist heritage also matches what we look for in a school community.",
-          },
-        },
-        {
-          question: { en: "What position do you play and why?" },
-          subtext: {
-            en: "Can the kid articulate the role, not just label it?",
-          },
-          approach: {
-            en: "Name the position plus the job.",
-          },
-          template: {
-            en: "Wing attack. My job is to feed the shooter from the edge of the goal circle and read where the goal attack will be before she cuts. I like the position because every attacking move runs through me, so I always have to be thinking one pass ahead.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I got a footwork infringement three times in one quarter at zonals. The next Saturday I spent the whole club session on one-foot landings — just landing and pivoting, no passing. By the next tournament I had zero footwork calls in three games.",
-          },
+          question: { en: "What position do you play, and why?" },
+          subtext: { en: "Can the kid articulate the role, not just label it?" },
+          approach: { en: "Name the position plus the job it does." },
+          template: { en: "Wing attack — my job is to feed the shooter from the edge of the goal circle and read where the goal attack will be before she cuts. I like the position because every attacking move runs through me, so I always have to be thinking one pass ahead." },
+          pitfall: { en: "Don't just name the position and stop. Avoid claiming you can play every position — it reads as not understanding the demands of any one of them." },
         },
         {
           question: { en: "Is there a teammate or coach you remember most?" },
-          subtext: {
-            en: "Whether the kid sees teammates as people or background.",
-          },
-          approach: {
-            en: "Name someone specific by role + what you learned from them.",
-          },
-          template: {
-            en: "Our P6 centre always called my name before she passed, even when I wasn't expecting the ball. It made me realise good court vision means making your teammates' decisions easier, not just your own. I try to do the same for my goal shooter now.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent trainings?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I finish English and Math homework on the bus to training and complete Science before dinner. Sunday is for revision and family. My mother and I review my report book every term — if any subject drops a band, we cut one extra training. That's the rule we set together.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your head coach's emphasis on dodging to receive matches how I want to develop as a wing attack. If School A called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Whether the kid sees teammates as people or background." },
+          approach: { en: "Name someone specific by role, plus what you learned from them." },
+          template: { en: "Our P6 centre always called my name before she passed, even when I wasn't expecting the ball. It made me realise good court vision means making your teammates' decisions easier, not just your own. I try to do the same for my goal shooter now." },
+          pitfall: { en: "Don't name a national player you've never met. Keep it someone real you played with, and say what it concretely changed in how you play." },
         },
       ],
       schools: [
@@ -6648,87 +5460,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love floorball?" },
-          subtext: {
-            en: "Panels want a specific moment, not a feeling. \"I like scoring goals\" reads as untrained motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character.",
-          },
-          template: {
-            en: "We lost the zonals semi-final by one goal because I didn't backcheck after a turnover. That night I asked my coach what I should have done differently — that was the first time I cared more about defending the transition than scoring the next goal.",
-          },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"I like scoring goals\" reads as untrained motivation." },
+          approach: { en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character." },
+          template: { en: "We lost the zonals semi-final by one goal because I didn't backcheck after a turnover. That night I asked my coach what I should have done differently — that was the first time I cared more about defending the transition than scoring the next goal." },
+          pitfall: { en: "Don't answer with a generic feeling like \"I like scoring goals\". Don't reduce a team game to your own attacking highlights." },
         },
         {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the floorball programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's floorball — a coach's name, an NSG result, a training pattern.",
-          },
-          template: {
-            en: "ACS(I)'s floorball trains four times a week from Sec 1 and the boys' team has been consistently top-four at NSG A-Division. That's the volume and the standard I want from the start.",
-          },
-        },
-        {
-          question: { en: "What position do you play and why?" },
-          subtext: {
-            en: "Can the kid articulate the role, not just label it?",
-          },
-          approach: {
-            en: "Name the position plus the job.",
-          },
-          template: {
-            en: "Centre forward. My job is to win faceoffs, find the slot in front of the goal on offence, and be the first forward back on defence. I like the position because every shift starts and ends with me — there's nowhere to hide.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I broke my stick in a tournament quarter-final and our team lost. I asked my coach what skills I should drill so I didn't depend so much on equipment. We spent eight weeks on weak-hand passing — by the next tournament I could play through a stick swap without losing time.",
-          },
+          question: { en: "What position do you play, and why?" },
+          subtext: { en: "Can the kid articulate the role, not just label it?" },
+          approach: { en: "Name the position plus the job it does." },
+          template: { en: "Centre forward — my job is to win faceoffs, find the slot in front of the goal on offence, and be the first forward back on defence. I like the position because every shift starts and ends with me — there's nowhere to hide." },
+          pitfall: { en: "Don't just name the position and stop. Avoid claiming you can play every position — it reads as not understanding any single role." },
         },
         {
           question: { en: "Is there a teammate or coach you remember most?" },
-          subtext: {
-            en: "Whether the kid sees teammates as people or background.",
-          },
-          approach: {
-            en: "Name someone specific by role + what you learned from them.",
-          },
-          template: {
-            en: "Our P6 captain made the whole team do five-second backcheck drills after every shooting session. None of us liked it but he insisted. By NSG we had the most goals against the run of play in the cluster — and that's why. He taught me that the unglamorous habit is the one that wins.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent trainings?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I do English and Math homework on the bus to training and finish Science before dinner. I keep Sundays for revision. My coach asks for my report book every term — that's a real system, not just willpower.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your coach's emphasis on forechecking matches how I think about the game. If School A called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Whether the kid sees teammates as people or background." },
+          approach: { en: "Name someone specific by role, plus what you learned from them." },
+          template: { en: "Our P6 captain made the whole team do five-second backcheck drills after every shooting session. None of us liked it, but he insisted. By NSG we conceded the fewest goals against the run of play in the cluster — and that's why. He taught me that the unglamorous habit is the one that wins." },
+          pitfall: { en: "Don't name a pro player you've never met. Keep it someone real you trained with, and say what concretely changed in you." },
         },
       ],
       schools: [
@@ -7002,87 +5751,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love choir?" },
-          subtext: {
-            en: "Panels want a specific moment, not a feeling. \"I like singing\" reads as untrained motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory — a piece, a performance, a teacher moment — then connect it to character.",
-          },
-          template: {
-            en: "We sang Lauridsen's O Magnum Mysterium at SYF and the alto entrance in the middle was the first time I felt how a chord could change a room. After that I started listening to recordings of choral pieces on the bus — that's when I realised choir is the thing I love most.",
-          },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"I like singing\" reads as untrained motivation." },
+          approach: { en: "Open with one concrete memory — a piece, a performance, a teacher moment — then connect it to character." },
+          template: { en: "We sang Lauridsen's O Magnum Mysterium at SYF and the alto entrance in the middle was the first time I felt how a chord could change a room. After that I started listening to recordings of choral pieces on the bus — that's when I realised choir is the thing I love most." },
+          pitfall: { en: "Don't say \"I like singing\" or talk only about solo voice. Choir is about blend; an answer that never mentions singing with others misses the point of the CCA." },
         },
         {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the choir programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's choir — a recent SYF performance, a director's repertoire approach, a training pattern.",
-          },
-          template: {
-            en: "NYGH choir's SYF gold-with-honours record and the breadth of the repertoire — from a cappella sacred to contemporary Mandarin — is exactly the kind of musical exposure I want.",
-          },
-        },
-        {
-          question: { en: "What is your voice part and why?" },
-          subtext: {
-            en: "Can the candidate articulate the voice, not just label it?",
-          },
-          approach: {
-            en: "Name the part plus what it asks of you.",
-          },
-          template: {
-            en: "I sing soprano in my primary school choir, but I'm most comfortable in the middle of the soprano range — the high C is still a bit of a stretch. I think I'll settle as a soprano two or alto one when my voice matures, and I'm happy to be moved.",
-          },
+          question: { en: "What is your voice part, and why?" },
+          subtext: { en: "Can the candidate articulate the voice, not just label it?" },
+          approach: { en: "Name the part plus what it asks of you." },
+          template: { en: "I sing soprano in my primary school choir, but I'm most comfortable in the middle of the soprano range — the high C is still a bit of a stretch. I think I'll settle as a soprano two or alto one when my voice matures, and I'm happy to be moved." },
+          pitfall: { en: "Don't just announce a part as a status label or insist you can only sing the melody line. Refusing to be moved between parts signals you'll be hard to place in a section." },
         },
         {
           question: { en: "Who is your favourite composer or piece, and why?" },
-          subtext: {
-            en: "Tests musical vocabulary, not just emotion.",
-          },
-          approach: {
-            en: "Name the piece plus one specific musical element (harmonic, textural, rhythmic) that you can describe.",
-          },
-          template: {
-            en: "Eric Whitacre's Sleep — because of the cluster chord at the end. It's seven voices that should clash but instead dissolve. I asked my choir teacher how that works harmonically and that started me reading about extended tertian harmony.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I got a vocal nodule in P5 from over-singing during a school production and was told to rest for six weeks. I worked on breath control and ear training during the rest period — by SYF I was singing better than before because I'd stopped pushing.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent rehearsals?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I do English and Math homework before dinner and Science after. Saturdays I sing for two hours and rest the voice the rest of the day. My mother shows my report book to the choir director every term — that's the rule we set together.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your choir's emphasis on sacred a cappella matches what I love most. If School A called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Tests musical vocabulary, not just emotion." },
+          approach: { en: "Name the piece plus one specific musical element (harmonic, textural, rhythmic) that you can describe." },
+          template: { en: "Eric Whitacre's Sleep — because of the cluster chord at the end. It's seven voices that should clash but instead dissolve. I asked my choir teacher how that works harmonically and that started me reading about extended tertian harmony." },
+          pitfall: { en: "Don't pick something just because it's well known and call it \"beautiful.\" Without one concrete harmonic or textural detail, it reads as a name you grabbed rather than a piece you've studied." },
         },
       ],
       schools: [
@@ -7357,87 +6043,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love Chinese Orchestra?" },
-          subtext: {
-            en: "Panels want a specific moment, not a generic appreciation of Chinese culture.",
-          },
-          approach: {
-            en: "Open with one concrete memory — a piece, a performance, a teacher moment — then connect it to your relationship with the instrument.",
-          },
-          template: {
-            en: "I started erhu at six because my grandfather played, but the moment I knew I loved it was watching the Singapore Chinese Orchestra play Jasmine Flower at a community concert. The way the section breathed together — that's when I realised CO isn't a solo art, even when you're playing solo.",
-          },
+          subtext: { en: "Panels want a specific moment, not a generic appreciation of Chinese culture." },
+          approach: { en: "Open with one concrete memory — a piece, a performance, a teacher moment — then connect it to your relationship with the instrument." },
+          template: { en: "I started erhu at six because my grandfather played, but the moment I knew I loved it was watching the Singapore Chinese Orchestra play Jasmine Flower at a community concert. The way the section breathed together — that's when I realised CO isn't a solo art, even when you're playing solo." },
+          pitfall: { en: "Don't fall back on \"I want to preserve Chinese culture\" or vague heritage lines. Panels hear that constantly; ground it in a real piece, instrument, or rehearsal moment instead." },
         },
         {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the CO programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's CO — a conductor's name, an SYF result, the SAP/Bicultural Studies environment.",
-          },
-          template: {
-            en: "Dunman High's CO trains four times a week, plays at SYF Distinction level, and the SAP environment means I can keep Higher Chinese alongside competitive training. That combination is rare.",
-          },
-        },
-        {
-          question: { en: "What is your instrument and why?" },
-          subtext: {
-            en: "Can the candidate articulate what the instrument asks of them?",
-          },
-          approach: {
-            en: "Name the instrument plus what playing it requires.",
-          },
-          template: {
-            en: "Pipa. My job is the section that often carries the melody but always has to dance between melody and percussive accompaniment. I love it because the right hand has to think two beats ahead of the left — that's the only instrument where I feel both halves of my brain working at once.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I broke my erhu bridge two weeks before a school CO concert and couldn't get a replacement in time. My teacher lent me her instrument but the setup felt completely different. I spent every evening adjusting until the bow weight felt right — the concert went without anyone noticing.",
-          },
+          question: { en: "What is your instrument, and why?" },
+          subtext: { en: "Can the candidate articulate what the instrument asks of them?" },
+          approach: { en: "Name the instrument plus what playing it requires." },
+          template: { en: "Pipa. My job is the section that often carries the melody but always has to dance between melody and percussive accompaniment. I love it because the right hand has to think two beats ahead of the left — that's the only instrument where I feel both halves of my brain working at once." },
+          pitfall: { en: "Don't just name the instrument and how many years you've played it. If you can't say what it demands of you technically, the panel learns nothing about you as a player." },
         },
         {
           question: { en: "Who is your favourite composer or piece, and why?" },
-          subtext: {
-            en: "Tests musical vocabulary in the Chinese-music tradition specifically.",
-          },
-          approach: {
-            en: "Name the piece plus one specific musical element you can describe (regional style, ornament, rhythmic structure).",
-          },
-          template: {
-            en: "Liu Tianhua's San Bao Fo for erhu — because of the way the slide ornaments (huayin) carry the emotional weight more than the melody itself. I asked my teacher how to bow those slides; the answer changed how I think about every piece I play.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent rehearsals?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I finish English and Math homework before dinner because I'm too tired after practice. My mother shows my report book to my CO teacher every term — if my grades slip, we cut practice from 90 minutes to 60. That's the rule we set together.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your conductor's emphasis on Cantonese-style repertoire matches what I want to learn. If School A called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Tests musical vocabulary in the Chinese-music tradition specifically." },
+          approach: { en: "Name the piece plus one specific musical element you can describe (regional style, ornament, rhythmic structure)." },
+          template: { en: "Liu Tianhua's San Bao Fo for erhu — because of the way the slide ornaments (huayin) carry the emotional weight more than the melody itself. I asked my teacher how to bow those slides; the answer changed how I think about every piece I play." },
+          pitfall: { en: "Don't name a piece everyone knows and stop at \"it's moving.\" Without a concrete element — an ornament, a regional style, a rhythmic feature — it sounds borrowed rather than learned." },
         },
       ],
       schools: [
@@ -7690,87 +6313,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love tennis?" },
-          subtext: {
-            en: "Panels want a specific moment, not a feeling. \"I like winning\" reads as untrained motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory — a match, a coach moment, a turning point — then connect it to character.",
-          },
-          template: {
-            en: "I lost a U10 STA Age Group final 4-6, 5-7 because I tried to hit through everything in the third set tiebreak. That night my coach asked me when I'd last hit a slice approach. I hadn't. That was the moment I learned tennis is a thinking game, not just a hitting game.",
-          },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"I like winning\" reads as untrained motivation." },
+          approach: { en: "Open with one concrete memory — a match, a coach moment, a turning point — then connect it to character." },
+          template: { en: "I lost a U10 STA Age Group final 4-6, 5-7 because I tried to hit through everything in the third-set tiebreak. That night my coach asked me when I'd last hit a slice approach. I hadn't. That was the moment I learned tennis is a thinking game, not just a hitting game." },
+          pitfall: { en: "Don't say \"I love winning\" or \"it's fun\" — that signals no real motivation. Don't list achievements instead of one honest moment that changed how you see the game." },
         },
         {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the tennis programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's tennis — a coach's name, an NSG result, a training pattern.",
-          },
-          template: {
-            en: "ACS(I)'s tennis programme trains four times a week with STA-licensed coaches and the boys' team has been consistently top-four at NSG A-Division. That's the volume and the standard I want from Sec 1.",
-          },
-        },
-        {
-          question: { en: "What is your playing style and why?" },
-          subtext: {
-            en: "Can the kid articulate the style, not just label it?",
-          },
-          approach: {
-            en: "Name the style plus what it requires from you.",
-          },
-          template: {
-            en: "Baseline counter-puncher who can attack the second serve. My job is to extend the rally on neutral balls and step in on the second serve return. I picked the style because my forehand is more reliable than my opponent's patience — that's a 4-year game plan, not just one match.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I lost first round in three consecutive U12 STA tournaments because my second serve kept getting attacked. I spent eight weeks only on second serve — kick serve to the backhand. At the next tournament I made the round of 16 and my second serve didn't get attacked once.",
-          },
+          question: { en: "What is your playing style, and why?" },
+          subtext: { en: "Can the kid articulate the style, not just label it?" },
+          approach: { en: "Name the style plus what it requires from you." },
+          template: { en: "Baseline counter-puncher who can attack the second serve. My job is to extend the rally on neutral balls and step in on the second-serve return. I picked the style because my forehand is more reliable than my opponent's patience — that's a four-year game plan, not just one match." },
+          pitfall: { en: "Don't just label yourself \"aggressive\" or \"all-court\" with nothing behind it. Avoid claiming a style your strokes can't back up — panels will probe how you actually win points." },
         },
         {
           question: { en: "Is there a coach or hitting partner you remember most?" },
-          subtext: {
-            en: "Whether the kid sees coaching as a relationship or a transaction.",
-          },
-          approach: {
-            en: "Name someone specific by role + what you learned from them.",
-          },
-          template: {
-            en: "My P5 club coach made me play sets without serving — just rallying from one feed. I hated it because I wanted to compete with my serve. Now my rally tolerance is the most reliable part of my game. He taught me that the part of tennis you don't enjoy training is usually the part that's holding you back.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent trainings?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I finish English and Math homework on the bus to training and complete Science before dinner. Sunday is for revision. My mother shows my report book to my coach every term — if any subject drops a band, we cut one training. That's the rule we set together.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your head coach's emphasis on net play matches how I want to develop. If School A called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Whether the kid sees coaching as a relationship or a transaction." },
+          approach: { en: "Name someone specific by role plus what you learned from them." },
+          template: { en: "My P5 club coach made me play sets without serving — just rallying from one feed. I hated it because I wanted to compete with my serve. Now my rally tolerance is the most reliable part of my game. He taught me that the part of tennis you don't enjoy training is usually the part that's holding you back." },
+          pitfall: { en: "Don't name a coach only to praise their results or trophies. Avoid a generic \"they believed in me\" — say the one concrete thing they changed in how you play or think." },
         },
       ],
       schools: [
@@ -8017,87 +6577,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love wushu?" },
-          subtext: {
-            en: "Panels want a specific moment, not a generic appreciation of Chinese culture.",
-          },
-          approach: {
-            en: "Open with one concrete memory — a form, a coach moment, a competition — then connect it to character.",
-          },
-          template: {
-            en: "I lost my first SWF grading because I couldn't hold a proper mabu at the right depth. My coach made me hold mabu for 90 seconds at the start of every practice for four months. I passed the next grading. That was when I learned wushu is the only sport where the boring foundation is also the entire art.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the wushu programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's wushu — a coach's name, an SWF grading result, the SAP environment.",
-          },
-          template: {
-            en: "Hwa Chong's wushu programme trains four times a week with a former national team coach, and the SAP environment means I can keep Higher Chinese alongside competitive training. That combination is rare.",
-          },
+          subtext: { en: "Panels want a specific moment, not a generic appreciation of Chinese culture." },
+          approach: { en: "Open with one concrete memory — a form, a coach moment, a competition — then connect it to character." },
+          template: { en: "I failed my first SWF grading because I couldn't hold a proper mabu at the right depth. My coach made me hold mabu for 90 seconds at the start of every practice for four months. I passed the next grading. That was when I learned wushu is the only sport where the boring foundation is also the entire art." },
+          pitfall: { en: "Don't fall back on vague lines about \"loving Chinese culture\" — panels hear that constantly. Avoid making it about medals; ground it in one moment that taught you something about the discipline." },
         },
         {
           question: { en: "What is your style and weapon, and why?" },
-          subtext: {
-            en: "Can the kid articulate the specialisation, not just label it?",
-          },
-          approach: {
-            en: "Name the style plus what playing it requires.",
-          },
-          template: {
-            en: "Changquan with sword. My coach said my arm extension is better than my power, so the sword's wrist agility matches my body. I want to learn Nanquan in secondary because I think the explosive power will balance my style.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I forgot the second half of my form during an SWF Championship in P5 and froze on stage. I started practising forms with deliberate \"forgetting\" — my coach would call out a random section and I had to continue from there. At the next competition I forgot a transition but continued without anyone noticing.",
-          },
+          subtext: { en: "Can the kid articulate the specialisation, not just label it?" },
+          approach: { en: "Name the style plus what performing it requires." },
+          template: { en: "Changquan with sword. My coach said my arm extension is better than my power, so the sword's wrist agility suits my body. I want to learn Nanquan in secondary because I think the explosive power will balance my style." },
+          pitfall: { en: "Don't just name a style and weapon with no reason behind the choice. Avoid claiming strengths your routines don't show — be honest about why this specialisation fits your body." },
         },
         {
           question: { en: "Is there a coach or training partner you remember most?" },
-          subtext: {
-            en: "Whether the kid sees coaching as a relationship or a transaction.",
-          },
-          approach: {
-            en: "Name someone specific by role + what you learned from them.",
-          },
-          template: {
-            en: "My P5 senior in the school wushu team made me bow before every form, even in practice. I thought it was unnecessary. Now I realise the bow forces the breath to settle — it's not ceremony, it's the start of the form's rhythm. She taught me that the tradition is the technique.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent trainings?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I do English and Math homework before dinner because the body is too tired after practice. My mother shows my report book to my coach every term — if any subject drops a band, we cut one practice. That's the rule we set together.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your coach's emphasis on stance discipline matches how I want to train. If School A called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Whether the kid sees coaching as a relationship or a transaction." },
+          approach: { en: "Name someone specific by role plus what you learned from them." },
+          template: { en: "A senior in the school wushu team made me bow before every form, even in practice. I thought it was unnecessary. Now I realise the bow forces the breath to settle — it's not ceremony, it's the start of the form's rhythm. She taught me that the tradition is the technique." },
+          pitfall: { en: "Don't pick someone just because they won competitions. Avoid a hollow \"they inspired me\" — name the one concrete habit or insight they passed on." },
         },
       ],
       schools: [
@@ -8347,87 +6844,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love water polo?" },
-          subtext: {
-            en: "Panels want a specific moment, not a feeling. \"I like the sport\" reads as untrained motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character.",
-          },
-          template: {
-            en: "We lost the inter-school P5 quarter-final because I lost track of the centre forward on a 6-on-5 defence. That night I asked my coach what I should have done — I'd been watching the ball, not the player. That was when I realised water polo is the only swimming-based sport where your eyes matter more than your stroke.",
-          },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"I like the sport\" reads as untrained motivation." },
+          approach: { en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character." },
+          template: { en: "We lost an inter-school P5 quarter-final because I lost track of the centre forward on a 6-on-5 defence. That night I asked my coach what I should have done — I'd been watching the ball, not the player. That was when I realised water polo is the only swimming-based sport where your eyes matter more than your stroke." },
+          pitfall: { en: "Don't lean on \"I love swimming\" — this is a team game, not a lap race. Avoid a generic feeling; tie it to one moment that changed how you read the pool." },
         },
         {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the water polo programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's water polo — a coach's name, an NSG result, a training pattern.",
-          },
-          template: {
-            en: "ACS(I)'s water polo programme has produced national-team players consistently. The 4-times-a-week training and the on-campus pool are exactly the setup I want from Sec 1.",
-          },
-        },
-        {
-          question: { en: "What position do you play and why?" },
-          subtext: {
-            en: "Can the kid articulate the role, not just label it?",
-          },
-          approach: {
-            en: "Name the position plus the job.",
-          },
-          template: {
-            en: "Driver. My job is to swim at counter-attack pace, shoot from the perimeter, and recover to mark the opposing driver before the next attack. I picked the position because my freestyle is strong and I like the responsibility for both ends of the pool.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I got my egg-beater scoring rejected in a P5 trial because my shoulders dropped under the surface after 20 seconds. I spent eight weeks adding egg-beater intervals to every swim training — 4 x 30s with 10s rest. By NSG I could tread arms-out for full game length.",
-          },
+          question: { en: "What position do you play, and why?" },
+          subtext: { en: "Can the kid articulate the role, not just label it?" },
+          approach: { en: "Name the position plus the job." },
+          template: { en: "Driver. My job is to swim at counter-attack pace, shoot from the perimeter, and recover to mark the opposing driver before the next attack. I picked the position because my freestyle is strong and I like being responsible for both ends of the pool." },
+          pitfall: { en: "Don't just state a position and stop. Avoid describing only the glamorous half (scoring) while ignoring the defensive work the role actually demands." },
         },
         {
           question: { en: "Is there a teammate or coach you remember most?" },
-          subtext: {
-            en: "Whether the kid sees teammates as people or background.",
-          },
-          approach: {
-            en: "Name someone specific by role + what you learned from them.",
-          },
-          template: {
-            en: "Our P6 captain played centre forward and refused to be moved off the 2m line by any defender. Watching him take the contact and still receive cleanly taught me that water polo position is held by intent, not by size. I'm not big enough for hole yet, but his composure is what I copy.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent trainings?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I do English and Math homework on the bus to training and finish Science before dinner. Sunday is for revision. My mother shows my report book to my coach every term — if any subject drops a band, we cut one training. That's the rule we set together.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your coach's emphasis on egg-beater conditioning matches what I most want to develop. If School A called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Whether the kid sees teammates as people or background." },
+          approach: { en: "Name someone specific by role plus what you learned from them." },
+          template: { en: "Our P6 captain played centre forward and refused to be moved off the 2m line by any defender. Watching him take the contact and still receive cleanly taught me that water polo position is held by intent, not by size. I'm not big enough for hole yet, but his composure is what I copy." },
+          pitfall: { en: "Don't praise a teammate only for their size or stat line. Avoid the empty \"good leader\" label — name the specific thing you took from watching them." },
         },
       ],
       schools: [
@@ -8674,87 +7108,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love sailing?" },
-          subtext: {
-            en: "Panels want a specific moment, not a feeling. \"I like being on the water\" reads as untrained motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory — a regatta, a wind shift, a teammate moment — then connect it to character.",
-          },
-          template: {
-            en: "I won my first Optimist regatta race because I noticed a wind shift on the right side of the course while everyone tacked left. I'd watched the flag at the start for ten minutes. That was when I realised sailing rewards the person who pays attention more than the person who's strongest.",
-          },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"I like being on the water\" reads as untrained motivation." },
+          approach: { en: "Open with one concrete memory — a regatta, a wind shift, a teammate moment — then connect it to character." },
+          template: { en: "I won my first Optimist regatta race because I noticed a wind shift on the right side of the course while everyone tacked left. I'd watched the flag at the start for ten minutes. That was when I realised sailing rewards the person who pays attention more than the person who's strongest." },
+          pitfall: { en: "Don't say you love \"being out on the water\" — that's a hobby answer, not a competitor's. Avoid a vague feeling; show one moment where reading the conditions made the difference." },
         },
         {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the sailing programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's sailing — a coach's name, a regatta result, a training pattern.",
-          },
-          template: {
-            en: "RGS's sailing programme uses the same coach group as the SSF Optimist national squad and trains four times a week at NSC. That's the volume and the standard I want from Sec 1.",
-          },
-        },
-        {
-          question: { en: "What class do you sail and why?" },
-          subtext: {
-            en: "Can the kid articulate the class, not just label it?",
-          },
-          approach: {
-            en: "Name the class plus what it asks of you.",
-          },
-          template: {
-            en: "Optimist. My weight (38 kg) puts me at the upper end of competitive — heavier sailors are favoured downwind so my game plan in light winds is to position upwind, then capitalise downwind. I'll transition to ILCA 6 in Sec 1 or Sec 2 depending on growth.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I capsized at the start of the last race of a national regatta and finished last. My coach made me drill capsize-recovery every Saturday for two months. At the next regatta I capsized again — and was back racing in 22 seconds. The difference was practice, not luck.",
-          },
+          question: { en: "What class do you sail, and why?" },
+          subtext: { en: "Can the kid articulate the class, not just label it?" },
+          approach: { en: "Name the class plus what it asks of you." },
+          template: { en: "Optimist. My weight (38 kg) puts me at the upper end of competitive — heavier sailors are favoured downwind, so in light winds my game plan is to position upwind, then capitalise downwind. I'll transition to ILCA 6 in Sec 1 or Sec 2 depending on growth." },
+          pitfall: { en: "Don't name a class without explaining how it fits your weight, conditions, or pathway. Avoid claiming a transition plan you can't reason through if the panel asks why." },
         },
         {
           question: { en: "Is there a teammate or coach you remember most?" },
-          subtext: {
-            en: "Whether the kid sees coaching as a relationship or a transaction.",
-          },
-          approach: {
-            en: "Name someone specific by role + what you learned from them.",
-          },
-          template: {
-            en: "My P5 Optimist coach made the whole training group watch the start sequence from the coach boat for 15 minutes before any racing. We were bored — but I now read start-line bias automatically. He taught me that the boring part of sailing is the part that wins.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent trainings?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I finish English and Math homework on the bus to NSC and complete Science before dinner on training days. Weekend regattas eat my Saturday, so I do revision on Sunday. My mother shows my report book to my coach every term — that's the rule we set together.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your coach group is the SSF Optimist national-squad coach — that's the pathway I want. If School A called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Whether the kid sees coaching as a relationship or a transaction." },
+          approach: { en: "Name someone specific by role plus what you learned from them." },
+          template: { en: "My P5 Optimist coach made the whole training group watch the start sequence from the coach boat for 15 minutes before any racing. We were bored — but I now read start-line bias automatically. He taught me that the boring part of sailing is the part that wins." },
+          pitfall: { en: "Don't credit a coach only for race wins. Avoid the generic \"they pushed me hard\" — name the one drill or habit that still shows up in how you sail." },
         },
       ],
       schools: [
@@ -9004,87 +7375,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love rugby?" },
-          subtext: {
-            en: "Panels want a specific moment, not a feeling. \"I like tackling\" reads as untrained motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character.",
-          },
-          template: {
-            en: "I missed a tackle on the last play of a P5 zonals final and we lost. The opposing winger had stepped me, and I went the wrong way. My captain put his hand on my shoulder afterwards. That was the moment I realised rugby is the only sport where a mistake becomes the team's moment to support you — not blame you.",
-          },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"I like tackling\" reads as untrained motivation." },
+          approach: { en: "Open with one concrete memory — a match, a teammate, a turning point — then connect it to character." },
+          template: { en: "I missed a tackle on the last play of a P5 zonals final and we lost. The opposing winger had stepped me and I went the wrong way. My captain put his hand on my shoulder afterwards. That was the moment I realised rugby is the only sport where a mistake becomes the team's moment to support you — not blame you." },
+          pitfall: { en: "Don't say you love the contact or \"hitting people\" — panels read that as immaturity. Avoid a vague feeling; anchor it in one moment that shows what the team game taught you." },
         },
         {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the rugby programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's rugby — a coach's name, an NSG result, a training pattern.",
-          },
-          template: {
-            en: "ACS(I)'s rugby programme has the longest schoolboy heritage in Singapore and trains four times a week from Sec 1. The contact-introduction pathway you run for ex-tag-rugby players is exactly what I need.",
-          },
-        },
-        {
-          question: { en: "What position do you play and why?" },
-          subtext: {
-            en: "Can the kid articulate the role, not just label it?",
-          },
-          approach: {
-            en: "Name the position plus the job.",
-          },
-          template: {
-            en: "Scrum-half. My job is the link between forwards and backs — delivering the pass quickly from the base of the ruck and reading whether the backline should run or kick. I picked the position because my pass is my strongest skill and I like the responsibility for the tempo of the team.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I shied away from contact in my first contact-rugby session in P5 and the coach told me to either commit or play tag. I spent six weeks doing 1-on-1 tackle bag drills every Saturday. By the next contact session I was the first to commit to every breakdown.",
-          },
+          question: { en: "What position do you play, and why?" },
+          subtext: { en: "Can the kid articulate the role, not just label it?" },
+          approach: { en: "Name the position plus the job." },
+          template: { en: "Scrum-half. My job is the link between forwards and backs — delivering the pass quickly from the base of the ruck and reading whether the backline should run or kick. I picked the position because my pass is my strongest skill and I like being responsible for the team's tempo." },
+          pitfall: { en: "Don't just name a position and leave it there. Avoid claiming a role like scrum-half or fly-half without being able to explain the decisions it demands play to play." },
         },
         {
           question: { en: "Is there a teammate or coach you remember most?" },
-          subtext: {
-            en: "Whether the kid sees teammates as people or background.",
-          },
-          approach: {
-            en: "Name someone specific by role + what you learned from them.",
-          },
-          template: {
-            en: "Our P6 captain was the smallest forward in the team but always the first to a ruck. Watching him commit to every breakdown taught me that rugby doesn't reward the biggest player — it rewards the player who decides fastest. I copy his commitment, not his size.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent trainings?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I do English and Math homework on the bus to training and finish Science before dinner. Sunday is for revision. My mother shows my report book to my coach every term — if any subject drops a band, we cut one training. That's the rule we set together.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your coach's emphasis on breakdown work matches how I think about the game. If School A called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Whether the kid sees teammates as people or background." },
+          approach: { en: "Name someone specific by role plus what you learned from them." },
+          template: { en: "Our P6 captain was the smallest forward in the team but always the first to a ruck. Watching him commit to every breakdown taught me that rugby doesn't reward the biggest player — it rewards the player who decides fastest. I copy his commitment, not his size." },
+          pitfall: { en: "Don't admire a teammate just for being big or scoring tries. Avoid the empty \"he's a great leader\" — point to the specific habit you took from them." },
         },
       ],
       schools: [
@@ -9364,87 +7672,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love Symphonic Band?" },
-          subtext: {
-            en: "Panels want a specific moment, not a feeling. \"I like music\" reads as untrained motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory — a piece, a performance, a section moment — then connect it to character.",
-          },
-          template: {
-            en: "We played Holst's First Suite in E-flat at our primary-school SYF and the brass entry in the second movement was the first time I felt how 30 instruments could speak as one voice. After that I started listening to band recordings on the bus — that's when I realised the section's blend is more interesting to me than my own solo line.",
-          },
+          subtext: { en: "Panels want a specific moment, not a feeling. \"I like music\" reads as untrained motivation." },
+          approach: { en: "Open with one concrete memory — a piece, a performance, a section moment — then connect it to character." },
+          template: { en: "We played Holst's First Suite in E-flat at our primary-school SYF and the brass entry in the second movement was the first time I felt how 30 instruments could speak as one voice. After that I started listening to band recordings on the bus — that's when I realised the section's blend is more interesting to me than my own solo line." },
+          pitfall: { en: "Don't say \"I like music\" or talk only about your own part. Band is about the section blend; an answer that ignores the ensemble misses what the CCA is built on." },
         },
         {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the band programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's band — a director's name, an SYF result, the repertoire pattern.",
-          },
-          template: {
-            en: "ACS(I)'s Symphonic Band trains four times a week, plays at SYF Distinction level, and the director's commitment to commissioned new works (not just standard repertoire) is exactly the musical environment I want.",
-          },
-        },
-        {
-          question: { en: "What is your instrument and why?" },
-          subtext: {
-            en: "Can the candidate articulate the instrument, not just label it?",
-          },
-          approach: {
-            en: "Name the instrument plus what playing it asks of you.",
-          },
-          template: {
-            en: "French horn. My job is the section that has to play both the low brass bass line and the high lyrical line, and I love that switching range demands different embouchure within the same piece. I picked it because my primary-school music teacher said my ear was steady and the French horn is the instrument where intonation is the hardest skill to develop.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I failed Grade 5 ABRSM on aural last year because I'd never practised echoing a melodic line systematically. I worked on aural every morning for ten minutes for four months. I passed Grade 5 the second time and started Grade 6 immediately — and my band-section listening improved noticeably.",
-          },
+          question: { en: "What is your instrument, and why?" },
+          subtext: { en: "Can the candidate articulate the instrument, not just label it?" },
+          approach: { en: "Name the instrument plus what playing it asks of you." },
+          template: { en: "French horn. My job is the section that has to play both the low brass bass line and the high lyrical line, and I love that switching range demands different embouchure within the same piece. I picked it because my primary-school music teacher said my ear was steady and the French horn is the instrument where intonation is the hardest skill to develop." },
+          pitfall: { en: "Don't just state the instrument and how long you've played it. Without saying what it physically or musically demands, the panel can't tell a committed player from a casual one." },
         },
         {
           question: { en: "Who is your favourite composer or piece, and why?" },
-          subtext: {
-            en: "Tests musical vocabulary specifically for band repertoire.",
-          },
-          approach: {
-            en: "Name the piece plus one specific musical element you can describe (orchestration, rhythmic structure, key colour).",
-          },
-          template: {
-            en: "Eric Whitacre's October — because the way he opens with the woodwinds layered in fifths creates a sense of stillness that's then disrupted by the brass entry. I asked my band teacher how that orchestration choice works; the answer was about how the harmonic series of the brass cuts through the woodwind blend.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent rehearsals?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I finish English and Math homework before practice because the embouchure is too tired after. Science I do on weekends. My mother shows my report book to my band director every term — if any subject drops a band, we cut one practice. That's the rule we set together.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your band's emphasis on commissioned new works matches what I love most. If School A called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Tests musical vocabulary specifically for band repertoire." },
+          approach: { en: "Name the piece plus one specific musical element you can describe (orchestration, rhythmic structure, key colour)." },
+          template: { en: "Eric Whitacre's October — because the way he opens with the woodwinds layered in fifths creates a sense of stillness that's then disrupted by the brass entry. I asked my band teacher how that orchestration choice works; the answer was about how the harmonic series of the brass cuts through the woodwind blend." },
+          pitfall: { en: "Don't pick a piece just because your band played it and call it \"epic.\" Without one concrete element — orchestration, a rhythmic feature, key colour — it reads as enthusiasm, not musicianship." },
         },
       ],
       schools: [
@@ -9726,87 +7971,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love music?" },
-          subtext: {
-            en: "Panels want a specific moment plus an academic-engagement signal, not generic appreciation.",
-          },
-          approach: {
-            en: "Open with one concrete musical memory, then connect it to how you think about music academically.",
-          },
-          template: {
-            en: "We performed Brahms's Hungarian Dance No. 5 in primary school orchestra and I noticed how the strings moved from G minor to G major in the middle section. After that I started reading about how composers use mode changes to surprise the listener — that's when I realised I want music as a subject, not just as a hobby.",
-          },
+          subtext: { en: "Panels want a specific moment plus an academic-engagement signal, not generic appreciation." },
+          approach: { en: "Open with one concrete musical memory, then connect it to how you think about music academically." },
+          template: { en: "We performed Brahms's Hungarian Dance No. 5 in primary school orchestra and I noticed how the strings moved from G minor to G major in the middle section. After that I started reading about how composers use mode changes to surprise the listener — that's when I realised I want music as a subject, not just as a hobby." },
+          pitfall: { en: "MEP is an academic track, so don't answer like it's only a performance CCA. An answer with no curiosity about how music works — theory, analysis, history — undersells you for the programme." },
         },
         {
-          question: { en: "Why MEP at our school specifically?" },
-          subtext: {
-            en: "Did the family research the MEP programme's distinct character at this school?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's MEP — the cohort size, the repertoire breadth, the academic music history exposure.",
-          },
-          template: {
-            en: "NYGH's MEP has a strong Chinese-instrument track within the programme, which aligns with my erhu background. Combining Chinese music academic study with Western music history is the breadth I want for the next four years.",
-          },
+          question: { en: "What is your primary instrument, and why?" },
+          subtext: { en: "Can the candidate articulate the instrument relationship?" },
+          approach: { en: "Name the instrument plus what playing it asks of you academically." },
+          template: { en: "Piano. My primary instrument because I can play multiple voices simultaneously — which is what I find most academically interesting about music. Studying counterpoint and harmonic analysis on the piano lets me read scores in a way a single-line instrument doesn't allow." },
+          pitfall: { en: "Don't reduce it to grade level or years played. For MEP, missing the link between your instrument and how it helps you study scores, harmony, or analysis is a wasted answer." },
         },
         {
-          question: { en: "What is your primary instrument and why?" },
-          subtext: {
-            en: "Can the candidate articulate the instrument relationship?",
-          },
-          approach: {
-            en: "Name the instrument plus what playing it asks of you academically.",
-          },
-          template: {
-            en: "Piano. My primary instrument because I can play multiple voices simultaneously — which is what I find most academically interesting about music. Studying counterpoint and harmonic analysis on the piano lets me read scores in a way a single-line instrument doesn't allow.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a musical setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I failed Grade 5 ABRSM aural because I'd never practised interval identification systematically. I worked on aural every morning for ten minutes for four months. I passed Grade 5 the second time and started Grade 6 immediately — and my sight-reading improved too, because aural and sight-reading reinforce each other.",
-          },
-        },
-        {
-          question: { en: "Who is your favourite composer and why?" },
-          subtext: {
-            en: "Tests musical vocabulary and academic engagement, not just emotion.",
-          },
-          approach: {
-            en: "Name the composer plus one specific musical element (harmonic, structural, textural) you can describe.",
-          },
-          template: {
-            en: "Shostakovich, because of how his harmonic language sits between major and minor in a way that feels like neither. I asked my piano teacher why his preludes feel unstable; the answer was about modal mixture and that started me reading about 20th-century harmonic vocabulary.",
-          },
-        },
-        {
-          question: { en: "How do you manage time across academic subjects and music practice?" },
-          subtext: {
-            en: "MEP schools fear DSA kids who flame out academically — and MEP students carry an extra academic subject (music itself).",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I finish English and Math homework before practice because the focus needed for piano is too tired after. Science I do on weekends. My mother shows my report book to my piano teacher every term — if any subject drops a band, we cut one practice session. That's the rule we set together.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you MEP, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your MEP teacher's emphasis on Bach repertoire matches what I want to develop. If School A called first I'd still wait for your reply.",
-          },
+          question: { en: "Who is your favourite composer, and why?" },
+          subtext: { en: "Tests musical vocabulary and academic engagement, not just emotion." },
+          approach: { en: "Name the composer plus one specific musical element (harmonic, structural, textural) you can describe." },
+          template: { en: "Shostakovich, because of how his harmonic language sits between major and minor in a way that feels like neither. I asked my piano teacher why his preludes feel unstable; the answer was about modal mixture and that started me reading about 20th-century harmonic vocabulary." },
+          pitfall: { en: "Don't praise a composer in feeling-words alone. For MEP especially, an answer with no harmonic, structural, or historical detail signals you haven't engaged with music as a subject." },
         },
       ],
       schools: [
@@ -10049,87 +8231,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love art?" },
-          subtext: {
-            en: "Panels want a specific moment plus an academic-engagement signal, not generic appreciation.",
-          },
-          approach: {
-            en: "Open with one concrete artistic memory, then connect it to how you think about art academically.",
-          },
-          template: {
-            en: "I drew a still life of my grandmother's hands during the school holidays in P5 — and that was the first time I noticed how light wraps around a curved surface differently from a flat one. After that I started looking at portrait paintings for how artists model form with shadow. That's when I realised art is the only subject where what I see and what I think have to work together.",
-          },
-        },
-        {
-          question: { en: "Why AEP at our school specifically?" },
-          subtext: {
-            en: "Did the family research the AEP programme's distinct character at this school?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's AEP — the cohort size, the studio facilities, the H2 Art pathway.",
-          },
-          template: {
-            en: "NYGH's AEP has a sustained printmaking tradition and the studio's collaboration with NAFA for life drawing is exactly the breadth of practice I want.",
-          },
+          subtext: { en: "Panels want a specific moment plus an academic-engagement signal, not generic appreciation." },
+          approach: { en: "Open with one concrete artistic memory, then connect it to how you think about art academically." },
+          template: { en: "I drew my grandmother's hands during the P5 holidays, and that was the first time I noticed how light wraps around a curved surface differently from a flat one. After that I started studying portrait paintings for how artists model form with shadow. That's when I realised art is the one subject where what I see and what I think have to work together." },
+          pitfall: { en: "AEP panels expect more than \"I enjoy drawing\" — a purely emotional answer signals you're not ready for the academic side. Don't leave out the thinking that art demands of you." },
         },
         {
           question: { en: "Walk us through this piece in your portfolio." },
-          subtext: {
-            en: "Can the candidate articulate the work, not just present it?",
-          },
-          approach: {
-            en: "Name the inspiration plus one specific technical decision plus what you'd change.",
-          },
-          template: {
-            en: "This is a watercolour study of mangrove roots — I started from a photograph I took at Sungei Buloh. I chose watercolour for the transparency of the layered roots in shallow water. If I redid it, I'd commit harder to the darks because the painting still looks washed-out at the bottom.",
-          },
+          subtext: { en: "Can the candidate articulate the work, not just present it?" },
+          approach: { en: "Name the inspiration, one specific technical decision, and what you'd change." },
+          template: { en: "This is a watercolour study of mangrove roots, started from a photo I took at Sungei Buloh. I chose watercolour for the transparency of the layered roots in shallow water. If I redid it, I'd commit harder to the darks — the bottom still looks washed-out." },
+          pitfall: { en: "Don't recite the subject matter and stop there. Without a named technical choice and an honest \"what I'd change,\" the panel can't tell the work is really yours or that you can self-critique." },
         },
         {
-          question: { en: "Who is your favourite artist and why?" },
-          subtext: {
-            en: "Tests art-historical engagement and academic vocabulary.",
-          },
-          approach: {
-            en: "Name the artist plus one specific element of their practice you can describe (medium, subject, formal device).",
-          },
-          template: {
-            en: "Georgette Chen — because her Nanyang-style oil paintings blend Western oil technique with Southeast Asian subject matter, and her self-portraits use compositional asymmetry to suggest interiority rather than just likeness. I asked my teacher how she developed the technique; that started me reading about the Nanyang school.",
-          },
-        },
-        {
-          question: { en: "Tell us about a piece you started and didn't finish." },
-          subtext: {
-            en: "Tests honesty and ability to articulate failure constructively.",
-          },
-          approach: {
-            en: "Name the work, name the problem, name what you'd do differently.",
-          },
-          template: {
-            en: "I started an acrylic portrait of my brother in March but stopped at the underpainting stage because I couldn't get the colour temperature right in his skin tones — too pink everywhere. I should have done a colour study first. Now I always do a small colour study before any portrait.",
-          },
-        },
-        {
-          question: { en: "How do you manage time across academic subjects and art practice?" },
-          subtext: {
-            en: "AEP schools fear DSA kids who flame out academically — and AEP students carry an extra academic subject (Art itself).",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I finish English and Math homework before starting art so I can lose track of time without consequence. Science I do on weekends. My mother shows my report book to my art teacher every term — if any subject drops a band, we cut one drawing session. That's the rule we set together.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you AEP, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your AEP teacher's emphasis on Singaporean contemporary practice matches what I most want to develop. If School A called first I'd still wait for your reply.",
-          },
+          question: { en: "Who is your favourite artist, and why?" },
+          subtext: { en: "Tests art-historical engagement and academic vocabulary." },
+          approach: { en: "Name the artist plus one specific element of their practice you can describe — medium, subject, or formal device." },
+          template: { en: "Georgette Chen — her Nanyang-style oil paintings blend Western oil technique with Southeast Asian subject matter, and her self-portraits use compositional asymmetry to suggest interiority rather than just likeness. Asking my teacher how she developed that started me reading about the Nanyang school." },
+          pitfall: { en: "Don't name-drop an artist and praise them in vague terms. If you can't point to a specific medium, subject, or formal device in their work, it reads as a coached answer." },
         },
       ],
       schools: [
@@ -10405,88 +8524,32 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
       interviewQuestions: [
         {
-          question: { en: "你为什么对双文化课程感兴趣？(Why are you interested in Bicultural Studies?)" },
-          subtext: {
-            en: "Panels want a specific motivation, not generic appreciation of Chinese culture. Answer in Mandarin.",
-          },
-          approach: {
-            en: "Open with one concrete bicultural moment, then connect it to a future use of the dual fluency.",
-          },
-          template: {
-            en: "我去年和家人去上海，发现新加坡华文跟当地的普通话用法有很多差别——单是\"巴士\"和\"公交车\"就让我意识到，新加坡是一个独特的双语环境。我希望以后能在新加坡和中国之间的合作中工作，这就需要我从中学开始就建立深厚的双语基础。",
-          },
+          question: { en: "Why are you interested in Bicultural Studies?", zh: "你为什么对双文化课程感兴趣" },
+          subtext: { en: "Panels want a specific motivation, not generic appreciation of Chinese culture. Answer in Mandarin.", zh: "评审想听到具体的动机，而不是泛泛地欣赏中华文化。用华语作答。" },
+          approach: { en: "Open with one concrete bicultural moment, then connect it to a future use of the dual fluency.", zh: "先讲一个具体的双文化体验，再连到将来如何运用这种双语能力。" },
+          template: { en: "Last year I went to Shanghai with my family and found many differences between Singapore Chinese and the Mandarin used there — just \"巴士\" versus \"公交车\" made me realise Singapore is a unique bilingual environment. I hope to one day work in cooperation between Singapore and China, and that means building a solid bilingual foundation from secondary school.", zh: "我去年和家人去上海，发现新加坡华文跟当地的普通话用法有很多差别——单是「巴士」和「公交车」就让我意识到，新加坡是一个独特的双语环境。我希望以后能在新加坡和中国之间的合作中工作，这就需要我从中学开始就打好扎实的双语基础。" },
+          pitfall: { en: "Don't recite vague praise like \"I love Chinese culture\" — anyone can say it. Anchor on one real moment that shows the bicultural gap, and tie it to where you want it to take you.", zh: "别背「我热爱中华文化」这类空泛的赞美——谁都说得出。要扣住一个能体现双文化差异的真实时刻，再连到它会把你带往哪里。" },
         },
         {
-          question: { en: "你最喜欢的中国历史人物是谁？为什么？(Who is your favourite Chinese historical figure and why?)" },
-          subtext: {
-            en: "Tests cultural specificity. Answer in Mandarin with named figure + named event + reflection.",
-          },
-          approach: {
-            en: "Name a specific figure (not just 'arch-emperors'), name one specific event, articulate the reflection.",
-          },
-          template: {
-            en: "苏轼。除了诗词，我特别欣赏他在被贬到黄州后写的《赤壁赋》——他没有抱怨被贬，而是从赤壁想到历史的长河里个人的渺小。我从他身上学到，遇到挫折时可以把目光放得更远。",
-          },
+          question: { en: "Who is your favourite Chinese historical figure and why?", zh: "你最喜欢的中国历史人物是谁，为什么" },
+          subtext: { en: "Tests cultural specificity. Answer in Mandarin with named figure + named event + reflection.", zh: "考的是文化上的具体度。用华语作答，要有具体人物、具体事件和你的思考。" },
+          approach: { en: "Name a specific figure (not just \"some emperor\"), name one specific event, and articulate the reflection.", zh: "点出一个具体人物（不是笼统的「某个皇帝」），点出一件具体的事，再说清楚你的思考。" },
+          template: { en: "苏轼. Beyond his poetry, I especially admire 《赤壁赋》, which he wrote after being banished to Huangzhou — he didn't complain about the exile, but from Red Cliff reflected on how small one person is in the long river of history. From him I learnt that when you hit a setback, you can set your sights further.", zh: "苏轼。除了诗词，我特别欣赏他被贬到黄州后写的《赤壁赋》——他没有抱怨被贬，而是从赤壁想到个人在历史长河里的渺小。我从他身上学到，遇到挫折时可以把目光放得更远。" },
+          pitfall: { en: "Don't pick a famous name and stop at \"he was great.\" Without a specific event and your own takeaway, it sounds memorised. Avoid figures you can't discuss beyond one line.", zh: "别挑一个名人然后停在「他很伟大」。没有具体事件和你自己的体会，听起来就是背的。避开那些你一句话之外就聊不下去的人物。" },
         },
         {
-          question: { en: "为什么选择我们学校的双文化通道？(Why our school's bicultural pipeline specifically?)" },
-          subtext: {
-            en: "Did the family research the school's specific BSP track, or is it generic?",
-          },
-          approach: {
-            en: "Cite one specific element of the school's Chinese-cultural environment.",
-          },
-          template: {
-            en: "华中的 BSP 浸濡课程包括上海复旦的暑期项目，这种实地接触是我希望在中学得到的。加上华中的 SAP 环境，我可以从中一开始就把高华和文化结合起来。",
-          },
+          question: { en: "Tell us about one Chinese book you've read recently that wasn't a school assignment.", zh: "说说你最近读的一本不是学校指定的华文书" },
+          subtext: { en: "Tests independent reading habits — the interview may switch between English and Mandarin.", zh: "考的是自主阅读的习惯——面试可能在英语和华语之间切换。" },
+          approach: { en: "Name the book and author, then one specific element you can discuss.", zh: "说出书名和作者，再点出一个你能展开来谈的具体之处。" },
+          template: { en: "余华的《活着》. 福贵's whole life showed me how an ordinary twentieth-century Chinese family survived through the torrent of history. What shook me most was the ending — 福贵 talking alone to his old ox; that kind of loneliness can't be put into words.", zh: "余华的《活着》。福贵的一生让我看到，二十世纪中国一个普通家庭怎样在历史的洪流里活下去。最让我震撼的是结尾，福贵一个人和老牛说话——那种孤独是用词语写不出来的。" },
+          pitfall: { en: "Don't name a school-assigned text and pretend it was personal reading — the \"not assigned\" framing is deliberate. Pick something you genuinely chose and can react to honestly.", zh: "别拿学校指定的课文冒充自己读的——「不是指定」这个限定是有意的。选一本你真正自己挑的，能老实说出感受的书。" },
         },
         {
-          question: { en: "Tell us about one Chinese book you've read recently that wasn't a school assignment." },
-          subtext: {
-            en: "Tests independent reading habits — interview may switch between English and Mandarin.",
-          },
-          approach: {
-            en: "Name the book + the author + one specific element you can discuss.",
-          },
-          template: {
-            en: "余华的《活着》。福贵的一生让我看到，二十世纪的中国普通家庭怎样在历史的洪流里活下去。最让我震撼的是结尾，福贵一个人和老牛说话——那种孤独是用词语写不出来的。",
-          },
-        },
-        {
-          question: { en: "What do you think is most important about Singapore-China relations today?" },
-          subtext: {
-            en: "Tests current-affairs awareness — answer expected in Mandarin or with code-switching capacity.",
-          },
-          approach: {
-            en: "Name one specific bilateral program or recent event + articulate a viewpoint.",
-          },
-          template: {
-            en: "苏州工业园是新加坡和中国合作的一个重要例子。我觉得最重要的是，新加坡用自己的城市管理经验帮助中国发展，但同时也学到了中国大规模建设的经验。这种双向学习是双文化的核心。",
-          },
-        },
-        {
-          question: { en: "你高华的学习方法是什么？(What is your Higher Chinese study method?)" },
-          subtext: {
-            en: "Schools test honesty about study habits, not perfect performance.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes.",
-          },
-          template: {
-            en: "我每个星期阅读三篇华文短文章——不是课本上的——并且抄写其中的好句子。妈妈每个学期把我的成绩单给华文老师看，如果我的写作成绩降低，我们就减少其他活动。",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — answer in Mandarin or English as comfortable.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "老实说，贵校。贵校 BSP 通道的浸濡课程跟我的学习方向最匹配。如果其他学校先打电话，我也会等贵校的回复。",
-          },
+          question: { en: "What do you think is most important about Singapore-China relations today?", zh: "你认为今天新中关系最重要的是什么" },
+          subtext: { en: "Tests current-affairs awareness — answer expected in Mandarin or with code-switching.", zh: "考的是时事意识——预期用华语作答，或具备在两种语言间切换的能力。" },
+          approach: { en: "Name one specific bilateral programme or recent event, then articulate a viewpoint.", zh: "点出一个具体的双边项目或近期事件，再说出你的看法。" },
+          template: { en: "The Suzhou Industrial Park is an important example of Singapore-China cooperation. I think what matters most is that Singapore used its own city-management experience to help China develop, while also learning from China's large-scale construction. That two-way learning is the heart of being bicultural.", zh: "苏州工业园是新中合作的一个重要例子。我觉得最重要的是，新加坡用自己的城市管理经验帮助中国发展，同时也学到了中国大规模建设的经验。这种双向学习正是双文化的核心。" },
+          pitfall: { en: "Don't drift into political opinions you can't support, and don't stay so vague it could describe any two countries. Anchor on one concrete programme or event you actually know about.", zh: "别滑向你撑不住的政治立场，也别空泛到换成任何两个国家都成立。要扣住一个你真正了解的具体项目或事件。" },
         },
       ],
       schools: [
@@ -10721,87 +8784,38 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Tell us about a non-fiction book you've read recently." },
-          subtext: {
-            en: "Tests independent reading habits — generic answers fail this question immediately.",
-          },
-          approach: {
-            en: "Name the book + author + one specific argument or insight you can articulate.",
-          },
-          template: {
-            en: "I read Tim Marshall's Prisoners of Geography earlier this year. The chapter on China and the South China Sea changed how I think about regional disputes — Marshall argues that geographical features (deep water ports, defensible mountains) shape political decisions in ways most news coverage misses. I started reading the news with maps next to me after that.",
-          },
+          subtext: { en: "Tests independent reading habits — generic answers fail this question immediately." },
+          approach: { en: "Name the book and author, then articulate one specific argument or insight from it." },
+          template: { en: "I read Tim Marshall's Prisoners of Geography earlier this year. The chapter on China and the South China Sea changed how I think about regional disputes — Marshall argues that geographical features like deep-water ports and defensible mountains shape political decisions in ways most news coverage misses. I started reading the news with maps next to me after that." },
+          pitfall: { en: "Don't name a book you only half-read or can't quote a single idea from. Don't pick a school-syllabus title just to look studious — the panel can tell you didn't choose it yourself." },
         },
         {
           question: { en: "Walk us through one current event you've been following closely." },
-          subtext: {
-            en: "Tests current-affairs depth, not breadth. Stay with one issue.",
-          },
-          approach: {
-            en: "Name the event + name the actors + describe the underlying tension + share a tentative view.",
-          },
-          template: {
-            en: "Singapore's GST hike to 9% from 2024. The government raised GST partly to fund healthcare costs from the ageing population, but critics worry the regressive nature of GST hurts lower-income households disproportionately. The U-Save vouchers offset some of that, but I want to see whether the offset fully covers the increase for the lowest income decile — I haven't seen clear data either way yet.",
-          },
+          subtext: { en: "Tests current-affairs depth, not breadth. Stay with one issue." },
+          approach: { en: "Name the event, name the actors, describe the underlying tension, and share a tentative view." },
+          template: { en: "Singapore's GST hike to 9% from 2024. The government raised GST partly to fund healthcare costs from the ageing population, but critics worry the regressive nature of GST hurts lower-income households disproportionately. The U-Save vouchers offset some of that, but I want to see whether the offset fully covers the increase for the lowest income decile — I haven't seen clear data either way yet." },
+          pitfall: { en: "Don't list five headlines to look well-read; depth on one beats breadth on many. Don't recite a one-sided take you can't defend if the panel pushes back." },
         },
         {
           question: { en: "Why humanities specifically, not a sport or music DSA?" },
-          subtext: {
-            en: "Tests personal motivation — schools fear candidates who applied to humanities as a backup.",
-          },
-          approach: {
-            en: "Articulate what humanities asks of you that other DSA paths don't.",
-          },
-          template: {
-            en: "I considered music DSA because I play violin, but I realised what excites me most is reading and writing about why things happen — that's a humanities habit, not a music habit. Music is something I'll keep as a CCA. Humanities is what I want as the academic centre of my secondary years.",
-          },
+          subtext: { en: "Tests personal motivation — schools fear candidates who applied to humanities as a backup." },
+          approach: { en: "Articulate what humanities asks of you that other DSA paths don't." },
+          template: { en: "I considered music DSA because I play violin, but I realised what excites me most is reading and writing about why things happen — that's a humanities habit, not a music habit. Music is something I'll keep as a CCA. Humanities is what I want as the academic centre of my secondary years." },
+          pitfall: { en: "Don't run down sport or music to lift humanities — it reads as defensive. Don't give a reason that would fit any subject; say what is specific to humanities." },
         },
         {
           question: { en: "If you could change one thing about Singapore's housing policy, what would it be?" },
-          subtext: {
-            en: "Tests structured thinking about a complex local issue.",
-          },
-          approach: {
-            en: "Don't oversimplify. Acknowledge the trade-off explicitly, then take a position.",
-          },
-          template: {
-            en: "I'd want HDB resale flat prices to grow more slowly. The trade-off is that current owners benefit from price growth — so cooling measures hurt them in the short term. But if prices grow faster than incomes, my generation will inherit a country where housing is harder to afford than for my parents. I'd accept the short-term cost.",
-          },
+          subtext: { en: "Tests structured thinking about a complex local issue." },
+          approach: { en: "Don't oversimplify. Acknowledge the trade-off explicitly, then take a position." },
+          template: { en: "I'd want HDB resale flat prices to grow more slowly. The trade-off is that current owners benefit from price growth — so cooling measures hurt them in the short term. But if prices grow faster than incomes, my generation will inherit a country where housing is harder to afford than for my parents. I'd accept the short-term cost." },
+          pitfall: { en: "Don't propose a fix while ignoring who it hurts — naming no trade-off signals shallow thinking. Don't quote numbers you can't back up." },
         },
         {
-          question: { en: "Who is your favourite historical figure and why?" },
-          subtext: {
-            en: "Tests cultural-historical engagement.",
-          },
-          approach: {
-            en: "Name the figure + name one specific event + articulate the reflection.",
-          },
-          template: {
-            en: "Lee Kuan Yew during the water negotiations with Malaysia in the 1960s. His insistence on water self-sufficiency — even when expensive in the short term — built the resilience that NEWater later confirmed. The decision wasn't popular at the time. What I learn from him is that some decisions look obvious in hindsight only because someone made them.",
-          },
-        },
-        {
-          question: { en: "How do you manage time across academic subjects?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I read for 30 minutes every day before doing homework — usually news articles or a non-fiction book. English and Math homework I do before dinner. Science on weekends. My mother shows my report book to my form teacher every term — if any subject drops a band, we cut reading time. That's the rule we set together.",
-          },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. Your humanities department's Research Studies programme is something I haven't found at other schools at the Sec 1-4 level. If School A called first I'd still wait for your reply.",
-          },
+          question: { en: "Who is your favourite historical figure, and why?" },
+          subtext: { en: "Tests cultural-historical engagement." },
+          approach: { en: "Name the figure, name one specific event, and articulate the reflection." },
+          template: { en: "Lee Kuan Yew during the water negotiations with Malaysia in the 1960s. His insistence on water self-sufficiency — even when expensive in the short term — built the resilience that NEWater later confirmed. The decision wasn't popular at the time. What I learn from him is that some decisions look obvious in hindsight only because someone made them." },
+          pitfall: { en: "Don't pick a famous name and praise them in vague terms — anchor it to one real event. Don't invent details about what they did or said." },
         },
       ],
       schools: [
@@ -11051,87 +9065,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why do you love softball?" },
-          subtext: {
-            en: "The panel wants a specific moment, not a feeling. \"It's fun\" reads as weak motivation.",
-          },
-          approach: {
-            en: "Open with one concrete memory, then connect it to character.",
-          },
-          template: {
-            en: "When I came up to bat with two outs and runners on in our P5 inter-class final, I realised I wanted to be the player my team trusts in that spot — not the one hoping someone else bats.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the program, or are they applying everywhere?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's softball — a training pattern, an NSG showing, the coach's emphasis.",
-          },
-          template: {
-            en: "Your school plays in the National B Division and trains its DSA players with the competition team — I want to be pushed at that level from Sec 1, not wait to catch up.",
-          },
+          subtext: { en: "The panel wants a specific moment, not a feeling. \"It's fun\" reads as weak motivation." },
+          approach: { en: "Open with one concrete memory, then connect it to character." },
+          template: { en: "When I came up to bat with two outs and runners on in our P5 inter-class final, I realised I wanted to be the player my team trusts in that spot — not the one hoping someone else bats." },
+          pitfall: { en: "Don't say \"it's fun\" or \"I'm good at it\" — that signals shallow motivation. Avoid a generic feeling; ground it in one at-bat or play that revealed why you want the responsibility." },
         },
         {
           question: { en: "What position do you play, and why?" },
-          subtext: {
-            en: "Can the kid articulate the role, not just label it?",
-          },
-          approach: {
-            en: "Name the position plus the job it does for the team.",
-          },
-          template: {
-            en: "Shortstop — my job is covering the most ground in the infield and turning double plays, so I work hardest on quick hands and reading the batter early.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a challenge." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I kept getting picked off at first because I read the pitcher late. I spent two weeks practising my lead and reaction with a teammate, and by our last games I was stealing bases instead of getting caught.",
-          },
+          subtext: { en: "Can the kid articulate the role, not just label it?" },
+          approach: { en: "Name the position plus the job it does for the team." },
+          template: { en: "Shortstop — my job is covering the most ground in the infield and turning double plays, so I work hardest on quick hands and reading the batter early." },
+          pitfall: { en: "Don't just name a position with no sense of its job. Avoid claiming a demanding spot like shortstop without naming what you specifically train to handle it." },
         },
         {
           question: { en: "Is there a teammate or coach you remember most?" },
-          subtext: {
-            en: "Whether the kid sees teammates as people or as background.",
-          },
-          approach: {
-            en: "Name someone specific by role + what you learned from them.",
-          },
-          template: {
-            en: "Our catcher always told me where to throw before the play even started — she taught me that softball is a thinking game, not just a throwing one.",
-          },
-        },
-        {
-          question: { en: "How will you manage time with frequent trainings?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I do my English and Math homework on the bus to training and finish the rest before dinner, and I keep Sundays for revision so a long training week never piles up.",
-          },
-        },
-        {
-          question: { en: "If School A and School B both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school — your coach's focus on fielding fundamentals fits how I want to develop. If the other school replied first I'd still wait to hear from you.",
-          },
+          subtext: { en: "Whether the kid sees teammates as people or as background." },
+          approach: { en: "Name someone specific by role plus what you learned from them." },
+          template: { en: "Our catcher always told me where to throw before the play even started — she taught me that softball is a thinking game, not just a throwing one." },
+          pitfall: { en: "Don't pick a teammate only for their stats or how hard they throw. Avoid a vague compliment — name the concrete habit or insight you took from them." },
         },
       ],
       schools: [
@@ -11365,87 +9316,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why shooting?" },
-          subtext: {
-            en: "The panel wants to hear genuine fit for a quiet, patient sport — not a borrowed answer. Many candidates are new to it, so a thoughtful reason matters more than a backstory.",
-          },
-          approach: {
-            en: "Connect the sport's nature — stillness, focus, self-control — to something real about your child.",
-          },
-          template: {
-            en: "I like that it's calm and it's all on me — I can shut everything out and just focus on one shot at a time. I'm the kind of person who'd rather get one thing exactly right than rush.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the programme, or are they applying everywhere?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's shooting — its NSG record, training pattern, or facilities.",
-          },
-          template: {
-            en: "Your school has a strong NSG shooting record and trains seriously from Sec 1 — I want to start in a programme that takes the sport that far.",
-          },
+          subtext: { en: "The panel wants to hear genuine fit for a quiet, patient sport — not a borrowed answer. Many candidates are new to it, so a thoughtful reason matters more than a backstory." },
+          approach: { en: "Connect the sport's nature — stillness, focus, self-control — to something real about your child." },
+          template: { en: "I like that it's calm and it's all on me — I can shut everything out and just focus on one shot at a time. I'm the kind of person who'd rather get one thing exactly right than rush." },
+          pitfall: { en: "Don't borrow a backstory or say it \"looks cool.\" Connect the sport's stillness and focus to a real trait of yours, even if you're new to it." },
         },
         {
           question: { en: "Have you shot before? If not, why do you think you'd be good at it?" },
-          subtext: {
-            en: "Tests honesty and self-awareness — schools expect many candidates to be beginners.",
-          },
-          approach: {
-            en: "If new, name a trait that transfers — steady hands, patience, focus — without over-claiming.",
-          },
-          template: {
-            en: "I haven't competed yet, but I'm patient and I don't rattle easily — when I do model-building I can sit still and focus for an hour. I think that fits shooting.",
-          },
+          subtext: { en: "Tests honesty and self-awareness — schools expect many candidates to be beginners." },
+          approach: { en: "If new, name a trait that transfers — steady hands, patience, focus — without over-claiming." },
+          template: { en: "I haven't competed yet, but I'm patient and I don't rattle easily — when I do model-building I can sit still and focus for an hour. I think that fits shooting." },
+          pitfall: { en: "Don't pretend to experience you don't have, and don't over-claim natural talent. If you're new, name a transferable trait and back it with a real example." },
         },
         {
           question: { en: "What do you do after a bad shot?" },
-          subtext: {
-            en: "Mental reset is the heart of the sport — the panel wants to see composure, not frustration.",
-          },
-          approach: {
-            en: "Describe a concrete reset action, not a feeling.",
-          },
-          template: {
-            en: "I put the gun down, take one slow breath, and forget the last shot completely — the next shot is the only one I can change.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a challenge." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I kept losing focus halfway through my P5 music exam pieces. I started practising slowly with a metronome every day, and by the exam I could hold concentration the whole way through.",
-          },
-        },
-        {
-          question: { en: "How will you manage shooting with your studies?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I finish my homework before training days and keep Sunday for revision — shooting trains twice a week, so I plan around those two evenings.",
-          },
-        },
-        {
-          question: { en: "If two schools both offer you, how would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school — the coaching here matches how I want to train. If another school called first, I'd still wait for your reply.",
-          },
+          subtext: { en: "Mental reset is the heart of the sport — the panel wants to see composure, not frustration." },
+          approach: { en: "Describe a concrete reset action, not a feeling." },
+          template: { en: "I put the gun down, take one slow breath, and forget the last shot completely — the next shot is the only one I can change." },
+          pitfall: { en: "Don't say you never miss or that a bad shot doesn't bother you. Describe a concrete reset action — frustration that lingers is what the panel fears." },
         },
       ],
       schools: [
@@ -11679,87 +9567,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why bowling?" },
-          subtext: {
-            en: "The panel wants a specific reason this sport, not a generic love of sport. \"It's fun\" reads as weak motivation.",
-          },
-          approach: {
-            en: "Open with one concrete moment, then connect it to what bowling demands of you.",
-          },
-          template: {
-            en: "I liked that bowling is on me alone — when I converted my first 10-pin spare to win a frame, I knew it was my adjustment, not luck, that did it.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the bowling program, or are they applying everywhere?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's bowling — an NSG result, a training pattern, a coach.",
-          },
-          template: {
-            en: "Your bowling team has a strong NSG record and trains DSA candidates alongside the competition squad — I want that standard from Sec 1.",
-          },
+          subtext: { en: "The panel wants a specific reason for this sport, not a generic love of sport. \"It's fun\" reads as weak motivation." },
+          approach: { en: "Open with one concrete moment, then connect it to what bowling demands of you." },
+          template: { en: "I liked that bowling is on me alone — when I converted my first 10-pin spare to win a frame, I knew it was my adjustment, not luck, that did it." },
+          pitfall: { en: "Don't say \"it's fun\" or that you fell into it casually. Give one concrete moment that shows what bowling demands and why it suits you." },
         },
         {
           question: { en: "What part of your game is strongest, and what are you working on?" },
-          subtext: {
-            en: "Can the player assess themselves honestly instead of claiming everything is good?",
-          },
-          approach: {
-            en: "Name one real strength and one real weakness, with what you're doing about the weakness.",
-          },
-          template: {
-            en: "My spare shooting is consistent, but my speed control wobbles when I get nervous — so I've added a fixed pre-shot breath to steady my tempo.",
-          },
+          subtext: { en: "Can the player assess themselves honestly instead of claiming everything is good?" },
+          approach: { en: "Name one real strength and one real weakness, with what you're doing about the weakness." },
+          template: { en: "My spare shooting is consistent, but my speed control wobbles when I get nervous — so I've added a fixed pre-shot breath to steady my tempo." },
+          pitfall: { en: "Don't claim everything is solid or name a fake weakness. Give one real flaw and the concrete habit you've built to fix it." },
         },
         {
           question: { en: "What do you do when your ball stops hitting the pocket mid-game?" },
-          subtext: {
-            en: "Tests whether the player understands lane changes or just throws the same shot harder.",
-          },
-          approach: {
-            en: "Show that you read the ball reaction and adjust, rather than blaming the lane.",
-          },
-          template: {
-            en: "If it starts hooking early I move my feet a couple of boards left and keep the same target — usually the oil has moved, not my swing.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation → action → result, in two sentences.",
-          },
-          template: {
-            en: "I bowled an open frame in the last frame of a tournament and dropped two places. I started keeping a spare log after every session and converted far more single pins by the next meet.",
-          },
-        },
-        {
-          question: { en: "How will you balance frequent training with schoolwork?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I finish Math and English homework before training on weekdays and keep Sunday mornings for revision — bowling is evenings, so it doesn't eat my study time.",
-          },
-        },
-        {
-          question: { en: "If two schools both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school — the way your coach builds spare consistency matches how I want to improve. If the other school called first I'd still wait for your reply.",
-          },
+          subtext: { en: "Tests whether the player understands lane changes or just throws the same shot harder." },
+          approach: { en: "Show that you read the ball reaction and adjust, rather than blaming the lane." },
+          template: { en: "If it starts hooking early I move my feet a couple of boards left and keep the same target — usually the oil has moved, not my swing." },
+          pitfall: { en: "Don't say you'd just throw harder or blame the lane. Show you read the ball reaction and make a specific adjustment to your feet or line." },
         },
       ],
       schools: [
@@ -11993,87 +9818,31 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why cross country, and not track?" },
-          subtext: {
-            en: "Panels want a candidate who chose the sport for what it is — endurance, terrain, team scoring — not one who landed in it by default.",
-          },
-          approach: {
-            en: "Name a specific thing about cross country that track doesn't offer: the terrain, the team-scoring dynamic, or the endurance challenge. Tie it to a real moment.",
-          },
-          template: {
-            en: "I tried the 1500m on track, but what hooked me was my first cross country race over the hills at our school field. On the track you only race the clock; in cross country I was racing the runners around me and the course itself, and my time still counted for the team. That mix of endurance and teamwork is why I picked it.",
-          },
-        },
-        {
-          question: { en: "Cross country and track distance both came up — how would you choose between them?" },
-          subtext: {
-            en: "Tests whether the candidate actually understands the difference between the two sports rather than treating them as interchangeable.",
-          },
-          approach: {
-            en: "Show you understand the real distinctions — terrain, pacing, team scoring, endurance versus speed — and then make a clear choice with a reason.",
-          },
-          template: {
-            en: "They overlap in fitness but they're different sports. Track distance rewards even pacing and a fast finish on a flat oval; cross country is about endurance over hills and trails, judging effort by terrain, and scoring as a team. I'm choosing cross country because I'm stronger over longer, rougher ground than over a fast flat lap, and I like that my place helps the whole squad's score.",
-          },
+          subtext: { en: "Panels want a candidate who chose the sport for what it is — endurance, terrain, team scoring — not one who landed in it by default." },
+          approach: { en: "Name a specific thing about cross country that track doesn't offer: the terrain, the team-scoring dynamic, or the endurance challenge. Tie it to a real moment." },
+          template: { en: "I tried the 1500m on track, but what hooked me was my first cross country race over the hills at our school field. On the track you only race the clock; in cross country I was racing the runners around me and the course itself, and my time still counted for the team. That mix of endurance and teamwork is why I picked it." },
+          pitfall: { en: "Don't make it sound like you do cross country only because you weren't fast enough for track. Name what the sport itself offers — terrain, team scoring, endurance." },
         },
         {
           question: { en: "Cross country is scored as a team — what does that change about how you race?" },
-          subtext: {
-            en: "Checks whether the candidate grasps team-position scoring, the single most distinctive feature of the sport.",
-          },
-          approach: {
-            en: "Explain that team scoring sums finishing positions and the lowest total wins, then say what that means for how you run.",
-          },
-          template: {
-            en: "In cross country the team score is the sum of our finishing positions, so every place counts and the lowest total wins. That means I can't ease off just because I'm not winning — if I move from twelfth to tenth, that's two points saved for the team. So I race every position to the line, even when a medal is out of reach.",
-          },
+          subtext: { en: "Checks whether the candidate grasps team-position scoring, the single most distinctive feature of the sport." },
+          approach: { en: "Explain that team scoring sums finishing positions and the lowest total wins, then say what that means for how you run." },
+          template: { en: "In cross country the team score is the sum of our finishing positions, so every place counts and the lowest total wins. That means I can't ease off just because I'm not winning — if I move from twelfth to tenth, that's two points saved for the team. So I race every position to the line, even when a medal is out of reach." },
+          pitfall: { en: "Don't get the scoring wrong (lowest total wins) or treat it as an individual race. Show you'd fight for places even when you can't medal." },
         },
         {
           question: { en: "Walk us through how you'd pace a hilly course." },
-          subtext: {
-            en: "Tests terrain-specific pacing judgement, the core skill that separates cross country from track.",
-          },
-          approach: {
-            en: "Describe redistributing effort by terrain rather than holding one pace — controlled start, easing on climbs, pressing on descents and flats.",
-          },
-          template: {
-            en: "I wouldn't run one fixed pace. I'd start controlled so I'm not in oxygen debt at the first hill, shorten my stride and use my arms going up, then control the downhill without slamming the brakes and use the flats after halfway to move up. I'd save a real push for the last few hundred metres to take any places I can.",
-          },
+          subtext: { en: "Tests terrain-specific pacing judgement, the core skill that separates cross country from track." },
+          approach: { en: "Describe redistributing effort by terrain rather than holding one pace — controlled start, easing on climbs, pressing on descents and flats." },
+          template: { en: "I wouldn't run one fixed pace. I'd start controlled so I'm not in oxygen debt at the first hill, shorten my stride and use my arms going up, then control the downhill without slamming the brakes and use the flats after halfway to move up. I'd save a real push for the last few hundred metres to take any places I can." },
+          pitfall: { en: "Don't describe holding one even pace like a track race — that misses the point. Show you redistribute effort by terrain, easing on climbs and pressing on flats and descents." },
         },
         {
-          question: { en: "Tell us about a race that went badly." },
-          subtext: {
-            en: "Tests resilience and self-awareness; schools are wary of candidates who only present clean wins.",
-          },
-          approach: {
-            en: "Situation → specific cause → specific change → result. A genuine setback reads more honestly than a polished story.",
-          },
-          template: {
-            en: "At a school cross country race I went out too fast with the lead group and died on the second hill, dropping from fourth to eleventh. I rebuilt my plan with my coach — hold back for the first kilometre and trust my endurance to come back at people late. At the next race I started ninth and finished fifth by passing runners in the last loop. Pacing isn't optional in this sport.",
-          },
-        },
-        {
-          question: { en: "Why our school?" },
-          subtext: {
-            en: "Did the family research the cross country programme, or is this a scatter-shot application?",
-          },
-          approach: {
-            en: "Cite something specific — the squad's NSG results, the coach's training approach, the terrain the team trains on, or the strength of the scoring pack.",
-          },
-          template: {
-            en: "Your cross country squad has consistent depth at NSG, not just one fast runner — your fourth and fifth scorers finish close to your first, which is how teams actually win cross country. The way your coach builds base mileage before sharpening speed matches how I think I'll improve over four years. I want to earn a place in that scoring pack by Sec 3.",
-          },
-        },
-        {
-          question: { en: "How will you balance morning training with schoolwork?" },
-          subtext: {
-            en: "Distance training is high-volume and often early; schools fear runners whose grades slide by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real, specific weekly schedule rather than a vague promise to manage time.",
-          },
-          template: {
-            en: "I run before school three mornings a week and do a longer run on Saturday. I finish my homework before evening so I'm not doing it tired after a run, and I use the bus ride for revision. Sunday is recovery — light or rest — because in distance running rest is part of the training, not time off from it.",
-          },
+          question: { en: "Cross country and track distance both came up — how would you choose between them?" },
+          subtext: { en: "Tests whether the candidate actually understands the difference between the two sports rather than treating them as interchangeable." },
+          approach: { en: "Show you understand the real distinctions — terrain, pacing, team scoring, endurance versus speed — and then make a clear choice with a reason." },
+          template: { en: "They overlap in fitness but they're different sports. Track distance rewards even pacing and a fast finish on a flat oval; cross country is about endurance over hills and trails, judging effort by terrain, and scoring as a team. I'm choosing cross country because I'm stronger over longer, rougher ground than over a fast flat lap, and I like that my place helps the whole squad's score." },
+          pitfall: { en: "Don't treat the two as interchangeable or dodge the choice. Show you know the real differences, then commit with a reason rooted in your own strengths." },
         },
       ],
       schools: [
@@ -12313,87 +10082,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why canoeing?" },
-          subtext: {
-            en: "Panels want a specific reason, not \"I like the water.\" Canoeing is hard, repetitive, and early-morning — they want to know you chose it knowingly.",
-          },
-          approach: {
-            en: "Open with one concrete moment — a race, a time you broke, a training morning — then connect it to character.",
-          },
-          template: {
-            en: "I started canoeing because my cousin paddled and I thought it looked easy. My first 200m time trial wrecked me — I finished last. I went back every weekend until I cut 40 seconds off it. Canoeing taught me that the boring repeated mornings are what actually move the time.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research this school's canoeing programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing — the CCA's NSG record, training venue, or a coach — and tie it to your goal.",
-          },
-          template: {
-            en: "Your canoeing CCA has been NSG-active for years and trains on the reservoir twice a week. I want that volume from Sec 1 because my K1 1000m time has plateaued and I need a programme that pushes endurance, not just sprints.",
-          },
+          subtext: { en: "Panels want a specific reason, not \"I like the water.\" Canoeing is hard, repetitive, and early-morning — they want to know you chose it knowingly." },
+          approach: { en: "Open with one concrete moment — a race, a time you broke, a training morning — then connect it to character." },
+          template: { en: "I started canoeing because my cousin paddled and I thought it looked easy. My first 200m time trial wrecked me — I finished last. I went back every weekend until I cut 40 seconds off it. Canoeing taught me that the boring repeated mornings are what actually move the time." },
+          pitfall: { en: "Don't say \"I like the water\" — it dodges how hard and repetitive the sport is. Show with a concrete moment that you chose it knowing what it demands." },
         },
         {
           question: { en: "Walk us through your training week." },
-          subtext: {
-            en: "Tests whether the candidate trains seriously and can self-manage — and whether the record matches the routine.",
-          },
-          approach: {
-            en: "Describe a real week: water sessions, land/erg work, and how it fits around school.",
-          },
-          template: {
-            en: "Two water sessions on the reservoir on weekends, erg and core twice a week after school, and I log every time trial. Nearer competitions my coach adds a third water session. I do homework on the bus to and from training so the schedule holds.",
-          },
+          subtext: { en: "Tests whether the candidate trains seriously and can self-manage — and whether the record matches the routine." },
+          approach: { en: "Describe a real week: water sessions, land/erg work, and how it fits around school." },
+          template: { en: "Two water sessions on the reservoir on weekends, erg and core twice a week after school, and I log every time trial. Nearer competitions my coach adds a third water session. I do homework on the bus to and from training so the schedule holds." },
+          pitfall: { en: "Don't give a vague \"I train a lot.\" Lay out actual sessions — water, erg, core — and the panel will check it lines up with your times." },
         },
         {
           question: { en: "What's your best time, and what's holding it back?" },
-          subtext: {
-            en: "Can the candidate talk about their own performance honestly and analytically, not just quote a number?",
-          },
-          approach: {
-            en: "Give the time, the distance, and one specific limiter you're working on.",
-          },
-          template: {
-            en: "My K1 500m is around 2:50. My start is strong but I fade in the last 150m — my stroke rate drops. I'm working on aerobic endurance on the erg and on holding stroke length when I'm tired, because that's where I lose places.",
-          },
-        },
-        {
-          question: { en: "Tell us about a setback in your paddling." },
-          subtext: {
-            en: "Specific actions, not just the feeling. Schools want resilience they can see.",
-          },
-          approach: {
-            en: "Situation → what you did → result, in two or three sentences.",
-          },
-          template: {
-            en: "I capsized at the start of an NSG heat and finished out of the final. I spent the next two months drilling balance and starts until I could hold the boat steady in another paddler's wash. The next season I made the final. The fix was water hours, not luck.",
-          },
-        },
-        {
-          question: { en: "How do you balance training with schoolwork?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not a promise to \"work hard.\"",
-          },
-          template: {
-            en: "Training is fixed in my week, so school has to fit around it. I finish most homework on training days before dinner and keep weekends for the long water sessions and revision on Sunday. My parents check my report book with me each term — that's the rule we agreed before I committed to competitive canoeing.",
-          },
-        },
-        {
-          question: { en: "If two schools both offer you a place, how do you decide?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually enrol.",
-          },
-          approach: {
-            en: "Don't dodge. Name one school and justify it with one specific, canoeing-related reason.",
-          },
-          template: {
-            en: "Honestly, your school — your canoeing CCA trains on the water twice a week and has the NSG record I want to be part of. If another school called first I'd still wait for your reply, because the programme is the reason I applied.",
-          },
+          subtext: { en: "Can the candidate talk about their own performance honestly and analytically, not just quote a number?" },
+          approach: { en: "Give the time, the distance, and one specific limiter you're working on." },
+          template: { en: "My K1 500m is around 2:50. My start is strong but I fade in the last 150m — my stroke rate drops. I'm working on aerobic endurance on the erg and on holding stroke length when I'm tired, because that's where I lose places." },
+          pitfall: { en: "Don't just quote a time and stop, or claim nothing's holding you back. Name one real limiter and what you're doing about it." },
         },
       ],
       schools: [
@@ -12612,87 +10318,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why tchoukball?" },
-          subtext: {
-            en: "The panel wants a specific reason, not \"it's fun.\" Tchoukball is a niche choice, so a thoughtful answer stands out.",
-          },
-          approach: {
-            en: "Open with one concrete moment, then connect it to what the no-contact game rewards.",
-          },
-          template: {
-            en: "I started in P4 and what hooked me is that you can't bully your way to a point — you win by reading the rebound faster than the other team. That's the part I'm best at.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the program, or are they applying everywhere?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's tchoukball — its CCA history, a championship it plays in, or a training pattern.",
-          },
-          template: {
-            en: "Your girls' team has played the TBAS inter-school championships for several years — I want to train somewhere tchoukball is taken seriously, not treated as a side CCA.",
-          },
+          subtext: { en: "The panel wants a specific reason, not \"it's fun.\" Tchoukball is a niche choice, so a thoughtful answer stands out." },
+          approach: { en: "Open with one concrete moment, then connect it to what the no-contact game rewards." },
+          template: { en: "I started in P4, and what hooked me is that you can't bully your way to a point — you win by reading the rebound faster than the other team. That's the part I'm best at." },
+          pitfall: { en: "Don't say \"it's fun\" or \"my friends played\" — a niche sport deserves a real reason. Avoid sounding like you fell into it; show you understand what makes the no-contact game different." },
         },
         {
           question: { en: "What is your role on the team?" },
-          subtext: {
-            en: "Can the kid articulate the job, not just label a position?",
-          },
-          approach: {
-            en: "Name the role plus what it actually requires in a no-contact game.",
-          },
-          template: {
-            en: "I play wing, so my job is finishing the attack — placing the rebound where their defenders can't reach it within three passes.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a challenge." },
-          subtext: {
-            en: "Specific actions, not just outcome or feelings.",
-          },
-          approach: {
-            en: "Situation, then action, then result — in two sentences.",
-          },
-          template: {
-            en: "My catching was unreliable and I kept dropping rebounds in matches. I did wall-catch drills every day before training for a month, and by our last tournament I wasn't the one giving away possession.",
-          },
+          subtext: { en: "Can the kid articulate the job, not just label a position?" },
+          approach: { en: "Name the role plus what it actually requires in a no-contact game." },
+          template: { en: "I play wing, so my job is finishing the attack — placing the rebound where their defenders can't reach it within three passes." },
+          pitfall: { en: "Don't just label a position without explaining what it does in play. Avoid describing only the scoring and ignoring the positioning and passing the role depends on." },
         },
         {
           question: { en: "How do you handle losing possession or making a mistake mid-game?" },
-          subtext: {
-            en: "Possession turns over constantly in tchoukball — the panel wants to see composure, not frustration.",
-          },
-          approach: {
-            en: "Show that you reset fast and stay useful for the team.",
-          },
-          template: {
-            en: "Possession changes so often that one dropped catch isn't the end — I tell myself to get into position for the next rebound instead of replaying the mistake.",
-          },
-        },
-        {
-          question: { en: "How do you manage time with frequent trainings?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I finish English and Math homework on training days before I leave, and I keep one weekend afternoon for revision so trainings don't push everything to the last minute.",
-          },
-        },
-        {
-          question: { en: "If School A and School B both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one, justify with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school — your tchoukball CCA has a longer competition record and I want that level of training. If the other school replied first I'd still wait to hear from you.",
-          },
+          subtext: { en: "Possession turns over constantly in tchoukball — the panel wants to see composure, not frustration." },
+          approach: { en: "Show that you reset fast and stay useful for the team." },
+          template: { en: "Possession changes so often that one dropped catch isn't the end — I tell myself to get into position for the next rebound instead of replaying the mistake." },
+          pitfall: { en: "Don't claim you \"never get rattled\" — that reads as fake. Avoid dwelling on blame or frustration; show the concrete thing you do to reset for the next ball." },
         },
       ],
       schools: [
@@ -12907,87 +10550,31 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why this uniformed group, and why a uniformed-group DSA rather than another talent area?" },
-          subtext: {
-            en: "Tests genuine motivation — panels fear candidates who applied here as a backup.",
-          },
-          approach: {
-            en: "Name what this group asks of you that others don't, and connect it to a specific experience.",
-          },
-          template: {
-            en: "I've been in Scouts since Primary 3, and what kept me there was the responsibility — by Primary 5 I was a patrol leader planning part of our campcraft. I considered a sports DSA, but what I value most isn't competing, it's being trusted to lead a small team and serve. That's a uniformed-group habit, and it's what I want to carry into secondary school.",
-          },
+          subtext: { en: "Tests genuine motivation — panels fear candidates who applied here as a backup." },
+          approach: { en: "Name what this group asks of you that others don't, and connect it to a specific experience." },
+          template: { en: "I've been in Scouts since Primary 3, and what kept me there was the responsibility — by Primary 5 I was a patrol leader planning part of our campcraft. I considered a sports DSA, but what I value most isn't competing, it's being trusted to lead a small team and serve. That's a uniformed-group habit, and it's what I want to carry into secondary school." },
+          pitfall: { en: "Don't make it sound like a fallback or talk only about badges and rank. Name what this group demands of you — leadership, service — and tie it to a real role you held." },
         },
         {
           question: { en: "Tell us about a leadership role you held and a hard decision you had to make." },
-          subtext: {
-            en: "Tests real accountability, not just the title on record.",
-          },
-          approach: {
-            en: "Situation, the decision you made, what changed, what you learned — keep it to one specific story.",
-          },
-          template: {
-            en: "As patrol leader at a camp, one member wanted to quit a night hike halfway. I had to decide between pushing the group's pace and staying back with him. I split the patrol — sent the confident ones ahead with my assistant and walked with him myself. We finished last but we finished together. I learned that leading sometimes means slowing down for the person who needs it.",
-          },
+          subtext: { en: "Tests real accountability, not just the title on record." },
+          approach: { en: "Situation, the decision you made, what changed, what you learned — keep it to one specific story." },
+          template: { en: "As patrol leader at a camp, one member wanted to quit a night hike halfway. I had to decide between pushing the group's pace and staying back with him. I split the patrol — sent the confident ones ahead with my assistant and walked with him myself. We finished last but we finished together. I learned that leading sometimes means slowing down for the person who needs it." },
+          pitfall: { en: "Don't just state your title or describe a decision that cost you nothing. Show a real trade-off you owned, and don't blame the people you were leading." },
         },
         {
           question: { en: "Tell us about your service to the community through your group." },
-          subtext: {
-            en: "Tests depth of service, not a padded list of one-off events.",
-          },
-          approach: {
-            en: "Pick one sustained effort. Say who it served, what you did, and why it mattered to you.",
-          },
-          template: {
-            en: "Our Brigade company visited the same eldercare home every month for two years. At first I just helped set up, but later I was put in charge of the activity rotation. One resident remembered my name each visit — that's when service stopped being hours to log and became people I'd let down if I didn't show up.",
-          },
-        },
-        {
-          question: { en: "Describe a time you wanted to give up at a camp or training but didn't." },
-          subtext: {
-            en: "Tests resilience and whether the candidate put the team first.",
-          },
-          approach: {
-            en: "Be honest about the difficulty, then show perseverance and care for the team.",
-          },
-          template: {
-            en: "On the second day of a wet camp I was exhausted and my boots were soaked. What kept me going was that two younger cadets in my section were watching how I handled it. If I complained, they would too. So I kept my bearing, helped them dry their gear, and we got through it. I was prouder of holding the section together than of finishing.",
-          },
+          subtext: { en: "Tests depth of service, not a padded list of one-off events." },
+          approach: { en: "Pick one sustained effort. Say who it served, what you did, and why it mattered to you." },
+          template: { en: "Our Brigade company visited the same eldercare home every month for two years. At first I just helped set up, but later I was put in charge of the activity rotation. One resident remembered my name each visit — that's when service stopped being hours to log and became people I'd let down if I didn't show up." },
+          pitfall: { en: "Don't rattle off a list of one-off events to pad the record. Pick one sustained commitment and show why it mattered to you, not how many hours you logged." },
         },
         {
           question: { en: "What do the values of your uniformed group mean to you?" },
-          subtext: {
-            en: "Tests whether values are genuinely held or just recited.",
-          },
-          approach: {
-            en: "Name one value and tie it to a real moment, rather than listing all of them.",
-          },
-          template: {
-            en: "Our motto talks about putting others first. It sounded like words until a younger member panicked during a high-element activity. I realised I could either get my own turn done or talk her through hers. I stayed with her. Putting others first isn't a slogan to me now — it's a choice I've actually made.",
-          },
-        },
-        {
-          question: { en: "How do you balance your CCA commitment with your studies?" },
-          subtext: {
-            en: "Schools fear DSA students who flame out academically.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "Camps and weekend service mean I lose some study time, so I plan around them. The week before a camp I finish homework early. After camp I have a fixed catch-up evening. My parents check my results each term — if a subject drops, we cut back on extra activities until it recovers. We agreed that rule together.",
-          },
-        },
-        {
-          question: { en: "If our school and another both offer you a uniformed-group place, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure and whether the candidate researched the school.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school and give one specific reason tied to its uniformed group.",
-          },
-          template: {
-            en: "Honestly, your school. I read that your NPCC unit has a strong service-leadership tradition and runs its National Service programme well, and the school's values match what my group taught me about discipline and service. If the other school replied first I'd still wait for yours.",
-          },
+          subtext: { en: "Tests whether values are genuinely held or just recited." },
+          approach: { en: "Name one value and tie it to a real moment, rather than listing all of them." },
+          template: { en: "Our motto talks about putting others first. It sounded like words until a younger member panicked during a high-element activity. I realised I could either get my own turn done or talk her through hers. I stayed with her. Putting others first isn't a slogan to me now — it's a choice I've actually made." },
+          pitfall: { en: "Don't recite the full motto or list every value — that proves you memorised it, not that you live it. Pick one value and prove it with a moment you actually acted on." },
         },
       ],
       schools: [
@@ -13224,87 +10811,45 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why science? What first made you curious about it?" },
-          subtext: {
-            en: "Panels open here to separate genuine curiosity from a coached answer. They want a specific origin, not \"I've always loved science.\"",
-          },
-          approach: {
-            en: "Name one concrete moment or recurring question. Tie it to something you actually did about it.",
-          },
-          template: {
-            en: "I started wondering why my mum's bread rose but mine didn't. I tried changing the water temperature each time and kept notes — turns out my water was killing the yeast. That's when I realised you could actually test why things happen instead of just asking.",
-          },
+          subtext: { en: "Panels open here to separate genuine curiosity from a coached answer. They want a specific origin, not \"I've always loved science.\"" },
+          approach: { en: "Name one concrete moment or recurring question. Tie it to something you actually did about it." },
+          template: { en: "I started wondering why my mum's bread rose but mine didn't. I tried changing the water temperature each time and kept notes — turns out my water was killing the yeast. That's when I realised you can actually test why things happen instead of just asking." },
+          pitfall: { en: "Don't say \"I've always loved science\" or \"science is interesting\" — that's a coached non-answer. Tie your curiosity to one moment and something you actually did about it." },
         },
         {
           question: { en: "Walk us through a science project or experiment you've done." },
-          subtext: {
-            en: "The panel wants method and reasoning, not a list of competitions or a polished result.",
-          },
-          approach: {
-            en: "Pick one. Question, what you measured, what surprised you, what you changed. Spend most of the time on the surprise and the fix.",
-          },
-          template: {
-            en: "I tested which fruit browns fastest after cutting. I expected apple, but pear was faster. My first test wasn't fair — I'd left them in different spots — so I redid it with all of them in the same place and same light. Pear still browned faster, so it was real, not the setup.",
-          },
+          subtext: { en: "The panel wants method and reasoning, not a list of competitions or a polished result." },
+          approach: { en: "Pick one. The question, what you measured, what surprised you, what you changed. Spend most of the time on the surprise and the fix." },
+          template: { en: "I tested which fruit browns fastest after cutting. I expected apple, but pear was faster. My first test wasn't fair — I'd left them in different spots — so I redid it with all of them in the same place and same light. Pear still browned faster, so it was real, not the setup." },
+          pitfall: { en: "Don't present a tidy result as if it worked first time. The panel wants the messy part — what surprised you and what you fixed — not a list of competitions." },
         },
         {
           question: { en: "Here's an experiment. Tell us what's wrong with it." },
-          subtext: {
-            en: "Tests fair-test reasoning directly — the ability to spot uncontrolled variables, missing repeats, or a confounding factor.",
-          },
-          approach: {
-            en: "Name the specific flaw, explain why it matters, propose the fix. Don't just say \"it's not fair.\"",
-          },
-          template: {
-            en: "They changed the plant's water and its sunlight at the same time, so if it grows better you can't tell which one caused it. I'd keep sunlight the same for both plants and only change the water — and run it twice to be sure it wasn't luck.",
-          },
+          subtext: { en: "Tests fair-test reasoning directly — the ability to spot uncontrolled variables, missing repeats, or a confounding factor." },
+          approach: { en: "Name the specific flaw, explain why it matters, propose the fix. Don't just say \"it's not fair.\"" },
+          template: { en: "They changed the plant's water and its sunlight at the same time, so if it grows better you can't tell which one caused it. I'd keep sunlight the same for both plants and only change the water — and run it twice to be sure it wasn't luck." },
+          pitfall: { en: "Don't stop at \"it's not a fair test.\" Name the specific variable that's uncontrolled, say why it ruins the conclusion, and give the fix — vagueness reads as a memorised phrase." },
         },
         {
           question: { en: "You're interested in science, math, and robotics — how do you know science is your DSA route?" },
-          subtext: {
-            en: "STEM-leaning families often apply across all three. The panel wants to know the candidate understands the difference, not just that they like STEM.",
-          },
-          approach: {
-            en: "Distinguish the three honestly. Math is abstract problem-solving; robotics is building and coding; science is investigating why the real world behaves as it does. Say which pulls you and why.",
-          },
-          template: {
-            en: "I like math, but for me it's a tool. Robotics I enjoy, but I care more about the why than the build. What I actually lose track of time on is testing why something in the real world happens — that's science. The other two help me do it, but the question always comes first.",
-          },
+          subtext: { en: "STEM-leaning families often apply across all three. The panel wants to know the candidate understands the difference, not just that they like STEM." },
+          approach: { en: "Distinguish the three honestly. Math is abstract problem-solving; robotics is building and coding; science is investigating why the real world behaves as it does. Say which pulls you and why." },
+          template: { en: "I like math, but for me it's a tool. Robotics I enjoy, but I care more about the why than the build. What I actually lose track of time on is testing why something in the real world happens — that's science. The other two help me do it, but the question always comes first." },
+          pitfall: { en: "Don't say \"I love all of STEM\" and leave it there. If you can't say what specifically pulls you to science over math or robotics, the panel reads it as a scatter-shot application." },
         },
         {
           question: { en: "Explain a science idea you understand well to someone who's never heard of it." },
-          subtext: {
-            en: "Tests science communication — clarity and analogy over jargon.",
-          },
-          approach: {
-            en: "Pick something you genuinely understand. Use one everyday analogy. Check yourself: would a younger sibling follow it?",
-          },
-          template: {
-            en: "Density is like a crowded lift versus an empty one — same size box, but one's packed and heavier. That's why oil floats on water: the oil's particles are more spread out, so the same amount of space weighs less, and the lighter one sits on top.",
-          },
+          subtext: { en: "Tests science communication — clarity and analogy over jargon." },
+          approach: { en: "Pick something you genuinely understand. Use one everyday analogy. Check yourself: would a younger sibling follow it?" },
+          template: { en: "Density is like a crowded lift versus an empty one — same size box, but one's packed and heavier. That's why oil floats on water: the oil's particles are more spread out, so the same space weighs less, and the lighter one sits on top." },
+          pitfall: { en: "Don't reach for textbook terms to sound impressive — if your listener can't follow it, you've failed the task. Picking an idea you only half-understand shows the moment the analogy breaks down." },
         },
         {
           question: { en: "What science have you explored on your own, outside school?" },
-          subtext: {
-            en: "Curiosity and self-direction. Generic answers (\"I watch science videos\") fail; one specific rabbit hole succeeds.",
-          },
-          approach: {
-            en: "Name one specific thing you chased on your own and what you found or still wonder.",
-          },
-          template: {
-            en: "After a documentary on coral bleaching I wanted to see temperature effects myself, so I left two cups of water with food colouring at different temperatures and timed how fast the colour spread. The warm one mixed way faster. I still want to know if that's why warm seas stress coral.",
-          },
-        },
-        {
-          question: { en: "If our school and another school both offer you a science place, how would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure and whether the family has researched this school's actual science pipeline.",
-          },
-          approach: {
-            en: "Don't dodge. Name one specific thing about this school's science program and commit to a reason.",
-          },
-          template: {
-            en: "Honestly, your school — your Science Mentorship attachment with research labs is the part I want most, and I read about a student project on local water quality on your site. That's the kind of work I'd want to do, so I'd choose here.",
-          },
+          subtext: { en: "Curiosity and self-direction. Generic answers (\"I watch science videos\") fail; one specific rabbit hole succeeds." },
+          approach: { en: "Name one specific thing you chased on your own and what you found or still wonder." },
+          template: { en: "After a documentary on coral bleaching I wanted to see temperature effects myself, so I left two cups of water with food colouring at different temperatures and timed how fast the colour spread. The warm one mixed way faster. I still want to know if that's why warm seas stress coral." },
+          pitfall: { en: "Don't say \"I watch science videos\" or name a class your parents enrolled you in. The panel wants one specific thing you chased on your own, and what you found or still wonder." },
         },
       ],
       schools: [
@@ -13547,87 +11092,31 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why debate?" },
-          subtext: {
-            en: "Panels want a specific reason this child is drawn to argument and speaking — not \"because I'm good at talking.\"",
-          },
-          approach: {
-            en: "Open with one concrete moment — a discussion, an argument you changed your mind in, a speech you watched — then connect it to why you want to do this.",
-          },
-          template: {
-            en: "In P5 I argued in class that our recycling drive wasn't working, and a friend changed my mind with one point I hadn't thought of. I realised I liked being wrong if it meant getting closer to the truth — that's what debate is, and that's why I want it.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the school's debate or speaking programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific item — the school's debating society, a competition record you read about, a teacher or showcase you encountered at the open house.",
-          },
-          template: {
-            en: "I went to your open house and sat in on the debating society's demo round. The seniors weren't just loud — they listened and answered each other precisely. That's the kind of debating I want to learn, not the shouting kind.",
-          },
+          subtext: { en: "Panels want a specific reason this child is drawn to argument and speaking — not \"because I'm good at talking.\"" },
+          approach: { en: "Open with one concrete moment — a discussion, an argument you changed your mind in, a speech you watched — then connect it to why you want this." },
+          template: { en: "In P5 I argued in class that our recycling drive wasn't working, and a friend changed my mind with one point I hadn't thought of. I realised I liked being wrong if it meant getting closer to the truth — that's what debate is, and that's why I want it." },
+          pitfall: { en: "Don't say \"I like talking\" or \"I'm good at arguing\" — that's a personality, not a reason. Don't give a motive so generic it could explain any CCA." },
         },
         {
           question: { en: "Tell us about a topic you've changed your mind on." },
-          subtext: {
-            en: "Tests intellectual honesty and whether the candidate reasons rather than defends positions blindly.",
-          },
-          approach: {
-            en: "Pick a real example, explain what you used to think, what shifted it, and what you think now.",
-          },
-          template: {
-            en: "I used to think homework should be banned. Then I read why spaced practice helps memory, and I realised the problem isn't homework — it's badly designed homework. Now I'd argue for less but better, which is a harder position to defend, and that's why it's more honest.",
-          },
+          subtext: { en: "Tests intellectual honesty and whether the candidate reasons rather than defends positions blindly." },
+          approach: { en: "Pick a real example: explain what you used to think, what shifted it, and what you think now." },
+          template: { en: "I used to think homework should be banned. Then I read why spaced practice helps memory, and I realised the problem isn't homework — it's badly designed homework. Now I'd argue for less but better, which is a harder position to defend, and that's why it's more honest." },
+          pitfall: { en: "Don't pick a fake or trivial change just to look open-minded. Don't skip what actually shifted you — \"I just grew up\" shows no reasoning." },
         },
         {
           question: { en: "What's a current issue you've been following, and where do you stand?" },
-          subtext: {
-            en: "Panels want depth on one issue — the actors, the tensions, the candidate's developing view — not a list of headlines.",
-          },
-          approach: {
-            en: "Name one issue you genuinely follow, show you understand both sides, then state your own reasoned view.",
-          },
-          template: {
-            en: "I've been following the debate over AI in schools. One side says it helps students learn faster; the other worries they stop thinking for themselves. I lean towards allowing it but teaching students to check its answers — because the skill we'll need isn't avoiding AI, it's not trusting it blindly.",
-          },
+          subtext: { en: "Panels want depth on one issue — the actors, the tensions, the candidate's developing view — not a list of headlines." },
+          approach: { en: "Name one issue you genuinely follow, show you understand both sides, then state your own reasoned view." },
+          template: { en: "I've been following the debate over AI in schools. One side says it helps students learn faster; the other worries they stop thinking for themselves. I lean towards allowing it but teaching students to check its answers — because the skill we'll need isn't avoiding AI, it's not trusting it blindly." },
+          pitfall: { en: "Don't pick an issue you can only describe from one side — the panel will test the other. Don't hide behind \"both sides have a point\" without committing to your own view." },
         },
         {
           question: { en: "If someone gave you a strong point you couldn't answer, what would you do?" },
-          subtext: {
-            en: "Tests composure and honesty under pressure — debate panels fear candidates who bluff or freeze.",
-          },
-          approach: {
-            en: "Be honest. Show you'd acknowledge it, find the best response you can, and not pretend.",
-          },
-          template: {
-            en: "I'd admit it's a strong point — pretending it isn't only makes me look worse. Then I'd look for the part of my case it doesn't actually touch, and argue from there. Even in a real round, conceding one point honestly is better than defending everything badly.",
-          },
-        },
-        {
-          question: { en: "How do you balance debate training with your schoolwork?" },
-          subtext: {
-            en: "Schools fear DSA debaters who flame out academically.",
-          },
-          approach: {
-            en: "Describe a real routine, not a promise.",
-          },
-          template: {
-            en: "I read the news at breakfast and finish homework before training so I'm not rushing it later. Following current affairs feels like study to me anyway — it's where half my debate examples come from.",
-          },
-        },
-        {
-          question: { en: "If our school and another both offer you a place, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually accept.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one, justify it with one specific reason about the debate or speaking programme.",
-          },
-          template: {
-            en: "Honestly, your school — your debating society competes in the national rounds every year and trains four days a week. That's more competition exposure than I'd get anywhere else, and exposure is how debaters actually improve.",
-          },
+          subtext: { en: "Tests composure and honesty under pressure — debate panels fear candidates who bluff or freeze." },
+          approach: { en: "Be honest. Show you'd acknowledge it, find the best response you can, and not pretend." },
+          template: { en: "I'd admit it's a strong point — pretending it isn't only makes me look worse. Then I'd look for the part of my case it doesn't actually touch, and argue from there. Even in a real round, conceding one point honestly is better than defending everything badly." },
+          pitfall: { en: "Don't claim you'd always have an answer — that reads as bluffing, which is exactly what panels watch for. Don't say you'd just give up the point and move on without showing how you'd salvage your case." },
         },
       ],
       schools: [
@@ -13860,88 +11349,46 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
       interviewQuestions: [
         {
-          question: { en: "Why do you want to study Malay at a higher level?" },
-          subtext: {
-            en: "Tests genuine motivation — the central question for any Malay-language or MLEP candidate.",
-          },
-          approach: {
-            en: "Say what the language gives you that a regular subject doesn't — connection, identity, enjoyment — with one concrete example.",
-          },
-          template: {
-            en: "Di rumah, kami bertutur dalam bahasa Melayu setiap hari, dan saya suka cara satu peribahasa boleh menyimpan satu pengajaran penuh dalam beberapa patah perkataan. Saya mahu belajar bahasa Melayu pada tahap yang lebih tinggi supaya saya boleh membaca sastera Melayu dengan lebih mendalam, bukan sekadar untuk peperiksaan.",
-          },
+          question: { en: "Why do you want to study Malay at a higher level?", ms: "Mengapa anda mahu belajar bahasa Melayu pada tahap yang lebih tinggi?" },
+          subtext: { en: "Tests genuine motivation — the central question for any Malay-language or MLEP candidate.", ms: "Menguji motivasi sebenar — soalan utama bagi mana-mana calon bahasa Melayu atau MLEP." },
+          approach: { en: "Say what the language gives you that a regular subject doesn't — connection, identity, enjoyment — with one concrete example.", ms: "Nyatakan apa yang bahasa ini beri kepada anda yang tidak diberi oleh subjek biasa — hubungan, identiti, keseronokan — dengan satu contoh konkrit." },
+          template: { en: "At home we speak Malay every day, and I love how a single proverb can hold a whole lesson in just a few words. I want to learn Malay at a higher level so I can read Malay literature more deeply, not just for exams.", ms: "Di rumah, kami bertutur dalam bahasa Melayu setiap hari, dan saya suka cara satu peribahasa boleh menyimpan satu pengajaran penuh dalam beberapa patah perkataan. Saya mahu belajar bahasa Melayu pada tahap yang lebih tinggi supaya saya boleh membaca sastera Melayu dengan lebih mendalam, bukan sekadar untuk peperiksaan." },
+          pitfall: { en: "Don't say \"because it's my mother tongue\" and stop there — that's an obligation, not a motivation. Give one concrete reason the language matters to you personally.", ms: "Jangan kata \"sebab ini bahasa ibunda saya\" dan berhenti di situ — itu satu tanggungjawab, bukan motivasi. Beri satu sebab konkrit mengapa bahasa ini penting kepada anda secara peribadi." },
         },
         {
-          question: { en: "Tell us about a Malay book, poem, or story you've read recently." },
-          subtext: {
-            en: "Tests literary interest — a recited summary fails; a personal reaction succeeds.",
-          },
-          approach: {
-            en: "Name the work, then say what one line or character did to you, and why.",
-          },
-          template: {
-            en: "Saya baru membaca cerpen tentang seorang nenek yang menunggu cucunya pulang. Satu ayat tentang tangannya yang masih menyimpan bau dapur terus melekat dalam fikiran saya — ia mengingatkan saya pada nenek saya sendiri. Selepas itu saya mula perasan bagaimana penulis memilih butiran kecil untuk menyentuh perasaan.",
-          },
+          question: { en: "Tell us about a Malay book, poem, or story you've read recently.", ms: "Ceritakan tentang sebuah buku, sajak, atau cerita Melayu yang anda baca baru-baru ini." },
+          subtext: { en: "Tests literary interest — a recited summary fails; a personal reaction succeeds.", ms: "Menguji minat sastera — ringkasan yang dihafal gagal; reaksi peribadi berjaya." },
+          approach: { en: "Name the work, then say what one line or character did to you, and why.", ms: "Sebut karya itu, kemudian nyatakan kesan satu ayat atau watak terhadap anda, dan mengapa." },
+          template: { en: "I recently read a short story about a grandmother waiting for her grandchild to come home. One line about how her hands still held the scent of the kitchen stayed with me — it reminded me of my own grandmother. After that, I began noticing how a writer picks small details to touch your feelings.", ms: "Saya baru membaca cerpen tentang seorang nenek yang menunggu cucunya pulang. Satu ayat tentang tangannya yang masih menyimpan bau dapur terus melekat dalam fikiran saya — ia mengingatkan saya pada nenek saya sendiri. Selepas itu saya mula perasan bagaimana penulis memilih butiran kecil untuk menyentuh perasaan." },
+          pitfall: { en: "Don't summarise the plot like a book report or name a title you can't discuss. The panel wants your honest reaction to one specific line or character.", ms: "Jangan ringkaskan jalan cerita seperti laporan buku atau sebut tajuk yang anda tidak boleh bincangkan. Panel mahu reaksi jujur anda terhadap satu ayat atau watak tertentu." },
         },
         {
-          question: { en: "Speak to us in Malay for a minute about your family or your weekend." },
-          subtext: {
-            en: "Tests oral fluency and natural expression under a relaxed, open prompt.",
-          },
-          approach: {
-            en: "Speak in connected, natural sentences — tell a small real story rather than listing facts.",
-          },
-          template: {
-            en: "Hujung minggu lepas, saya dan keluarga balik ke rumah datuk di Geylang. Datuk saya suka bercerita tentang zaman dahulu, dan kali ini dia cerita pasal pasar lama yang sudah tiada. Saya banyak belajar bahasa Melayu lama daripada dia — perkataan yang tak ada dalam buku teks.",
-          },
+          question: { en: "Speak to us in Malay for a minute about your family or your weekend.", ms: "Bercakap dengan kami dalam bahasa Melayu selama seminit tentang keluarga atau hujung minggu anda." },
+          subtext: { en: "Tests oral fluency and natural expression under a relaxed, open prompt.", ms: "Menguji kefasihan lisan dan ekspresi semula jadi dalam soalan yang santai dan terbuka." },
+          approach: { en: "Speak in connected, natural sentences — tell a small real story rather than listing facts.", ms: "Bercakap dalam ayat yang bersambung dan semula jadi — ceritakan satu kisah kecil yang benar, bukan menyenaraikan fakta." },
+          template: { en: "Last weekend, my family and I went back to my grandfather's house in Geylang. My grandfather loves telling stories about the old days, and this time he told us about an old market that no longer exists. I learn a lot of older Malay from him — words that aren't in the textbook.", ms: "Hujung minggu lepas, saya dan keluarga balik ke rumah datuk di Geylang. Datuk saya suka bercerita tentang zaman dahulu, dan kali ini dia bercerita pasal pasar lama yang sudah tiada. Saya banyak belajar bahasa Melayu lama daripada dia — perkataan yang tiada dalam buku teks." },
+          pitfall: { en: "Don't recite a memorised paragraph or fall into a flat list of facts. Switching to English when you get stuck shows the fluency isn't there — keep going in Malay even if it's imperfect.", ms: "Jangan baca perenggan yang dihafal atau jatuh ke dalam senarai fakta yang hambar. Beralih ke bahasa Inggeris apabila tersekat menunjukkan kefasihan tidak ada — teruskan dalam bahasa Melayu walaupun tidak sempurna." },
         },
         {
-          question: { en: "Can you explain a Malay proverb (peribahasa) and what it means in real life?" },
-          subtext: {
-            en: "Tests cultural knowledge and the ability to connect tradition to modern life.",
-          },
-          approach: {
-            en: "Pick one peribahasa, explain its literal image, then apply it to a real situation.",
-          },
-          template: {
-            en: "\"Sedikit-sedikit, lama-lama menjadi bukit.\" Maksudnya, perkara kecil yang dibuat berterusan akhirnya menjadi besar. Saya guna prinsip ini untuk membaca — setiap malam saya baca sedikit dalam bahasa Melayu, dan selepas setahun, perbendaharaan kata saya jauh lebih luas.",
-          },
+          question: { en: "Can you explain a Malay proverb (peribahasa) and what it means in real life?", ms: "Bolehkah anda jelaskan satu peribahasa Melayu dan maknanya dalam kehidupan sebenar?" },
+          subtext: { en: "Tests cultural knowledge and the ability to connect tradition to modern life.", ms: "Menguji pengetahuan budaya dan keupayaan menghubungkan tradisi dengan kehidupan moden." },
+          approach: { en: "Pick one peribahasa, explain its literal image, then apply it to a real situation.", ms: "Pilih satu peribahasa, jelaskan gambaran literalnya, kemudian kaitkan dengan satu situasi sebenar." },
+          template: { en: "\"Sedikit-sedikit, lama-lama menjadi bukit.\" It means small things done consistently eventually become big. I use this principle for reading — every night I read a little in Malay, and after a year my vocabulary is far wider.", ms: "\"Sedikit-sedikit, lama-lama menjadi bukit.\" Maksudnya, perkara kecil yang dibuat berterusan akhirnya menjadi besar. Saya guna prinsip ini untuk membaca — setiap malam saya baca sedikit dalam bahasa Melayu, dan selepas setahun, perbendaharaan kata saya jauh lebih luas." },
+          pitfall: { en: "Don't pick a proverb you only half-understand or recite the meaning without applying it. The point is showing you can connect the saying to a real situation in your own life.", ms: "Jangan pilih peribahasa yang anda separuh faham atau baca maknanya tanpa mengaitkannya. Maksudnya adalah menunjukkan anda boleh menghubungkan peribahasa itu dengan situasi sebenar dalam hidup anda." },
         },
         {
-          question: { en: "How do you use both Malay and English in your daily life?" },
-          subtext: {
-            en: "Tests bilingual communication — a core aim of the MLEP pathway.",
-          },
-          approach: {
-            en: "Describe how you move between languages, and show comfort in both rather than choosing a side.",
-          },
-          template: {
-            en: "Di rumah saya bercakap bahasa Melayu, di sekolah kebanyakannya bahasa Inggeris. Kadang-kadang saya terjemah cerita Melayu kepada kawan yang tak faham, dan saya perasan ada perkataan yang susah diterjemah — perasaan dalam bahasa Melayu kadang lebih halus. Saya rasa itu yang buat saya minat kedua-dua bahasa.",
-          },
+          question: { en: "How do you use both Malay and English in your daily life?", ms: "Bagaimana anda menggunakan bahasa Melayu dan bahasa Inggeris dalam kehidupan harian anda?" },
+          subtext: { en: "Tests bilingual communication — a core aim of the MLEP pathway.", ms: "Menguji komunikasi dwibahasa — matlamat utama laluan MLEP." },
+          approach: { en: "Describe how you move between languages, and show comfort in both rather than choosing a side.", ms: "Terangkan bagaimana anda beralih antara dua bahasa, dan tunjukkan anda selesa dengan kedua-duanya, bukan memilih satu pihak." },
+          template: { en: "At home I speak Malay; at school it's mostly English. Sometimes I translate a Malay story for a friend who doesn't understand it, and I notice some words are hard to translate — the feeling in Malay is sometimes more subtle. I think that's what makes me love both languages.", ms: "Di rumah saya bercakap bahasa Melayu, di sekolah kebanyakannya bahasa Inggeris. Kadang-kadang saya terjemahkan cerita Melayu kepada kawan yang tidak faham, dan saya perasan ada perkataan yang susah diterjemah — perasaan dalam bahasa Melayu kadangkala lebih halus. Saya rasa itu yang membuat saya minat kedua-dua bahasa." },
+          pitfall: { en: "Don't make it sound like you favour English and only use Malay at home out of habit. Show you genuinely move between both with ease, with one concrete example.", ms: "Jangan buat seolah-olah anda lebih suka bahasa Inggeris dan hanya guna bahasa Melayu di rumah kerana kebiasaan. Tunjukkan anda benar-benar beralih antara kedua-duanya dengan mudah, dengan satu contoh konkrit." },
         },
         {
-          question: { en: "If we gave you a topic now and one minute to think, could you speak about it?" },
-          subtext: {
-            en: "Tests spontaneous response and thinking aloud in Malay under pressure.",
-          },
-          approach: {
-            en: "Don't freeze — take the minute, structure two or three points, and speak naturally even if imperfect.",
-          },
-          template: {
-            en: "(Topik: kepentingan menjaga bahasa ibunda) Saya rasa menjaga bahasa ibunda penting kerana ia menyimpan budaya kita. Pertama, banyak nilai dan cerita keluarga hanya wujud dalam bahasa Melayu. Kedua, jika kita hilang bahasa, kita hilang sebahagian daripada identiti. Sebab itu saya rasa belajar bahasa Melayu bukan sekadar subjek.",
-          },
-        },
-        {
-          question: { en: "If both this school and another school offer you a place, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure and how seriously the candidate has thought about the choice.",
-          },
-          approach: {
-            en: "Pick one school and give one specific, true reason — don't dodge.",
-          },
-          template: {
-            en: "Jujurnya, sekolah ini. Saya tahu sekolah ini ada persekitaran bahasa Melayu yang kuat dan menawarkan program elektif Bahasa Melayu, dan itulah yang saya cari untuk masa depan saya. Kalau sekolah lain panggil dahulu, saya tetap akan tunggu jawapan daripada sekolah ini.",
-          },
+          question: { en: "If we gave you a topic now and one minute to think, could you speak about it?", ms: "Jika kami beri anda satu topik sekarang dan seminit untuk berfikir, bolehkah anda bercakap tentangnya?" },
+          subtext: { en: "Tests spontaneous response and thinking aloud in Malay under pressure.", ms: "Menguji respons spontan dan keupayaan berfikir secara lisan dalam bahasa Melayu di bawah tekanan." },
+          approach: { en: "Don't freeze — take the minute, structure two or three points, and speak naturally even if imperfect.", ms: "Jangan terkaku — gunakan seminit itu, susun dua atau tiga isi, dan bercakap secara semula jadi walaupun tidak sempurna." },
+          template: { en: "(Topic: the importance of preserving the mother tongue) I think preserving the mother tongue matters because it holds our culture. First, many family values and stories exist only in Malay. Second, if we lose the language, we lose part of our identity. That's why I feel learning Malay is more than just a subject.", ms: "(Topik: kepentingan menjaga bahasa ibunda) Saya rasa menjaga bahasa ibunda penting kerana ia menyimpan budaya kita. Pertama, banyak nilai dan cerita keluarga hanya wujud dalam bahasa Melayu. Kedua, jika kita hilang bahasa, kita hilang sebahagian daripada identiti. Sebab itu saya rasa belajar bahasa Melayu bukan sekadar subjek." },
+          pitfall: { en: "Don't freeze in silence or ramble without structure. Use the thinking minute to fix two or three clear points, and don't let a fear of mistakes stop you from speaking.", ms: "Jangan terkaku dalam diam atau bercakap berjela-jela tanpa susunan. Gunakan seminit berfikir itu untuk menetapkan dua atau tiga isi yang jelas, dan jangan biar rasa takut silap menghalang anda daripada bercakap." },
         },
       ],
       schools: [
@@ -14192,87 +11639,24 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why guzheng?" },
-          subtext: {
-            en: "Panels want a specific moment that hooked the candidate, not a generic appreciation of Chinese culture.",
-          },
-          approach: {
-            en: "Open with one concrete memory — a piece, a performance, a teacher moment — then connect it to what playing guzheng asks of you.",
-          },
-          template: {
-            en: "I started guzheng at seven because my mother loved the sound, but the moment I knew it was mine was learning my first bent-note piece — realising the most important notes aren't the ones I pluck, they're the ones my left hand bends into. That's the only instrument where the silence between strings does half the work.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research the Chinese Orchestra programme, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's CO — a conductor, an SYF result, the SAP / Higher Chinese environment.",
-          },
-          template: {
-            en: "Your Chinese Orchestra rehearses several times a week and the school environment lets me keep Higher Chinese alongside it. I want to play guzheng in a real ensemble, not just as a solo instrument, and that combination is what I came here for.",
-          },
+          subtext: { en: "Panels want a specific moment that hooked the candidate, not a generic appreciation of Chinese culture." },
+          approach: { en: "Open with one concrete memory — a piece, a performance, a teacher moment — then connect it to what playing guzheng asks of you." },
+          template: { en: "I started guzheng at seven because my mother loved the sound, but the moment I knew it was mine was learning my first bent-note piece — realising the most important notes aren't the ones I pluck, they're the ones my left hand bends into. That's the only instrument where the silence between strings does half the work." },
+          pitfall: { en: "Don't lean on \"I want to keep Chinese culture alive\" or a vague love of the sound. Ground it in something only a guzheng player would say — the left-hand bends, the ornaments, a specific piece." },
         },
         {
           question: { en: "What do you find hardest about the guzheng, and how do you work on it?" },
-          subtext: {
-            en: "Tests self-awareness and whether the candidate has a real practice method.",
-          },
-          approach: {
-            en: "Name one genuine technical weakness plus the specific drill you use, not a humble-brag.",
-          },
-          template: {
-            en: "My left-hand bends used to land flat in fast passages. My teacher had me practise just the bend — no right hand — against a tuner until the pitch was exact, then add the pluck back one note at a time. It's slow, but it's the only thing that fixed the intonation.",
-          },
+          subtext: { en: "Tests self-awareness and whether the candidate has a real practice method." },
+          approach: { en: "Name one genuine technical weakness plus the specific drill you use, not a humble-brag." },
+          template: { en: "My left-hand bends used to land flat in fast passages. My teacher had me practise just the bend — no right hand — against a tuner until the pitch was exact, then add the pluck back one note at a time. It's slow, but it's the only thing that fixed the intonation." },
+          pitfall: { en: "Don't pick a fake weakness or a humble-brag (\"I practise too much\"). Name a real technical problem and the exact drill you used — vague self-criticism with no method behind it convinces no one." },
         },
         {
           question: { en: "Tell us about a piece you love and one specific thing about it." },
-          subtext: {
-            en: "Tests musical vocabulary in the Chinese-music tradition specifically.",
-          },
-          approach: {
-            en: "Name the piece plus one concrete musical element — a regional style, an ornament, a rhythmic feature — you can describe.",
-          },
-          template: {
-            en: "Yu Zhou Chang Wan, because of how the slides and tremolo (摇指) paint the water and the boat. The piece taught me that on guzheng the left hand carries the feeling and the right hand only sets it up — that changed how I practise everything else.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: {
-            en: "Specific actions, not just the outcome or feelings.",
-          },
-          approach: {
-            en: "Situation, then action, then result, in two sentences.",
-          },
-          template: {
-            en: "Two weeks before a school concert I kept freezing in the fast section of my piece. Instead of running the whole piece over and over, I isolated the four hardest bars, looped them slowly with a metronome each night, and only then put the piece back together. I got through the concert without the freeze.",
-          },
-        },
-        {
-          question: { en: "How will you manage practice and schoolwork with frequent CO rehearsals?" },
-          subtext: {
-            en: "Schools fear DSA kids who flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real system, not platitudes about discipline.",
-          },
-          template: {
-            en: "I do homework before practice because I'm too tired after. My parents and I agreed a rule: if my grades slip a band, practice drops from 90 minutes to 60 until they recover. We set it together so it's not a fight later.",
-          },
-        },
-        {
-          question: { en: "If another school and ours both offer you a place, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether the candidate would actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school and justify it with one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school. The way your Chinese Orchestra uses guzheng — and the Higher Chinese environment — matches what I want. If the other school called first, I'd still wait for your reply.",
-          },
+          subtext: { en: "Tests musical vocabulary in the Chinese-music tradition specifically." },
+          approach: { en: "Name the piece plus one concrete musical element — a regional style, an ornament, a rhythmic feature — you can describe." },
+          template: { en: "Yu Zhou Chang Wan, because of how the slides and tremolo (yaozhi) paint the water and the boat. The piece taught me that on guzheng the left hand carries the feeling and the right hand only sets it up — that changed how I practise everything else." },
+          pitfall: { en: "Don't name a famous piece and stop at \"it's beautiful.\" Without one concrete element — an ornament, a regional style, a technique — it reads as a title you borrowed, not music you know." },
         },
       ],
       schools: [
@@ -14554,88 +11938,25 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
       interviewQuestions: [
         {
-          question: { en: "Why this ensemble / instrument?" },
-          subtext: {
-            en: "Panels want a specific reason for choosing this particular ensemble, not a generic love of music.",
-          },
-          approach: {
-            en: "Open with one concrete memory of playing or hearing the ensemble, then connect it to what draws you to ensemble playing specifically.",
-          },
-          template: {
-            en: "I started cello in Primary 3 and the first time I played in my school's string group I realised I liked being one voice inside a bigger sound more than playing alone. The cello carries the harmony underneath, and I want to keep doing that in a full string ensemble rather than only solo work.",
-          },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: {
-            en: "Did the family research this school's ensemble specifically, or is the application generic?",
-          },
-          approach: {
-            en: "Cite one specific thing about the school's ensemble — its instruments, an SYF result, or its repertoire focus.",
-          },
-          template: {
-            en: "Your string ensemble takes violin, viola, cello and double bass and has a strong SYF record, and I want to play in a group that performs full four-part repertoire rather than just a small group. That's exactly the ensemble experience I'm looking for.",
-          },
+          question: { en: "Why this ensemble or instrument?" },
+          subtext: { en: "Panels want a specific reason for choosing this particular ensemble, not a generic love of music." },
+          approach: { en: "Open with one concrete memory of playing or hearing the ensemble, then connect it to what draws you to ensemble playing specifically." },
+          template: { en: "I started cello in Primary 3 and the first time I played in my school's string group I realised I liked being one voice inside a bigger sound more than playing alone. The cello carries the harmony underneath, and I want to keep doing that in a full string ensemble rather than only solo work." },
+          pitfall: { en: "Don't give a generic \"I love music\" answer that would fit a soloist. If nothing in your reason is specifically about playing inside a group, the panel can't see why you want an ensemble at all." },
         },
         {
           question: { en: "What piece did you choose to play today, and why?" },
-          subtext: {
-            en: "Tests whether the candidate can talk about their music, not just perform it.",
-          },
-          approach: {
-            en: "Name the piece, one musical element you like in it, and one thing it lets you show.",
-          },
-          template: {
-            en: "I chose a Baroque movement because I like its clear phrasing and it lets me show my bowing control and even tone. The slower middle section is where I can shape the dynamics, which is the part I enjoy most.",
-          },
-        },
-        {
-          question: { en: "Tell us about a time you played in a group and something went wrong." },
-          subtext: {
-            en: "Tests ensemble awareness and how the candidate recovers — central to ensemble playing.",
-          },
-          approach: {
-            en: "Situation, then what you did to recover, then result, in two or three sentences.",
-          },
-          template: {
-            en: "At our school concert another player came in early and I nearly followed them. I kept my eyes on the conductor and held the beat I knew was right, and the group came back together within two bars. After that I realised keeping a steady inner pulse is my real job in an ensemble.",
-          },
-        },
-        {
-          question: { en: "How do you practise, and how would you manage practice with schoolwork?" },
-          subtext: {
-            en: "Schools worry DSA students may flame out academically by Sec 2.",
-          },
-          approach: {
-            en: "Describe a real, specific routine, not platitudes about discipline.",
-          },
-          template: {
-            en: "I practise thirty minutes on weekdays after homework and longer on weekends, and I use a metronome for the tricky passages. If a subject drops, my parents and I agreed I cut weekend practice first, not study time. That's the rule we set together.",
-          },
+          subtext: { en: "Tests whether the candidate can talk about their music, not just perform it." },
+          approach: { en: "Name the piece, one musical element you like in it, and one thing it lets you show." },
+          template: { en: "I chose a Baroque movement because I like its clear phrasing and it lets me show my bowing control and even tone. The slower middle section is where I can shape the dynamics, which is the part I enjoy most." },
+          pitfall: { en: "Don't say you chose it just because \"my teacher picked it\" or \"it's my exam piece.\" Without a reason of your own and one thing it lets you show, it sounds like you don't understand your own playing." },
         },
         {
           question: { en: "What does playing in an ensemble require that playing alone does not?" },
-          subtext: {
-            en: "Tests genuine understanding of ensemble musicianship, not just solo skill.",
-          },
-          approach: {
-            en: "Name one or two concrete ensemble skills and why they matter.",
-          },
-          template: {
-            en: "You have to listen outwards all the time — match the volume of the section next to you, follow the conductor instead of your own tempo, and never rush even when you're nervous. Alone you can do what you want; in an ensemble the blend matters more than any single line.",
-          },
-        },
-        {
-          question: { en: "If our school and another school both offer you, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure — and whether you'd actually come.",
-          },
-          approach: {
-            en: "Don't dodge. Pick one school and give one specific reason.",
-          },
-          template: {
-            en: "Honestly, your school — because your ensemble plays the full four-part string repertoire I most want to be part of. If the other school replied first I would still wait for yours.",
-          },
+          subtext: { en: "Tests genuine understanding of ensemble musicianship, not just solo skill." },
+          approach: { en: "Name one or two concrete ensemble skills and why they matter." },
+          template: { en: "You have to listen outwards all the time — match the volume of the section next to you, follow the conductor instead of your own tempo, and never rush even when you're nervous. Alone you can do what you want; in an ensemble the blend matters more than any single line." },
+          pitfall: { en: "Don't answer with vague teamwork clichés like \"working together.\" If you can't name concrete ensemble skills — matching dynamics, following a conductor, holding tempo — you sound like a soloist who hasn't really played in a group." },
         },
       ],
       schools: [
@@ -14875,88 +12196,46 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
       interviewQuestions: [
         {
-          question: { en: "Why do you want to study Tamil at a higher level?" },
-          subtext: {
-            en: "Tests genuine motivation — the central question for any Tamil-language or TLEP candidate.",
-          },
-          approach: {
-            en: "Say what the language gives you that a regular subject doesn't — connection, identity, enjoyment — with one concrete example. Deliver in Tamil.",
-          },
-          template: {
-            en: "At home we speak Tamil every day, and I love how a single Thirukkural couplet can hold a whole lesson in just a few words. I want to learn Tamil at a higher level so I can read Tamil literature more deeply, not just for exams. (Deliver in Tamil, leading with the home example.)",
-          },
+          question: { en: "Why do you want to study Tamil at a higher level?", ta: "உயர் நிலையில் தமிழைக் கற்க நீங்கள் ஏன் விரும்புகிறீர்கள்?" },
+          subtext: { en: "Tests genuine motivation — the central question for any Tamil-language or TLEP candidate.", ta: "உண்மையான உந்துதலைச் சோதிக்கிறது — எந்தவொரு தமிழ்மொழி அல்லது TLEP விண்ணப்பதாரருக்கும் முக்கியமான கேள்வி இதுவே." },
+          approach: { en: "Say what the language gives you that a regular subject doesn't — connection, identity, enjoyment — with one concrete example. Deliver in Tamil.", ta: "ஒரு வழக்கமான பாடம் தராத ஒன்றை இம்மொழி உங்களுக்குத் தருகிறது என்பதைக் கூறுங்கள் — உறவு, அடையாளம், மகிழ்ச்சி — ஒரு உறுதியான எடுத்துக்காட்டுடன். தமிழில் பதிலளியுங்கள்." },
+          template: { en: "At home we speak Tamil every day, and I love how a single Thirukkural couplet can hold a whole lesson in just a few words. I want to learn Tamil at a higher level so I can read Tamil literature more deeply, not just for exams.", ta: "வீட்டில் நாங்கள் தினமும் தமிழ் பேசுகிறோம்; ஒரே ஒரு திருக்குறள் சில சொற்களில் ஒரு முழுப் பாடத்தை அடக்கி வைப்பது எனக்கு மிகவும் பிடிக்கும். தேர்வுக்காக மட்டுமின்றி, தமிழ் இலக்கியத்தை இன்னும் ஆழமாகப் படிக்க வேண்டும் என்பதற்காகவே உயர் நிலையில் தமிழைக் கற்க விரும்புகிறேன்." },
+          pitfall: { en: "Don't say \"because it's my mother tongue\" and stop there — that's an obligation, not a motivation. Give one concrete reason the language matters to you personally.", ta: "\"இது என் தாய்மொழி\" என்று சொல்லி நிறுத்திவிடாதீர்கள் — அது ஒரு கடமை, உந்துதல் அல்ல. இம்மொழி உங்களுக்குத் தனிப்பட்ட முறையில் ஏன் முக்கியம் என்பதற்கு ஒரு உறுதியான காரணத்தைக் கூறுங்கள்." },
         },
         {
-          question: { en: "Tell us about a Tamil book, poem, or story you've read recently." },
-          subtext: {
-            en: "Tests literary interest — a recited summary fails; a personal reaction succeeds.",
-          },
-          approach: {
-            en: "Name the work, then say what one line or character did to you, and why. Deliver in Tamil.",
-          },
-          template: {
-            en: "I recently read a short story about a grandmother waiting for her grandchild to come home. One line about her hands still carrying the smell of the kitchen stayed with me — it reminded me of my own grandmother. After that I started noticing how a writer picks small details to reach your feelings. (Deliver in Tamil.)",
-          },
+          question: { en: "Tell us about a Tamil book, poem, or story you've read recently.", ta: "சமீபத்தில் நீங்கள் படித்த ஒரு தமிழ் நூல், கவிதை அல்லது கதையைப் பற்றிக் கூறுங்கள்." },
+          subtext: { en: "Tests literary interest — a recited summary fails; a personal reaction succeeds.", ta: "இலக்கிய ஆர்வத்தைச் சோதிக்கிறது — மனப்பாடம் செய்த சுருக்கம் தோல்வியடையும்; தனிப்பட்ட உணர்வுப் பதிலே வெற்றி பெறும்." },
+          approach: { en: "Name the work, then say what one line or character did to you, and why. Deliver in Tamil.", ta: "நூலின் பெயரைக் கூறி, ஒரு வரி அல்லது பாத்திரம் உங்களை எவ்வாறு பாதித்தது, ஏன் என்பதைச் சொல்லுங்கள். தமிழில் பதிலளியுங்கள்." },
+          template: { en: "I recently read a short story about a grandmother waiting for her grandchild to come home. One line about how her hands still carried the smell of the kitchen stayed with me — it reminded me of my own grandmother. After that, I began noticing how a writer chooses small details to reach your feelings.", ta: "தன் பேரக்குழந்தை வீடு திரும்பக் காத்திருக்கும் ஒரு பாட்டியைப் பற்றிய சிறுகதையைச் சமீபத்தில் படித்தேன். அவளுடைய கைகளில் இன்னும் சமையலறையின் மணம் தங்கியிருந்தது என்ற ஒரு வரி என் மனத்தில் நிலைத்துவிட்டது — அது என் சொந்தப் பாட்டியை நினைவூட்டியது. அதன் பின்னர், உணர்வுகளைத் தொடச் சிறு விவரங்களை ஒரு எழுத்தாளர் எவ்வாறு தேர்ந்தெடுக்கிறார் என்பதைக் கவனிக்கத் தொடங்கினேன்." },
+          pitfall: { en: "Don't summarise the plot like a book report or name a title you can't discuss. The panel wants your honest reaction to one specific line or character.", ta: "ஒரு நூல் அறிக்கையைப் போல் கதைச் சுருக்கத்தைக் கூறவோ, உங்களால் விவாதிக்க முடியாத ஒரு தலைப்பைக் குறிப்பிடவோ வேண்டாம். ஒரு குறிப்பிட்ட வரி அல்லது பாத்திரம் குறித்த உங்கள் நேர்மையான உணர்வையே குழு எதிர்பார்க்கிறது." },
         },
         {
-          question: { en: "Speak to us in Tamil for a minute about your family or your weekend." },
-          subtext: {
-            en: "Tests oral fluency and natural expression under a relaxed, open prompt.",
-          },
-          approach: {
-            en: "Speak in connected, natural sentences — tell a small real story rather than listing facts.",
-          },
-          template: {
-            en: "Last weekend my family visited my grandfather. He loves telling stories about the old days, and this time he talked about a market that no longer exists. I learn a lot of older Tamil words from him — words that aren't in the textbook. (Deliver in Tamil, as a small connected story.)",
-          },
+          question: { en: "Speak to us in Tamil for a minute about your family or your weekend.", ta: "உங்கள் குடும்பம் அல்லது வார இறுதி பற்றி ஒரு நிமிடம் தமிழில் பேசுங்கள்." },
+          subtext: { en: "Tests oral fluency and natural expression under a relaxed, open prompt.", ta: "நிதானமான, திறந்த கேள்வியின் கீழ் வாய்மொழிச் சரளத்தையும் இயல்பான வெளிப்பாட்டையும் சோதிக்கிறது." },
+          approach: { en: "Speak in connected, natural sentences — tell a small real story rather than listing facts.", ta: "தொடர்புள்ள, இயல்பான வாக்கியங்களில் பேசுங்கள் — தகவல்களைப் பட்டியலிடாமல், ஒரு சிறிய உண்மைக் கதையைக் கூறுங்கள்." },
+          template: { en: "Last weekend my family visited my grandfather. He loves telling stories about the old days, and this time he talked about a market that no longer exists. I learn a lot of older Tamil words from him — words that aren't in the textbook.", ta: "சென்ற வார இறுதியில் என் குடும்பத்தினருடன் தாத்தாவைப் பார்க்கச் சென்றோம். அவருக்குப் பழைய நாட்களைப் பற்றிக் கதை சொல்வது மிகவும் பிடிக்கும்; இந்த முறை இப்போது இல்லாத ஒரு பழைய சந்தையைப் பற்றிப் பேசினார். அவரிடமிருந்து பல பழைய தமிழ்ச் சொற்களைக் கற்கிறேன் — பாடநூலில் இல்லாத சொற்கள்." },
+          pitfall: { en: "Don't recite a memorised paragraph or fall into a flat list of facts. Switching to English when you get stuck shows the fluency isn't there — keep going in Tamil even if it's imperfect.", ta: "மனப்பாடம் செய்த ஒரு பத்தியை ஒப்பிக்கவோ, தகவல்களின் வறண்ட பட்டியலுக்குள் விழவோ வேண்டாம். தடுமாறும்போது ஆங்கிலத்திற்கு மாறுவது சரளம் இல்லாததைக் காட்டுகிறது — சரியாக இல்லாவிட்டாலும் தமிழிலேயே தொடர்ந்து பேசுங்கள்." },
         },
         {
-          question: { en: "Can you explain a Tamil proverb (பழமொழி) and what it means in real life?" },
-          subtext: {
-            en: "Tests cultural knowledge and the ability to connect tradition to modern life.",
-          },
-          approach: {
-            en: "Pick one proverb, explain its literal image, then apply it to a real situation. Deliver in Tamil.",
-          },
-          template: {
-            en: "\"Siru thuli peru vellam\" — small drops make a great flood. It means small things done consistently eventually become large. I use this for reading — every night I read a little in Tamil, and after a year my vocabulary is much wider. (Deliver in Tamil.)",
-          },
+          question: { en: "Can you explain a Tamil proverb (பழமொழி) and what it means in real life?", ta: "ஒரு தமிழ்ப் பழமொழியையும் அது நிஜ வாழ்வில் என்ன பொருள் தருகிறது என்பதையும் விளக்க முடியுமா?" },
+          subtext: { en: "Tests cultural knowledge and the ability to connect tradition to modern life.", ta: "பண்பாட்டு அறிவையும், மரபை இன்றைய வாழ்வோடு இணைக்கும் ஆற்றலையும் சோதிக்கிறது." },
+          approach: { en: "Pick one proverb, explain its literal image, then apply it to a real situation. Deliver in Tamil.", ta: "ஒரு பழமொழியைத் தேர்ந்தெடுத்து, அதன் நேரடிப் பொருளை விளக்கி, பின்னர் ஒரு உண்மை சூழலுக்குப் பொருத்துங்கள். தமிழில் பதிலளியுங்கள்." },
+          template: { en: "\"Siru thuli peru vellam\" — small drops make a great flood. It means small things done consistently eventually become large. I use this for reading — every night I read a little in Tamil, and after a year my vocabulary is much wider.", ta: "\"சிறு துளி பெரு வெள்ளம்\" — சிறிய துளிகளே பெரிய வெள்ளமாகின்றன. தொடர்ந்து செய்யப்படும் சிறிய செயல்கள் இறுதியில் பெரியதாகிவிடும் என்பது இதன் பொருள். இதைப் படிப்புக்குப் பயன்படுத்துகிறேன் — ஒவ்வொரு இரவும் சிறிது தமிழ் படிக்கிறேன்; ஓராண்டில் என் சொல்வளம் பெரிதும் விரிந்துவிட்டது." },
+          pitfall: { en: "Don't pick a proverb you only half-understand or recite the meaning without applying it. The point is showing you can connect the saying to a real situation in your own life.", ta: "பாதியளவே புரிந்த பழமொழியைத் தேர்ந்தெடுக்கவோ, அதைப் பொருத்திக் காட்டாமல் பொருளை மட்டும் ஒப்பிக்கவோ வேண்டாம். அந்தப் பழமொழியை உங்கள் சொந்த வாழ்வின் ஒரு உண்மை சூழலோடு இணைக்க முடியும் என்பதைக் காட்டுவதே நோக்கம்." },
         },
         {
-          question: { en: "How do you use both Tamil and English in your daily life?" },
-          subtext: {
-            en: "Tests bilingual communication — a core aim of the TLEP pathway.",
-          },
-          approach: {
-            en: "Describe how you move between languages, and show comfort in both rather than choosing a side. Deliver in Tamil.",
-          },
-          template: {
-            en: "At home I speak Tamil, at school mostly English. Sometimes I translate a Tamil story for a friend who doesn't understand it, and I notice some words are hard to translate — the feeling in Tamil is sometimes more delicate. I think that's what makes me interested in both languages. (Deliver in Tamil.)",
-          },
+          question: { en: "How do you use both Tamil and English in your daily life?", ta: "உங்கள் அன்றாட வாழ்வில் தமிழையும் ஆங்கிலத்தையும் எவ்வாறு பயன்படுத்துகிறீர்கள்?" },
+          subtext: { en: "Tests bilingual communication — a core aim of the TLEP pathway.", ta: "இருமொழித் தொடர்பாடலைச் சோதிக்கிறது — TLEP வழியின் முக்கிய நோக்கம் இதுவே." },
+          approach: { en: "Describe how you move between languages, and show comfort in both rather than choosing a side. Deliver in Tamil.", ta: "ஒரு மொழியிலிருந்து மற்றொன்றுக்கு நீங்கள் எவ்வாறு மாறுகிறீர்கள் என்பதை விவரித்து, ஒரு பக்கத்தைத் தேர்ந்தெடுக்காமல் இரண்டிலும் உள்ள வசதியைக் காட்டுங்கள். தமிழில் பதிலளியுங்கள்." },
+          template: { en: "At home I speak Tamil; at school it's mostly English. Sometimes I translate a Tamil story for a friend who doesn't understand it, and I notice some words are hard to translate — the feeling in Tamil is sometimes more delicate. I think that's what makes me interested in both languages.", ta: "வீட்டில் நான் தமிழ் பேசுகிறேன்; பள்ளியில் பெரும்பாலும் ஆங்கிலம். சில சமயம் புரியாத ஒரு நண்பருக்காக ஒரு தமிழ்க் கதையை மொழிபெயர்க்கிறேன்; சில சொற்களை மொழிபெயர்ப்பது கடினம் என்பதைக் கவனிக்கிறேன் — தமிழில் வரும் உணர்வு சில நேரம் இன்னும் நுட்பமானது. அதுவே இரு மொழிகளிலும் எனக்கு ஆர்வத்தை ஏற்படுத்துகிறது என்று நினைக்கிறேன்." },
+          pitfall: { en: "Don't make it sound like you favour English and only use Tamil at home out of habit. Show you genuinely move between both with ease, with one concrete example.", ta: "நீங்கள் ஆங்கிலத்தையே விரும்புவதாகவும், பழக்கத்தால் மட்டுமே வீட்டில் தமிழ் பேசுவதாகவும் தோன்றச் செய்யாதீர்கள். ஒரு உறுதியான எடுத்துக்காட்டுடன், இரண்டிற்கும் இடையே நீங்கள் உண்மையில் எளிதாக மாறுகிறீர்கள் என்பதைக் காட்டுங்கள்." },
         },
         {
-          question: { en: "If we gave you a topic now and one minute to think, could you speak about it?" },
-          subtext: {
-            en: "Tests spontaneous response and thinking aloud in Tamil under pressure.",
-          },
-          approach: {
-            en: "Don't freeze — take the minute, structure two or three points, and speak naturally even if imperfect. Deliver in Tamil.",
-          },
-          template: {
-            en: "(Topic: the importance of preserving the mother tongue) I think preserving the mother tongue matters because it holds our culture. First, many family values and stories exist only in Tamil. Second, if we lose the language, we lose part of our identity. That's why learning Tamil is more than just a subject to me. (Deliver in Tamil, two or three clear points.)",
-          },
-        },
-        {
-          question: { en: "If both this school and another school offer you a place, which would you choose?" },
-          subtext: {
-            en: "Tests honesty under pressure and how seriously the candidate has thought about the choice.",
-          },
-          approach: {
-            en: "Pick one school and give one specific, true reason — don't dodge. Deliver in Tamil.",
-          },
-          template: {
-            en: "Honestly, this school. I know it has a strong Tamil-language environment and offers the Tamil Language Elective Programme, and that's what I'm looking for in my future. Even if another school called first, I would still wait for this school's answer. (Deliver in Tamil; if the school is not a TLEP centre, swap the reason for its real Tamil-language strength.)",
-          },
+          question: { en: "If we gave you a topic now and one minute to think, could you speak about it?", ta: "இப்போது ஒரு தலைப்பையும் சிந்திக்க ஒரு நிமிடத்தையும் தந்தால், அதைப் பற்றிப் பேச முடியுமா?" },
+          subtext: { en: "Tests spontaneous response and thinking aloud in Tamil under pressure.", ta: "அழுத்தத்தின் கீழ் உடனடிப் பதிலையும், தமிழில் சிந்தித்துப் பேசும் திறனையும் சோதிக்கிறது." },
+          approach: { en: "Don't freeze — take the minute, structure two or three points, and speak naturally even if imperfect. Deliver in Tamil.", ta: "உறைந்துபோகாதீர்கள் — அந்த நிமிடத்தைப் பயன்படுத்தி, இரண்டு அல்லது மூன்று கருத்துகளை ஒழுங்குபடுத்தி, சரியாக இல்லாவிட்டாலும் இயல்பாகப் பேசுங்கள். தமிழில் பதிலளியுங்கள்." },
+          template: { en: "(Topic: the importance of preserving the mother tongue) I think preserving the mother tongue matters because it holds our culture. First, many family values and stories exist only in Tamil. Second, if we lose the language, we lose part of our identity. That's why learning Tamil is more than just a subject to me.", ta: "(தலைப்பு: தாய்மொழியைப் பாதுகாப்பதன் முக்கியத்துவம்) தாய்மொழியைப் பாதுகாப்பது முக்கியம் என்று நினைக்கிறேன், ஏனெனில் அது நம் பண்பாட்டைத் தாங்கி நிற்கிறது. முதலாவதாக, பல குடும்ப விழுமியங்களும் கதைகளும் தமிழில் மட்டுமே உள்ளன. இரண்டாவதாக, மொழியை இழந்தால், நம் அடையாளத்தின் ஒரு பகுதியை இழக்கிறோம். அதனால்தான் தமிழ் கற்பது எனக்கு வெறும் ஒரு பாடத்தைவிட மேலானது." },
+          pitfall: { en: "Don't freeze in silence or ramble without structure. Use the thinking minute to fix two or three clear points, and don't let a fear of mistakes stop you from speaking.", ta: "மௌனத்தில் உறைந்துபோகவோ, ஒழுங்கின்றி அலைபாயப் பேசவோ வேண்டாம். சிந்திக்கும் அந்த நிமிடத்தைப் பயன்படுத்தி இரண்டு அல்லது மூன்று தெளிவான கருத்துகளை நிலைநிறுத்துங்கள்; தவறு செய்வோமோ என்ற அச்சம் உங்களைப் பேசவிடாமல் தடுக்க வேண்டாம்." },
         },
       ],
       schools: [
@@ -15164,45 +12443,31 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       interviewQuestions: [
         {
           question: { en: "Why media arts?" },
-          subtext: { en: "Panels want a specific origin, not a generic love of 'being creative.'" },
+          subtext: { en: "Panels want a specific origin, not a generic love of \"being creative.\"" },
           approach: { en: "Open with one concrete moment you made something, then connect it to why telling stories with images matters to you." },
-          template: { en: "I started taking photos of my neighbourhood during the school holidays because the old shops near my flat were closing one by one. I wanted to keep them somehow. That's when I realised a photo isn't just a record — it's a way of saying this mattered. That's why media arts, not just art." },
+          template: { en: "I started photographing my neighbourhood during the holidays because the old shops near my flat were closing one by one. I wanted to keep them somehow. That's when I realised a photo isn't just a record — it's a way of saying this mattered. That's why media arts, not just art." },
+          pitfall: { en: "Don't say \"I love being creative\" or \"I like making videos\" — that fits anyone with a phone. Name the one thing you made and what pulled you to images over other media." },
         },
         {
           question: { en: "Walk us through one piece in your portfolio." },
           subtext: { en: "Can the candidate articulate the thinking, or only present the result?" },
-          approach: { en: "Name the idea, name one specific choice you made (framing, light, edit), and name what you'd change." },
-          template: { en: "This is a photo of my grandmother folding dumplings, shot from above so you only see her hands and the table. I wanted the focus on what she does, not her face. I used the kitchen window light instead of flash to keep it soft. If I reshot it, I'd clear the clutter on the left — it pulls the eye away from her hands." },
-        },
-        {
-          question: { en: "Why our school's media programme specifically?" },
-          subtext: { en: "Did the family research this school's media strand, or is the application generic?" },
-          approach: { en: "Cite one specific thing — the school's Photography or Media CCA, its facilities, a showcase you saw." },
-          template: { en: "I went to your open house and saw the student film screening — the documentary about hawker stalls was the kind of work I want to make. Your Media CCA having its own editing setup is exactly the support I don't have at home." },
+          approach: { en: "Name the idea, one specific choice you made (framing, light, edit), and what you'd change." },
+          template: { en: "This is my grandmother folding dumplings, shot from above so you only see her hands and the table. I wanted the focus on what she does, not her face, so I used window light instead of flash to keep it soft. If I reshot it, I'd clear the clutter on the left — it pulls the eye away from her hands." },
+          pitfall: { en: "Don't just say what the photo is of. Without a named choice (framing, light, edit) and one honest fix, the panel can't tell you made decisions rather than got lucky." },
         },
         {
           question: { en: "What equipment do you use, and does it matter?" },
           subtext: { en: "Tests whether the candidate values the eye over the gear — and whether they're honest about resources." },
           approach: { en: "Be honest about what you have, then make clear you know the thinking matters more than the tool." },
           template: { en: "Mostly my mother's phone, and a borrowed camera from my uncle a few times. I'd love better gear, but I've learnt that where I stand and when I shoot changes a photo more than the camera does. Good light on a phone beats bad light on a DSLR." },
+          pitfall: { en: "Don't pretend to own gear you don't, and don't use thin resources as an excuse. Listing expensive equipment without showing you understand light and framing is the weaker answer." },
         },
         {
           question: { en: "Whose work do you admire, and why?" },
-          subtext: { en: "Tests awareness beyond the candidate's own bubble and ability to describe, not just name." },
+          subtext: { en: "Tests awareness beyond the candidate's own bubble and the ability to describe, not just name." },
           approach: { en: "Name one photographer, filmmaker, or creator plus one specific thing about how they work." },
-          template: { en: "I follow a Singapore street photographer who shoots HDB corridors in the early morning. What I admire is the patience — he'll wait for one person to walk into the frame at the right spot. It taught me that a good photo is often about waiting, not just looking." },
-        },
-        {
-          question: { en: "Tell us about a piece that didn't work out." },
-          subtext: { en: "Tests honesty and the ability to learn from failure constructively." },
-          approach: { en: "Name the project, name what went wrong, name what you'd do differently." },
-          template: { en: "I tried to make a short film about my morning commute but the audio was unusable — wind noise drowned out everything. I should have tested the sound before shooting the whole thing. Now I always do a 10-second sound check first, even for a quick clip." },
-        },
-        {
-          question: { en: "If School A and our school both offer you a place, which would you choose?" },
-          subtext: { en: "Tests honesty under pressure — and whether you'd actually come." },
-          approach: { en: "Don't dodge. Pick one school, justify with one specific reason." },
-          template: { en: "Honestly, your school. Your Media CCA's focus on documentary work matches what I most want to do. If School A called first, I'd still wait for your reply." },
+          template: { en: "I follow a Singapore street photographer who shoots HDB corridors in the early morning. What I admire is the patience — he'll wait for one person to walk into the frame at the right spot. It taught me a good photo is often about waiting, not just looking." },
+          pitfall: { en: "Don't name a famous creator and stop at \"their work is cool.\" Point to one specific thing about how they work, or it sounds like you only know the name." },
         },
       ],
       schools: [
@@ -15382,43 +12647,43 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           question: { en: "Why computing, and not robotics?" },
           subtext: { en: "STEM-leaning families often apply to both. The panel wants to know the candidate understands the difference, not just that they like technology." },
           approach: { en: "Distinguish the two honestly. Robotics centres on hardware — sensors, motors, physical build-and-test. Computing centres on the logic and code that runs on the machine. Say which actually pulls you and why." },
-          template: { en: "I've built robots, but the part I lost track of time on was always the code — figuring out why the line-follower drifted, not wiring the sensor. With robotics the hardware limits what I can try; with pure code I can build a whole game or tool with just a laptop. The logic is the part I actually enjoy, so computing is the honest fit." },
+          template: { en: "I've built robots, but the part I lost track of time on was always the code — figuring out why the line-follower drifted, not wiring the sensor. With robotics the hardware limits what I can try; with pure code I can build a whole game or tool on just a laptop. The logic is the part I enjoy, so computing is the honest fit." },
+          pitfall: { en: "Don't blur the two into \"I like all technology.\" If you can't say what specifically draws you to code over hardware, the panel reads it as a scatter-shot STEM application." },
         },
         {
           question: { en: "Walk us through something you've built." },
           subtext: { en: "The panel wants method, iteration, and genuine ownership — not a list of courses or a demo the child clearly didn't write." },
           approach: { en: "Pick one project. What it does, what was hard, what broke, what you changed. Spend most of the time on the hard part and the fix, not the features." },
           template: { en: "I made a Scratch game where you dodge falling blocks. The first version let the player walk through walls — my collision check only looked at the centre, not the edges. I fixed it by checking all four corners. That bug taught me more than the rest of the game; now I test edge cases first." },
+          pitfall: { en: "Don't list features or courses you've taken. If you can't explain a bug you hit and how you fixed it, the panel suspects you didn't write it yourself." },
         },
         {
           question: { en: "Here's a short program. What will it print — and there's a bug, can you find it?" },
           subtext: { en: "Tests reading code and systematic debugging directly — the method matters more than getting it instantly." },
           approach: { en: "Trace it line by line out loud. State what each step does, predict the output, then locate the bug and explain why it's wrong before fixing it." },
-          template: { en: "Let me trace it. The loop counts up, but it starts at 1 and stops before the last item — so it skips the final element. That's an off-by-one error. I'd change the start to 0, or the condition to include the last index, and run it again to check." },
+          template: { en: "Let me trace it. The loop counts up, but it starts at 1 and stops before the last item, so it skips the final element. That's an off-by-one error. I'd change the start to 0, or the condition to include the last index, and run it again to check." },
+          pitfall: { en: "Don't go silent and stare, or blurt a guess. Even if you can't spot the bug instantly, trace it out loud — panels score the method, not the speed." },
         },
         {
           question: { en: "Explain how one of your programs works to someone who can't code." },
           subtext: { en: "Tests technical communication — clarity and structure over jargon." },
           approach: { en: "Pick something you genuinely understand. Use one everyday analogy. Check yourself: would a parent who's never coded follow it?" },
-          template: { en: "A loop is like telling someone \"keep stamping passports until the queue is empty\" instead of writing out the same instruction a hundred times. My game uses one to move every falling block down a step, over and over, so I write the rule once and the computer repeats it." },
+          template: { en: "A loop is like telling someone \"keep stamping passports until the queue is empty\" instead of writing the same instruction a hundred times. My game uses one to move every falling block down a step, over and over, so I write the rule once and the computer repeats it." },
+          pitfall: { en: "Don't hide behind jargon like \"it iterates through an array.\" Reaching for terms the listener can't follow shows you don't understand it well enough to simplify it." },
         },
         {
           question: { en: "You're given a problem you don't immediately know how to solve. What do you do?" },
-          subtext: { en: "Computational thinking under uncertainty. The panel wants a method, not 'I'd search it up' or 'I'd ask the teacher.'" },
+          subtext: { en: "Computational thinking under uncertainty. The panel wants a method, not \"I'd search it up\" or \"I'd ask the teacher.\"" },
           approach: { en: "Describe decomposition: break it into smaller parts, solve the easy part first, try a small case, look for a pattern. Show you have a process when you're stuck." },
           template: { en: "I start small. If the problem is for a hundred things, I try it for two or three on paper first and look for a pattern. I break it into parts and solve the part I do understand, then build out. Usually the small case shows me the rule for the big one." },
+          pitfall: { en: "Don't answer \"I'd Google it\" or \"I'd ask my teacher.\" The panel wants to see you have your own process when nobody can hand you the answer." },
         },
         {
           question: { en: "What coding or tech have you explored on your own, outside class?" },
-          subtext: { en: "Self-direction and genuine interest. Generic answers ('I watch coding videos') fail; one specific thing chased on the child's own initiative succeeds." },
+          subtext: { en: "Self-direction and genuine interest. Generic answers (\"I watch coding videos\") fail; one specific thing chased on the child's own initiative succeeds." },
           approach: { en: "Name one specific thing you taught yourself or kept tinkering with, and what you made or learned from it." },
           template: { en: "Nobody taught me Python, but I wanted my Scratch ideas to run faster, so I followed free tutorials and rewrote my dice game in it. I got stuck on random numbers for days before it clicked. Now I prototype small tools in Python whenever an idea won't fit in Scratch." },
-        },
-        {
-          question: { en: "If our school and another both offer you a computing place, how would you choose?" },
-          subtext: { en: "Tests honesty under pressure and whether the family has researched this school's actual computing or infocomm pipeline." },
-          approach: { en: "Don't dodge. Name one specific thing about this school's computing or infocomm program and commit to a reason." },
-          template: { en: "Honestly, your school — your students compete in the National Olympiad in Informatics every year and your Infocomm CCA runs an app-building showcase. That competitive coding track is exactly what I want to push myself on, so I'd choose here even if the other called first." },
+          pitfall: { en: "Don't say \"I watch coding videos\" or list courses your parents signed you up for. The panel is looking for one thing you chased on your own initiative." },
         },
       ],
       schools: [
@@ -15591,42 +12856,35 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           subtext: { en: "Gymnastics is demanding and many quit; panels want to know what sustains the candidate through hard, repetitive training." },
           approach: { en: "Open with one concrete moment, then name what keeps you training despite how hard it is." },
           template: { en: "I started because I loved being upside down, but what keeps me is the day a skill finally clicks. I spent months on my back handspring, falling over and over. The day I landed it clean, I understood why I train. That feeling of finally getting something hard is why I keep going." },
+          pitfall: { en: "Don't give a generic \"I love sport\" answer — gymnastics is brutal and they know it. Name the specific thing that keeps you coming back after the falls." },
         },
         {
           question: { en: "Tell us about your training and competition history." },
           subtext: { en: "Tests the genuineness of the record and the candidate's competitive level." },
           approach: { en: "State your club, how long and how often you train, your discipline, and your highest competitive level honestly." },
           template: { en: "I train artistic gymnastics at my club four times a week, about three hours each session, and I've trained for five years. I compete at the level my coach has entered me for in Singapore Gymnastics events, and my best result was a top-eight finish on beam last year." },
+          pitfall: { en: "Don't inflate your level or vaguely claim \"I've done a lot of competitions.\" State real numbers and results you can stand behind — exaggeration unravels fast under follow-up." },
         },
         {
           question: { en: "Show us your best skills." },
           subtext: { en: "The physical trial is the core of the assessment. Clean execution of reliable skills beats risky attempts at hard ones." },
-          approach: { en: "Warm up properly. Lead with skills you can perform consistently and cleanly. Commit fully — hesitation on a skill reads worse than choosing an easier one." },
+          approach: { en: "Warm up properly. Lead with skills you can perform consistently and cleanly. Commit fully — hesitation reads worse than choosing an easier skill." },
           template: { en: "(No spoken script — prepare by selecting a set of skills you can execute reliably under observation, on your strongest apparatus or with your apparatus, and rehearsing them to clean, consistent form. Warm up flexibility and the specific skills beforehand so the trial starts with your body ready.)" },
+          pitfall: { en: "Don't gamble on your hardest skill to impress — a balked or messy attempt looks worse than a clean easier one. Skipping a proper warm-up is the other classic trial-day mistake." },
         },
         {
           question: { en: "Tell us about a time you were afraid of a skill. What did you do?" },
           subtext: { en: "Fear management is central to gymnastics; panels want resilience and method, not bravado." },
           approach: { en: "Name a real skill you feared, the steps you took, and what you learnt about managing fear." },
           template: { en: "I was scared of my backward giant on bars for a long time — falling backwards is frightening. My coach broke it into drills and used a spot until I trusted it. I learnt that fear shrinks when you break the skill down; rushing it just makes the fear bigger." },
+          pitfall: { en: "Don't claim you're never afraid — every gymnast is, and bravado reads as inexperience. Show the method you used to work through the fear, not just that you pushed past it." },
         },
         {
           question: { en: "How do you handle a bad training day or a fall in competition?" },
           subtext: { en: "Tests temperament and recovery — exactly what coaches recruit for." },
           approach: { en: "Describe your actual reset method honestly — what you do in the moment and after." },
           template: { en: "If I fall in competition, I have a few seconds before the next element, so I breathe and reset rather than carry the mistake into the next skill. After a bad training day, I tell myself one bad day isn't the trend. My coach says how you respond to a fall matters more than the fall." },
-        },
-        {
-          question: { en: "How do you balance gymnastics training with school?" },
-          subtext: { en: "Gymnastics has a heavy training load; panels check the candidate can manage both." },
-          approach: { en: "Be specific about your routine — when you train, when you study, how you cope with tired days." },
-          template: { en: "Training takes most evenings, so I do homework right after school before training and finish off after dinner. On competition weekends I plan ahead and do schoolwork in advance. It's tight, but managing my time is part of being a gymnast — the discipline carries over." },
-        },
-        {
-          question: { en: "If another school also offers you a gymnastics place, how would you choose?" },
-          subtext: { en: "Tests honesty under pressure and whether the family has researched this school's gymnastics programme." },
-          approach: { en: "Don't dodge. Name one specific thing about this school's gymnastics setup and commit to a reason." },
-          template: { en: "Honestly, your school — your gymnastics CCA has its own training facility and a coach who develops gymnasts to national level, which is exactly the support I need to keep improving. If the other school called first, I'd still wait for your reply." },
+          pitfall: { en: "Don't say a fall never rattles you or that you \"just move on\" — describe the concrete reset you use in the seconds before the next element. Vague positivity sounds untested." },
         },
       ],
       schools: [
@@ -15794,46 +13052,39 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
       },
       interviewQuestions: [
         {
-          question: { en: "为什么喜欢书法 / 国画？(Why do you love calligraphy / ink painting?)" },
-          subtext: { en: "Often asked in Mandarin. Panels want genuine feeling and a specific origin, not a rehearsed line." },
-          approach: { en: "Answer in Mandarin if you can. Open with one concrete moment, then say what the practice gives you." },
-          template: { en: "我开始学书法是因为爷爷写春联，我觉得很美，想自己也会写。练久了才发现，写字的时候心会静下来，再烦的事都放下了。这是我最喜欢书法的地方。" },
+          question: { en: "Why do you love calligraphy / ink painting?", zh: "你为什么喜欢书法／国画" },
+          subtext: { en: "Often asked in Mandarin. Panels want genuine feeling and a specific origin, not a rehearsed line.", zh: "常用华语提问。评审想听到真切的感受和具体的起点，而不是背出来的套话。" },
+          approach: { en: "Answer in Mandarin if you can. Open with one concrete moment, then say what the practice gives you.", zh: "能用华语就用华语作答。先讲一个具体的时刻，再说这门手艺带给你什么。" },
+          template: { en: "I started learning calligraphy because my grandfather wrote 春联 — I thought it was beautiful and wanted to write them too. After practising for a while, I found that when I write, my heart settles; however troubled I am, I can put it down. That's what I love most about calligraphy.", zh: "我开始学书法是因为爷爷写春联，我觉得很美，也想自己会写。练久了才发现，写字的时候心会静下来，再烦的事都能放下。这是我最喜欢书法的地方。" },
+          pitfall: { en: "Don't reduce it to \"it improves my handwriting\" or \"my parents signed me up.\" Name the real moment that drew you in, and what it does for you now.", zh: "别把它说成「能练好字」或「父母帮我报的名」。要点出真正吸引你的那个时刻，以及它现在带给你什么。" },
         },
         {
-          question: { en: "What script or style do you practise, and whose work do you study?" },
-          subtext: { en: "Tests genuine embeddedness in the tradition versus surface technique." },
-          approach: { en: "Name your main script or genre, the copybook (字帖) or model you study, and one thing you've learnt from it." },
-          template: { en: "我主要写楷书，临颜真卿的《多宝塔碑》。颜体的字很端正、很有力，老师说我起笔太轻，所以我现在特别练起笔的力度。最近也开始尝试行书。" },
+          question: { en: "What script or style do you practise, and whose work do you study?", zh: "你练的是哪种书体或风格，临的是谁的作品" },
+          subtext: { en: "Tests genuine embeddedness in the tradition versus surface technique.", zh: "考的是你是真正扎根传统，还是只停在表面技巧。" },
+          approach: { en: "Name your main script or genre, the copybook (字帖) or model you study, and one thing you've learnt from it.", zh: "说出你主要的书体或画种、你临的字帖或范本，以及你从中学到的一点。" },
+          template: { en: "I mainly write 楷书, copying 颜真卿's 《多宝塔碑》. 颜体 is upright and forceful; my teacher says my opening strokes are too light, so I'm working hard on the strength of the 起笔. Recently I've also started trying 行书.", zh: "我主要写楷书，临颜真卿的《多宝塔碑》。颜体端正、有力，老师说我起笔太轻，所以我现在特别练起笔的力度。最近也开始尝试行书。" },
+          pitfall: { en: "Don't name a master or copybook you can't say anything specific about — the panel will ask what you learnt from it. Vague \"I just like it\" answers expose a thin practice.", zh: "别报一个你说不出具体内容的名家或字帖——评审会问你从中学到了什么。一句空泛的「我就是喜欢」会暴露你功底浅。" },
         },
         {
-          question: { en: "Demonstrate a piece for us now." },
-          subtext: { en: "The live demonstration is the core of the assessment — technique a portfolio can hide shows here." },
-          approach: { en: "Settle your posture and breathing first. Work at your trained pace — don't rush. Choose a piece you can execute confidently, not your most ambitious." },
-          template: { en: "(No spoken script — prepare by rehearsing one calligraphy piece or one ink-painting subject until it is reliable under observation. Practise setting up the paper, grinding or loading ink, and steadying your posture as part of the routine, so the demonstration starts calm.)" },
+          question: { en: "Demonstrate a piece for us now.", zh: "请现在为我们示范一幅作品" },
+          subtext: { en: "The live demonstration is the core of the assessment — technique a portfolio can hide shows here.", zh: "现场示范是评估的核心——作品集能藏住的功夫，在这里会显出来。" },
+          approach: { en: "Settle your posture and breathing first. Work at your trained pace — don't rush. Choose a piece you can execute confidently, not your most ambitious.", zh: "先稳住姿势和呼吸。按你平时练出来的节奏写，别赶。选一幅你有把握完成的，而不是最有野心的。" },
+          template: { en: "(No spoken script — prepare by rehearsing one calligraphy piece or one ink-painting subject until it is reliable under observation. Practise setting up the paper, grinding or loading ink, and steadying your posture as part of the routine, so the demonstration starts calm.)", zh: "（没有口头稿——准备时反复练熟一幅书法或一个国画题材，直到在被观察的情况下也能稳定发挥。把铺纸、磨墨或蘸墨、稳住姿势都当成流程的一部分来练，这样示范一开始就能从容。）" },
+          pitfall: { en: "Don't attempt your most ambitious piece to impress — a shaky stroke under watching eyes hurts more than a simpler piece done cleanly. Skipping the setup ritual leaves you rushed and tense.", zh: "别为了惊艳而挑最有野心的作品——在众目之下抖一笔，比稳稳写好一幅简单的更吃亏。省掉铺垫的步骤，只会让你慌乱紧张。" },
         },
         {
-          question: { en: "What do you find hardest about brush arts?" },
-          subtext: { en: "Tests honest self-awareness and a real practice, not a polished image." },
-          approach: { en: "Name one genuine difficulty and what you do about it." },
-          template: { en: "最难的是控制墨的浓淡。水多了会晕开，水少了又太干。我现在每次画之前会先在废纸上试墨，找到刚好的浓度才下笔。还是常常出错，但比以前好多了。" },
+          question: { en: "What do you find hardest about brush arts?", zh: "你觉得书画里最难的是什么" },
+          subtext: { en: "Tests honest self-awareness and a real practice, not a polished image.", zh: "考的是诚实的自我认识和真实的练习，而不是一个修饰过的形象。" },
+          approach: { en: "Name one genuine difficulty and what you do about it.", zh: "点出一个真实的难处，以及你为此做了什么。" },
+          template: { en: "The hardest part is controlling the shade of the ink. Too much water and it bleeds; too little and it's too dry. Now before I paint I test the ink on scrap paper first, and only put brush to paper once the consistency is right. I still make mistakes often, but I'm much better than before.", zh: "最难的是控制墨的浓淡。水多了会晕开，水少了又太干。我现在每次画之前会先在废纸上试墨，找到刚好的浓度才下笔。还是常常出错，但比以前好多了。" },
+          pitfall: { en: "Don't pick a fake difficulty or claim nothing is hard — both read as evasive. Name a real weakness and show the concrete habit you've built to work on it.", zh: "别挑一个假的难处，也别说没什么难的——两者听起来都像在回避。要说出一个真实的弱点，并展示你为改进它养成的具体做法。" },
         },
         {
-          question: { en: "How much do you practise, and how?" },
-          subtext: { en: "Brush arts reward sustained discipline; panels want evidence of a real routine." },
-          approach: { en: "Describe your actual routine honestly — frequency, what you work on, with whom." },
-          template: { en: "我每个星期上一次书法课，平时在家差不多每两天练一次，一次大概半个小时。最近在临帖，老师让我同一个字写很多遍,直到结构稳了为止。" },
-        },
-        {
-          question: { en: "Why our school for Chinese brush arts?" },
-          subtext: { en: "Tests whether the family researched this SAP school's Chinese-culture programme specifically." },
-          approach: { en: "Cite one specific thing — the school's calligraphy CCA, a Chinese-culture event, its SAP heritage." },
-          template: { en: "贵校是特选学校，华族文化的氛围很浓，书法 CCA 也常常参加比赛和展览。我希望在一个真正重视书法的环境里继续学下去，所以我很想来贵校。" },
-        },
-        {
-          question: { en: "If another school also offers you a place, how would you choose?" },
-          subtext: { en: "Tests honesty under pressure and genuine commitment." },
-          approach: { en: "Don't dodge. Pick one school and give one specific reason." },
-          template: { en: "说实话，我会选贵校。贵校的书法传统和华文环境是我最看重的。如果另一所学校先联系我，我还是会等贵校的消息。" },
+          question: { en: "How much do you practise, and how?", zh: "你练得多吗，平时怎么练" },
+          subtext: { en: "Brush arts reward sustained discipline; panels want evidence of a real routine.", zh: "书画讲究长期的坚持；评审想看到你有一套真实的练习习惯。" },
+          approach: { en: "Describe your actual routine honestly — frequency, what you work on, with whom.", zh: "老实描述你真正的练习——多久练一次、练什么、跟谁练。" },
+          template: { en: "I have a calligraphy class once a week, and at home I practise roughly every other day, about half an hour each time. Lately I've been copying 帖 — my teacher has me write the same character many times until the structure is steady.", zh: "我每个星期上一次书法课，平时在家差不多每两天练一次，一次大概半个小时。最近在临帖，老师让我把同一个字写很多遍，直到结构稳了为止。" },
+          pitfall: { en: "Don't inflate your hours — a panel can tell from your demonstration whether the practice is real. Vague \"whenever I have time\" suggests no routine at all.", zh: "别夸大你的练习时间——评审从你的示范就能看出功夫是不是真的。一句含糊的「有空就练」等于说你根本没有规律。" },
         },
       ],
       schools: [
@@ -16008,42 +13259,21 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           subtext: { en: "Panels want a specific reason, not \"I like thinking.\" Chess is slow, solitary, and full of losing — they want to know you chose it knowingly." },
           approach: { en: "Open with one concrete moment — a game, a tournament, a loss that changed how you played — then connect it to character." },
           template: { en: "I started chess because my grandfather taught me and I kept losing to him. The first time I beat him I realised it wasn't luck — I'd seen a fork he didn't. After that I wanted to understand why every move worked. Chess taught me that being beaten is just information about what to study next." },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: { en: "Did the family research this school's chess programme, or is the application generic?" },
-          approach: { en: "Cite one specific thing — the CCA's tournament record, a coach, the training culture — and tie it to your goal." },
-          template: { en: "Your chess CCA fields a team in the national inter-school championships and trains with a coach who runs analysis sessions, not just play. My rating has plateaued because I play more than I study. I want a programme that pushes me to review games, not just rack up tournaments." },
+          pitfall: { en: "Don't say \"I like thinking\" or \"it makes me smarter\" — that's what every applicant says. Anchor your reason in a specific game or moment that changed how you play." },
         },
         {
           question: { en: "Walk us through how you study and train." },
           subtext: { en: "Tests whether the candidate works seriously and can self-manage — and whether the record matches the routine." },
           approach: { en: "Describe a real week: tactics, game review, openings, and tournament play, and how it fits around school." },
           template: { en: "Tactics puzzles most days, twenty minutes. I play a longer game each weekend and review it move by move with the engine afterwards, writing down where I went wrong. Before a tournament I prepare my main openings. I keep it short on school days so my homework still gets done." },
+          pitfall: { en: "Don't say you \"just play a lot\" — that signals you grind without improving. Show that you review your own games, not only rack up tournaments." },
         },
         {
           question: { en: "What's your rating, and what's holding it back?" },
           subtext: { en: "Can the candidate talk about their own play honestly and analytically, not just quote a number?" },
           approach: { en: "Give the rating, then one specific weakness you're working on — calculation, time management, an opening." },
           template: { en: "My national rating is around 1500. My tactics are sharp but I lose on the clock in long games — I overthink the middlegame and then rush the ending. I'm training endgames so I trust standard positions faster and keep time for when it actually matters." },
-        },
-        {
-          question: { en: "Tell us about a loss that taught you something." },
-          subtext: { en: "Specific actions, not just the feeling. Schools want resilience and a self-correcting player they can see." },
-          approach: { en: "Situation, then what you did about it, then result, in two or three sentences." },
-          template: { en: "I was winning a tournament game, got overconfident, and hung a piece in one careless move. I lost the round and dropped down the standings. I went home, found the exact move, and made a rule to double-check every capture before I play it. That habit has saved me more games than any opening I've learned." },
-        },
-        {
-          question: { en: "How do you balance chess with schoolwork?" },
-          subtext: { en: "Schools fear DSA kids who flame out academically by Sec 2." },
-          approach: { en: "Describe a real system, not a promise to \"work hard.\"" },
-          template: { en: "Tactics and game review are short, so they fit on school days after homework. The long games and tournament prep go on weekends. My parents check my report book with me each term — that's the rule we agreed before I started playing competitively. If grades slip, the tournament load comes down first." },
-        },
-        {
-          question: { en: "If two schools both offer you a place, how do you decide?" },
-          subtext: { en: "Tests honesty under pressure — and whether you'd actually enrol." },
-          approach: { en: "Don't dodge. Name one school and justify it with one specific, chess-related reason." },
-          template: { en: "Honestly, your school — your chess CCA runs analysis sessions and competes at national level, which is the part of my game I most need to grow. If another school called first I'd still wait for your reply, because that coaching is the reason I applied." },
+          pitfall: { en: "Don't quote a number and stop, or name a fake weakness to look modest. Pick a real flaw in your play and say exactly what you're doing about it." },
         },
       ],
       schools: [
@@ -16197,42 +13427,21 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           subtext: { en: "Panels want a specific moment, not a feeling. \"I like winning\" reads as untrained motivation." },
           approach: { en: "Open with one concrete memory — a round, a coach moment, a turning point — then connect it to character." },
           template: { en: "I once tripled the last hole of a junior round because I went for a green I couldn't reach. My coach asked why I hadn't laid up. I didn't have an answer. That was the day I learned golf is about the shot you should play, not the shot you wish you could." },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: { en: "Did the family research the golf programme, or is the application generic?" },
-          approach: { en: "Cite one specific thing about the school's golf — a CCA detail, a coach arrangement, a competition result." },
-          template: { en: "Your school runs golf as a CCA with a regular coaching arrangement and has been a steady presence at the National School Games. That structure — regular coaching plus real competition — is exactly what I need to bring my handicap down from Sec 1." },
+          pitfall: { en: "Don't open with \"it's fun\" or \"I like winning\" — that reads as a parent's reason. Pick a moment only you could have lived, not one any golfer could claim." },
         },
         {
           question: { en: "What is the strongest part of your game, and why?" },
-          subtext: { en: "Can the kid articulate their game honestly, not just claim length?" },
+          subtext: { en: "Can the candidate articulate their game honestly, not just claim length?" },
           approach: { en: "Name the strength plus what it lets you do on the course." },
           template: { en: "My short game. I'm not the longest off the tee, so I save shots around the green — I get up-and-down more often than the players I lose distance to. That's how I keep my scores down, and it's the part of my game I can rely on under pressure." },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a setback." },
-          subtext: { en: "Specific actions, not just outcome or feelings." },
-          approach: { en: "Situation, then action, then result, in two sentences." },
-          template: { en: "My handicap stalled for half a year because my putting fell apart. I spent eight weeks doing nothing but distance-control drills on the practice green before every round. My three-putts dropped to almost none and my handicap moved for the first time in months." },
+          pitfall: { en: "Don't just claim distance or list every club. Name one real strength and say what it does for your score — vague \"I'm all-round\" answers convince no one." },
         },
         {
           question: { en: "How do you handle yourself after a bad shot?" },
           subtext: { en: "Golf is a long format — composure is a recruited trait." },
           approach: { en: "Describe a concrete reset routine, not \"I stay positive.\"" },
           template: { en: "I give myself one breath to be annoyed, then I commit fully to the next shot — same pre-shot routine, same tempo. One bad swing is one stroke; letting it bother me is how one stroke becomes three. I learned that the hard way after blowing up rounds early on." },
-        },
-        {
-          question: { en: "How do you manage time with frequent trainings?" },
-          subtext: { en: "Schools fear DSA kids who flame out academically by Sec 2." },
-          approach: { en: "Describe a real system, not platitudes about discipline." },
-          template: { en: "I finish English and Math homework on the way to the range and complete Science before dinner. Sunday is for revision. My mother reviews my report book with my coach each term — if any subject drops a band, we cut one practice session. That's the rule we set together." },
-        },
-        {
-          question: { en: "If School A and our school both offer you, which would you choose?" },
-          subtext: { en: "Tests honesty under pressure — and whether you'd actually come." },
-          approach: { en: "Don't dodge. Pick one school, justify with one specific reason." },
-          template: { en: "Honestly, your school. The way your golf CCA is coached matches how I want to develop my game. If School A called first I'd still wait for your reply." },
+          pitfall: { en: "Don't say \"I just stay positive\" or claim a bad shot never bothers you — that reads as untested. Describe an actual reset you do mid-round." },
         },
       ],
       schools: [
@@ -16378,44 +13587,30 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
         {
           question: { en: "Why climbing?" },
           subtext: { en: "Panels want a specific moment, not \"it's fun and keeps me fit.\" That answer reads as a parent's, not the candidate's." },
-          approach: { en: "Open with one concrete moment on the wall — a problem that took weeks, a fall you learned from — then connect it to something about how the candidate thinks." },
+          approach: { en: "Open with one concrete moment on the wall — a problem that took weeks, a fall you learned from — then connect it to how the candidate thinks." },
           template: { en: "There was a boulder problem at my gym I failed for two months. Every session I tried it and fell at the same move. The day I finally read it differently — turned my hip in instead of reaching straight — it suddenly went. That's why I climb: it punishes brute force and rewards you the moment you stop and actually think." },
+          pitfall: { en: "Don't say \"it's fun and keeps me fit\" — that's a parent's answer. Tie your reason to one specific climb, not a generic love of exercise." },
         },
         {
           question: { en: "Which discipline are you strongest at, and why?" },
           subtext: { en: "Tests self-awareness and whether the candidate understands the sport beyond \"I like climbing.\"" },
-          approach: { en: "Name the discipline, give one honest reason rooted in the candidate's physical or mental profile, and acknowledge what they're still building." },
+          approach: { en: "Name the discipline, give one honest reason rooted in your physical or mental profile, and acknowledge what you're still building." },
           template: { en: "Bouldering, because I'm explosive and I like the problem-solving — short, hard, figure it out. Lead is my weaker one; my forearms pump out on long routes. That's actually why I want a school with a proper lead wall, so I can build the endurance I don't have yet." },
-        },
-        {
-          question: { en: "Tell us about a fall or a failure on the wall and what you did next." },
-          subtext: { en: "Climbing is mostly falling. Schools want a candidate who diagnoses and adjusts, not one who gets discouraged." },
-          approach: { en: "Situation, the specific reason you fell, the specific change you made, the result." },
-          template: { en: "At a bouldering comp I kept falling off a sloper because I was over-gripping and pumping out. My coach pointed out I wasn't trusting my feet. I went back, weighted my feet properly, relaxed my hands — and held the sloper next try. Now over-gripping is the first thing I check when a move feels impossible." },
+          pitfall: { en: "Don't claim you're strong at everything, and don't name a discipline you can't explain. Owning a real weakness shows more self-awareness than a polished boast." },
         },
         {
           question: { en: "How do you handle the fear of being high on the wall?" },
           subtext: { en: "Lead and tall walls expose nerve. Schools want composure and respect for safety, not recklessness." },
-          approach: { en: "Be honest that fear exists, then describe the concrete routine — breathing, trusting the rope, checking the system — that lets the candidate climb anyway." },
+          approach: { en: "Be honest that fear exists, then describe the concrete routine — breathing, trusting the rope, checking the system — that lets you climb anyway." },
           template: { en: "I do get scared near the top of a lead route. What helps is the routine: I check my knot and tell my belayer before I start, so I know the system's safe. Then I breathe out before each hard move and trust the rope to catch me. Falling cleanly is a skill too — I've practised it, so a fall doesn't surprise me anymore." },
-        },
-        {
-          question: { en: "How do you balance training, competitions, and schoolwork?" },
-          subtext: { en: "Schools fear DSA climbers whose grades slide, especially around competition season." },
-          approach: { en: "Describe a real weekly schedule and how academic time is protected when competitions cluster." },
-          template: { en: "I climb three evenings a week plus a weekend session. On climbing days I finish homework before training, not after, because I'm too tired after. The week before a competition I cut one session so I'm rested and my schoolwork doesn't pile up. Sundays I keep for revision no matter what." },
+          pitfall: { en: "Don't claim you feel no fear — that reads as reckless, the opposite of what they want. Admit the fear, then show the safety habit that lets you climb through it." },
         },
         {
           question: { en: "What does climbing safety mean to you?" },
           subtext: { en: "Schools send DSA climbers to external venues and competitions. They need to trust the candidate's safety habits." },
           approach: { en: "Don't recite rules. Give one specific moment where safety discipline mattered." },
           template: { en: "Once my climbing partner started up a route before I'd finished checking my belay device. I stopped her — felt awkward, but I'd rather be the annoying one than the reason someone gets hurt. Safety isn't a checklist to me, it's looking out for the person on the other end of the rope. I always check the knot and the device, every climb." },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: { en: "Did the family research this school's climbing CCA, or is this a scatter-shot application?" },
-          approach: { en: "Cite a climbing-specific reason — the school's wall or bouldering facility, its competition record, the disciplines its CCA trains, the coach." },
-          template: { en: "Your school has a proper rock wall on campus and trains all three disciplines, not just bouldering, which is rare. Your climbing team has been a regular at the National Schools championships. I want to train lead and speed seriously, not just boulder, and this is one of the few schools where I can do that." },
+          pitfall: { en: "Don't recite a list of rules you've memorised. Give one real moment where you actually enforced safety, even when it was awkward." },
         },
       ],
       schools: [
@@ -16564,42 +13759,28 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           subtext: { en: "Tests genuine motivation — panels fear candidates who applied here as a backup." },
           approach: { en: "Name what the outdoors asks of you that other areas don't, and tie it to a specific experience." },
           template: { en: "I've loved being outdoors since my Primary 5 camp — the navigation, the campcraft, the feeling of finishing a hard hike with my group. I considered a sports DSA, but what draws me isn't competing, it's the mix of physical challenge, skill, and looking after a team in the field. Outdoor adventure is where all of that comes together, and I want to keep building it." },
-        },
-        {
-          question: { en: "Tell us about the hardest outdoor activity you've done and how you got through it." },
-          subtext: { en: "Tests grit and resilience, which are core aims of these programmes." },
-          approach: { en: "Be honest about the difficulty, then show perseverance and care for the team." },
-          template: { en: "On a school camp our night hike turned wet and one of my friends wanted to stop. I was tired too, but I knew if I complained the group would unravel. I helped carry part of his load, kept us talking, and we finished together — soaked and last, but together. I learned that getting through hard conditions is as much about holding the group up as pushing yourself." },
+          pitfall: { en: "Don't make it sound like a backup or like you just enjoy being outside. Name what the outdoors demands that other talent areas don't, anchored to a real experience." },
         },
         {
           question: { en: "How would you handle a situation where part of your team is struggling far from help?" },
           subtext: { en: "Tests judgement and risk awareness — often probed through a scenario task." },
           approach: { en: "Show that you weigh safety against the goal and decide for the whole group." },
           template: { en: "First I'd check how serious it is — is someone hurt, exhausted, or just discouraged? Safety comes before finishing. I'd rest the team, share water and load, and reassess. If continuing was unsafe I'd turn us back, even if it meant not completing the route. The goal isn't worth putting the team at risk, and a good decision is one everyone comes home from." },
+          pitfall: { en: "Don't answer like the goal is to finish at all costs — pushing on regardless reads as reckless. Show you'd assess the risk first and be willing to turn back." },
         },
         {
           question: { en: "What outdoor skills do you have, and what do you most want to learn?" },
           subtext: { en: "Tests both current skill and trainability — schools assess potential, not just experience." },
           approach: { en: "Be specific about what you can do, and honest and eager about what you can't yet." },
           template: { en: "I can set up a tent, read a basic map, and I've done some climbing at a wall. What I most want to learn is real orienteering and abseiling — navigating without a path, and the rope skills. I pick things up fast outdoors; at my last camp I learned to pitch a shelter in one go after watching once. I'm coming to learn, not because I already know everything." },
+          pitfall: { en: "Don't oversell your experience or pretend you already know it all — schools recruit for trainability. Be concrete about both what you can do and what you genuinely want to learn." },
         },
         {
           question: { en: "How do you think about safety and the environment when you're outdoors?" },
           subtext: { en: "Tests risk awareness and the environmental attitude these programmes value." },
           approach: { en: "Show respect for both hazards and nature, with one concrete habit each." },
           template: { en: "Outdoors I assume conditions can change, so I check the plan, the weather, and that everyone has what they need before we go. For the environment, I follow leave-no-trace — we pack out everything we bring, stay on trails, and don't disturb wildlife. Being outdoors a lot has made me want to protect these places, not just use them. Respecting the risks and respecting nature feel like the same kind of care to me." },
-        },
-        {
-          question: { en: "How do you balance a demanding outdoor CCA with your studies?" },
-          subtext: { en: "Schools fear DSA students who flame out academically." },
-          approach: { en: "Describe a real system, not platitudes about discipline." },
-          template: { en: "Camps and expeditions take whole weekends, so I plan around them. The week before a camp I finish homework early, and I keep a fixed catch-up evening afterwards. My parents check my results each term — if a subject slips, we cut back on extra activities until it recovers. We agreed that rule together so it's not a fight." },
-        },
-        {
-          question: { en: "If our school and another both offer you an outdoor-adventure place, which would you choose?" },
-          subtext: { en: "Tests honesty under pressure and whether the candidate researched the school." },
-          approach: { en: "Don't dodge. Pick one school and give one specific reason tied to its outdoor programme." },
-          template: { en: "Honestly, your school. I read about your outdoor-education programme and how it builds adventure skills alongside character and care for the environment, and that's exactly the mix I want. The expedition and challenge opportunities you offer are stronger for me than the other school's. If the other replied first I'd still wait for yours." },
+          pitfall: { en: "Don't recite \"safety first\" as a slogan or treat the environment question as an afterthought. Give one concrete habit for each — vague good intentions don't show real field discipline." },
         },
       ],
       schools: [
@@ -16766,42 +13947,21 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           subtext: { en: "The panel wants a specific moment, not a feeling. \"It's fun\" reads as weak motivation." },
           approach: { en: "Open with one concrete memory, then connect it to character." },
           template: { en: "When I had to bat out the last few overs to save a tight P5 match, I realised I wanted to be the player my team trusts to hold an innings together — not the one hoping to get out and leave it to someone else." },
-        },
-        {
-          question: { en: "Why did you choose our school?" },
-          subtext: { en: "Did the family research the program, or are they applying everywhere?" },
-          approach: { en: "Cite one specific thing about the school's cricket — a training pattern, an NSG showing, the coach's emphasis." },
-          template: { en: "Your school has a long cricket tradition and plays at National Division level — I want to be pushed by that standard and that coaching from Sec 1, not wait to catch up." },
+          pitfall: { en: "Don't say \"it's fun\" or recite favourite pros — that signals shallow motivation. Avoid a generic feeling; ground it in one innings or moment that revealed why you want the responsibility." },
         },
         {
           question: { en: "What role do you play, and why?" },
           subtext: { en: "Can the kid articulate the role, not just label it?" },
           approach: { en: "Name the role plus the job it does for the team." },
           template: { en: "Opening batsman — my job is seeing off the new ball and giving the middle order a platform, so I work hardest on a tight defence and judging which balls to leave." },
-        },
-        {
-          question: { en: "Tell us about a time you had to overcome a challenge." },
-          subtext: { en: "Specific actions, not just outcome or feelings." },
-          approach: { en: "Situation, then action, then result, in two sentences." },
-          template: { en: "I kept getting bowled because my footwork was poor against spin. I spent a few weeks on shadow batting and facing throwdowns from a teammate, and by our last games I was using my feet and scoring off the spinners instead." },
+          pitfall: { en: "Don't just name a role with no sense of its job. Avoid claiming a demanding spot like opener without naming the specific skill you build to do it." },
         },
         {
           question: { en: "Is there a teammate or coach you remember most?" },
           subtext: { en: "Whether the kid sees teammates as people or as background." },
-          approach: { en: "Name someone specific by role + what you learned from them." },
+          approach: { en: "Name someone specific by role plus what you learned from them." },
           template: { en: "Our captain always set my field before I bowled and told me where to aim — he taught me that cricket is a thinking game, not just bowling as fast as you can." },
-        },
-        {
-          question: { en: "How will you manage time with frequent trainings?" },
-          subtext: { en: "Schools fear DSA kids who flame out academically by Sec 2." },
-          approach: { en: "Describe a real system, not platitudes about discipline." },
-          template: { en: "I do my English and Math homework on the bus to training and finish the rest before dinner, and I keep Sundays for revision so a long training week never piles up." },
-        },
-        {
-          question: { en: "If School A and School B both offer you, which would you choose?" },
-          subtext: { en: "Tests honesty under pressure — and whether you'd actually come." },
-          approach: { en: "Don't dodge. Pick one, justify with one specific reason." },
-          template: { en: "Honestly, your school — your coach's focus on batting technique fits how I want to develop. If the other school replied first I'd still wait to hear from you." },
+          pitfall: { en: "Don't pick someone only for their pace or big scores. Avoid a vague \"great player\" line — name the concrete thing they taught you about the game." },
         },
       ],
       schools: [
