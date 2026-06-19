@@ -9,7 +9,7 @@
  * Deck = [self-intro] + shared COMMON_QUESTIONS + this talent's specific questions
  * (see lib/interviewCommon.ts). Built once here; the static page renders the same set.
  */
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import {
   Volume2,
@@ -43,16 +43,77 @@ const KIND_LABEL: Record<DeckCardKind, LocaleStr> = {
   talent: { en: "Talent-specific", zh: "项目专属题", ms: "Khusus bakat", ta: "திறமை சார்ந்தது" },
 };
 
-function speak(text: string) {
-  if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
-  window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = /[一-鿿]/.test(text) ? "zh-CN" : "en-GB";
-  u.rate = 0.95;
-  window.speechSynthesis.speak(u);
+const ttsSupported = typeof window !== "undefined" && "speechSynthesis" in window;
+
+let voiceCache: SpeechSynthesisVoice[] = [];
+function refreshVoices() {
+  if (!ttsSupported) return;
+  const v = window.speechSynthesis.getVoices();
+  if (v.length) voiceCache = v;
 }
 
-const ttsSupported = typeof window !== "undefined" && "speechSynthesis" in window;
+/**
+ * Pick the most natural available voice for the language. Browsers ship a few
+ * network/neural voices (Google, Microsoft "Natural/Online", Mac "Premium")
+ * that sound far more human than the default — we just have to choose them.
+ */
+function pickVoice(zh: boolean): SpeechSynthesisVoice | undefined {
+  if (!voiceCache.length) refreshVoices();
+  const voices = voiceCache;
+  if (!voices.length) return undefined;
+  const cand = voices.filter((v) => {
+    const l = v.lang.toLowerCase();
+    return zh ? l.startsWith("zh") || l.startsWith("cmn") : l.startsWith("en");
+  });
+  if (!cand.length) return undefined;
+  const prefer = zh
+    ? ["natural", "neural", "google 普通话", "google", "tingting", "ting-ting", "meijia", "mei-jia", "sinji", "premium"]
+    : ["natural", "neural", "google uk english female", "google us english", "google", "premium", "samantha", "serena", "karen", "daniel"];
+  for (const key of prefer) {
+    const hit = cand.find((v) => v.name.toLowerCase().includes(key));
+    if (hit) return hit;
+  }
+  // Network voices (localService === false) are the neural ones — prefer them.
+  return cand.find((v) => !v.localService) ?? cand[0];
+}
+
+let keepAlive: ReturnType<typeof setInterval> | undefined;
+function stopKeepAlive() {
+  if (keepAlive) {
+    clearInterval(keepAlive);
+    keepAlive = undefined;
+  }
+}
+
+function speak(text: string) {
+  if (!ttsSupported) return;
+  const synth = window.speechSynthesis;
+  synth.cancel();
+  stopKeepAlive();
+
+  const zh = /[一-鿿]/.test(text);
+  const voice = pickVoice(zh);
+
+  // Split into short clauses so each utterance stays well under Chrome's
+  // ~15s single-utterance cutoff (the cause of the stutter/drop on long text).
+  const chunks = text.match(/[^.!?。！？；;]+[.!?。！？；;]?/g) ?? [text];
+  for (const raw of chunks) {
+    const c = raw.trim();
+    if (!c) continue;
+    const u = new SpeechSynthesisUtterance(c);
+    if (voice) u.voice = voice;
+    u.lang = voice?.lang ?? (zh ? "zh-CN" : "en-GB");
+    u.rate = 0.98;
+    u.pitch = 1;
+    synth.speak(u);
+  }
+
+  // Chrome keepalive: nudge resume periodically so the queue doesn't pause.
+  keepAlive = setInterval(() => {
+    if (synth.speaking) synth.resume();
+    else stopKeepAlive();
+  }, 9000);
+}
 
 export function InterviewFlashcards({
   talentLabel,
@@ -69,6 +130,19 @@ export function InterviewFlashcards({
   const [solo, setSolo] = useState(false); // false = parent coaches child; true = child practises alone
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
+
+  // Voices load asynchronously in Chrome — warm the cache so the first
+  // read-aloud already uses the natural voice, not the robotic default.
+  useEffect(() => {
+    if (!ttsSupported) return;
+    refreshVoices();
+    window.speechSynthesis.addEventListener("voiceschanged", refreshVoices);
+    return () => {
+      window.speechSynthesis.removeEventListener("voiceschanged", refreshVoices);
+      window.speechSynthesis.cancel();
+      stopKeepAlive();
+    };
+  }, []);
 
   const deck: DeckCard[] = useMemo(
     () => buildDeck(questions, { includeSelfIntro: includeIntro }),
