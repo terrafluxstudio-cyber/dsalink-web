@@ -6,7 +6,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SchoolFinderModal } from "@/components/SchoolFinderModal";
 import { getCyclePhase } from "@/lib/dsa-cycle";
-import { TALENT_COUNT } from "@/lib/talentPages";
+import { TALENT_COUNT } from "@/lib/talentSlugs";
 
 // Same grain tile used in SchoolFinderModal — consistent material language.
 const GRAIN_BG =

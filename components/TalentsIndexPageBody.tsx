@@ -8,7 +8,6 @@ import { PillarBackLink } from "@/components/PillarBackLink";
 import { RelatedCardsRow } from "@/components/RelatedCardsRow";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { getAllTalentPages } from "@/lib/talentPages";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
@@ -116,9 +115,17 @@ const R3_B: LocaleStr = {
   ta: "திறமை, பகுதி, IP / non-IP மூலம் வடிகட்டவும்.",
 };
 
-export function TalentsIndexPageBody() {
+/** Minimal per-talent data the index needs — projected server-side so the full
+ * TALENT_DATA stays out of this client bundle. */
+export type TalentCard = {
+  slug: string;
+  navLabel: LocaleStr;
+  summary: LocaleStr;
+  isLive: boolean;
+};
+
+export function TalentsIndexPageBody({ talents }: { talents: TalentCard[] }) {
   const { locale } = useLanguage();
-  const talents = getAllTalentPages();
 
   return (
     <>
@@ -154,7 +161,7 @@ export function TalentsIndexPageBody() {
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
             <ul className="grid gap-4 sm:grid-cols-2 sm:gap-5">
               {talents.map((t) => {
-                const isLive = !!t.rich;
+                const isLive = t.isLive;
                 return (
                   <li
                     key={t.slug}

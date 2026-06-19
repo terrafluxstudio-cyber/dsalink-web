@@ -4,6 +4,7 @@ import {
   type SchoolCopHistoryEntry,
 } from "@/lib/data";
 import { SCHOOL_DIRECTORY } from "@/lib/school-directory-data";
+import { TALENT_SLUGS } from "@/lib/talentSlugs";
 
 const DEFAULT_SITE_URL = "https://dsalink.sg";
 
@@ -557,14 +558,8 @@ export function buildTalentsIndexStructuredData(): Record<string, unknown> {
   const base = getSiteUrl();
   const pageUrl = `${base}/dsa-interview/talents`;
 
-  // Talents listed in display order (mirrors getAllTalentPages order).
-  const talents = [
-    "basketball", "football", "swimming", "track-field", "badminton", "martial-arts",
-    "music", "math", "robotics", "chinese", "dance", "drama", "art",
-    "hockey", "squash", "leadership", "volleyball", "table-tennis", "netball", "floorball",
-    "choir", "chinese-orchestra", "tennis", "wushu", "water-polo", "sailing",
-    "rugby", "symphonic-band", "mep", "aep", "bicultural", "humanities",
-  ];
+  // Full talent list (dynamic — stays in sync as talents are added).
+  const talents = TALENT_SLUGS;
 
   return {
     "@context": "https://schema.org",
@@ -587,6 +582,70 @@ export function buildTalentsIndexStructuredData(): Record<string, unknown> {
       })),
     },
   };
+}
+
+/**
+ * Individual talent prep page (/dsa-interview/[slug]).
+ * @graph: BreadcrumbList + Article + (optional) FAQPage built from the
+ * talent-specific interview questions. FAQ uses ONLY talent-specific questions
+ * (not the shared common deck) so each page's FAQ content is unique.
+ */
+export function buildTalentPageStructuredData(opts: {
+  slug: string;
+  label: string;
+  description: string;
+  faqs: { q: string; a: string }[];
+}): Record<string, unknown> {
+  const base = getSiteUrl();
+  const pageUrl = `${base}/dsa-interview/${opts.slug}`;
+  const orgId = `${base}/#organization`;
+
+  const graph: Record<string, unknown>[] = [
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "DSA Guide", item: `${base}/dsa-guide` },
+        { "@type": "ListItem", position: 2, name: "Interview Prep", item: `${base}/dsa-interview` },
+        { "@type": "ListItem", position: 3, name: "Talents", item: `${base}/dsa-interview/talents` },
+        { "@type": "ListItem", position: 4, name: `${opts.label} DSA Interview Prep`, item: pageUrl },
+      ],
+    },
+    {
+      "@type": "Article",
+      "@id": `${pageUrl}#article`,
+      headline: `${opts.label} DSA Interview Prep`,
+      description: opts.description,
+      about: `${opts.label} Direct School Admission (DSA-Sec) in Singapore`,
+      url: pageUrl,
+      mainEntityOfPage: pageUrl,
+      inLanguage: "en-SG",
+      image: `${base}/dsa-interview/${opts.slug}/opengraph-image`,
+      isAccessibleForFree: true,
+      author: { "@id": orgId },
+      publisher: { "@id": orgId },
+    },
+    {
+      "@type": "Organization",
+      "@id": orgId,
+      name: "DSALink",
+      url: base,
+    },
+  ];
+
+  if (opts.faqs.length > 0) {
+    graph.push({
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faq`,
+      mainEntity: opts.faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    });
+  }
+
+  return { "@context": "https://schema.org", "@graph": graph };
 }
 
 /**

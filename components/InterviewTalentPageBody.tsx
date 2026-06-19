@@ -29,8 +29,6 @@ import { SubsectionAnchor } from "@/components/SubsectionAnchor";
 import { InterviewFlashcards } from "@/components/InterviewFlashcards";
 import { buildDeck } from "@/lib/interviewCommon";
 import {
-  ADJACENT_TALENTS,
-  getTalentPage,
   type ChecklistGroup,
   type DimensionEntry,
   type LocaleStrFlex,
@@ -43,6 +41,10 @@ import {
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 type Locale = "en" | "zh" | "ms" | "ta";
+
+/** Minimal adjacent-talent shape, computed server-side and passed in to keep
+ * the full TALENT_DATA out of this client bundle. */
+type AdjacentTalent = { slug: string; navLabel: LocaleStr; hook: LocaleStr };
 
 function pick(s: LocaleStr, locale: Locale): string {
   return s[locale];
@@ -628,9 +630,11 @@ function PlaceholderBody({
 export function InterviewTalentPageBody({
   talent,
   publishedSlugs = [],
+  adjacentPages = [],
 }: {
   talent: TalentPage;
   publishedSlugs?: string[];
+  adjacentPages?: AdjacentTalent[];
 }) {
   const { locale } = useLanguage();
   const isRich = Boolean(talent.rich);
@@ -712,11 +716,9 @@ export function InterviewTalentPageBody({
     ta: "மாதம் வாரியாக: விண்ணப்ப காலம், சோதனை தேதிகள், முடிவு நாள்.",
   };
 
-  // Adjacency-driven "talent → talent" cards (highest cross-cluster SEO value)
-  const adjacentSlugs = ADJACENT_TALENTS[talent.slug];
-  const adjacentPages = adjacentSlugs
-    .map((s) => getTalentPage(s))
-    .filter((p): p is TalentPage => p !== null);
+  // Adjacency-driven "talent → talent" cards (highest cross-cluster SEO value).
+  // Computed on the server and passed in via `adjacentPages` so this client
+  // bundle doesn't pull in the full TALENT_DATA.
 
   // "Also consider" prefix for the adjacent talent cards
   const alsoPrefix: LocaleStr = {

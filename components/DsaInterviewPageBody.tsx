@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Q_BANK } from "@/lib/dsa-qbank";
-import { TALENT_COUNT } from "@/lib/talentPages";
+import { TALENT_COUNT } from "@/lib/talentSlugs";
 import {
   Q_PREP_HOOK,
   Q_PREP_MINDSET,

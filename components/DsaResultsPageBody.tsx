@@ -22,7 +22,7 @@ import { PillarBackLink } from "@/components/PillarBackLink";
 import { RelatedCardsRow } from "@/components/RelatedCardsRow";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { TALENT_COUNT } from "@/lib/talentPages";
+import { TALENT_COUNT } from "@/lib/talentSlugs";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 

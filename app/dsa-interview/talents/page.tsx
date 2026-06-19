@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { TalentsIndexPageBody } from "@/components/TalentsIndexPageBody";
 import { buildTalentsIndexStructuredData } from "@/lib/seo";
+import { getAllTalentPages } from "@/lib/talentPages";
 
 const PAGE_TITLE =
   "DSA Interview Prep by Talent — Sports, Music, Math | DSALink Singapore";
@@ -58,13 +59,19 @@ export function generateMetadata(): Metadata {
 
 export default function TalentsIndexPage() {
   const jsonLd = buildTalentsIndexStructuredData();
+  const talents = getAllTalentPages().map((t) => ({
+    slug: t.slug,
+    navLabel: t.navLabel,
+    summary: t.summary,
+    isLive: !!t.rich,
+  }));
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <TalentsIndexPageBody />
+      <TalentsIndexPageBody talents={talents} />
     </>
   );
 }

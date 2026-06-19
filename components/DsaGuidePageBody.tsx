@@ -35,7 +35,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { STORIES } from "@/lib/parent-stories";
-import { TALENT_COUNT } from "@/lib/talentPages";
+import { TALENT_COUNT } from "@/lib/talentSlugs";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 
