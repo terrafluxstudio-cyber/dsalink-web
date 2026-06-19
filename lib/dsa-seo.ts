@@ -141,7 +141,7 @@ export function buildDsaFinderStructuredData(): Record<string, unknown> {
       {
         "@type": "WebPage",
         "@id": pageId,
-        name: "DSA 2026 Talent Areas: 1315 Categories Across 147 Schools",
+        name: "DSA 2026 Talent Areas: 1,300+ Categories Across 147 Schools",
         url: finderUrl,
         description:
           "Find schools for Concert Band, Robotics, and 1300+ DSA talents. Integrated with 2025 PSLE COP data.",
@@ -158,7 +158,7 @@ export function buildDsaFinderStructuredData(): Record<string, unknown> {
         variableMeasured: {
           "@type": "PropertyValue",
           name: "DSA talent area",
-          value: "1,315 talent entries across 147 schools",
+          value: "1,300+ talent entries across 147 schools",
         },
       },
       ...categoryLists,

@@ -7,7 +7,7 @@ import { StaticPageBreadcrumb, StaticPageRelatedCards } from "@/components/Stati
 import { buildDsaFinderStructuredData } from "@/lib/dsa-seo";
 
 const DSA_PAGE_TITLE =
-  "DSA 2026 Talent Areas: 1315 Categories Across 147 Schools";
+  "DSA 2026 Talent Areas: 1,300+ Categories Across 147 Schools";
 const DSA_PAGE_DESCRIPTION =
   "Find schools for Concert Band, Robotics, and 1300+ DSA talents. Integrated with 2025 PSLE COP data.";
 

@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Q_BANK } from "@/lib/dsa-qbank";
+import { TALENT_COUNT } from "@/lib/talentPages";
 import {
   Q_PREP_HOOK,
   Q_PREP_MINDSET,
@@ -562,12 +563,12 @@ export function DsaInterviewPageBody() {
                   <div className="min-w-0 flex-1">
                     <p className="font-display text-[0.9375rem] font-semibold sm:text-base">
                       {locale === "zh"
-                        ? "按领域看：54 个项目的深度备考页"
+                        ? `按领域看：${TALENT_COUNT} 个项目的深度备考页`
                         : locale === "ms"
-                        ? "Mengikut bidang: 54 halaman persediaan bakat mendalam"
+                        ? `Mengikut bidang: ${TALENT_COUNT} halaman persediaan bakat mendalam`
                         : locale === "ta"
-                        ? "பகுதி வாரியாக: 54 திறமைகளுக்கான ஆழமான தயாரிப்பு பக்கங்கள்"
-                        : "By area: deep prep pages for 54 talents"}
+                        ? `பகுதி வாரியாக: ${TALENT_COUNT} திறமைகளுக்கான ஆழமான தயாரிப்பு பக்கங்கள்`
+                        : `By area: deep prep pages for ${TALENT_COUNT} talents`}
                     </p>
                     <p className="mt-0.5 text-[0.8125rem] leading-snug text-white/75">
                       {locale === "zh"

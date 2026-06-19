@@ -1,6 +1,8 @@
 "use client";
 
 import { ArrowRight, ChevronDown, HelpCircle, Info, Search, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { resolveTalentSlug } from "@/lib/talentUtils";
 import { NextStepCta } from "@/components/NextStepCta";
 import { PageHeader } from "@/components/PageHeader";
 import { SchoolFinderModal } from "@/components/SchoolFinderModal";
@@ -715,6 +717,7 @@ function TalentResults({
   locale: Parameters<typeof getDsaTalentLabel>[1];
 }) {
   const categoryGroups = groupTalentsByCategory(groups);
+  const prepSlug = selectedTalent ? resolveTalentSlug(selectedTalent) : null;
 
   return (
     <div className="mt-6">
@@ -725,13 +728,32 @@ function TalentResults({
             : `Showing ${categoryGroups.length} categories and ${groups.length} talent groups`}
         </p>
         {selectedTalent ? (
-          <button
-            type="button"
-            onClick={onTalentClear}
-            className="rounded-lg border border-intellectual/10 bg-white px-3 py-1.5 text-xs font-semibold text-intellectual-muted transition hover:border-champagne/50 hover:text-intellectual"
-          >
-            View all talents
-          </button>
+          <div className="flex flex-wrap items-center gap-2">
+            {prepSlug ? (
+              <Link
+                href={`/dsa-interview/${prepSlug}`}
+                className="inline-flex items-center gap-1 rounded-lg border border-champagne/50 bg-champagne/15 px-3 py-1.5 text-xs font-semibold text-intellectual transition hover:bg-champagne/30"
+              >
+                <span style={{ textTransform: "none" }}>
+                  {locale === "zh"
+                    ? `${getDsaTalentLabel(selectedTalent, locale)} 面试备考`
+                    : locale === "ms"
+                    ? `Persediaan temu duga ${getDsaTalentLabel(selectedTalent, locale)}`
+                    : locale === "ta"
+                    ? `${getDsaTalentLabel(selectedTalent, locale)} நேர்காணல் தயாரிப்பு`
+                    : `${getDsaTalentLabel(selectedTalent, locale)} interview prep`}
+                </span>
+                <ArrowRight className="h-3.5 w-3.5 shrink-0" aria-hidden />
+              </Link>
+            ) : null}
+            <button
+              type="button"
+              onClick={onTalentClear}
+              className="rounded-lg border border-intellectual/10 bg-white px-3 py-1.5 text-xs font-semibold text-intellectual-muted transition hover:border-champagne/50 hover:text-intellectual"
+            >
+              View all talents
+            </button>
+          </div>
         ) : null}
       </div>
       <div className="space-y-3">

@@ -133,10 +133,10 @@ const SLOTS: Record<
     },
     bullets: [
       {
-        en: "Read talent-specific interview pages — what panels actually ask.",
-        zh: "阅读每个项目的面试题库——评审到底问什么。",
-        ms: "Baca halaman temu duga khusus bakat — apa panel sebenarnya tanya.",
-        ta: "திறமை சார்ந்த நேர்காணல் பக்கங்களைப் படிக்கவும் — குழுக்கள் உண்மையில் என்ன கேட்கின்றன.",
+        en: "Each talent page has the real interview questions plus mock-interview flashcards — read aloud, parent-led or solo.",
+        zh: "每个项目页都有真实面试题，还有模拟面试卡片——可朗读、家长陪练或自己练。",
+        ms: "Setiap halaman bakat ada soalan temu duga sebenar serta kad latihan temu duga — boleh dibaca kuat, dibimbing ibu bapa atau bersendirian.",
+        ta: "ஒவ்வொரு திறமை பக்கத்திலும் உண்மையான நேர்காணல் கேள்விகள் மற்றும் மாதிரி நேர்காணல் அட்டைகள் — உரக்க வாசிக்கலாம், பெற்றோருடன் அல்லது தனியாக.",
       },
       {
         en: "Trial sessions ≠ rejection. Treat them as observation, not elimination.",
