@@ -10,6 +10,8 @@ import {
   Users,
   Target,
   Lightbulb,
+  Layers,
+  ArrowRight,
   X,
 } from "lucide-react";
 import Link from "next/link";
@@ -439,17 +441,6 @@ export function DsaInterviewPageBody() {
           : "Q&A Prep",
     },
     {
-      id: "area-guides",
-      label:
-        locale === "zh"
-          ? "领域指南"
-          : locale === "ms"
-          ? "Panduan Bidang"
-          : locale === "ta"
-          ? "பகுதி வழிகாட்டி"
-          : "Area Guides",
-    },
-    {
       id: "day-of",
       label:
         locale === "zh"
@@ -462,210 +453,6 @@ export function DsaInterviewPageBody() {
     },
   ];
 
-  // ── Area Guides placeholder data ────────────────────────────────────────────
-
-  const areaGuides = [
-    {
-      icon: "⚽",
-      id: "sports",
-      title:
-        locale === "zh"
-          ? "体育 DSA"
-          : locale === "ms"
-          ? "Sukan DSA"
-          : locale === "ta"
-          ? "விளையாட்டு DSA"
-          : "Sports DSA",
-      preview:
-        locale === "zh"
-          ? [
-              "学校评估的核心素质（团队精神、抗压力、可教性）",
-              "体育面试常见问题与参考答案",
-              "成就记录整理：比赛战绩 + 证书 + 推荐信",
-              "体能/技术试训注意事项与应对技巧",
-            ]
-          : locale === "ms"
-          ? [
-              "Kualiti utama yang dinilai sekolah (semangat berpasukan, ketahanan, kebolehan belajar)",
-              "Soalan temuduga biasa untuk sukan & jawapan rujukan",
-              "Menyusun rekod pencapaian: rekod pertandingan + sijil + surat syor",
-              "Tips dan strategi untuk ujian fizikal/kemahiran",
-            ]
-          : locale === "ta"
-          ? [
-              "பள்ளிகள் மதிப்பிடும் முக்கிய குணங்கள் (குழு உணர்வு, மன உறுதி, கற்கும் திறன்)",
-              "விளையாட்டு நேர்காணல் பொதுவான கேள்விகள் & குறிப்பு பதில்கள்",
-              "சாதனை பதிவுகள் ஒழுங்குபடுத்துதல்: போட்டி பதிவுகள் + சான்றிதழ்கள் + பரிந்துரை கடிதங்கள்",
-              "உடல்/திறன் சோதனை குறிப்புகள் & உத்திகள்",
-            ]
-          : [
-              "Key attributes schools assess (teamwork, resilience, coachability)",
-              "Common sports interview questions & reference answers",
-              "Organising achievement records: competition results + certifications + recommendation letters",
-              "Physical/skills trial tips and strategies",
-            ],
-    },
-    {
-      icon: "💃",
-      id: "dance",
-      title:
-        locale === "zh"
-          ? "舞蹈 DSA"
-          : locale === "ms"
-          ? "Tarian DSA"
-          : locale === "ta"
-          ? "நடனம் DSA"
-          : "Dance DSA",
-      preview:
-        locale === "zh"
-          ? [
-              "评审重点：技术功底 vs 舞台表现力",
-              "舞蹈面试常见问题与回答策略",
-              "视频/演出集锦的拍摄与剪辑建议",
-              "试镜/演示日现场发挥技巧",
-            ]
-          : locale === "ms"
-          ? [
-              "Fokus penilai: teknik asas vs ekspresi pentas",
-              "Soalan temuduga biasa untuk tarian & strategi menjawab",
-              "Cadangan rakaman & penyuntingan video/highlight persembahan",
-              "Tips persembahan semasa hari audisi/demonstrasi",
-            ]
-          : locale === "ta"
-          ? [
-              "மதிப்பீட்டாளர் கவனம்: தொழில்நுட்ப அடிப்படை vs மேடை வெளிப்பாடு",
-              "நடன நேர்காணல் பொதுவான கேள்விகள் & பதில் உத்திகள்",
-              "வீடியோ/செயல்திறன் சிறப்பம்சங்கள் படம்பிடிப்பு & திருத்தம் பரிந்துரைகள்",
-              "ஆடிஷன்/நிரூபண நாள் உள்ளூர் செயல்திறன் குறிப்புகள்",
-            ]
-          : [
-              "What assessors focus on: technical foundation vs stage expression",
-              "Common dance interview questions & answering strategies",
-              "Tips for filming and editing video/performance highlights",
-              "On-the-day performance tips for audition/demonstration",
-            ],
-    },
-    {
-      icon: "🎵",
-      id: "music",
-      title:
-        locale === "zh"
-          ? "音乐 DSA"
-          : locale === "ms"
-          ? "Muzik DSA"
-          : locale === "ta"
-          ? "இசை DSA"
-          : "Music DSA",
-      preview:
-        locale === "zh"
-          ? [
-              "面试中如何有说服力地展示音乐才能",
-              "音乐理论与乐理问题备考",
-              "考级证书与乐团经历的权重分析",
-              "演奏曲目选择与现场演奏注意事项",
-            ]
-          : locale === "ms"
-          ? [
-              "Cara mempersembahkan bakat muzik secara meyakinkan dalam temuduga",
-              "Persediaan soalan teori muzik",
-              "Analisis kepentingan sijil gred & pengalaman ensembel",
-              "Pemilihan repertoir & perkara yang perlu diambil perhatian semasa persembahan langsung",
-            ]
-          : locale === "ta"
-          ? [
-              "நேர்காணலில் இசை திறனை நம்பிக்கையுடன் வெளிப்படுத்துவது எப்படி",
-              "இசை கோட்பாடு கேள்விகளுக்கு தயாரிப்பு",
-              "தேர்வு சான்றிதழ்கள் & இசைக்குழு அனுபவத்தின் முக்கியத்துவ பகுப்பாய்வு",
-              "இசை தேர்வு தேர்வு & நேரடி செயல்திறன் குறிப்புகள்",
-            ]
-          : [
-              "How to present musical talent convincingly in the interview",
-              "Music theory and aural test preparation",
-              "Weight of grade certificates vs ensemble/orchestra experience",
-              "Repertoire selection and live performance tips",
-            ],
-    },
-    {
-      icon: "🔬",
-      id: "stem",
-      title:
-        locale === "zh"
-          ? "科技/科学 DSA"
-          : locale === "ms"
-          ? "STEM DSA"
-          : locale === "ta"
-          ? "STEM DSA"
-          : "STEM DSA",
-      preview:
-        locale === "zh"
-          ? [
-              "项目展示技巧：如何让评审理解你的研究",
-              "问题解决能力 + 数学思维类面试题应对",
-              "竞赛奖项组合的最优呈现方式",
-              "科学实验与工程设计项目的记录方法",
-            ]
-          : locale === "ms"
-          ? [
-              "Tips pembentangan projek: cara membantu penilai memahami penyelidikan anda",
-              "Menghadapi soalan kemahiran menyelesaikan masalah + pemikiran matematik",
-              "Cara terbaik mempersembahkan gabungan anugerah pertandingan",
-              "Cara mendokumentasikan projek eksperimen sains & reka bentuk kejuruteraan",
-            ]
-          : locale === "ta"
-          ? [
-              "திட்ட விளக்கக்காட்சி குறிப்புகள்: மதிப்பீட்டாளர்கள் உங்கள் ஆராய்ச்சியை புரிந்துகொள்ள உதவுவது எப்படி",
-              "சிக்கல் தீர்க்கும் திறன் + கணித சிந்தனை நேர்காணல் கேள்விகளை எதிர்கொள்வது",
-              "போட்டி விருது கலவையை சிறப்பாக வழங்குவது எப்படி",
-              "அறிவியல் சோதனை & பொறியியல் வடிவமைப்பு திட்டங்களை ஆவணப்படுத்துவது",
-            ]
-          : [
-              "Project presentation tips: helping assessors understand your research",
-              "Handling problem-solving + mathematical thinking interview questions",
-              "Best way to present your competition awards portfolio",
-              "How to document science experiment and engineering design projects",
-            ],
-    },
-    {
-      icon: "🗣️",
-      id: "language",
-      title:
-        locale === "zh"
-          ? "语言/戏剧/辩论 DSA"
-          : locale === "ms"
-          ? "Bahasa / Drama / Debat DSA"
-          : locale === "ta"
-          ? "மொழி / நாடகம் / விவாதம் DSA"
-          : "Language / Drama / Debate DSA",
-      preview:
-        locale === "zh"
-          ? [
-              "口头表达能力如何在面试中脱颖而出",
-              "语言艺术类面试特有问题与回答框架",
-              "辩论/戏剧经历与比赛记录的呈现技巧",
-              "即兴表达训练方法与常见考题类型",
-            ]
-          : locale === "ms"
-          ? [
-              "Cara menonjolkan kemahiran bertutur dalam temuduga",
-              "Soalan khusus temuduga seni bahasa & rangka kerja menjawab",
-              "Cara mempersembahkan pengalaman debat/drama & rekod pertandingan",
-              "Kaedah latihan ekspresi impromptu & jenis soalan biasa",
-            ]
-          : locale === "ta"
-          ? [
-              "நேர்காணலில் வாய்மொழி திறன்களை தனித்துவமாக காட்டுவது எப்படி",
-              "மொழி கலை நேர்காணல் சிறப்பு கேள்விகள் & பதில் கட்டமைப்பு",
-              "விவாதம்/நாடகம் அனுபவம் & போட்டி பதிவுகளை வழங்குவது எப்படி",
-              "திடீர் வெளிப்பாடு பயிற்சி முறைகள் & பொதுவான கேள்வி வகைகள்",
-            ]
-          : [
-              "How to stand out with verbal skills in the interview",
-              "Language arts-specific interview questions & answering frameworks",
-              "How to present debate/drama experience and competition records",
-              "Impromptu expression training methods and common question types",
-            ],
-    },
-  ];
 
   // ── Render ──────────────────────────────────────────────────────────────────
 
@@ -763,6 +550,37 @@ export function DsaInterviewPageBody() {
             {/* ══ TAB: OVERVIEW ══════════════════════════════════════════════ */}
             {activeTab === "overview" && (
               <div className="space-y-10">
+
+                {/* By-area entry → the live talent prep index */}
+                <Link
+                  href="/dsa-interview/talents"
+                  className="group flex items-center gap-4 rounded-xl border border-champagne/40 bg-intellectual p-5 text-white shadow-card transition hover:bg-intellectual/90 sm:p-6"
+                >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-champagne/20 text-champagne-light">
+                    <Layers className="h-5 w-5" aria-hidden />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-display text-[0.9375rem] font-semibold sm:text-base">
+                      {locale === "zh"
+                        ? "按领域看：54 个项目的深度备考页"
+                        : locale === "ms"
+                        ? "Mengikut bidang: 54 halaman persediaan bakat mendalam"
+                        : locale === "ta"
+                        ? "பகுதி வாரியாக: 54 திறமைகளுக்கான ஆழமான தயாரிப்பு பக்கங்கள்"
+                        : "By area: deep prep pages for 54 talents"}
+                    </p>
+                    <p className="mt-0.5 text-[0.8125rem] leading-snug text-white/75">
+                      {locale === "zh"
+                        ? "每个项目的评审重点、高频面试题、模拟面试卡片练习"
+                        : locale === "ms"
+                        ? "Fokus penilai, soalan lazim, dan kad latihan temu duga bagi setiap bakat"
+                        : locale === "ta"
+                        ? "ஒவ்வொரு திறமைக்கும் மதிப்பீட்டு கவனம், கேள்விகள், நேர்காணல் அட்டை பயிற்சி"
+                        : "Assessment focus, common questions, and mock-interview flashcards per talent"}
+                    </p>
+                  </div>
+                  <ArrowRight className="h-5 w-5 shrink-0 text-champagne-light transition group-hover:translate-x-0.5" aria-hidden />
+                </Link>
 
                 <section>
                   <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
@@ -1470,80 +1288,6 @@ export function DsaInterviewPageBody() {
                   </p>
                 </div>
 
-              </div>
-            )}
-
-            {/* ══ TAB: AREA GUIDES ═══════════════════════════════════════════ */}
-            {activeTab === "area-guides" && (
-              <div>
-                <div className="mb-6">
-                  <h2 className="mb-1 font-display text-[1.125rem] font-semibold text-slate-900">
-                    {locale === "zh"
-                      ? "各领域 DSA 面试指南"
-                      : locale === "ms"
-                      ? "Panduan Temuduga DSA Mengikut Bidang"
-                      : locale === "ta"
-                      ? "பகுதிவாரி DSA நேர்காணல் வழிகாட்டி"
-                      : "DSA Interview Guide by Area"}
-                  </h2>
-                  <p className="text-[0.9375rem] text-slate-600">
-                    {locale === "zh"
-                      ? "每个DSA领域的评审重点、常见问题与备考策略各有不同。选择你孩子的申请领域，获取针对性的准备建议。"
-                      : locale === "ms"
-                      ? "Setiap bidang DSA mempunyai fokus penilaian, soalan biasa, dan strategi persediaan yang berbeza. Pilih bidang permohonan anak anda untuk mendapatkan panduan yang lebih khusus."
-                      : locale === "ta"
-                      ? "ஒவ்வொரு DSA பகுதியிலும் மதிப்பீட்டு கவனம், பொதுவான கேள்விகள் மற்றும் தயாரிப்பு உத்திகள் வேறுபடுகின்றன. உங்கள் குழந்தையின் விண்ணப்ப பகுதியை தேர்ந்தெடுத்து குறிப்பிட்ட வழிகாட்டலைப் பெறுங்கள்."
-                      : "Each DSA area has different assessment focuses, common questions, and preparation strategies. Select your child's application area for targeted guidance."}
-                  </p>
-                </div>
-
-                <div className="space-y-5">
-                  {areaGuides.map((area) => (
-                    <div
-                      key={area.id}
-                      className="rounded-xl border border-[#e3ded5] bg-white p-6 shadow-card"
-                    >
-                      <div className="mb-4 flex items-start justify-between gap-3">
-                        <div className="flex items-center gap-3">
-                          <span className="text-2xl">{area.icon}</span>
-                          <h3 className="font-display text-[1rem] font-semibold text-slate-900">
-                            {area.title}
-                          </h3>
-                        </div>
-                        <span className="shrink-0 rounded-full bg-champagne/30 px-2.5 py-0.5 text-[0.7rem] font-bold tracking-wide text-champagne-dark">
-                          {t.dsaInterviewOfferComingSoon}
-                        </span>
-                      </div>
-                      <p className="mb-3 text-[0.75rem] font-bold tracking-wide text-slate-400">
-                        {locale === "zh"
-                          ? "即将涵盖"
-                          : locale === "ms"
-                          ? "AKan datang"
-                          : locale === "ta"
-                          ? "விரைவில் வரவிருக்கும்"
-                          : "What will be covered"}
-                      </p>
-                      <ul className="space-y-2">
-                        {area.preview.map((point, i) => (
-                          <li key={i} className="flex gap-2.5 text-[0.875rem] leading-relaxed text-slate-600">
-                            <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-intellectual/40" />
-                            {point}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-
-                <p className="mt-6 rounded-lg border border-intellectual/15 bg-intellectual/5 px-4 py-3 text-[0.8125rem] leading-relaxed text-slate-600">
-                  {locale === "zh"
-                    ? "各领域详细指南将于2026年6月DSA申请窗口期间陆续上线。欢迎订阅更新通知。"
-                    : locale === "ms"
-                    ? "Panduan terperinci mengikut bidang akan diterbitkan secara berperingkat semasa tempoh permohonan DSA Jun 2026. Langgan untuk mendapat pemberitahuan."
-                    : locale === "ta"
-                    ? "பகுதிவாரி விரிவான வழிகாட்டிகள் 2026 ஜூன் DSA விண்ணப்ப காலகட்டத்தில் படிப்படியாக வெளியிடப்படும். புதுப்பிப்புகளுக்கு சந்தா செய்யுங்கள்."
-                    : "Detailed area guides will be published progressively during the June 2026 DSA application window. Subscribe for updates."}
-                </p>
               </div>
             )}
 
