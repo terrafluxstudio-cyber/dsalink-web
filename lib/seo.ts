@@ -585,6 +585,54 @@ export function buildTalentsIndexStructuredData(): Record<string, unknown> {
 }
 
 /**
+ * /dsa-statistics — Dataset schema (citation-friendly) + breadcrumb.
+ */
+export function buildDsaStatsStructuredData(opts: {
+  schools: number;
+  offerings: number;
+  distinctTalents: number;
+  compiledOn: string;
+}): Record<string, unknown> {
+  const base = getSiteUrl();
+  const pageUrl = `${base}/dsa-statistics`;
+  const orgId = `${base}/#organization`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "DSA Guide", item: `${base}/dsa-guide` },
+          { "@type": "ListItem", position: 2, name: "DSA statistics", item: pageUrl },
+        ],
+      },
+      {
+        "@type": "Dataset",
+        "@id": `${pageUrl}#dataset`,
+        name: "DSA-Sec 2026 talent areas across Singapore secondary schools",
+        description:
+          "Aggregate statistics on Singapore Direct School Admission (DSA-Sec): number of secondary schools offering DSA, total talent-area offerings, distinct talent areas, breakdown by category, and the most-offered talent areas. Compiled from the official MOE SchoolFinder DSA listings.",
+        url: pageUrl,
+        isAccessibleForFree: true,
+        creator: { "@id": orgId },
+        publisher: { "@id": orgId },
+        license: getDisclaimerLicenseUrl(),
+        temporalCoverage: "2026",
+        dateModified: opts.compiledOn,
+        spatialCoverage: { "@type": "Place", name: "Singapore" },
+        variableMeasured: [
+          { "@type": "PropertyValue", name: "Schools offering DSA", value: opts.schools },
+          { "@type": "PropertyValue", name: "Talent-area offerings", value: opts.offerings },
+          { "@type": "PropertyValue", name: "Distinct talent areas", value: opts.distinctTalents },
+        ],
+      },
+      { "@type": "Organization", "@id": orgId, name: "DSALink", url: base },
+    ],
+  };
+}
+
+/**
  * Individual talent prep page (/dsa-interview/[slug]).
  * @graph: BreadcrumbList + Article + (optional) FAQPage built from the
  * talent-specific interview questions. FAQ uses ONLY talent-specific questions

@@ -155,6 +155,11 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
                   {t.navPsleCutoffs}
                 </Link>
               </li>
+              <li>
+                <Link href="/dsa-statistics" className="text-[0.8125rem] text-white/70 transition hover:text-white normal-case">
+                  {locale === "zh" ? "DSA 数据统计" : locale === "ms" ? "Statistik DSA" : locale === "ta" ? "DSA புள்ளிவிவரம்" : "DSA statistics"}
+                </Link>
+              </li>
             </ul>
           </div>
 
