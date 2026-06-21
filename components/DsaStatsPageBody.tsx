@@ -169,25 +169,32 @@ export function DsaStatsPageBody({ stats }: { stats: StatsProps }) {
               {pick(CAT_HEADING, locale)}
             </h2>
             <div className="overflow-hidden rounded-2xl border border-intellectual/12 bg-white shadow-soft">
-              <div className="grid grid-cols-[1fr_auto_auto] gap-3 border-b border-intellectual/10 px-5 py-3 text-[11px] font-bold tracking-wide text-intellectual/50 normal-case">
-                <span>{pick(COL_CAT, locale)}</span>
-                <span className="w-16 text-right">{pick(COL_SCHOOLS, locale)}</span>
-                <span className="w-16 text-right">{pick(COL_OFFERINGS, locale)}</span>
-              </div>
-              {stats.categories.map((c, i) => (
-                <div key={i} className="grid grid-cols-[1fr_auto_auto] items-center gap-3 px-5 py-3.5 odd:bg-surface/40">
-                  <div className="min-w-0">
-                    <p className="truncate font-display text-sm font-semibold text-intellectual sm:text-[0.9375rem]">
-                      {pick(c.label, locale)}
-                    </p>
-                    <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-intellectual/8">
-                      <div className="h-full rounded-full bg-champagne" style={{ width: `${(c.schools / maxCatSchools) * 100}%` }} />
-                    </div>
-                  </div>
-                  <span className="w-16 text-right font-display text-sm font-bold text-intellectual">{fmt(c.schools, locale)}</span>
-                  <span className="w-16 text-right text-sm text-intellectual-muted">{fmt(c.offerings, locale)}</span>
-                </div>
-              ))}
+              <table className="w-full border-collapse text-left">
+                <caption className="sr-only">{pick(CAT_HEADING, locale)}</caption>
+                <thead>
+                  <tr className="border-b border-intellectual/10 text-[11px] font-bold tracking-wide text-intellectual/50 normal-case">
+                    <th scope="col" className="px-5 py-3 text-left font-bold">{pick(COL_CAT, locale)}</th>
+                    <th scope="col" className="px-3 py-3 text-right font-bold">{pick(COL_SCHOOLS, locale)}</th>
+                    <th scope="col" className="px-5 py-3 text-right font-bold">{pick(COL_OFFERINGS, locale)}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {stats.categories.map((c, i) => (
+                    <tr key={i} className="align-middle odd:bg-surface/40">
+                      <th scope="row" className="px-5 py-3.5 text-left font-normal">
+                        <span className="block font-display text-sm font-semibold text-intellectual sm:text-[0.9375rem]">
+                          {pick(c.label, locale)}
+                        </span>
+                        <span className="mt-1.5 block h-1.5 w-full overflow-hidden rounded-full bg-intellectual/8" aria-hidden>
+                          <span className="block h-full rounded-full bg-champagne" style={{ width: `${(c.schools / maxCatSchools) * 100}%` }} />
+                        </span>
+                      </th>
+                      <td className="whitespace-nowrap px-3 py-3.5 text-right font-display text-sm font-bold text-intellectual">{fmt(c.schools, locale)}</td>
+                      <td className="whitespace-nowrap px-5 py-3.5 text-right text-sm text-intellectual-muted">{fmt(c.offerings, locale)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
@@ -200,23 +207,30 @@ export function DsaStatsPageBody({ stats }: { stats: StatsProps }) {
             </h2>
             <p className="mb-6 text-sm text-intellectual-muted">{pick(TOP_SUB, locale)}</p>
             <div className="overflow-hidden rounded-2xl border border-intellectual/12 bg-white shadow-soft">
-              <div className="grid grid-cols-[2rem_1fr_auto] gap-3 border-b border-intellectual/10 px-5 py-3 text-[11px] font-bold tracking-wide text-intellectual/50 normal-case">
-                <span>#</span>
-                <span>{pick(COL_TALENT, locale)}</span>
-                <span className="w-16 text-right">{pick(COL_SCHOOLS, locale)}</span>
-              </div>
-              {stats.topTalents.map((t, i) => (
-                <div key={i} className="grid grid-cols-[2rem_1fr_auto] items-center gap-3 px-5 py-3 odd:bg-surface/40">
-                  <span className="font-display text-sm font-bold text-champagne-dark">{i + 1}</span>
-                  <div className="min-w-0">
-                    <p className="truncate text-sm font-medium text-intellectual sm:text-[0.9375rem]">{pick(t.label, locale)}</p>
-                    <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-intellectual/8">
-                      <div className="h-full rounded-full bg-intellectual/40" style={{ width: `${(t.schools / maxTalentSchools) * 100}%` }} />
-                    </div>
-                  </div>
-                  <span className="w-16 text-right font-display text-sm font-bold text-intellectual">{fmt(t.schools, locale)}</span>
-                </div>
-              ))}
+              <table className="w-full border-collapse text-left">
+                <caption className="sr-only">{pick(TOP_HEADING, locale)}</caption>
+                <thead>
+                  <tr className="border-b border-intellectual/10 text-[11px] font-bold tracking-wide text-intellectual/50 normal-case">
+                    <th scope="col" className="w-8 px-5 py-3 text-left font-bold">#</th>
+                    <th scope="col" className="px-3 py-3 text-left font-bold">{pick(COL_TALENT, locale)}</th>
+                    <th scope="col" className="px-5 py-3 text-right font-bold">{pick(COL_SCHOOLS, locale)}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {stats.topTalents.map((t, i) => (
+                    <tr key={i} className="align-middle odd:bg-surface/40">
+                      <td className="px-5 py-3 font-display text-sm font-bold text-champagne-dark">{i + 1}</td>
+                      <th scope="row" className="px-3 py-3 text-left font-normal">
+                        <span className="block text-sm font-medium text-intellectual sm:text-[0.9375rem]">{pick(t.label, locale)}</span>
+                        <span className="mt-1.5 block h-1.5 w-full overflow-hidden rounded-full bg-intellectual/8" aria-hidden>
+                          <span className="block h-full rounded-full bg-intellectual/40" style={{ width: `${(t.schools / maxTalentSchools) * 100}%` }} />
+                        </span>
+                      </th>
+                      <td className="whitespace-nowrap px-5 py-3 text-right font-display text-sm font-bold text-intellectual">{fmt(t.schools, locale)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
