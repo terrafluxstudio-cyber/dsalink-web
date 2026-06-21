@@ -61,6 +61,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog",
     "/open-house-takeaways",
     "/dsa-results",
+    "/about",
+    "/privacy",
   ];
   const coreEntries: MetadataRoute.Sitemap = corePaths.map((p) => ({
     url: `${base}${p}`,

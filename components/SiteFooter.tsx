@@ -179,6 +179,15 @@ export function SiteFooter({ scheduleNote }: SiteFooterProps) {
           <p className="mt-1 text-[11px] text-slate-400">
             {t.footerScopeNote}
           </p>
+          <div className="mt-2 flex items-center gap-3 text-[11px] text-white/50">
+            <Link href="/about" className="transition hover:text-white normal-case">
+              {locale === "zh" ? "关于" : locale === "ms" ? "Tentang" : locale === "ta" ? "எங்களைப் பற்றி" : "About"}
+            </Link>
+            <span aria-hidden>·</span>
+            <Link href="/privacy" className="transition hover:text-white normal-case">
+              {locale === "zh" ? "隐私政策" : locale === "ms" ? "Privasi" : locale === "ta" ? "தனியுரிமை" : "Privacy"}
+            </Link>
+          </div>
         </div>
 
       </div>
