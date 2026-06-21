@@ -2,7 +2,11 @@ import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/seo";
 import { TALENT_SLUGS } from "@/lib/talentPages";
 import { getAllPublishedSchools, getAllTranslatedSchoolSlugs, TRANSLATED_LANGS } from "@/lib/schoolPages";
+import { getAllPosts } from "@/lib/blog";
 
+// Note: changeFrequency and priority are intentionally omitted — Google has
+// ignored both since 2023. lastModified is the only crawl hint that still matters,
+// so it must reflect real content dates (not the build timestamp) wherever possible.
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl(); // https://dsalink.sg — no trailing slash
   const now = new Date();
@@ -10,151 +14,64 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const talentEntries: MetadataRoute.Sitemap = TALENT_SLUGS.map((slug) => ({
     url: `${base}/dsa-interview/${slug}`,
     lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
   }));
 
-  const schoolEntries: MetadataRoute.Sitemap = getAllPublishedSchools().map((school) => ({
+  const schools = getAllPublishedSchools();
+  const schoolEntries: MetadataRoute.Sitemap = schools.map((school) => ({
     url: `${base}/schools/${school.slug}`,
     lastModified: new Date(school.lastUpdated),
-    changeFrequency: "monthly" as const,
-    priority: 0.82,
   }));
 
-  // Translated school pages — only entries that have translation files
+  // Reuse the EN school's real content date for its translated variants instead
+  // of stamping the build time (which makes lastmod untrustworthy to Google).
+  const schoolUpdatedBySlug = new Map(schools.map((s) => [s.slug, s.lastUpdated]));
   const translatedSchoolEntries: MetadataRoute.Sitemap = TRANSLATED_LANGS.flatMap((lang) =>
     getAllTranslatedSchoolSlugs(lang).map((slug) => ({
       url: `${base}/${lang}/schools/${slug}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.78,
+      lastModified: new Date(schoolUpdatedBySlug.get(slug) ?? "2026-06-06"),
     })),
   );
 
-  // Only list canonical URLs. Redirecting aliases (/dsa, /scores) are excluded.
+  // Individual blog posts — previously missing entirely, so Google could only
+  // discover them by crawling /blog. Use each post's real publish date.
+  const blogEntries: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
+    url: `${base}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+  }));
+
+  // Canonical core pages only. Redirecting aliases (/dsa, /scores) are excluded.
+  const corePaths = [
+    "",
+    "/dsa-guide",
+    "/dsa-finder",
+    "/what-is-dsa",
+    "/psle-cop",
+    "/faq",
+    "/dsa-statistics",
+    "/dsa-interview",
+    "/dsa-interview/talents",
+    "/dsa-interview/under-recruited-paths",
+    "/schools",
+    "/open-houses",
+    "/dsa-experience",
+    "/open-house-guide",
+    "/dsa-coaches",
+    "/apply",
+    "/timeline",
+    "/blog",
+    "/open-house-takeaways",
+    "/dsa-results",
+  ];
+  const coreEntries: MetadataRoute.Sitemap = corePaths.map((p) => ({
+    url: `${base}${p}`,
+    lastModified: now,
+  }));
+
   return [
-    {
-      url: base,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${base}/dsa-guide`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.99,
-    },
-    {
-      url: `${base}/dsa-finder`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.98,
-    },
-    {
-      url: `${base}/what-is-dsa`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.96,
-    },
-    {
-      url: `${base}/psle-cop`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${base}/faq`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.94,
-    },
-    {
-      url: `${base}/dsa-statistics`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${base}/dsa-interview`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.93,
-    },
-    {
-      url: `${base}/dsa-interview/talents`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.92,
-    },
-    {
-      url: `${base}/dsa-interview/under-recruited-paths`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.91,
-    },
-    {
-      url: `${base}/schools`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.92,
-    },
-    {
-      url: `${base}/open-houses`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${base}/dsa-experience`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.88,
-    },
-    {
-      url: `${base}/open-house-guide`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.87,
-    },
-    {
-      url: `${base}/dsa-coaches`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.86,
-    },
-    {
-      url: `${base}/apply`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${base}/timeline`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.91,
-    },
-    {
-      url: `${base}/blog`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.85,
-    },
-    {
-      url: `${base}/open-house-takeaways`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.83,
-    },
-    {
-      url: `${base}/dsa-results`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
+    ...coreEntries,
     ...talentEntries,
     ...schoolEntries,
     ...translatedSchoolEntries,
+    ...blogEntries,
   ];
 }

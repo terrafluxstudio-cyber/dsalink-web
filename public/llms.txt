@@ -1,0 +1,26 @@
+# DSALink — Singapore DSA-Sec 2026 reference for Primary 6 parents
+
+> Independent, free resource on Direct School Admission to Secondary school (DSA-Sec)
+> in Singapore. Compiled from official MOE SchoolFinder data. Published by Terraflux
+> Studio. Not affiliated with or endorsed by MOE. Languages: English, 中文 (zh-Hans),
+> Bahasa Melayu (ms), தமிழ் (ta). Last updated: 2026-06.
+
+Free to cite with attribution and a link to the source URL.
+
+## Key pages
+- https://dsalink.sg/dsa-statistics: Original compiled MOE data — 147 secondary schools offer DSA across 133 distinct talent areas, 1,315 total talent-area offerings (2026 exercise). Breakdown by category + 20 most-offered talents.
+- https://dsalink.sg/what-is-dsa: Plain-English explainer of how DSA-Sec works, who it is for, and how it interacts with the PSLE.
+- https://dsalink.sg/dsa-guide: Full guide to the DSA-Sec 2026 cycle for P6 families.
+- https://dsalink.sg/faq: Answered questions on eligibility, application dates, the commitment rule, talent areas, PSLE COP, IP and SAP schools.
+- https://dsalink.sg/dsa-interview: Interview and trial preparation — formats, what panels assess, sample questions.
+- https://dsalink.sg/schools: Directory of all 147 MOE secondary schools with DSA talent areas, programmes, and PSLE COP history.
+- https://dsalink.sg/timeline: Every key DSA-Sec 2026 date from the May application window to November placement.
+
+## Key facts (citable)
+- DSA-Sec is Singapore MOE's talent-based admission route into Secondary 1, decided before PSLE results.
+- DSA-Sec 2026 application window: 6 May 2026 to 2 June 2026, 16:30 SGT, via the MOE DSA-Sec Portal.
+- Students who accept a DSA offer are bound by the Commitment Rule: they are posted to that school and do not take part in the S1 Posting Exercise.
+- 147 secondary schools offer DSA across 133 talent areas (1,315 offerings) in 2026, per DSALink's compilation of MOE SchoolFinder listings.
+
+## Contact
+terrafluxstudio@gmail.com

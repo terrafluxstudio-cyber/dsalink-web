@@ -29,14 +29,15 @@ export function getDisclaimerLicenseUrl(): string {
 }
 
 /**
- * Homepage: WebSite + Organization (single script tag, one @graph).
- * Logo uses OG route as placeholder until a dedicated square asset ships.
+ * Homepage: Organization + WebSite + WebPage (single script tag, one @graph).
+ * Logo is the square 512x512 brand asset (required for Knowledge Panel / bylines).
  */
 export function buildHomeStructuredData(): Record<string, unknown> {
   const base = getSiteUrl();
   const orgId = `${base}/#organization`;
   const websiteId = `${base}/#website`;
-  const logoUrl = `${base}/opengraph-image`;
+  const webpageId = `${base}/#webpage`;
+  const logoUrl = `${base}/logo.png`;
 
   return {
     "@context": "https://schema.org",
@@ -49,13 +50,12 @@ export function buildHomeStructuredData(): Record<string, unknown> {
         logo: {
           "@type": "ImageObject",
           url: logoUrl,
-          width: 1200,
-          height: 630,
-          caption: "Placeholder — replace with square brand logo in production",
+          width: 512,
+          height: 512,
         },
         contactPoint: {
           "@type": "ContactPoint",
-          contactType: "Data corrections and general inquiries",
+          contactType: "customer support",
           email: SITE_CONTACT_EMAIL,
           areaServed: "SG",
           availableLanguage: ["en", "zh", "ms", "ta"],
@@ -68,6 +68,21 @@ export function buildHomeStructuredData(): Record<string, unknown> {
         url: base,
         publisher: { "@id": orgId },
         inLanguage: "en-SG",
+      },
+      {
+        "@type": "WebPage",
+        "@id": webpageId,
+        url: base,
+        name: "DSALink — Singapore DSA-Sec 2026 Guide for P6 Parents",
+        isPartOf: { "@id": websiteId },
+        publisher: { "@id": orgId },
+        inLanguage: "en-SG",
+        about: {
+          "@type": "EducationalOccupationalProgram",
+          name: "Direct School Admission (DSA-Sec)",
+          description:
+            "Singapore MOE's talent-based Secondary 1 admission programme for Primary 6 students",
+        },
       },
     ],
   };
@@ -387,25 +402,34 @@ export function buildFaqStructuredData(): Record<string, unknown> {
 export function buildDsaExperienceStructuredData(): Record<string, unknown> {
   const base = getSiteUrl();
   const pageUrl = `${base}/dsa-experience`;
+  const org = {
+    "@type": "Organization",
+    name: "DSALink",
+    url: base,
+    logo: { "@type": "ImageObject", url: `${base}/logo.png`, width: 512, height: 512 },
+  };
 
   return {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${pageUrl}#article`,
     headline: "The DSA Experience: What Parents Wish They Knew",
     description:
       "A complete guide to Direct School Admission in Singapore — how selectivity really works, what schools assess, real pathway examples, and the mistakes families make.",
     url: pageUrl,
-    publisher: {
-      "@type": "Organization",
-      name: "DSALink",
-      url: base,
-    },
+    inLanguage: "en-SG",
+    image: `${base}/opengraph-image`,
+    datePublished: "2026-05-15",
+    dateModified: "2026-06-08",
+    author: org,
+    publisher: org,
     about: {
       "@type": "EducationalOccupationalProgram",
       name: "Direct School Admission (DSA)",
       description:
         "Singapore's Direct School Admission programme for Primary 6 students",
     },
+    isAccessibleForFree: true,
   };
 }
 
@@ -422,36 +446,46 @@ export function buildBlogPostStructuredData(opts: {
 }): Record<string, unknown> {
   const base = getSiteUrl();
   const url = `${base}/blog/${opts.slug}`;
+  const orgId = `${base}/#organization`;
   const image = opts.heroImage
     ? (opts.heroImage.startsWith("http") ? opts.heroImage : `${base}${opts.heroImage}`)
     : `${base}/opengraph-image`;
 
   return {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    headline: opts.title,
-    description: opts.excerpt,
-    image,
-    datePublished: opts.date,
-    dateModified: opts.date,
-    url,
-    author: {
-      "@type": "Organization",
-      name: "DSALink",
-      url: base,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "DSALink",
-      url: base,
-      logo: {
-        "@type": "ImageObject",
-        url: `${base}/logo.png`,
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#article`,
+        mainEntityOfPage: { "@type": "WebPage", "@id": url },
+        headline: opts.title,
+        description: opts.excerpt,
+        image,
+        datePublished: opts.date,
+        dateModified: opts.date,
+        url,
+        author: { "@id": orgId },
+        publisher: { "@id": orgId },
+        inLanguage: "en-SG",
+        isAccessibleForFree: true,
       },
-    },
-    inLanguage: "en-SG",
-    isAccessibleForFree: true,
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: base },
+          { "@type": "ListItem", position: 2, name: "Blog", item: `${base}/blog` },
+          { "@type": "ListItem", position: 3, name: opts.title, item: url },
+        ],
+      },
+      {
+        "@type": "Organization",
+        "@id": orgId,
+        name: "DSALink",
+        url: base,
+        logo: { "@type": "ImageObject", url: `${base}/logo.png`, width: 512, height: 512 },
+      },
+    ],
   };
 }
 
@@ -462,6 +496,12 @@ export function buildBlogPostStructuredData(opts: {
 export function buildWhatIsDsaStructuredData(): Record<string, unknown> {
   const base = getSiteUrl();
   const pageUrl = `${base}/what-is-dsa`;
+  const org = {
+    "@type": "Organization",
+    name: "DSALink",
+    url: base,
+    logo: { "@type": "ImageObject", url: `${base}/logo.png`, width: 512, height: 512 },
+  };
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -472,11 +512,11 @@ export function buildWhatIsDsaStructuredData(): Record<string, unknown> {
       "Plain-English explainer of Singapore's Direct School Admission (DSA-Sec) for Primary 6 families — how it works, who it's for, how DSA interacts with PSLE, and what the 2019 reforms changed.",
     url: pageUrl,
     inLanguage: "en-SG",
-    publisher: {
-      "@type": "Organization",
-      name: "DSALink",
-      url: base,
-    },
+    image: `${base}/opengraph-image`,
+    datePublished: "2026-05-10",
+    dateModified: "2026-06-08",
+    author: org,
+    publisher: org,
     about: {
       "@type": "EducationalOccupationalProgram",
       name: "Direct School Admission (DSA-Sec)",
@@ -603,8 +643,9 @@ export function buildDsaStatsStructuredData(opts: {
         "@type": "BreadcrumbList",
         "@id": `${pageUrl}#breadcrumb`,
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "DSA Guide", item: `${base}/dsa-guide` },
-          { "@type": "ListItem", position: 2, name: "DSA statistics", item: pageUrl },
+          { "@type": "ListItem", position: 1, name: "Home", item: base },
+          { "@type": "ListItem", position: 2, name: "DSA Guide", item: `${base}/dsa-guide` },
+          { "@type": "ListItem", position: 3, name: "DSA statistics", item: pageUrl },
         ],
       },
       {
@@ -697,41 +738,27 @@ export function buildTalentPageStructuredData(opts: {
 }
 
 /**
- * /open-house-guide — HowTo schema for the secondary school open house guide.
+ * /open-house-guide — Article schema. Was HowTo, but Google removed HowTo rich
+ * results in Sept 2023, so Article is the correct type (still useful for AI citation).
  */
 export function buildOpenHouseGuideStructuredData(): Record<string, unknown> {
+  const base = getSiteUrl();
+  const pageUrl = `${base}/open-house-guide`;
+  const orgId = `${base}/#organization`;
   return {
     "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: "How to Make the Most of Singapore Secondary School Open Houses",
+    "@type": "Article",
+    "@id": `${pageUrl}#article`,
+    headline: "How to Make the Most of Singapore Secondary School Open Houses",
     description:
-      "A step-by-step guide for P6 parents attending secondary school open houses for DSA research.",
-    step: [
-      {
-        "@type": "HowToStep",
-        name: "Research schools before attending",
-        text: "Check NSG results and school social media before open house day.",
-      },
-      {
-        "@type": "HowToStep",
-        name: "Prioritise CCA booths over auditorium talks",
-        text: "The most useful information comes from current students at CCA booths, not official presentations.",
-      },
-      {
-        "@type": "HowToStep",
-        name: "Ask specific questions to staff",
-        text: "Ask about DSA spots available, training schedules, and academic support systems.",
-      },
-      {
-        "@type": "HowToStep",
-        name: "Talk to currently-enrolled students",
-        text: "Ask students about the actual CCA experience, academic workload, and whether they'd choose the same school again.",
-      },
-      {
-        "@type": "HowToStep",
-        name: "Observe school culture",
-        text: "Notice whether student volunteers seem genuinely enthusiastic and what student work is displayed.",
-      },
-    ],
+      "A practical guide for P6 parents attending secondary school open houses for DSA research — what to prioritise, what to ask staff and students, and how to read school culture.",
+    url: pageUrl,
+    inLanguage: "en-SG",
+    image: `${base}/opengraph-image`,
+    datePublished: "2026-05-20",
+    dateModified: "2026-06-08",
+    author: { "@id": orgId },
+    publisher: { "@id": orgId },
+    isAccessibleForFree: true,
   };
 }

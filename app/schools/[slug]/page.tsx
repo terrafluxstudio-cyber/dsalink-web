@@ -68,6 +68,7 @@ export default async function SchoolPage({ params }: Props) {
   const canonical = `${siteUrl}/schools/${slug}`;
   const availableTranslations = getAvailableTranslations(slug);
 
+  const orgId = `${siteUrl}/#organization`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -77,7 +78,13 @@ export default async function SchoolPage({ params }: Props) {
         headline: school.title,
         description: school.description,
         url: canonical,
-        publisher: { "@type": "Organization", name: "DSALink", url: siteUrl },
+        inLanguage: "en-SG",
+        image: `${siteUrl}/opengraph-image`,
+        datePublished: school.lastUpdated,
+        dateModified: school.lastUpdated,
+        author: { "@id": orgId },
+        publisher: { "@id": orgId },
+        isAccessibleForFree: true,
       },
       {
         "@type": "BreadcrumbList",
@@ -87,6 +94,13 @@ export default async function SchoolPage({ params }: Props) {
           { "@type": "ListItem", position: 2, name: "Schools", item: `${siteUrl}/schools` },
           { "@type": "ListItem", position: 3, name: school.schoolFullName, item: canonical },
         ],
+      },
+      {
+        "@type": "Organization",
+        "@id": orgId,
+        name: "DSALink",
+        url: siteUrl,
+        logo: { "@type": "ImageObject", url: `${siteUrl}/logo.png`, width: 512, height: 512 },
       },
     ],
   };
