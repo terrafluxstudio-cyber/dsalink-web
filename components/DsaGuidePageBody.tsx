@@ -721,6 +721,111 @@ export type { FaqQa } from "@/lib/dsa-guide-faq";
 import { FAQ_QA } from "@/lib/dsa-guide-faq";
 export { FAQ_QA };
 
+/* ===== Hub resource index — every spoke page, linked from the pillar ===== */
+
+const RESOURCES_TITLE: LocaleStr = {
+  en: "Everything in this guide",
+  zh: "本指南的全部页面",
+  ms: "Semua dalam panduan ini",
+  ta: "இந்த வழிகாட்டியில் உள்ள அனைத்தும்",
+};
+
+const RESOURCES_SUB: LocaleStr = {
+  en: "Every DSALink tool and page in one place — jump straight to what you need.",
+  zh: "DSALink 的每个工具和页面都在这里——直接跳到你需要的。",
+  ms: "Setiap alat dan halaman DSALink di satu tempat — terus ke yang anda perlukan.",
+  ta: "DSALink-இன் ஒவ்வொரு கருவியும் பக்கமும் ஒரே இடத்தில் — உங்களுக்குத் தேவையானதை நேரடியாக அணுகுங்கள்.",
+};
+
+type ResourceLink = { href: string; icon: typeof BookOpen; label: LocaleStr; desc: LocaleStr };
+
+const RESOURCE_LINKS: ResourceLink[] = [
+  {
+    href: "/what-is-dsa",
+    icon: BookOpen,
+    label: { en: "What DSA is", zh: "DSA 是什么", ms: "Apa itu DSA", ta: "DSA என்றால் என்ன" },
+    desc: { en: "The plain-English explainer", zh: "通俗机制讲解", ms: "Penjelasan ringkas", ta: "எளிய விளக்கம்" },
+  },
+  {
+    href: "/dsa-finder",
+    icon: Compass,
+    label: { en: "DSA Finder", zh: "DSA Finder", ms: "DSA Finder", ta: "DSA Finder" },
+    desc: { en: "Which schools take your talent", zh: "哪些学校收你的才艺", ms: "Sekolah mana terima bakat anda", ta: "எந்தப் பள்ளிகள் உங்கள் திறமையை ஏற்கின்றன" },
+  },
+  {
+    href: "/schools",
+    icon: Building2,
+    label: { en: "All 147 schools", zh: "全部 147 所学校", ms: "Semua 147 sekolah", ta: "147 பள்ளிகள்" },
+    desc: { en: "Directory with PSLE COP", zh: "含 PSLE 截分的名录", ms: "Direktori dengan PSLE COP", ta: "PSLE COP கொண்ட பட்டியல்" },
+  },
+  {
+    href: "/psle-cop",
+    icon: Calculator,
+    label: { en: "PSLE cut-off history", zh: "PSLE 截分历史", ms: "Sejarah cut-off PSLE", ta: "PSLE cut-off வரலாறு" },
+    desc: { en: "2023–2025 COP by school", zh: "2023–2025 各校截分", ms: "COP 2023–2025 ikut sekolah", ta: "2023–2025 பள்ளி வாரியாக" },
+  },
+  {
+    href: "/dsa-statistics",
+    icon: Activity,
+    label: { en: "DSA statistics", zh: "DSA 数据", ms: "Statistik DSA", ta: "DSA புள்ளிவிவரங்கள்" },
+    desc: { en: "Talents by school, in tables", zh: "各校才艺数据表", ms: "Bakat ikut sekolah", ta: "பள்ளி வாரியான திறமைகள்" },
+  },
+  {
+    href: "/timeline",
+    icon: Clock,
+    label: { en: "2026 timeline", zh: "2026 时间线", ms: "Garis masa 2026", ta: "2026 கால அட்டவணை" },
+    desc: { en: "What happens when, exact dates", zh: "什么时候发生什么", ms: "Apa berlaku bila", ta: "என்ன எப்போது நடக்கிறது" },
+  },
+  {
+    href: "/dsa-interview",
+    icon: MessageSquareText,
+    label: { en: "Interview & trial prep", zh: "面试与选拔准备", ms: "Persediaan temu duga", ta: "நேர்காணல் தயாரிப்பு" },
+    desc: { en: "Prep by talent area", zh: "按才艺方向备战", ms: "Persediaan ikut bakat", ta: "திறமை வாரியாக" },
+  },
+  {
+    href: "/dsa-experience",
+    icon: Sparkles,
+    label: { en: "Parent stories", zh: "家长实战经历", ms: "Kisah ibu bapa", ta: "பெற்றோர் கதைகள்" },
+    desc: { en: "Six DSA pathways in practice", zh: "六个真实路径", ms: "Enam laluan DSA", ta: "ஆறு DSA பாதைகள்" },
+  },
+  {
+    href: "/open-houses",
+    icon: Goal,
+    label: { en: "Open house calendar", zh: "开放日日历", ms: "Kalendar hari terbuka", ta: "திறந்த நாள் நாட்காட்டி" },
+    desc: { en: "May 2026 dates, all schools", zh: "2026 年 5 月各校日期", ms: "Tarikh Mei 2026", ta: "மே 2026 தேதிகள்" },
+  },
+  {
+    href: "/open-house-guide",
+    icon: CheckCircle2,
+    label: { en: "Open house guide", zh: "开放日指南", ms: "Panduan hari terbuka", ta: "திறந்த நாள் வழிகாட்டி" },
+    desc: { en: "What to ask and look for", zh: "该问什么、看什么", ms: "Apa yang perlu ditanya", ta: "என்ன கேட்க வேண்டும்" },
+  },
+  {
+    href: "/dsa-coaches",
+    icon: GraduationCap,
+    label: { en: "Find a coach", zh: "找教练", ms: "Cari jurulatih", ta: "பயிற்சியாளர் தேடு" },
+    desc: { en: "Specialist coaching by talent", zh: "按才艺找专业教练", ms: "Kejurulatihan pakar", ta: "சிறப்புப் பயிற்சி" },
+  },
+  {
+    href: "/apply",
+    icon: FileSearch,
+    label: { en: "Pre-application checklist", zh: "申请前清单", ms: "Senarai semak permohonan", ta: "விண்ணப்ப சரிபார்ப்பு" },
+    desc: { en: "Get ready before 6 May", zh: "5 月 6 日前准备好", ms: "Bersedia sebelum 6 Mei", ta: "மே 6-க்கு முன் தயாராகுங்கள்" },
+  },
+  {
+    href: "/dsa-results",
+    icon: Trophy,
+    label: { en: "Outcomes & decisions", zh: "结果与决策", ms: "Keputusan & tindakan", ta: "முடிவுகள் & தீர்மானங்கள்" },
+    desc: { en: "Offer, waitlist, rejection", zh: "录取、候补、被拒", ms: "Tawaran, senarai tunggu", ta: "சலுகை, காத்திருப்பு" },
+  },
+  {
+    href: "/faq",
+    icon: CircleDot,
+    label: { en: "Parent FAQs", zh: "家长常见问题", ms: "Soalan lazim ibu bapa", ta: "பெற்றோர் கேள்விகள்" },
+    desc: { en: "Specific answers, fast", zh: "具体问题、直接答", ms: "Jawapan khusus", ta: "குறிப்பிட்ட பதில்கள்" },
+  },
+];
+
 /* ============================ MAIN COMPONENT ============================ */
 
 export function DsaGuidePageBody() {
@@ -1234,6 +1339,43 @@ export function DsaGuidePageBody() {
                   </p>
                 </details>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ===== RESOURCE INDEX (hub → all spokes) ===== */}
+        <section className="border-t border-intellectual/[0.06] py-12 sm:py-14">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6">
+            <h2 className="font-display text-xl font-bold text-intellectual sm:text-2xl" style={{ textTransform: "none" }}>
+              {pick(RESOURCES_TITLE, locale)}
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-intellectual-muted sm:text-[15px]">
+              {pick(RESOURCES_SUB, locale)}
+            </p>
+            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {RESOURCE_LINKS.map((r) => {
+                const Icon = r.icon;
+                return (
+                  <Link
+                    key={r.href}
+                    href={r.href}
+                    className="group flex items-start gap-3 rounded-xl border border-intellectual/12 bg-white p-4 shadow-soft transition hover:border-intellectual/25 hover:shadow-card"
+                  >
+                    <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-intellectual/8 text-intellectual">
+                      <Icon className="h-4 w-4" aria-hidden />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="flex items-center gap-1 font-display text-[15px] font-semibold text-intellectual" style={{ textTransform: "none" }}>
+                        {pick(r.label, locale)}
+                        <ArrowRight className="h-3.5 w-3.5 shrink-0 text-intellectual/40 transition group-hover:translate-x-0.5 group-hover:text-intellectual" aria-hidden />
+                      </span>
+                      <span className="mt-0.5 block text-[12.5px] leading-snug text-intellectual-muted">
+                        {pick(r.desc, locale)}
+                      </span>
+                    </span>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>

@@ -19,6 +19,7 @@ import {
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { PillarBackLink } from "@/components/PillarBackLink";
+import { RelatedCardsRow } from "@/components/RelatedCardsRow";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
@@ -27,6 +28,40 @@ type LocaleStr = { en: string; zh: string; ms: string; ta: string };
 function pick(s: LocaleStr, locale: "en" | "zh" | "ms" | "ta"): string {
   return s[locale];
 }
+
+const REL_KICKER: LocaleStr = {
+  en: "Related reference",
+  zh: "相关参考",
+  ms: "Rujukan berkaitan",
+  ta: "தொடர்புடைய குறிப்பு",
+};
+const REL_HEADING: LocaleStr = {
+  en: "Find the right under-recruited path",
+  zh: "找到适合的冷门路径",
+  ms: "Cari laluan kurang diiktiraf yang sesuai",
+  ta: "சரியான குறைவாக தேர்வுசெய்யப்படும் பாதையைக் கண்டறியுங்கள்",
+};
+const REL_TAL_T: LocaleStr = { en: "All talent paths", zh: "全部才艺方向", ms: "Semua laluan bakat", ta: "அனைத்து திறமைப் பாதைகள்" };
+const REL_TAL_B: LocaleStr = {
+  en: "Browse every DSA talent area with its own prep page and school list.",
+  zh: "浏览每一个 DSA 才艺方向，各有独立备战页与学校簇。",
+  ms: "Lihat setiap bidang bakat DSA dengan halaman persediaan sendiri.",
+  ta: "ஒவ்வொரு DSA திறமைத் துறையையும் அதன் தயாரிப்புப் பக்கத்துடன் பார்க்கவும்.",
+};
+const REL_FIND_T: LocaleStr = { en: "DSA Finder", zh: "DSA Finder", ms: "DSA Finder", ta: "DSA Finder" };
+const REL_FIND_B: LocaleStr = {
+  en: "See which schools actually recruit for your child's talent — including the niche ones.",
+  zh: "看哪些学校真的收孩子这个才艺——包括冷门方向。",
+  ms: "Lihat sekolah mana benar-benar mengambil bakat anak anda — termasuk yang khusus.",
+  ta: "உங்கள் குழந்தையின் திறமையை எந்தப் பள்ளிகள் உண்மையில் சேர்க்கின்றன என்பதைப் பார்க்கவும்.",
+};
+const REL_COACH_T: LocaleStr = { en: "Find a coach", zh: "找教练", ms: "Cari jurulatih", ta: "பயிற்சியாளர் தேடு" };
+const REL_COACH_B: LocaleStr = {
+  en: "Specialist coaching can build the record a niche talent needs to be competitive.",
+  zh: "专业教练能帮冷门才艺补上有竞争力所需的记录。",
+  ms: "Kejurulatihan pakar boleh membina rekod yang diperlukan bakat khusus.",
+  ta: "சிறப்புப் பயிற்சி ஒரு குறிப்பிட்ட திறமைக்குத் தேவையான பதிவை உருவாக்க உதவும்.",
+};
 
 /* ============================ HERO ============================ */
 
@@ -1524,6 +1559,15 @@ export function UnderRecruitedPathsPageBody() {
 
         <PillarBackLink />
       </main>
+      <RelatedCardsRow
+        kicker={pick(REL_KICKER, locale)}
+        heading={pick(REL_HEADING, locale)}
+        items={[
+          { icon: Compass, title: pick(REL_TAL_T, locale), body: pick(REL_TAL_B, locale), href: "/dsa-interview/talents" },
+          { icon: Target, title: pick(REL_FIND_T, locale), body: pick(REL_FIND_B, locale), href: "/dsa-finder" },
+          { icon: Shield, title: pick(REL_COACH_T, locale), body: pick(REL_COACH_B, locale), href: "/dsa-coaches" },
+        ]}
+      />
       <SiteFooter />
     </div>
   );

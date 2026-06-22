@@ -5,11 +5,46 @@ import { ArrowRight, BarChart3, Layers, School, Sparkles, Database } from "lucid
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { PillarBackLink } from "@/components/PillarBackLink";
+import { RelatedCardsRow } from "@/components/RelatedCardsRow";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
 type Locale = "en" | "zh" | "ms" | "ta";
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
+
+const REL_KICKER: LocaleStr = {
+  en: "Related reference",
+  zh: "相关参考",
+  ms: "Rujukan berkaitan",
+  ta: "தொடர்புடைய குறிப்பு",
+};
+const REL_HEADING: LocaleStr = {
+  en: "Turn these numbers into a shortlist",
+  zh: "把这些数据变成候选名单",
+  ms: "Jadikan angka ini senarai pendek",
+  ta: "இந்த எண்களை ஒரு பட்டியலாக மாற்றுங்கள்",
+};
+const REL_COP_T: LocaleStr = { en: "PSLE cut-off history", zh: "PSLE 截分历史", ms: "Sejarah cut-off PSLE", ta: "PSLE cut-off வரலாறு" };
+const REL_COP_B: LocaleStr = {
+  en: "2023–2025 COP by school, to read these talent counts against academic profile.",
+  zh: "2023–2025 各校截分，把才艺数据对照学术水平来看。",
+  ms: "COP 2023–2025 ikut sekolah, untuk membaca kiraan bakat ini dengan profil akademik.",
+  ta: "2023–2025 பள்ளி வாரியான COP, இந்த திறமை எண்ணிக்கையை கல்விச் சுயவிவரத்துடன் ஒப்பிட.",
+};
+const REL_SCHOOLS_T: LocaleStr = { en: "All 147 schools", zh: "全部 147 所学校", ms: "Semua 147 sekolah", ta: "147 பள்ளிகள்" };
+const REL_SCHOOLS_B: LocaleStr = {
+  en: "The full directory — open any school to see its DSA talent areas and programmes.",
+  zh: "完整名录——点开任一所学校看它的 DSA 才艺方向与课程。",
+  ms: "Direktori penuh — buka mana-mana sekolah untuk lihat bidang bakat DSA.",
+  ta: "முழுப் பட்டியல் — எந்தப் பள்ளியின் DSA திறமைத் துறைகளையும் பார்க்க.",
+};
+const REL_WID_T: LocaleStr = { en: "What DSA is", zh: "DSA 是什么", ms: "Apa itu DSA", ta: "DSA என்றால் என்ன" };
+const REL_WID_B: LocaleStr = {
+  en: "The plain-English explainer of how DSA-Sec actually works before you dive into data.",
+  zh: "在钻数据之前，先用通俗讲解搞懂 DSA-Sec 怎么运作。",
+  ms: "Penjelasan ringkas cara DSA-Sec berfungsi sebelum anda meneliti data.",
+  ta: "தரவில் ஆழ்வதற்கு முன் DSA-Sec எவ்வாறு செயல்படுகிறது என்ற எளிய விளக்கம்.",
+};
 
 export type StatsProps = {
   schools: number;
@@ -268,6 +303,15 @@ export function DsaStatsPageBody({ stats }: { stats: StatsProps }) {
           </div>
         </section>
       </main>
+      <RelatedCardsRow
+        kicker={pick(REL_KICKER, locale)}
+        heading={pick(REL_HEADING, locale)}
+        items={[
+          { icon: Layers, title: pick(REL_COP_T, locale), body: pick(REL_COP_B, locale), href: "/psle-cop" },
+          { icon: School, title: pick(REL_SCHOOLS_T, locale), body: pick(REL_SCHOOLS_B, locale), href: "/schools" },
+          { icon: Sparkles, title: pick(REL_WID_T, locale), body: pick(REL_WID_B, locale), href: "/what-is-dsa" },
+        ]}
+      />
       <PillarBackLink />
       <SiteFooter />
     </>
