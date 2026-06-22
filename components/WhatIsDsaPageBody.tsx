@@ -12,6 +12,8 @@ import {
   Scale,
   GitMerge,
   AlertCircle,
+  Route,
+  ListChecks,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -99,21 +101,25 @@ const SECTIONS: Section[] = [
         "The cleanest mental model for parents is to separate two layers.",
         "MOE owns the gate. It operates the central DSA-Sec portal at dsa-sec.moe.gov.sg — applications open once a year, in May. MOE sets the application calendar (for 2026: 5 May to 2 June, 4:30pm Singapore time). It caps DSA intake at 20% of S1 places per school, with the four full-DSA schools as the only exception. It enforces the rules — maximum three schools per applicant, maximum two talent areas per school, one Confirmed Offer at a time, no withdrawal after acceptance. And it releases DSA outcomes alongside PSLE results in late November.",
         "Schools own the decision. Once a portal application lands at a school, MOE steps back. The school's panel decides what counts as evidence of talent, whom to invite for an interview or trial, how interviews are scored (schools do not publish their rubrics), whom to give a Confirmed Offer to, and whom to put on the Waitlist. Two schools shortlisting for the same talent — say, hockey — will run completely different trials and reach completely different conclusions about the same child. There is no \"DSA score\" that travels between schools. Each application is a fresh judgment by a fresh panel.",
+        "For parents, the practical consequence of this two-layer split is that there is no single DSA application to perfect — there are as many applications as schools you apply to, each judged on its own terms. The portfolio that impresses one school's panel may leave another's unmoved, because they weight evidence differently and run different trials. Treat each school as a separate audience: study what its talent programme actually values, tailor what you submit, and never assume a strong showing at one school carries any weight at the next.",
       ],
       zh: [
         "家长最清晰的思考方式，是把 DSA 分成两层。",
         "MOE 负责门。它运营中央门户 dsa-sec.moe.gov.sg——每年 5 月开放一次。MOE 设定时间表（2026 年：5 月 5 日到 6 月 2 日下午 4:30，新加坡时间）。它把每所学校的 DSA 名额上限定在 S1 总名额的 20%，唯一例外是 4 所全 DSA 学校。它执行规则——每位申请人最多 3 所学校、每所学校最多 2 个才艺方向、同一时间只能持有 1 个 Confirmed Offer、接受后不可撤回。MOE 在 11 月底连同 PSLE 成绩一起公布 DSA 结果。",
         "学校负责筛选。申请通过门户递到学校后，MOE 就退到一边。学校自己的评审团决定：什么算才能证明、邀请谁来面试或 trial、面试怎么评分（学校不公开评分标准）、给谁 Confirmed Offer、谁进 Waitlist。同一个孩子申请同一个才艺（比如曲棍球）的两所学校，会有完全不同的 trial 流程和完全不同的结论。学校之间没有所谓「DSA 分数」可以互通。每一份申请都是新学校、新评审团、重新判断。",
+        "对家长来说，这种两层结构的现实后果是：没有一份「完美的 DSA 申请」可以打磨——你申请几所学校，就有几份申请，每一份都按各校自己的标准被评判。打动一所学校评审团的材料，可能让另一所无动于衷，因为它们对证据的权重不同、trial 也不同。把每所学校当成独立的受众：研究它的才艺项目究竟看重什么，针对性地准备提交的材料，永远不要以为在一所学校的好表现能在下一所学校算数。",
       ],
       ms: [
         "Model fikiran paling jelas untuk ibu bapa adalah memisahkan dua lapisan.",
         "MOE memiliki pintu. Ia mengendalikan portal pusat DSA-Sec di dsa-sec.moe.gov.sg — permohonan dibuka setahun sekali, pada bulan Mei. MOE menetapkan kalendar permohonan (untuk 2026: 5 Mei hingga 2 Jun, 4:30 petang waktu Singapura). Ia menghadkan pengambilan DSA pada 20% tempat S1 setiap sekolah, dengan empat sekolah DSA penuh sebagai satu-satunya pengecualian. Ia menguatkuasakan peraturan — maksimum tiga sekolah setiap pemohon, maksimum dua bidang bakat setiap sekolah, satu Tawaran Sah pada satu masa, tiada penarikan selepas penerimaan. Dan ia mengeluarkan keputusan DSA bersama keputusan PSLE pada akhir November.",
         "Sekolah memiliki keputusan. Sebaik sahaja permohonan portal sampai ke sekolah, MOE berundur. Panel sekolah memutuskan apa yang dikira sebagai bukti bakat, siapa yang dijemput untuk temu duga atau percubaan, bagaimana temu duga dinilai (sekolah tidak menerbitkan rubrik mereka), kepada siapa Tawaran Sah diberikan, dan siapa yang diletakkan di Senarai Menunggu. Dua sekolah yang menyenarai pendek untuk bakat yang sama — katakan, hoki — akan menjalankan percubaan yang sepenuhnya berbeza dan mencapai kesimpulan yang sepenuhnya berbeza tentang anak yang sama. Tiada \"skor DSA\" yang berjalan antara sekolah. Setiap permohonan ialah pertimbangan baru oleh panel baru.",
+        "Bagi ibu bapa, akibat praktikal pembahagian dua lapisan ini ialah tiada satu permohonan DSA tunggal untuk disempurnakan — terdapat seberapa banyak permohonan seperti bilangan sekolah yang anda pohon, setiap satu dinilai mengikut terma sendiri. Portfolio yang mengkagumkan panel satu sekolah mungkin tidak menggerakkan panel sekolah lain, kerana mereka menimbang bukti secara berbeza dan menjalankan percubaan yang berbeza. Anggap setiap sekolah sebagai audiens berasingan: kaji apa yang program bakatnya benar-benar hargai, sesuaikan apa yang anda hantar, dan jangan sekali-kali menganggap persembahan kuat di satu sekolah membawa apa-apa nilai di sekolah seterusnya.",
       ],
       ta: [
         "பெற்றோர்களுக்கான மிகத் தெளிவான சிந்தனை வடிவம் இரண்டு அடுக்குகளைப் பிரிப்பதாகும்.",
         "MOE வாயிலை வைத்திருக்கிறது. அது மத்திய DSA-Sec வாயிலான dsa-sec.moe.gov.sg-ஐ இயக்குகிறது — விண்ணப்பங்கள் ஒவ்வொரு ஆண்டும் மே மாதம் ஒருமுறை திறக்கப்படுகின்றன. MOE விண்ணப்ப காலண்டரை அமைக்கிறது (2026க்கு: 5 மே முதல் 2 ஜூன் வரை, மாலை 4:30 சிங்கப்பூர் நேரம்). ஒவ்வொரு பள்ளியின் S1 இடங்களில் 20%-க்கு DSA சேர்க்கையை இது மட்டுப்படுத்துகிறது, நான்கு முழு-DSA பள்ளிகள் மட்டுமே விதிவிலக்கு. இது விதிகளை நடைமுறைப்படுத்துகிறது — ஒரு விண்ணப்பதாரருக்கு அதிகபட்சம் மூன்று பள்ளிகள், ஒரு பள்ளிக்கு அதிகபட்சம் இரண்டு திறமை பகுதிகள், ஒரே நேரத்தில் ஒரு உறுதிசெய்யப்பட்ட சலுகை, ஏற்றுக்கொண்ட பிறகு திரும்பப் பெற முடியாது. நவம்பர் இறுதியில் PSLE முடிவுகளுடன் DSA முடிவுகளை இது வெளியிடுகிறது.",
         "பள்ளிகள் முடிவை வைத்திருக்கின்றன. வாயில் விண்ணப்பம் ஒரு பள்ளியில் வந்தவுடன், MOE பின்வாங்குகிறது. பள்ளியின் குழு முடிவு செய்கிறது: திறமைக்கான சான்று என்ன, யாரை நேர்காணல் அல்லது சோதனைக்கு அழைப்பது, நேர்காணல் எவ்வாறு மதிப்பிடப்படுகிறது (பள்ளிகள் தங்கள் ருப்ரிக்குகளை வெளியிடவில்லை), யாருக்கு உறுதிசெய்யப்பட்ட சலுகை, யாரை காத்திருப்புப் பட்டியலில் வைப்பது. ஒரே திறமைக்காக (உதாரணம், ஹாக்கி) குறுகிய பட்டியலிடும் இரண்டு பள்ளிகள் முற்றிலும் வேறுபட்ட சோதனைகளை நடத்தி, அதே குழந்தையைப் பற்றி முற்றிலும் வேறுபட்ட முடிவுகளை அடையும். பள்ளிகளுக்கு இடையே பயணிக்கும் \"DSA மதிப்பெண்\" இல்லை. ஒவ்வொரு விண்ணப்பமும் புதிய குழுவின் புதிய தீர்ப்பு.",
+        "பெற்றோருக்கு, இந்த இரு-அடுக்குப் பிரிவின் நடைமுறை விளைவு என்னவென்றால், சரிசெய்ய ஒரே ஒரு DSA விண்ணப்பம் இல்லை — நீங்கள் விண்ணப்பிக்கும் பள்ளிகளின் எண்ணிக்கைக்கு ஏற்ப விண்ணப்பங்கள் உள்ளன, ஒவ்வொன்றும் அதன் சொந்த விதிமுறைகளில் மதிப்பிடப்படுகிறது. ஒரு பள்ளியின் குழுவைக் கவரும் தொகுப்பு மற்றொரு பள்ளியை அசைக்காமல் இருக்கலாம், ஏனெனில் அவை சான்றை வெவ்வேறாக எடைபோடுகின்றன, வெவ்வேறு சோதனைகளை நடத்துகின்றன. ஒவ்வொரு பள்ளியையும் தனி பார்வையாளராகக் கருதுங்கள்: அதன் திறமைத் திட்டம் உண்மையில் எதை மதிக்கிறது என்பதை ஆராயுங்கள், நீங்கள் சமர்ப்பிப்பதை அதற்கேற்ப வடிவமைக்கவும், ஒரு பள்ளியில் வலுவான செயல்பாடு அடுத்த பள்ளியில் எந்த மதிப்பையும் கொண்டுவரும் என்று ஒருபோதும் கருத வேண்டாம்.",
       ],
     },
   },
@@ -214,6 +220,7 @@ const SECTIONS: Section[] = [
         "The Confirmed Offer protects against cut-off pressure, not against minimum standards. A child given a Confirmed Offer at a top IP school does not need to hit that school's PSLE cut-off (which usually sits in the AL 6–8 range). They do need AL ≤ 22.",
         "A Counter-Offer can appear at result release. Some schools that run both IP and O-Level tracks may give a child a DSA Confirmed Offer for IP, then issue a Counter-Offer at result-release time for O-Level instead — if the PSLE result does not meet IP eligibility but does meet O-Level. Acceptance is the family's choice.",
         "A rejected DSA application is not a closed door. The child enters S1 Posting normally with their PSLE score, and they can still apply for S1 Appeal at schools where they have a connection (e.g. sibling-priority, affiliation). DSA failure does not change anything about the mainstream pathway.",
+        "The sequence is what trips families up, so it is worth stating plainly. The DSA result and the PSLE result arrive together in late November, but they were decided at different times: the school made its DSA judgment back in the middle of the year, while the PSLE score is fresh. A Confirmed Offer you accepted earlier only becomes a real S1 place once the PSLE result confirms the child has cleared the course minimum. Until results day, an accepted offer is a conditional promise, not a settled posting — which is exactly why the minimum Posting Group still matters even after you accept.",
       ],
       zh: [
         "一个常见误解：家长以为 Confirmed Offer = PSLE 不重要。准确情况要分层看。",
@@ -221,6 +228,7 @@ const SECTIONS: Section[] = [
         "Confirmed Offer 保护你不受切线压力影响，但不豁免最低门槛。一个被顶尖 IP 学校发了 Confirmed Offer 的孩子，不需要打到那所学校 PSLE 切线（通常在 AL 6–8 范围），但仍然需要 AL ≤ 22。",
         "结果释放时可能出现 Counter-Offer。同时有 IP 和 O-Level 双轨的学校，可能先给孩子一个 IP 的 DSA Confirmed Offer，然后在结果释放时改为 O-Level Counter-Offer——如果 PSLE 没达到 IP 资格但达到了 O-Level 资格。是否接受由家庭决定。",
         "DSA 被拒不等于路被堵死。孩子按 PSLE 成绩正常进入 S1 Posting，还可以在有关联（兄弟姐妹优先、校友关系等）的学校申请 S1 Appeal。DSA 失败不改变主轨道的任何机会。",
+        "真正让家长绕晕的是顺序，所以值得说白。DSA 结果和 PSLE 结果在 11 月底一起到，但它们是在不同时间决定的：学校的 DSA 判断早在年中就做了，而 PSLE 成绩是刚出炉的。你早先接受的 Confirmed Offer，只有在 PSLE 成绩确认孩子达到课程最低门槛之后，才真正变成一个 S1 学位。在放榜日之前，已接受的 offer 是一个有条件的承诺，不是已定的派位——这正是为什么即使接受之后，最低 Posting Group 仍然重要。",
       ],
       ms: [
         "Salah faham biasa: ibu bapa menganggap Tawaran Sah bermakna PSLE tidak penting. Gambaran tepat lebih berlapis.",
@@ -228,6 +236,7 @@ const SECTIONS: Section[] = [
         "Tawaran Sah melindungi daripada tekanan cut-off, bukan daripada standard minimum. Seorang anak yang diberi Tawaran Sah di sekolah IP teratas tidak perlu mencapai cut-off PSLE sekolah itu (yang biasanya berada dalam julat AL 6–8). Mereka memerlukan AL ≤ 22.",
         "Tawaran Balas boleh muncul pada pelepasan keputusan. Sesetengah sekolah yang menjalankan kedua-dua trek IP dan O-Level mungkin memberi anak Tawaran Sah DSA untuk IP, kemudian mengeluarkan Tawaran Balas pada masa pelepasan keputusan untuk O-Level — jika keputusan PSLE tidak memenuhi kelayakan IP tetapi memenuhi O-Level. Penerimaan ialah pilihan keluarga.",
         "Permohonan DSA yang ditolak bukan pintu tertutup. Anak memasuki Penempatan S1 secara normal dengan skor PSLE, dan masih boleh memohon Rayuan S1 di sekolah yang mempunyai hubungan (contohnya keutamaan adik-beradik, gabungan). Kegagalan DSA tidak mengubah apa-apa tentang laluan arus perdana.",
+        "Urutan inilah yang mengelirukan keluarga, jadi berbaloi dinyatakan dengan jelas. Keputusan DSA dan keputusan PSLE tiba bersama pada akhir November, tetapi ia diputuskan pada masa berbeza: sekolah membuat pertimbangan DSA pada pertengahan tahun, manakala skor PSLE baru sahaja keluar. Tawaran Sah yang anda terima lebih awal hanya menjadi tempat S1 sebenar setelah keputusan PSLE mengesahkan anak telah melepasi minimum kursus. Sehingga hari keputusan, tawaran yang diterima ialah janji bersyarat, bukan penempatan yang muktamad — sebab itulah Posting Group minimum masih penting walaupun selepas anda menerima.",
       ],
       ta: [
         "ஒரு பொதுவான தவறான புரிதல்: உறுதிசெய்யப்பட்ட சலுகை என்றால் PSLE முக்கியமில்லை என்று பெற்றோர்கள் கருதுகிறார்கள். துல்லியமான படம் மேலும் அடுக்காக உள்ளது.",
@@ -235,6 +244,7 @@ const SECTIONS: Section[] = [
         "உறுதிசெய்யப்பட்ட சலுகை cut-off அழுத்தத்திலிருந்து பாதுகாக்கிறது, குறைந்தபட்ச தரத்திலிருந்து அல்ல. மேல்நிலை IP பள்ளியில் உறுதிசெய்யப்பட்ட சலுகை வழங்கப்பட்ட குழந்தை அந்த பள்ளியின் PSLE cut-off-ஐ (வழக்கமாக AL 6–8 வரம்பில் உள்ளது) அடைய வேண்டியதில்லை. AL ≤ 22 தேவை.",
         "முடிவு வெளியீட்டில் எதிர் சலுகை தோன்றலாம். IP மற்றும் O-Level பாதைகளை இயக்கும் சில பள்ளிகள் ஒரு குழந்தைக்கு IP-க்கு DSA உறுதிசெய்யப்பட்ட சலுகையை வழங்கி, பின்னர் முடிவு வெளியீட்டு நேரத்தில் O-Level-க்கான எதிர் சலுகையை வழங்கலாம் — PSLE முடிவு IP தகுதியை பூர்த்தி செய்யவில்லை ஆனால் O-Level-ஐ பூர்த்தி செய்தால். ஏற்றுக்கொள்வது குடும்பத்தின் தேர்வு.",
         "நிராகரிக்கப்பட்ட DSA விண்ணப்பம் ஒரு மூடிய கதவு அல்ல. குழந்தை தனது PSLE மதிப்பெண்ணுடன் சாதாரணமாக S1 Posting-இல் நுழைகிறது, மற்றும் தொடர்பு உள்ள பள்ளிகளில் (உதாரணம், சகோதர முன்னுரிமை, இணைப்பு) S1 Appeal-க்கு விண்ணப்பிக்கலாம். DSA தோல்வி முக்கிய பாதையின் எதையும் மாற்றாது.",
+        "குடும்பங்களைக் குழப்புவது இந்த வரிசைதான், எனவே அதைத் தெளிவாகச் சொல்வது மதிப்புடையது. DSA முடிவும் PSLE முடிவும் நவம்பர் இறுதியில் ஒன்றாக வருகின்றன, ஆனால் அவை வெவ்வேறு நேரங்களில் தீர்மானிக்கப்பட்டன: பள்ளி அதன் DSA தீர்ப்பை ஆண்டின் நடுவில் செய்தது, PSLE மதிப்பெண் புதிதாக வந்தது. நீங்கள் முன்பே ஏற்ற Confirmed Offer, PSLE முடிவு குழந்தை பாடத்தின் குறைந்தபட்சத்தைக் கடந்துவிட்டது என்பதை உறுதிசெய்த பிறகே ஒரு உண்மையான S1 இடமாக மாறுகிறது. முடிவு நாள் வரை, ஏற்கப்பட்ட சலுகை ஒரு நிபந்தனை வாக்குறுதியே தவிர, தீர்மானிக்கப்பட்ட இடம் ஒதுக்கீடு அல்ல — ஏற்றுக்கொண்ட பிறகும் குறைந்தபட்ச Posting Group ஏன் முக்கியம் என்பதற்கு இதுவே சரியான காரணம்.",
       ],
     },
   },
@@ -281,6 +291,84 @@ const SECTIONS: Section[] = [
       ],
     },
   },
+  {
+    icon: Route,
+    title: {
+      en: "7. DSA vs S1 Posting — two doors, one child",
+      zh: "7. DSA 与 S1 Posting — 两道门，同一个孩子",
+      ms: "7. DSA vs S1 Posting — dua pintu, satu anak",
+      ta: "7. DSA vs S1 Posting — இரண்டு கதவுகள், ஒரே குழந்தை",
+    },
+    paragraphs: {
+      en: [
+        "It helps to picture DSA as one of two doors into Secondary 1, running on different clocks. DSA-Sec runs first, in the middle of P6, and turns on demonstrated talent. S1 Posting runs after PSLE results in November, and turns on the PSLE Achievement Level score. Every child is automatically in the S1 Posting route; DSA is the optional, earlier door a minority of families also try.",
+        "The two doors never compete head-to-head. A child either secures a place through DSA and accepts it — in which case they leave the S1 Posting exercise entirely — or they go through S1 Posting like everyone else. There is no penalty for trying DSA and missing: a rejected or declined DSA application has zero effect on the PSLE-based posting that follows. The only way DSA closes a door is by your accepting a Confirmed Offer, which is binding and removes the child from S1 Posting.",
+        "Affiliation priority is a third thing parents often fold into DSA — it is not part of it. Affiliation is a separate advantage that lives inside the S1 Posting route, for children moving from a primary school to its affiliated secondary school, and it is decided by PSLE score and affiliation status, not by a talent panel. Keep three mental boxes apart: DSA is talent before PSLE; S1 Posting is score after PSLE; affiliation is a posting-route priority, not a DSA category.",
+        "A quick worked example. Two children apply to the same school for the same sport. One is given a Confirmed Offer, accepts in November, and never enters S1 Posting; their secondary school is settled the moment they accept. The other is waitlisted, the waitlist does not convert, and they are posted in December purely on their PSLE score — exactly as if they had never applied. Same school, same talent, two completely different routes in.",
+        "Practically, this makes DSA a low-risk add-on for a child with a genuine talent record, and a distraction for a child without one. You are not trading away the PSLE route by trying; you are buying one extra, earlier chance, at the cost of the preparation time the application and trials consume.",
+      ],
+      zh: [
+        "把 DSA 想成进入中一的两道门之一，会清楚很多——两道门走的是不同的时钟。DSA-Sec 先开，在小六年中，看的是已展现的才能。S1 Posting 在 11 月 PSLE 成绩出来之后才开，看的是 PSLE 成就分（AL）。每个孩子都自动在 S1 Posting 这条路上；DSA 是少数家庭额外尝试的、更早的那道门。",
+        "两道门从不正面相争。孩子要么通过 DSA 拿到位置并接受——那就完全退出 S1 Posting；要么和所有人一样走 S1 Posting。尝试 DSA 没拿到，没有任何代价：被拒或放弃的 DSA 申请，对之后基于 PSLE 的派位毫无影响。DSA 唯一会关上一道门的情形，是你接受了 Confirmed Offer——它具有约束力，会把孩子从 S1 Posting 中移除。",
+        "Affiliation（直属/校友）优先权是家长常和 DSA 混为一谈的第三样东西——它不属于 DSA。Affiliation 是 S1 Posting 这条路里的另一种优势，针对从一所小学升入其直属中学的孩子，由 PSLE 成绩和直属身份决定，不由才艺评审团决定。把三个概念分开记：DSA 是才能、在 PSLE 之前；S1 Posting 是分数、在 PSLE 之后；affiliation 是派位路里的优先权，不是一个 DSA 类别。",
+        "举个具体例子。两个孩子用同一项运动申请同一所学校。一个拿到 Confirmed Offer，11 月接受，从此不进 S1 Posting——接受的那一刻中学就定了。另一个进了 Waitlist，候补没转正，12 月完全凭 PSLE 成绩被派位——和从没申请过一模一样。同一所学校、同一项才能，两条完全不同的进门路径。",
+        "现实地说，对一个有真实才能记录的孩子，DSA 是低风险的加分项；对一个没有记录的孩子，它是干扰项。尝试 DSA 并不会让你失去 PSLE 这条路——你只是多买了一次更早的机会，代价是申请和 trial 占掉的备考时间。",
+      ],
+      ms: [
+        "Bayangkan DSA sebagai salah satu daripada dua pintu ke Tingkatan 1, berjalan pada jam yang berbeza. DSA-Sec berjalan dahulu, pada pertengahan Tahun 6, dan bergantung pada bakat yang dibuktikan. S1 Posting berjalan selepas keputusan PSLE pada November, dan bergantung pada skor Tahap Pencapaian PSLE (AL). Setiap anak secara automatik berada dalam laluan S1 Posting; DSA ialah pintu pilihan yang lebih awal yang turut dicuba oleh segelintir keluarga.",
+        "Kedua-dua pintu tidak pernah bersaing secara langsung. Seorang anak sama ada memperoleh tempat melalui DSA dan menerimanya — lalu meninggalkan latihan S1 Posting sepenuhnya — atau melalui S1 Posting seperti orang lain. Tiada penalti kerana mencuba DSA dan gagal: permohonan DSA yang ditolak atau ditolak sendiri tidak memberi kesan langsung kepada penempatan berasaskan PSLE yang menyusul. Satu-satunya cara DSA menutup pintu ialah apabila anda menerima Tawaran Sah, yang mengikat dan mengeluarkan anak daripada S1 Posting.",
+        "Keutamaan affiliation ialah perkara ketiga yang sering dicampuradukkan oleh ibu bapa dengan DSA — ia bukan sebahagian daripadanya. Affiliation ialah kelebihan berasingan dalam laluan S1 Posting, untuk anak yang berpindah dari sekolah rendah ke sekolah menengah gabungannya, dan ia ditentukan oleh skor PSLE serta status gabungan, bukan oleh panel bakat. Asingkan tiga kotak fikiran: DSA ialah bakat sebelum PSLE; S1 Posting ialah skor selepas PSLE; affiliation ialah keutamaan dalam laluan penempatan, bukan kategori DSA.",
+        "Satu contoh ringkas. Dua anak memohon ke sekolah yang sama untuk sukan yang sama. Seorang diberi Tawaran Sah, menerima pada November, dan tidak pernah memasuki S1 Posting; sekolah menengahnya selesai pada saat dia menerima. Seorang lagi disenaraikan menunggu, senarai menunggu tidak bertukar, dan dia ditempatkan pada Disember semata-mata berdasarkan skor PSLE — seolah-olah dia tidak pernah memohon. Sekolah sama, bakat sama, dua laluan masuk yang sepenuhnya berbeza.",
+        "Secara praktikal, ini menjadikan DSA tambahan berisiko rendah untuk anak yang mempunyai rekod bakat sebenar, dan gangguan untuk anak yang tiada. Anda tidak menyerahkan laluan PSLE dengan mencuba; anda membeli satu peluang tambahan yang lebih awal, dengan kos masa persediaan yang digunakan oleh permohonan dan percubaan.",
+      ],
+      ta: [
+        "DSA-ஐ இடைநிலை 1-க்கான இரண்டு கதவுகளில் ஒன்றாகக் கற்பனை செய்வது உதவும் — இரண்டும் வெவ்வேறு கடிகாரங்களில் இயங்குகின்றன. DSA-Sec முதலில், ஆரம்ப பள்ளி 6-இன் நடுவில் இயங்குகிறது, நிரூபிக்கப்பட்ட திறமையை அடிப்படையாகக் கொண்டது. S1 Posting நவம்பரில் PSLE முடிவுகளுக்குப் பிறகு இயங்குகிறது, PSLE வெற்றி நிலை (AL) மதிப்பெண்ணை அடிப்படையாகக் கொண்டது. ஒவ்வொரு குழந்தையும் தானாகவே S1 Posting பாதையில் இருக்கிறது; DSA என்பது ஒரு சில குடும்பங்கள் கூடுதலாக முயற்சிக்கும் விருப்பத் தேர்வான, முந்தைய கதவு.",
+        "இரண்டு கதவுகளும் ஒருபோதும் நேருக்கு நேர் போட்டியிடுவதில்லை. ஒரு குழந்தை DSA மூலம் ஒரு இடத்தைப் பெற்று அதை ஏற்கிறது — அப்போது S1 Posting பயிற்சியை முற்றிலும் விட்டுவிடுகிறது — அல்லது மற்ற அனைவரையும் போல S1 Posting வழியாகச் செல்கிறது. DSA-ஐ முயற்சித்துத் தவறினால் எந்த அபராதமும் இல்லை: நிராகரிக்கப்பட்ட அல்லது மறுக்கப்பட்ட DSA விண்ணப்பம், அதைத் தொடரும் PSLE-அடிப்படையிலான இடம் ஒதுக்கீட்டில் எந்த தாக்கமும் ஏற்படுத்தாது. DSA ஒரு கதவை மூடும் ஒரே வழி, நீங்கள் ஒரு Confirmed Offer-ஐ ஏற்பதுதான் — அது கட்டுப்படுத்தும், குழந்தையை S1 Posting-இலிருந்து நீக்குகிறது.",
+        "Affiliation முன்னுரிமை என்பது பெற்றோர் அடிக்கடி DSA-உடன் கலக்கும் மூன்றாவது விஷயம் — அது அதன் பகுதி அல்ல. Affiliation என்பது S1 Posting பாதைக்குள் உள்ள ஒரு தனி நன்மை, ஒரு ஆரம்ப பள்ளியிலிருந்து அதன் இணைந்த இடைநிலை பள்ளிக்கு செல்லும் குழந்தைகளுக்கானது, அது PSLE மதிப்பெண் மற்றும் இணைப்பு நிலையால் தீர்மானிக்கப்படுகிறது, திறமைக் குழுவால் அல்ல. மூன்று கருத்துகளைத் தனியாக வைத்திருங்கள்: DSA என்பது PSLE-க்கு முந்தைய திறமை; S1 Posting என்பது PSLE-க்குப் பிந்தைய மதிப்பெண்; affiliation என்பது இடம் ஒதுக்கீட்டுப் பாதையில் ஒரு முன்னுரிமை, DSA வகை அல்ல.",
+        "ஒரு விரைவான உதாரணம். இரண்டு குழந்தைகள் ஒரே விளையாட்டுக்காக ஒரே பள்ளிக்கு விண்ணப்பிக்கின்றன. ஒருவருக்கு Confirmed Offer வழங்கப்படுகிறது, நவம்பரில் ஏற்கிறார், S1 Posting-இல் ஒருபோதும் நுழைவதில்லை; ஏற்றுக்கொண்ட தருணத்தில் அவரது இடைநிலை பள்ளி தீர்மானமாகிறது. மற்றவர் காத்திருப்புப் பட்டியலில் வைக்கப்படுகிறார், பட்டியல் மாறவில்லை, டிசம்பரில் முற்றிலும் PSLE மதிப்பெண்ணின் அடிப்படையில் இடம் ஒதுக்கப்படுகிறார் — அவர் ஒருபோதும் விண்ணப்பிக்காதது போலவே. ஒரே பள்ளி, ஒரே திறமை, முற்றிலும் வேறுபட்ட இரண்டு நுழைவுப் பாதைகள்.",
+        "நடைமுறையில், இது ஒரு உண்மையான திறமைப் பதிவு உள்ள குழந்தைக்கு DSA-ஐ குறைந்த ஆபத்துள்ள கூடுதலாகவும், பதிவு இல்லாத குழந்தைக்கு ஒரு கவனச்சிதறலாகவும் ஆக்குகிறது. முயற்சிப்பதன் மூலம் நீங்கள் PSLE பாதையை இழக்கவில்லை; விண்ணப்பமும் சோதனைகளும் எடுத்துக்கொள்ளும் தயாரிப்பு நேரத்தை விலையாகக் கொடுத்து, ஒரு கூடுதல், முந்தைய வாய்ப்பை வாங்குகிறீர்கள்.",
+      ],
+    },
+  },
+  {
+    icon: ListChecks,
+    title: {
+      en: "8. Before you apply: a realistic self-check",
+      zh: "8. 申请之前：一次诚实的自我核查",
+      ms: "8. Sebelum anda memohon: semakan diri yang realistik",
+      ta: "8. விண்ணப்பிப்பதற்கு முன்: ஒரு யதார்த்தமான சுய சரிபார்ப்பு",
+    },
+    paragraphs: {
+      en: [
+        "Before committing six weeks of P6 to a DSA campaign, it is worth running four honest checks. None of them need insider knowledge — only a clear look at what your child actually has on paper.",
+        "Check the evidence, not the enthusiasm. Re-read the three tiers in section 3. If the record sits in Tier A or B, DSA is worth a serious attempt. If it sits below Tier C — real interest, but no external grading, competition result, or sustained CCA leadership — the realistic move this year is to protect PSLE preparation and build the record toward a later DSA-JC attempt instead.",
+        "Check the school-talent fit, not just the school name. A school is only worth a DSA slot if its programme matches your child's specific talent and the direction they are growing in. Use the DSA Finder to see which schools actually take your child's talent area, then read each shortlisted school's open-house material before deciding. A strong school with no real home for the talent is a weak DSA choice.",
+        "Check the PSLE floor is reachable. A Confirmed Offer still needs the child to clear the minimum Posting Group for the course — AL 22 or better for Express and IP. If that floor is a stretch, an IP Confirmed Offer can convert to an O-Level Counter-Offer, or not hold at all. Look at the PSLE cut-off history to calibrate what is realistic for the schools on your shortlist.",
+        "Check the family is ready for the commitment. Acceptance is binding, the talent commitment runs at least two years, and a 12-year-old's interests can move. Have that conversation with your child before you apply, not after the offer arrives. If all four checks pass, DSA is a strong route with little downside. If two or more fail, the honest answer is usually \"not this year\" — and choosing not to apply is a legitimate, often smarter, decision.",
+      ],
+      zh: [
+        "在把小六的六周投进 DSA 之前，值得先做四项诚实核查。每一项都不需要内部消息——只需要清楚看一眼孩子手上真正有什么。",
+        "核查证据，不是核查热情。重读第 3 节的三个层级。如果记录落在 A 类或 B 类，DSA 值得认真一试。如果在 C 类以下——有真实兴趣，但没有外部考级、比赛成绩或持续的 CCA 领导经历——今年现实的做法，是保住 PSLE 备考，把记录积累到将来冲 DSA-JC。",
+        "核查学校与才艺的匹配，不只是学校名气。一所学校值不值得占用一个 DSA 名额，取决于它的项目是否匹配孩子的具体才能、以及孩子正在成长的方向。用 DSA Finder 看哪些学校真的收孩子这个才艺方向，再在做决定前读每所入围学校的开放日资料。一所好学校如果没有这个才能的落脚处，对 DSA 来说是差选择。",
+        "核查 PSLE 门槛够得着。Confirmed Offer 仍然要求孩子达到所录取课程的最低 Posting Group——Express 和 IP 是 AL 22 或更好。如果这个门槛很勉强，IP 的 Confirmed Offer 可能转成 O-Level 的 Counter-Offer，或者根本保不住。看 PSLE 截分历史，校准入围名单上那几所学校对你家是否现实。",
+        "核查家庭准备好承担承诺。接受具有约束力，才艺承诺至少两年，而一个 12 岁孩子的兴趣会变。在申请之前就和孩子谈清楚，别等结果来了才谈。四项都过，DSA 是一条几乎没有下行风险的好路。两项或更多没过，诚实的答案通常是「今年先不申请」——而选择不申请，是一个正当、往往更明智的决定。",
+      ],
+      ms: [
+        "Sebelum melaburkan enam minggu Tahun 6 untuk kempen DSA, berbaloi menjalankan empat semakan jujur. Tiada satu pun memerlukan pengetahuan orang dalam — hanya pandangan jelas tentang apa yang anak anda benar-benar ada di atas kertas.",
+        "Semak bukti, bukan keghairahan. Baca semula tiga peringkat dalam bahagian 3. Jika rekod berada di Peringkat A atau B, DSA berbaloi dicuba dengan serius. Jika ia di bawah Peringkat C — minat sebenar, tetapi tiada gred luar, keputusan pertandingan, atau kepimpinan CCA berterusan — langkah realistik tahun ini ialah melindungi persediaan PSLE dan membina rekod ke arah percubaan DSA-JC kemudian.",
+        "Semak kesesuaian sekolah dengan bakat, bukan sekadar nama sekolah. Sebuah sekolah hanya berbaloi untuk slot DSA jika programnya sepadan dengan bakat khusus anak anda dan arah pertumbuhannya. Gunakan DSA Finder untuk melihat sekolah mana yang benar-benar menerima bidang bakat anak anda, kemudian baca bahan hari terbuka setiap sekolah yang disenarai pendek sebelum membuat keputusan. Sekolah yang kuat tetapi tiada tempat sebenar untuk bakat itu ialah pilihan DSA yang lemah.",
+        "Semak lantai PSLE boleh dicapai. Tawaran Sah masih memerlukan anak melepasi Posting Group minimum untuk kursus — AL 22 atau lebih baik untuk Express dan IP. Jika lantai itu sukar dicapai, Tawaran Sah IP boleh bertukar kepada Tawaran Balas O-Level, atau tidak kekal langsung. Lihat sejarah cut-off PSLE untuk menentukur apa yang realistik bagi sekolah dalam senarai pendek anda.",
+        "Semak keluarga bersedia untuk komitmen. Penerimaan ialah mengikat, komitmen bakat berjalan sekurang-kurangnya dua tahun, dan minat anak berusia 12 tahun boleh berubah. Adakan perbualan itu dengan anak anda sebelum memohon, bukan selepas tawaran tiba. Jika keempat-empat semakan lulus, DSA ialah laluan yang kuat dengan sedikit risiko. Jika dua atau lebih gagal, jawapan jujur biasanya \"bukan tahun ini\" — dan memilih untuk tidak memohon ialah keputusan yang sah, selalunya lebih bijak.",
+      ],
+      ta: [
+        "ஒரு DSA முயற்சிக்காக ஆரம்ப பள்ளி 6-இன் ஆறு வாரங்களை அர்ப்பணிப்பதற்கு முன், நான்கு நேர்மையான சரிபார்ப்புகளை நடத்துவது மதிப்புடையது. அவற்றில் எதுவும் உள் தகவல் தேவையில்லை — உங்கள் குழந்தை உண்மையில் ஆவணத்தில் என்ன வைத்திருக்கிறது என்பதைத் தெளிவாகப் பார்த்தால் போதும்.",
+        "ஆர்வத்தை அல்ல, சான்றைச் சரிபார்க்கவும். பிரிவு 3-இல் உள்ள மூன்று அடுக்குகளை மீண்டும் படியுங்கள். பதிவு அடுக்கு A அல்லது B-இல் இருந்தால், DSA தீவிரமாக முயற்சிக்கத் தகுந்தது. அது அடுக்கு C-க்குக் கீழே இருந்தால் — உண்மையான ஆர்வம், ஆனால் வெளி தரம், போட்டி முடிவு, அல்லது தொடர்ச்சியான CCA தலைமை இல்லை — இந்த ஆண்டின் யதார்த்தமான நடவடிக்கை PSLE தயாரிப்பைப் பாதுகாத்து, பிற்கால DSA-JC முயற்சிக்காக பதிவை உருவாக்குவதே.",
+        "பள்ளியின் பெயரை மட்டுமல்ல, பள்ளி-திறமை பொருத்தத்தைச் சரிபார்க்கவும். ஒரு பள்ளி அதன் திட்டம் உங்கள் குழந்தையின் குறிப்பிட்ட திறமைக்கும் அவர்கள் வளரும் திசைக்கும் பொருந்தினால் மட்டுமே DSA இடத்திற்குத் தகுதியானது. உங்கள் குழந்தையின் திறமைப் பகுதியை எந்தப் பள்ளிகள் உண்மையில் ஏற்கின்றன என்பதைப் பார்க்க DSA Finder-ஐப் பயன்படுத்துங்கள், பின்னர் முடிவெடுப்பதற்கு முன் குறுகிய பட்டியலிலுள்ள ஒவ்வொரு பள்ளியின் திறந்த நாள் தகவலையும் படியுங்கள். அந்தத் திறமைக்கு உண்மையான இடம் இல்லாத ஒரு வலுவான பள்ளி, DSA-க்கு பலவீனமான தேர்வு.",
+        "PSLE தளத்தை எட்ட முடியுமா எனச் சரிபார்க்கவும். Confirmed Offer இன்னும் பாடத்திற்கான குறைந்தபட்ச Posting Group-ஐ குழந்தை கடக்க வேண்டும் — Express மற்றும் IP-க்கு AL 22 அல்லது சிறந்தது. அந்தத் தளம் எட்டுவதற்குக் கடினமாக இருந்தால், IP Confirmed Offer ஒரு O-Level Counter-Offer ஆக மாறலாம், அல்லது நிலைக்காமல் போகலாம். உங்கள் குறுகிய பட்டியலில் உள்ள பள்ளிகளுக்கு என்ன யதார்த்தம் என்பதைச் சரிசெய்ய PSLE cut-off வரலாற்றைப் பாருங்கள்.",
+        "குடும்பம் உறுதிமொழிக்குத் தயாரா எனச் சரிபார்க்கவும். ஏற்றுக்கொள்வது கட்டுப்படுத்தும், திறமை உறுதிமொழி குறைந்தபட்சம் இரண்டு ஆண்டுகள் நீடிக்கும், மேலும் 12 வயது குழந்தையின் ஆர்வம் மாறலாம். சலுகை வந்த பிறகு அல்ல, விண்ணப்பிப்பதற்கு முன்பே அந்த உரையாடலை உங்கள் குழந்தையுடன் நடத்துங்கள். நான்கு சரிபார்ப்புகளும் தேறினால், DSA என்பது குறைந்த எதிர்மறையுடன் கூடிய வலுவான பாதை. இரண்டு அல்லது அதற்கு மேற்பட்டவை தோல்வியடைந்தால், நேர்மையான பதில் பொதுவாக \"இந்த ஆண்டு இல்லை\" — விண்ணப்பிக்காமல் இருப்பதைத் தேர்வது ஒரு முறையான, பெரும்பாலும் புத்திசாலித்தனமான முடிவு.",
+      ],
+    },
+  },
 ];
 
 const NEXT_TITLE: LocaleStr = {
@@ -291,10 +379,10 @@ const NEXT_TITLE: LocaleStr = {
 };
 
 const NEXT_BODY: LocaleStr = {
-  en: "Two pages take this further: the 2026 timeline (what happens when, with exact dates) and parent stories (how this plays out in practice for six different DSA pathways).",
-  zh: "两个页面把这套思路继续往前推：2026 时间线（什么时候发生什么、具体日期），以及家长实战经历（六个不同 DSA 路径在现实中是怎么走的）。",
-  ms: "Dua halaman meneruskan ini: garis masa 2026 (apa berlaku bila, dengan tarikh tepat) dan kisah ibu bapa (bagaimana ini berlaku dalam amalan untuk enam laluan DSA yang berbeza).",
-  ta: "இரண்டு பக்கங்கள் இதை மேலும் முன்னெடுத்துச் செல்கின்றன: 2026 கால அட்டவணை (என்ன எப்போது நடக்கிறது, துல்லியமான தேதிகளுடன்) மற்றும் பெற்றோர் கதைகள் (ஆறு வெவ்வேறு DSA பாதைகளுக்கு இது நடைமுறையில் எவ்வாறு செயல்படுகிறது).",
+  en: "Four pages take this further: the 2026 timeline (what happens when, with exact dates), the DSA Finder (which schools take your child's talent), the PSLE cut-off history (to calibrate the score floor), and parent stories (six DSA pathways in practice).",
+  zh: "四个页面把这套思路继续往前推：2026 时间线（什么时候发生什么、具体日期）、DSA Finder（哪些学校收孩子的才艺）、PSLE 截分历史（校准分数门槛），以及家长实战经历（六个 DSA 路径在现实中怎么走）。",
+  ms: "Empat halaman meneruskan ini: garis masa 2026 (apa berlaku bila, dengan tarikh tepat), DSA Finder (sekolah mana yang menerima bakat anak), sejarah cut-off PSLE (untuk menentukur lantai skor), dan kisah ibu bapa (enam laluan DSA dalam amalan).",
+  ta: "நான்கு பக்கங்கள் இதை மேலும் முன்னெடுத்துச் செல்கின்றன: 2026 கால அட்டவணை (என்ன எப்போது நடக்கிறது, துல்லியமான தேதிகளுடன்), DSA Finder (உங்கள் குழந்தையின் திறமையை எந்தப் பள்ளிகள் ஏற்கின்றன), PSLE cut-off வரலாறு (மதிப்பெண் தளத்தைச் சரிசெய்ய), மற்றும் பெற்றோர் கதைகள் (நடைமுறையில் ஆறு DSA பாதைகள்).",
 };
 
 const CTA_TIMELINE: LocaleStr = {
@@ -309,6 +397,20 @@ const CTA_STORIES: LocaleStr = {
   zh: "DSA 家长实战经历",
   ms: "Kisah Ibu Bapa DSA",
   ta: "DSA பெற்றோர் கதைகள்",
+};
+
+const CTA_FINDER: LocaleStr = {
+  en: "DSA Finder",
+  zh: "DSA Finder",
+  ms: "DSA Finder",
+  ta: "DSA Finder",
+};
+
+const CTA_COP: LocaleStr = {
+  en: "PSLE cut-off history",
+  zh: "PSLE 截分历史",
+  ms: "Sejarah cut-off PSLE",
+  ta: "PSLE cut-off வரலாறு",
 };
 
 const BC_GUIDE: LocaleStr = {
@@ -445,6 +547,20 @@ export function WhatIsDsaPageBody() {
                   className="inline-flex items-center gap-2 rounded-xl bg-champagne px-5 py-2.5 text-sm font-semibold text-intellectual-dark transition hover:bg-champagne-light"
                 >
                   <span style={{ textTransform: "none" }}>{pick(CTA_TIMELINE, locale)}</span>
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </Link>
+                <Link
+                  href="/dsa-finder"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/20"
+                >
+                  <span style={{ textTransform: "none" }}>{pick(CTA_FINDER, locale)}</span>
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </Link>
+                <Link
+                  href="/psle-cop"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/20"
+                >
+                  <span style={{ textTransform: "none" }}>{pick(CTA_COP, locale)}</span>
                   <ArrowRight className="h-4 w-4" aria-hidden />
                 </Link>
                 <Link

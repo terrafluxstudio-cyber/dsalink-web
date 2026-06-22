@@ -514,7 +514,7 @@ export function buildWhatIsDsaStructuredData(): Record<string, unknown> {
     inLanguage: "en-SG",
     image: `${base}/opengraph-image`,
     datePublished: "2026-05-10",
-    dateModified: "2026-06-08",
+    dateModified: "2026-06-22",
     author: org,
     publisher: org,
     about: {
