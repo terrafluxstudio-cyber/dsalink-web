@@ -233,11 +233,18 @@ function talentGroupKey(group: TalentGroup): string {
   return `${group.category}::${normalize(group.area)}`;
 }
 
-export function DsaSearchCenter({ initialQuery = "" }: { initialQuery?: string }) {
+export function DsaSearchCenter() {
   const { locale, t: copy } = useLanguage();
   const ui = UI_TRANSLATIONS[locale];
   const t = (key: DsaUiKey) => getDsaUiLabel(key, locale);
-  const [query, setQuery] = useState(initialQuery);
+  const [query, setQuery] = useState("");
+
+  // Prefill from the ?q= URL param on the client so the finder page itself
+  // stays statically cached (reading searchParams server-side forces no-store).
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get("q");
+    if (q) setQuery(q);
+  }, []);
   const [category, setCategory] = useState<Category | "All">("All");
   const [mode, setMode] = useState<ViewMode>("school");
   const [selectedTalent, setSelectedTalent] = useState<string | null>(null);

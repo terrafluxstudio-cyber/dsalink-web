@@ -1,7 +1,4 @@
 import type { Metadata } from "next";
-import { cookies } from "next/headers";
-import { DSALINK_LOCALE_KEY } from "@/lib/constants";
-import { getGuideLocaleStrings, isLocale, type Locale } from "@/lib/i18n";
 import { HeroSection } from "@/components/HeroSection";
 import { HomeBlogEntry } from "@/components/HomeBlogEntry";
 import { HomeFeaturedEvergreen } from "@/components/HomeFeaturedEvergreen";
@@ -15,22 +12,30 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { StatsStrip } from "@/components/StatsStrip";
 import { buildHomeStructuredData } from "@/lib/seo";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const jar = await cookies();
-  const raw = jar.get(DSALINK_LOCALE_KEY)?.value;
-  const locale: Locale = raw && isLocale(raw) ? raw : "en";
-  const home = getGuideLocaleStrings(locale);
+// Static EN metadata so the homepage stays ISR-cacheable (no cookies() =
+// no forced dynamic render). The in-page UI still switches language via
+// LanguageContext; only the OG/title metadata is fixed to EN.
+const HOME_META_TITLE =
+  "DSALink | DSA 2026 Strategy — Singapore Secondary School Admission Guide";
+const HOME_META_DESCRIPTION =
+  "Master DSA 2026 for Singapore secondary school admission. AL 20–25 middle-stream strategy, interview prep, 147-school directory with PSLE COP, and a 2026 open house calendar.";
+const HOME_OG_IMAGE_ALT =
+  "DSALink — DSA 2026 Singapore strategy guide, PSLE COP, and open houses";
 
+// Re-validate the cached homepage hourly.
+export const revalidate = 3600;
+
+export function generateMetadata(): Metadata {
   const ogImage = {
     url: "/opengraph-image",
     width: 1200,
     height: 630,
-    alt: home.homeOgImageAlt,
+    alt: HOME_OG_IMAGE_ALT,
   } as const;
 
   return {
-    title: { absolute: home.homeMetaTitle },
-    description: home.homeMetaDescription,
+    title: { absolute: HOME_META_TITLE },
+    description: HOME_META_DESCRIPTION,
     keywords: [
       "DSA Singapore 2026",
       "DSA interview tips Singapore",
@@ -46,8 +51,8 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: "/",
     },
     openGraph: {
-      title: home.homeMetaTitle,
-      description: home.homeMetaDescription,
+      title: HOME_META_TITLE,
+      description: HOME_META_DESCRIPTION,
       url: "/",
       siteName: "DSALink",
       type: "website",
@@ -55,8 +60,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: home.homeMetaTitle,
-      description: home.homeMetaDescription,
+      title: HOME_META_TITLE,
+      description: HOME_META_DESCRIPTION,
       images: [ogImage.url],
     },
   };

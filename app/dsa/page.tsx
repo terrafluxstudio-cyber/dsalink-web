@@ -50,13 +50,13 @@ export function generateMetadata(): Metadata {
   };
 }
 
-export default async function DsaPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ q?: string }>;
-}) {
+// Static, ISR-cacheable: the ?q= prefill is read client-side in
+// DsaSearchCenter so this page no longer reads searchParams (which would
+// force a dynamic, no-store render on every request).
+export const revalidate = 3600;
+
+export default function DsaPage() {
   const jsonLd = buildDsaFinderStructuredData();
-  const { q } = await searchParams;
 
   return (
     <>
@@ -69,7 +69,7 @@ export default async function DsaPage({
       <SiteHeader />
       <StaticPageBreadcrumb page="dsa-finder" />
       <main className="bg-surface">
-        <DsaSearchCenter initialQuery={q ?? ""} />
+        <DsaSearchCenter />
       </main>
       <StaticPageRelatedCards page="dsa-finder" />
       <PillarBackLink />
