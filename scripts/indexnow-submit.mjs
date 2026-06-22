@@ -8,7 +8,10 @@
 // Runs two ways:
 //   1. As a Vercel `postbuild` step — auto-pings after a *production* deploy.
 //      Preview builds and local `npm run build` are skipped (guard below).
-//   2. Manually with --force — submit regardless of environment.
+//      A submission failure here NEVER fails the build — it only warns. (On the
+//      very first deploy that adds the key file, the live site is still the
+//      previous deploy, so verification 403s once; the next deploy succeeds.)
+//   2. Manually with --force — submit regardless of environment, exit 1 on error.
 //
 // Usage:
 //   node scripts/indexnow-submit.mjs --force            # submit every sitemap URL
@@ -18,6 +21,7 @@
 //   NEXT_PUBLIC_SITE_URL  origin to submit for (default https://dsalink.sg)
 //   VERCEL_ENV            set by Vercel; only "production" auto-submits
 
+const FORCE = process.argv.includes("--force");
 const KEY = "8913a204d53f5a27e06b9b1751029c11";
 const SITE = (process.env.NEXT_PUBLIC_SITE_URL || "https://dsalink.sg").replace(
   /\/+$/,
@@ -34,13 +38,11 @@ async function sitemapUrls() {
 }
 
 async function main() {
-  const argv = process.argv.slice(2);
-  const force = argv.includes("--force");
-  const cliUrls = argv.filter((a) => a !== "--force");
+  const cliUrls = process.argv.slice(2).filter((a) => a !== "--force");
 
   // Guard: when run as postbuild (no --force), only the production deploy
   // submits. Skip local builds and Vercel preview deploys.
-  if (!force && process.env.VERCEL_ENV !== "production") {
+  if (!FORCE && process.env.VERCEL_ENV !== "production") {
     console.log(
       `IndexNow: skipped (VERCEL_ENV=${process.env.VERCEL_ENV ?? "unset"}, pass --force to override)`,
     );
@@ -67,6 +69,12 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error(err.message || err);
-  process.exit(1);
+  const msg = err?.message || String(err);
+  // Best-effort in postbuild: warn but let the build succeed. Only --force
+  // (manual) runs treat a failure as a hard error.
+  if (FORCE) {
+    console.error(`IndexNow: ${msg}`);
+    process.exit(1);
+  }
+  console.warn(`IndexNow: skipped — submission failed (${msg})`);
 });
