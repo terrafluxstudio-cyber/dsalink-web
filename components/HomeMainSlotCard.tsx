@@ -167,10 +167,10 @@ const SLOTS: Record<
       ta: "பள்ளிகள் மற்றும் திறமை பாதைகளை ஆராயவும்",
     },
     blurb: {
-      en: "The window opens 5 May. Use this stretch to build your shortlist — finder, PSLE COP history, and open-house takeaways.",
-      zh: "申请 5 月 5 日开放。利用这段时间用 finder、PSLE 历年分数线、开放日精华做候选名单。",
-      ms: "Tetingkap dibuka 5 Mei. Gunakan masa ini untuk senarai pendek — finder, sejarah PSLE COP, ringkasan hari terbuka.",
-      ta: "மே 5-ம் தேதி திறக்கப்படும். இந்த நேரத்தைப் பயன்படுத்தி குறுகிய பட்டியலை உருவாக்குங்கள் — தேடல், PSLE COP வரலாறு, திறந்த நாள் சாராம்சம்.",
+      en: "The window opens 6 May. Use this stretch to build your shortlist — finder, PSLE COP history, and open-house takeaways.",
+      zh: "申请 5 月 6 日开放。利用这段时间用 finder、PSLE 历年分数线、开放日精华做候选名单。",
+      ms: "Tetingkap dibuka 6 Mei. Gunakan masa ini untuk senarai pendek — finder, sejarah PSLE COP, ringkasan hari terbuka.",
+      ta: "மே 6-ம் தேதி திறக்கப்படும். இந்த நேரத்தைப் பயன்படுத்தி குறுகிய பட்டியலை உருவாக்குங்கள் — தேடல், PSLE COP வரலாறு, திறந்த நாள் சாராம்சம்.",
     },
     primary: {
       href: "/dsa-finder",

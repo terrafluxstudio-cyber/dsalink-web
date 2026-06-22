@@ -5,7 +5,7 @@ import { buildTimelineStructuredData } from "@/lib/seo";
 const PAGE_TITLE =
   "2026 DSA-Sec Application Timeline | Key Dates for Singapore Parents | DSALink";
 const PAGE_DESCRIPTION =
-  "The full 2026 DSA-Sec application timeline — research phase, application window (5 May–2 Jun), interview & trial season, October preference exercise, results released with PSLE. Plain dates, with links to deeper prep at each phase.";
+  "The full 2026 DSA-Sec application timeline — research phase, application window (6 May–2 Jun), interview & trial season, October preference exercise, results released with PSLE. Plain dates, with links to deeper prep at each phase.";
 
 const ogImage = {
   url: "/opengraph-image",

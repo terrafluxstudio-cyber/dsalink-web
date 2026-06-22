@@ -83,10 +83,10 @@ const PHASES: Phase[] = [
     id: "apply",
     icon: ClipboardCheck,
     dates: {
-      en: "5 May — 2 Jun 2026 · 4:30pm SGT",
-      zh: "2026 年 5 月 5 日 — 6 月 2 日 · 下午 4:30",
-      ms: "5 Mei — 2 Jun 2026 · 4:30 petang SGT",
-      ta: "5 மே — 2 ஜூன் 2026 · மாலை 4:30 SGT",
+      en: "6 May — 2 Jun 2026 · 4:30pm SGT",
+      zh: "2026 年 5 月 6 日 — 6 月 2 日 · 下午 4:30",
+      ms: "6 Mei — 2 Jun 2026 · 4:30 petang SGT",
+      ta: "6 மே — 2 ஜூன் 2026 · மாலை 4:30 SGT",
     },
     label: {
       en: "Application window",

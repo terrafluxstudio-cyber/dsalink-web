@@ -90,7 +90,7 @@ const JOURNEY = [
   {
     icon: FileSearch,
     label: { en: "Apply", zh: "申请", ms: "Mohon", ta: "விண்ணப்பி" },
-    sub: { en: "5 May-2 Jun", zh: "5/5-6/2", ms: "5 Mei-2 Jun", ta: "5 மே-2 ஜூன்" },
+    sub: { en: "6 May-2 Jun", zh: "5/6-6/2", ms: "6 Mei-2 Jun", ta: "6 மே-2 ஜூன்" },
   },
   {
     icon: MessageSquareText,
@@ -156,10 +156,10 @@ const TLDR_BULLETS: LocaleStr[] = [
     ta: "DSA-Sec என்பது கல்வி அல்ல, திறமையின் அடிப்படையில் இடைநிலை பள்ளிக்கான மாற்று வழி, PSLE உடன் இணையாக இயங்குகிறது.",
   },
   {
-    en: "MOE runs the central portal once a year (5 May–2 Jun 2026); each school decides who gets in.",
-    zh: "MOE 每年开一次中央门户（2026 年 5/5-6/2），具体录谁由学校决定。",
-    ms: "MOE mengendalikan portal pusat setahun sekali (5 Mei–2 Jun 2026); setiap sekolah memutuskan kemasukan.",
-    ta: "MOE ஒவ்வொரு ஆண்டும் ஒருமுறை மத்திய வாயிலை இயக்குகிறது (5 மே–2 ஜூன் 2026); ஒவ்வொரு பள்ளியும் சேர்க்கையைத் தீர்மானிக்கிறது.",
+    en: "MOE runs the central portal once a year (6 May–2 Jun 2026); each school decides who gets in.",
+    zh: "MOE 每年开一次中央门户（2026 年 5/6-6/2），具体录谁由学校决定。",
+    ms: "MOE mengendalikan portal pusat setahun sekali (6 Mei–2 Jun 2026); setiap sekolah memutuskan kemasukan.",
+    ta: "MOE ஒவ்வொரு ஆண்டும் ஒருமுறை மத்திய வாயிலை இயக்குகிறது (6 மே–2 ஜூன் 2026); ஒவ்வொரு பள்ளியும் சேர்க்கையைத் தீர்மானிக்கிறது.",
   },
   {
     en: "Max 3 schools per applicant, max 2 talent areas per school — 6 entries total at most.",
@@ -431,7 +431,7 @@ const TIMELINE_HORIZ_5: TimelineCol[] = [
   },
   {
     phase: { en: "Apply", zh: "申请", ms: "Mohon", ta: "விண்ணப்பி" },
-    dates: { en: "5 May – 2 Jun 4:30pm", zh: "5/5 – 6/2 下午 4:30", ms: "5 Mei – 2 Jun 4:30 ptg", ta: "5 மே – 2 ஜூன் 4:30" },
+    dates: { en: "6 May – 2 Jun 4:30pm", zh: "5/6 – 6/2 下午 4:30", ms: "6 Mei – 2 Jun 4:30 ptg", ta: "6 மே – 2 ஜூன் 4:30" },
     you: { en: "Singpass login · 3 schools × 2 talents · upload documents", zh: "Singpass 登录 · 3 校 × 2 才艺 · 上传材料", ms: "Singpass · 3 sekolah × 2 bakat · muat naik dokumen", ta: "Singpass · 3 பள்ளி × 2 திறமை · ஆவணம்" },
     schools: { en: "Receive applications · prepare own shortlisting", zh: "接收申请 · 准备校内筛选", ms: "Terima permohonan · sediakan penapisan", ta: "விண்ணப்பங்களைப் பெறுதல் · குறுகிய பட்டியல்" },
   },
@@ -669,7 +669,7 @@ const COMPARE_ROWS: ComparisonRow[] = [
   },
   {
     aspect: { en: "Window", zh: "时间窗口", ms: "Tetingkap", ta: "காலம்" },
-    dsa: { en: "5 May – 2 Jun 2026 portal", zh: "2026 年 5/5 – 6/2 门户", ms: "Portal 5 Mei – 2 Jun 2026", ta: "5 மே – 2 ஜூன் 2026 வாயில்" },
+    dsa: { en: "6 May – 2 Jun 2026 portal", zh: "2026 年 5/6 – 6/2 门户", ms: "Portal 6 Mei – 2 Jun 2026", ta: "6 மே – 2 ஜூன் 2026 வாயில்" },
     psle: { en: "Sep–Oct exam · Nov–Dec posting", zh: "9-10 月考试 · 11-12 月派位", ms: "Peperiksaan Sep-Okt · Penempatan Nov-Dis", ta: "செப்-அக் தேர்வு · நவ-டிச இடம் ஒதுக்கீடு" },
   },
   {

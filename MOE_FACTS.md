@@ -7,7 +7,7 @@
 | DSA 对所有 P6 学生开放，无学术门槛 | MOE 官方政策 |
 | 每位学生最多申请 3 所学校，每所最多 2 个才艺方向 | MOE 官方规则 |
 | 非 IP 学校：DSA 名额上限为 S1 总名额的 20% | MOE 官方数据 |
-| 2026 年申请窗口：5月5日 – 6月2日 4:30pm SGT | MOE 官方公告 |
+| 2026 年申请窗口：**5月6日（6 May，周三）11am – 6月2日（2 Jun）4:30pm SGT** | MOE 官方新闻稿 20260505（cal 验证 5/6 为周三）⚠️ 旧版误记 5 May，2026-06-22 已订正 |
 | 接受 Confirmed Offer 具有约束力，不可参加 S1 Posting | MOE 官方规则 |
 | 4所纯 DSA 学校：NUS High、SOTA、SST、新加坡体育学校 | MOE 官方列表 |
 | DSA 录取以通过最低 Posting Group 为条件（IP/Express：AL ≤ 22） | MOE 官方条件 |
