@@ -345,6 +345,24 @@ export function TimelinePageBody() {
     ms: "Tarikh jelas untuk kitaran 2026, dengan tindakan setiap fasa diperlukan dan perkara yang ibu bapa paling kerap terlepas pandang. Tarikh mengikut jadual MOE 2026 DSA-Sec — sentiasa sahkan tarikh akhir kritikal di portal rasmi.",
     ta: "2026 சுழற்சிக்கான தெளிவான தேதிகள், ஒவ்வொரு கட்டமும் தேவைப்படும் செயல்களுடன் மற்றும் பெற்றோர் அடிக்கடி தவறவிடும் விஷயங்களுடன். தேதிகள் MOE 2026 DSA-Sec அட்டவணையைப் பின்பற்றுகின்றன — முக்கியமான இறுதி தேதிகளை எப்போதும் அதிகாரப்பூர்வ வாயிலில் உறுதிப்படுத்தவும்.",
   };
+  const quickRefHeading: LocaleStr = {
+    en: "2026 DSA-Sec key dates at a glance",
+    zh: "2026 DSA-Sec 关键日期速查",
+    ms: "Tarikh penting DSA-Sec 2026 sepintas lalu",
+    ta: "2026 DSA-Sec முக்கிய தேதிகள் ஒரே பார்வையில்",
+  };
+  const thDate: LocaleStr = {
+    en: "Date",
+    zh: "日期",
+    ms: "Tarikh",
+    ta: "தேதி",
+  };
+  const thStage: LocaleStr = {
+    en: "Stage",
+    zh: "阶段",
+    ms: "Peringkat",
+    ta: "கட்டம்",
+  };
   const factsHeading: LocaleStr = {
     en: "Two rules parents most often miss",
     zh: "家长最常漏掉的两条规则",
@@ -462,6 +480,34 @@ export function TimelinePageBody() {
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-intellectual-muted sm:text-lg">
               {pick(subtitle, locale)}
             </p>
+          </div>
+        </section>
+
+        <section className="border-y border-intellectual/10 bg-white/50 py-8 sm:py-10">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6">
+            <h2 className="mb-4 font-display text-lg font-bold text-intellectual sm:text-xl" style={{ textTransform: "none" }}>
+              {pick(quickRefHeading, locale)}
+            </h2>
+            <div className="overflow-hidden rounded-2xl border border-intellectual/12">
+              <table className="w-full border-collapse text-left text-sm">
+                <thead>
+                  <tr className="bg-intellectual/5 text-intellectual">
+                    <th className="px-4 py-2.5 font-semibold">{pick(thDate, locale)}</th>
+                    <th className="px-4 py-2.5 font-semibold">{pick(thStage, locale)}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {PHASES.map((phase) => (
+                    <tr key={phase.id} className="border-t border-intellectual/10">
+                      <td className="whitespace-nowrap px-4 py-2.5 align-top font-semibold text-champagne-dark">
+                        {pick(phase.dates, locale)}
+                      </td>
+                      <td className="px-4 py-2.5 text-intellectual-muted">{pick(phase.label, locale)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
 
