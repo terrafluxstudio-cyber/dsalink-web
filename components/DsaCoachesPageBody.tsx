@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Compass, ExternalLink, School, Users } from "lucide-react";
 import { useMemo, useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 import { PageHeader } from "@/components/PageHeader";
 import { PillarBackLink } from "@/components/PillarBackLink";
 import { RelatedCardsRow } from "@/components/RelatedCardsRow";
@@ -730,6 +731,15 @@ export function DsaCoachesPageBody() {
                     href={coach.website}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() =>
+                      trackEvent("coach_click", {
+                        coach_id: coach.id,
+                        coach_name: coach.name,
+                        coach_type: coach.type,
+                        talent: coach.talentAreas.join(","),
+                        prominence: coach.prominence,
+                      })
+                    }
                     className="inline-flex items-center gap-1.5 self-start rounded-lg border border-intellectual/20 bg-intellectual/5 px-3 py-1.5 text-[0.8125rem] font-medium normal-case text-intellectual transition hover:bg-intellectual/10"
                   >
                     {t.dsaCoachesVisitWebsite}
