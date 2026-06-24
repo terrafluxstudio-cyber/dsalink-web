@@ -3,9 +3,9 @@ import { DsaExperiencePageBody } from "@/components/DsaExperiencePageBody";
 import { buildDsaExperienceStructuredData } from "@/lib/seo";
 
 const PAGE_TITLE =
-  "Singapore DSA Experience Guide | School Selectivity, Talent Bars & 2026 Timeline | DSALink";
+  "How DSA Offers Really Work in Singapore (2026) | DSALink";
 const PAGE_DESCRIPTION =
-  "A practical English guide to Singapore DSA: how offers work with PSLE AL, school selectivity vs talent tiers, sports and arts assessment, leadership and STEM paths, the 2026 timeline, common mistakes, and a pre-application checklist.";
+  "A practical guide to how DSA actually plays out: how offers interact with PSLE AL, school selectivity vs talent tiers, how sports, arts and leadership are assessed, the 2026 timeline, and the common mistakes to avoid.";
 
 const ogImage = {
   url: "/opengraph-image",

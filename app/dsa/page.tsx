@@ -7,9 +7,9 @@ import { StaticPageBreadcrumb, StaticPageRelatedCards } from "@/components/Stati
 import { buildDsaFinderStructuredData } from "@/lib/dsa-seo";
 
 const DSA_PAGE_TITLE =
-  "DSA 2026 Talent Areas: 1,300+ Categories Across 147 Schools";
+  "DSA School Finder 2026: 147 Schools, 1,300+ Talents | DSALink";
 const DSA_PAGE_DESCRIPTION =
-  "Find schools for Concert Band, Robotics, and 1300+ DSA talents. Integrated with 2025 PSLE COP data.";
+  "Search every Singapore secondary school by DSA talent — sport, instrument, art, robotics, leadership and 1,300+ more. Filter by zone and programme, with 2025 PSLE COP built in.";
 
 const ogImage = {
   url: "/opengraph-image",

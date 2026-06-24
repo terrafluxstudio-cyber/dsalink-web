@@ -328,16 +328,16 @@ export function TimelinePageBody() {
   const { locale } = useLanguage();
 
   const kicker: LocaleStr = {
-    en: "2026 Application Timeline · Singapore",
-    zh: "2026 申请时间线 · 新加坡",
-    ms: "Garis Masa Permohonan 2026 · Singapura",
-    ta: "2026 விண்ணப்ப கால அட்டவணை · சிங்கப்பூர்",
+    en: "DSA-Sec Timeline 2026 · Singapore",
+    zh: "DSA-Sec 时间线 2026 · 新加坡",
+    ms: "Garis Masa DSA-Sec 2026 · Singapura",
+    ta: "DSA-Sec கால அட்டவணை 2026 · சிங்கப்பூர்",
   };
   const title: LocaleStr = {
-    en: "The 2026 DSA-Sec timeline, in five phases.",
-    zh: "2026 DSA-Sec 全程，五个阶段一次看清。",
-    ms: "Garis masa DSA-Sec 2026, dalam lima fasa.",
-    ta: "2026 DSA-Sec கால அட்டவணை, ஐந்து கட்டங்களில்.",
+    en: "DSA Timeline 2026: the Singapore DSA-Sec cycle in five phases",
+    zh: "DSA 时间线 2026：新加坡 DSA-Sec 全程五个阶段",
+    ms: "Garis Masa DSA 2026: kitaran DSA-Sec Singapura dalam lima fasa",
+    ta: "DSA கால அட்டவணை 2026: சிங்கப்பூர் DSA-Sec சுழற்சி ஐந்து கட்டங்களில்",
   };
   const subtitle: LocaleStr = {
     en: "Plain dates for the 2026 cycle, with the actions each phase requires and the things parents most often miss. Dates follow the MOE 2026 DSA-Sec schedule — always confirm critical deadlines on the official portal.",

@@ -4,9 +4,9 @@ import { FAQ_QA } from "@/lib/dsa-guide-faq";
 import { getSiteUrl } from "@/lib/seo";
 
 const PAGE_TITLE =
-  "DSA Singapore Guide 2026 | Direct School Admission Complete Guide | DSALink";
+  "DSA Singapore 2026: Direct School Admission Guide | DSALink";
 const PAGE_DESCRIPTION =
-  "The complete Singapore DSA-Sec guide — what Direct School Admission is, the 2019 reforms, talent-specific prep pages, 147 participating schools, the 2026 application timeline, interview prep, and how outcomes work. Built for P5/P6 families.";
+  "What DSA-Sec is, who it's for, and how to apply in 2026 — all 147 participating schools, 1,300+ talent areas, the application timeline, interview prep, and how offers actually work. Written for P5/P6 families.";
 
 const ogImage = {
   url: "/opengraph-image",

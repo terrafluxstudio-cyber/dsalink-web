@@ -8,9 +8,9 @@ import { StaticPageBreadcrumb, StaticPageRelatedCards } from "@/components/Stati
 import { buildOpenHousesStructuredData } from "@/lib/seo";
 
 const OPEN_HOUSES_TITLE =
-  "May 2026 Open House Calendar | 147 Singapore Secondary Schools | DSALink";
+  "Secondary School Open House 2026: All 147 Schools | DSALink";
 const OPEN_HOUSES_DESCRIPTION =
-  "Filter MOE secondary schools by zone and programme (IP, SAP, O-Level). Compare on-site vs online sessions, read address and timing notes, and jump straight to each school’s official DSA or admissions page.";
+  "Find 2026 secondary school open house dates across every zone — compare on-site vs online sessions, see timing and address notes, and jump straight to each school's official DSA or admissions page.";
 
 const openHousesOgImage = {
   url: "/opengraph-image",

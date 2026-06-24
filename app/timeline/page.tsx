@@ -3,9 +3,9 @@ import { TimelinePageBody } from "@/components/TimelinePageBody";
 import { buildTimelineStructuredData } from "@/lib/seo";
 
 const PAGE_TITLE =
-  "2026 DSA-Sec Application Timeline | Key Dates for Singapore Parents | DSALink";
+  "DSA Timeline 2026: Key Dates & Calendar (Singapore) | DSALink";
 const PAGE_DESCRIPTION =
-  "The full 2026 DSA-Sec application timeline — research phase, application window (6 May–2 Jun), interview & trial season, October preference exercise, results released with PSLE. Plain dates, with links to deeper prep at each phase.";
+  "Every key DSA-Sec 2026 date in one place: the application window (6 May–2 Jun), interview & trial season, the October preference exercise, and results released with PSLE — plus what to prepare at each stage.";
 
 const ogImage = {
   url: "/opengraph-image",

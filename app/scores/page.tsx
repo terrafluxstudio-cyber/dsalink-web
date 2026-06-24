@@ -7,9 +7,9 @@ import { StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
 import { buildScoresStructuredData } from "@/lib/seo";
 
 const SCORES_PAGE_TITLE =
-  "PSLE COP | Singapore Secondary Schools (AL 2023–2025)";
+  "PSLE Cut-Off Points 2026: Secondary School COP (AL) | DSALink";
 const SCORES_PAGE_DESCRIPTION =
-  "Sortable PSLE posting bands (AL era, 2023–2025) for 140+ Singapore secondary schools: filter by name, zone, SAP, IP, and gender. Indicative data for reference only.";
+  "PSLE cut-off points (AL era, 2023–2025) for 140+ Singapore secondary schools — sort and filter by zone, SAP, IP and gender to gauge each school's posting band for the 2026 intake. Indicative reference data.";
 
 const SCORES_KEYWORDS = [
   "PSLE COP",
