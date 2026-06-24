@@ -588,6 +588,47 @@ const areaTagStyles: Record<TalentArea, string> = {
   tech: "border-intellectual/25 bg-white text-intellectual",
 };
 
+// "要不要教练 + 怎么挑" 引导段（四语言）。诚实不煽动：很多家庭自己准备就够，
+// 把"我需要帮助"那部分家长导向下方名录。直接抬 coach_click 转化。
+const GUIDE = {
+  needHeading: {
+    en: "Do you actually need a coach?",
+    zh: "到底要不要请教练",
+    ms: "Perlukah anda mengupah jurulatih?",
+    ta: "உங்களுக்கு பயிற்சியாளர் உண்மையில் தேவையா?",
+  },
+  needBody: {
+    en: "Many families prepare well on their own — especially when a child's talent is already strong and there is time before the trials. A coach helps most when the talent needs technical assessment (auditions, portfolios, sports trials), when you are short on time, or when you are aiming at highly competitive schools. If that is not you, the free guides on this site may be enough.",
+    zh: "很多家庭自己准备得很好——尤其当孩子的才艺本来就强、离试训还有时间。教练最能帮上忙的情况是：才艺需要专业评估（试唱、作品集、运动试训）、你时间紧、或目标是竞争很激烈的学校。如果不是这几种，本站的免费指南可能就够了。",
+    ms: "Ramai keluarga membuat persediaan dengan baik sendiri — terutamanya apabila bakat anak sudah kukuh dan ada masa sebelum percubaan. Jurulatih paling membantu apabila bakat memerlukan penilaian teknikal (ujibakat, portfolio, percubaan sukan), apabila anda kesuntukan masa, atau apabila anda menyasarkan sekolah yang sangat kompetitif. Jika tidak, panduan percuma di laman ini mungkin sudah memadai.",
+    ta: "பல குடும்பங்கள் தாங்களாகவே நன்றாகத் தயாராகின்றன — குறிப்பாக குழந்தையின் திறமை ஏற்கனவே வலுவாக இருந்து, சோதனைகளுக்கு முன் நேரம் இருக்கும்போது. திறமைக்கு தொழில்நுட்ப மதிப்பீடு (ஒலித்தேர்வுகள், போர்ட்ஃபோலியோ, விளையாட்டு சோதனைகள்) தேவைப்படும்போது, நேரம் குறைவாக இருக்கும்போது, அல்லது மிகவும் போட்டி நிறைந்த பள்ளிகளை இலக்காகக் கொள்ளும்போது பயிற்சியாளர் அதிகம் உதவுவார். இல்லையெனில், இந்தத் தளத்தின் இலவச வழிகாட்டிகள் போதுமானதாக இருக்கலாம்.",
+  },
+  chooseHeading: {
+    en: "How to choose one",
+    zh: "怎么挑教练",
+    ms: "Cara memilih jurulatih",
+    ta: "எப்படித் தேர்ந்தெடுப்பது",
+  },
+  check1: {
+    en: "Talent-area fit — pick someone who has actually placed students through your child's specific talent, not a general tutor.",
+    zh: "对口才艺——选真正帮学生进过你孩子那项才艺的人，不是泛泛的补习老师。",
+    ms: "Padanan bidang bakat — pilih sesiapa yang benar-benar pernah membantu pelajar masuk melalui bakat khusus anak anda, bukan tutor umum.",
+    ta: "திறமைப் பொருத்தம் — உங்கள் குழந்தையின் குறிப்பிட்ட திறமை வழியாக மாணவர்களை உண்மையில் சேர்க்க உதவியவரைத் தேர்ந்தெடுங்கள், பொது ஆசிரியர் அல்ல.",
+  },
+  check2: {
+    en: "DSA track record — ask for school placement examples and whether they cover the interview and portfolio, not just the skill itself.",
+    zh: "DSA 经验——问清楚有没有具体的录取案例、是否覆盖面试和作品集，不只是教技能本身。",
+    ms: "Rekod DSA — minta contoh penempatan sekolah dan sama ada mereka merangkumi temu duga dan portfolio, bukan kemahiran itu sahaja.",
+    ta: "DSA அனுபவம் — பள்ளி சேர்க்கை எடுத்துக்காட்டுகளையும், அவர்கள் நேர்காணல் மற்றும் போர்ட்ஃபோலியோவை உள்ளடக்குகிறார்களா என்பதையும் கேளுங்கள், திறமை மட்டுமல்ல.",
+  },
+  check3: {
+    en: "Honest claims — no one can guarantee a place; the school decides. Be wary of anyone who promises one.",
+    zh: "说法要诚实——没人能保证录取，决定权在学校。任何打包票的，要当心。",
+    ms: "Dakwaan yang jujur — tiada siapa boleh menjamin tempat; sekolah yang menentukan. Berhati-hati dengan sesiapa yang menjanjikannya.",
+    ta: "நேர்மையான கூற்றுகள் — யாரும் இடத்தை உறுதியளிக்க முடியாது; பள்ளியே தீர்மானிக்கிறது. உறுதியளிப்பவர்களிடம் எச்சரிக்கையாக இருங்கள்.",
+  },
+} satisfies Record<string, LocaleStr4>;
+
 export function DsaCoachesPageBody() {
   const { locale, t } = useLanguage();
   const [activeArea, setActiveArea] = useState<AreaFilter>("all");
@@ -645,6 +686,31 @@ export function DsaCoachesPageBody() {
           title={t.dsaCoachesHeading}
           subtitle={t.dsaCoachesLead}
         />
+
+        <section className="mx-auto mt-6 max-w-5xl px-4 sm:px-6">
+          <div className="rounded-2xl border border-champagne/40 bg-champagne/5 p-5 sm:p-6">
+            <h2
+              className="font-display text-[1.0625rem] font-semibold text-intellectual sm:text-lg"
+              style={{ textTransform: "none" }}
+            >
+              {GUIDE.needHeading[locale]}
+            </h2>
+            <p className="mt-2 max-w-3xl text-[0.875rem] leading-relaxed text-slate-600">
+              {GUIDE.needBody[locale]}
+            </p>
+            <h3
+              className="mt-5 font-display text-[0.9375rem] font-semibold text-intellectual"
+              style={{ textTransform: "none" }}
+            >
+              {GUIDE.chooseHeading[locale]}
+            </h3>
+            <ul className="mt-2 space-y-1.5 border-l-2 border-champagne/50 pl-4 text-[0.875rem] leading-relaxed text-slate-600">
+              <li>{GUIDE.check1[locale]}</li>
+              <li>{GUIDE.check2[locale]}</li>
+              <li>{GUIDE.check3[locale]}</li>
+            </ul>
+          </div>
+        </section>
 
         <section className="mx-auto max-w-5xl px-4 pt-8 sm:px-6">
           <p className="mb-7 max-w-3xl text-[11px] leading-relaxed text-slate-400">
