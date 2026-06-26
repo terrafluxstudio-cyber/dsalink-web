@@ -990,6 +990,13 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
             en: "How the candidate listens at the briefing, whether they pack their own kit and warm up without being told, whether they thank the starter or the official. Track-and-field training is more solitary than team-sport training, and coaches are looking for athletes whose self-discipline carries them through morning runs and Saturday long sessions without supervision. The trial day is a small window into that habit.",
           },
         },
+        // 来源 Club ZOOM 回信(2026-06-25, Tan Wei Leong)。先不署名融入；blog 发布时改成署名引用。
+        {
+          label: { en: "Beyond the mark — character, leadership, and the long game" },
+          body: {
+            en: "Schools are recruiting future student-athletes and future leaders, not just fast times. Beyond the performance mark, panels weigh character, resilience, communication, and whether a child can balance training with academics over four years. Signals that carry weight: a sustained, multi-year record of improvement rather than one peak result; leadership roles, community involvement, or overseas exposure; and the maturity to keep showing up through the unglamorous parts of training. A candidate whose trajectory points upward over several seasons often reads stronger than one who posts a single standout mark — schools are betting on who the athlete becomes by Sec 4, not who they are at twelve.",
+          },
+        },
       ],
       positionFocus: [
         {
