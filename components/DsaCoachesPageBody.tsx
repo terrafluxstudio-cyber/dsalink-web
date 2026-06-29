@@ -146,16 +146,6 @@ export const coaches: Coach[] = [
     prominence: 3,
   },
   {
-    id: "mindchamps-dsa",
-    type: "institution",
-    name: "MindChamps Academie of Stars",
-    talentAreas: ["performing-arts", "music"],
-    tagline:
-      "Singapore DSA centre for drama, singing, and dance. LAMDA and ABRSM certification pathways, with published placement claims on its own site.",
-    website: "https://www.dsa.mindchamps.org/",
-    prominence: 3,
-  },
-  {
     id: "elixir-academy",
     type: "institution",
     name: "Elixir Academy",
