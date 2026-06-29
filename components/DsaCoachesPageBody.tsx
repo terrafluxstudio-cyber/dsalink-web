@@ -296,6 +296,26 @@ export const coaches: Coach[] = [
     prominence: 2,
   },
   {
+    id: "jun-tennis",
+    type: "institution",
+    name: "Jun Tennis Academy",
+    talentAreas: ["sports"],
+    tagline:
+      "Junior tennis coaching academy focused on competitive matchplay and tournament experience. Develops the strokes, match temperament, and ranking record that school DSA tennis trials assess.",
+    website: "https://www.junboytennis.com/",
+    prominence: 2,
+  },
+  {
+    id: "bianka-panova",
+    type: "institution",
+    name: "Bianka Panova Academy",
+    talentAreas: ["sports"],
+    tagline:
+      "Rhythmic gymnastics academy (operated by SG Gymnastic Academy) with structured training in apparatus skills, flexibility, and competition routines. Has coached gymnasts who have earned DSA offers.",
+    website: "https://www.biankapanova.com/",
+    prominence: 2,
+  },
+  {
     id: "singacademy",
     type: "institution",
     name: "SingAcademy - DSA Specialists",
