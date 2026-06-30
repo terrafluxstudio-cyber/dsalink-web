@@ -95,14 +95,15 @@ export default function HomePage() {
         {/* L4 · Current-period main slot — date-driven big card */}
         <HomeMainSlotCard />
 
-        {/* L5 · 4 quick-link side cards — the rest of the 5-item nav */}
+        {/* L5 · Blog — latest 3 posts; lifted from near the footer to sit right
+            under the phase card so expert/coach-backed articles get seen (EN only) */}
+        <HomeBlogEntry />
+
+        {/* L6 · 4 quick-link side cards — the rest of the 5-item nav */}
         <HomeNavCardsRow />
 
-        {/* L6 · Featured Evergreen — Takeaways · PSLE COP (data anchors) */}
+        {/* L7 · Featured Evergreen — Takeaways · PSLE COP (data anchors) */}
         <HomeFeaturedEvergreen />
-
-        {/* L7 · Blog — latest 3 time-sensitive posts (EN only) */}
-        <HomeBlogEntry />
 
         {/* L8 · Email subscribe — dark closing band, 8–11 month return mechanism */}
         <HomepageSubscribeBanner />

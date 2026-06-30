@@ -17,10 +17,10 @@ export function HomeBlogEntry() {
           <div>
             <p className="mb-2 inline-flex items-center gap-1.5 text-[11px] font-semibold tracking-[0.18em] text-intellectual/70 normal-case">
               <Newspaper className="h-3.5 w-3.5" aria-hidden />
-              From the blog
+              Expert voices · from the blog
             </p>
             <h2 className="font-display text-2xl font-semibold text-intellectual sm:text-3xl">
-              Time-sensitive notes from the field.
+              Coaches and the field, in their own words.
             </h2>
           </div>
           <Link
