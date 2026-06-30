@@ -39,3 +39,6 @@ yarn-error.log*
 
 # temp: root-owned corrupted node_modules moved aside, delete with sudo
 node_modules_BROKEN_ROOT_delete_later/
+
+# 源图/母版资产(本地保留,不入仓库——优化版已在 public/)
+_assets/
