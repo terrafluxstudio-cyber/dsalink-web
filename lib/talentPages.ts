@@ -990,7 +990,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
             en: "How the candidate listens at the briefing, whether they pack their own kit and warm up without being told, whether they thank the starter or the official. Track-and-field training is more solitary than team-sport training, and coaches are looking for athletes whose self-discipline carries them through morning runs and Saturday long sessions without supervision. The trial day is a small window into that habit.",
           },
         },
-        // 来源 Club ZOOM 回信(2026-06-25, Tan Wei Leong)。先不署名融入；blog 发布时改成署名引用。
+        // 来源 Club ZOOM 回信(2026-06-25, Tan Wei Leong)。永久保持中立、不署名——署名版只在 blog 合辑里。勿在此页加机构名/外链。
         {
           label: { en: "Beyond the mark — character, leadership, and the long game" },
           body: {
@@ -6241,6 +6241,13 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           label: { en: "Coachability and court behaviour between drills" },
           body: {
             en: "How the trialist behaves between drills, whether they pick up balls without being asked, encourage a hitting partner, and accept immediate corrections without sulking. International youth coaching research consistently rates these signals among the top predictors of long-term improvement — and Singapore school coaches, who'll work with this child for four years across NSG B and A divisions, weight them heavily.",
+          },
+        },
+        // 来源 Jun Tennis Academy 回信(2026-06-27)。中立融入、不署名——署名版只在 blog 合辑。勿在此页加机构名/外链。
+        {
+          label: { en: "Social fit with the squad — especially at girls' schools" },
+          body: {
+            en: "Beyond strokes, some programmes weigh how naturally a candidate connects with the existing players, the coach, and the teachers they meet on trial day — particularly at established girls'-school teams, where squad chemistry is part of what the panel is protecting. A candidate who is warm, sociable, and easy to talk to during the interview portion can leave a stronger impression than an equally skilled player who is withdrawn or answers in monosyllables. School tennis is played as a team at NSG even though points are won individually, and panels are choosing someone who will train alongside the same group for four years.",
           },
         },
       ],
@@ -12794,6 +12801,11 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
         {
           label: { en: "Trainability and temperament" },
           body: { en: "Gymnastics is a high-discipline, high-repetition, fear-managing sport, and coaches recruit for temperament as much as current skill. Panels watch how a candidate takes correction during the trial, whether they commit to a skill or hesitate, and how they respond after a fall or a missed element. A coachable, resilient candidate with sound fundamentals is often preferred over a more skilled one who is fragile under pressure — the school is selecting someone they will train for years." },
+        },
+        // 来源 Bianka Panova Academy 回信(2026-06-28)。中立融入、不署名——署名版只在 blog 合辑。勿在此页加机构名/外链。
+        {
+          label: { en: "Expression, creativity, and leadership potential" },
+          body: { en: "Beyond clean execution, panels — especially in rhythmic and floor disciplines — look for artistry and creative expression: the candidate who performs a routine rather than merely completing it, bringing musicality and personality to the movement. Many schools also read for leadership potential — the candidate who could anchor a squad and set the tone in training. These qualities sit alongside the physical dimensions rather than replacing them, and they often separate two candidates whose strength and technique are otherwise close." },
         },
       ],
       positionFocus: [
