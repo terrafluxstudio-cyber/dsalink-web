@@ -29,7 +29,7 @@ export function RelatedCardsRow({
   items: RelatedCardItem[];
 }) {
   return (
-    <section className="bg-surface pt-12 sm:pt-16">
+    <section className="bg-surface py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mb-6 sm:mb-8">
           <p className="mb-2 text-[11px] font-semibold tracking-[0.18em] text-intellectual/70 normal-case">
