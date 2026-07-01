@@ -2,9 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { type BlogPost } from "@/lib/blog";
 
-type Props = Pick<BlogPost, "slug" | "title" | "excerpt" | "date" | "heroImage">;
+type Props = Pick<BlogPost, "slug" | "title" | "excerpt" | "date" | "heroImage"> & {
+  /** Eager-load the hero image. True for above-the-fold lists (e.g. /blog); pass false when the card sits below the fold (e.g. homepage). */
+  priority?: boolean;
+};
 
-export function BlogPostCard({ slug, title, excerpt, date, heroImage }: Props) {
+export function BlogPostCard({ slug, title, excerpt, date, heroImage, priority = true }: Props) {
   const formattedDate = new Date(date).toLocaleDateString("en-SG", {
     day: "numeric",
     month: "long",
@@ -23,7 +26,7 @@ export function BlogPostCard({ slug, title, excerpt, date, heroImage }: Props) {
             src={heroImage}
             alt={title}
             fill
-            priority
+            priority={priority}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
             className="object-cover transition group-hover:scale-[1.02]"
           />
