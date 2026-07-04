@@ -158,6 +158,9 @@ export async function fetchFeaturedSchools(): Promise<FeaturedSchool[]> {
   try {
     const res = await fetch(sheetUrl, {
       next: { revalidate: 3600 },
+      // Abort a hung upstream instead of blocking the request (or build) for
+      // the full function timeout; on abort we fall through to FALLBACK_SCHOOLS.
+      signal: AbortSignal.timeout(8000),
     });
 
     if (!res.ok) {
