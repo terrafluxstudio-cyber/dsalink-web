@@ -47,6 +47,19 @@ const SCHOOLS_DIR = path.join(process.cwd(), "content", "schools");
 export const TRANSLATED_LANGS = ["zh", "ms", "ta"] as const;
 export type TranslatedLang = (typeof TRANSLATED_LANGS)[number];
 
+/**
+ * Translated languages we let Google index (sitemap + hreflang + no robots
+ * noindex). `ta` is deliberately excluded: over 90 days it drew ~0 clicks and
+ * near-zero impressions across 147 pages, so Google mostly refused to index it
+ * anyway. Keeping it out of the index reclaims crawl budget for the English
+ * pages. The Tamil pages still BUILD and stay reachable via the lang switcher —
+ * four-language coverage for users is unaffected; only search indexing changes.
+ */
+export const INDEXED_LANGS = ["zh", "ms"] as const;
+export function isIndexedLang(lang: string): boolean {
+  return (INDEXED_LANGS as readonly string[]).includes(lang);
+}
+
 function translatedDir(lang: TranslatedLang) {
   return path.join(SCHOOLS_DIR, lang);
 }

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/seo";
 import { TALENT_SLUGS } from "@/lib/talentPages";
-import { getAllPublishedSchools, getAllTranslatedSchoolSlugs, TRANSLATED_LANGS } from "@/lib/schoolPages";
+import { getAllPublishedSchools, getAllTranslatedSchoolSlugs, INDEXED_LANGS } from "@/lib/schoolPages";
 import { getAllPosts } from "@/lib/blog";
 
 // Note: changeFrequency and priority are intentionally omitted — Google has
@@ -24,8 +24,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Reuse the EN school's real content date for its translated variants instead
   // of stamping the build time (which makes lastmod untrustworthy to Google).
+  // Only indexable translations (zh/ms) go in the sitemap. ta is noindex, so
+  // listing it would just point Google at pages we've told it not to index.
   const schoolUpdatedBySlug = new Map(schools.map((s) => [s.slug, s.lastUpdated]));
-  const translatedSchoolEntries: MetadataRoute.Sitemap = TRANSLATED_LANGS.flatMap((lang) =>
+  const translatedSchoolEntries: MetadataRoute.Sitemap = INDEXED_LANGS.flatMap((lang) =>
     getAllTranslatedSchoolSlugs(lang).map((slug) => ({
       url: `${base}/${lang}/schools/${slug}`,
       lastModified: new Date(schoolUpdatedBySlug.get(slug) ?? "2026-06-06"),

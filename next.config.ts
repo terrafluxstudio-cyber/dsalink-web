@@ -67,6 +67,23 @@ const nextConfig: NextConfig = {
         destination: "/dsa-results",
         permanent: true,
       },
+      // Renamed school slugs — Google still holds the old URLs and reports them
+      // as 404 (confirmed via GSC export 2026-07-04). 301 to consolidate the SEO
+      // equity of these named schools onto their current slugs.
+      { source: "/schools/saint-andrews-secondary-school", destination: "/schools/st-andrews-school-secondary", permanent: true },
+      { source: "/schools/national-junior-college", destination: "/schools/national-junior-college-secondary", permanent: true },
+      { source: "/schools/saint-josephs-institution-secondary", destination: "/schools/st-josephs-institution-secondary", permanent: true },
+      { source: "/schools/singapore-chinese-girls-school-secondary", destination: "/schools/singapore-chinese-girls-school", permanent: true },
+      { source: "/schools/anglo-chinese-school-barker-road-secondary", destination: "/schools/anglo-chinese-school-barker-road", permanent: true },
+      { source: "/schools/nan-hua-high-school-secondary", destination: "/schools/nan-hua-high-school", permanent: true },
+      { source: "/schools/chung-cheng-high-school-main-secondary", destination: "/schools/chung-cheng-high-school-main", permanent: true },
+      // Language-prefix roots have no landing page (only /[lang]/schools/... exists),
+      // so /zh /ta /ms 404. Not currently in GSC's 404 list (nothing links to them),
+      // but 301 to the homepage is cleaner than a dead end if anyone hits them.
+      // Exact-match sources — /zh/schools/... etc. are unaffected.
+      { source: "/zh", destination: "/", permanent: true },
+      { source: "/ms", destination: "/", permanent: true },
+      { source: "/ta", destination: "/", permanent: true },
     ];
   },
 };

@@ -24,6 +24,7 @@ import {
   getAllTranslatedSchoolSlugs,
   getAvailableTranslations,
   TRANSLATED_LANGS,
+  isIndexedLang,
   type TranslatedLang,
 } from "@/lib/schoolPages";
 import { getSiteUrl } from "@/lib/seo";
@@ -58,17 +59,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = `/${lang}/schools/${slug}`;
   const translations = getAvailableTranslations(slug);
 
+  // hreflang only advertises indexable languages (zh/ms). Pointing hreflang at a
+  // noindexed page (ta) sends Google a contradictory signal, so ta is omitted.
   const hreflangAlternates: Record<string, string> = {
     "en-SG": `${siteUrl}/schools/${slug}`,
     "x-default": `${siteUrl}/schools/${slug}`,
   };
   if (translations.includes("zh")) hreflangAlternates["zh-Hans-SG"] = `${siteUrl}/zh/schools/${slug}`;
   if (translations.includes("ms")) hreflangAlternates["ms-SG"] = `${siteUrl}/ms/schools/${slug}`;
-  if (translations.includes("ta")) hreflangAlternates["ta-SG"] = `${siteUrl}/ta/schools/${slug}`;
 
   return {
     title: { absolute: school.title },
     description: school.description,
+    robots: { index: isIndexedLang(lang), follow: true },
     alternates: { canonical, languages: hreflangAlternates },
     openGraph: {
       title: school.title,

@@ -33,9 +33,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     "en-SG": `${siteUrl}/schools/${slug}`,
     "x-default": `${siteUrl}/schools/${slug}`,
   };
+  // ta omitted: Tamil pages are noindex (see INDEXED_LANGS in lib/schoolPages),
+  // so advertising an hreflang alternate for them would contradict that signal.
   if (translations.includes("zh")) hreflangAlternates["zh-Hans-SG"] = `${siteUrl}/zh/schools/${slug}`;
   if (translations.includes("ms")) hreflangAlternates["ms-SG"] = `${siteUrl}/ms/schools/${slug}`;
-  if (translations.includes("ta")) hreflangAlternates["ta-SG"] = `${siteUrl}/ta/schools/${slug}`;
 
   return {
     title: { absolute: school.title },
