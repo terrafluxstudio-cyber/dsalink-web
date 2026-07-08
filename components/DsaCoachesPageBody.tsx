@@ -587,6 +587,36 @@ export const coaches: Coach[] = [
     website: "https://www.yanballetacademy.com/",
     prominence: 1,
   },
+  {
+    id: "public-speaking-academy",
+    type: "institution",
+    name: "Public Speaking Academy",
+    talentAreas: ["academic"],
+    tagline:
+      "Public speaking and debate training founded by Darren Tay, 2016 World Champion of Public Speaking. Prepares children for DSA interviews and oratory through confident, structured communication over rehearsed scripts.",
+    website: "https://publicspeakingacademy.com.sg/",
+    prominence: 3,
+  },
+  {
+    id: "presto-studios",
+    type: "institution",
+    name: "Presto Studios",
+    talentAreas: ["music"],
+    tagline:
+      "Music DSA preparation across instruments, led by founder Janice Ong. Builds long-term musical growth, performance confidence, and audition readiness rather than a last-minute polish of one piece.",
+    website: "https://www.prestostudios.sg",
+    prominence: 2,
+  },
+  {
+    id: "ysaye-music-studio",
+    type: "institution",
+    name: "Ysaÿe Music Studio",
+    talentAreas: ["music"],
+    tagline:
+      "Violin, piano, and music theory studio led by principal teacher Lin Ying-Chu, a Yong Siew Toh Conservatory-trained violinist, with a track record of music DSA placements.",
+    website: "https://www.ysayemusicstudio.com",
+    prominence: 1,
+  },
 ];
 
 const areaTagStyles: Record<TalentArea, string> = {
