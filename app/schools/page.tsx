@@ -8,7 +8,8 @@ import { StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
 import { buildSchoolDirectoryStructuredData } from "@/lib/seo";
 import { getAllPublishedSchoolSlugs } from "@/lib/schoolPages";
 
-export const revalidate = 21600;
+// Fully static (SSG): the directory is built from local school data, which only
+// changes between deploys — no ISR needed. Served from CDN with zero runtime CPU.
 
 export const metadata: Metadata = {
   title: { absolute: "School Directory 2026 | 147 Singapore Secondary Schools | DSALink" },

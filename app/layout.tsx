@@ -114,7 +114,7 @@ export default function RootLayout({
       <body className="font-sans">
         <GoogleAnalytics />
         <UtmCapture />
-        <SpeedInsights />
+        <SpeedInsights sampleRate={0.4} />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
