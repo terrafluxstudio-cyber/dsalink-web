@@ -13,8 +13,12 @@ import { getSiteUrl } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export const revalidate = 21600;
-export const dynamicParams = true;
+// Fully static: content comes only from local MDX (lib/schoolPages reads the
+// filesystem), so it can't change between deploys — no runtime revalidation
+// needed. New schools are picked up by generateStaticParams at build time.
+// dynamicParams=false → unknown slugs return a static 404 with zero function
+// CPU (previously each bot-guessed slug triggered an on-demand SSR render).
+export const dynamicParams = false;
 
 
 export async function generateStaticParams() {

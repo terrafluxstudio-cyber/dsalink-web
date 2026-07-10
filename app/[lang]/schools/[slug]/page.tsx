@@ -31,8 +31,12 @@ import { getSiteUrl } from "@/lib/seo";
 
 type Props = { params: Promise<{ lang: string; slug: string }> };
 
-export const revalidate = 21600;
-export const dynamicParams = true;
+// Fully static: content comes only from local MDX (content/schools/[lang]/[slug].mdx),
+// so it can't change between deploys — no runtime revalidation needed. New
+// translations are picked up by generateStaticParams at build time.
+// dynamicParams=false → lang/slug combos without a file return a static 404 with
+// zero function CPU (previously each nonexistent combo triggered an on-demand render).
+export const dynamicParams = false;
 
 function isTranslatedLang(v: string): v is TranslatedLang {
   return (TRANSLATED_LANGS as readonly string[]).includes(v);
