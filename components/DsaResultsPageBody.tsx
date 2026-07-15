@@ -54,10 +54,10 @@ const SUBTITLE: LocaleStr = {
 };
 
 const DISCLAIMER: LocaleStr = {
-  en: "Dates: school-notification window and October Preference Exercise are confirmed by MOE for 2026. PSLE-results and S1-Posting dates use 2024-2025 historical convention (MOE has not published 2026 dates as of June 2026). Always verify with the official MOE page below before acting on any date.",
-  zh: "日期说明：学校通知窗口与 10 月 Preference Exercise 是 MOE 官方 2026 数据。PSLE 出分与 S1 Posting 日期参照 2024-2025 往年惯例（截至 2026 年 6 月 MOE 尚未公布 2026 具体日期）。任何日期相关决策前 · 务必到下方 MOE 官方页核实。",
-  ms: "Tarikh: tetingkap pemberitahuan sekolah dan Pemilihan Keutamaan Oktober disahkan oleh MOE untuk 2026. Tarikh keputusan PSLE dan S1 Posting menggunakan amalan 2024-2025.",
-  ta: "தேதிகள்: பள்ளி அறிவிப்பு சாளரம் மற்றும் அக்டோபர் முன்னுரிமை MOE 2026 உறுதிசெய்யப்பட்டுள்ளது. PSLE மற்றும் S1 Posting தேதிகள் 2024-2025 மரபைப் பின்பற்றுகின்றன.",
+  en: "Dates: the 28 August notification deadline and the October Preference Exercise are published by MOE for 2026. The DSA allocation and PSLE results are released together, which MOE gives as tentatively 24 or 25 November 2026 — tentative is MOE's own word, so treat it as subject to change. MOE publishes no schedule at all for school interviews, trials and auditions; those dates come from each school. Always verify with the official MOE page below before acting on any date.",
+  zh: "日期说明：8 月 28 日的通知截止日与 10 月 Preference Exercise 是 MOE 已公布的 2026 官方数据。DSA 派位结果与 PSLE 成绩同日公布 · MOE 给出的是「暂定」2026 年 11 月 24 或 25 日——「暂定」是 MOE 自己的用词 · 请当作可能变动。学校的面试 / 试镜 / 试训日期 **MOE 完全不公布** · 一律以各校通知为准。任何日期相关决策前 · 务必到下方 MOE 官方页核实。",
+  ms: "Tarikh: tarikh akhir pemberitahuan 28 Ogos dan Pemilihan Keutamaan Oktober diterbitkan oleh MOE untuk 2026. Keputusan peruntukan DSA dan PSLE dikeluarkan bersama, yang MOE nyatakan secara tentatif pada 24 atau 25 November 2026. MOE tidak menerbitkan sebarang jadual untuk temu duga, ujian dan uji bakat sekolah — tarikh itu datang daripada setiap sekolah.",
+  ta: "தேதிகள்: ஆகஸ்ட் 28 அறிவிப்பு இறுதி நாளும் அக்டோபர் முன்னுரிமைப் பயிற்சியும் MOE 2026-க்கு வெளியிட்டவை. DSA ஒதுக்கீடும் PSLE முடிவுகளும் ஒன்றாக வெளியிடப்படும் — MOE தற்காலிகமாக 2026 நவம்பர் 24 அல்லது 25 எனக் கூறுகிறது. பள்ளி நேர்காணல், தேர்வு, திறனாய்வு தேதிகளுக்கு MOE எந்த அட்டவணையையும் வெளியிடுவதில்லை — அவை ஒவ்வொரு பள்ளியிலிருந்தும் வரும்.",
 };
 
 /* ============================ SECTION 1 · TIMELINE ============================ */

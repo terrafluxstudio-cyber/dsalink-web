@@ -9465,7 +9465,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     },
     rich: {
       trialDimensionsIntro: {
-        en: "MOE confirms that bowling is one of the sports where every DSA applicant must attend a talent selection trial — there is no paper-only route. Schools run their own format, but bowling is unusually objective: scores, spare percentages, and release mechanics are all directly observable on the lane. No Singapore school publishes a bowling rubric, so the six dimensions below are drawn from what is objectively measurable in ten-pin bowling, not from any school's internal scoring sheet.",
+        en: "MOE's position is that selection processes differ from school to school, and it publishes no requirements for bowling specifically — so assume a trial and check the school's own DSA page. Schools run their own format, but bowling is unusually objective: scores, spare percentages, and release mechanics are all directly observable on the lane. No Singapore school publishes a bowling rubric, so the six dimensions below are drawn from what is objectively measurable in ten-pin bowling, not from any school's internal scoring sheet.",
       },
       trialDimensions: [
         {
