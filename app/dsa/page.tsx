@@ -50,11 +50,8 @@ export function generateMetadata(): Metadata {
   };
 }
 
-// Static, ISR-cacheable: the ?q= prefill is read client-side in
-// DsaSearchCenter so this page no longer reads searchParams (which would
-// force a dynamic, no-store render on every request).
-export const revalidate = 3600;
-
+// Fully static: the ?q= prefill is read client-side in DsaSearchCenter so this
+// page never reads searchParams (which would force a dynamic render per request).
 export default function DsaPage() {
   const jsonLd = buildDsaFinderStructuredData();
 

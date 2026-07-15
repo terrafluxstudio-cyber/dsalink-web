@@ -12,11 +12,11 @@ import Link from "next/link";
 
 type Props = { params: Promise<{ slug: string }> };
 
-// ISR revalidate every 6 hours so future-dated MDX posts auto-publish when date passes.
-export const revalidate = 21600;
-// Allow rendering of slugs not in initial generateStaticParams (i.e. future-dated posts
-// once their date arrives and ISR picks them up).
-export const dynamicParams = true;
+// Fully static: posts come only from local MDX, so they can't change between
+// deploys. New posts are picked up by generateStaticParams at build time.
+// dynamicParams=false → unknown slugs return a static 404 with zero function CPU
+// (previously every nonexistent slug triggered an on-demand render).
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));

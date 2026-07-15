@@ -23,9 +23,9 @@ export function getAllPosts(): Omit<BlogPost, "content">[] {
       const { data } = matter(raw);
       return { slug, ...(data as Omit<BlogPost, "slug" | "content">) };
     })
-    // Scheduled-publish filter: hide posts dated in the future.
-    // Pairs with ISR revalidate on /blog and /blog/[slug] (6 hours) — when a future
-    // date passes, the next ISR rebuild surfaces the post automatically.
+    // Hide posts dated in the future. Evaluated at build time only — /blog and
+    // /blog/[slug] are fully static, so a future-dated post stays hidden until
+    // the next deploy rather than surfacing on its own.
     .filter((p) => new Date(p.date).getTime() <= todayMs)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }

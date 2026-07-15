@@ -22,9 +22,6 @@ const HOME_META_DESCRIPTION =
 const HOME_OG_IMAGE_ALT =
   "DSALink — DSA 2026 Singapore strategy guide, PSLE COP, and open houses";
 
-// Re-validate the cached homepage hourly.
-export const revalidate = 3600;
-
 export function generateMetadata(): Metadata {
   const ogImage = {
     url: "/opengraph-image",
