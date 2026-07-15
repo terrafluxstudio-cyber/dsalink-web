@@ -42,5 +42,9 @@ SG Mommies、Singapore Parenting Group、Parenthood (Singapore)、Singapore Pare
 | 2026-07-04 | blog「面试:三位教练怎么说」(面试篇,三把声音 Ryse+DP+Darren Tay世界演讲冠军) | FB Page + IG + **9 核心 PSLE 群**(截图选:SG Parents(Primary)、PSLE & O-level、PSLE Parents(SG)、PSLE Hub、Primary School Parents Support、Education Future & Childcare、SG PSLE Parents、PSLE Parents、Singapore…)。⚠️ **距 7/1 仅 3 天(<7)**——PM 建议压到 7/8,用户选择照发。频率仍在高位(6/24→29→7/1→7/4=隔5/2/3),持续观察有无被删/降权。 |
 | 2026-07-08 | blog「音乐 DSA:两位老师怎么说」(音乐篇, Presto Studios + Ysaÿe/Ms Lin Ying-Chu) | **9 群(用户截图选)**: PSLE Parents(SG?)、PSLE & O-level Parents、SG Parents(Primary)、Education Future & Childcare、PSLE Hub、SG PSLE Parents、**Singapore…×2(off-target 亲子群,名字截断,一个花洒图标同 PSLE&O-level、一个跑步女孩卡通)**、PSLE Parents。FB Page + IG 同发(用户确认)。⚠️ **距 7/4 仅 4 天(<7)——核心 PSLE 群本轮连发第 4 篇(6/24→29→7/1→7/4→7/8)**,节奏持续高位。 |
 
-> ⚠️ **节奏持续高位:6/24 → 6/29(隔5) → 7/1(隔2) → 7/4(隔3) → 7/8(隔4)**。5 周内核心 PSLE 群连发 5 篇。**下次同类内容 core 群最早 2026-07-15 之后**(7/8+7)。off-target 亲子群(Singapore…/SG Mommies)混发中,观察有无被删/降权。
+| 2026-07-15 | blog「第一批 DSA 试镜已开始:三位教练谈最后几天」(初试冲刺篇, Firoze/MindSpeak + Peter/Centre Stage + EV Dance) | **9 群(用户截图选)**: PSLE Parent…、PSLE & O-level Parents、PSLE Parents、SG PSLE Parents、PSLE Hub、Education Future & Childcare、**Singapore…(off-target 亲子群)**、**Tuition and…(⚠️ 补习/商业群,见下)**、Sg Education Support。FB Page + IG 同发。✅ **距 7/8 整 7 天——本轮首次符合 ≥7 天铁律**(6/24 以来第一次)。 |
+
+> ✅ **节奏首次达标**:6/24 → 6/29(隔5) → 7/1(隔2) → 7/4(隔3) → 7/8(隔4) → **7/15(隔7 ✅)**。此前 5 篇全部违反 7 天铁律(PM 每次提醒、用户每次照发,均记录在案),**7/15 这篇是第一次卡在线上**。下次同类内容 core 群最早 **2026-07-22**。
+> ⚠️ **7/15 混入了「Tuition and…」补习/商业群**——本档第 27–31 行明列「补习/商业群仍**别发**」(易被 admin 当广告、契合度低)。已连续多轮混发 off-target 群(Singapore…/SG Mommies/补习群)未见被删,但**这类群正是算法降权与被举报的高风险源**。建议:core 9 群足够,补习群收益低风险高,下次剔除。
+> off-target 亲子群(Singapore…/SG Mommies)混发中,观察有无被删/降权。
 > 经验:用户倾向多群一次广撒;PM 每次都提醒 7 天间隔、用户每次决定照发——记录在案。**风险:发帖频率上升 + off-target 群,易触发算法降权/被admin当广告**;等有群被删/掉赞再校准。补习/商业群仍**别发**。
