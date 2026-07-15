@@ -5,7 +5,7 @@ import { getSiteUrl } from "@/lib/seo";
 const PAGE_TITLE =
   "DSA-Sec Results 2026 — Confirmed Offer, Waitlist, Counter-Offer, October Preference Exercise | DSALink";
 const PAGE_DESCRIPTION =
-  "DSA-Sec 2026 results phase explained: schools notify 17-28 Aug 2026, the October School Preference Exercise (19-23 Oct 2026) locks in the final school, PSLE results in November pair with placement. Confirmed Offer is binding (no S1 Posting), Waitlist historically converts about half the time (CO protected), Counter-Offer covers dual-track schools (IP vs Express), Unsuccessful goes to S1 Posting. Honest dates, MOE-sourced rules.";
+  "DSA-Sec 2026 results phase explained: schools notify by 28 Aug 2026, the October School Preference Exercise (19-23 Oct 2026) locks in the final school, PSLE results in November pair with placement. Confirmed Offer is binding (no S1 Posting), Waitlist historically converts about half the time (CO protected), Counter-Offer covers dual-track schools (IP vs Express), Unsuccessful goes to S1 Posting. Honest dates, MOE-sourced rules.";
 
 const ogImage = {
   url: "/opengraph-image",

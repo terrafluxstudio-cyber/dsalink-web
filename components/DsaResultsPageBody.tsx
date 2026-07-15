@@ -40,17 +40,17 @@ const KICKER: LocaleStr = {
 };
 
 const TITLE: LocaleStr = {
-  en: "DSA-Sec results — schools notify 17-28 Aug. Final placement: November. Four outcomes, each with binding rules.",
-  zh: "DSA-Sec 结果——学校在 8 月 17-28 日通知 · 最终安置在 11 月公布 · 四种结果各有约束规则",
-  ms: "Keputusan DSA-Sec — sekolah maklum 17-28 Ogos. Penempatan akhir: November. Empat keputusan, setiap satu dengan peraturan mengikat.",
-  ta: "DSA-Sec முடிவுகள் — பள்ளிகள் ஆகஸ்ட் 17-28 அறிவிக்கும். இறுதி இடம்: நவம்பர். நான்கு முடிவுகள், ஒவ்வொன்றுக்கும் கட்டுப்படுத்தும் விதிகள்.",
+  en: "DSA-Sec results — schools notify by 28 Aug. Final placement: November. Four outcomes, each with binding rules.",
+  zh: "DSA-Sec 结果——学校最迟 8 月 28 日通知 · 最终安置在 11 月公布 · 四种结果各有约束规则",
+  ms: "Keputusan DSA-Sec — sekolah maklum menjelang 28 Ogos. Penempatan akhir: November. Empat keputusan, setiap satu dengan peraturan mengikat.",
+  ta: "DSA-Sec முடிவுகள் — பள்ளிகள் ஆகஸ்ட் 28-க்குள் அறிவிக்கும். இறுதி இடம்: நவம்பர். நான்கு முடிவுகள், ஒவ்வொன்றுக்கும் கட்டுப்படுத்தும் விதிகள்.",
 };
 
 const SUBTITLE: LocaleStr = {
-  en: "DSA-Sec 2026 schools notify outcomes between 17 August and 28 August 2026. The October School Preference Exercise (19-23 Oct 2026) is where you lock in which of your child's offers becomes the final school. Final placement is announced alongside PSLE results in mid-to-late November. This page covers what each of the four outcomes binds you to — and the small number of decisions that have outsized consequences.",
-  zh: "DSA-Sec 2026 学校在 2026 年 8 月 17 日至 28 日通知申请结果。10 月 19-23 日的 School Preference Exercise · 是锁定孩子最终中学的关键 5 天。最终安置在 11 月中下旬与 PSLE 结果同时公布。本页面讲四种结果各自的约束 · 以及少数几个有重大后果的决策点。",
-  ms: "Sekolah DSA-Sec 2026 memaklumkan keputusan antara 17-28 Ogos 2026. Pemilihan Keutamaan Sekolah Oktober (19-23 Okt 2026) adalah saat mengunci sekolah akhir.",
-  ta: "DSA-Sec 2026 பள்ளிகள் 2026 ஆகஸ்ட் 17 முதல் 28 வரை முடிவுகளை அறிவிக்கின்றன. அக்டோபர் பள்ளி முன்னுரிமைப் பயிற்சி (அக் 19-23) இறுதி பள்ளியைப் பூட்டுகிறது.",
+  en: "MOE requires DSA-Sec 2026 schools to notify outcomes by Friday, 28 August 2026 — each school sends its own, and it can arrive earlier. The October School Preference Exercise (19-23 Oct 2026) is where you lock in which of your child's offers becomes the final school. Final placement is announced alongside PSLE results in mid-to-late November. This page covers what each of the four outcomes binds you to — and the small number of decisions that have outsized consequences.",
+  zh: "MOE 规定 DSA-Sec 2026 学校最迟在 2026 年 8 月 28 日（周五）前通知申请结果——各校自行通知，可能更早到。10 月 19-23 日的 School Preference Exercise · 是锁定孩子最终中学的关键 5 天。最终安置在 11 月中下旬与 PSLE 结果同时公布。本页面讲四种结果各自的约束 · 以及少数几个有重大后果的决策点。",
+  ms: "MOE mewajibkan sekolah DSA-Sec 2026 memaklumkan keputusan menjelang Jumaat, 28 Ogos 2026 — setiap sekolah memaklumkan sendiri, dan ia boleh tiba lebih awal. Pemilihan Keutamaan Sekolah Oktober (19-23 Okt 2026) adalah saat mengunci sekolah akhir.",
+  ta: "DSA-Sec 2026 பள்ளிகள் 2026 ஆகஸ்ட் 28 (வெள்ளி) அன்றுக்குள் முடிவுகளை அறிவிக்க வேண்டும் என MOE வகுத்துள்ளது — ஒவ்வொரு பள்ளியும் தனித்தனியே அறிவிக்கும், அது இதற்கு முன்பே வரலாம். அக்டோபர் பள்ளி முன்னுரிமைப் பயிற்சி (அக் 19-23) இறுதி பள்ளியைப் பூட்டுகிறது.",
 };
 
 const DISCLAIMER: LocaleStr = {
@@ -82,10 +82,10 @@ const S1_STEPS: ReadonlyArray<{
 }> = [
   {
     when: {
-      en: "17-28 August 2026",
-      zh: "2026 年 8 月 17-28 日",
-      ms: "17-28 Ogos 2026",
-      ta: "2026 ஆகஸ்ட் 17-28",
+      en: "By 28 August 2026",
+      zh: "2026 年 8 月 28 日前",
+      ms: "Menjelang 28 Ogos 2026",
+      ta: "2026 ஆகஸ்ட் 28-க்குள்",
     },
     what: {
       en: "Each DSA-Sec school notifies its applicants individually (typically by school portal or email). The notification will be one of: Confirmed Offer (CO), Waitlist (WL), or Unsuccessful. This is the school's selection — it is not the final placement.",

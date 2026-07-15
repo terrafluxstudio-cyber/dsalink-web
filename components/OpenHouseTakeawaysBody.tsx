@@ -1061,9 +1061,9 @@ const SCHOOLS: SchoolTakeaway[] = [
       "榜鹅/盛港/后港家庭希望就读东北部O水准学校、寻找艺术+领导力+STEM+5项体育广覆盖DSA选项的家庭",
     ],
     keySignalEn:
-      "YISS gives a mainstream O-Level school the kind of STEM + Robotics DSA tracks usually only found in specialised or IP schools. Selection mixes panel interviews, individual assessment tasks, performance trials, video submissions (for Modern Dance), and e-portfolio reviews — so the format varies by talent area. Shortlist mid-July, selections through August, outcomes 17–28 Aug 2026. Admitted DSA students must commit to the chosen talent CCA/programme from Year 1 to Year 4.",
+      "YISS gives a mainstream O-Level school the kind of STEM + Robotics DSA tracks usually only found in specialised or IP schools. Selection mixes panel interviews, individual assessment tasks, performance trials, video submissions (for Modern Dance), and e-portfolio reviews — so the format varies by talent area. Shortlist mid-July, selections through August, outcomes by 28 Aug 2026. Admitted DSA students must commit to the chosen talent CCA/programme from Year 1 to Year 4.",
     keySignalZh:
-      "YISS让一所主流O水准学校提供了通常只在专门化或IP学校才有的STEM + Robotics DSA路径。选拔混合小组面试、个人评估任务、表演试训、视频投递（Modern Dance）和电子作品集审核——形式按才能方向不同。Mid-Jul入围，整个8月做选拔，2026年8月17–28日发录取。录取者须从Year 1到Year 4持续参与所选才能CCA/项目。",
+      "YISS让一所主流O水准学校提供了通常只在专门化或IP学校才有的STEM + Robotics DSA路径。选拔混合小组面试、个人评估任务、表演试训、视频投递（Modern Dance）和电子作品集审核——形式按才能方向不同。Mid-Jul入围，整个8月做选拔，2026年8月28日前发录取。录取者须从Year 1到Year 4持续参与所选才能CCA/项目。",
     talentAreas: [
       "Community Youth Leadership",
       "Modern Dance",
