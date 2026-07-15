@@ -347,7 +347,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Video-record one full 5-on-5 game. Watch with your child, scoring just two behaviours: (1) what they do in the five seconds after passing the ball — relocate, screen, or stand still? (2) how many possessions did they box out on? These are the two most under-trained P6 habits and the two highest-signal items in the rubrics that Singapore schools have published.",
             },
             {
-              en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and competition results, NAPFA, and JSA data from the primary school directly into the DSA portal. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged.",
+              en: "Confirm your child's CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG and competition results, NAPFA, and JSA data. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged.",
             },
             {
               en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
@@ -607,7 +607,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Video-record one full match your child plays. Watch back together and score just two behaviours: (1) does your child's head lift to scan in the 2 seconds before receiving the ball? (2) what do they do in the 5 seconds after passing — run, rotate, or stand? These are the two highest-signal habits at P6 trial level, and almost every untrained player fails the first.",
             },
             {
-              en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and competition results, and other achievements directly from the primary school into the DSA portal. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged before the window closes.",
+              en: "Confirm your child's CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG and competition results, and other achievements. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged before the window closes.",
             },
             {
               en: "Run a mock interview using the questions above. Record on phone, watch back together. Flag any answer that ran over thirty seconds, or used the word \"passionate.\" Both kill the read.",
@@ -873,7 +873,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Compile your child's three best sanctioned times with full meet name, date, and pool length (long-course vs short-course). Submit on the application with the official meet result PDF where possible. Do not submit training-set or time-trial times — those are not weighted and may be flagged as inflating the application.",
             },
             {
-              en: "Confirm your child's CCA records, NSG and SSA meet results, and any age-group accolades are accurate. MOE pulls CCA participation, school awards, and externally-validated competition results from the primary school directly into the DSA portal where the school has logged them. Email the primary school CCA teacher or year-head to confirm what's been entered.",
+              en: "Confirm your child's CCA records, NSG and SSA meet results, and any age-group accolades are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, and externally-validated competition results, where the school has logged them. Email the primary school CCA teacher or year-head to confirm what's been entered.",
             },
             {
               en: "Run a mock interview with a stranger as audience. Record on phone, watch the first 30 seconds back together. Flag any answer that ran over 30 seconds or used the word \"passionate.\" Swim families especially over-rely on race results in interview — verbal articulation about training process matters more.",
@@ -1146,7 +1146,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Compile the candidate's three best sanctioned marks (NSG, SAA-ranked, inter-school finals) with full meet name, date, conditions, and timing method (electronic vs hand-timed for sprints; rule whether the meet was wind-legal). Submit on the application with official PDFs where possible. Do not submit time-trial or training marks; they are not weighted and may be flagged.",
             },
             {
-              en: "Confirm CCA records, competition results, and NAPFA data are accurate on the primary school's DSA portal entry. MOE pulls these directly; missing entries undercut otherwise strong applications. Email the primary school CCA teacher or year-head to confirm what's been logged.",
+              en: "Confirm CCA records, competition results, and NAPFA data are accurate on the primary school's DSA portal entry. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. Gaps in the primary school's records are worth catching early. Email the primary school CCA teacher or year-head to confirm what's been logged.",
             },
             {
               en: "Run a mock interview using the questions above. Record on phone, watch first 30 seconds back. Flag any answer over 30 seconds or that used the word \"passionate.\" Track families especially over-rely on times and distances in interview — verbal articulation about training process and race tactics matters more than reciting PBs.",
@@ -1412,7 +1412,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Video-record one full match or training session. Watch back together and score just two things: (1) does the candidate split before each opponent contact? (2) do they recover to base after every shot, or do they get stranded? These two habits separate Sec 1 candidates from current under-13 players more reliably than any other single signal.",
             },
             {
-              en: "Confirm your child's CCA records, NSG and zone results, and any age-group accolades are accurate. MOE pulls CCA participation, school awards, and competition results from primary schools' DSA portal entries where they have been logged. Ask the primary school CCA teacher or year-head to confirm what's been entered.",
+              en: "Confirm your child's CCA records, NSG and zone results, and any age-group accolades are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, and competition results, where the primary school has logged them. Ask the primary school CCA teacher or year-head to confirm what's been entered.",
             },
             {
               en: "Run a mock interview using the questions above. Record on phone, watch back together. Flag any answer that ran over 30 seconds or used the word \"passionate.\" Badminton families often over-rely on competition results in interview — verbal articulation about tactics and self-awareness about weaknesses matters more.",
@@ -1678,7 +1678,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Compile federation-sanctioned competition results with full event name, date, weight or age category, and placing. Scan all certificates (belt grades, dan certificates, competition placings) and have them ready to upload to the DSA portal. Schools give zero weight to claimed-but-unverified credentials.",
             },
             {
-              en: "Confirm CCA records and any martial-arts-related primary school achievements are accurate on the DSA portal entry. MOE pulls these directly from the primary school; missing entries undercut the application. Email the primary school CCA teacher or year-head to verify.",
+              en: "Confirm CCA records and any martial-arts-related primary school achievements are accurate on the DSA portal entry. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. Gaps in the primary school's records are worth catching early. Email the primary school CCA teacher or year-head to verify.",
             },
             {
               en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer over 30 seconds or that used the word \"passionate.\" Martial-arts candidates especially need to be able to talk about their discipline — etiquette, training philosophy, specific techniques — in concrete language rather than generic enthusiasm.",
@@ -1990,7 +1990,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Pick the two contrasting pieces with your teacher and lock them in eight weeks before the audition. Do not change pieces in the final month — even a stronger piece you haven't lived with is riskier than a slightly easier piece you've internalised.",
             },
             {
-              en: "Confirm your child's CCA records, ABRSM grades, and any performance certificates are accurate. MOE pulls CCA participation, school awards, and externally-validated certificates (where the primary school has logged them) directly into the DSA portal. Email a clean PDF of each ABRSM certificate to the primary school CCA teacher or year-head so the records are complete.",
+              en: "Confirm your child's CCA records, ABRSM grades, and any performance certificates are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, and externally-validated certificates (where the primary school has logged them). Email a clean PDF of each ABRSM certificate to the primary school CCA teacher or year-head so the records are complete.",
             },
             {
               en: "Run a mock audition with a stranger as audience. Record from the same angle the panel would see. Watch the first 15 seconds back together — the bow, the walk to the instrument, and the breath before the first note are where composure marks are awarded and lost.",
@@ -2256,7 +2256,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Work through past SMOPS Round 2 and NMOS papers as the primary preparation. Singapore selection tests draw their difficulty calibration from these contests more than from AMC 8 (which is closer to PSLE level for top P6 students). Aim for 20-30 past problems worked through completely with solutions read after each, not 200 skimmed.",
             },
             {
-              en: "Confirm all competition certificates (SMOPS, NMOS, AMC, RIPMWC) are logged accurately. MOE pulls competition results from primary schools' DSA portal entries — if the certificate is not logged, scan and submit directly with the application. Schools that score competition history give zero credit to claimed-but-unverified awards.",
+              en: "Confirm all competition certificates (SMOPS, NMOS, AMC, RIPMWC) are logged accurately. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. Competition results count where the primary school has logged them — if the certificate is not logged, scan and submit directly with the application. Schools that score competition history give zero credit to claimed-but-unverified awards.",
             },
             {
               en: "Run a mock interview where the panellist hands the candidate a problem cold and the candidate has 5 minutes to think out loud. Record it. The most common P6 failure is silence — strong candidates verbalise even when stuck (\"let me try a small case\"). Practice this until thinking-out-loud is automatic.",
@@ -2563,7 +2563,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Practice talking through code without filler words. Sit your child in front of a printout of their code and have them explain it line by line in 90 seconds. Record on phone. Watch back together. Flag every \"and then\" and \"basically\" — those signal weak articulation under pressure.",
             },
             {
-              en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NRC / WRO / FLL results, and any computing-related JSA data from the primary school directly into the DSA portal. Ask the CCA teacher to verify what's been logged. Incomplete records hurt the application.",
+              en: "Confirm your child's CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NRC / WRO / FLL results, and any computing-related JSA data. Ask the CCA teacher to verify what's been logged. Incomplete records hurt the application.",
             },
             {
               en: "Run a mock interview using the questions above. Time each answer — aim for 45 to 60 seconds. Watch back. Flag any answer over 90 seconds or any answer that doesn't include a specific failure or iteration. Robotics panels are unforgiving on vague answers.",
@@ -2830,7 +2830,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Have the child read one contemporary Chinese book in full — not a textbook excerpt. Recommended starting authors at P6 level: 龙应台, 杨绛, 林海音 《城南旧事》, 老舍 《骆驼祥子》. The goal is one whole-book reaction the candidate genuinely owns. Panels detect ghost-written summaries within two follow-up questions.",
             },
             {
-              en: "Confirm CCA records for any Chinese-related activities at primary school are accurate. MOE pulls CCA participation, school awards, competition results (全国学生华文创作比赛, 学生华文戏剧节, 全国华文常识比赛, MOE Story Telling Competition) into the DSA portal. If your child placed in any of these, check that the CCA teacher has logged it.",
+              en: "Confirm CCA records for any Chinese-related activities at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, competition results (全国学生华文创作比赛, 学生华文戏剧节, 全国华文常识比赛, MOE Story Telling Competition). If your child placed in any of these, check that the CCA teacher has logged it.",
             },
             {
               en: "Run a mock oral interview with a fluent adult — not a tutor reading from a script. The interviewer's job is to ask follow-ups, not to feed lines. Record on phone. Watch back together. Flag any answer that ran over 60 seconds or relied on phrases the child clearly memorised but doesn't understand.",
@@ -3121,7 +3121,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Choose the audition solo carefully. A 1–2 minute excerpt your child has performed publicly is safer than a piece they're still rehearsing — and confirm the cap (Victoria School: one minute; most others: up to two). Panels see many auditionees attempt material above their level. Clean execution of age-appropriate choreography always outscores stumbling through harder material.",
             },
             {
-              en: "Confirm CCA records at primary school. MOE pulls CCA participation, school awards, SYF Arts Presentation results, and external achievements (graded examinations such as RAD or ISTD, NAFA / SOTA junior programme alumni status, recognised festival or showcase performances) into the DSA portal. Incomplete records hurt the application — ask the CCA teacher to verify what's been logged.",
+              en: "Confirm CCA records at primary school. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, SYF Arts Presentation results, and external achievements (graded examinations such as RAD or ISTD, NAFA / SOTA junior programme alumni status, recognised festival or showcase performances). Incomplete records hurt the application — ask the CCA teacher to verify what's been logged.",
             },
             {
               en: "Run two mock auditions in unfamiliar studios. Most dancers underperform first audition because the studio, the floor, and the mirrors are unfamiliar. Book trial sessions at two different dance schools to surface this in advance, not at the real audition.",
@@ -3412,7 +3412,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Choose monologues carefully. Pick two contrasting pieces age-appropriate for a 12-year-old. Read the full play each monologue comes from — panels often ask. Avoid the most over-circulated pieces; ask a drama teacher or check Singapore playwright collections (Haresh Sharma, Alfian Sa'at, Ovidia Yu) for fresher options.",
             },
             {
-              en: "Confirm CCA records at primary school. MOE pulls CCA participation, school awards, SYF Arts Presentation results, and external programme alumni status (Wild Rice Young & Wild, The Theatre Practice Mandarin programmes, Singapore Repertory Theatre youth) into the DSA portal. Ask the CCA teacher to verify all drama-related entries.",
+              en: "Confirm CCA records at primary school. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, SYF Arts Presentation results, and external programme alumni status (Wild Rice Young & Wild, The Theatre Practice Mandarin programmes, Singapore Repertory Theatre youth). Ask the CCA teacher to verify all drama-related entries.",
             },
             {
               en: "Run two mock auditions for unfamiliar audiences. Most actors underperform first audition because the room and the panel are unfamiliar. Perform the monologues for a teacher, a relative, and a school friend's parent — three different audiences in three different rooms.",
@@ -3703,7 +3703,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Curate the portfolio with restraint. 10–12 strong pieces beats 20 mixed pieces. Include 2–3 sketchbook spreads, 4–6 finished works across at least three media, and 2–3 process pieces (a piece shown in three stages, or two versions of the same subject). Cut anything the candidate isn't proud of — panels remember the weakest piece, not the strongest.",
             },
             {
-              en: "Confirm CCA records at primary school. MOE pulls CCA participation, school art awards, SYF Art Exhibition selections, and external programme alumni status (NAFA Junior, SOTA Junior, LASALLE programmes, recognised national art competitions) into the DSA portal. Ask the CCA teacher to verify all art-related entries.",
+              en: "Confirm CCA records at primary school. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school art awards, SYF Art Exhibition selections, and external programme alumni status (NAFA Junior, SOTA Junior, LASALLE programmes, recognised national art competitions). Ask the CCA teacher to verify all art-related entries.",
             },
             {
               en: "Run two mock on-spot tasks. Give the candidate a random subject and 45 minutes — once at home, once somewhere unfamiliar. The unfamiliar setting matters; many candidates underperform first audition because the studio, the lighting, and the materials are not theirs.",
@@ -3964,7 +3964,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Video-record one full 7-on-7 game. Watch with your child, scoring just two behaviours: (1) what they do in the five seconds after passing the ball — make a supporting run, rotate, or stand still? (2) how many possessions did they receive on the half-turn versus with their back to play? These are the two most under-trained P6 habits and the two highest-signal items in hockey trials.",
             },
             {
-              en: "Confirm CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG results, NAPFA, and JSA data directly into the DSA portal. Hockey-specific external programme alumni (Singapore Hockey Federation development squads) also feed in. Ask the CCA teacher or year-head to verify what's been logged.",
+              en: "Confirm CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG results, NAPFA, and JSA data. Hockey-specific external programme alumni (Singapore Hockey Federation development squads) also feed in. Ask the CCA teacher or year-head to verify what's been logged.",
             },
             {
               en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
@@ -4225,7 +4225,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Video-record one full match against a player of similar level. Watch with your child, scoring just two behaviours: (1) how reliably did they return to the T after each shot? (2) how many drives travelled past the short line and landed deep? These are the two most under-trained P6 habits and the two highest-signal items in squash trials.",
             },
             {
-              en: "Confirm CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG results, and external programme alumni status (Squash Singapore / SRA development squads, club rankings) into the DSA portal. Tournament results from open tournaments also count. Ask the CCA teacher or year-head to verify what's been logged.",
+              en: "Confirm CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG results, and external programme alumni status (Squash Singapore / SRA development squads, club rankings). Tournament results from open tournaments also count. Ask the CCA teacher or year-head to verify what's been logged.",
             },
             {
               en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
@@ -4486,7 +4486,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Build a one-page Leadership portfolio. Three entries maximum: each with what you did, what changed, what you learned. Get teacher endorsement letters for each entry. The single highest-leverage prep is converting titles into outcomes — \"Class Chairperson\" becomes \"changed the way our class handled library returns and got overdue rates from 12 to 2 per month.\"",
             },
             {
-              en: "Confirm CCA records at primary school are accurate. MOE pulls CCA participation, leadership positions, Uniformed Group ranks, school awards, community-service hours, and competition or campaign results into the DSA portal. Ask the CCA teacher or year-head to verify what's been logged — for Leadership candidates, incomplete records are especially costly.",
+              en: "Confirm CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, leadership positions, Uniformed Group ranks, school awards, community-service hours, and competition or campaign results. Ask the CCA teacher or year-head to verify what's been logged — for Leadership candidates, incomplete records are especially costly.",
             },
             {
               en: "Run two mock group activities. Recruit four or five children of similar age, give them a problem (\"plan a year-end celebration with a $200 budget\"), set a 30-minute timer, and watch. The first run surfaces what your child does under pressure; the second lets them try a different role. Most candidates default to either over-talking or under-talking; the goal is the middle band — listen, propose, credit.",
@@ -4747,7 +4747,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Video-record one full 6-on-6 game. Watch with your child, scoring just two behaviours: (1) what their platform did on the first contact of each rally — clean or jittery? (2) how many times did they get behind the ball with their feet versus reach with their arms? These two are the highest-signal items in volleyball trials.",
             },
             {
-              en: "Confirm CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and external competition results, NAPFA, and JSA data into the DSA portal directly. Volleyball-specific external programmes (Volleyball Association of Singapore — VAS — development squads) also feed in. Ask the CCA teacher or year-head to verify what's been logged.",
+              en: "Confirm CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG and external competition results, NAPFA, and JSA data. Volleyball-specific external programmes (Volleyball Association of Singapore — VAS — development squads) also feed in. Ask the CCA teacher or year-head to verify what's been logged.",
             },
             {
               en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
@@ -5008,7 +5008,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Video-record one full multi-ball training session. Watch with your child, scoring just two behaviours: (1) at ball 25, does the stroke still look like ball 5? (2) does the player return to neutral ready position between each ball, or drift sideways? These two are the highest-signal items in table tennis trials.",
             },
             {
-              en: "Confirm STTA ranking and CCA records are accurate. MOE pulls CCA participation, school awards, STTA-sanctioned tournament results, and NAPFA into the DSA portal directly. Ask the CCA teacher or year-head to verify what's been logged.",
+              en: "Confirm STTA ranking and CCA records are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, STTA-sanctioned tournament results, and NAPFA. Ask the CCA teacher or year-head to verify what's been logged.",
             },
             {
               en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
@@ -5272,7 +5272,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Video-record one full 7-a-side game. Watch with your daughter, scoring just two behaviours: (1) how many times did she lift her planted foot during a pivot? (2) on every received pass, did she present a target hand before the ball left the passer? These two are the highest-signal items in netball trials.",
             },
             {
-              en: "Confirm CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and external competition results, NAPFA, and JSA data into the DSA portal directly. Netball Singapore club programmes also feed in. Ask the CCA teacher or year-head to verify what's been logged.",
+              en: "Confirm CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG and external competition results, NAPFA, and JSA data. Netball Singapore club programmes also feed in. Ask the CCA teacher or year-head to verify what's been logged.",
             },
             {
               en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
@@ -5533,7 +5533,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Video-record one full 4-v-4 scrimmage. Watch with your child, scoring just two behaviours: (1) when they lost the ball, how many seconds before they tipped-and-tracked to recover? (2) on every received pass, did they get their stick on the ball with the head up or head down? These two are the highest-signal items in floorball trials.",
             },
             {
-              en: "Confirm CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and external competition results, NAPFA, and JSA data into the DSA portal directly. Floorball Singapore club programmes also feed in. Ask the CCA teacher or year-head to verify what's been logged.",
+              en: "Confirm CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG and external competition results, NAPFA, and JSA data. Floorball Singapore club programmes also feed in. Ask the CCA teacher or year-head to verify what's been logged.",
             },
             {
               en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
@@ -6122,7 +6122,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Practise sight-reading daily for ten minutes at audition difficulty. Use both jianpu and staff notation. Sight-reading on Chinese instruments is under-practised by many candidates because primary-school CO programmes focus on repertoire memorisation.",
             },
             {
-              en: "Confirm CCA records at primary school are accurate. MOE pulls CCA participation, school awards, SYF results, and external competition results (Singapore Chinese Music Competition, NUS Chinese Music Festival) into the DSA portal directly. Ask the CCA teacher to verify what's been logged.",
+              en: "Confirm CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, SYF results, and external competition results (Singapore Chinese Music Competition, NUS Chinese Music Festival). Ask the CCA teacher to verify what's been logged.",
             },
             {
               en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
@@ -6390,7 +6390,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           label: { en: "Lead time — when the trial is still weeks out" },
           items: [
             {
-              en: "Verify the STA SPEX Age Group ranking and competition record. MOE pulls CCA participation, school awards, NSG results, NAPFA, and STA-sanctioned competition results into the DSA portal directly. A documented U12 or U14 result is the single most-cited piece of evidence in tennis DSA — confirm it has been logged with your child's coach.",
+              en: "Verify the STA SPEX Age Group ranking and competition record. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG results, NAPFA, and STA-sanctioned competition results. A documented U12 or U14 result is the single most-cited piece of evidence in tennis DSA — confirm it has been logged with your child's coach.",
             },
             {
               en: "Video-record one full practice set. Watch with your child, scoring just two behaviours: (1) did they split-step before every opponent contact? (2) after a lost rally, did they reset within five seconds or visibly tilt? These two are the highest-signal items in tennis trials.",
@@ -6654,7 +6654,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           label: { en: "Lead time — when the trial is still weeks out" },
           items: [
             {
-              en: "Confirm SWF grading and competition records. MOE pulls CCA participation, school awards, SWF Wushu Championship results, NAPFA, and external SWF grading certifications into the DSA portal directly. Ask your wushu coach to verify what's been logged — a documented SWF Grade 3 or above is the single most-cited evidence in wushu DSA.",
+              en: "Confirm SWF grading and competition records. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, SWF Wushu Championship results, NAPFA, and external SWF grading certifications. Ask your wushu coach to verify what's been logged — a documented SWF Grade 3 or above is the single most-cited evidence in wushu DSA.",
             },
             {
               en: "Video-record one full form performance. Watch with your child, scoring just two behaviours: (1) at the bottom of every mabu, does the knee track over the toe with the thigh parallel to the ground? (2) during transitions, do the eyes follow the technique (gaze leads hand), or stay locked forward? These two are the highest-signal items in wushu trials.",
@@ -6921,7 +6921,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           label: { en: "Lead time — when the trial is still weeks out" },
           items: [
             {
-              en: "Verify swimming and water polo records. MOE pulls CCA participation, school awards, NSG Zone and National Schools water polo results, swimming PB times (where the school logs them), and Singapore Aquatics-sanctioned competition results into the DSA portal directly. ACS(I)'s 2025 DSA brief is explicit that primary-level NSG water polo participation is a criterion — confirm the result has been logged.",
+              en: "Verify swimming and water polo records. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG Zone and National Schools water polo results, swimming PB times (where the school logs them), and Singapore Aquatics-sanctioned competition results. ACS(I)'s 2025 DSA brief is explicit that primary-level NSG water polo participation is a criterion — confirm the result has been logged.",
             },
             {
               en: "Video-record one full small-sided game. Watch with your child, scoring just two behaviours: (1) at the 30-second mark of any treading sequence, are the shoulders still above water or sinking? (2) when receiving a pass, is the second hand under the water on a treading stroke or up reaching for the ball? These two are the highest-signal items in water polo trials.",
@@ -7185,7 +7185,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           label: { en: "Lead time — when the trial is still weeks out" },
           items: [
             {
-              en: "Verify SSF regatta results and CCA records. MOE pulls CCA participation, school awards, NSG Singapore Schools National Sailing Championships results, and SSF-sanctioned regatta finishes into the DSA portal directly. A documented top-30 (or better) finish in Optimist national regatta events is the single most-cited signal in sailing DSA — confirm it has been logged.",
+              en: "Verify SSF regatta results and CCA records. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG Singapore Schools National Sailing Championships results, and SSF-sanctioned regatta finishes. A documented top-30 (or better) finish in Optimist national regatta events is the single most-cited signal in sailing DSA — confirm it has been logged.",
             },
             {
               en: "Video-record one full practice race. Watch with your child, scoring just two behaviours: (1) before each tack, did they look up the course for shifts or just tack on a planned schedule? (2) at each mark, was the entry wide and exit tight, or the opposite? These two are the highest-signal items in sailing trials.",
@@ -7452,7 +7452,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           label: { en: "Lead time — when the trial is still weeks out" },
           items: [
             {
-              en: "Verify NSG B- or C-Division results and CCA records. MOE pulls CCA participation, school awards, NSG tag-rugby or contact-rugby results, and SRU-affiliated club competition results into the DSA portal directly. A documented NSG Zone or National participation at primary level is the single most-cited signal in rugby DSA — confirm it has been logged.",
+              en: "Verify NSG B- or C-Division results and CCA records. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG tag-rugby or contact-rugby results, and SRU-affiliated club competition results. A documented NSG Zone or National participation at primary level is the single most-cited signal in rugby DSA — confirm it has been logged.",
             },
             {
               en: "Video-record one full small-sided contact (or full tag) practice. Watch with your child, scoring just two behaviours: (1) on every tackle, was the head positioned to the side of the ball-carrier, not in front? (2) when running with the ball into contact, did the body lower and the shoulder lead, or did the head go down? These two are the highest-signal items in rugby trials.",
@@ -8963,7 +8963,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     },
     rich: {
       trialDimensionsIntro: {
-        en: "Softball is contested in the National School Games at C and B Division level, so most trials are run by the school's softball coach plus a teacher-in-charge. A trial typically rotates a candidate through stations: batting off a tee or front toss, fielding ground balls and fly balls, a throwing-accuracy check, a short timed baserunning leg, and — for those who declare it — a position-specific test such as pitching or catching. Most schools do not publish a rubric, and MOE's own guidance is that applicants without prior experience may apply because schools assess potential. The dimensions below are the objective skills softball requires; they are what any coach is watching for whether or not they write it down.",
+        en: "Softball is contested in the National School Games at C and B Division level, so most trials are run by the school's softball coach plus a teacher-in-charge. A trial typically rotates a candidate through stations: batting off a tee or front toss, fielding ground balls and fly balls, a throwing-accuracy check, a short timed baserunning leg, and — for those who declare it — a position-specific test such as pitching or catching. Most schools do not publish a rubric. MOE frames DSA-Sec as a route based on \"interests, aptitude, and potential\" rather than PSLE performance, which is why a candidate without a long competition record is still worth putting forward — but each school sets its own criteria, so check the school's DSA page. The dimensions below are the objective skills softball requires; they are what any coach is watching for whether or not they write it down.",
       },
       trialDimensions: [
         {
@@ -9135,7 +9135,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Video-record your child taking 20 swings off a tee or front toss, and 10 ground balls and 10 fly balls. Watch together, scoring just two things: (1) is the swing path level and balanced, or long and looping? (2) does she get in front of the ball and field on the throwing foot? These two habits separate trained players from athletic ones and are exactly what coaches watch at a station-based trial.",
             },
             {
-              en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and competition results, NAPFA, and JSA data from the primary school directly into the DSA portal. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged.",
+              en: "Confirm your child's CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG and competition results, NAPFA, and JSA data. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged.",
             },
             {
               en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read.",
@@ -9386,7 +9386,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "If your child has any access to a range — through a primary-school CCA, ActiveSG, or a club — get steady supervised time on air rifle or pistol. If not, that is genuinely fine for DSA shooting; most schools assess trainable steadiness, not prior scores. Focus instead on building still, patient focus: any activity that trains sitting still and concentrating (model-building, archery, even careful drawing) transfers.",
             },
             {
-              en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and competition results, NAPFA, and JSA data from the primary school directly into the DSA portal. If your child has any shooting club or competition record, make sure it is logged. Ask the CCA teacher or year-head to check.",
+              en: "Confirm your child's CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG and competition results, NAPFA, and JSA data. If your child has any shooting club or competition record, make sure it is logged. Ask the CCA teacher or year-head to check.",
             },
             {
               en: "Run a mock interview using the questions above, especially \"Why shooting?\" and \"What do you do after a bad shot?\" Record on phone, watch back together. Flag any answer that ran over thirty seconds or used the word \"passionate\" — both kill the read.",
@@ -9637,7 +9637,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Keep a spare log for two weeks. After each session, write down which single-pin and corner-pin spares your child missed. Spares — not strikes — are what separate trial scores, and a written log turns a vague \"I keep missing the 10-pin\" into a fixable pattern. Bring the improvement, not the excuse.",
             },
             {
-              en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and competition results, and NAPFA data from the primary school directly into the DSA portal. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged.",
+              en: "Confirm your child's CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG and competition results, and NAPFA data. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged.",
             },
             {
               en: "Run a mock interview using the questions above, especially \"Why bowling?\" and \"What do you do when your ball stops hitting the pocket?\" Record on phone, watch back together. Flag any answer that ran over thirty seconds or used the word \"passionate.\" Both kill the read.",
@@ -9892,7 +9892,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           label: { en: "Lead time — when the trial is still weeks out" },
           items: [
             {
-              en: "Compile the candidate's cross country and distance results — NSG cross country, zonal cross country, school distance races, and any SAA-ranked road or 2.4km/3000m times — with meet name, date, course, and finishing position (positions matter in a team-scored sport, not just times). Confirm these are accurately logged on the primary school's DSA portal entry, as MOE pulls records directly.",
+              en: "Compile the candidate's cross country and distance results — NSG cross country, zonal cross country, school distance races, and any SAA-ranked road or 2.4km/3000m times — with meet name, date, course, and finishing position (positions matter in a team-scored sport, not just times). Confirm these are accurately logged on the primary school's DSA portal entry, as The primary school's records feed into this.",
             },
             {
               en: "Build, or verify, a base of off-road running. If the candidate has only ever trained on a track or treadmill, get them onto grass fields, park connectors, and hilly routes now — terrain comfort is a live trial signal and cannot be faked on the day.",
@@ -10369,7 +10369,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Video-record one full game and watch it with your child, scoring just two things: (1) what they do without the ball — do they move into open space and time runs toward the frame, or stand still? (2) how cleanly do they catch rebounds under movement? Standing still and dropped catches are the two most common P6 weaknesses, and both are visible in any tchoukball trial.",
             },
             {
-              en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, competition results, NAPFA and other data from the primary school directly into the DSA portal. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged.",
+              en: "Confirm your child's CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, competition results, NAPFA and other data. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged.",
             },
             {
               en: "Run a mock interview using the questions above, starting with \"Why tchoukball?\" Record it on a phone and watch it back together. Flag any answer that ran over thirty seconds or leaned on the word \"passionate\" — both weaken the read.",
@@ -11715,7 +11715,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
               en: "Practise jianpu (简谱) sight-reading ten minutes daily at audition difficulty. This is the most under-practised component for guzheng candidates because primary-school programmes lean on memorising repertoire — drill it separately from prepared-piece practice.",
             },
             {
-              en: "Confirm primary-school CCA records are accurate. MOE pulls CCA participation, school awards, SYF results, and recognised external results (e.g. Singapore Chinese Music Competition, NUS Chinese Music Festival) into the DSA portal directly. Ask the CCA teacher to verify what's logged.",
+              en: "Confirm primary-school CCA records are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, SYF results, and recognised external results (e.g. Singapore Chinese Music Competition, NUS Chinese Music Festival). Ask the CCA teacher to verify what's logged.",
             },
             {
               en: "Run a mock interview using the questions above, including \"Why guzheng?\" and the choose-between-schools question. Record on a phone, watch back together, and flag any answer that ran past thirty seconds or leaned on the word \"passionate.\"",
@@ -13615,7 +13615,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           label: { en: "Lead time — when the trial is still weeks out" },
           items: [
             { en: "Compile competition results with full event name, date, discipline (bouldering / lead / speed), category, and placing. Include National Schools Sport Climbing Championships, National Schools Bouldering Championship, Inter-Schools Bouldering League, or Singapore Sport Climbing and Mountaineering Federation events. Scan certificates and have them ready to upload. Schools give zero weight to claimed-but-unverified results." },
-            { en: "Confirm CCA records and any climbing-related primary school achievements are accurate on the DSA portal entry — MOE pulls these from the primary school, and missing entries undercut the application. If the candidate climbs only at an external gym (common, since few primary schools offer climbing), make sure the external club's competition record is documented." },
+            { en: "Confirm CCA records and any climbing-related primary school achievements are accurate on the DSA portal entry — Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. Gaps in the primary school's records are worth catching early. If the candidate climbs only at an external gym (common, since few primary schools offer climbing), make sure the external club's competition record is documented." },
             { en: "Get the candidate climbing on varied terrain in the final weeks — slab, vertical, and overhang — and on unfamiliar problems, so the trial isn't the first time they climb on-sight. Many trials test flash or on-sight ability, which rewards route reading more than memorised projects." },
             { en: "Run a mock interview using the questions above. Record it on a phone and watch it back together. Flag any answer over 30 seconds or that uses the word \"passionate.\" Climbing candidates especially need to talk concretely about technique, falls, and safety rather than generic enthusiasm." },
           ],
@@ -13847,7 +13847,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
     },
     rich: {
       trialDimensionsIntro: {
-        en: "Cricket is contested in the National School Games at C, B and A Division level, so most trials are run by the school's cricket coach plus a teacher-in-charge. A trial typically rotates a candidate through stations: batting in the nets against throwdowns or a bowling machine, a bowling spell to test action and control, fielding ground balls and high catches, and a throwing-accuracy check — with batsmen, bowlers, all-rounders and wicketkeepers given role-specific tests. Most schools do not publish a rubric, and MOE's own guidance is that applicants without prior experience may apply because schools assess potential. The dimensions below are the objective skills cricket requires; they are what any coach is watching for whether or not they write it down.",
+        en: "Cricket is contested in the National School Games at C, B and A Division level, so most trials are run by the school's cricket coach plus a teacher-in-charge. A trial typically rotates a candidate through stations: batting in the nets against throwdowns or a bowling machine, a bowling spell to test action and control, fielding ground balls and high catches, and a throwing-accuracy check — with batsmen, bowlers, all-rounders and wicketkeepers given role-specific tests. Most schools do not publish a rubric. MOE frames DSA-Sec as a route based on \"interests, aptitude, and potential\" rather than PSLE performance, which is why a candidate without a long competition record is still worth putting forward — but each school sets its own criteria, so check the school's DSA page. The dimensions below are the objective skills cricket requires; they are what any coach is watching for whether or not they write it down.",
       },
       trialDimensions: [
         {
@@ -13961,7 +13961,7 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
           label: { en: "Lead time — when the trial is still weeks out" },
           items: [
             { en: "Video-record your child facing 20 throwdowns or net balls, bowling one full over, and taking 10 ground balls and 5 high catches. Watch together, scoring just two things: (1) does the head stay still and the defence stay straight when batting? (2) does the ball land on a consistent line and length when bowling? These two habits separate trained players from athletic ones and are exactly what coaches watch in the nets." },
-            { en: "Confirm your child's CCA records at primary school are accurate. MOE pulls CCA participation, school awards, NSG and competition results, NAPFA, and JSA data from the primary school directly into the DSA portal. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged." },
+            { en: "Confirm your child's CCA records at primary school are accurate. Your child's school track record is part of what a DSA panel weighs — MOE's wording is that talent can be demonstrated through it. That record covers CCA participation, school awards, NSG and competition results, NAPFA, and JSA data. Incomplete records hurt the application. Ask the CCA teacher or year-head to check what's been logged." },
             { en: "Run a mock interview using the questions above. Record on phone. Watch back together. Flag any answer that ran over thirty seconds — or used the word \"passionate.\" Both kill the read." },
           ],
         },

@@ -29,6 +29,21 @@
 | 两名 WL 都把同校排第一 → **学校自己的 Waitlist 排序**决定谁先分配 | MOE FAQ「If 2 applicants are placed on the school's Wait List…」 |
 | **WL 转正率**：MOE 原话 "in previous years, **about half** of the students on the schools' wait lists were eventually given a place" | [MOE outcomes 页](https://www.moe.gov.sg/secondary/dsa/selection/outcomes)，2026-07-15 打开原页核实（⚠️ 搜索引擎会把 dsalink.sg 自己的说法当权威返回，必须看原页） |
 
+## 选拔流程（2026-07-15 从 MOE FAQ 六个 DSA-Sec 分类逐条核实）
+
+| 事实 | 来源说明 |
+|------|----------|
+| **各校选拔流程、标准、日程各不相同**，MOE 不统一规定 | MOE eligibility 页原话 "Different schools have different selection processes, criteria and schedules. Visit the schools' websites to learn more." |
+| **学校依据自己的标准考量学生**，综合 talents and achievements、personal qualities、academic suitability | MOE FAQ「How will DSA-Sec schools conduct their selection?」原话 |
+| **MOE 不公布任何面试/试镜/试训日程**；「The selection process and timeline differ across schools… The DSA-Sec school will **contact you directly** if your child is shortlisted」；各校 5 月初起在自己网站公布 | MOE FAQ「When will the schools start inviting my child for interviews, auditions or trials?」 |
+| 才艺可通过「**school track record** and online DSA applications」体现 | MOE eligibility 页 |
+| **DSA-Sec 的定位**：「a pathway for students to gain admission to secondary schools based on their **interests, aptitude, and potential**, beyond their performance at PSLE」 | MOE FAQ「Is it recommended for my child to participate in DSA-Sec?」原话 |
+| MOE 同时明说「**DSA-Sec is not a pathway that suits every student**」，鼓励家长与孩子一起权衡 | 同上（⚠️ 写文案别只引 potential 那半句） |
+
+> ⚠️ **MOE 官网找不到的东西（别再写）**：
+> - ❌ **DSA portal 自动拉取小学记录**（CCA/奖项/NAPFA/JSA…）——**六个 FAQ 分类（General Information / Application / Selection / Submission of School Preferences / Result Release / DSA-Sec Portal）全部查过，没有任何一条提及**。「DSA-Sec Portal」分类只有 4 条，全是 Singpass 登录与超时。2026-07-15 已把 talentPages.ts 里 34 处「MOE pulls…」改写为不挂 MOE 名的说法（commit 见 git log）。⚠️ **「MOE 没说过」≠「假的」**——portal 可能确实预填，只是无公开文档；申请窗口已关无法登录验证。**要写就得先证实。**
+> - ❌ **按单项才艺/运动列出的 trial 或 grade 要求**——MOE 只有笼统规定，不分项目。
+
 > ⚠️ **2026-07-15 教训**：此前站内 12 处写「outcomes between **17 and 28 August**, per MOE's published timeline」——**「17 August」在 MOE 任何页面都不存在**，是编的，还挂了 MOE 的名。**本表没有的日期/数字，一律不准标 "per MOE"。**
 
 ---
