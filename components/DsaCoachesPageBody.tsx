@@ -617,6 +617,26 @@ export const coaches: Coach[] = [
     website: "https://www.ysayemusicstudio.com",
     prominence: 1,
   },
+  {
+    id: "mindspeak-logic",
+    type: "institution",
+    name: "MindSpeak Logic",
+    talentAreas: ["academic"],
+    tagline:
+      "Debate, oratory, and public speaking coaching since 2015, led by head coach Dr. Firoze Ismail. Prepares students for debate DSA through critical thinking and perspective-taking rather than rehearsed speeches.",
+    website: "https://www.mindspeaklogic.org",
+    prominence: 2,
+  },
+  {
+    id: "ev-dance",
+    type: "institution",
+    name: "EV Dance",
+    talentAreas: ["performing-arts"],
+    tagline:
+      "Ballet and dance DSA audition preparation, with an emphasis on conditioning and audition stamina, musicality, and staying composed performing in an unfamiliar setting.",
+    website: "https://www.evdance.com.sg",
+    prominence: 2,
+  },
 ];
 
 const areaTagStyles: Record<TalentArea, string> = {
