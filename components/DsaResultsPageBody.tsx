@@ -243,10 +243,10 @@ const S3_KICKER: LocaleStr = {
   ta: "முடிவு 2 / 4",
 };
 const S3_TITLE: LocaleStr = {
-  en: "Waitlist (WL) — roughly half convert, but you must rank it first",
-  zh: "Waitlist (WL)——历史上约一半转正 · 但必须排首位才有机会",
-  ms: "Senarai Menunggu (WL) — kira-kira separuh menukar, tetapi mesti disusun dahulu",
-  ta: "காத்திருப்புப் பட்டியல் (WL) — சுமார் பாதி மாறுகின்றன, ஆனால் முதலில் வரிசைப்படுத்த வேண்டும்",
+  en: "Waitlist (WL) — roughly half convert, and ranking it above your CO costs you nothing",
+  zh: "Waitlist (WL)——历史上约一半转正 · 把它排在 CO 之前没有任何损失",
+  ms: "Senarai Menunggu (WL) — kira-kira separuh menukar, dan menyusunnya di atas CO anda tidak merugikan apa-apa",
+  ta: "காத்திருப்புப் பட்டியல் (WL) — சுமார் பாதி மாறுகின்றன; அதை உங்கள் CO-க்கு மேலே வரிசைப்படுத்துவதால் இழப்பு எதுவும் இல்லை",
 };
 
 const S3_BODY: ReadonlyArray<LocaleStr> = [
@@ -257,25 +257,25 @@ const S3_BODY: ReadonlyArray<LocaleStr> = [
     ta: "காத்திருப்புப் பட்டியல் என்றால் பள்ளி உங்கள் குழந்தையை இடம் திறக்கும் நிபந்தனையில் ஏற்றுக்கொண்டது.",
   },
   {
-    en: "MOE has publicly stated that about half of Waitlist candidates ultimately receive offers in past cycles. This is not a guarantee — it's a historical pattern. Whether your child converts depends on how many candidates above them on the same school's list decline their COs in October.",
-    zh: "MOE 公开数据显示 · 往年 Waitlist 候选人中约一半最终收到 offer。这不是保证 · 是历史模式。能否转正取决于同校列表中排在孩子前面的人在 10 月有多少人拒绝 CO。",
+    en: "MOE's published wording is that \"in previous years, about half of the students on the schools' wait lists were eventually given a place\". That's a historical pattern, not a guarantee. Whether your child converts depends on how many candidates above them on that school's list decline their COs in October.",
+    zh: "MOE 的原话是「往年学校 Waitlist 上约有一半的学生最终获得学位」。这是历史规律 · 不是保证。能否转正取决于同校列表中排在孩子前面的人在 10 月有多少人拒绝 CO。",
     ms: "MOE telah menyatakan bahawa kira-kira separuh calon Senarai Menunggu akhirnya menerima tawaran dalam kitaran lalu.",
     ta: "MOE பகிரங்கமாக கடந்த சுற்றுகளில் சுமார் பாதி காத்திருப்பு வேட்பாளர்கள் இறுதியில் சலுகைகளைப் பெறுகின்றனர் என்று கூறியுள்ளது.",
   },
 ];
 
 const S3_CRITICAL_TITLE: LocaleStr = {
-  en: "The critical Waitlist rule: rank the WL school first to have a chance",
-  zh: "Waitlist 关键规则：必须排首位才有机会",
-  ms: "Peraturan kritikal Senarai Menunggu: susun sekolah WL dahulu untuk peluang",
-  ta: "முக்கிய விதி: வாய்ப்புக்கு WL பள்ளியை முதலில் வரிசைப்படுத்த வேண்டும்",
+  en: "The Waitlist rule: rank it above your CO — the CO still holds if it doesn't convert",
+  zh: "Waitlist 规则：排在 CO 之前 · 没转正 CO 依然有效",
+  ms: "Peraturan Senarai Menunggu: susun di atas CO anda — CO tetap sah jika WL tidak menukar",
+  ta: "காத்திருப்புப் பட்டியல் விதி: அதை உங்கள் CO-க்கு மேலே வரிசைப்படுத்துங்கள் — மாறவில்லை என்றாலும் CO செல்லுபடியாகும்",
 };
 
 const S3_CRITICAL: LocaleStr = {
-  en: "If you also hold a CO at another school, you face a real choice: rank the WL school first (you'll convert if a spot opens; you fall back to your CO if it doesn't — your CO is protected) or rank your CO first (you lock the CO and forfeit the WL chance). MOE published this protection explicitly — you cannot lose a CO by going after a WL, but you must rank the WL above the CO to keep the WL pathway open.",
-  zh: "如果同时还拿到另一所学校的 CO · 你面临真实选择：把 WL 校排首位（有名额开就转正；没开就回到 CO——CO 受保护）· 或把 CO 排首位（锁定 CO · 放弃 WL 机会）。MOE 明确写出这条保护规则——追 WL 不会失去 CO · 但要保留 WL 机会必须把 WL 排在 CO 之上。",
-  ms: "Jika anda juga memegang CO di sekolah lain, anda menghadapi pilihan: susun WL dahulu (anda menukar jika tempat dibuka; CO anda dilindungi) atau susun CO dahulu.",
-  ta: "மற்றொரு பள்ளியில் CO-வும் இருந்தால், உண்மையான தேர்வு: WL-ஐ முதலில் வரிசைப்படுத்துங்கள் (இடம் திறந்தால் மாற்றம்; CO பாதுகாக்கப்படுகிறது).",
+  en: "If you also hold a CO at another school, this is less of a dilemma than it looks. MOE's own guidance says you can put either option. Rank the WL school above your CO and one of two things happens: the WL converts and your child goes there, or it doesn't and your child is admitted to the CO school anyway — the CO is not at risk. Rank the CO first and it simply locks in, and the WL never gets tested. So if you'd genuinely prefer the WL school, ranking it above the CO has no downside. What doesn't work is ranking the WL below a CO: the CO is allocated first and the WL is never reached.",
+  zh: "如果同时还拿到另一所学校的 CO · 这没有看起来那么两难。MOE 的指引明说两种排法都可以。把 WL 校排在 CO 之前 · 只有两种结果：WL 转正 · 孩子去那所；或者没转正 · 孩子照样被 CO 校录取——CO 不会因此失去。把 CO 排前面 · 它直接锁定 · WL 根本没机会被触发。所以只要你确实更想要那所 WL 校 · 把它排在 CO 之前没有任何下行风险。真正无效的排法是把 WL 排在 CO 后面：CO 先分配掉 · WL 永远轮不到。",
+  ms: "Jika anda juga memegang CO di sekolah lain, ini kurang dilema daripada yang kelihatan. Panduan MOE sendiri menyatakan anda boleh memilih mana-mana susunan. Susun sekolah WL di atas CO anda: sama ada WL menukar dan anak anda ke sana, atau tidak menukar dan anak anda tetap diterima di sekolah CO — CO tidak berisiko. Susun CO dahulu dan ia terus dikunci, WL tidak pernah diuji. Yang tidak berkesan ialah menyusun WL di bawah CO: CO diperuntukkan dahulu dan WL tidak pernah dicapai.",
+  ta: "மற்றொரு பள்ளியில் CO-வும் இருந்தால், இது தோற்றத்தை விடக் குறைவான சிக்கல். இரண்டு வரிசைகளையும் வைக்கலாம் என MOE-இன் வழிகாட்டுதலே கூறுகிறது. WL பள்ளியை CO-க்கு மேலே வரிசைப்படுத்தினால் இரண்டில் ஒன்று நடக்கும்: WL மாறும், அல்லது மாறாவிட்டாலும் குழந்தை CO பள்ளியில் சேர்க்கப்படும் — CO ஆபத்தில் இல்லை. CO-வை முதலில் வைத்தால் அது பூட்டிவிடும், WL சோதிக்கப்படாது. வேலை செய்யாதது: WL-ஐ CO-க்குக் கீழே வைப்பது — CO முதலில் ஒதுக்கப்பட்டு WL எட்டப்படாது.",
 };
 
 /* ============================ SECTION 4 · COUNTER-OFFER ============================ */
@@ -393,16 +393,16 @@ const S6_RULES: ReadonlyArray<{
   },
   {
     title: {
-      en: "Algorithm: top-ranked CO locks; top-ranked WL gives chance with CO protected",
-      zh: "算法：排首位的 CO 锁定 · 排首位的 WL 给机会同时 CO 受保护",
-      ms: "Algoritma: CO teratas dikunci; WL teratas memberi peluang dengan CO dilindungi",
-      ta: "வழிமுறை: முதலில் வரிசைப்படுத்தப்பட்ட CO பூட்டுகிறது",
+      en: "Algorithm: a CO locks wherever it sits; a WL above it gets a chance with the CO still protected",
+      zh: "算法：CO 排在哪都会锁定 · 把 WL 排在它之上就多一次机会 · CO 仍受保护",
+      ms: "Algoritma: CO dikunci di mana-mana kedudukan; WL di atasnya mendapat peluang dengan CO masih dilindungi",
+      ta: "வழிமுறை: CO எங்கிருந்தாலும் பூட்டும்; அதற்கு மேலே உள்ள WL-க்கு வாய்ப்பு கிடைக்கும், CO பாதுகாக்கப்படும்",
     },
     body: {
-      en: "If a Confirmed Offer school is ranked first, it locks in (subject to PSLE Posting Group). If a Waitlist school is ranked first and converts, that becomes the placement; if it doesn't convert, the next school (which should be a CO if you have one) takes over. This is why CO + WL families almost always benefit from ranking the WL first.",
-      zh: "如果首位是 CO 校 · 锁定（前提 PSLE 达 Posting Group）。如果首位是 WL 校 · 转正了就是它；没转正 · 第二位（最好是 CO）接管。这就是为什么 CO + WL 家庭通常应该把 WL 排首位。",
-      ms: "Jika sekolah CO disusun pertama, ia dikunci. Jika sekolah WL disusun pertama dan menukar, itu menjadi penempatan.",
-      ta: "முதலில் CO பள்ளி வரிசைப்படுத்தப்பட்டால், அது பூட்டுகிறது.",
+      en: "A Confirmed Offer is allocated as soon as the list reaches it (subject to PSLE Posting Group), which is why anything ranked below a CO is never tested. A Waitlist school only admits if vacancies remain after every CO holder is placed — MOE gives CO holders priority over WL candidates at the same school. So if a WL school sits above your CO and converts, that's the placement; if it doesn't, the CO below it takes over. Where two WL candidates both rank the same school first, the school's own Waitlist order decides who is allocated.",
+      zh: "CO 只要轮到就会被分配（前提 PSLE 达 Posting Group）· 所以排在 CO 下面的任何学校都不会被触发。WL 校只有在所有 CO 持有者都安置完、仍有空位时才录取——MOE 明确规定同校 CO 优先于 WL。所以 WL 校若排在 CO 之上并转正 · 就是它；没转正 · 下面的 CO 接管。若两名 WL 候选人都把同一所学校排第一 · 由学校自己的 Waitlist 排序决定谁先被分配。",
+      ms: "CO diperuntukkan sebaik sahaja senarai sampai kepadanya, jadi apa-apa di bawah CO tidak pernah diuji. Sekolah WL hanya menerima jika tempat kosong kekal selepas semua pemegang CO ditempatkan — MOE memberi keutamaan CO berbanding WL di sekolah yang sama. Jika dua calon WL menyusun sekolah yang sama dahulu, susunan Senarai Menunggu sekolah itu menentukan.",
+      ta: "CO-வை பட்டியல் எட்டியவுடன் ஒதுக்கப்படும், எனவே CO-க்குக் கீழே உள்ளவை சோதிக்கப்படுவதில்லை. அனைத்து CO வைத்திருப்பவர்களும் இடம்பெற்ற பிறகு காலியிடம் இருந்தால் மட்டுமே WL பள்ளி சேர்க்கும் — ஒரே பள்ளியில் CO-க்கு MOE முன்னுரிமை அளிக்கிறது. இரு WL வேட்பாளர்களும் ஒரே பள்ளியை முதலில் வைத்தால், பள்ளியின் சொந்த காத்திருப்பு வரிசை முடிவு செய்யும்.",
     },
   },
   {
