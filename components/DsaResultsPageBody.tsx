@@ -544,10 +544,10 @@ const BOTTOM_TITLE: LocaleStr = {
 };
 
 const BOTTOM_BODY: LocaleStr = {
-  en: "The half-year between application close and DSA outcomes is the slog: the interview-and-trial window from June to August, then the wait through September and most of October. The pages below cover the prep side; come back here in late August when school notifications start landing.",
-  zh: "申请截止到结果公布的半年是最难熬的：6 月到 8 月是面试与试训窗口 · 9 月到 10 月大部分是等待。下面的页面覆盖备战部分；8 月底学校开始通知时 · 回来这一页。",
-  ms: "Setengah tahun antara penutupan permohonan dan keputusan DSA adalah masa yang sukar.",
-  ta: "விண்ணப்பம் முடிந்து DSA முடிவுகள் வரும் வரை அரை ஆண்டு கடினமான காத்திருப்பு.",
+  en: "The months between application close and the October preference submission are the slog: the interview-and-trial window from June to August, school notifications arriving by 28 August (often earlier), then the wait through September into October. The pages below cover the prep side; come back here once your child's notification lands.",
+  zh: "申请截止到 10 月志愿填报之间的这几个月最难熬：6 月到 8 月是面试与试训窗口 · 学校最迟 8 月 28 日通知（常常更早）· 之后 9 月一路等到 10 月。下面的页面覆盖备战部分；孩子的通知一到 · 回来这一页。",
+  ms: "Bulan-bulan antara penutupan permohonan dan penyerahan keutamaan Oktober adalah masa yang sukar: temu duga dari Jun hingga Ogos, pemberitahuan sekolah menjelang 28 Ogos (selalunya lebih awal), kemudian menunggu hingga Oktober.",
+  ta: "விண்ணப்பம் முடிந்து அக்டோபர் முன்னுரிமை சமர்ப்பிப்பு வரையிலான மாதங்கள் கடினமானவை: ஜூன்-ஆகஸ்ட் நேர்காணல்கள், ஆகஸ்ட் 28-க்குள் பள்ளி அறிவிப்பு (பெரும்பாலும் முன்பே), பிறகு அக்டோபர் வரை காத்திருப்பு.",
 };
 
 const BOTTOM_CTA1: LocaleStr = {

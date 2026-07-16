@@ -419,7 +419,7 @@ const SECTIONS_EN: DsaExperienceSection[] = [
     id: "section-8",
     title: "After Selection: What Your Result Actually Means",
     paragraphs: [
-      "DSA results arrive between late August and September. Schools communicate directly by email or phone. Most schools avoid releasing results during PSLE oral week and school preliminary examination periods — if results are delayed, this is usually why.",
+      "DSA outcomes arrive by Friday, 28 August 2026 — that is MOE's deadline for every school, and many notify earlier. Schools communicate directly by email or phone, so watch the inbox you used in the application.",
       "Three outcomes are possible. A Confirmed Offer (CO) means you have a guaranteed place, conditional on meeting the school's minimum posting group at PSLE. For IP and Express schools this generally means AL 22 or better. A Waiting List (WL) means you are in consideration if a CO holder declines. Unsuccessful means you were not selected — PSLE posting and S1 Appeal remain available.",
       "If you hold a CO, you submit ranked school preferences in October — before PSLE results are released. If you receive COs from more than one school, the October ranking is the most consequential decision you will make. Ranking the wrong school first is very difficult to undo.",
       "Once a school is allocated to you through your October submission, that allocation is final regardless of PSLE results. If your child's November PSLE score would have qualified them for a school ranked lower on your October list, the October allocation still holds.",

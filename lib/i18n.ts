@@ -635,7 +635,7 @@ export const copy: Record<Locale, Copy> = {
       "Compare 2025 G3 (non-affiliated) posting bands, year-on-year deltas, and full 2023–2025 streams for MOE secondary schools in our table. Filter by SAP, IP, gender, and zone.",
     scoresFilterToolbarAria: "Filters: search, zone, SAP, IP, gender, sort",
     homeScoresCardTitle:
-      "View 3-year PSLE COP trends for 146 secondary schools island-wide",
+      "View 3-year PSLE COP trends for 139 secondary schools island-wide",
     homeScoresCardCta: "Open scoreboard",
     scoreboardFilterSapOnly: "SAP only",
     scoreboardFilterIpOnly: "IP only",
@@ -1010,7 +1010,7 @@ export const copy: Record<Locale, Copy> = {
     scoresPageLead:
       "对比 2025 G3 对外分档、相对 2024 的松紧变化，以及 2023–2025 全细分。可按特选、IP、单性别与区域筛选。",
     scoresFilterToolbarAria: "筛选：搜索、区域、特选、IP、性别、排序",
-    homeScoresCardTitle: "查看全岛 146 所中学 3 年 PSLE 分数趋势",
+    homeScoresCardTitle: "查看全岛 139 所中学 3 年 PSLE 分数趋势",
     homeScoresCardCta: "进入分数看板",
     scoreboardFilterSapOnly: "仅特选 SAP",
     scoreboardFilterIpOnly: "仅直通车 IP",
@@ -1390,7 +1390,7 @@ export const copy: Record<Locale, Copy> = {
       "Bandingkan G3 2025, perubahan berbanding 2024, dan semua aliran 2023–2025. Tapis SAP, IP, jantina, zon.",
     scoresFilterToolbarAria: "Penapis: carian, zon, SAP, IP, jantina, isihan",
     homeScoresCardTitle:
-      "Lihat trend COP PSLE 3 tahun untuk 146 sekolah menengah",
+      "Lihat trend COP PSLE 3 tahun untuk 139 sekolah menengah",
     homeScoresCardCta: "Buka papan skor",
     scoreboardFilterSapOnly: "SAP sahaja",
     scoreboardFilterIpOnly: "IP sahaja",
@@ -1780,7 +1780,7 @@ export const copy: Record<Locale, Copy> = {
       "2025 G3, 2024 உடன் ஒப்பீடு, 2023–2025 அனைத்து ஓட்டங்கள். SAP, IP, ஒரு பாலினம், மண்டலம் வடிகட்டல்.",
     scoresFilterToolbarAria: "வடிகட்டிகள்: தேடல், மண்டலம், SAP, IP, பாலினம், வரிசை",
     homeScoresCardTitle:
-      "தீவு முழுவதும் 146 பள்ளிகளின் 3 ஆண்டு PSLE COP போக்குகளைக் காண்க",
+      "தீவு முழுவதும் 139 பள்ளிகளின் 3 ஆண்டு PSLE COP போக்குகளைக் காண்க",
     homeScoresCardCta: "மதிப்பெண் பலகை",
     scoreboardFilterSapOnly: "SAP மட்டும்",
     scoreboardFilterIpOnly: "IP மட்டும்",
