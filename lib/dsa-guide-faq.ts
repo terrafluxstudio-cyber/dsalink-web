@@ -60,10 +60,10 @@ export const FAQ_QA: FaqQa[] = [
       ta: "மனதை மாற்றினால் உறுதிசெய்யப்பட்ட சலுகையை நிராகரிக்க முடியுமா?",
     },
     a: {
-      en: "Yes — until the October preference exercise locks your final acceptance. After acceptance is locked, the decision is binding: you cannot then participate in S1 Posting or accept a different school's Confirmed Offer. Transfers between secondary schools are generally not allowed except in exceptional circumstances defined by MOE.",
-      zh: "可以——直到 10 月志愿排序锁定最终接受为止。一旦锁定，决定就有约束力：之后不能再参加 S1 派位，也不能接受其他学校的 Confirmed Offer。中学之间转学一般不允许，除非 MOE 定义的特殊情况。",
-      ms: "Ya — sehingga latihan keutamaan Oktober mengunci penerimaan. Selepas terkunci, keputusan mengikat.",
-      ta: "ஆம் — அக்டோபர் முன்னுரிமைப் பயிற்சி வரை. பூட்டிய பிறகு, முடிவு கட்டுப்படுத்தும்.",
+      en: "Yes — until the October preference exercise locks your final acceptance. After that, the decision is binding: you cannot participate in S1 Posting or accept a different school's Confirmed Offer. MOE also states plainly that a child admitted through DSA-Sec may not transfer to another school after the PSLE results are released, and it publishes no exceptions to this — so plan on the commitment holding, not on a way out of it.",
+      zh: "可以——直到 10 月志愿排序锁定最终接受为止。一旦锁定，决定就有约束力：之后不能再参加 S1 派位，也不能接受其他学校的 Confirmed Offer。MOE 还明确写着：通过 DSA-Sec 录取的孩子，在 PSLE 成绩公布后不得转到其他学校，且 MOE 没有公布任何例外——所以请按「这个承诺一定会生效」来规划，别指望有后路。",
+      ms: "Ya — sehingga latihan keutamaan Oktober mengunci penerimaan akhir anda. Selepas itu keputusan mengikat: anda tidak boleh menyertai Penempatan S1 atau menerima Tawaran Sah sekolah lain. MOE juga menyatakan dengan jelas bahawa anak yang diterima melalui DSA-Sec tidak boleh berpindah ke sekolah lain selepas keputusan PSLE dikeluarkan, dan MOE tidak menerbitkan sebarang pengecualian — jadi rancanglah dengan andaian komitmen itu kekal.",
+      ta: "ஆம் — அக்டோபர் முன்னுரிமைப் பயிற்சி உங்கள் இறுதி ஏற்பைப் பூட்டும் வரை. அதன் பிறகு முடிவு கட்டுப்படுத்தும்: S1 இடுகையில் பங்கேற்கவோ, வேறு பள்ளியின் உறுதிசெய்யப்பட்ட சலுகையை ஏற்கவோ முடியாது. DSA-Sec வழியாகச் சேர்ந்த குழந்தை PSLE முடிவுகள் வெளியான பிறகு வேறு பள்ளிக்கு மாற முடியாது என MOE தெளிவாகக் கூறுகிறது; அதற்கு எந்த விதிவிலக்கையும் MOE வெளியிடவில்லை — எனவே இந்த உறுதிப்பாடு நிலைக்கும் என்றே திட்டமிடுங்கள்.",
     },
   },
   {

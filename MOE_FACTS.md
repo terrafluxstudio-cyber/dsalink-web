@@ -9,6 +9,7 @@
 | 非 IP 学校：DSA 名额上限为 S1 总名额的 20% | MOE 官方数据 |
 | 2026 年申请窗口：**5月6日（6 May，周三）11am – 6月2日（2 Jun）4:30pm SGT** | MOE 官方新闻稿 20260505（cal 验证 5/6 为周三）⚠️ 旧版误记 5 May，2026-06-22 已订正 |
 | 接受 Confirmed Offer 具有约束力，不可参加 S1 Posting | MOE 官方规则 |
+| **承诺的完整范围（2026-07-15 逐字核实）**：DSA-Sec 录取的学生 "must honour this commitment for the duration of the programme"，**"are not allowed to: Submit school choices during S1 Posting / Transfer to another school after the release of the PSLE results"** | [MOE commitment 页](https://www.moe.gov.sg/secondary/dsa/preferences/understand-dsa-sec-commitment) + FAQ「Is it recommended for my child to participate in DSA-Sec?」⚠️ **MOE 未公布任何例外情况**——别写「除 MOE 定义的特殊情况外」之类的软化（2026-07-15 已修 `dsa-guide-faq.ts` 一处）。不确定就别提交志愿，走 S1 Posting |
 | 4所纯 DSA 学校：NUS High、SOTA、SST、新加坡体育学校 | MOE 官方列表 |
 | DSA 录取以通过课程最低 Posting Group 为条件（如课程只设 Express/PG3：PSLE AL 4–22） | MOE 官方条件 |
 | DSA 被拒后，学生仍可通过 PSLE 正常分配和 S1 Appeal 申请其他学校 | MOE 官方流程 |
