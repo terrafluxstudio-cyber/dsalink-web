@@ -67,9 +67,9 @@
   "dsaGuideFactCommitmentTitle": "承诺规则（Commitment Rule）",
   "dsaGuideFactCommitmentBefore1": "一旦接受 DSA 录取并按规定完成志愿确认，孩子即锁定该升学路径，将",
   "dsaGuideFactCommitmentStrong1": "不再参加随后的中一（S1）派位网上选校",
-  "dsaGuideFactCommitmentMid": "；且除 MOE 规定的极少数特殊情况外，",
-  "dsaGuideFactCommitmentStrong2": "原则上不能转校",
-  "dsaGuideFactCommitmentAfter": "。",
+  "dsaGuideFactCommitmentMid": "；并且在 PSLE 成绩公布后，",
+  "dsaGuideFactCommitmentStrong2": "不能转到其他学校",
+  "dsaGuideFactCommitmentAfter": "。MOE 没有公布任何例外情况，请按这个承诺一定生效来规划。",
   "dsaGuideFactPsleTitle": "PSLE 成绩要求（PSLE Requirement）",
   "dsaGuideFactPsleBefore": "DSA 属于提前遴选通道，但",
   "dsaGuideFactPsleStrong1": "不能绕过",
@@ -624,5 +624,10 @@
   "dsaCoachesCtaHeading": "您也在辅导DSA学生吗？",
   "dsaCoachesCtaBody": "无论您是辅导中心、学校还是个人老师，只要您辅导DSA申请学生，欢迎联系我们申请收录。",
   "dsaCoachesCtaButton": "联系我们申请收录",
-  "dsaInterviewLinkCoaches": "DSA辅导机构目录 →"
+  "dsaInterviewLinkCoaches": "DSA辅导机构目录 →",
+  "dsaInterviewIntroMistakesHeading": "常见错误",
+  "dsaInterviewIntroMistake1": "太笼统：「我热爱我的 CCA，我非常努力。」——这句话套在每个申请人身上都成立。换成一个具体的故事。",
+  "dsaInterviewIntroMistake2": "太长：超过 90 秒就会显得排练过度，也挤掉了真正面试的时间。",
+  "dsaInterviewIntroMistake3": "说不出为什么是这所学校：如果孩子讲不出这所学校项目的任何具体之处，面试官听得出来。",
+  "dsaInterviewIntroMistake4": "像背出来的：如果听起来像演讲稿，练习时突然追问一个没准备过的问题。孩子如果卡住，说明结构还得再打磨。"
 }
