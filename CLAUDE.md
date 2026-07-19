@@ -261,6 +261,10 @@ i18n：     lib/i18n.ts（行内 EN/ZH/MS/TA）+ locales/*.json（仅 DSA Guide 
 - COP 历史：`lib/school-cop-history-data.ts`
 - 推荐引擎：`lib/recommend.ts`
 - 语言 Context：`contexts/LanguageContext.tsx`
+- 才艺页 OG 图：`public/og/talent-<slug>.png`（静态文件，生成脚本 `scripts/gen-og-images.ts`）
+
+> ⚠️ **改了才艺页的 `navLabel` 或 `hook` 后，必须跑 `npm run og` 重新生成 OG 图并一起提交**，否则社交预览图文字会停在旧版。
+> **禁止**把才艺 OG 图改回 co-located 的 `opengraph-image.tsx` 动态路由：该路由无法预渲染，每次部署都会清空 CDN 缓存，爬虫再来就付一次约 1 秒的冷渲染 —— 2026-07-19 实测这是 Fluid CPU 额度的主要消耗源（占团队 4 小时额度的 65%）。
 
 ---
 
