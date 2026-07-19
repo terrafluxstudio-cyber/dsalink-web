@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "og": "tsx scripts/gen-og-images.ts",
     "postbuild": "node scripts/indexnow-submit.mjs",
     "start": "next start",
     "lint": "next lint",
