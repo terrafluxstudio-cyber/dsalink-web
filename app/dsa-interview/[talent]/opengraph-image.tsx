@@ -3,8 +3,15 @@ import { getTalentPage, TALENT_SLUGS } from "@/lib/talentPages";
 
 // Node.js runtime (not edge): this OG image imports the full talent data
 // module, which pushes the bundle past Vercel's 1 MB edge-function limit once
-// enough talents exist. Images are generated at build time, so nodejs runtime
-// has no perf downside and removes the size ceiling.
+// enough talents exist.
+//
+// These images render on demand, not at build time (verified 2026-07-19 — the
+// route builds as a function and nothing lands in prerender-manifest, even with
+// generateStaticParams here; the `[__metadata_id__]` segment can't be
+// statically enumerated). That is fine: responses carry
+// `cache-control: immutable, max-age=31536000`, so the CDN serves every hit
+// after the first from cache. Real cost is ~one render per image per deploy,
+// not per crawl.
 export const runtime = "nodejs";
 export const contentType = "image/png";
 export const size = { width: 1200, height: 630 } as const;
