@@ -16,6 +16,7 @@
 import { ImageResponse } from "next/og";
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
+import sharp from "sharp";
 import { getTalentPage, TALENT_SLUGS } from "../lib/talentPages";
 
 const SIZE = { width: 1200, height: 630 } as const;
@@ -135,7 +136,14 @@ async function main() {
       card(talent.navLabel.en, talent.hook.en) as any,
       { ...SIZE },
     );
-    const buf = Buffer.from(await image.arrayBuffer());
+    // ImageResponse emits full RGBA (~129 KB each). These cards are a flat
+    // gradient plus text, so a 256-colour palette is visually identical and
+    // ~4x smaller — worth it because every deploy re-pulls public/ to the CDN
+    // and Fast Origin Transfer is the next quota about to blow.
+    const raw = Buffer.from(await image.arrayBuffer());
+    const buf = await sharp(raw)
+      .png({ palette: true, colours: 256, compressionLevel: 9, effort: 10 })
+      .toBuffer();
     await writeFile(path.join(OUT_DIR, `talent-${slug}.png`), buf);
     written += 1;
   }
