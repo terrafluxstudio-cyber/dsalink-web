@@ -3417,6 +3417,9 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
             {
               en: "Run two mock auditions for unfamiliar audiences. Most actors underperform first audition because the room and the panel are unfamiliar. Perform the monologues for a teacher, a relative, and a school friend's parent — three different audiences in three different rooms.",
             },
+            {
+              en: "Rehearse for readiness, not polish. A monologue drilled until it is mistake-proof tends to arrive on the day sounding closed — every beat pre-decided, nothing left to discover. Schools are choosing a child they will train for four years, so they read for openness, imagination and appetite rather than a finished product. If your child has started saying they are afraid of getting it wrong, that is the signal to run fewer repetitions and more variations.",
+            },
           ],
         },
         {
