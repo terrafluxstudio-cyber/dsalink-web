@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Noto_Sans_SC, Noto_Sans_Tamil, Plus_Jakarta_Sans } from "next/font/google";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { UtmCapture } from "@/components/UtmCapture";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { getSiteUrl } from "@/lib/seo";
 import "./globals.css";
@@ -114,7 +113,11 @@ export default function RootLayout({
       <body className="font-sans">
         <GoogleAnalytics />
         <UtmCapture />
-        <SpeedInsights sampleRate={0.4} />
+        {/* Vercel Speed Insights removed 2026-07-19: the free team's 10K
+            data-point quota was blown (13K) even at sampleRate 0.4. Real-user
+            CWV is now unmonitored — CrUX has insufficient data for this origin
+            at current traffic, so PageSpeed lab data is the only fallback.
+            Reinstate once traffic clears the CrUX threshold or the plan changes. */}
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
