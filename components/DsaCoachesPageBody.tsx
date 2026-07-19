@@ -628,6 +628,26 @@ export const coaches: Coach[] = [
     prominence: 2,
   },
   {
+    id: "dialogic-academy",
+    type: "institution",
+    name: "Dialogic Academy",
+    talentAreas: ["academic"],
+    tagline:
+      "Debate, public speaking, and journalism training, run as CCA coaching and enrichment with schools since 2018. General competition training rather than DSA-specific prep, but relevant groundwork for debate and oratory applicants.",
+    website: "https://dialogic.academy",
+    prominence: 2,
+  },
+  {
+    id: "learning-journey",
+    type: "institution",
+    name: "Learning Journey Education Centre",
+    talentAreas: ["academic"],
+    tagline:
+      "English tuition centre with dedicated oral and public speaking classes, and published guidance on preparing for the DSA interview.",
+    website: "https://www.learningjourney.edu.sg",
+    prominence: 1,
+  },
+  {
     id: "ev-dance",
     type: "institution",
     name: "EV Dance",
