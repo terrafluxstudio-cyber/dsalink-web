@@ -3126,6 +3126,9 @@ const TALENT_DATA: Record<TalentSlug, TalentPage> = {
             {
               en: "Run two mock auditions in unfamiliar studios. Most dancers underperform first audition because the studio, the floor, and the mirrors are unfamiliar. Book trial sessions at two different dance schools to surface this in advance, not at the real audition.",
             },
+            {
+              en: "Build conditioning and stamina, not just one polished piece. A common misjudgement is drilling a single solo to perfection while neglecting the physical conditioning behind it — the ability to warm up correctly, hold technique, and stay focused and confident under time pressure and a panel's gaze, not only in the comfort of a familiar studio. Clean execution of one routine, performed warm and unhurried at home, doesn't guarantee the same execution cold, on an unfamiliar floor, against the clock. Treat conditioning and audition stamina as their own preparation track, separate from polishing the solo.",
+            },
           ],
         },
         {
