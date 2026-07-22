@@ -55,10 +55,75 @@ const SUBTITLE: LocaleStr = {
 
 const DISCLAIMER: LocaleStr = {
   en: "Dates: the 28 August notification deadline and the October Preference Exercise are published by MOE for 2026. The DSA allocation and PSLE results are released together, which MOE gives as tentatively 24 or 25 November 2026 — tentative is MOE's own word, so treat it as subject to change. MOE publishes no schedule at all for school interviews, trials and auditions; those dates come from each school. Always verify with the official MOE page below before acting on any date.",
-  zh: "日期说明：8 月 28 日的通知截止日与 10 月 Preference Exercise 是 MOE 已公布的 2026 官方数据。DSA 派位结果与 PSLE 成绩同日公布 · MOE 给出的是「暂定」2026 年 11 月 24 或 25 日——「暂定」是 MOE 自己的用词 · 请当作可能变动。学校的面试 / 试镜 / 试训日期 **MOE 完全不公布** · 一律以各校通知为准。任何日期相关决策前 · 务必到下方 MOE 官方页核实。",
+  zh: "日期说明：8 月 28 日的通知截止日与 10 月 Preference Exercise 是 MOE 已公布的 2026 官方数据。DSA 派位结果与 PSLE 成绩同日公布 · MOE 给出的是「暂定」2026 年 11 月 24 或 25 日——「暂定」是 MOE 自己的用词 · 请当作可能变动。学校的面试 / 试镜 / 试训日期 MOE 完全不公布 · 一律以各校通知为准。任何日期相关决策前 · 务必到下方 MOE 官方页核实。",
   ms: "Tarikh: tarikh akhir pemberitahuan 28 Ogos dan Pemilihan Keutamaan Oktober diterbitkan oleh MOE untuk 2026. Keputusan peruntukan DSA dan PSLE dikeluarkan bersama, yang MOE nyatakan secara tentatif pada 24 atau 25 November 2026. MOE tidak menerbitkan sebarang jadual untuk temu duga, ujian dan uji bakat sekolah — tarikh itu datang daripada setiap sekolah.",
   ta: "தேதிகள்: ஆகஸ்ட் 28 அறிவிப்பு இறுதி நாளும் அக்டோபர் முன்னுரிமைப் பயிற்சியும் MOE 2026-க்கு வெளியிட்டவை. DSA ஒதுக்கீடும் PSLE முடிவுகளும் ஒன்றாக வெளியிடப்படும் — MOE தற்காலிகமாக 2026 நவம்பர் 24 அல்லது 25 எனக் கூறுகிறது. பள்ளி நேர்காணல், தேர்வு, திறனாய்வு தேதிகளுக்கு MOE எந்த அட்டவணையையும் வெளியிடுவதில்லை — அவை ஒவ்வொரு பள்ளியிலிருந்தும் வரும்.",
 };
+
+/* ============================ SECTION 0 · THE WAIT ============================ */
+
+const S0_KICKER: LocaleStr = {
+  en: "Chapter 0",
+  zh: "第 0 章",
+  ms: "Bab 0",
+  ta: "அத்தியாயம் 0",
+};
+const S0_TITLE: LocaleStr = {
+  en: "While you wait — how to read the silence between the interview and 28 August",
+  zh: "等待期——面试结束到 8 月 28 日之间，怎么读那段沉默",
+  ms: "Sementara menunggu — cara memahami senyap antara temu duga dan 28 Ogos",
+  ta: "காத்திருக்கும்போது — நேர்காணலுக்கும் ஆகஸ்ட் 28-க்கும் இடையிலான அமைதியைப் புரிதல்",
+};
+const S0_INTRO: LocaleStr = {
+  en: "The interviews, auditions and trials are done, and now comes the hardest stretch — an open-ended wait with no date you control or even know. Three things to hold on to before the outcomes land.",
+  zh: "面试、试镜、试训都结束了，接下来是最难熬的一段——一场你控制不了、甚至也不知道日期的空等。结果落下来之前，记住三件事。",
+  ms: "Temu duga, uji bakat dan ujian sudah selesai, dan kini datang bahagian paling sukar — penantian tanpa tarikh yang anda kawal atau tahu. Tiga perkara untuk dipegang sebelum keputusan tiba.",
+  ta: "நேர்காணல்கள், திறனாய்வுகள், சோதனைகள் முடிந்துவிட்டன, இப்போது கடினமான கட்டம் — நீங்கள் கட்டுப்படுத்தவோ அறியவோ முடியாத ஒரு காத்திருப்பு. முடிவுகள் வருவதற்கு முன் மூன்று விஷயங்கள்.",
+};
+const S0_POINTS: ReadonlyArray<{ label: LocaleStr; body: LocaleStr }> = [
+  {
+    label: {
+      en: "By 28 August is a deadline, not a release date",
+      zh: "8 月 28 日是截止日，不是放榜日",
+      ms: "28 Ogos ialah tarikh akhir, bukan tarikh pelepasan",
+      ta: "ஆகஸ்ட் 28 என்பது கடைசி தேதி, வெளியீட்டு தேதி அல்ல",
+    },
+    body: {
+      en: "Results arrive by Friday, 28 August 2026 — but that is the latest date, not a single moment when everyone hears together. Each school notifies on its own timing and many send earlier. So a friend hearing before you says nothing about your child's result; you are simply on different schools' clocks.",
+      zh: "结果最迟在 2026 年 8 月 28 日（周五）到——但那是最晚的截止日，不是大家一起收到的那一刻。各校按自己的节奏通知，很多会更早发。所以朋友比你先收到，跟你孩子的结果毫无关系；你们只是在不同学校的时钟上。",
+      ms: "Keputusan tiba menjelang Jumaat, 28 Ogos 2026 — tetapi itu tarikh paling lewat, bukan satu saat semua orang mendengar bersama. Setiap sekolah memberitahu mengikut masa sendiri dan ramai menghantar lebih awal. Jadi rakan yang mendengar lebih dahulu tidak bermakna apa-apa tentang keputusan anak anda; anda hanya berada pada jam sekolah yang berbeza.",
+      ta: "முடிவுகள் 2026 ஆகஸ்ட் 28 (வெள்ளி) க்குள் வரும் — ஆனால் அது கடைசி தேதி, எல்லோரும் ஒன்றாகக் கேட்கும் தருணம் அல்ல. ஒவ்வொரு பள்ளியும் தன் நேரத்தில் அறிவிக்கும், பலர் முன்பே அனுப்புகிறார்கள். எனவே நண்பர் உங்களுக்கு முன் கேள்விப்படுவது உங்கள் குழந்தையின் முடிவைப் பற்றி எதையும் சொல்லாது; நீங்கள் வெவ்வேறு பள்ளிகளின் நேரத்தில் இருக்கிறீர்கள்.",
+    },
+  },
+  {
+    label: {
+      en: "Silence in August is not a signal",
+      zh: "8 月中途没消息，不是坏消息",
+      ms: "Senyap pada bulan Ogos bukan isyarat",
+      ta: "ஆகஸ்ட்டில் அமைதி ஒரு சமிக்ஞை அல்ல",
+    },
+    body: {
+      en: "No news partway through the month is exactly that — no news. A school still working through its list has not decided against your child. The only date that carries information is the 28th. Until then, an empty inbox is a school that hasn't finished, not an answer.",
+      zh: "月中还没消息，那就只是还没消息。学校还在过名单，不等于已经否掉了你的孩子。唯一带信息的日期是 28 号。在那之前，空邮箱代表学校还没弄完，不是一个答复。",
+      ms: "Tiada berita di pertengahan bulan bermakna tiada berita sahaja. Sekolah yang masih meneliti senarainya belum memutuskan menolak anak anda. Satu-satunya tarikh yang membawa maklumat ialah 28hb. Sebelum itu, peti masuk kosong ialah sekolah yang belum selesai, bukan jawapan.",
+      ta: "மாதத்தின் நடுவில் செய்தி இல்லாதது என்பது செய்தி இல்லை என்பதே. தன் பட்டியலை இன்னும் பரிசீலிக்கும் பள்ளி உங்கள் குழந்தைக்கு எதிராக முடிவு செய்யவில்லை. தகவல் தரும் ஒரே தேதி 28. அதுவரை, காலியான இன்பாக்ஸ் என்பது முடிக்காத பள்ளி, ஒரு பதில் அல்ல.",
+    },
+  },
+  {
+    label: {
+      en: "Nothing you do now changes the outcome — so use the wait to get ready",
+      zh: "现在做什么都改变不了结果——用这段时间备好决策",
+      ms: "Apa yang anda buat sekarang tidak mengubah keputusan — jadi gunakan penantian untuk bersedia",
+      ta: "இப்போது நீங்கள் செய்வது முடிவை மாற்றாது — எனவே காத்திருப்பை தயாராக பயன்படுத்துங்கள்",
+    },
+    body: {
+      en: "The panel already has everything it needs; no email or extra material moves the decision now, and sending one rarely helps. What the wait is for is getting ready to decide fast — because once a result lands, the clock speeds up. Read what each of the four outcomes below commits you to, so the day it arrives is a decision you are prepared for, not a scramble.",
+      zh: "评委手里该有的都有了；现在没有哪封邮件、哪份补充材料能撼动决定，发了也基本没用。这段等待是用来备好「快速决策」的——因为结果一到，节奏会陡然加快。先把下面四种结果各自的约束读懂，等它来的那天，就是一个你准备好了的决定，而不是一场手忙脚乱。",
+      ms: "Panel sudah ada semua yang diperlukan; tiada e-mel atau bahan tambahan yang mengubah keputusan sekarang, dan menghantarnya jarang membantu. Penantian ini untuk bersedia membuat keputusan dengan cepat — kerana sebaik keputusan tiba, masa menjadi pantas. Baca apa yang setiap satu daripada empat keputusan di bawah mengikat anda, supaya hari ia tiba menjadi keputusan yang anda sudah bersedia, bukan kelam-kabut.",
+      ta: "குழுவிடம் தேவையான அனைத்தும் உள்ளது; இப்போது முடிவை மாற்றும் மின்னஞ்சலோ கூடுதல் ஆவணமோ இல்லை, அனுப்புவது அரிதாகவே உதவும். இந்தக் காத்திருப்பு விரைவாக முடிவெடுக்க தயாராவதற்கே — ஏனெனில் முடிவு வந்தவுடன் நேரம் வேகமெடுக்கும். கீழே உள்ள நான்கு முடிவுகள் ஒவ்வொன்றும் உங்களை எதற்குக் கட்டுப்படுத்துகிறது என்பதைப் படியுங்கள், அது வரும் நாள் நீங்கள் தயாராக இருக்கும் முடிவாக இருக்கும், அவசரம் அல்ல.",
+    },
+  },
+];
 
 /* ============================ SECTION 1 · TIMELINE ============================ */
 
@@ -641,6 +706,31 @@ export function DsaResultsPageBody() {
         </section>
 
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          {/* ── SECTION 0 · THE WAIT ── */}
+          <section className="py-12 sm:py-14">
+            <p className="text-[11px] font-bold tracking-[0.14em] text-champagne-dark normal-case">
+              {pick(S0_KICKER, locale)}
+            </p>
+            <h2
+              style={{ textTransform: "none" }}
+              className="mt-2 font-display text-2xl font-extrabold leading-snug tracking-tight text-intellectual sm:text-3xl"
+            >
+              <Clock4 className="mr-2 inline-block h-7 w-7 text-intellectual" aria-hidden />
+              {pick(S0_TITLE, locale)}
+            </h2>
+            <p className="mt-3 text-[15px] leading-relaxed text-slate-700">{pick(S0_INTRO, locale)}</p>
+            <ul className="mt-6 space-y-4">
+              {S0_POINTS.map((pt, i) => (
+                <li key={i} className="rounded-2xl border border-intellectual/10 bg-white p-5 shadow-soft sm:p-6">
+                  <p className="font-display text-[15px] font-bold text-intellectual" style={{ textTransform: "none" }}>
+                    {pick(pt.label, locale)}
+                  </p>
+                  <p className="mt-2 text-[14px] leading-relaxed text-slate-600">{pick(pt.body, locale)}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+
           {/* ── SECTION 1 · TIMELINE ── */}
           <section className="py-12 sm:py-14">
             <p className="text-[11px] font-bold tracking-[0.14em] text-champagne-dark normal-case">
