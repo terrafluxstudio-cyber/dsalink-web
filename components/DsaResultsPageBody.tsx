@@ -179,14 +179,14 @@ const S1_STEPS: ReadonlyArray<{
     when: {
       en: "Mid-to-late November 2026 (2025 release: 25 Nov 11am)",
       zh: "2026 年 11 月中下旬（2025 年为 11/25 11am）",
-      ms: "Pertengahan-akhir November 2026",
-      ta: "2026 நவம்பர் நடு-இறுதி",
+      ms: "Pertengahan-akhir November 2026 (2025: 25 Nov 11am)",
+      ta: "2026 நவம்பர் நடு-இறுதி (2025: நவ 25 11am)",
     },
     what: {
       en: "PSLE results released. Same day, your DSA-Sec final placement is announced — the algorithm pairs your October preference ranking with your PSLE results to produce the final school. Waitlist applicants find out conversion on the same day.",
       zh: "PSLE 出分。同一天 · DSA-Sec 最终安置公布——算法把 10 月偏好排序与 PSLE 分数配对 · 输出最终中学。Waitlist 候选人同一天揭晓是否转正。",
-      ms: "Keputusan PSLE diumumkan. Pada hari yang sama, penempatan akhir DSA-Sec diumumkan.",
-      ta: "PSLE முடிவுகள் வெளியிடப்படுகின்றன. அதே நாளில், DSA-Sec இறுதி இடம் அறிவிக்கப்படுகிறது.",
+      ms: "Keputusan PSLE diumumkan. Pada hari yang sama, penempatan akhir DSA-Sec anda diumumkan — algoritma memadankan susunan keutamaan Oktober anda dengan keputusan PSLE untuk menghasilkan sekolah akhir. Calon Senarai Menunggu mengetahui penukaran pada hari yang sama.",
+      ta: "PSLE முடிவுகள் வெளியிடப்படுகின்றன. அதே நாளில், உங்கள் DSA-Sec இறுதி இடம் அறிவிக்கப்படுகிறது — உங்கள் அக்டோபர் முன்னுரிமை வரிசையை PSLE முடிவுகளுடன் இணைத்து வழிமுறை இறுதிப் பள்ளியை உருவாக்குகிறது. காத்திருப்புப் பட்டியல் விண்ணப்பதாரர்கள் அதே நாளில் மாற்றத்தை அறிகிறார்கள்.",
     },
     source: "convention",
   },
@@ -200,8 +200,8 @@ const S1_STEPS: ReadonlyArray<{
     what: {
       en: "S1 Posting choice window opens for families WITHOUT a Confirmed Offer (Unsuccessful + Waitlist not converted + those who chose not to rank any DSA school in October). Pick 6 schools in order of preference. Affiliation rules apply.",
       zh: "S1 Posting 选校窗口开启——给没有 Confirmed Offer 的家庭（Unsuccessful + Waitlist 未转正 + 10 月主动不排序任何 DSA 校的家庭）。按偏好排 6 所学校。Affiliation 规则适用。",
-      ms: "Tetingkap pilihan S1 Posting dibuka untuk keluarga TANPA Tawaran Sah. Pilih 6 sekolah mengikut keutamaan.",
-      ta: "S1 Posting தேர்வு உறுதிசெய்யப்பட்ட சலுகை இல்லாத குடும்பங்களுக்கு திறக்கிறது.",
+      ms: "Tetingkap pilihan S1 Posting dibuka untuk keluarga TANPA Tawaran Sah (Tidak Berjaya + Senarai Menunggu yang tidak menukar + mereka yang memilih untuk tidak menyusun mana-mana sekolah DSA pada bulan Oktober). Pilih 6 sekolah mengikut susunan keutamaan. Peraturan afiliasi terpakai.",
+      ta: "உறுதிசெய்யப்பட்ட சலுகை இல்லாத குடும்பங்களுக்கு (தோல்வி + மாறாத காத்திருப்புப் பட்டியல் + அக்டோபரில் எந்த DSA பள்ளியையும் வரிசைப்படுத்தாதவர்கள்) S1 Posting தேர்வுச் சாளரம் திறக்கிறது. விருப்ப வரிசையில் 6 பள்ளிகளைத் தேர்ந்தெடுக்கவும். இணைப்பு விதிகள் பொருந்தும்.",
     },
     source: "moe-2026",
   },
@@ -215,8 +215,8 @@ const S1_STEPS: ReadonlyArray<{
     what: {
       en: "S1 Posting results released. Families learn which secondary school their child is posted to. School-transfer appeal window opens for those who want to appeal the posting result.",
       zh: "S1 Posting 结果公布 · 家庭知道孩子被派到哪所中学。想申诉派位结果的家庭 · 此时进入学校转学申诉窗口。",
-      ms: "Keputusan S1 Posting diumumkan. Tetingkap rayuan pertukaran sekolah dibuka.",
-      ta: "S1 Posting முடிவுகள் வெளியிடப்படுகின்றன. பள்ளி மாற்ற முறையீட்டு சாளரம் திறக்கிறது.",
+      ms: "Keputusan S1 Posting diumumkan. Keluarga mengetahui sekolah menengah yang anak mereka ditempatkan. Tetingkap rayuan pertukaran sekolah dibuka untuk mereka yang ingin merayu keputusan penempatan.",
+      ta: "S1 Posting முடிவுகள் வெளியிடப்படுகின்றன. தங்கள் குழந்தை எந்த இடைநிலைப் பள்ளியில் இடம்பெற்றது என்பதைக் குடும்பங்கள் அறிகின்றன. இடப்பெயர்வு முடிவை மேல்முறையீடு செய்ய விரும்புவோருக்குப் பள்ளி மாற்ற முறையீட்டுச் சாளரம் திறக்கிறது.",
     },
     source: "convention",
   },
@@ -248,20 +248,20 @@ const S2_BINDS: ReadonlyArray<LocaleStr> = [
   {
     en: "You cannot submit S1 Posting choices. MOE's published rule is explicit — DSA students with a confirmed school are \"not allowed to submit school choices during S1 Posting.\"",
     zh: "不能提交 S1 Posting 志愿 · MOE 官方原文明确：已确认 DSA 录取的学生不允许在 S1 Posting 期间提交选校。",
-    ms: "Anda tidak boleh menghantar pilihan S1 Posting.",
-    ta: "S1 Posting தேர்வுகளை சமர்ப்பிக்க முடியாது.",
+    ms: "Anda tidak boleh menghantar pilihan S1 Posting. Peraturan rasmi MOE jelas — pelajar DSA dengan sekolah yang disahkan \"tidak dibenarkan menghantar pilihan sekolah semasa S1 Posting.\"",
+    ta: "S1 Posting தேர்வுகளைச் சமர்ப்பிக்க முடியாது. MOE-இன் அதிகாரப்பூர்வ விதி தெளிவானது — உறுதிசெய்யப்பட்ட பள்ளி உள்ள DSA மாணவர்கள் \"S1 Posting-இன்போது பள்ளித் தேர்வுகளைச் சமர்ப்பிக்க அனுமதிக்கப்படுவதில்லை.\"",
   },
   {
     en: "You cannot transfer to a different school after PSLE results are released — the placement is final from MOE's side.",
     zh: "PSLE 出分后不能转去其他学校——MOE 视为最终安置。",
-    ms: "Tidak boleh berpindah ke sekolah lain selepas keputusan PSLE.",
-    ta: "PSLE முடிவுகளுக்குப் பிறகு வேறு பள்ளிக்கு மாற்ற முடியாது.",
+    ms: "Anda tidak boleh berpindah ke sekolah lain selepas keputusan PSLE dikeluarkan — penempatan itu muktamad dari pihak MOE.",
+    ta: "PSLE முடிவுகள் வெளியான பிறகு வேறு பள்ளிக்கு மாற்ற முடியாது — MOE தரப்பில் அந்த இடம் இறுதியானது.",
   },
   {
     en: "Your child must still sit the PSLE and meet the AL range for the offered school's stream (IP / Express / N(A)). If PSLE falls short, the offer may be downgraded to a different stream within the same school (a Counter-Offer scenario) or rescinded — handled by the school, not MOE.",
     zh: "孩子仍要考 PSLE · 必须达到所录学校流派（IP / Express / N(A)）的 AL 范围。如果 PSLE 不达标 · offer 可能降为同校另一流派（即 Counter-Offer 情形）或被撤回——由学校处理 · 不是 MOE。",
-    ms: "Anak anda masih perlu mengambil PSLE dan memenuhi julat AL untuk aliran yang ditawarkan.",
-    ta: "உங்கள் குழந்தை PSLE எழுத வேண்டும் மற்றும் வழங்கப்பட்ட பள்ளியின் நீரோட்டத்திற்கான AL வரம்பை அடைய வேண்டும்.",
+    ms: "Anak anda masih perlu mengambil PSLE dan memenuhi julat AL untuk aliran yang ditawarkan (IP / Express / N(A)). Jika PSLE tidak mencapai, tawaran itu mungkin diturunkan ke aliran lain di sekolah yang sama (situasi Tawaran Balas) atau ditarik balik — diuruskan oleh sekolah, bukan MOE.",
+    ta: "உங்கள் குழந்தை PSLE எழுத வேண்டும், வழங்கப்பட்ட பள்ளியின் நீரோட்டத்திற்கான (IP / Express / N(A)) AL வரம்பை அடைய வேண்டும். PSLE குறைந்தால், அந்தச் சலுகை அதே பள்ளியில் வேறு நீரோட்டத்திற்குத் தாழ்த்தப்படலாம் (எதிர் சலுகை சூழல்) அல்லது திரும்பப் பெறப்படலாம் — இதைப் பள்ளி கையாளுகிறது, MOE அல்ல.",
   },
 ];
 
@@ -275,8 +275,8 @@ const S2_DECLINE_TITLE: LocaleStr = {
 const S2_DECLINE: LocaleStr = {
   en: "If you don't want the CO, simply do not rank that school in the October Preference Exercise. The CO is dropped, and your child falls back to S1 Posting after PSLE. There is no formal \"reject\" button — the decision is the absence of ranking.",
   zh: "如果不想接受 CO · 在 10 月 Preference Exercise 中不排这所学校就行。CO 自动失效 · 孩子在 PSLE 后走 S1 Posting。没有正式的『拒绝』按钮——决定 = 不排序。",
-  ms: "Jika anda tidak mahu CO, jangan susun sekolah itu dalam Pemilihan Keutamaan Oktober. CO digugurkan.",
-  ta: "CO-ஐ விரும்பவில்லை என்றால், அக்டோபர் முன்னுரிமையில் அந்த பள்ளியை வரிசைப்படுத்த வேண்டாம்.",
+  ms: "Jika anda tidak mahu CO, jangan susun sekolah itu dalam Pemilihan Keutamaan Oktober. CO digugurkan, dan anak anda kembali ke S1 Posting selepas PSLE. Tiada butang \"tolak\" rasmi — keputusannya ialah ketiadaan susunan.",
+  ta: "CO-ஐ விரும்பவில்லை என்றால், அக்டோபர் முன்னுரிமைப் பயிற்சியில் அந்தப் பள்ளியை வரிசைப்படுத்த வேண்டாம். CO கைவிடப்படுகிறது, PSLE-க்குப் பிறகு உங்கள் குழந்தை S1 Posting-க்குத் திரும்புகிறது. முறையான \"நிராகரி\" பொத்தான் இல்லை — வரிசைப்படுத்தாமல் இருப்பதே அந்த முடிவு.",
 };
 
 const S2_MULTI_TITLE: LocaleStr = {
@@ -289,8 +289,8 @@ const S2_MULTI_TITLE: LocaleStr = {
 const S2_MULTI: LocaleStr = {
   en: "Whichever school you rank highest among multiple COs becomes the final placement (assuming PSLE meets that school's Posting Group). This is the moment where families do their final fit assessment: academic stream alignment, CCA programme depth, distance from home, sibling priority, gut feel after open house visits. There is no \"safer\" ranking — top of the list wins.",
   zh: "拿到多份 CO 时 · 你在 10 月偏好里排最高的那所成为最终安置（前提：PSLE 达到该校的 Posting Group）。这是家庭做最后匹配判断的时刻：学术流派对应、CCA 项目深度、离家距离、兄弟姐妹优先、开放日参观后的直觉。没有『更保险』的排法——排最高的赢。",
-  ms: "Sekolah yang anda susun paling tinggi antara beberapa CO menjadi penempatan akhir.",
-  ta: "பல CO-களில் நீங்கள் மிக உயர்வாக வரிசைப்படுத்தும் பள்ளி இறுதி இடமாகிறது.",
+  ms: "Sekolah yang anda susun paling tinggi antara beberapa CO menjadi penempatan akhir (dengan andaian PSLE memenuhi Kumpulan Penempatan sekolah itu). Inilah saat keluarga membuat penilaian kesesuaian akhir: keselarasan aliran akademik, kedalaman program CCA, jarak dari rumah, keutamaan adik-beradik, gerak hati selepas lawatan rumah terbuka. Tiada susunan yang \"lebih selamat\" — yang teratas menang.",
+  ta: "பல CO-களில் நீங்கள் மிக உயர்வாக வரிசைப்படுத்தும் பள்ளியே இறுதி இடமாகிறது (அந்தப் பள்ளியின் Posting Group-ஐ PSLE அடைந்தால்). குடும்பங்கள் இறுதி பொருத்த மதிப்பீட்டைச் செய்யும் தருணம் இதுதான்: கல்வி நீரோட்டப் பொருத்தம், CCA திட்டத்தின் ஆழம், வீட்டிலிருந்து தூரம், உடன்பிறப்பு முன்னுரிமை, திறந்தவீட்டு வருகைக்குப் பிறகான உள்ளுணர்வு. \"பாதுகாப்பான\" வரிசை என்று எதுவும் இல்லை — உச்சியில் இருப்பது வெல்கிறது.",
 };
 
 /* ============================ SECTION 3 · WAITLIST ============================ */
@@ -312,14 +312,14 @@ const S3_BODY: ReadonlyArray<LocaleStr> = [
   {
     en: "A Waitlist outcome means the school accepted your child contingent on a spot opening — typically because a candidate above your child in the order declined their CO. WL conversion is announced on the same day as PSLE results in mid-to-late November.",
     zh: "Waitlist 意味着学校在有名额空出时录取孩子——通常是因为排在孩子前面的候选人拒绝了 CO。WL 转正与 PSLE 同日（11 月中下旬）公布。",
-    ms: "Senarai Menunggu bermaksud sekolah menerima anak anda dengan syarat tempat dibuka. Penukaran WL diumumkan pada hari yang sama dengan keputusan PSLE.",
-    ta: "காத்திருப்புப் பட்டியல் என்றால் பள்ளி உங்கள் குழந்தையை இடம் திறக்கும் நிபந்தனையில் ஏற்றுக்கொண்டது.",
+    ms: "Senarai Menunggu bermaksud sekolah menerima anak anda dengan syarat sesuatu tempat dibuka — biasanya kerana calon di atas anak anda dalam susunan itu menolak CO mereka. Penukaran WL diumumkan pada hari yang sama dengan keputusan PSLE pada pertengahan-akhir November.",
+    ta: "காத்திருப்புப் பட்டியல் என்றால், ஓர் இடம் காலியாகும் நிபந்தனையில் பள்ளி உங்கள் குழந்தையை ஏற்றுக்கொண்டது — பொதுவாக வரிசையில் உங்கள் குழந்தைக்கு மேலே உள்ள ஒரு வேட்பாளர் தனது CO-ஐ நிராகரித்ததால். WL மாற்றம் நவம்பர் நடு-இறுதியில் PSLE முடிவுகளுடன் அதே நாளில் அறிவிக்கப்படுகிறது.",
   },
   {
     en: "MOE's published wording is that \"in previous years, about half of the students on the schools' wait lists were eventually given a place\". That's a historical pattern, not a guarantee. Whether your child converts depends on how many candidates above them on that school's list decline their COs in October.",
     zh: "MOE 的原话是「往年学校 Waitlist 上约有一半的学生最终获得学位」。这是历史规律 · 不是保证。能否转正取决于同校列表中排在孩子前面的人在 10 月有多少人拒绝 CO。",
-    ms: "MOE telah menyatakan bahawa kira-kira separuh calon Senarai Menunggu akhirnya menerima tawaran dalam kitaran lalu.",
-    ta: "MOE பகிரங்கமாக கடந்த சுற்றுகளில் சுமார் பாதி காத்திருப்பு வேட்பாளர்கள் இறுதியில் சலுகைகளைப் பெறுகின்றனர் என்று கூறியுள்ளது.",
+    ms: "Perkataan rasmi MOE ialah \"pada tahun-tahun sebelumnya, kira-kira separuh daripada pelajar dalam senarai menunggu sekolah akhirnya diberi tempat\". Itu corak sejarah, bukan jaminan. Sama ada anak anda menukar bergantung pada berapa ramai calon di atas mereka dalam senarai sekolah itu menolak CO mereka pada bulan Oktober.",
+    ta: "MOE-இன் அதிகாரப்பூர்வ வார்த்தை: \"முந்தைய ஆண்டுகளில், பள்ளிகளின் காத்திருப்புப் பட்டியலில் இருந்த மாணவர்களில் சுமார் பாதி பேருக்கு இறுதியில் இடம் வழங்கப்பட்டது.\" அது வரலாற்றுப் போக்கு, உத்தரவாதம் அல்ல. உங்கள் குழந்தை மாறுமா என்பது, அந்தப் பள்ளியின் பட்டியலில் அவர்களுக்கு மேலே உள்ள எத்தனை வேட்பாளர்கள் அக்டோபரில் தங்கள் CO-ஐ நிராகரிக்கிறார்கள் என்பதைப் பொறுத்தது.",
   },
 ];
 
@@ -362,14 +362,14 @@ const S4_BODY: ReadonlyArray<LocaleStr> = [
   {
     en: "Accepting a Counter-Offer follows the same rules as accepting a Confirmed Offer — you rank the school in the October preference. Once locked, the same binding applies: no S1 Posting choices, and no transfer after PSLE. What changes is the track (the O-level / Posting Group 3 side instead of the IP), not the school.",
     zh: "接受 Counter-Offer 的规则与接受 CO 一致——在 10 月排这所学校。一旦锁定 · 适用同一套约束：不能提交 S1 Posting 志愿 · PSLE 后不能转校。改变的是轨道（从 IP 变成 O-level / Posting Group 3 那一侧）· 不是学校。",
-    ms: "Menerima Tawaran Balas mengikuti peraturan yang sama seperti menerima Tawaran Sah.",
-    ta: "எதிர் சலுகையை ஏற்றுக்கொள்வது CO ஏற்பது போலவே செயல்படுகிறது.",
+    ms: "Menerima Tawaran Balas mengikuti peraturan yang sama seperti menerima Tawaran Sah — anda susun sekolah itu dalam keutamaan Oktober. Setelah dikunci, ikatan yang sama terpakai: tiada pilihan S1 Posting, dan tiada pertukaran selepas PSLE. Yang berubah ialah trek (sisi O-level / Kumpulan Penempatan 3, bukan IP), bukan sekolah.",
+    ta: "எதிர் சலுகையை ஏற்றுக்கொள்வது CO ஏற்பது போலவே — அக்டோபர் முன்னுரிமையில் அந்தப் பள்ளியை வரிசைப்படுத்துகிறீர்கள். பூட்டியதும் அதே கட்டுப்பாடு பொருந்தும்: S1 Posting தேர்வுகள் இல்லை, PSLE-க்குப் பிறகு மாற்றம் இல்லை. மாறுவது பாதை (IP-க்குப் பதிலாக O-level / இடம் குழு 3 பக்கம்), பள்ளி அல்ல.",
   },
   {
     en: "A separate, school-specific situation: cross-school Counter-Offers between affiliated schools (e.g. ACS(I) → ACS(BR)). This is not in MOE's published DSA rules and is handled case-by-case by the schools — confirm directly with each school's admissions office if your child is in this scenario.",
     zh: "另一种特殊情况：affiliated school 之间的跨校 Counter-Offer（例：ACS(I) → ACS(BR)）。这不在 MOE 公开 DSA 规则中 · 由学校 case-by-case 处理——若孩子遇到这种情况 · 直接联系学校招生办确认。",
-    ms: "Situasi khusus sekolah: Tawaran Balas merentas sekolah antara sekolah berafiliasi.",
-    ta: "தனி பள்ளி-குறிப்பிட்ட சூழ்நிலை: இணைப்பு பள்ளிகளுக்கு இடையில் குறுக்கு-பள்ளி எதிர் சலுகைகள்.",
+    ms: "Situasi berasingan yang khusus sekolah: Tawaran Balas merentas sekolah antara sekolah berafiliasi (cth. ACS(I) → ACS(BR)). Ini tidak terdapat dalam peraturan DSA rasmi MOE dan diuruskan kes demi kes oleh sekolah — sahkan terus dengan pejabat kemasukan setiap sekolah jika anak anda dalam senario ini.",
+    ta: "தனி, பள்ளி-குறிப்பிட்ட சூழ்நிலை: இணைப்புப் பள்ளிகளுக்கு இடையிலான குறுக்கு-பள்ளி எதிர் சலுகைகள் (எ.கா. ACS(I) → ACS(BR)). இது MOE-இன் அதிகாரப்பூர்வ DSA விதிகளில் இல்லை, பள்ளிகளால் ஒவ்வொரு வழக்காகக் கையாளப்படுகிறது — உங்கள் குழந்தை இந்தச் சூழலில் இருந்தால் ஒவ்வொரு பள்ளியின் சேர்க்கை அலுவலகத்துடன் நேரடியாக உறுதிப்படுத்தவும்.",
   },
 ];
 
@@ -392,14 +392,14 @@ const S5_BODY: ReadonlyArray<LocaleStr> = [
   {
     en: "An Unsuccessful outcome means the school did not select your child. There is no formal MOE appeal channel for a DSA-Sec outcome — DSA is a school-led selection and the school's decision is final. Some schools share brief feedback if asked politely, but MOE does not require it.",
     zh: "Unsuccessful 意味着学校未选中孩子。DSA-Sec 结果没有 MOE 正式申诉通道——DSA 是学校自主选拔 · 学校决定为终审。部分学校如礼貌询问会简短反馈 · 但 MOE 不要求。",
-    ms: "Keputusan Tidak Berjaya bermakna sekolah tidak memilih anak anda. Tiada saluran rayuan rasmi MOE.",
-    ta: "தோல்வி முடிவு என்றால் பள்ளி உங்கள் குழந்தையை தேர்ந்தெடுக்கவில்லை. முறையான MOE மேல்முறையீடு வழி இல்லை.",
+    ms: "Keputusan Tidak Berjaya bermakna sekolah tidak memilih anak anda. Tiada saluran rayuan rasmi MOE untuk keputusan DSA-Sec — DSA ialah pemilihan yang dipimpin sekolah dan keputusan sekolah adalah muktamad. Sesetengah sekolah berkongsi maklum balas ringkas jika ditanya dengan sopan, tetapi MOE tidak mewajibkannya.",
+    ta: "தோல்வி முடிவு என்றால் பள்ளி உங்கள் குழந்தையைத் தேர்ந்தெடுக்கவில்லை. DSA-Sec முடிவுக்கு முறையான MOE மேல்முறையீட்டு வழி இல்லை — DSA என்பது பள்ளி நடத்தும் தேர்வு, பள்ளியின் முடிவே இறுதியானது. பணிவாகக் கேட்டால் சில பள்ளிகள் சுருக்கமான கருத்தைப் பகிர்கின்றன, ஆனால் MOE அதைக் கட்டாயப்படுத்தவில்லை.",
   },
   {
     en: "Your child automatically proceeds to S1 Posting after PSLE results — covered in detail in the next section. The DSA experience itself still has value: many primary-school candidates who were Unsuccessful at DSA-Sec stage go on to take strong roles in their posted school's CCAs, where the prior trial and interview experience translates well.",
     zh: "孩子自动在 PSLE 出分后进入 S1 Posting · 下一节详细讲。DSA 经验本身仍有价值：很多 DSA-Sec 阶段 Unsuccessful 的小学生 · 在派位后的学校 CCA 选拔中表现出色 · 之前的 trial 与面试经验直接派上用场。",
-    ms: "Anak anda secara automatik meneruskan ke S1 Posting selepas keputusan PSLE.",
-    ta: "உங்கள் குழந்தை PSLE முடிவுகளுக்குப் பிறகு தானாக S1 Posting-க்கு செல்கிறது.",
+    ms: "Anak anda secara automatik meneruskan ke S1 Posting selepas keputusan PSLE — diterangkan dengan lebih terperinci dalam bahagian seterusnya. Pengalaman DSA itu sendiri masih bernilai: ramai calon sekolah rendah yang Tidak Berjaya pada peringkat DSA-Sec akhirnya memegang peranan penting dalam CCA sekolah yang ditempatkan, di mana pengalaman percubaan dan temu duga terdahulu terpakai dengan baik.",
+    ta: "PSLE முடிவுகளுக்குப் பிறகு உங்கள் குழந்தை தானாக S1 Posting-க்குச் செல்கிறது — அடுத்த பகுதியில் விரிவாக விளக்கப்பட்டுள்ளது. DSA அனுபவத்துக்கே இன்னும் மதிப்பு உண்டு: DSA-Sec கட்டத்தில் தோல்வியடைந்த பல தொடக்கப் பள்ளி வேட்பாளர்கள், இடம்பெற்ற பள்ளியின் CCA-களில் வலுவான பங்குகளை வகிக்கின்றனர்; அங்கு முந்தைய சோதனை மற்றும் நேர்காணல் அனுபவம் நன்கு பயன்படுகிறது.",
   },
 ];
 
@@ -446,8 +446,8 @@ const S6_RULES: ReadonlyArray<{
     body: {
       en: "This is a DSA-specific number — different from the 6 schools in S1 Posting later. You can only rank schools that gave your child a Confirmed Offer or Waitlist. You do not need to rank all 3 — rank only the schools you genuinely want.",
       zh: "这是 DSA 特定数字——与后面 S1 Posting 的 6 校不同。只能排已给 CO 或 WL 的学校。不必排满 3 所——只排你真的想要的。",
-      ms: "Ini nombor khusus DSA — berbeza dari 6 sekolah dalam S1 Posting kemudian.",
-      ta: "இது DSA-குறிப்பிட்ட எண் — பின்னர் வரும் S1 Posting-இல் 6 பள்ளிகளிலிருந்து வேறுபட்டது.",
+      ms: "Ini nombor khusus DSA — berbeza daripada 6 sekolah dalam S1 Posting kemudian. Anda hanya boleh menyusun sekolah yang memberi anak anda Tawaran Sah atau Senarai Menunggu. Anda tidak perlu menyusun kesemua 3 — susun hanya sekolah yang anda benar-benar mahu.",
+      ta: "இது DSA-க்கே உரிய எண் — பின்னர் வரும் S1 Posting-இல் உள்ள 6 பள்ளிகளிலிருந்து வேறுபட்டது. உங்கள் குழந்தைக்கு உறுதிசெய்யப்பட்ட சலுகை அல்லது காத்திருப்புப் பட்டியல் வழங்கிய பள்ளிகளை மட்டுமே வரிசைப்படுத்த முடியும். மூன்றையும் வரிசைப்படுத்த வேண்டியதில்லை — நீங்கள் உண்மையிலேயே விரும்பும் பள்ளிகளை மட்டும் வரிசைப்படுத்துங்கள்.",
     },
   },
   {
@@ -474,8 +474,8 @@ const S6_RULES: ReadonlyArray<{
     body: {
       en: "If you don't rank a school that gave a CO or WL, you are effectively declining it — that school cannot recover your child later. The decision is permanent for the 2026 cycle.",
       zh: "如果不排序某给了 CO / WL 的学校 · 等于拒绝——该校之后不能再录用孩子。决定对 2026 周期是永久性的。",
-      ms: "Jika anda tidak menyusun sekolah yang memberi CO atau WL, anda sebenarnya menolaknya.",
-      ta: "CO அல்லது WL வழங்கிய பள்ளியை வரிசைப்படுத்தாவிட்டால், நீங்கள் அதை மறுக்கிறீர்கள்.",
+      ms: "Jika anda tidak menyusun sekolah yang memberi CO atau WL, anda sebenarnya menolaknya — sekolah itu tidak boleh mengambil semula anak anda kemudian. Keputusan ini kekal untuk kitaran 2026.",
+      ta: "CO அல்லது WL வழங்கிய பள்ளியை வரிசைப்படுத்தாவிட்டால், நீங்கள் அதை உண்மையில் மறுக்கிறீர்கள் — அந்தப் பள்ளி பின்னர் உங்கள் குழந்தையை மீண்டும் சேர்க்க முடியாது. இந்த முடிவு 2026 சுற்றுக்கு நிரந்தரமானது.",
     },
   },
 ];
@@ -509,8 +509,8 @@ const S7_RULES: ReadonlyArray<{
     body: {
       en: "Three groups: (1) families who got Unsuccessful from every DSA school they applied to; (2) Waitlist candidates who did not convert; (3) families who chose not to rank any DSA school in October even though they had a CO or WL.",
       zh: "三类：(1) 所有申请的 DSA 校都 Unsuccessful 的家庭；(2) Waitlist 未转正的；(3) 虽有 CO 或 WL 但 10 月主动不排序的。",
-      ms: "Tiga kumpulan: keluarga Tidak Berjaya, calon Senarai Menunggu yang tidak menukar, dan keluarga yang memilih untuk tidak menyusun.",
-      ta: "மூன்று குழுக்கள்.",
+      ms: "Tiga kumpulan: (1) keluarga yang Tidak Berjaya di setiap sekolah DSA yang mereka pohon; (2) calon Senarai Menunggu yang tidak menukar; (3) keluarga yang memilih untuk tidak menyusun mana-mana sekolah DSA pada bulan Oktober walaupun mereka mempunyai CO atau WL.",
+      ta: "மூன்று குழுக்கள்: (1) தாங்கள் விண்ணப்பித்த ஒவ்வொரு DSA பள்ளியிலும் தோல்வியடைந்த குடும்பங்கள்; (2) மாறாத காத்திருப்புப் பட்டியல் வேட்பாளர்கள்; (3) CO அல்லது WL இருந்தும் அக்டோபரில் எந்த DSA பள்ளியையும் வரிசைப்படுத்தாத குடும்பங்கள்.",
     },
   },
   {
@@ -523,8 +523,8 @@ const S7_RULES: ReadonlyArray<{
     body: {
       en: "Choose 6 schools that are realistic given the child's expected AL score. The MOE \"PSLE COP\" tool and the historical cut-off pages help calibrate which schools your child can likely access. The Posting Group on the result slip determines which streams are available (PG1 / PG2 / PG3).",
       zh: "按孩子预期 AL 分实际可达范围选 6 所。MOE 的 PSLE COP 工具与历史录取分数页帮你校准。结果单上的 Posting Group 决定可入哪些流派（PG1 / PG2 / PG3）。",
-      ms: "Pilih 6 sekolah yang realistik berdasarkan skor AL yang dijangkakan anak.",
-      ta: "எதிர்பார்க்கப்பட்ட AL மதிப்பெண்ணுக்கு வாஸ்தவமான 6 பள்ளிகளைத் தேர்வுசெய்க.",
+      ms: "Pilih 6 sekolah yang realistik berdasarkan skor AL yang dijangkakan anak. Alat \"PSLE COP\" MOE dan halaman cut-off sejarah membantu menentukur sekolah yang mungkin dapat diakses anak anda. Kumpulan Penempatan pada slip keputusan menentukan aliran yang tersedia (PG1 / PG2 / PG3).",
+      ta: "உங்கள் குழந்தையின் எதிர்பார்க்கப்படும் AL மதிப்பெண்ணுக்கு வாஸ்தவமான 6 பள்ளிகளைத் தேர்வுசெய்யுங்கள். MOE-இன் \"PSLE COP\" கருவியும் வரலாற்று cut-off பக்கங்களும் உங்கள் குழந்தை எந்தப் பள்ளிகளை அணுக முடியும் என்பதைச் சரிசெய்ய உதவும். முடிவுச் சீட்டில் உள்ள Posting Group எந்த நீரோட்டங்கள் கிடைக்கும் என்பதைத் தீர்மானிக்கிறது (PG1 / PG2 / PG3).",
     },
   },
   {
@@ -537,8 +537,8 @@ const S7_RULES: ReadonlyArray<{
     body: {
       en: "If your child attended an affiliated primary school, you must list the affiliated secondary as the first choice to get affiliation priority, and meet the Affiliation Minimum Requirement (AMR). The school sets aside at least 20% of its places for students with no affiliation. The old PSLE T-score \"-2 bonus\" system for affiliation is no longer in effect under the AL scoring system — affiliation now gives priority in admission, not a score advantage.",
       zh: "如果孩子上的是 affiliated 小学 · 必须把 affiliated 中学排首位才享 affiliation 优先 · 并达到 Affiliation Minimum Requirement (AMR)。学校至少保留 20% 名额给无 affiliation 的学生。老的 PSLE T-score 『减 2 分 affiliation 加分』制度在 AL 评分系统下已废止——如今 affiliation 是录取优先 · 不是分数优惠。",
-      ms: "Jika anak anda menghadiri sekolah rendah berafiliasi, anda mesti menyenaraikan sekolah menengah berafiliasi dahulu.",
-      ta: "உங்கள் குழந்தை இணைப்பு தொடக்கப் பள்ளியில் கல்வி பெற்றிருந்தால், இணைப்பு இடைநிலை பள்ளியை முதலில் பட்டியலிட வேண்டும்.",
+      ms: "Jika anak anda menghadiri sekolah rendah berafiliasi, anda mesti menyenaraikan sekolah menengah berafiliasi sebagai pilihan pertama untuk mendapat keutamaan afiliasi, dan memenuhi Keperluan Minimum Afiliasi (AMR). Sekolah mengetepikan sekurang-kurangnya 20% tempatnya untuk pelajar tanpa afiliasi. Sistem \"bonus -2\" T-score PSLE lama untuk afiliasi tidak lagi berkuat kuasa di bawah sistem pemarkahan AL — afiliasi kini memberi keutamaan kemasukan, bukan kelebihan skor.",
+      ta: "உங்கள் குழந்தை இணைப்புத் தொடக்கப் பள்ளியில் படித்திருந்தால், இணைப்பு முன்னுரிமை பெற இணைப்பு இடைநிலைப் பள்ளியை முதல் விருப்பமாகப் பட்டியலிட வேண்டும், மேலும் இணைப்புக் குறைந்தபட்சத் தேவையை (AMR) அடைய வேண்டும். இணைப்பு இல்லாத மாணவர்களுக்குப் பள்ளி தனது இடங்களில் குறைந்தது 20% ஒதுக்குகிறது. இணைப்புக்கான பழைய PSLE T-score \"-2 போனஸ்\" முறை AL மதிப்பெண் முறையின் கீழ் இனி அமலில் இல்லை — இணைப்பு இப்போது சேர்க்கையில் முன்னுரிமை தருகிறது, மதிப்பெண் சலுகை அல்ல.",
     },
   },
   {
@@ -551,8 +551,8 @@ const S7_RULES: ReadonlyArray<{
     body: {
       en: "After S1 Posting results are released (about 3-4 weeks after PSLE), MOE opens a window for families to appeal their posting. Grounds are limited — typically medical, distance, or specific subject offerings. The window's specific 2026 dates are not yet published by MOE. Appeals are evaluated by the requested school, not granted automatically.",
       zh: "S1 Posting 结果公布后（PSLE 出分后约 3-4 周）· MOE 开放转学申诉窗口。申诉理由有限——通常是医疗、距离、特定科目可用性。2026 具体窗口日期 MOE 尚未公布。申诉由被请求学校评估 · 不会自动批准。",
-      ms: "Selepas keputusan S1 Posting dikeluarkan, MOE membuka tetingkap untuk keluarga merayu.",
-      ta: "S1 Posting முடிவுகள் வெளியிடப்பட்ட பிறகு, MOE ஒரு சாளரத்தைத் திறக்கிறது.",
+      ms: "Selepas keputusan S1 Posting dikeluarkan (kira-kira 3-4 minggu selepas PSLE), MOE membuka tetingkap untuk keluarga merayu penempatan mereka. Alasan adalah terhad — biasanya perubatan, jarak, atau tawaran subjek tertentu. Tarikh khusus 2026 untuk tetingkap ini belum diterbitkan oleh MOE. Rayuan dinilai oleh sekolah yang dipohon, bukan diluluskan secara automatik.",
+      ta: "S1 Posting முடிவுகள் வெளியான பிறகு (PSLE-க்குப் பிறகு சுமார் 3-4 வாரங்கள்), தங்கள் இடப்பெயர்வை மேல்முறையீடு செய்யக் குடும்பங்களுக்கு MOE ஒரு சாளரத்தைத் திறக்கிறது. காரணங்கள் வரம்பிடப்பட்டவை — பொதுவாக மருத்துவம், தூரம், அல்லது குறிப்பிட்ட பாட வழங்கல்கள். இந்தச் சாளரத்தின் 2026 குறிப்பிட்ட தேதிகளை MOE இன்னும் வெளியிடவில்லை. மேல்முறையீடுகள் கோரப்பட்ட பள்ளியால் மதிப்பிடப்படுகின்றன, தானாக வழங்கப்படுவதில்லை.",
     },
   },
 ];
@@ -576,8 +576,8 @@ const S8_BODY: ReadonlyArray<LocaleStr> = [
   {
     en: "A common misunderstanding: \"DSA confirmed = PSLE doesn't matter.\" That is wrong. Every Confirmed Offer is conditional on the PSLE Posting Group requirement of the offered school and stream. PSLE is still taken, marked, and used to verify the offer.",
     zh: "常见误解：『DSA 确认了 PSLE 就不重要了』。错。每个 CO 都条件于所录学校与流派的 PSLE Posting Group 要求。PSLE 仍要考、要批、被用来验证 offer 有效性。",
-    ms: "Salah faham biasa: \"DSA disahkan = PSLE tidak penting.\" Itu salah.",
-    ta: "பொதுவான தவறான புரிதல்: \"DSA உறுதிசெய்யப்பட்டது = PSLE முக்கியமில்லை.\" அது தவறு.",
+    ms: "Salah faham biasa: \"DSA disahkan = PSLE tidak penting.\" Itu salah. Setiap Tawaran Sah bersyarat kepada keperluan Kumpulan Penempatan PSLE bagi sekolah dan aliran yang ditawarkan. PSLE tetap diambil, ditanda, dan digunakan untuk mengesahkan tawaran.",
+    ta: "பொதுவான தவறான புரிதல்: \"DSA உறுதிசெய்யப்பட்டது = PSLE முக்கியமில்லை.\" அது தவறு. ஒவ்வொரு உறுதிசெய்யப்பட்ட சலுகையும் வழங்கப்பட்ட பள்ளி மற்றும் நீரோட்டத்தின் PSLE Posting Group தேவைக்கு உட்பட்டது. PSLE இன்னும் எழுதப்படுகிறது, மதிப்பிடப்படுகிறது, சலுகையைச் சரிபார்க்கப் பயன்படுத்தப்படுகிறது.",
   },
   {
     en: "Posting Groups map from the old streams — Posting Group 3 = Express, 2 = N(A), 1 = N(T) — so the higher the group number, the more academically demanding. By PSLE score (MOE's own table): PG3 takes 4-20 (G3, former Express); PG2 takes 23-24 (G2, former N(A)); PG1 takes 26-30 with AL7 or better in English and Maths (G1, former N(T)). Two overlap bands let families opt up: a score of 21-22 is eligible for PG2 or PG3, and 25 for PG1 or PG2. Since the 2024 S1 cohort the Express / N(A) / N(T) labels are gone — schools admit by Posting Group. An IP-track school sets its own stricter cut-off, usually well inside the PG3 band — confirm each school's threshold on its own page.",
@@ -588,8 +588,8 @@ const S8_BODY: ReadonlyArray<LocaleStr> = [
   {
     en: "If PSLE falls short of the offered stream's requirement, two scenarios occur. (1) Same-school down-stream: the school may absorb the child into a lower stream within the same school (e.g. IP offer becomes Express at the same school). (2) Offer rescinded: the school decides the candidate no longer fits even the lower stream. This is handled school-by-school — MOE has no central rule. Confirm with the offering school's admissions office in advance to understand their policy.",
     zh: "如果 PSLE 不达所录流派要求 · 两种情形：(1) 同校降流：学校可能把孩子吸纳到同校的较低流派（例 IP offer 变同校 Express）；(2) Offer 被撤回：学校判断孩子连较低流派都不合适。这由学校 case-by-case 处理——MOE 无统一规则。提前向录取学校招生办了解其政策。",
-    ms: "Jika PSLE tidak mencapai keperluan aliran yang ditawarkan, dua senario berlaku.",
-    ta: "PSLE வழங்கப்பட்ட நீரோட்டத்தின் தேவையை அடையவில்லை என்றால், இரண்டு சூழ்நிலைகள் ஏற்படுகின்றன.",
+    ms: "Jika PSLE tidak mencapai keperluan aliran yang ditawarkan, dua senario berlaku. (1) Turun aliran di sekolah sama: sekolah mungkin menyerap anak ke aliran lebih rendah dalam sekolah yang sama (cth. tawaran IP menjadi Express di sekolah yang sama). (2) Tawaran ditarik balik: sekolah memutuskan calon tidak lagi sesuai walaupun untuk aliran lebih rendah. Ini diuruskan sekolah demi sekolah — MOE tiada peraturan pusat. Sahkan dengan pejabat kemasukan sekolah yang menawarkan lebih awal untuk memahami dasar mereka.",
+    ta: "PSLE வழங்கப்பட்ட நீரோட்டத்தின் தேவையை அடையவில்லை என்றால், இரண்டு சூழ்நிலைகள் ஏற்படுகின்றன. (1) அதே பள்ளியில் கீழ்நீரோட்டம்: அதே பள்ளியில் குழந்தையைக் குறைந்த நீரோட்டத்தில் பள்ளி உள்வாங்கலாம் (எ.கா. IP சலுகை அதே பள்ளியில் Express ஆகிறது). (2) சலுகை திரும்பப் பெறப்படுதல்: குறைந்த நீரோட்டத்திற்குக்கூட வேட்பாளர் பொருந்தவில்லை எனப் பள்ளி முடிவு செய்கிறது. இது பள்ளிக்குப் பள்ளி கையாளப்படுகிறது — MOE-க்கு மைய விதி இல்லை. அவர்களின் கொள்கையைப் புரிந்துகொள்ள வழங்கும் பள்ளியின் சேர்க்கை அலுவலகத்துடன் முன்கூட்டியே உறுதிப்படுத்தவும்.",
   },
 ];
 
