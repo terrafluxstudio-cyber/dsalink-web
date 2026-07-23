@@ -436,10 +436,10 @@ const S6_RULES: ReadonlyArray<{
       ta: "சாளரம்: திங்கள் அக் 19 9am முதல் வெள்ளி அக் 23 4:30pm",
     },
     body: {
-      en: "Submitted via the DSA-Sec online portal (login details sent earlier by MOE / school). You can revise the submission as many times as you want within the window — the last submitted version before the deadline is the one used.",
-      zh: "通过 DSA-Sec 在线门户提交（登录信息 MOE / 学校之前已发）。窗口内可以反复修改 · 截止前最后一次提交版本生效。",
-      ms: "Dihantar melalui portal dalam talian DSA-Sec. Anda boleh menyemak semula penyerahan dalam tetingkap.",
-      ta: "DSA-Sec ஆன்லைன் போர்டல் வழியாக சமர்ப்பிக்கப்படுகிறது.",
+      en: "Submitted via the DSA-Sec online portal with your Singpass. Around mid-October, parents of a child with a CO or WL are notified by SMS and email (through the government's Postman service) to log in and submit — watch for it so the 5-day window isn't missed. You can revise as many times as you want within the window; the last version saved before the deadline is the one used.",
+      zh: "凭 Singpass 通过 DSA-Sec 在线门户提交。约 10 月中 · 拿到 CO 或 WL 的孩子家长会收到短信和邮件（经政府 Postman 服务发出）· 提示登录填报——留意别错过这 5 天窗口。窗口内可以反复修改 · 截止前最后保存的版本生效。",
+      ms: "Dihantar melalui portal dalam talian DSA-Sec dengan Singpass anda. Sekitar pertengahan Oktober, ibu bapa anak yang menerima CO atau WL akan dimaklumkan melalui SMS dan e-mel (menerusi perkhidmatan Postman kerajaan) untuk log masuk dan menghantar — perhatikannya supaya tetingkap 5 hari itu tidak terlepas. Anda boleh menyemak semula seberapa kerap yang dimahukan dalam tetingkap; versi terakhir yang disimpan sebelum tarikh tutup yang digunakan.",
+      ta: "உங்கள் Singpass மூலம் DSA-Sec ஆன்லைன் போர்டல் வழியாக சமர்ப்பிக்கப்படுகிறது. அக்டோபர் நடுப்பகுதியில், CO அல்லது WL பெற்ற குழந்தையின் பெற்றோருக்கு உள்நுழைந்து சமர்ப்பிக்க SMS மற்றும் மின்னஞ்சல் (அரசாங்கத்தின் Postman சேவை வழியாக) அனுப்பப்படும் — 5 நாள் சாளரத்தை தவறவிடாமல் கவனியுங்கள். சாளரத்திற்குள் விரும்பிய அளவு திருத்தலாம்; காலக்கெடுவுக்கு முன் சேமிக்கப்பட்ட கடைசி பதிப்பே பயன்படுத்தப்படும்.",
     },
   },
   {
