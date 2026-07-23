@@ -20,8 +20,8 @@ export const FAQ_QA: FaqQa[] = [
     a: {
       en: "DSA is worth it if your child has a sustained talent record — graded exams, zonal or national competition results, or 2+ years of CCA leadership — AND wants to commit to that talent for 2 years in secondary school. Without sustained external signal, DSA is a long shot and P6 time is better spent on PSLE prep.",
       zh: "如果孩子有持续的才能记录——考级证书、区域或全国比赛成绩、或 2 年以上 CCA 领导经验——并且愿意在中学持续投入这个方向 2 年，那 DSA 值得申请。如果没有持续的外部信号，DSA 是赌博，P6 时间更应该用来准备 PSLE。",
-      ms: "DSA berbaloi jika anak anda mempunyai rekod bakat berterusan dan sanggup komit 2 tahun. Tanpa isyarat luaran yang konsisten, DSA adalah peluang tipis.",
-      ta: "உங்கள் குழந்தை நிலையான திறமைப் பதிவு வைத்திருந்து 2 ஆண்டு உறுதிமொழியளிக்க தயாராக இருந்தால் DSA மதிப்புள்ளது. வெளி அறிகுறி இல்லாமல், DSA ஒரு நீண்ட சட்டம்.",
+      ms: "DSA berbaloi jika anak anda mempunyai rekod bakat yang berterusan — peperiksaan bergred, keputusan pertandingan peringkat zon atau kebangsaan, atau 2+ tahun kepimpinan CCA — DAN sanggup komit kepada bakat itu selama 2 tahun di sekolah menengah. Tanpa isyarat luaran yang berterusan, DSA adalah peluang tipis dan masa P6 lebih baik digunakan untuk persediaan PSLE.",
+      ta: "உங்கள் குழந்தைக்கு நிலையான திறமைப் பதிவு இருந்தால் — தரப்படுத்தப்பட்ட தேர்வுகள், மண்டல அல்லது தேசியப் போட்டி முடிவுகள், அல்லது 2+ ஆண்டு CCA தலைமை — மேலும் அந்தத் திறமைக்கு இடைநிலைப் பள்ளியில் 2 ஆண்டுகள் உறுதியளிக்க விரும்பினால் DSA மதிப்புள்ளது. நிலையான வெளி அறிகுறி இல்லாமல், DSA ஒரு தொலைதூர வாய்ப்பே; P6 நேரத்தை PSLE தயாரிப்பில் செலவழிப்பது சிறந்தது.",
     },
   },
   {
@@ -34,8 +34,8 @@ export const FAQ_QA: FaqQa[] = [
     a: {
       en: "MOE doesn't publish school-level acceptance rates. Anecdotally, popular schools receive 5–15× more applications than DSA places. Tier-A evidence (national meets, ABRSM Grade 6+, NSG top 3) gives a real shot; Tier-C (CCA leadership only) is highly school-dependent.",
       zh: "MOE 不公布校级录取率。家长论坛数据：热门学校的申请数通常是 DSA 名额的 5-15 倍。A 类证据（全国比赛、ABRSM 六级以上、NSG 前三）有实际机会；C 类（仅 CCA 领导）取决于具体学校。",
-      ms: "MOE tidak menerbitkan kadar penerimaan. Anekdot: sekolah popular menerima 5-15× lebih permohonan daripada tempat DSA.",
-      ta: "MOE பள்ளி வாரியான சேர்க்கை விகிதங்களை வெளியிடவில்லை. பிரபல பள்ளிகள் DSA இடங்களை விட 5-15 மடங்கு விண்ணப்பங்களைப் பெறுகின்றன.",
+      ms: "MOE tidak menerbitkan kadar penerimaan peringkat sekolah. Secara anekdot, sekolah popular menerima 5–15× lebih banyak permohonan daripada tempat DSA. Bukti Tier-A (kejohanan kebangsaan, ABRSM Gred 6+, 3 teratas NSG) memberi peluang sebenar; Tier-C (kepimpinan CCA sahaja) sangat bergantung pada sekolah.",
+      ta: "MOE பள்ளி அளவிலான சேர்க்கை விகிதங்களை வெளியிடுவதில்லை. அனுபவப்பூர்வமாக, பிரபல பள்ளிகள் DSA இடங்களை விட 5–15× அதிக விண்ணப்பங்களைப் பெறுகின்றன. Tier-A சான்று (தேசியப் போட்டிகள், ABRSM கிரேடு 6+, NSG முதல் 3) உண்மையான வாய்ப்பு தரும்; Tier-C (CCA தலைமை மட்டும்) பள்ளியைப் பொறுத்து பெரிதும் மாறுபடும்.",
     },
   },
   {
@@ -48,8 +48,8 @@ export const FAQ_QA: FaqQa[] = [
     a: {
       en: "Not at all. DSA failure has zero impact on PSLE Posting. Your child enters Option Form posting normally with their PSLE Achievement Level total, and can still apply for S1 Appeal at schools with sibling or affiliation links. DSA is a separate track entirely.",
       zh: "完全不影响。DSA 失败对 PSLE 派位零影响。孩子按 PSLE AL 总分正常填 Option Form 派位，在有兄弟姐妹或校友关系的学校还可申请 S1 Appeal。DSA 是完全独立的通道。",
-      ms: "Tidak sama sekali. Kegagalan DSA tiada kesan pada Penempatan PSLE. DSA adalah trek yang berasingan.",
-      ta: "எவ்வளவும் இல்லை. DSA தோல்வி PSLE இடம் ஒதுக்கீட்டில் எந்த விளைவையும் ஏற்படுத்தாது.",
+      ms: "Tidak sama sekali. Kegagalan DSA tiada kesan langsung pada Penempatan PSLE. Anak anda memasuki penempatan Borang Pilihan seperti biasa dengan jumlah Tahap Pencapaian (AL) PSLE mereka, dan masih boleh memohon Rayuan S1 di sekolah yang mempunyai pertalian adik-beradik atau gabungan. DSA adalah trek yang berasingan sepenuhnya.",
+      ta: "எவ்வளவும் இல்லை. DSA தோல்வி PSLE இடம் ஒதுக்கீட்டில் எந்தத் தாக்கத்தையும் ஏற்படுத்தாது. உங்கள் குழந்தை தனது PSLE வெற்றி நிலை (AL) மொத்தத்துடன் வழக்கம் போல் Option Form இடம் ஒதுக்கீட்டில் நுழைகிறார், மேலும் உடன்பிறப்பு அல்லது இணைப்புத் தொடர்பு உள்ள பள்ளிகளில் S1 மேல்முறையீடு செய்யலாம். DSA முற்றிலும் தனித்தனிப் பாதை.",
     },
   },
   {
@@ -76,8 +76,8 @@ export const FAQ_QA: FaqQa[] = [
     a: {
       en: "No. Schools evaluate evidence of sustained talent — not which coach trained the child. Many Confirmed Offers come from children trained entirely through school CCAs, family practice, or zonal-level programmes. External coaching is one path among several; what matters is the result, not the route.",
       zh: "不需要。学校看的是持续才能的证据，不是孩子跟过谁。很多 Confirmed Offer 来自只靠学校 CCA、家庭练习或区域级项目训练的孩子。外部教练是其中一条路径，关键是结果而不是路径。",
-      ms: "Tidak. Sekolah menilai bukti bakat berterusan, bukan jurulatih.",
-      ta: "இல்லை. பள்ளிகள் நிலையான திறமைச் சான்றை மதிப்பிடுகின்றன, பயிற்சியாளரை அல்ல.",
+      ms: "Tidak. Sekolah menilai bukti bakat yang berterusan — bukan jurulatih yang melatih anak. Banyak Tawaran Sah datang daripada anak yang dilatih sepenuhnya melalui CCA sekolah, latihan keluarga, atau program peringkat zon. Bimbingan luaran hanyalah satu daripada beberapa laluan; yang penting ialah hasilnya, bukan laluannya.",
+      ta: "இல்லை. பள்ளிகள் நிலையான திறமையின் சான்றை மதிப்பிடுகின்றன — எந்தப் பயிற்சியாளர் பயிற்றுவித்தார் என்பதை அல்ல. பல உறுதிசெய்யப்பட்ட சலுகைகள் பள்ளி CCA, குடும்பப் பயிற்சி அல்லது மண்டல அளவிலான திட்டங்கள் மூலம் மட்டுமே பயிற்சி பெற்ற குழந்தைகளிடமிருந்து வருகின்றன. வெளி பயிற்சி பல பாதைகளில் ஒன்று மட்டுமே; முக்கியம் முடிவே, பாதை அல்ல.",
     },
   },
   {
@@ -90,8 +90,8 @@ export const FAQ_QA: FaqQa[] = [
     a: {
       en: "DSA-Sec is for P6 students entering Secondary 1. DSA-JC is for Sec 4 / Sec 5 students entering Junior College. Different application windows, different criteria, different schools. This guide covers only DSA-Sec — if your child is in Lower Secondary already, the DSA-JC route may be a second chance.",
       zh: "DSA-Sec 是 P6 学生进中一的通道。DSA-JC 是中四/中五学生进 JC 的通道。两者申请窗口、标准、参与学校都不同。本指南只涵盖 DSA-Sec——孩子已经在 Lower Sec 的话，DSA-JC 是第二次机会。",
-      ms: "DSA-Sec untuk pelajar P6 ke Tingkatan 1. DSA-JC untuk Tingkatan 4/5 ke Junior College.",
-      ta: "DSA-Sec என்பது P6 மாணவர்களுக்கு இடைநிலை 1-க்கு. DSA-JC என்பது இடைநிலை 4/5-லிருந்து JC-க்கு.",
+      ms: "DSA-Sec adalah untuk pelajar P6 yang memasuki Tingkatan 1. DSA-JC adalah untuk pelajar Tingkatan 4 / Tingkatan 5 yang memasuki Maktab Rendah (Junior College). Tetingkap permohonan berbeza, kriteria berbeza, sekolah berbeza. Panduan ini merangkumi DSA-Sec sahaja — jika anak anda sudah berada di Menengah Rendah, laluan DSA-JC mungkin peluang kedua.",
+      ta: "DSA-Sec என்பது இடைநிலை 1-க்குச் செல்லும் P6 மாணவர்களுக்கானது. DSA-JC என்பது ஜூனியர் கல்லூரிக்குச் செல்லும் இடைநிலை 4 / இடைநிலை 5 மாணவர்களுக்கானது. வெவ்வேறு விண்ணப்பக் காலம், வெவ்வேறு அளவுகோல்கள், வெவ்வேறு பள்ளிகள். இந்த வழிகாட்டி DSA-Sec-ஐ மட்டுமே உள்ளடக்கியது — உங்கள் குழந்தை ஏற்கனவே கீழ் இடைநிலையில் இருந்தால், DSA-JC பாதை இரண்டாவது வாய்ப்பாக இருக்கலாம்.",
     },
   },
   {
@@ -104,8 +104,8 @@ export const FAQ_QA: FaqQa[] = [
     a: {
       en: "Generally no, not within the first 2 years. The DSA commitment requires your child to continue the talent area through a CCA-linked programme. Switching CCAs in Lower Secondary is treated as a breach of the DSA commitment and may have consequences with the school, though MOE doesn't publish a formal sanctions schedule.",
       zh: "一般不行，至少 2 年内。DSA 承诺要求孩子在新学校通过 CCA 衔接项目持续这个才艺方向。在 Lower Sec 换 CCA 等于违反 DSA 承诺，可能在学校层面有后果，但 MOE 没有公开正式的处罚条款。",
-      ms: "Umumnya tidak, sekurang-kurangnya 2 tahun.",
-      ta: "பொதுவாக இல்லை, குறைந்தபட்சம் 2 ஆண்டுகள் இல்லை.",
+      ms: "Umumnya tidak, tidak dalam tempoh 2 tahun pertama. Komitmen DSA menghendaki anak anda meneruskan bidang bakat itu melalui program yang berkaitan dengan CCA. Menukar CCA di Menengah Rendah dianggap sebagai pelanggaran komitmen DSA dan mungkin ada akibat dengan pihak sekolah, walaupun MOE tidak menerbitkan jadual hukuman rasmi.",
+      ta: "பொதுவாக இல்லை, முதல் 2 ஆண்டுகளுக்குள் அல்ல. DSA உறுதிப்பாடு, உங்கள் குழந்தை CCA-தொடர்பான திட்டத்தின் மூலம் அந்தத் திறமைத் துறையைத் தொடர வேண்டும் என்று கோருகிறது. கீழ் இடைநிலையில் CCA மாற்றுவது DSA உறுதிப்பாட்டை மீறுவதாகக் கருதப்படும், பள்ளியுடன் விளைவுகள் ஏற்படலாம்; இருப்பினும் MOE முறையான தண்டனை அட்டவணையை வெளியிடவில்லை.",
     },
   },
   {
@@ -118,8 +118,8 @@ export const FAQ_QA: FaqQa[] = [
     a: {
       en: "The talent record itself needs 2–4 years of consistent build-up — grading exams, competitions, sustained CCA leadership. The application paperwork and interview prep is realistically 3–6 months. Start the talent build in P3/P4 if you're being strategic; the paperwork in P5 second half is fine.",
       zh: "才艺记录本身需要 2-4 年持续积累——考级、比赛、CCA 长期领导。申请材料和面试准备实际上 3-6 个月就够。要有战略性的话，P3/P4 就开始铺才艺；P5 下学期开始准备申请材料没问题。",
-      ms: "Rekod bakat memerlukan 2-4 tahun. Kertas kerja 3-6 bulan.",
-      ta: "திறமைப் பதிவுக்கு 2-4 ஆண்டுகள் தேவை. ஆவணப்படுத்தலுக்கு 3-6 மாதங்கள்.",
+      ms: "Rekod bakat itu sendiri memerlukan 2–4 tahun pembinaan yang konsisten — peperiksaan bergred, pertandingan, kepimpinan CCA yang berterusan. Kertas kerja permohonan dan persediaan temu duga secara realistik mengambil 3–6 bulan. Mulakan pembinaan bakat pada P3/P4 jika anda mahu berstrategi; kertas kerja pada separuh kedua P5 sudah memadai.",
+      ta: "திறமைப் பதிவுக்கே 2–4 ஆண்டுகள் தொடர்ச்சியான கட்டமைப்பு தேவை — தரப்படுத்தப்பட்ட தேர்வுகள், போட்டிகள், நிலையான CCA தலைமை. விண்ணப்ப ஆவணங்கள் மற்றும் நேர்காணல் தயாரிப்பு யதார்த்தமாக 3–6 மாதங்கள். உத்தியுடன் செயல்பட விரும்பினால் P3/P4-இல் திறமைக் கட்டமைப்பைத் தொடங்குங்கள்; ஆவணங்களை P5 இரண்டாம் பாதியில் செய்தால் போதும்.",
     },
   },
   {
@@ -132,8 +132,8 @@ export const FAQ_QA: FaqQa[] = [
     a: {
       en: "The portal closes hard at 4:30pm Singapore time and doesn't reopen. There's no extension and no late submission. Your child enters S1 Posting normally with PSLE results. The next DSA-Sec window opens in May 2027 — but by then your child will be in Secondary school, so DSA-Sec is no longer an option. DSA-JC at end of Sec 4 / Sec 5 becomes the second chance.",
       zh: "门户在新加坡时间下午 4:30 准时关闭，不会重开。没有延期，没有补交。孩子按 PSLE 成绩正常走 S1 派位。下次 DSA-Sec 窗口在 2027 年 5 月——但那时孩子已经在中学，DSA-Sec 不再是选项。中四/中五结束的 DSA-JC 是第二次机会。",
-      ms: "Portal ditutup pada 4:30 petang dan tidak dibuka semula. Tiada lanjutan.",
-      ta: "வாயில் 4:30 மணிக்கு கடினமாக மூடப்படுகிறது, மீண்டும் திறக்காது.",
+      ms: "Portal ditutup terus pada 4:30 petang waktu Singapura dan tidak dibuka semula. Tiada lanjutan dan tiada penyerahan lewat. Anak anda memasuki Penempatan S1 seperti biasa dengan keputusan PSLE. Tetingkap DSA-Sec seterusnya dibuka pada Mei 2027 — tetapi ketika itu anak anda sudah berada di sekolah menengah, jadi DSA-Sec bukan lagi pilihan. DSA-JC pada hujung Tingkatan 4 / Tingkatan 5 menjadi peluang kedua.",
+      ta: "வாயில் சிங்கப்பூர் நேரம் மாலை 4:30 மணிக்கு உறுதியாக மூடப்படுகிறது, மீண்டும் திறக்காது. நீட்டிப்போ தாமதமான சமர்ப்பிப்போ இல்லை. உங்கள் குழந்தை PSLE முடிவுகளுடன் வழக்கம் போல் S1 இடம் ஒதுக்கீட்டில் நுழைகிறார். அடுத்த DSA-Sec காலம் மே 2027-இல் திறக்கும் — ஆனால் அப்போது உங்கள் குழந்தை இடைநிலைப் பள்ளியில் இருப்பார், எனவே DSA-Sec இனி விருப்பமல்ல. இடைநிலை 4 / இடைநிலை 5 முடிவில் வரும் DSA-JC இரண்டாவது வாய்ப்பாகும்.",
     },
   },
   {
@@ -146,8 +146,8 @@ export const FAQ_QA: FaqQa[] = [
     a: {
       en: "Yes — every government and government-aided secondary school participates in DSA-Sec, including IP, Express, and Normal-Academic schools. The 4 full-DSA schools (NUS High, SOTA, SST, Singapore Sports School) admit ~100% through DSA. The other 143 cap DSA at 20% of S1 places and admit the rest through PSLE Posting.",
       zh: "是的——所有政府及政府辅助中学都参与 DSA-Sec，包括 IP、Express、Normal-Academic 校。4 所全 DSA 校（NUS High、SOTA、SST、新加坡体育学校）几乎 100% 通过 DSA 招生。其余 143 所把 DSA 名额上限定在 20%，其余通过 PSLE 派位招生。",
-      ms: "Ya — semua sekolah menengah kerajaan dan bantuan kerajaan menyertai DSA-Sec.",
-      ta: "ஆம் — அனைத்து அரசு மற்றும் அரசு உதவி இடைநிலை பள்ளிகளும் DSA-Sec-இல் பங்கேற்கின்றன.",
+      ms: "Ya — setiap sekolah menengah kerajaan dan bantuan kerajaan menyertai DSA-Sec, termasuk sekolah IP, Express, dan Normal-Academic. 4 sekolah DSA penuh (NUS High, SOTA, SST, Sekolah Sukan Singapura) menerima masuk ~100% melalui DSA. 143 sekolah yang lain mengehadkan DSA pada 20% tempat Tingkatan 1 dan menerima selebihnya melalui Penempatan PSLE.",
+      ta: "ஆம் — ஒவ்வொரு அரசு மற்றும் அரசு உதவி இடைநிலைப் பள்ளியும் DSA-Sec-இல் பங்கேற்கிறது, IP, Express, Normal-Academic பள்ளிகள் உட்பட. 4 முழு-DSA பள்ளிகள் (NUS High, SOTA, SST, சிங்கப்பூர் விளையாட்டுப் பள்ளி) ~100% DSA மூலம் சேர்க்கின்றன. மற்ற 143 பள்ளிகள் DSA-ஐ இடைநிலை 1 இடங்களில் 20% ஆக வரம்பிட்டு, மீதியை PSLE இடம் ஒதுக்கீடு மூலம் சேர்க்கின்றன.",
     },
   },
   {
@@ -158,10 +158,10 @@ export const FAQ_QA: FaqQa[] = [
       ta: "IP பள்ளிகளில் DSA எவ்வாறு வேறுபடுகிறது?",
     },
     a: {
-      en: "Mechanics are the same, but two differences matter. First, IP schools' PSLE minimum is the IP cut-off (AL ≤ 22 / Posting Group 3) rather than the Express minimum. Second, dual-track IP schools (e.g. HCI, NJC, RI) may issue a Counter-Offer for O-Level if PSLE doesn't meet IP eligibility — your family then chooses which path to accept.",
-      zh: "机制相同，但有两个差异。第一，IP 校的 PSLE 门槛是 IP cut-off（AL ≤ 22 / Posting Group 3），而不是 Express 门槛。第二，双轨制 IP 校（如 HCI、NJC、RI）如果 PSLE 没达到 IP 资格但达到 O-Level，可能发 O-Level Counter-Offer——由家庭决定走哪条路。",
-      ms: "Mekanisme sama, tetapi sekolah IP boleh keluarkan Tawaran Balas untuk O-Level.",
-      ta: "இயக்கம் ஒரே மாதிரியானது, ஆனால் IP பள்ளிகள் O-Level எதிர் சலுகை வழங்கலாம்.",
+      en: "Mechanics are the same, but two differences matter. First, IP schools' PSLE minimum is the IP cut-off (AL ≤ 22 / Posting Group 3) rather than the Express minimum. Second, a dual-track school — one that runs both an IP and a 4-year O-Level (Posting Group 3) track — may issue a Counter-Offer for its O-Level track if PSLE doesn't meet IP eligibility, and your family then chooses which path to accept. Check each school's own admissions page for whether it runs both tracks.",
+      zh: "机制相同，但有两个差异。第一，IP 校的 PSLE 门槛是 IP cut-off（AL ≤ 22 / Posting Group 3），不是 Express 门槛。第二，双轨制学校——同时开办 IP 与 4 年制 O-Level（Posting Group 3）两条轨道的学校——若 PSLE 没达到 IP 资格，可能给同校 O-Level 轨道的 Counter-Offer，由家庭决定走哪条路。某校是否双轨，查该校招生页确认。",
+      ms: "Mekanismenya sama, tetapi dua perbezaan penting. Pertama, minimum PSLE sekolah IP ialah potongan IP (AL ≤ 22 / Posting Group 3), bukan minimum Express. Kedua, sekolah dwitrek — iaitu sekolah yang menjalankan kedua-dua laluan IP dan O-Level 4 tahun (Posting Group 3) — boleh mengeluarkan Tawaran Balas untuk laluan O-Levelnya jika PSLE tidak memenuhi kelayakan IP, dan keluarga anda kemudian memilih laluan mana untuk diterima. Semak halaman kemasukan setiap sekolah untuk mengetahui sama ada ia menjalankan kedua-dua laluan.",
+      ta: "இயக்கம் ஒரே மாதிரியானது, ஆனால் இரண்டு வேறுபாடுகள் முக்கியம். முதலாவது, IP பள்ளிகளின் PSLE குறைந்தபட்சம் Express குறைந்தபட்சம் அல்ல, IP வெட்டுப்புள்ளி (AL ≤ 22 / Posting Group 3). இரண்டாவது, இரட்டை-பாதைப் பள்ளி — IP மற்றும் 4 ஆண்டு O-Level (Posting Group 3) இரண்டையும் நடத்தும் பள்ளி — PSLE IP தகுதியைப் பூர்த்தி செய்யாவிட்டால் அதன் O-Level பாதைக்கு Counter-Offer வழங்கலாம்; உங்கள் குடும்பம் எந்தப் பாதையை ஏற்பது என்று தேர்வு செய்கிறது. ஒவ்வொரு பள்ளியும் இரண்டு பாதைகளையும் நடத்துகிறதா என அதன் சேர்க்கைப் பக்கத்தில் சரிபார்க்கவும்.",
     },
   },
   {
@@ -174,8 +174,8 @@ export const FAQ_QA: FaqQa[] = [
     a: {
       en: "There's no formal MOE appeal process for DSA rejection. Each school's panel decision is final for that cycle. Your child can re-apply through PSLE Posting and S1 Appeal (which is a separate, post-PSLE mechanism for affiliated or sibling-link schools). The next DSA opportunity is DSA-JC at the end of Sec 4 / Sec 5.",
       zh: "MOE 没有正式的 DSA 拒绝上诉机制。每所学校的评审决定在当年是最终的。孩子可以通过 PSLE 派位 + S1 Appeal（PSLE 后独立机制 · 适用于校友/兄弟姐妹关系校）重新申请。下次 DSA 机会是中四/中五结束的 DSA-JC。",
-      ms: "Tiada proses rayuan rasmi untuk penolakan DSA.",
-      ta: "DSA நிராகரிப்புக்கு முறையான MOE மேல்முறையீடு செயல்முறை இல்லை.",
+      ms: "Tiada proses rayuan MOE yang rasmi untuk penolakan DSA. Keputusan panel setiap sekolah adalah muktamad untuk kitaran itu. Anak anda boleh memohon semula melalui Penempatan PSLE dan Rayuan S1 (iaitu mekanisme berasingan selepas PSLE untuk sekolah gabungan atau berpertalian adik-beradik). Peluang DSA seterusnya ialah DSA-JC pada hujung Tingkatan 4 / Tingkatan 5.",
+      ta: "DSA நிராகரிப்புக்கு முறையான MOE மேல்முறையீட்டு செயல்முறை இல்லை. ஒவ்வொரு பள்ளியின் குழு முடிவும் அந்தச் சுழற்சிக்கு இறுதியானது. உங்கள் குழந்தை PSLE இடம் ஒதுக்கீடு மற்றும் S1 மேல்முறையீடு (இது இணைப்பு அல்லது உடன்பிறப்புத் தொடர்பு பள்ளிகளுக்கான தனி, PSLE-க்குப் பிந்தைய பொறிமுறை) மூலம் மீண்டும் விண்ணப்பிக்கலாம். அடுத்த DSA வாய்ப்பு இடைநிலை 4 / இடைநிலை 5 முடிவில் வரும் DSA-JC.",
     },
   },
 ];
