@@ -12,6 +12,8 @@
 | **承诺的完整范围（2026-07-15 逐字核实）**：DSA-Sec 录取的学生 "must honour this commitment for the duration of the programme"，**"are not allowed to: Submit school choices during S1 Posting / Transfer to another school after the release of the PSLE results"** | [MOE commitment 页](https://www.moe.gov.sg/secondary/dsa/preferences/understand-dsa-sec-commitment) + FAQ「Is it recommended for my child to participate in DSA-Sec?」⚠️ **MOE 未公布任何例外情况**——别写「除 MOE 定义的特殊情况外」之类的软化（2026-07-15 已修 `dsa-guide-faq.ts` 一处）。不确定就别提交志愿，走 S1 Posting |
 | 4所纯 DSA 学校：NUS High、SOTA、SST、新加坡体育学校 | MOE 官方列表 |
 | DSA 录取以通过课程最低 Posting Group 为条件（如课程只设 Express/PG3：PSLE AL 4–22） | MOE 官方条件 |
+| **Posting Group 官方分数表（2026-07-23 从 MOE Full SBB 页逐字核实）**：PG3=4–20（G3·旧 Express·最高）· PG2=23–24（G2·旧 N(A)）· PG1=26–30 且英数 AL7+（G1·旧 N(T)·最低）；重叠档 21–22→PG2 或 PG3、25→PG1 或 PG2。⚠️ **组号越大学术要求越高，别写反**（PG1≠Express；2024 S1 起 Express/N(A)/N(T) 标签取消，按 Posting Group 录取） | [MOE Full SBB 页](https://www.moe.gov.sg/psle-fsbb/full-subject-based-banding/secondary-school-experience) 原文表 + FAQ「To qualify for Posting Group 1…PSLE Score between 26 and 30」 |
+| 历史放榜锚点（2025）：**PSLE 结果 25 Nov 2025 11am** · **S1 Posting 结果 19 Dec 2025 9am**（S1 选校窗口 25 Nov 11:30am–1 Dec 4:30pm，6 校） | [MOE S1 Posting 页](https://www.moe.gov.sg/secondary/s1-posting)，2026-07-23 核实 |
 | DSA 被拒后，学生仍可通过 PSLE 正常分配和 S1 Appeal 申请其他学校 | MOE 官方流程 |
 | 双轨制学校可向申请 IP 的 DSA 学生反向提供 O Level 名额（counter-offer） | MOE 官方机制 |
 | 接受任一 Confirmed Offer 后，不可再接受其他学校的 Confirmed Offer | MOE 官方规则 |

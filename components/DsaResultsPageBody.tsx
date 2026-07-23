@@ -252,12 +252,6 @@ const S2_BINDS: ReadonlyArray<LocaleStr> = [
     ta: "S1 Posting தேர்வுகளை சமர்ப்பிக்க முடியாது.",
   },
   {
-    en: "You cannot take part in the Joint Admissions Exercise (JAE) at this level.",
-    zh: "不能参加 Joint Admissions Exercise (JAE)。",
-    ms: "Tidak boleh menyertai JAE pada peringkat ini.",
-    ta: "JAE-இல் பங்கேற்க முடியாது.",
-  },
-  {
     en: "You cannot transfer to a different school after PSLE results are released — the placement is final from MOE's side.",
     zh: "PSLE 出分后不能转去其他学校——MOE 视为最终安置。",
     ms: "Tidak boleh berpindah ke sekolah lain selepas keputusan PSLE.",
@@ -360,14 +354,14 @@ const S4_TITLE: LocaleStr = {
 
 const S4_BODY: ReadonlyArray<LocaleStr> = [
   {
-    en: "A Counter-Offer typically arises at schools that run both an Integrated Programme (IP) stream and a 4-year Express stream — Anglo-Chinese School (Independent), Dunman High, Catholic High, and others. If you apply for IP but the school decides the candidate is a better fit for the Express stream, they may issue a Counter-Offer for Express at the same school.",
-    zh: "Counter-Offer 常发生在同时开办 IP 与 4 年制 Express 两套流派的学校——ACS(I)、Dunman High、Catholic High 等。如果你申请 IP · 但学校判断孩子更适合 Express · 可能给同校 Express 流派的 Counter-Offer。",
-    ms: "Tawaran Balas biasanya berlaku di sekolah yang menjalankan kedua-dua aliran IP dan Express selama 4 tahun.",
-    ta: "எதிர் சலுகை பொதுவாக ஒருங்கிணைந்த திட்டம் (IP) மற்றும் 4-ஆண்டு Express இரண்டையும் நடத்தும் பள்ளிகளில் ஏற்படுகிறது.",
+    en: "A Counter-Offer typically arises at what MOE calls dual-track secondary schools — schools that run both an Integrated Programme (IP) and a 4-year O-level (Posting Group 3) track. If you apply for the IP but the school judges the candidate a better fit for the O-level track, it may issue a Counter-Offer for that track at the same school. Check each school's own admissions page for whether it runs both tracks.",
+    zh: "Counter-Offer 常发生在 MOE 所说的双轨制中学——同时开办 IP 与 4 年制 O-level（Posting Group 3）两条轨道的学校。如果你申请 IP · 但学校判断孩子更适合 O-level 那条 · 可能给同校该轨道的 Counter-Offer。某校是否双轨 · 查该校招生页确认。",
+    ms: "Tawaran Balas biasanya berlaku di sekolah yang MOE panggil sekolah dwi-trek — sekolah yang menjalankan kedua-dua trek IP dan O-level (Kumpulan Penempatan 3) selama 4 tahun. Semak halaman kemasukan setiap sekolah sama ada ia menjalankan kedua-dua trek.",
+    ta: "எதிர் சலுகை பொதுவாக MOE இரட்டை-பாதை பள்ளிகள் என அழைப்பவற்றில் ஏற்படுகிறது — IP மற்றும் 4-ஆண்டு O-level (இடம் குழு 3) இரண்டையும் நடத்தும் பள்ளிகள். ஒவ்வொரு பள்ளியும் இரண்டு பாதைகளையும் நடத்துகிறதா என்பதை அதன் சேர்க்கை பக்கத்தில் சரிபார்க்கவும்.",
   },
   {
-    en: "Accepting a Counter-Offer follows the same rules as accepting a Confirmed Offer — you rank the school in the October preference. Once locked, the same binding rules apply: no S1 Posting, no JAE, no transfer after PSLE. The stream (Express instead of IP) is what changes, not the school.",
-    zh: "接受 Counter-Offer 的规则与接受 CO 一致——在 10 月排这所学校。一旦锁定 · 适用同一套约束：不能 S1 Posting · 不能 JAE · PSLE 后不能转校。改变的是流派（从 IP 变 Express）· 不是学校。",
+    en: "Accepting a Counter-Offer follows the same rules as accepting a Confirmed Offer — you rank the school in the October preference. Once locked, the same binding applies: no S1 Posting choices, and no transfer after PSLE. What changes is the track (the O-level / Posting Group 3 side instead of the IP), not the school.",
+    zh: "接受 Counter-Offer 的规则与接受 CO 一致——在 10 月排这所学校。一旦锁定 · 适用同一套约束：不能提交 S1 Posting 志愿 · PSLE 后不能转校。改变的是轨道（从 IP 变成 O-level / Posting Group 3 那一侧）· 不是学校。",
     ms: "Menerima Tawaran Balas mengikuti peraturan yang sama seperti menerima Tawaran Sah.",
     ta: "எதிர் சலுகையை ஏற்றுக்கொள்வது CO ஏற்பது போலவே செயல்படுகிறது.",
   },
@@ -541,8 +535,8 @@ const S7_RULES: ReadonlyArray<{
       ta: "இணைப்பு முன்னுரிமை — ஆனால் AL போனஸ் இல்லை",
     },
     body: {
-      en: "If your child attended an affiliated primary school, you must list the affiliated secondary first and meet the Affiliation Minimum Requirement (AMR). The school reserves up to 20% of places for non-affiliated applicants. The old PSLE T-score \"-2 bonus\" system for affiliation is no longer in effect under the AL scoring system.",
-      zh: "如果孩子上的是 affiliated 小学 · 必须把 affiliated 中学排首位 · 并达到 Affiliation Minimum Requirement (AMR)。学校最多保留 20% 名额给非 affiliated 申请人。老的 PSLE T-score 『减 2 分 affiliation 加分』制度在 AL 评分系统下已废止。",
+      en: "If your child attended an affiliated primary school, you must list the affiliated secondary as the first choice to get affiliation priority, and meet the Affiliation Minimum Requirement (AMR). The school sets aside at least 20% of its places for students with no affiliation. The old PSLE T-score \"-2 bonus\" system for affiliation is no longer in effect under the AL scoring system — affiliation now gives priority in admission, not a score advantage.",
+      zh: "如果孩子上的是 affiliated 小学 · 必须把 affiliated 中学排首位才享 affiliation 优先 · 并达到 Affiliation Minimum Requirement (AMR)。学校至少保留 20% 名额给无 affiliation 的学生。老的 PSLE T-score 『减 2 分 affiliation 加分』制度在 AL 评分系统下已废止——如今 affiliation 是录取优先 · 不是分数优惠。",
       ms: "Jika anak anda menghadiri sekolah rendah berafiliasi, anda mesti menyenaraikan sekolah menengah berafiliasi dahulu.",
       ta: "உங்கள் குழந்தை இணைப்பு தொடக்கப் பள்ளியில் கல்வி பெற்றிருந்தால், இணைப்பு இடைநிலை பள்ளியை முதலில் பட்டியலிட வேண்டும்.",
     },
@@ -586,10 +580,10 @@ const S8_BODY: ReadonlyArray<LocaleStr> = [
     ta: "பொதுவான தவறான புரிதல்: \"DSA உறுதிசெய்யப்பட்டது = PSLE முக்கியமில்லை.\" அது தவறு.",
   },
   {
-    en: "Posting Group requirements at a glance: PG1 covers AL 4-20 (Express stream eligible), PG2 covers AL 21-22 (Express or N(A) eligible), PG3 covers AL 23-30 (N(A) or N(T) eligible). An IP-track school will require a stricter cut-off, usually well within PG1 — confirm each school's IP Posting Group threshold via the school's own page.",
-    zh: "Posting Group 大致要求：PG1 涵盖 AL 4-20（可入 Express）· PG2 涵盖 AL 21-22（可入 Express 或 N(A)）· PG3 涵盖 AL 23-30（可入 N(A) 或 N(T)）。IP 流派学校要求更严 · 通常 PG1 内偏低位——具体每校 IP Posting Group 阈值 · 查学校本身页面。",
-    ms: "Keperluan Kumpulan Penempatan sepintas: PG1 meliputi AL 4-20, PG2 meliputi AL 21-22, PG3 meliputi AL 23-30.",
-    ta: "இடம் குழு தேவைகள்: PG1 AL 4-20 உள்ளடக்கியது, PG2 AL 21-22 உள்ளடக்கியது, PG3 AL 23-30 உள்ளடக்கியது.",
+    en: "Posting Groups map from the old streams — Posting Group 3 = Express, 2 = N(A), 1 = N(T) — so the higher the group number, the more academically demanding. By PSLE score (MOE's own table): PG3 takes 4-20 (G3, former Express); PG2 takes 23-24 (G2, former N(A)); PG1 takes 26-30 with AL7 or better in English and Maths (G1, former N(T)). Two overlap bands let families opt up: a score of 21-22 is eligible for PG2 or PG3, and 25 for PG1 or PG2. Since the 2024 S1 cohort the Express / N(A) / N(T) labels are gone — schools admit by Posting Group. An IP-track school sets its own stricter cut-off, usually well inside the PG3 band — confirm each school's threshold on its own page.",
+    zh: "Posting Group 从旧分流对应而来——Posting Group 3 = Express、2 = N(A)、1 = N(T)——所以组号越大 · 学术要求越高。按 PSLE 总分（MOE 官方表）：PG3 收 4-20 分（G3 · 旧 Express）· PG2 收 23-24 分（G2 · 旧 N(A)）· PG1 收 26-30 分且英文与数学 AL7 或更好（G1 · 旧 N(T)）。两个重叠档可往上选：21-22 分可入 PG2 或 PG3 · 25 分可入 PG1 或 PG2。2024 年 S1 起 Express / N(A) / N(T) 标签已取消——学校按 Posting Group 录取。IP 流派学校自设更严门槛 · 通常在 PG3 档内偏高位——具体阈值查学校本身页面。",
+    ms: "Kumpulan Penempatan dipetakan daripada aliran lama — Kumpulan 3 = Express, 2 = N(A), 1 = N(T) — jadi semakin tinggi nombor kumpulan, semakin mencabar dari segi akademik. Mengikut skor PSLE (jadual rasmi MOE): PG3 mengambil 4-20 (G3, bekas Express); PG2 mengambil 23-24 (G2, bekas N(A)); PG1 mengambil 26-30 dengan AL7 atau lebih baik dalam Bahasa Inggeris dan Matematik (G1, bekas N(T)). Dua jalur bertindih membenarkan pilihan ke atas: skor 21-22 layak untuk PG2 atau PG3, dan 25 untuk PG1 atau PG2. Sejak kohort S1 2024, label Express / N(A) / N(T) telah dimansuhkan — sekolah menerima mengikut Kumpulan Penempatan.",
+    ta: "இடம் குழுக்கள் பழைய நீரோட்டங்களிலிருந்து வரையறுக்கப்படுகின்றன — குழு 3 = Express, 2 = N(A), 1 = N(T) — எனவே குழு எண் அதிகமானால் கல்வித் தேவை அதிகம். PSLE மதிப்பெண்படி (MOE அதிகாரப்பூர்வ அட்டவணை): PG3 என்பது 4-20 (G3, முன்னாள் Express); PG2 என்பது 23-24 (G2, முன்னாள் N(A)); PG1 என்பது 26-30, ஆங்கிலம் மற்றும் கணிதத்தில் AL7 அல்லது சிறந்தது (G1, முன்னாள் N(T)). இரண்டு மேற்பொருந்தும் அணிகள்: 21-22 மதிப்பெண் PG2 அல்லது PG3-க்கு, 25 மதிப்பெண் PG1 அல்லது PG2-க்கு தகுதி. 2024 S1 குழுவிலிருந்து Express / N(A) / N(T) பெயர்கள் நீக்கப்பட்டன — பள்ளிகள் இடம் குழுவின்படி சேர்க்கின்றன.",
   },
   {
     en: "If PSLE falls short of the offered stream's requirement, two scenarios occur. (1) Same-school down-stream: the school may absorb the child into a lower stream within the same school (e.g. IP offer becomes Express at the same school). (2) Offer rescinded: the school decides the candidate no longer fits even the lower stream. This is handled school-by-school — MOE has no central rule. Confirm with the offering school's admissions office in advance to understand their policy.",
