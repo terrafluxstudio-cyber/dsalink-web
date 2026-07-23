@@ -59,8 +59,8 @@ const WHATISDSA_CARD: Card = {
   body: {
     en: "Mechanism, eligibility, what DSA isn't — and how DSA × PSLE interact.",
     zh: "机制、资格、DSA 不是什么 · DSA × PSLE 如何互动。",
-    ms: "Mekanisme, kelayakan, DSA × PSLE.",
-    ta: "முறை, தகுதி, DSA × PSLE.",
+    ms: "Mekanisme, kelayakan, apa DSA bukan — dan cara DSA × PSLE berinteraksi.",
+    ta: "முறை, தகுதி, DSA எது அல்ல — மற்றும் DSA × PSLE எவ்வாறு தொடர்பு கொள்கிறது.",
   },
   href: "/what-is-dsa",
 };

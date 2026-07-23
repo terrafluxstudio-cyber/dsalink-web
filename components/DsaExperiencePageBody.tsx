@@ -34,8 +34,8 @@ const REL_EXP = {
   c1Body: {
     en: "Mechanism, eligibility, what DSA isn't — context for why each story unfolds the way it does.",
     zh: "机制、资格、DSA 不是什么 · 看故事的前置语境。",
-    ms: "Mekanisme, kelayakan — konteks untuk setiap kisah.",
-    ta: "முறை, தகுதி — ஒவ்வொரு கதைக்கான சூழல்.",
+    ms: "Mekanisme, kelayakan, apa DSA bukan — konteks untuk memahami mengapa setiap kisah berlaku sebegitu.",
+    ta: "முறை, தகுதி, DSA எது அல்ல — ஒவ்வொரு கதையும் அப்படி விரிவதற்கான சூழல்.",
   },
   c2Title: { en: "2026 timeline", zh: "2026 时间线", ms: "Garis masa 2026", ta: "2026 கால அட்டவணை" },
   c2Body: {

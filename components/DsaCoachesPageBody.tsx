@@ -38,8 +38,8 @@ const REL_COACH = {
   c3Body: {
     en: "Each school's CCA tradition — which talents have strong in-school coaching already.",
     zh: "每校 CCA 传统 · 哪些才艺校内已有强教练。",
-    ms: "Tradisi CCA setiap sekolah.",
-    ta: "ஒவ்வொரு பள்ளியின் CCA பாரம்பரியம்.",
+    ms: "Tradisi CCA setiap sekolah — bakat mana yang sudah mempunyai bimbingan dalaman yang kukuh.",
+    ta: "ஒவ்வொரு பள்ளியின் CCA பாரம்பரியம் — எந்தத் திறமைகளுக்கு ஏற்கனவே பள்ளிக்குள் வலுவான பயிற்சி உள்ளது.",
   },
 } satisfies Record<string, LocaleStr4>;
 
