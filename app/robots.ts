@@ -21,6 +21,10 @@ const ZERO_VALUE_CRAWLERS = [
   "PetalBot",
   "SerpstatBot",
   "ZoominfoBot",
+  // Common Crawl. Crawls the whole site aggressively but drives ~0 direct
+  // visitors. NOT the same as the citation-driving AI bots (GPTBot,
+  // OAI-SearchBot, PerplexityBot, ClaudeBot) — those stay allowed.
+  "CCBot",
 ];
 
 export default function robots(): MetadataRoute.Robots {
@@ -30,6 +34,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        // /ta/* (Tamil) is deliberately noindex and drew ~0 clicks over 90 days
+        // (see lib/schoolPages.ts). Disallow it so crawlers stop spending edge
+        // quota on ~130 pages x ~26 assets we never wanted indexed anyway.
+        disallow: "/ta/",
       },
       {
         userAgent: ZERO_VALUE_CRAWLERS,
