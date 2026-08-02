@@ -2,25 +2,33 @@
 
 import { useState, type FormEvent } from "react";
 import { Bell, CheckCircle2 } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
+import { useImpression } from "@/lib/useImpression";
+
+const LOCATION = "open-houses-inline";
 
 export function OpenHouseInlineCta() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const rootRef = useImpression<HTMLDivElement>("subscribe_view", LOCATION);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const trimmed = email.trim();
     if (!trimmed) return;
     setStatus("loading");
+    trackEvent("subscribe_submit", { location: LOCATION });
     try {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed, source: "open-houses-inline" }),
+        body: JSON.stringify({ email: trimmed, source: LOCATION }),
       });
       setStatus(res.ok ? "success" : "error");
+      trackEvent(res.ok ? "subscribe_success" : "subscribe_error", { location: LOCATION });
     } catch {
       setStatus("error");
+      trackEvent("subscribe_error", { location: LOCATION });
     }
   };
 
@@ -38,6 +46,7 @@ export function OpenHouseInlineCta() {
 
   return (
     <div
+      ref={rootRef}
       className="my-4 rounded-2xl border border-white/10 px-5 py-5 sm:flex sm:items-center sm:gap-6"
       style={{ backgroundColor: "#0d3f5f" }}
     >

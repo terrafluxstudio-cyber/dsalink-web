@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { CheckCircle2, Mail } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
+import { useImpression } from "@/lib/useImpression";
 
 export interface EmailCaptureProps {
   onSubmit: (email: string) => void;
@@ -12,6 +13,8 @@ export interface EmailCaptureProps {
   submitLabel?: string;
   successTitle?: string;
   successDescription?: string;
+  /** Funnel attribution label sent with GA4 subscribe_* events. */
+  location?: string;
 }
 
 export function EmailCapture({
@@ -22,16 +25,18 @@ export function EmailCapture({
   submitLabel = "Send my results",
   successTitle = "Sent - check your inbox",
   successDescription = "Your school recommendations are on their way. We'll also send follow-ups with open house dates, deadline reminders, and interview prep tips.",
+  location = "wizard-results",
 }: EmailCaptureProps) {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const rootRef = useImpression<HTMLElement>("subscribe_view", location);
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     const trimmed = email.trim();
     if (!trimmed) return;
     onSubmit(trimmed);
-    trackEvent("email_captured");
+    trackEvent("subscribe_submit", { location });
     setSubmitted(true);
   };
 
@@ -54,7 +59,7 @@ export function EmailCapture({
   }
 
   return (
-    <section className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
+    <section ref={rootRef} className="rounded-xl border border-[#e3ded5] bg-white p-5 shadow-card">
       <div className="mb-4 flex items-start gap-3">
         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-intellectual/8 text-intellectual">
           <Mail className="h-4 w-4" aria-hidden />

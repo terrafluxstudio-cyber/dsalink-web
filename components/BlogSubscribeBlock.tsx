@@ -2,13 +2,18 @@
 
 import { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
+import { useImpression } from "@/lib/useImpression";
+
+const LOCATION = "blog-page";
 
 export function BlogSubscribeBlock() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const rootRef = useImpression<HTMLDivElement>("subscribe_view", LOCATION);
 
   return (
-    <div className="mx-auto max-w-4xl px-4 pb-14 sm:px-6">
+    <div ref={rootRef} className="mx-auto max-w-4xl px-4 pb-14 sm:px-6">
       <div className="rounded-2xl bg-intellectual px-6 py-8 sm:px-10 sm:py-10">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:gap-12">
 
@@ -35,15 +40,18 @@ export function BlogSubscribeBlock() {
                   e.preventDefault();
                   if (!email) return;
                   setStatus("loading");
+                  trackEvent("subscribe_submit", { location: LOCATION });
                   try {
                     const res = await fetch("/api/subscribe", {
                       method: "POST",
                       headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({ email, source: "blog-page" }),
+                      body: JSON.stringify({ email, source: LOCATION }),
                     });
                     setStatus(res.ok ? "success" : "error");
+                    trackEvent(res.ok ? "subscribe_success" : "subscribe_error", { location: LOCATION });
                   } catch {
                     setStatus("error");
+                    trackEvent("subscribe_error", { location: LOCATION });
                   }
                 }}
               >

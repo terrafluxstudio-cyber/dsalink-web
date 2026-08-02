@@ -3,11 +3,16 @@
 import { useState, type FormEvent } from "react";
 import { CheckCircle2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { trackEvent } from "@/lib/analytics";
+import { useImpression } from "@/lib/useImpression";
+
+const LOCATION = "homepage";
 
 export function HomepageSubscribeBanner() {
   const { t } = useLanguage();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const rootRef = useImpression<HTMLElement>("subscribe_view", LOCATION);
 
   const materials = [
     t.subscribeMaterial1,
@@ -21,20 +26,23 @@ export function HomepageSubscribeBanner() {
     const trimmed = email.trim();
     if (!trimmed) return;
     setStatus("loading");
+    trackEvent("subscribe_submit", { location: LOCATION });
     try {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed }),
+        body: JSON.stringify({ email: trimmed, source: LOCATION }),
       });
       setStatus(res.ok ? "success" : "error");
+      trackEvent(res.ok ? "subscribe_success" : "subscribe_error", { location: LOCATION });
     } catch {
       setStatus("error");
+      trackEvent("subscribe_error", { location: LOCATION });
     }
   };
 
   return (
-    <section className="bg-intellectual py-14 sm:py-20">
+    <section ref={rootRef} className="bg-intellectual py-14 sm:py-20">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
 
