@@ -49,13 +49,15 @@ export type TranslatedLang = (typeof TRANSLATED_LANGS)[number];
 
 /**
  * Translated languages we let Google index (sitemap + hreflang + no robots
- * noindex). `ta` is deliberately excluded: over 90 days it drew ~0 clicks and
- * near-zero impressions across 147 pages, so Google mostly refused to index it
- * anyway. Keeping it out of the index reclaims crawl budget for the English
- * pages. The Tamil pages still BUILD and stay reachable via the lang switcher —
- * four-language coverage for users is unaffected; only search indexing changes.
+ * noindex). `ta` and `ms` are deliberately excluded on the same grounds:
+ * over 90 days `ta` drew 3 clicks / 90 impressions and `ms` drew 7 clicks /
+ * 1,356 impressions across ~130 pages each — effectively zero return for a
+ * large crawl-budget cost. `zh` stays indexed: it earns ~124 clicks / 90 days
+ * (8% of site clicks), a real Chinese-parent channel. The excluded languages
+ * still BUILD and stay reachable via the lang switcher — four-language coverage
+ * for users is unaffected; only search indexing changes. (Measured 2026-08-02.)
  */
-export const INDEXED_LANGS = ["zh", "ms"] as const;
+export const INDEXED_LANGS = ["zh"] as const;
 export function isIndexedLang(lang: string): boolean {
   return (INDEXED_LANGS as readonly string[]).includes(lang);
 }

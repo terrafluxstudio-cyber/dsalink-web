@@ -34,10 +34,11 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        // /ta/* (Tamil) is deliberately noindex and drew ~0 clicks over 90 days
-        // (see lib/schoolPages.ts). Disallow it so crawlers stop spending edge
-        // quota on ~130 pages x ~26 assets we never wanted indexed anyway.
-        disallow: "/ta/",
+        // /ta/* and /ms/* are deliberately noindex and drew ~0 clicks over 90
+        // days (ta: 3, ms: 7 — see lib/schoolPages.ts). Disallow them so
+        // crawlers stop spending edge quota on ~130 pages each of low-value
+        // translated content we never wanted indexed anyway.
+        disallow: ["/ta/", "/ms/"],
       },
       {
         userAgent: ZERO_VALUE_CRAWLERS,

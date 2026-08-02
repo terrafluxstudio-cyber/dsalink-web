@@ -63,14 +63,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = `/${lang}/schools/${slug}`;
   const translations = getAvailableTranslations(slug);
 
-  // hreflang only advertises indexable languages (zh/ms). Pointing hreflang at a
-  // noindexed page (ta) sends Google a contradictory signal, so ta is omitted.
+  // hreflang only advertises indexable languages (zh). Pointing hreflang at a
+  // noindexed page (ta, ms) sends Google a contradictory signal, so they are
+  // omitted — gated on isIndexedLang so this stays correct if INDEXED_LANGS changes.
   const hreflangAlternates: Record<string, string> = {
     "en-SG": `${siteUrl}/schools/${slug}`,
     "x-default": `${siteUrl}/schools/${slug}`,
   };
-  if (translations.includes("zh")) hreflangAlternates["zh-Hans-SG"] = `${siteUrl}/zh/schools/${slug}`;
-  if (translations.includes("ms")) hreflangAlternates["ms-SG"] = `${siteUrl}/ms/schools/${slug}`;
+  const HREFLANG_TAG: Record<string, string> = { zh: "zh-Hans-SG", ms: "ms-SG" };
+  for (const l of translations) {
+    if (isIndexedLang(l) && HREFLANG_TAG[l]) {
+      hreflangAlternates[HREFLANG_TAG[l]] = `${siteUrl}/${l}/schools/${slug}`;
+    }
+  }
 
   return {
     title: { absolute: school.title },

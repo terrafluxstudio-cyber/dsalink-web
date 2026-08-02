@@ -7,7 +7,7 @@ import { MapPin, BookOpen, GraduationCap, ExternalLink } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
-import { getSchoolBySlug, getAllPublishedSchools, getAvailableTranslations } from "@/lib/schoolPages";
+import { getSchoolBySlug, getAllPublishedSchools, getAvailableTranslations, isIndexedLang } from "@/lib/schoolPages";
 import { SchoolLangSwitcher } from "@/components/SchoolLangSwitcher";
 import { getSiteUrl } from "@/lib/seo";
 
@@ -37,10 +37,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     "en-SG": `${siteUrl}/schools/${slug}`,
     "x-default": `${siteUrl}/schools/${slug}`,
   };
-  // ta omitted: Tamil pages are noindex (see INDEXED_LANGS in lib/schoolPages),
-  // so advertising an hreflang alternate for them would contradict that signal.
-  if (translations.includes("zh")) hreflangAlternates["zh-Hans-SG"] = `${siteUrl}/zh/schools/${slug}`;
-  if (translations.includes("ms")) hreflangAlternates["ms-SG"] = `${siteUrl}/ms/schools/${slug}`;
+  // Only advertise hreflang for indexed languages. ta and ms are noindex
+  // (see INDEXED_LANGS in lib/schoolPages), so advertising alternates for them
+  // would contradict that signal.
+  const HREFLANG_TAG: Record<string, string> = { zh: "zh-Hans-SG", ms: "ms-SG" };
+  for (const lang of translations) {
+    if (isIndexedLang(lang) && HREFLANG_TAG[lang]) {
+      hreflangAlternates[HREFLANG_TAG[lang]] = `${siteUrl}/${lang}/schools/${slug}`;
+    }
+  }
 
   return {
     title: { absolute: school.title },
