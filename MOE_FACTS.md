@@ -31,6 +31,7 @@
 | **把 WL 校排在 CO 校之前没有下行风险**：MOE 原文 "You can put either option"——A(WL) 第一 + B(CO) 第二 → A 有空位就进 A，**没空位仍进 B**；B(CO) 第一 → 直接进 B | MOE FAQ「My child has a Wait List Offer from School A… will this affect my child's allocation to School B?」⚠️ **不是「必须排第一」**，是「必须排在 CO 之前」；排在 CO 之后则永远轮不到 |
 | 两名 WL 都把同校排第一 → **学校自己的 Waitlist 排序**决定谁先分配 | MOE FAQ「If 2 applicants are placed on the school's Wait List…」 |
 | **WL 转正率**：MOE 原话 "in previous years, **about half** of the students on the schools' wait lists were eventually given a place" | [MOE outcomes 页](https://www.moe.gov.sg/secondary/dsa/selection/outcomes)，2026-07-15 打开原页核实（⚠️ 搜索引擎会把 dsalink.sg 自己的说法当权威返回，必须看原页） |
+| **WL 定义原文**：MOE 原话 "Your child may be given a reserved place in the school if other students with confirmed offers did not take up the offer." | [MOE outcomes 页](https://www.moe.gov.sg/secondary/dsa/selection/outcomes)，2026-08-18 逐字核实 |
 
 ## 选拔流程（2026-07-15 从 MOE FAQ 六个 DSA-Sec 分类逐条核实）
 
