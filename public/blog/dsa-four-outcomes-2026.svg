@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 486" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" role="img" aria-label="The four DSA-Sec outcomes at a glance. Confirmed Offer: a reserved place, binding once taken up, must still meet the PSLE Posting Group. Wait List: a place if confirmed offers go unfilled, about half convert, rank it above a Confirmed Offer with no downside. Counter-Offer: a dual-track school's O-Level Posting Group 3 place when you applied for the IP, same school, binds like a Confirmed Offer. Unsuccessful: no DSA place this round, zero effect on PSLE posting, go through S1 Posting freely in November.">
+  <rect width="820" height="486" fill="#f8f6f1"/>
+  <text x="40" y="46" font-size="23" font-weight="700" fill="#0d3f5f">The four DSA-Sec outcomes, at a glance</text>
+
+  <!-- Card 1: Confirmed Offer (navy) -->
+  <rect x="40" y="80" width="350" height="176" rx="14" fill="#ffffff" stroke="#e3ddce" stroke-width="1.5"/>
+  <rect x="40" y="80" width="350" height="42" rx="14" fill="#0d3f5f"/>
+  <rect x="40" y="102" width="350" height="20" fill="#0d3f5f"/>
+  <text x="64" y="108" font-size="15.5" font-weight="700" fill="#ffffff">Confirmed Offer</text>
+  <text x="64" y="152" font-size="13.5" font-weight="600" fill="#0d3f5f">A reserved place at the school.</text>
+  <text x="64" y="182" font-size="13" fill="#4a7a9b">Binding once taken up. Your child must</text>
+  <text x="64" y="202" font-size="13" fill="#4a7a9b">still meet the school's PSLE Posting Group.</text>
+
+  <!-- Card 2: Wait List (champagne) -->
+  <rect x="430" y="80" width="350" height="176" rx="14" fill="#ffffff" stroke="#e3ddce" stroke-width="1.5"/>
+  <rect x="430" y="80" width="350" height="42" rx="14" fill="#c6a24a"/>
+  <rect x="430" y="102" width="350" height="20" fill="#c6a24a"/>
+  <text x="454" y="108" font-size="15.5" font-weight="700" fill="#082c44">Wait List</text>
+  <text x="454" y="152" font-size="13.5" font-weight="600" fill="#0d3f5f">A place if confirmed offers go unfilled.</text>
+  <text x="454" y="182" font-size="13" fill="#4a7a9b">About half convert. Rank it above a</text>
+  <text x="454" y="202" font-size="13" fill="#4a7a9b">Confirmed Offer — no downside.</text>
+
+  <!-- Card 3: Counter-Offer (intellectual light) -->
+  <rect x="40" y="272" width="350" height="176" rx="14" fill="#ffffff" stroke="#e3ddce" stroke-width="1.5"/>
+  <rect x="40" y="272" width="350" height="42" rx="14" fill="#145070"/>
+  <rect x="40" y="294" width="350" height="20" fill="#145070"/>
+  <text x="64" y="300" font-size="15.5" font-weight="700" fill="#ffffff">Counter-Offer</text>
+  <text x="64" y="344" font-size="13.5" font-weight="600" fill="#0d3f5f">A dual-track school's O-Level (PG3) place</text>
+  <text x="64" y="366" font-size="13" fill="#4a7a9b">when you applied for the IP. Same school,</text>
+  <text x="64" y="386" font-size="13" fill="#4a7a9b">different track. Binds like a Confirmed Offer.</text>
+
+  <!-- Card 4: Unsuccessful (muted) -->
+  <rect x="430" y="272" width="350" height="176" rx="14" fill="#ffffff" stroke="#e3ddce" stroke-width="1.5"/>
+  <rect x="430" y="272" width="350" height="42" rx="14" fill="#6b7f8c"/>
+  <rect x="430" y="294" width="350" height="20" fill="#6b7f8c"/>
+  <text x="454" y="300" font-size="15.5" font-weight="700" fill="#ffffff">Unsuccessful</text>
+  <text x="454" y="344" font-size="13.5" font-weight="600" fill="#0d3f5f">No DSA place this round.</text>
+  <text x="454" y="366" font-size="13" fill="#4a7a9b">Zero effect on PSLE posting. Go through</text>
+  <text x="454" y="386" font-size="13" fill="#4a7a9b">S1 Posting freely in November.</text>
+
+  <text x="40" y="472" font-size="11" fill="#a8a08c">Rules per MOE published DSA-Sec 2026 information · dsalink.sg</text>
+</svg>

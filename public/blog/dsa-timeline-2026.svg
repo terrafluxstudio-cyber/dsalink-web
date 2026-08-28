@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 320" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" role="img" aria-label="DSA-Sec 2026 timeline: results from schools by 28 August, School Preference Form 19 to 23 October, posting and PSLE results around 24 to 25 November. Nothing binding is decided until October.">
+  <rect width="820" height="320" fill="#f8f6f1"/>
+  <text x="40" y="50" font-size="23" font-weight="700" fill="#0d3f5f">Nothing is decided in August</text>
+  <text x="40" y="76" font-size="14.5" fill="#4a7a9b">The DSA-Sec 2026 timeline, from results to final posting</text>
+
+  <!-- baseline -->
+  <line x1="90" y1="190" x2="740" y2="190" stroke="#e0d9cb" stroke-width="3"/>
+
+  <!-- ~8 weeks span between node 1 and node 2 -->
+  <path d="M150 162 h175" fill="none" stroke="#c6a24a" stroke-width="2"/>
+  <path d="M150 162 l7 -4 v8 z" fill="#c6a24a"/>
+  <path d="M325 162 l-7 -4 v8 z" fill="#c6a24a"/>
+  <text x="237" y="152" text-anchor="middle" font-size="13" font-weight="600" fill="#9a7d38">about 8 weeks to weigh it</text>
+
+  <!-- Node 1: Results -->
+  <circle cx="130" cy="190" r="9" fill="#0d3f5f"/>
+  <text x="130" y="226" text-anchor="middle" font-size="14.5" font-weight="700" fill="#0d3f5f">Results from schools</text>
+  <text x="130" y="247" text-anchor="middle" font-size="13" fill="#4a7a9b">by Fri 28 Aug 2026</text>
+
+  <!-- Node 2: Decision (highlighted) -->
+  <rect x="345" y="150" width="130" height="23" rx="11.5" fill="#c6a24a"/>
+  <text x="410" y="166" text-anchor="middle" font-size="12" font-weight="700" fill="#082c44">the decision point</text>
+  <circle cx="410" cy="190" r="13" fill="#c6a24a" stroke="#f8f6f1" stroke-width="3"/>
+  <text x="410" y="226" text-anchor="middle" font-size="14.5" font-weight="700" fill="#0d3f5f">School Preference Form</text>
+  <text x="410" y="247" text-anchor="middle" font-size="13" fill="#4a7a9b">9am 19 Oct – 4:30pm 23 Oct 2026</text>
+
+  <!-- Node 3: Posting -->
+  <circle cx="690" cy="190" r="9" fill="#0d3f5f"/>
+  <text x="690" y="226" text-anchor="middle" font-size="14.5" font-weight="700" fill="#0d3f5f">Posting + PSLE results</text>
+  <text x="690" y="247" text-anchor="middle" font-size="13" fill="#4a7a9b">around 24–25 Nov 2026</text>
+
+  <text x="40" y="300" font-size="11" fill="#a8a08c">Source: MOE published DSA-Sec 2026 dates · dsalink.sg</text>
+</svg>

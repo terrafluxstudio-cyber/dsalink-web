@@ -23,6 +23,7 @@
 | 事实 | 来源说明 |
 |------|----------|
 | **结果通知：学生「by Friday, 28 August 2026」从学校收到 DSA-Sec 结果**（是**截止日**，不是区间；学校可更早通知） | [MOE outcomes 页](https://www.moe.gov.sg/secondary/dsa/selection/outcomes) + DSA-Sec 主页时间线，逐字核实 |
+| **所有申请者（含 Unsuccessful）都会被通知结果**：MOE 主页原话 "Students will **receive DSA-Sec outcomes** directly from schools by Friday, 28 August 2026"——"outcomes"（复数·涵盖 CO/WL/Counter/Unsuccessful 全部），**未录取本身=一种被告知的结果，不是"没回音"**。故「沉默=被拒吗 / 没收到信怎么办」不是设计中的场景，别写这类内容。⚠️ outcomes 分页只定义三种结果不写通知方式；"receive outcomes directly from schools"这句在**主页** `moe.gov.sg/secondary/dsa`（2026-08-28 逐字核实） | [MOE DSA-Sec 主页](https://www.moe.gov.sg/secondary/dsa) |
 | **MOE 不公布面试/试镜/选拔的任何日程**——各校自定自发 | 四个 MOE 页面均无，2026-07-15 核实 |
 | 志愿填报：19 Oct（9am）– 23 Oct 2026（4:30pm），**按顺序**列最多 3 所 | [MOE 志愿页](https://www.moe.gov.sg/secondary/dsa/preferences/submit-preference-form-mainstream-primary-school-child) |
 | 最终派位：与 PSLE 成绩同日公布，暂定 24 或 25 Nov 2026 | [MOE results 页](https://www.moe.gov.sg/secondary/dsa/results) |
