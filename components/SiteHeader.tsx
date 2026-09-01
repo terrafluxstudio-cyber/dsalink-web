@@ -29,6 +29,7 @@ function computeStarSlot(now: Date): Exclude<StarSlot, null> {
     case "application":
       return "application";
     case "interview-trial":
+    case "results":
       return "interview-trial";
     case "schools-research":
     default:

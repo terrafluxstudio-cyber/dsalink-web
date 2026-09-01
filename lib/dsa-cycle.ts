@@ -2,16 +2,21 @@
  * DSALink annual cycle phases (Singapore time).
  *
  * Cycle anchored on the 2026 DSA-Sec window. Year boundaries are tied to
- * the calendar (Dec 1 / May 6 / Nov 30) — only the apply-close cutoff is
- * a specific moment in time (16:30 SGT on the official MOE deadline).
+ * the calendar (Dec 1 / May 6 / Aug 17 / Nov 30) — only the apply-close
+ * cutoff is a specific moment in time (16:30 SGT on the official MOE deadline).
  *
  * Phase rules (all times in Singapore time, UTC+8):
  *   May 6  – Jun 2, 16:30   → "application"       (apply window open)
- *   Jun 2, 16:30 – Nov 30   → "interview-trial"   (post-submission → S1 posting)
+ *   Jun 2, 16:30 – Aug 16   → "interview-trial"   (post-submission → interviews/trials)
+ *   Aug 17 – Nov 30         → "results"           (results out → Oct preference → S1 posting)
  *   Dec 1 – May 5           → "schools-research"  (next-cycle research phase)
  */
 
-export type CyclePhase = "schools-research" | "application" | "interview-trial";
+export type CyclePhase =
+  | "schools-research"
+  | "application"
+  | "interview-trial"
+  | "results";
 
 /**
  * 2026 DSA-Sec apply window closes at 16:30 SGT on 2 June 2026.
@@ -53,6 +58,11 @@ export function getCyclePhase(now: Date): CyclePhase {
   if (month === 5 && day >= 6) {
     return "application";
   }
-  // Jun – Nov: interview / trial / results / S1 fallback
+  // Aug 17 – Nov 30: results are out → reading outcomes, the October school
+  // preference exercise, November S1 posting, and S1 fallback.
+  if ((month === 8 && day >= 17) || month === 9 || month === 10 || month === 11) {
+    return "results";
+  }
+  // Jun 2 (post-cutoff) – Aug 16: interview / trial / audition season
   return "interview-trial";
 }

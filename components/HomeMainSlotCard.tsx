@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, CalendarDays, Compass, School } from "lucide-react";
+import { ArrowRight, CalendarDays, ClipboardCheck, Compass, School } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getCyclePhase } from "@/lib/dsa-cycle";
 
 type LocaleStr = { en: string; zh: string; ms: string; ta: string };
-type SlotKey = "application" | "after-apply" | "schools";
+type SlotKey = "application" | "after-apply" | "results" | "schools";
 
 /** Map the shared cycle phase → this component's local slot enum. */
 function computeSlot(now: Date): SlotKey {
@@ -16,6 +16,8 @@ function computeSlot(now: Date): SlotKey {
       return "application";
     case "interview-trial":
       return "after-apply";
+    case "results":
+      return "results";
     case "schools-research":
     default:
       return "schools";
@@ -149,6 +151,65 @@ const SLOTS: Record<
         zh: "结果不理想——S1 统一分配仍是后路。",
         ms: "Jika keputusan negatif — Penempatan S1 masih sebagai pilihan.",
         ta: "முடிவுகள் எதிர்மறையாக இருந்தால் — S1 இடம் இன்னும் உள்ளது.",
+      },
+    ],
+  },
+  results: {
+    icon: ClipboardCheck,
+    kicker: {
+      en: "Right Now · Results Are Out",
+      zh: "当下 · 结果已出",
+      ms: "Sekarang · Keputusan Telah Keluar",
+      ta: "இப்போது · முடிவுகள் வெளியாகிவிட்டன",
+    },
+    title: {
+      en: "Results are in. Here's your next move.",
+      zh: "结果出来了，下一步怎么走",
+      ms: "Keputusan telah keluar. Inilah langkah seterusnya.",
+      ta: "முடிவுகள் வந்துவிட்டன. அடுத்த நகர்வு இதோ.",
+    },
+    blurb: {
+      en: "A confirmed offer, a wait-list, a counter-offer, or none — each one means something specific. Read what your outcome means, then get ready for the October school preference exercise, with S1 Posting as a full fallback.",
+      zh: "确认录取、候补、备选录取，还是全部落空——每一种含义都不一样。先读懂你的结果，再准备 10 月的中学志愿填报；万一没成，还有 S1 统一派位这条完整的后路。",
+      ms: "Tawaran disahkan, senarai menunggu, tawaran balas, atau tiada — setiap satu bermaksud sesuatu yang khusus. Fahami keputusan anda, kemudian bersedia untuk latihan pilihan sekolah Oktober, dengan Penempatan S1 sebagai sandaran penuh.",
+      ta: "உறுதி செய்யப்பட்ட இடம், காத்திருப்புப் பட்டியல், மாற்று வழங்கல், அல்லது எதுவுமில்லை — ஒவ்வொன்றும் தனித்துவமான பொருள் கொண்டது. உங்கள் முடிவு என்ன என்பதைப் புரிந்து, அக்டோபர் பள்ளி விருப்பப் பயிற்சிக்குத் தயாராகுங்கள்; தேவைப்பட்டால் S1 இடம் முழு மாற்று வழி.",
+    },
+    primary: {
+      href: "/dsa-results",
+      label: {
+        en: "Read the results guide",
+        zh: "读懂你的结果",
+        ms: "Baca panduan keputusan",
+        ta: "முடிவுகள் வழிகாட்டியைப் படிக்கவும்",
+      },
+    },
+    secondary: {
+      href: "/blog/dsa-results-day-every-scenario-2026",
+      label: {
+        en: "Every-outcome playbook",
+        zh: "全场景决策指南",
+        ms: "Panduan setiap kemungkinan",
+        ta: "ஒவ்வொரு முடிவுக்கும் வழிகாட்டி",
+      },
+    },
+    bullets: [
+      {
+        en: "Confirmed offer, wait-list, counter-offer, or unsuccessful — each carries a different next step.",
+        zh: "确认录取、候补、备选录取、全部落空——每一种的下一步都不同。",
+        ms: "Tawaran disahkan, senarai menunggu, tawaran balas, atau tidak berjaya — setiap satu ada langkah berbeza.",
+        ta: "உறுதி செய்யப்பட்ட இடம், காத்திருப்புப் பட்டியல், மாற்று வழங்கல், அல்லது தோல்வி — ஒவ்வொன்றுக்கும் வேறு அடுத்த படி.",
+      },
+      {
+        en: "The school preference exercise runs 19–23 October. Ranking a wait-list above a confirmed offer carries no downside.",
+        zh: "中学志愿填报 10 月 19–23 日。把候补排在确认录取之前，零风险。",
+        ms: "Latihan pilihan sekolah berlangsung 19–23 Oktober. Meletakkan senarai menunggu di atas tawaran disahkan tiada kerugian.",
+        ta: "பள்ளி விருப்பப் பயிற்சி அக்டோபர் 19–23 வரை. காத்திருப்புப் பட்டியலை உறுதியான இடத்திற்கு மேலே வைப்பதில் இழப்பு இல்லை.",
+      },
+      {
+        en: "No DSA place? S1 Posting in November is still a full and fair route.",
+        zh: "没拿到 DSA？11 月 S1 统一派位仍是完整、公平的一条路。",
+        ms: "Tiada tempat DSA? Penempatan S1 pada November masih laluan yang penuh dan adil.",
+        ta: "DSA இடம் கிடைக்கவில்லையா? நவம்பர் S1 இடம் இன்னும் முழுமையான, நியாயமான வழி.",
       },
     ],
   },

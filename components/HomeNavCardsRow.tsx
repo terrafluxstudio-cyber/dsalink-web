@@ -102,6 +102,7 @@ function computeMain(now: Date): MainSlot {
     case "application":
       return "application";
     case "interview-trial":
+    case "results":
       return "after-apply";
     case "schools-research":
     default:
