@@ -55,10 +55,10 @@ const CARDS: Record<CardKey, QuickCard> = {
     icon: ClipboardCheck,
     title: { en: "Application", zh: "申请", ms: "Permohonan", ta: "விண்ணப்பம்" },
     blurb: {
-      en: "Checklist, FAQ, deadlines — every step of the apply window in plain words.",
-      zh: "清单、常见问题、截止时间——申请窗口每一步用大白话讲清楚。",
-      ms: "Senarai semak, FAQ, tarikh akhir — setiap langkah tetingkap permohonan.",
-      ta: "சரிபார்ப்பு பட்டியல், FAQ, காலக்கெடு — விண்ணப்ப காலத்தின் ஒவ்வொரு படியும்.",
+      en: "Checklist, FAQ, and key dates — every step of the application, in plain words.",
+      zh: "清单、常见问题、关键日期——申请每一步用大白话讲清楚。",
+      ms: "Senarai semak, FAQ, tarikh penting — setiap langkah permohonan dalam bahasa mudah.",
+      ta: "சரிபார்ப்பு பட்டியல், FAQ, முக்கிய தேதிகள் — விண்ணப்பத்தின் ஒவ்வொரு படியும் எளிய சொற்களில்.",
     },
   },
   "after-apply": {

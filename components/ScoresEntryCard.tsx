@@ -36,7 +36,7 @@ export function ScoresEntryCard() {
       {/* Stat hook */}
       <div className="relative flex items-baseline gap-3">
         <span className="font-display text-[3.5rem] font-extrabold leading-none tracking-tight text-champagne-dark sm:text-[4rem]">
-          146
+          139
         </span>
         <span className="text-[12.5px] font-semibold leading-snug text-intellectual-muted">
           {STAT_LABEL[locale]}

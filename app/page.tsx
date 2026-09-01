@@ -18,7 +18,7 @@ import { buildHomeStructuredData } from "@/lib/seo";
 const HOME_META_TITLE =
   "DSALink | DSA 2026 Strategy — Singapore Secondary School Admission Guide";
 const HOME_META_DESCRIPTION =
-  "Master DSA 2026 for Singapore secondary school admission. AL 20–25 middle-stream strategy, interview prep, 147-school directory with PSLE COP, and a 2026 open house calendar.";
+  "Master DSA 2026 for Singapore secondary school admission. AL 20–25 middle-stream strategy, interview prep, a 147-school directory with PSLE COP, and clear results-day guidance.";
 const HOME_OG_IMAGE_ALT =
   "DSALink — DSA 2026 Singapore strategy guide, PSLE COP, and open houses";
 
@@ -40,7 +40,7 @@ export function generateMetadata(): Metadata {
       "middle-stream DSA strategy",
       "DSA secondary school Singapore",
       "PSLE COP 2025 Singapore",
-      "secondary school open house May 2026",
+      "DSA results 2026 Singapore",
       "DSA talent areas Singapore",
       "P6 secondary school admission Singapore",
     ],
