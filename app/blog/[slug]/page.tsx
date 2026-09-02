@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type React from "react";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
@@ -8,7 +9,22 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { StaticPageRelatedCards } from "@/components/StaticPageRelatedCards";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { buildBlogPostStructuredData } from "@/lib/seo";
+import { withBlogCoachReferral } from "@/lib/coach-referral";
 import Link from "next/link";
+
+// Outbound coach links inside posts get UTM tagging so coaches see the referral
+// in their own analytics; every other link renders untouched.
+const mdxComponents = {
+  a: ({
+    href,
+    children,
+    ...rest
+  }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+    <a href={href ? withBlogCoachReferral(href) : href} {...rest}>
+      {children}
+    </a>
+  ),
+};
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -140,6 +156,7 @@ export default async function BlogPostPage({ params }: Props) {
           ">
             <MDXRemote
               source={post.content}
+              components={mdxComponents}
               options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
             />
           </div>
