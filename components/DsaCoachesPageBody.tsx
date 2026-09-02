@@ -659,6 +659,21 @@ export const coaches: Coach[] = [
   },
 ];
 
+// 出链带 UTM：让教练在自己后台看到"dsalink.sg 导流"。这是把免费曝光变成
+// 变现谈判筹码的前提——教练能证明我们送了访客，才谈得上 lead-gen / 合作。
+// 用 URL 构造器安全拼接，保留目标站已有的 query。
+function withReferral(rawUrl: string): string {
+  try {
+    const url = new URL(rawUrl);
+    url.searchParams.set("utm_source", "dsalink.sg");
+    url.searchParams.set("utm_medium", "referral");
+    url.searchParams.set("utm_campaign", "dsa-coaches");
+    return url.toString();
+  } catch {
+    return rawUrl;
+  }
+}
+
 const areaTagStyles: Record<TalentArea, string> = {
   music: "border-intellectual/20 bg-intellectual/5 text-intellectual",
   sports: "border-champagne/60 bg-champagne/20 text-intellectual",
@@ -874,7 +889,7 @@ export function DsaCoachesPageBody() {
                   </p>
 
                   <a
-                    href={coach.website}
+                    href={withReferral(coach.website)}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() =>
