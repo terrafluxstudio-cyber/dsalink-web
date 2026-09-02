@@ -657,6 +657,26 @@ export const coaches: Coach[] = [
     website: "https://www.evdance.com.sg",
     prominence: 2,
   },
+  {
+    id: "dsts-badminton",
+    type: "institution",
+    name: "DSTS Badminton Academy",
+    talentAreas: ["sports"],
+    tagline:
+      "Youth badminton academy led by chief coach Gong Ge, developing the footwork, match play, and competitive record that school badminton DSA trials assess.",
+    website: "https://www.dsts.sg",
+    prominence: 1,
+  },
+  {
+    id: "seetharam-arts",
+    type: "institution",
+    name: "Seetharam Arts Academy",
+    talentAreas: ["performing-arts"],
+    tagline:
+      "Bharatanatyam and Indian classical dance academy led by Natya Ranjani S. Vidhyalakshmi, building the repertoire and stage record for dance DSA applications.",
+    website: "https://seetharamarts.com",
+    prominence: 1,
+  },
 ];
 
 // 出链带 UTM：让教练在自己后台看到"dsalink.sg 导流"。这是把免费曝光变成
